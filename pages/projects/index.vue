@@ -28,11 +28,10 @@ const allProjectCategories = await queryCollection('projects')
   <div class="space-y-12">
     <div class="prose">
       <h1 class="text-5xl text-balance">Projects</h1>
-      <Skills />
       <p>
         I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
       </p>
-
+      <Skills />
     </div>
 
     <div v-if="allPosts" class="md:-mx-6">
@@ -51,9 +50,8 @@ const allProjectCategories = await queryCollection('projects')
               class="absolute inset-0 rounded-lg outline-0 focus:ring-2 group"><span class=" sr-only">{{
                 item.title
               }}</span>
-              <Icon class="absolute top-8 left-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150" name="ph:link-bold" />
-              <Icon class="absolute top-8 left-1 group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-150" name="ph:link-break-bold" />
-
+              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150" name="ph:link-bold" />
+              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-150" name="ph:link-break-bold" />
             </NuxtLink>
           </div>
         </li>

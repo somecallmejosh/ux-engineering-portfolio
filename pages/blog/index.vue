@@ -46,8 +46,8 @@ const allBlogCategories = await queryCollection('blog')
               class="absolute inset-0 rounded-lg outline-0 focus:ring-2 group"><span class=" sr-only">{{
                 item.title
               }}</span>
-              <Icon class="absolute top-8 left-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150" name="ph:link-bold" />
-              <Icon class="absolute top-8 left-1 group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-150" name="ph:link-break-bold" />
+              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150" name="ph:link-bold" />
+              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-150" name="ph:link-break-bold" />
             </NuxtLink>
           </div>
         </li>

@@ -14,16 +14,7 @@ useSeoMeta({
 
 <template>
   <div class="space-y-12">
-    <!-- Render the blog post as Prose & Vue components -->
-    <ul class="not-prose text-sm flex gap-3">
-      <li class="flex items-center gap-3">
-        <NuxtLink to="/projects" class="hover:underline">Projects</NuxtLink>
-        <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
-      </li>
-      <li class="text-neutral-700">
-        <NuxtLink :to="`/projects/${slug}`">{{ post.title }}</NuxtLink>
-      </li>
-    </ul>
+    <Breadcrumbs base-url="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
       <h1>{{  post.title }}</h1>
       <TagLinks
