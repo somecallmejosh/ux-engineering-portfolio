@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Quicksand:wght@300..700&family=Style+Script&display=swap');
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+html {
+  interpolate-size: allow-keywords;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.shiki {
+  background: transparent;
+  border-radius: 8px;
+  border: var(--color-neutral-200) solid 1px;
+  box-shadow: 0 0 0 2px var(--color-neutral-200);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+.text-mono {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--color-neutral-50);
+  letter-spacing: -0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.script {
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+}
+
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.prose p a,
+.prose li a,
+.prose th a,
+.prose td a,
+.prose blockquote a,
+.prose pre a,
+.prose code a,
+.prose kbd a,
+.prose mark a,
+.prose abbr a,
+.prose details a,
+.prose summary a,
+.prose time a,
+.prose progress a,
+.prose meter a,
+.prose output a {
+  font-weight: 500;
+  font-style: normal;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
