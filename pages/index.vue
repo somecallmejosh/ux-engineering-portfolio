@@ -1,7 +1,7 @@
 <script setup>
 useSeoMeta({
   title: 'JoshBriley | Enterprise-Grade UX Engineering',
-  description: 'some styff',
+  description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
 })
 
 const capabilities = [

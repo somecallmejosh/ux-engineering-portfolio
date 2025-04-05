@@ -1,9 +1,12 @@
 ---
 slug: americas-test-kitchen
+businessName: "America's Test Kitchen"
+businessUrl: "https://www.americastestkitchen.com"
 publishedAt: 2025-11-03
 title: "Challenges and Solutions at America’s Test Kitchen"
 description: "Showcasing the synergy of design and development to enhance the culinary web application experience."
-tags: [html, css, sass, styledcomponents, javascript, alpinejs-light, react-light, nextjs-light, rails, ruby, github-light, heroku]
+tags: [html, css, sass, styledcomponents, javascript, jquery, typescript, alpinejs-light, react-light, nextjs-light, rails, ruby, github-light, heroku]
+image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1710941652/josh-portfolio/atk.jpg
 ---
 During my time at America’s Test Kitchen (ATK), <strong>I found myself at the center of a wide range of projects that tested my expertise in web application design and front-end development</strong>. ATK’s mission has always been about great content—recipes, cooking techniques, and product reviews—and my role was to ensure that the digital experience behind this content was just as robust as the recipes themselves.
 

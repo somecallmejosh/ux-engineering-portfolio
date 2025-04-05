@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About Me',
-  description: 'some styff',
+  description: 'Learn about my experience in enterprise UX engineering and front-end development.',
 })
 const goodFit = [
   'Proven experience in delivering <strong>high-quality, maintainable code within complex enterprise environments</strong>.',

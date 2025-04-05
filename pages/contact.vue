@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Contact Me',
-  description: 'some styff',
+  description: 'Contact me for enterprise UX engineering and consulting services.',
 })
 </script>
 

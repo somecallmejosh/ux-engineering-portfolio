@@ -48,7 +48,7 @@ const navOpen = ref(false)
         <div class="hidden lg:block lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16">
           <Logo />
         </div>
-        <div class="mx-auto p-6 lg:px-10 lg:pt-0">
+        <div class="mx-auto p-6 lg:px-10 lg:pt-0 pb-12">
           <NuxtPage />
         </div>
       </main>

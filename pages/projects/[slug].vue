@@ -10,6 +10,102 @@ useSeoMeta({
   description: post.value?.excerpt,
   image: post.value?.coverImage,
 })
+
+const skillIcons = [
+  {
+    name: 'skill-icons:html',
+  },
+  {
+    name: 'skill-icons:css',
+  },
+  {
+    name: 'skill-icons:sass',
+  },
+  {
+    name: 'skill-icons:styledcomponents'
+  },
+  {
+    name: 'skill-icons:tailwindcss-light',
+  },
+  {
+    name: 'skill-icons:typescript',
+  },
+  {
+    name: 'skill-icons:javascript-light',
+  },
+  {
+    name: 'skill-icons:javascript',
+  },
+  {
+    name: 'skill-icons:alpinejs-light',
+  },
+  {
+    name: 'skill-icons:htmx-light',
+  },
+  {
+    name: 'skill-icons:jquery',
+  },
+  {
+    name: 'skill-icons:vuejs-light',
+  },
+  {
+    name: 'skill-icons:nuxtjs-light',
+  },
+  {
+    name: 'skill-icons:pinia-light',
+  },
+  {
+    name: 'skill-icons:illustrator-light',
+  },
+
+  {
+    name: 'skill-icons:github-light',
+  },
+  {
+    name: 'skill-icons:react-light',
+  },
+  {
+    name: 'skill-icons:nextjs-light',
+  },
+  {
+    name: 'skill-icons:d3-light',
+  },
+  {
+    name: 'skill-icons:vite-light',
+  },
+  {
+    name: 'skill-icons:vitest-light',
+  },
+  {
+    name: 'skill-icons:cypress-light',
+  },
+  {
+    name: 'skill-icons:ruby',
+  },
+  {
+    name: 'skill-icons:rails',
+  },
+
+  {
+    name: 'skill-icons:figma-light',
+  },
+  {
+    name: 'skill-icons:illustrator',
+  },
+
+  {
+    name: 'skill-icons:github-light',
+  },
+  {
+    name: 'skill-icons:aws-light'
+  },
+  {
+    name: 'skill-icons:heroku',
+  },
+  {
+    name: 'skill-icons:netlify-light',
+  },
+]
 </script>
 
 <template>
@@ -17,12 +113,17 @@ useSeoMeta({
     <Breadcrumbs base-url="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
       <h1>{{  post.title }}</h1>
-      <TagLinks
-        v-if="post.tags"
-        :tags="post.tags"
-        path="/projects/tags/"
-      />
+      <div class="not-prose rounded-lg border border-neutral-200 overflow-hidden bg-neutral-50">
+        <div class="mb-2"><img :src="post.image" :alt="post.businessName" class="rounded-lg" /></div>
+        <div class="p-2 pl-4">
+          <TagLinks
+            v-if="post.tags"
+            :tags="post.tags"
+          />
+        </div>
+      </div>
       <ContentRenderer :value="post" />
+
     </div>
   </div>
 </template>

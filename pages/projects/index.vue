@@ -20,18 +20,50 @@ const allProjectCategories = await queryCollection('projects')
   title: 'Recent Projects',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   })
-
+  const skillIcons = [
+  'html',
+  'css',
+  'sass',
+  'styledcomponents',
+  'tailwindcss-light',
+  'typescript',
+  'javascript-light',
+  'javascript',
+  'alpinejs-light',
+  'htmx-light',
+  'jquery',
+  'vuejs-light',
+  'nuxtjs-light',
+  'pinia-light',
+  'illustrator-light',
+  'github-light',
+  'react-light',
+  'nextjs-light',
+  'd3-light',
+  'vite-light',
+  'vitest-light',
+  'cypress-light',
+  'ruby',
+  'rails',
+  'figma-light',
+  'illustrator',
+  'github-light',
+  'aws-light',
+  'heroku',
+  'netlify-light',
+]
 </script>
 
 <template>
 
   <div class="space-y-12">
+
     <div class="prose">
       <h1 class="text-5xl text-balance">Projects</h1>
       <p>
         I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
       </p>
-      <Skills />
+
     </div>
 
     <div v-if="allPosts" class="md:-mx-6">

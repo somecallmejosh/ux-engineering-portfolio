@@ -1,9 +1,12 @@
 ---
 slug: berxi-insurance
+businessName: "Berxi.com"
+businessUrl: "https://www.berxi.com"
 publishedAt: 2025-11-03
 title: 'Transforming Berxi.com with a Bespoke Design System'
 description: 'A collaborative project that resulted in a unified and streamlined web application, elevating the brand’s digital presence.'
 tags: [html, css, tailwindcss-light, javascript, vuejs-light, nuxtjs-light, pinia-light, vite-light, vitest-light, figma-light, aws-light, github-light]
+image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1710941651/josh-portfolio/berxi.jpg
 ---
 
 
