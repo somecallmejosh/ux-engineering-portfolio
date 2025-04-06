@@ -12,7 +12,7 @@ useSeoMeta({
     </h1>
 
     <h2>Enterprise UX Engineering & Consulting</h2>
-
+    <img height="600" width="400" src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743967111/josh-portfolio/assets_task_01jr68gym3ea0rqmm2pex7mp5z_img_0.webp" class="rounded-lg" alt="UX Engineer presenting to business people" />
     <p>
       <strong>For organizations seeking an experienced UX engineer to lead front-end development</strong>, provide
       expert consultation on

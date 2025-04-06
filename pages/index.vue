@@ -70,6 +70,7 @@ const capabilities = [
                 v-if="item.image"
                 :src="item.image"
                 :alt="item.image_alt"
+                height="600" width="400"
                 class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
                 loading="lazy"
               />
