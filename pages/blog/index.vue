@@ -38,8 +38,16 @@ const allBlogCategories = await queryCollection('blog')
           :key="item.id"
           class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100 relative"
           >
+
           <div class="prose">
             <h2 class="text-balance mb-2">{{ item.title }}</h2>
+            <img
+              v-if="item.image"
+              :src="item.image"
+              :alt="item.image_alt"
+              class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
+              loading="lazy"
+            />
             <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
             <p v-html="item.description"></p>
             <NuxtLink :to="`/blog/${item.slug}`"

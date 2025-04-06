@@ -4,12 +4,9 @@ publishedAt: 2025-01-04
 title: 'What Exactly is a UX Engineer, and What Do They Do?'
 description: 'Discover how a UX Engineer merges design expertise and coding skills to create user-focused digital experiences. Learn what challenges they solve, the tools they use, and how this role differs from a standard front-end developer or architect.'
 tags: [nuxtjs, tailwindcss]
+image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp
+image_alt: 'What Exactly is a UX Engineer, and What Do They Do?'
 ---
-
-<figure>
-<img src="https://images.unsplash.com/photo-1573166801077-d98391a43199?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="UX Engineer looking at whiteboard" class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="rounded-lg border border-neutral-100" />
-<figcaption class="text-sm text-neutral-500">Image by <a href="https://unsplash.com/@wocintechchat" target="_blank" rel="nofollow" class="hover:no-underline">Christina @ wocintechchat.com</a> on Unsplash</figcaption>
-</figure>
 
 I still remember the day I discovered what being a UX Engineer truly meant. At the time, I was caught in the middle of a lively back-and-forth between a team of designers and a group of front-end developers. On one side, the designers had painstakingly crafted elaborate mockups, complete with nuanced micro-interactions and bold visual treatments. On the other side, the developers wrestled with the practicalities of coding these concepts under tight deadlines and performance constraints. Bridging that gap felt like a juggling act—until I realized this was exactly where a UX Engineer should step in.
 

@@ -77,6 +77,7 @@ const allProjectCategories = await queryCollection('projects')
             <h2 class="text-balance">
               {{ item.title }}
             </h2>
+
             <p v-html="item.description"></p>
             <NuxtLink :to="`/projects/${item.slug}`"
               class="absolute inset-0 rounded-lg outline-0 focus:ring-2 group"><span class=" sr-only">{{

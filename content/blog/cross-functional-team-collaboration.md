@@ -4,12 +4,9 @@ publishedAt: 2025-03-11
 title: 'Cross-Functional Team Collaboration: My Best Practices'
 description: 'Discover how to foster effective cross-functional collaboration in product development. Learn best practices for communication, empathy, and shared ownership that lead to successful product launches.'
 tags: [forms, design]
+image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743963713/josh-portfolio/assets_task_01jr6589gne0h9rjapex810m08_img_0.webp"
+image_alt: "Cross-Functional team collaborating on ideas."
 ---
-
-<figure>
-<img src="https://plus.unsplash.com/premium_photo-1681995453325-455f7084888d?q=80&w=3839&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cross-Functional team collaborating on ideas." class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="rounded-lg border border-neutral-100" />
-<figcaption class="text-sm text-neutral-500">Image by <a href="https://unsplash.com/@gettyimages" target="_blank" rel="nofollow" class="hover:no-underline">Getty Images</a> on Unsplash</figcaption>
-</figure>
 
 I’ll never forget the first time I realized just how much smoother—and more successful—a product launch can be when every contributor feels deeply invested in its outcome. It happened years ago, during a project where I found myself at the center of a partnership between design, engineering, and product management teams. On the surface, the task seemed straightforward: build a fresh feature to improve user onboarding. But from the start, it was clear there were competing visions and, more importantly, blind spots that threatened to derail our schedule.
 
