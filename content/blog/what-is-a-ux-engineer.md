@@ -6,6 +6,11 @@ description: 'Discover how a UX Engineer merges design expertise and coding skil
 tags: [nuxtjs, tailwindcss]
 ---
 
+<figure>
+<img src="https://images.unsplash.com/photo-1573166801077-d98391a43199?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="UX Engineer looking at whiteboard" class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="rounded-lg border border-neutral-100" />
+<figcaption class="text-sm text-neutral-500">Image by <a href="https://unsplash.com/@wocintechchat" target="_blank" rel="nofollow" class="hover:no-underline">Christina @ wocintechchat.com</a> on Unsplash</figcaption>
+</figure>
+
 I still remember the day I discovered what being a UX Engineer truly meant. At the time, I was caught in the middle of a lively back-and-forth between a team of designers and a group of front-end developers. On one side, the designers had painstakingly crafted elaborate mockups, complete with nuanced micro-interactions and bold visual treatments. On the other side, the developers wrestled with the practicalities of coding these concepts under tight deadlines and performance constraints. Bridging that gap felt like a juggling act—until I realized this was exactly where a UX Engineer should step in.
 
 A UX Engineer occupies a unique space in the product design cycle. While on the surface they may share similarities with front-end developers, their primary mission is to translate user and design needs into clean, functional code that delights end users. Instead of simply checking off design tasks or focusing solely on performance metrics, a UX Engineer never loses sight of the user’s perspective. Every technical choice—from selecting a JavaScript framework to fine-tuning a button’s hover state—flows from the question, “What will serve the user best?”

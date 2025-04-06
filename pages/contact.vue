@@ -23,9 +23,9 @@ useSeoMeta({
 
     <h2>How to Reach Me</h2>
     <ul class="not-prose">
-      <li class="flex items-center gap-1"><Icon name="skill-icons:gcp-dark" />  josh@thebrileys.com</li>
-      <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" /> https://www.linkedin.com/in/somecallmejosh/</li>
-      <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" />  https://x.com/joshuabriley</li>
+      <li class="flex items-center gap-1"><Icon name="skill-icons:gcp-dark" /> josh@thebrileys.com</li>
+      <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" />/somecallmejosh</li>
+      <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" />/joshuabriley</li>
     </ul>
   </div>
 </template>

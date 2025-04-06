@@ -6,6 +6,11 @@ description: 'Discover how to foster effective cross-functional collaboration in
 tags: [forms, design]
 ---
 
+<figure>
+<img src="https://plus.unsplash.com/premium_photo-1681995453325-455f7084888d?q=80&w=3839&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cross-Functional team collaborating on ideas." class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="rounded-lg border border-neutral-100" />
+<figcaption class="text-sm text-neutral-500">Image by <a href="https://unsplash.com/@gettyimages" target="_blank" rel="nofollow" class="hover:no-underline">Getty Images</a> on Unsplash</figcaption>
+</figure>
+
 I’ll never forget the first time I realized just how much smoother—and more successful—a product launch can be when every contributor feels deeply invested in its outcome. It happened years ago, during a project where I found myself at the center of a partnership between design, engineering, and product management teams. On the surface, the task seemed straightforward: build a fresh feature to improve user onboarding. But from the start, it was clear there were competing visions and, more importantly, blind spots that threatened to derail our schedule.
 
 At the time, I was responsible for maintaining consistency between what the design team envisioned and the technical constraints the engineering team had to respect. It felt like a juggling act, where I had to keep designers informed about technical limitations (and possibilities!) while ensuring developers understood the reasons behind design decisions. Any misalignment would result in wasted time, rework, or—worst of all—a subpar user experience.

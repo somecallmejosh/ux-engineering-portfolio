@@ -5,13 +5,16 @@ businessUrl: "https://www.logatot.com"
 publishedAt: 2025-11-03
 title: "Empowering Child Care Providers Through Voice-Logging at LogATot"
 description: "A collaborative project that resulted in a unified and streamlined web application, elevating the brand’s digital presence."
-tags: [html, css, tailwindcss-light, javascript, alpinejs-light, htmx-light, figma-light, ruby, rails, github-light, heroku]
-image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1710941651/josh-portfolio/logatot.jpg
+tags: [alpinejs-light, css, figma-light,\, github-light, heroku, html, htmx-light, illustrator, javascript, rails, ruby, tailwindcss-light]
+image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1720548089/LogATot/ztwy0rkdujsjutjyj0ac.jpg
 ---
 
 When I joined LogATot—a startup dedicated to simplifying life for family child care providers—I was immediately drawn to <strong>the company's mission: reduce the mountains of paperwork so caregivers could spend more time engaging with children</strong>. My role as lead designer and front-end developer was to make that vision a reality. What followed was a deeply collaborative effort that wove together voice technology, intuitive print materials, and a cohesive brand identity, all aimed at helping child care providers focus on what truly matters: the kids.
 
 ## Minimizing Administrative Tasks with Voice Tech
+
+<img src="https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1720548088/LogATot/vte0ouyewfdlf36sbzej.jpg" alt="LogATot Voice Logging" class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="" />
+
 One of LogATot’s biggest challenges was finding a way to capture day-to-day events—like feedings, diaper changes, and naps—without requiring a ton of typing or manual note-taking. Caregivers are already stretched thin, so the solution had to be both quick and accurate. <strong>I worked closely with our stakeholders to design and build a hands-free voice-logging feature</strong>.
 
 Using this feature, caregivers could record events simply by speaking, allowing them to keep their attention on the children rather than fumbling with devices. Early demos were met with excitement, but the real payoff came when the tool was tested in actual child care settings. Hearing providers say they no longer missed precious moments because they were busy writing things down underscored how transformative voice technology could be.

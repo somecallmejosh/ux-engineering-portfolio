@@ -113,17 +113,14 @@ const skillIcons = [
     <Breadcrumbs base-url="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
       <h1>{{  post.title }}</h1>
-      <div class="not-prose rounded-lg border border-neutral-200 overflow-hidden bg-neutral-50">
-        <div class="mb-2"><img :src="post.image" :alt="post.businessName" class="rounded-lg" /></div>
-        <div class="p-2 pl-4">
-          <TagLinks
-            v-if="post.tags"
-            :tags="post.tags"
-          />
-        </div>
+      <div class="not-prose space-y-6">
+        <img :src="post.image" :alt="post.businessName" class="rounded-lg border border-neutral-100" />
+        <TagLinks
+          v-if="post.tags"
+          :tags="post.tags"
+        />
       </div>
       <ContentRenderer :value="post" />
-
     </div>
   </div>
 </template>

@@ -6,6 +6,11 @@ description: 'Learn how to effectively measure the impact of UX engineering on u
 tags: [forms, design]
 ---
 
+<figure>
+<img src="https://plus.unsplash.com/premium_photo-1661277816311-28cced31f998?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="UX engineer demonstrating ideas on large notepad." class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="rounded-lg border border-neutral-100" />
+<figcaption class="text-sm text-neutral-500">Image by <a href="https://unsplash.com/@gettyimages" target="_blank" rel="nofollow" class="hover:no-underline">Getty Images</a> on Unsplash</figcaption>
+</figure>
+
 ## The Moment Metrics Became Essential
 I vividly recall an afternoon at <span class="text-mono">a company I worked for</span> when our product manager hurried into the room, fresh data in hand, eager to see if our latest interface revamp had actually improved customer satisfaction. We’d guessed it might reduce confusion and speed up common tasks, but we had no proof. That realization—that we lacked a clear view of success—sparked a shift in how we approached UX Engineering. We began embedding specific metrics that could show us exactly where design changes were working and where we needed to pivot.
 
