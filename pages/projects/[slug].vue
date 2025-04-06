@@ -114,7 +114,7 @@ const skillIcons = [
     <div v-if="post" class="prose">
       <h1>{{  post.title }}</h1>
       <div class="not-prose space-y-6 max-w-full">
-        <img :src="post.image" :alt="post.businessName" class="block contrast-90 rounded-lg border border-neutral-100 grayscale hover:grayscale-0 transition-all duration-150 w-full" />
+        <img :src="post.image" :alt="post.businessName" class="block contrast-90 rounded-lg border border-neutral-100 w-full" />
         <div class="">
           <TagLinks
             v-if="post.tags"

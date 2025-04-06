@@ -36,27 +36,27 @@ const allBlogCategories = await queryCollection('blog')
         <li
           v-for="(item, index) in allPosts"
           :key="item.id"
-          class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100 relative"
+          class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100"
           >
 
-          <div class="prose">
-            <h2 class="text-balance mb-2">{{ item.title }}</h2>
+          <div class="prose rounded-lg relative group">
             <img
               v-if="item.image"
               :src="item.image"
               :alt="item.image_alt"
               height="600" width="400"
-              class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
+              class="w-full h-auto mb-2 rounded-lg border border-neutral-100 grayscale group-hover:sepia transition-all duration-300"
               loading="lazy"
             />
+            <h2 class="text-balance mt-0 mb-2">{{ item.title }}</h2>
+
             <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
             <p v-html="item.description"></p>
             <NuxtLink :to="`/blog/${item.slug}`"
-              class="absolute inset-0 rounded-lg outline-0 focus:ring-2 group"><span class=" sr-only">{{
+              class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out">
+              <span class=" sr-only">{{
                 item.title
               }}</span>
-              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150" name="ph:link-bold" />
-              <Icon class="absolute top-2 -left-5 lg:top-8 lg:left-1 group-hover:opacity-0 group-focus:opacity-0 transition-opacity duration-150" name="ph:link-break-bold" />
             </NuxtLink>
           </div>
         </li>
