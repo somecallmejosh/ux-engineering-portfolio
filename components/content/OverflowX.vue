@@ -5,14 +5,14 @@ const handleScroll = () => {
   const container = overflowContainer.value
   if (!container) return
 
-  const navEl = container.closest('nav')
-  if (!navEl) return
+  const wrapperEl = container.closest('div.overflow-wrapper')
+  if (!wrapperEl) return
 
   // Show `.before` if NOT at far-left edge
   if (container.scrollLeft > 0) {
-    navEl.classList.add('before')
+    wrapperEl.classList.add('before')
   } else {
-    navEl.classList.remove('before')
+    wrapperEl.classList.remove('before')
   }
 
   // Show `.after` if horizontally overflowing AND not near far-right edge
@@ -21,9 +21,9 @@ const handleScroll = () => {
     container.scrollWidth > container.clientWidth &&
     container.scrollLeft + container.clientWidth < container.scrollWidth - 1
   ) {
-    navEl.classList.add('after')
+    wrapperEl.classList.add('after')
   } else {
-    navEl.classList.remove('after')
+    wrapperEl.classList.remove('after')
   }
 }
 
@@ -45,8 +45,7 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- The nav element has .overflow-wrapper for the pseudo-elements -->
-  <component ref="nav" is="nav" class="overflow-wrapper relative max-w-full">
-    <div class="sr-only">Categories</div>
+  <component ref="overflowWrapper" is="div" class="overflow-wrapper relative w-full max-w-full">
     <div class="w-full max-w-full overflow-visible">
       <div
         ref="overflowContainer"
@@ -65,7 +64,7 @@ onBeforeUnmount(() => {
   height: 100%;
   position: absolute;
   top: 0;
-  width: 4rem;
+  width: 2rem;
   z-index: 2;
   pointer-events: none;
 }

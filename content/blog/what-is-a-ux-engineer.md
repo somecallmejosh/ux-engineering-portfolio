@@ -30,14 +30,14 @@ While the day-to-day toolkit can vary, there are some mainstays in a UX Engineer
 
 ## How a UX Engineer Differs from Other Roles
 It’s helpful to see how a UX Engineer compares to other, sometimes overlapping, positions:
-<OverflowX>
+::OverflowX
 <table>
 <thead>
 <tr>
-<th>Role</th>
-<th>Primary Focus</th>
-<th>Key Responsibilities</th>
-<th>Tools & Skills</th>
+<th class="text-nowrap">Role</th>
+<th class="text-nowrap">Primary Focus</th>
+<th class="text-nowrap">Key Responsibilities</th>
+<th class="text-nowrap">Tools & Skills</th>
 </tr>
 </thead>
 <tbody>
@@ -61,7 +61,7 @@ It’s helpful to see how a UX Engineer compares to other, sometimes overlapping
 </tr>
 </tbody>
 </table>
-</OverflowX>
+::
 
 ## Where a UX Engineer Fits In
 One of the best ways I’ve found to describe this role is “the translator.” If a front-end developer is mostly concerned with coding, and a front-end architect is primarily concerned with scalability and performance, the UX Engineer uniquely straddles both worlds—acting as a bridge between stakeholders, designers, and the engineering team. On a day-to-day basis, they might be refining a color palette based on real-time usability tests one minute, then jumping into code reviews to ensure accessibility standards the next.
