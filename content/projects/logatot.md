@@ -13,8 +13,6 @@ When I joined LogATot—a startup dedicated to simplifying life for family child
 
 ## Minimizing Administrative Tasks with Voice Tech
 
-<img src="https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1720548088/LogATot/vte0ouyewfdlf36sbzej.jpg" alt="LogATot Voice Logging" class="w-full h-auto mb-4 rounded-lg border border-neutral-100" loading="lazy" class="" />
-
 One of LogATot’s biggest challenges was finding a way to capture day-to-day events—like feedings, diaper changes, and naps—without requiring a ton of typing or manual note-taking. Caregivers are already stretched thin, so the solution had to be both quick and accurate. <strong>I worked closely with our stakeholders to design and build a hands-free voice-logging feature</strong>.
 
 Using this feature, caregivers could record events simply by speaking, allowing them to keep their attention on the children rather than fumbling with devices. Early demos were met with excitement, but the real payoff came when the tool was tested in actual child care settings. Hearing providers say they no longer missed precious moments because they were busy writing things down underscored how transformative voice technology could be.
