@@ -21,7 +21,7 @@ const goodFit = [
     </h1>
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-24">
       <div class="prose">
-        <img  height="600" width="400" src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966810/josh-portfolio/assets_task_01jr6873jfe5brjy409dyxz1sk_img_0.webp" alt="Illustration of man doing UX work." class="rounded-lg" />
+        <img  height="600" width="400" src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966810/josh-portfolio/assets_task_01jr6873jfe5brjy409dyxz1sk_img_0.webp" alt="Illustration of man doing UX work." class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale" />
         <h2 class="text-balance">Enterprise UX Engineering & Front-End Development</h2>
 
         <p>
