@@ -1,7 +1,10 @@
 <script setup>
 useSeoMeta({
   title: 'JoshBriley | Enterprise-Grade UX Engineering',
+  ogTitle: 'JoshBriley | Enterprise-Grade UX Engineering',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
 })
 
 const capabilities = [

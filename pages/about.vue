@@ -1,7 +1,10 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About Me',
+  ogTitle: 'About Me',
   description: 'Learn about my experience in enterprise UX engineering and front-end development.',
+  ogDescription: 'Learn about my experience in enterprise UX engineering and front-end development.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966810/josh-portfolio/assets_task_01jr6873jfe5brjy409dyxz1sk_img_0.webp'
 })
 const goodFit = [
   'Proven experience in delivering <strong>high-quality, maintainable code within complex enterprise environments</strong>.',

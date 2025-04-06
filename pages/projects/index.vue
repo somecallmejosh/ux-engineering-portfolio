@@ -18,7 +18,10 @@ const allProjectCategories = await queryCollection('projects')
 
   useSeoMeta({
   title: 'Recent Projects',
+  ogTitle: 'Recent Projects',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
   })
   const skillIcons = [
   'html',

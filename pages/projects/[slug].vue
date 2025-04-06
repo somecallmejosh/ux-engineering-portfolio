@@ -7,8 +7,10 @@ const { data: post } = await useAsyncData(`projects-${slug}`, () => {
 
 useSeoMeta({
   title: post.value?.title,
-  description: post.value?.excerpt,
-  image: post.value?.coverImage,
+  ogTitle: post.value?.title,
+  description: post.value?.description,
+  ogDescription: post.value?.description,
+  ogImage: post.value?.image,
 })
 
 const skillIcons = [

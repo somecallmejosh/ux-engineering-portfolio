@@ -1,7 +1,10 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Contact Me',
+  ogTitle: 'Contact Me',
   description: 'Contact me for enterprise UX engineering and consulting services.',
+  ogDescription: 'Contact me for enterprise UX engineering and consulting services.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743967111/josh-portfolio/assets_task_01jr68gym3ea0rqmm2pex7mp5z_img_0.webp'
 })
 </script>
 
