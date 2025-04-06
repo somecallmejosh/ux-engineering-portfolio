@@ -4,7 +4,7 @@ publishedAt: 2025-01-04
 title: 'What Exactly is a UX Engineer, and What Do They Do?'
 description: 'Discover how a UX Engineer merges design expertise and coding skills to create user-focused digital experiences. Learn what challenges they solve, the tools they use, and how this role differs from a standard front-end developer or architect.'
 tags: [nuxtjs, tailwindcss]
-image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp
+image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp
 image_alt: 'What Exactly is a UX Engineer, and What Do They Do?'
 ---
 
@@ -30,7 +30,7 @@ While the day-to-day toolkit can vary, there are some mainstays in a UX Engineer
 
 ## How a UX Engineer Differs from Other Roles
 It’s helpful to see how a UX Engineer compares to other, sometimes overlapping, positions:
-
+<OverflowX>
 <table>
 <thead>
 <tr>
@@ -61,6 +61,7 @@ It’s helpful to see how a UX Engineer compares to other, sometimes overlapping
 </tr>
 </tbody>
 </table>
+</OverflowX>
 
 ## Where a UX Engineer Fits In
 One of the best ways I’ve found to describe this role is “the translator.” If a front-end developer is mostly concerned with coding, and a front-end architect is primarily concerned with scalability and performance, the UX Engineer uniquely straddles both worlds—acting as a bridge between stakeholders, designers, and the engineering team. On a day-to-day basis, they might be refining a color palette based on real-time usability tests one minute, then jumping into code reviews to ensure accessibility standards the next.

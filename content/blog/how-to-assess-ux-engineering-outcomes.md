@@ -4,7 +4,7 @@ publishedAt: 2025-02-13
 title: 'Measuring Impact: How to Assess UX Engineering Outcomes'
 description: 'Learn how to effectively measure the impact of UX engineering on user experience and business goals. Discover the importance of defining success metrics, collecting data, and communicating results to stakeholders.'
 tags: [forms, design]
-image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743962937/josh-portfolio/assets_task_01jr64g84beg6t7tcdqqkhzccc_img_0.webp
+image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962937/josh-portfolio/assets_task_01jr64g84beg6t7tcdqqkhzccc_img_0.webp
 image_alt: 'Measuring Impact: How to Assess UX Engineering Outcomes'
 ---
 

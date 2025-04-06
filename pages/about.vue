@@ -22,7 +22,7 @@ const goodFit = [
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-24">
       <div class="prose">
         <h2 class="text-balance">Enterprise UX Engineering & Front-End Development</h2>
-        <Skills />
+        <img src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966810/josh-portfolio/assets_task_01jr6873jfe5brjy409dyxz1sk_img_0.webp" alt="Illustration of man doing UX work." />
         <p>
           With 20 years of experience in front-end development, <em>
           I specialize in architecting and implementing scalable,

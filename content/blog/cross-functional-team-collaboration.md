@@ -4,7 +4,7 @@ publishedAt: 2025-03-11
 title: 'Cross-Functional Team Collaboration: My Best Practices'
 description: 'Discover how to foster effective cross-functional collaboration in product development. Learn best practices for communication, empathy, and shared ownership that lead to successful product launches.'
 tags: [forms, design]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743963713/josh-portfolio/assets_task_01jr6589gne0h9rjapex810m08_img_0.webp"
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743963713/josh-portfolio/assets_task_01jr6589gne0h9rjapex810m08_img_0.webp"
 image_alt: "Cross-Functional team collaborating on ideas."
 ---
 
