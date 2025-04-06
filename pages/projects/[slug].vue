@@ -110,15 +110,21 @@ const skillIcons = [
 
 <template>
   <div class="space-y-12">
-    <Breadcrumbs base-url="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
+    <Breadcrumbs baseUrl="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
       <h1>{{  post.title }}</h1>
-      <div class="not-prose space-y-6">
-        <img :src="post.image" :alt="post.businessName" class="rounded-lg border border-neutral-100" />
-        <TagLinks
-          v-if="post.tags"
-          :tags="post.tags"
-        />
+      <div class="not-prose space-y-6 max-w-full">
+        <img :src="post.image" :alt="post.businessName" class="block contrast-90 rounded-lg border border-neutral-100 grayscale hover:grayscale-0 transition-all duration-150 w-full" />
+        <div class="">
+          <TagLinks
+            v-if="post.tags"
+            :tags="post.tags"
+          />
+          <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium hover:underline block shrink-0">
+            <Icon name="ph:link-simple-bold" class="size-4" />
+            <span>Visit {{ post.businessName }}</span>
+          </a>
+        </div>
       </div>
       <ContentRenderer :value="post" />
     </div>

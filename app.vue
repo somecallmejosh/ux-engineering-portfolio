@@ -38,7 +38,7 @@ const navOpen = ref(false)
             </li>
           </ul>
           <div class="mt-auto flex items-center gap-2">
-            <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale contrast-90 size-10 rounded-full"
+            <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
               alt="Josh Briley" width="40" height="40" />
             <span>Hi, I'm josh!</span>
           </div>

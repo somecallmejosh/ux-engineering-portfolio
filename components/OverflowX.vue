@@ -67,6 +67,7 @@ onBeforeUnmount(() => {
   top: 0;
   width: 4rem;
   z-index: 2;
+  pointer-events: none;
 }
 
 /* Show the left gradient when .before is applied */

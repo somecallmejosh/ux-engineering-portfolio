@@ -15,7 +15,7 @@ useSeoMeta({
 <template>
   <!-- Render the blog post as Prose & Vue components -->
   <div class="space-y-12">
-    <Breadcrumbs base-url="blog" :slug="`${slug}`" label="Blog" :title="post.title" />
+    <Breadcrumbs baseUrl="blog" :slug="`${slug}`" label="Blog" :title="post.title" />
     <div v-if="post" class="prose">
       <h1>{{ post.title }}</h1>
       <figure>
