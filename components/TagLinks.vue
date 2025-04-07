@@ -15,7 +15,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <ContentOverflowX>
+  <OverflowX>
     <ul class="flex gap-2 not-prose">
       <li v-for="(tag, index) in tags" :key="index">
         <Icon
@@ -25,5 +25,5 @@ const props = defineProps({
         />
       </li>
     </ul>
-  </ContentOverflowX>
+  </OverflowX>
 </template>
