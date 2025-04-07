@@ -1,4 +1,9 @@
 <script setup>
+import { onClickOutside } from '@vueuse/core'
+import { useTemplateRef } from 'vue'
+const target = useTemplateRef('target')
+onClickOutside(target, event => navOpen.value = false)
+
 const nav = [
   { title: 'Home', path: '/', icon: 'ph:house' },
   { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
@@ -25,7 +30,7 @@ const navOpen = ref(false)
             </button>
           </div>
         </div>
-        <nav aria-label="Main Navigation" :class="{ 'sr-only lg:not-sr-only lg:flex lg:flex-col lg:flex-1': !navOpen }">
+        <nav ref="target" aria-label="Main Navigation" :class="{ 'sr-only lg:not-sr-only lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <ul
             @click="navOpen = false"
             class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0">

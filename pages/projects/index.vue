@@ -58,16 +58,13 @@ const allProjectCategories = await queryCollection('projects')
 </script>
 
 <template>
-
   <div class="space-y-12">
-
     <div class="prose">
       <h1 class="text-5xl text-balance">Projects</h1>
       <p>
         I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
       </p>
     </div>
-
     <div v-if="allPosts" class="md:-mx-6">
       <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5">
         <li
