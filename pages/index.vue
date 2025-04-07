@@ -82,6 +82,33 @@ const capabilities = [
 
         </li>
       </ul>
+      <ul class="flex items-center justify-between lg:hidden gap-4 border-t border-neutral-200">
+        <li class="text-center prose">
+          <NuxtLink class="" to="/projects">
+            <div class="w-24 -mb-4">
+              <AnimateImage
+                src="https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp"
+                alt="Josh Briley"
+                :scaleY="0.75"
+              />
+            </div>
+            Projects
+          </NuxtLink>
+        </li>
+        <li class="text-center prose">
+
+          <NuxtLink to="/blog">
+            <div class="w-24 -mb-4">
+              <AnimateImage
+                src="https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp"
+                alt="Josh Briley"
+                :scaleY="0.75"
+              />
+            </div>
+            Blog
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
