@@ -76,7 +76,7 @@ const allProjectCategories = await queryCollection('projects')
           class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100"
           >
           <div class="rounded-lg relative group">
-            <div class="aspect-[16/9] border border-neutral-100 rounded-lg overflow-hidden mb-4">
+            <div class="aspect-[3/2] border border-neutral-100 rounded-lg overflow-hidden mb-4">
               <img
                 v-if="item.image"
                 :src="item.image"

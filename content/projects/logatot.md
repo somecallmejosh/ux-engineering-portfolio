@@ -6,7 +6,7 @@ publishedAt: 2025-11-03
 title: "Empowering Child Care Providers Through Voice-Logging at LogATot"
 description: "A collaborative project that resulted in a unified and streamlined web application, elevating the brand’s digital presence."
 tags: [alpinejs-light, css, figma-light,\, github-light, heroku, html, htmx-light, illustrator, javascript, rails, ruby, tailwindcss-light]
-image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1720548089/LogATot/ztwy0rkdujsjutjyj0ac.jpg
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991606/josh-portfolio/assets_task_01jr6zkaxkener6qnhca37gwmb_img_0.webp'
 ---
 
 When I joined LogATot—a startup dedicated to simplifying life for family child care providers—I was immediately drawn to <strong>the company's mission: reduce the mountains of paperwork so caregivers could spend more time engaging with children</strong>. My role as lead designer and front-end developer was to make that vision a reality. What followed was a deeply collaborative effort that wove together voice technology, intuitive print materials, and a cohesive brand identity, all aimed at helping child care providers focus on what truly matters: the kids.

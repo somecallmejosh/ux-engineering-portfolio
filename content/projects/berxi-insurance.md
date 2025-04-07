@@ -6,7 +6,7 @@ publishedAt: 2025-11-03
 title: 'Transforming Berxi.com with a Bespoke Design System'
 description: 'A collaborative project that resulted in a unified and streamlined web application, elevating the brand’s digital presence.'
 tags: [aws-light, css, figma-light, github-light, html, javascript, nuxtjs-light, pinia-light, tailwindcss-light, vite-light, vitest-light, vuejs-light]
-image: https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1710941651/josh-portfolio/berxi.jpg
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991012/josh-portfolio/assets_task_01jr6z0n1bfqgrjwndjfn3v2q3_img_0.webp'
 ---
 
 

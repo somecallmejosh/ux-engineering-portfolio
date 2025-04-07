@@ -56,6 +56,7 @@ dt {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
+  text-wrap: pretty;
 
   &:hover {
     text-decoration: underline;
