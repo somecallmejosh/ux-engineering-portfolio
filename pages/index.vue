@@ -1,4 +1,5 @@
 <script setup>
+import { useInView } from 'motion-v'
 useSeoMeta({
   title: 'JoshBriley | Enterprise-Grade UX Engineering',
   ogTitle: 'JoshBriley | Enterprise-Grade UX Engineering',

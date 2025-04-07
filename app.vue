@@ -4,6 +4,10 @@ import { useTemplateRef } from 'vue'
 const target = useTemplateRef('target')
 onClickOutside(target, event => navOpen.value = false)
 
+const navToggle = () => {
+  navOpen.value ? navOpen.value = false : navOpen.value = true
+}
+
 const nav = [
   { title: 'Home', path: '/', icon: 'ph:house' },
   { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
@@ -16,21 +20,22 @@ const navOpen = ref(false)
 <template>
   <NuxtLayout>
     <div class="lg:flex lg:h-dvh gap-12 relative z-10">
-      <header class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
+      <header ref="target" class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'"
       >
         <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
           <div>
-            <button @click="navOpen = !navOpen"
+            <button @click="navToggle"
               class="flex lg:hidden cursor-pointer flex items-center gap-1 text-xs uppercase font-medium"
               aria-label="Toggle nav menu visibility">
               Menu
-              <Icon name="ph:equals-bold" size="1.5em" />
+              <Icon v-if="!navOpen" name="ph:equals-bold" size="1.5em" />
+              <Icon v-if="navOpen" name="ph:x-bold" size="1.5em" />
             </button>
           </div>
         </div>
-        <nav ref="target" aria-label="Main Navigation" :class="{ 'sr-only lg:not-sr-only lg:flex lg:flex-col lg:flex-1': !navOpen }">
+        <nav aria-label="Main Navigation" :class="{ 'sr-only lg:not-sr-only lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <ul
             @click="navOpen = false"
             class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0">
