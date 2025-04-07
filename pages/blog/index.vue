@@ -43,14 +43,13 @@ const allBlogCategories = await queryCollection('blog')
           >
 
           <div class="prose rounded-lg relative group">
-            <img
-              v-if="item.image"
-              :src="item.image"
-              :alt="item.image_alt"
-              height="600" width="400"
-              class="w-full h-auto mb-4 rounded-lg grayscale"
-              loading="lazy"
-            />
+            <div class="mb-4">
+              <AnimateImage
+                :src="item.image"
+                :alt="item.image_alt"
+                :scaleY="0.75"
+              />
+            </div>
             <h2 class="text-balance mt-0 mb-2">{{ item.title }}</h2>
 
             <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>

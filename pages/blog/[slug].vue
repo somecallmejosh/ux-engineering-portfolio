@@ -21,8 +21,11 @@ useSeoMeta({
     <div v-if="post" class="prose">
       <h1>{{ post.title }}</h1>
       <figure>
-        <img  height="600" width="400" :src="post.image" :alt="post.image_alt" class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale" loading="lazy" />
-        <figcaption class="text-sm text-neutral-500">Image created by Sora</figcaption>
+        <AnimateImage
+          :src="post.image"
+          :alt="post.image_alt"
+          :scaleY="0.75"
+        />
       </figure>
       <small>Published on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }} by <span class="script">josh</span></small>
       <ContentRenderer :value="post" />

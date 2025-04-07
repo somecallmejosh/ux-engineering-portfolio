@@ -73,14 +73,13 @@ const allProjectCategories = await queryCollection('projects')
           class="space-y-4 md:p-6"
           >
           <div class="rounded-lg relative group">
-            <img
-                v-if="item.image"
+            <div class="mb-4">
+              <AnimateImage
                 :src="item.image"
                 :alt="item.image_alt"
-                height="600" width="400"
-                class="w-full h-auto rounded-lg mb-4"
-                loading="lazy"
+                :scaleY="0.75"
               />
+            </div>
             <div class="prose">
               <h2 class="text-balance">
                 {{ item.title }}

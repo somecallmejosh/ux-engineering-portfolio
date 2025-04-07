@@ -1,5 +1,4 @@
-<script setup>
-import { useInView } from 'motion-v'
+<script setup lang="tsx">
 useSeoMeta({
   title: 'JoshBriley | Enterprise-Grade UX Engineering',
   ogTitle: 'JoshBriley | Enterprise-Grade UX Engineering',
@@ -70,13 +69,10 @@ const capabilities = [
         <li v-for="(item, index) in capabilities"
         :key="item.id" class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
           <div :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
-            <img
-              v-if="item.image"
+            <AnimateImage
               :src="item.image"
               :alt="item.image_alt"
-              height="600" width="400"
-              class="w-full rounded-lg grayscale mb-4 lg:mb-0"
-              loading="lazy"
+              :scaleY="0.75"
             />
           </div>
           <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
