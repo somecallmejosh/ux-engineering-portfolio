@@ -65,29 +65,26 @@ const capabilities = [
           solutions that prioritize both user experience and technical excellence. My expertise lies in building systems
           that not only meet current needs but are designed to evolve and scale alongside the organization.</p>
       </div>
-      <div class="md:-mx-6">
-        <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5 md:divide-x divide-gray-100">
-          <li
-            v-for="(item, index) in capabilities"
-              :key="item.id"
-              class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100"
-              >
-            <div
-              class="prose">
-              <h2 class="text-balance">{{ item.headline }}</h2>
-              <img
-                v-if="item.image"
-                :src="item.image"
-                :alt="item.image_alt"
-                height="600" width="400"
-                class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
-                loading="lazy"
-              />
-              <p v-html="item.description"></p>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <ul class="space-y-24">
+        <li v-for="(item, index) in capabilities"
+        :key="item.id" class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
+          <div :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
+            <img
+              v-if="item.image"
+              :src="item.image"
+              :alt="item.image_alt"
+              height="600" width="400"
+              class="w-full rounded-lg grayscale mb-4 lg:mb-0"
+              loading="lazy"
+            />
+          </div>
+          <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
+            <h2 class="text-balance">{{ item.headline }}</h2>
+            <p v-html="item.description"></p>
+          </div>
+
+        </li>
+      </ul>
     </div>
   </div>
 </template>

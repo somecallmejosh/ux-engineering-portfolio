@@ -69,23 +69,21 @@ const allProjectCategories = await queryCollection('projects')
     </div>
 
     <div v-if="allPosts" class="md:-mx-6">
-      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5 md:divide-x divide-gray-100">
+      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5">
         <li
           v-for="(item, index) in allPosts"
           :key="item.id"
-          class="space-y-4 md:p-6 md:nth-[n+3]:border-t lg:nth-[3]:border-t-0 lg:nth-[n+4]:border-t border-gray-100"
+          class="space-y-4 md:p-6"
           >
           <div class="rounded-lg relative group">
-            <div class="aspect-[3/2] border border-neutral-100 rounded-lg overflow-hidden mb-4">
-              <img
+            <img
                 v-if="item.image"
                 :src="item.image"
                 :alt="item.image_alt"
                 height="600" width="400"
-                class="w-full h-full object-cover"
+                class="w-full h-auto rounded-lg mb-4"
                 loading="lazy"
               />
-            </div>
             <div class="prose">
               <h2 class="text-balance">
                 {{ item.title }}
