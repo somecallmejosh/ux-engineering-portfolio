@@ -34,23 +34,22 @@ const allBlogCategories = await queryCollection('blog')
         Welcome to my blog, where I explore how thoughtful UX Engineering can help businesses grow and deliver better digital products.
       </p>
     </div>
-    <div v-if="allPosts" class="md:-mx-6">
-      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5">
+    <div v-if="allPosts">
+      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-24 md:gap-12">
         <li
           v-for="(item, index) in allPosts"
           :key="item.id"
-          class="space-y-4 md:p-6"
+          class="space-y-4"
           >
 
           <div class="prose rounded-lg relative group">
-            <div class="mb-4">
-              <AnimateImage
-                :src="item.image"
-                :alt="item.image_alt"
-                :scaleY="0.75"
-              />
-            </div>
-            <h2 class="text-balance mt-0 mb-2">{{ item.title }}</h2>
+            <AnimateImage
+              :src="item.image"
+              :alt="item.image_alt"
+              :scaleY="0.75"
+              class="mb-4"
+            />
+            <h2 class="text-balance mt-0 mb-0">{{ item.title }}</h2>
 
             <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
             <p v-html="item.description"></p>

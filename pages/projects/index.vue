@@ -65,23 +65,22 @@ const allProjectCategories = await queryCollection('projects')
         I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
       </p>
     </div>
-    <div v-if="allPosts" class="md:-mx-6">
-      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-0.5">
+    <div v-if="allPosts">
+      <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-24 md:gap-12">
         <li
           v-for="(item, index) in allPosts"
           :key="item.id"
-          class="space-y-4 md:p-6"
+          class="space-y-4"
           >
           <div class="rounded-lg relative group">
-            <div class="mb-4">
-              <AnimateImage
-                :src="item.image"
-                :alt="item.image_alt"
-                :scaleY="0.75"
-              />
-            </div>
+            <AnimateImage
+              :src="item.image"
+              :alt="item.image_alt"
+              :scaleY="0.75"
+              class="mb-4"
+            />
             <div class="prose">
-              <h2 class="text-balance">
+              <h2 class="text-balance mb-4">
                 {{ item.title }}
               </h2>
               <p v-html="item.description"></p>

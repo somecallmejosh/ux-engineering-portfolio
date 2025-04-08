@@ -73,6 +73,7 @@ const capabilities = [
               :src="item.image"
               :alt="item.image_alt"
               :scaleY="0.75"
+              class="mb-4 lg:mb-0"
             />
           </div>
           <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
