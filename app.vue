@@ -1,4 +1,5 @@
 <script setup>
+import { AnimatePresence, motion } from 'motion-v'
 import { onClickOutside } from '@vueuse/core'
 import { useTemplateRef } from 'vue'
 const target = useTemplateRef('target')
@@ -26,31 +27,68 @@ const navOpen = ref(false)
         <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
           <div>
-            <button @click="navToggle"
+            <motion.button @click="navToggle"
+              :whilePress="{ scale: 1.1 }"
               class="flex lg:hidden cursor-pointer flex items-center gap-1 text-xs uppercase font-medium"
               aria-label="Toggle nav menu visibility">
               Menu
               <Icon v-if="!navOpen" name="ph:equals-bold" size="1.5em" />
               <Icon v-if="navOpen" name="ph:x-bold" size="1.5em" />
-            </button>
+            </motion.button>
           </div>
         </div>
-        <nav aria-label="Main Navigation" :class="{ 'sr-only lg:not-sr-only lg:flex lg:flex-col lg:flex-1': !navOpen }">
-          <ul
-            @click="navOpen = false"
-            class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0">
-            <li v-for="item in nav" :key="item.path">
-              <NuxtLink class="flex items-center gap-3 group transition-colors duration-150" :to="item.path">
-                <Icon :name="item.icon"
-                  class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
-                {{ item.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-          <div class="mt-auto flex items-center gap-2">
-            <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
-              alt="Josh Briley" width="40" height="40" />
-            <span>Hi, I'm josh!</span>
+        <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
+          <AnimatePresence :initial="false">
+            <motion.div
+              v-if="navOpen"
+              :initial="{opacity: 0, height: 0}"
+              :animate="{opacity: 1, height: 'auto'}"
+              :exit="{opacity: 0, height: 0}"
+              :transition="{
+                duration: 0.2,
+              }"
+            >
+              <ul
+                @click="navOpen = false"
+                  class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0 lg:hidden">
+                  <li
+                    v-for="item in nav" :key="item.path">
+                    <NuxtLink class="flex items-center gap-3 group transition-colors duration-150" :to="item.path">
+                      <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
+                        <Icon :name="item.icon"
+                          class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
+                          {{ item.title }}
+                      </motion.span>
+                    </NuxtLink>
+                  </li>
+              </ul>
+              <div class="mt-auto flex items-center gap-2">
+                <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
+                  alt="Josh Briley" width="40" height="40" />
+                <span>Hi, I'm josh!</span>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+          <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
+            <ul
+              @click="navOpen = false"
+              class="border-l border-neutral-200 mb-4 mt-0">
+              <li
+                v-for="item in nav" :key="item.path">
+                <NuxtLink class="flex items-center gap-3 group transition-colors duration-150" :to="item.path">
+                  <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
+                    <Icon :name="item.icon"
+                      class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
+                      {{ item.title }}
+                  </motion.span>
+                </NuxtLink>
+              </li>
+            </ul>
+            <div class="flex items-center gap-2">
+              <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
+                alt="Josh Briley" width="40" height="40" />
+              <span>Hi, I'm josh!</span>
+            </div>
           </div>
         </nav>
       </header>

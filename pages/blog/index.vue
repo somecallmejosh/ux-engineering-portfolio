@@ -1,4 +1,5 @@
 <script setup>
+import { motion } from 'motion-v'
 const allPosts = await queryCollection('blog')
   .order('publishedAt', 'DESC')
   .all()
@@ -36,10 +37,11 @@ const allBlogCategories = await queryCollection('blog')
     </div>
     <div v-if="allPosts">
       <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-24 md:gap-12">
-        <li
+        <motion.li
           v-for="(item, index) in allPosts"
           :key="item.id"
           class="space-y-4"
+          :whilePress="{ y: 4 }"
           >
 
           <div class="prose rounded-lg relative group">
@@ -60,7 +62,7 @@ const allBlogCategories = await queryCollection('blog')
               }}</span>
             </NuxtLink>
           </div>
-        </li>
+        </motion.li>
       </ul>
     </div>
   </div>

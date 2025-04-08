@@ -1,4 +1,5 @@
 <script setup lang="tsx">
+import { motion } from 'motion-v'
 useSeoMeta({
   title: 'JoshBriley | Enterprise-Grade UX Engineering',
   ogTitle: 'JoshBriley | Enterprise-Grade UX Engineering',
@@ -83,30 +84,29 @@ const capabilities = [
 
         </li>
       </ul>
-      <ul class="flex items-center justify-between lg:hidden gap-4 border-t border-neutral-200">
+      <ul class="grid grid-cols-2 items-center justify-between lg:hidden gap-12 border-t border-neutral-200 not-prose py-6 font-medium">
         <li class="text-center prose">
-          <NuxtLink class="" to="/projects">
-            <div class="w-24 -mb-4">
+          <NuxtLink class="hover:underline" to="/projects">
+            <motion.div :whilePress="{ y: 4 }" >
               <AnimateImage
                 src="https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp"
                 alt="Josh Briley"
                 :scaleY="0.75"
               />
-            </div>
-            Projects
+              Projects
+            </motion.div>
           </NuxtLink>
         </li>
         <li class="text-center prose">
-
-          <NuxtLink to="/blog">
-            <div class="w-24 -mb-4">
+          <NuxtLink class="hover:underline" to="/blog">
+            <motion.div :whilePress="{ y: 4 }" >
               <AnimateImage
                 src="https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp"
                 alt="Josh Briley"
                 :scaleY="0.75"
               />
-            </div>
-            Blog
+              Blog
+            </motion.div>
           </NuxtLink>
         </li>
       </ul>
