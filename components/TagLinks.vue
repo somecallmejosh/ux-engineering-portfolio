@@ -15,15 +15,15 @@ const props = defineProps({
 })
 </script>
 <template>
-  <OverflowX>
-    <ul class="flex gap-2 not-prose">
-      <li v-for="(tag, index) in tags" :key="index">
+  <ul class="flex gap-2 not-prose flex-wrap">
+    <li v-for="(tag, index) in tags" :key="index">
+      <Tooltip :id="tag" :text="tag.replace('-light', '').replace('js', ' JS')">
         <Icon
           :name="`skill-icons:${tag}`"
           size="1.5em"
           class="grayscale hover:grayscale-0 transition-all duration-150"
         />
-      </li>
-    </ul>
-  </OverflowX>
+      </Tooltip>
+    </li>
+  </ul>
 </template>

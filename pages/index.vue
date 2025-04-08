@@ -81,7 +81,6 @@ const capabilities = [
             <h2 class="text-balance">{{ item.headline }}</h2>
             <p v-html="item.description"></p>
           </div>
-
         </li>
       </ul>
       <ul class="grid grid-cols-2 items-center justify-between lg:hidden gap-12 border-t border-neutral-200 not-prose py-6 font-medium">
