@@ -125,6 +125,7 @@ const skillIcons = [
           <TagLinks
             v-if="post.tags"
             :tags="post.tags"
+            class="mb-6"
           />
           <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium hover:underline block shrink-0">
             <Icon name="ph:link-simple-bold" class="size-4" />
