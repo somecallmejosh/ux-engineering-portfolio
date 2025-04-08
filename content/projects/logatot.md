@@ -5,7 +5,7 @@ businessUrl: "https://www.logatot.com"
 publishedAt: 2025-11-03
 title: "Empowering Child Care Providers Through Voice-Logging at LogATot"
 description: "A collaborative project that resulted in a unified and streamlined web application, elevating the brand’s digital presence."
-tags: [alpinejs-light, css, figma-light,\, github-light, heroku, html, htmx-light, illustrator, javascript, rails, ruby, tailwindcss-light]
+tags: [alpinejs-light, css, figma-light, github-light, heroku, html, htmx-light, illustrator, javascript, rails, ruby, tailwindcss-light]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991606/josh-portfolio/assets_task_01jr6zkaxkener6qnhca37gwmb_img_0.webp'
 ---
 
