@@ -19,7 +19,7 @@ const visibilityToggle = () => {
 onClickOutside(target, event => toolTipVisible.value = false)
 </script>
 <template>
-  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @click="visibilityToggle" class="tooltip group">
+  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @tap="visibilityToggle" class="tooltip group">
     <div :aria-describedby="`tooltip-${id}`">
       <slot></slot>
     </div>
