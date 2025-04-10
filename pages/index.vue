@@ -1,8 +1,8 @@
 <script setup lang="tsx">
 import { motion } from 'motion-v'
 useSeoMeta({
-  title: 'JoshBriley | Enterprise-Grade UX Engineering',
-  ogTitle: 'JoshBriley | Enterprise-Grade UX Engineering',
+  title: 'Josh Briley | Enterprise-Grade UX Engineering',
+  ogTitle: 'Josh Briley | Enterprise-Grade UX Engineering',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
@@ -16,19 +16,20 @@ const capabilities = [
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743964962/josh-portfolio/assets_task_01jr66de64evqaxfev44eyj7y0_img_0.webp',
     image_alt: 'Design System Architecture & Implementation',
   },
-  {
-    id: 2,
-    headline: 'Complex Enterprise Dashboard Development',
-    description: 'Expertise in building <strong>data-intensive dashboards with advanced visualization</strong> techniques using D3.js and Chart.js. Experience with handling large datasets, optimizing data fetching and rendering, and implementing real-time data updates. Proven ability to implement user permission and role-based access control within dashboards.',
-    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965560/josh-portfolio/assets_task_01jr670vkre80ayya5vbc46ja0_img_0.webp',
-    image_alt: 'Complex Enterprise Dashboard Development',
-  },
+
   {
     id: 3,
     headline: 'Web Accessibility (WCAG Compliance)',
     description: 'Comprehensive <strong>implementation of WCAG 2.1 (or higher) guidelines</strong>, including semantic HTML, ARIA attributes, keyboard navigation, and color contrast adherence. Demonstrated experience with accessibility testing tools Axe, Lighthouse, and various screen readers.',
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
     image_alt: 'Web Accessibility (WCAG Compliance)',
+  },
+  {
+    id: 2,
+    headline: 'Complex Enterprise Dashboard Development',
+    description: 'Expertise in building <strong>data-intensive dashboards with advanced visualization</strong> techniques using D3.js and Chart.js. Experience with handling large datasets, optimizing data fetching and rendering, and implementing real-time data updates. Proven ability to implement user permission and role-based access control within dashboards.',
+    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744227298/josh-portfolio/assets_task_01jre017kredrsghw9rwhdb4er_img_0.webp',
+    image_alt: 'Complex Enterprise Dashboard Development',
   },
   {
     id: 5,
