@@ -4,7 +4,7 @@ useSeoMeta({
   ogTitle: 'Contact Me',
   description: 'Contact me for enterprise UX engineering and consulting services.',
   ogDescription: 'Contact me for enterprise UX engineering and consulting services.',
-  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743967111/josh-portfolio/assets_task_01jr68gym3ea0rqmm2pex7mp5z_img_0.webp'
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317571/josh-portfolio/assets_task_01jrgpq4pdefgrxbb6xbx72yyw_img_0.webp'
 })
 </script>
 
@@ -16,7 +16,8 @@ useSeoMeta({
 
     <h2>Enterprise UX Engineering & Consulting</h2>
     <AnimateImage
-      src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743967111/josh-portfolio/assets_task_01jr68gym3ea0rqmm2pex7mp5z_img_0.webp" class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
+      src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317571/josh-portfolio/assets_task_01jrgpq4pdefgrxbb6xbx72yyw_img_0.webp"
+      class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
       alt="UX Engineer presenting to business people"
       :scaleY="0.75"
     />
