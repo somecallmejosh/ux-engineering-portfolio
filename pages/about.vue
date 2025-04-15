@@ -13,7 +13,6 @@ const goodFit = [
   'A <strong>focus on performance optimization and scalability</strong>, ensuring applications meet the demands of enterprise users.',
   'Experience in <strong>implementing and maintaining design systems</strong> for large-scale applications.',
   'Experience <strong>integrating front-end interfaces with backend REST APIs</strong>.',
-  'Proven ability to handle <strong>and data data error exchange, handling, validation</strong>.'
 ]
 </script>
 
