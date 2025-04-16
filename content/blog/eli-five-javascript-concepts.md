@@ -8,7 +8,7 @@ image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto
 image_alt: "Javascript developer writing notes on a paper tablet"
 ---
 
-My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to a five-year-old (or, you know, myself on a bad day). Consider this my personal cheat sheet in plain English.
+My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to a five-year-old (or, you know, myself on a bad day). Consider this my personal cheat sheet in plain English. My chosen metaphor for the following content will be that of a workshop. Each feature will be represented as a different tool or process within this workshop.
 
 ## The Event Loop: The Never-Ending To-Do List
 Imagine our workshop has a super-organized foreman with a giant stack of sticky notes. Each note is a job that needs doing. This foreman is the event loop. All day long, they peek at the stack. If there's a note on top, they grab it, shout out what needs to be done, and then immediately check the stack again. They keep doing this, one note at a time, making sure nothing gets missed. That's the event loop, constantly checking for tasks (like "when the button is clicked" or "when the data comes back") and getting them done.
