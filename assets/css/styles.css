@@ -12,10 +12,9 @@ html {
 }
 
 .shiki {
-  background: transparent;
+  background: var(--color-neutral-50);
   border-radius: 8px;
   border: var(--color-neutral-200) solid 1px;
-  box-shadow: 0 0 0 2px var(--color-neutral-200);
   font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
   margin: 1.5rem 0;
@@ -84,5 +83,35 @@ dt {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.prose {
+  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+    font-weight: 700;
+    background-color: var(--color-blue-50);
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    color: var(--color-neutral-900);
+    letter-spacing: -0.5px;
+    border: 1px solid var(--color-blue-100);
+  }
+  pre.language-js {
+    :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+      background-color: transparent;
+      border: 0;
+      content: "";
+      padding: 0;
+      border-radius: 40;
+      letter-spacing: 0;
+    }
+  }
+
+  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
+    content: "";
+  }
+
+  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
+    content: "";
   }
 }
