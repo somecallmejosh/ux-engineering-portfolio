@@ -2,151 +2,235 @@
 slug: eli-five-javascript-concepts
 publishedAt: 2025-04-16
 title: 'Eli5: JavaScript Concepts That I Always Forget'
-description: "My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to a five-year-old (or, you know, myself on a bad day). Consider this my personal cheat sheet in plain English."
+description: "My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to my nephew in Kindergarten (or, you know, myself on a day when the goldfish outstmarts me)."
 tags: [javascript, programming]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744812311/josh-portfolio/assets_task_01jrzehbb4f5xbj8z0g9h68e3x_img_0.webp"
 image_alt: "Javascript developer writing notes on a paper tablet"
 ---
+My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to my bestest friend (or, you know, myself on a day when the goldfish wins). Consider this our super-duper simple cheat sheet! We're going to imagine our JavaScript world is like our kindergarten classroom.
 
-My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to a five-year-old (or, you know, myself on a bad day). Consider this my personal cheat sheet in plain English. My chosen metaphor for the following content will be that of a workshop. Each feature will be represented as a different tool or process within this workshop.
+## The Event Loop: The Teacher's To-Do List
 
-## The Event Loop: The Never-Ending To-Do List
-Imagine our workshop has a super-organized foreman with a giant stack of sticky notes. Each note is a job that needs doing. This foreman is the event loop. All day long, they peek at the stack. If there's a note on top, they grab it, shout out what needs to be done, and then immediately check the stack again. They keep doing this, one note at a time, making sure nothing gets missed. That's the event loop, constantly checking for tasks (like "when the button is clicked" or "when the data comes back") and getting them done.
+Imagine our teacher has a big pile of **"do this next!" notes** on their desk. All day, the teacher looks at the top note. They read it out loud, help the class do that thing, and then look at the pile again. That's just like the **event loop** in JavaScript! It's like a super-fast teacher constantly checking a list of things that need to happen. It does each thing one by one so everything stays organized.
 
-## Promises vs. "Call Me" Notes: Ordering Future Work
-Sometimes we need to ask a coworker to do something that takes time. We have two main ways to handle this:
+**In JavaScript:** The event loop manages the execution of asynchronous tasks, ensuring non-blocking operations don't freeze the main program flow.
+
+## Promises vs. "Call Me" Notes: Planning Playtime
+
+Sometimes we need to ask our friend to do something that takes a while. We have two ways to plan this:
 
 ### "Call Me" Notes (Callbacks)
-**You scribble a note**: "Hey! When you finish mixing the paint, call me back so I can start painting!" They call, and then you write another note: "Okay, now that the paint is dry, call me back so I can add the glitter!" The more steps, the more "call me back" notes flying around. It can get super messy, like trying to follow a treasure map drawn by a squirrel. This messy pile of notes is what people call "callback hell." Yikes!
+
+**You give a note to your friend**: "When you're done building the tower, *call me back* so we can start painting!" It can get super confusing, like trying to remember who promised to share their crayons! This messy bunch of notes is like **"callback hell"** in JavaScript. Uh oh!
+
+**In JavaScript:** Callbacks are functions executed later when an asynchronous operation completes, but nesting them deeply can be hard to manage.
 
 ### Pinky Promises (Promises)
-**Instead of a bunch of notes, you make a pinky promise**: "I promise that after the paint is mixed, then we will paint. And after that, we'll add glitter!" It's a neat chain of promises. If something goes wrong at any point (like spilling the paint!), there's one clear place to handle the oopsie. Much cleaner and easier to understand than a million little notes!
 
-## Cookies, sessionStorage, and localStorage: Keeping Stuff Handy
-Our workshop needs different places to keep things we need:
+**Instead of lots of notes, you make a pinky promise**: "I promise that *after* we build the tower, *then* we will add the flags. *And after that*, we'll knock it down!" It's a neat chain of promises. If something goes wrong, there's one clear way to handle the problem. Much easier to understand!
+
+**In JavaScript:** Promises represent the eventual outcome of an asynchronous operation, allowing cleaner chaining of actions and error handling.
+
+## Cookies, sessionStorage, and localStorage: Our Classroom Storage
+
+Our classroom has different places to keep our special things:
 
 ### `Cookies`: Tiny Secret Messages
-Imagine little secret notes that the website (our customer) can slip into your browser (your personal workbench). Every time you visit that website again, your browser shows them these notes, so the website remembers you or your preferences (like your favorite color). These notes can have an "expiration date," like milk in the fridge.
 
-### `sessionStorage`: Temporary Scratchpad
-This is like a temporary doodle pad on your current workbench. As soon as you close that workbench (that browser tab), the doodle pad disappears completely. It's great for quick notes you only need for that one project.
+Imagine little **secret messages** that the website (our visitor) can give to your browser (your cubby). Every time you visit that website again, your browser shows them these messages, so the website remembers you or your favorite things. These messages can have an "expiration date."
 
-### `localStorage`: Your Permanent Toolbox
-This is like your personal toolbox that stays in the workshop even when you go home and come back. You can store tools and materials in here that you need for many different projects, and they'll stay put until you decide to take them out.
+**In JavaScript:** Cookies are small text files websites store on a user's computer to remember information across browsing sessions.
 
-## Bringing in New Tools (Scripts): The Order Matters!
-Sometimes we need to bring new tools (JavaScript files) into our workshop:
+### `sessionStorage`: Temporary Desk Drawer
 
-### `<script>`: The Bossy New Tool
-Imagine a new tool arrives, and the person carrying it stops everyone in the workshop and makes them listen to the instructions right now before anyone can do anything else. The webpage stops loading everything else until this tool is ready. Talk about a productivity killer!
+This is like a **temporary drawer** in your desk for the project you're working on right now in this one class session (browser tab). As soon as the class ends, everything in that drawer disappears. It's great for keeping things you only need for a little while.
 
-### `<script async>`: The Helpful but Impatient Tool
-This new tool can be unpacked and its instructions read in the background while everyone else keeps working. But, when it's finally ready to be used, it suddenly demands everyone's attention, even if they're in the middle of something important. The webpage doesn't wait for it to download, but it does wait for it to run once it's here, potentially causing a little hiccup.
+**In JavaScript:** `sessionStorage` provides temporary data storage for the duration of the current browser session.
 
-### `<script defer>`: The Polite and Prepared Tool
-This tool is super considerate! It gets brought into the workshop and its instructions are read in the background while everyone continues their work. But, it waits patiently until everyone else is totally finished before it jumps in to be used. This way, the webpage loads completely before this tool starts doing its thing.
+### `localStorage`: Our Permanent Toy Box
 
-## Event Delegation: Watching the Whole Crew
-Imagine you're supervising a bunch of playful puppies in a puppy park, and you want to know whenever any puppy starts barking. Instead of putting a tiny microphone on each puppy, you can just stand in one spot and listen to the whole park. If a bark happens, you know which puppy did it. That's event delegation – instead of attaching a "listener" to every single puppy (element), you attach it to the whole park (a common parent) and figure out which puppy (element) caused the bark (event). Much easier than chasing after every single pup!
+This is like the **big toy box** in the classroom that stays there even after everyone goes home. You can put your favorite toys in here, and they'll still be there the next day. They stay until someone decides to take them out.
 
-## Event Bubbling: When Things Spread
-Imagine you have a tiny bell inside a slightly bigger bell, inside a really big bell. If you tap the tiny bell, the sound doesn't just stay there! The bigger bells will also vibrate and make a sound. That's event bubbling: when something happens to a specific thing (you poke the small bell), the effect "bubbles up" to all the things it's inside (the medium and big bells), all the way up to the whole workshop (the document).
+**In JavaScript:** `localStorage` provides persistent data storage that can be accessed across browser sessions.
 
-## Event Capturing: Catching Things Early
-Now, imagine the same set of nested bells. Event capturing is like having a super sensitive ear outside the biggest bell. This ear hears the tap first, then the middle bell might muffle the sound a bit, and finally, the tiny bell actually rings. It's the opposite of bubbling – the event is caught by the outermost container first and then travels down to the actual target.
+## Bringing in New Helpers (Scripts): Lining Up Properly!
 
-## Labeling Our Tools: var, let, and const
-We need to label our tools carefully so we don't get confused:
+Sometimes our teacher brings in new helpers (JavaScript files) to show us something:
 
-### `var`: The Public Grab Bag
+### `<script>`: The Bossy Helper
 
-Imagine a community toy bin that anyone in the house can rummage through and even rename the toys. If someone mentions a toy's name, everyone knows that bin exists from the start (it's "hoisted"), even if the toy hasn't been put in yet (so it's "undefined" for a bit).
+Imagine a new helper walks in and **makes everyone stop what they're doing** to listen to their instructions *right now* before anyone can play again. The webpage stops showing you things until this helper is finished talking. Not very fun!
 
-### `let`: Your Secret Stash
-Now imagine a special box of toys that only you can access in your own room (it's block-scoped). You can't even try to play with a toy in this box until you've properly put it there ("temporal dead zone" – no playing before setup!).
+**In JavaScript:** Standard `<script>` tags block HTML parsing while the script is downloaded and executed.
 
-### `const`: The Super-Glued Toy
-Same as your secret stash in terms of access and timing, but once you pick a specific toy and put it in its spot, you can't swap it out for a totally different toy. You can still play with the toy itself, but you can't replace it with a robot if it started as a car.
+### `<script async>`: The Helpful but Impatient Helper
 
-## Hoisting: Remembering Names Early
-Imagine the workshop manager needs to know all the workers' names before the day even begins so they can assign tasks. Even if a new worker walks in late and introduces themselves, the manager already has their name on the initial list. That's hoisting: JavaScript makes a mental note of all your tool and process names (functions and variables) right at the beginning, so it "knows" they exist throughout the workshop, even if you define them later in the instructions.
+This new helper can get their instructions ready in the background while everyone else keeps playing. But, when they're ready to show us, **they suddenly interrupt everyone**. The webpage doesn't wait to download, but it waits to run, potentially causing a little jump.
 
-## Arrow Functions in Constructors: Pointing the Finger
-Think of a teacher (your object) who wants their helper (a method) to always know who the teacher is, even if the helper visits other classrooms. Using an arrow function is like gluing the helper's pointing finger directly at the teacher. No matter where the helper goes, their finger will always point back to the correct teacher. This ensures the helper always knows who "this" refers to.
+**In JavaScript:** The `async` attribute downloads the script without blocking, but execution pauses HTML parsing.
 
-## ES2015 Classes vs. ES5 Constructors: Blueprints Old and New
-Imagine two ways to draw instructions for building a super cool LEGO castle:
+### `<script defer>`: The Polite and Prepared Helper
+
+This helper is super nice! They get their instructions ready quietly in the background while everyone keeps playing. But, they **wait patiently** until everyone is totally finished playing before they show us what they have. This way, the webpage shows you everything before the script starts doing its thing.
+
+**In JavaScript:** The `defer` attribute downloads the script without blocking and executes it after HTML parsing is complete.
+
+## Event Delegation: Watching All Our Friends
+
+Imagine our teacher wants to know whenever any kid in the class starts singing. Instead of putting their ear right next to every single kid, they can just **stand in one spot and listen to the whole classroom**. That's **event delegation** – instead of the computer listening to every single thing you can click on, it listens to a bigger thing that holds all those clickable things and figures out which one you actually clicked. Much easier for the computer!
+
+**In JavaScript:** Event delegation attaches a single listener to a parent element to handle events for all its children.
+
+## Event Bubbling: When Excitement Spreads
+
+Imagine you get super excited and clap your hands. The person next to you gets a little excited too and taps their foot, and then the person next to them starts bouncing up and down! That's **event bubbling**: when something happens to one thing, the excitement "bubbles up" to all the things around it, all the way up to the whole classroom.
+
+**In JavaScript:** Event bubbling is the order in which event handlers are called, starting from the innermost element and going up to its ancestors.
+
+## Event Capturing: Catching Whispers Early
+
+Now, imagine the same nested bells. **Event capturing** is like the teacher having super good ears and hearing a tiny whisper in the small bell *first*, then maybe the middle bell muffles it a bit, and then the big bell barely registers it. It's the opposite of bubbling – the teacher hears the event at the biggest container first, and then the sound travels down to the actual thing that made the noise.
+
+**In JavaScript:** Event capturing is an event propagation model where the event is first caught by the outermost element and then travels down to the target.
+
+## Labeling Our Toys: `var`, `let`, and `const`
+
+We need to label our toys (variables) carefully so we don't get them mixed up:
+
+### `var`: The Classroom Toy Bin
+
+Imagine a big toy bin that everyone in the class can reach into and even change what's inside. If someone asks for a toy by name, everyone knows that bin exists from the start (it's "hoisted"), even if the toy isn't in there yet.
+
+**In JavaScript:** `var` declares a function-scoped or globally-scoped variable that is hoisted.
+
+### `let`: Your Special Cubby
+
+Now imagine you have a special cubby for your own toys. Only you can put toys in and take them out. You can't even try to play with a toy in this cubby until you've actually put it there.
+
+**In JavaScript:** `let` declares a block-scoped variable that is not hoisted in the same way as `var`.
+
+### `const`: Your Super-Glued Toy
+
+Same as your special cubby for access, but once you choose a toy and put it there, **you can't swap it out for a completely different toy**.
+
+**In JavaScript:** `const` declares a block-scoped variable that cannot be reassigned after initialization.
+
+## Hoisting: Remembering Everyone's Names
+
+Imagine our teacher needs to know all the students' names before class starts so they know who's here. Even if a new student walks in late and says their name, the teacher already has a spot for them on their list. That's **hoisting**: JavaScript makes a mental note of all the names of our tools and helpers (functions and variables) right at the beginning of our class (scope), so it "knows" they exist, even if we describe them later in the day.
+
+**In JavaScript:** Hoisting moves variable and function declarations to the top of their scope during compilation.
+
+## Arrow Functions in Constructors: The Teacher's Special Helper
+
+Think of a teacher (our object) who wants their special helper (a method) to always know who the teacher is, even if the helper goes to help in another classroom. Using an **arrow function** for the helper is like giving the helper a special name tag that's permanently stuck to the teacher. This makes sure the helper always knows who "**this**" refers to.
+
+**In JavaScript:** Arrow functions used as methods in constructors lexically bind `this` to the constructor's `this`.
+
+## ES2015 Classes vs. ES5 Constructors: Building Blocks Old and New
+
+Imagine two ways our teacher can show us how to build a toy robot:
 
 ### ES5 Constructor Function
-An older, slightly messy set of instructions with lots of separate steps that might be a bit confusing to follow.
+
+An older way of giving instructions, like a long list of steps that might be a little confusing and not very clearly labeled.
 
 ### ES2015 Class
-A brand new, super clear instruction booklet with labeled sections and easy-to-understand diagrams.
 
-Even though they look different, both sets of instructions can ultimately build the same awesome LEGO castle. The "class" syntax just makes it much easier to see how all the different parts of the castle fit together.
+A brand new, super clear instruction book with different sections for the robot's head, body, and legs, making it much easier to see how everything fits together.
 
-## Higher Order Functions: Super-Powered Tool Makers
-Imagine a special machine in our workshop that doesn't just build regular toys. This machine can also take other toy-making machines as ingredients and then create a brand new, even cooler machine or a special kind of toy! In JavaScript, a higher-order function is like this super machine – it can either take other functions as inputs or spit out a brand new function as its result (or both!).
+Even though the instructions look different, both ways can help us build the same kind of toy robot. The "class" way just makes it much easier to understand the plan.
 
-##  .call vs. .apply: Inviting Friends to the Party
-Think of .call and .apply as two ways to invite your function (the party) to hang out with some objects (your friends):
+**In JavaScript:** ES2015 classes offer a cleaner syntax for object blueprints and inheritance compared to ES5 constructor functions, though they are still based on prototypes.
+
+## Higher Order Functions: Super Helper Functions
+
+Imagine a special helper function that doesn't just do one thing. This helper can also **take other helper functions as instructions** or even **give you back a brand new helper function** to use! It's like a super-powered helper!
+
+**In JavaScript:** Higher-order functions can take other functions as arguments or return functions as their results.
+
+## `.call` vs. `.apply`: Asking Friends to Share
+
+Think of `.call` and `.apply` as two ways our teacher can ask different friends (objects) to share their toys (functions):
 
 ### `.call`
-It's like inviting your friends by listing each of their names individually on the invitation: "Hey [Friend 1], [Friend 2], and [Friend 3], come to my party!" You list the arguments one by one.
+
+It's like the teacher saying, "Hey [Friend 1], [Friend 2], and [Friend 3], can you show us your toys?" The teacher lists each friend one by one.
+
+**In JavaScript:** `.call` invokes a function with a specified `this` value and arguments provided individually.
 
 ### `.apply`
-It's like having a list of all your friends in a phone book (an array) and saying, "Hey phone book, everyone in this list is invited to my party!" You give it a single array of arguments.
 
-Both get your friends to the party, just with slightly different ways of sending the invites!
+It's like the teacher having a list of friends who have cool toys and saying, "Hey everyone on this list, can you show us your toys?" The teacher gives the computer a list (an array) of all the friends.
 
-## Anonymous Functions: Quick One-Time Tools
-Think of an anonymous function like a quick note you scribble on a scrap of paper because you only need it for one second and then you'll throw it away. It doesn't need a name because you're not going to call it again later. In JavaScript, we use these for short, one-off tasks where giving the function a name would be overkill.
+**In JavaScript:** `.apply` invokes a function with a specified `this` value and arguments provided as an array.
 
-## Function Declarations and Instantiation: Recipes and Baked Goods
-Let's revisit our recipe analogy:
+## Anonymous Functions: Secret Little Helpers
 
-### `function Person() {}`: The Recipe Book
-This is like writing down a recipe for making a "Person." You've got the instructions, but you haven't actually baked anything yet.
+Think of an **anonymous function** like a quick little helper job that we only need to do once, so we don't even need to give it a special name. It's like a little note we write to ourselves and then throw away.
 
-### `const person = Person()`: Following the Recipe (Regular Style)
-This is like just following the recipe step-by-step like any other set of instructions. Whatever the "Person" recipe returns is what you get. If the recipe doesn't say to return a cake, you might end up with nothing (undefined).
+**In JavaScript:** Anonymous functions are functions without a name, often used as arguments to other functions.
 
-### `const person = new Person()`: Baking a Brand New Cake
-This is like saying, "Use the 'Person' recipe to bake me a new 'Person'!" The new keyword tells JavaScript to create a fresh, empty "cake," link it to the "Person" recipe's special ingredients (prototype), and if the recipe doesn't say to serve something else, this new "cake" is what you get.
+## Function Declarations and Instantiation: Our Building Plans and Creations
 
-## Closures: Carrying Secrets
-Imagine you have a magic backpack. You can put special tools and materials inside it in one part of the workshop. Then, even if you move to a completely different area, you can still open that backpack and use the items inside. A closure in JavaScript is like this magic backpack – a function that remembers and can access the tools and materials (variables) from the area where it was created, even after you've moved on.
+Let's think about building with blocks again:
 
-```javascript
-function makeCounter() {
-  let count = 0; // A secret tool in the backpack
+### `function Person() {}`: The Building Plan
 
-  return function() {
-    // This inner function is the magic backpack
-    count++;
-    console.log(count);
-  };
-}
+This is like drawing a **plan** for how to build a "Person" out of blocks. We have the instructions, but we haven't actually built one yet.
 
-const counterA = makeCounter();
-counterA(); // 1 (opening the backpack and using the tool)
-counterA(); // 2 (using it again!)
-```
+**In JavaScript:** This is a function declaration, defining a named function.
 
-## Prototypal Inheritance: Borrowing Features
-Imagine you have a master blueprint for building a basic toy car. Now, you want to build a race car. Instead of drawing a whole new blueprint from scratch, you can just say, "This race car is like the basic car, but it has a spoiler and faster wheels." The race car inherits the basic features from the car blueprint and then adds its own special stuff. That's prototypal inheritance: objects can borrow properties and abilities from other "prototype" objects.
+### `const person = Person()`: Following the Plan (Regular Way)
 
-## `Function.prototype.bind`: Tying the Puppet Strings
-Imagine a puppet that anyone can pick up and control ("this"). .bind() is like permanently tying the puppet's strings to one specific puppeteer's hand. No matter who else tries to grab the puppet, it will always respond to the original puppeteer's commands. That's what .bind() does – it makes sure a function's "this" value always refers to a specific object, no matter how or where you call the function later.
+This is like just following the building plan step-by-step. Whatever the plan says to give us at the end is what we get.
 
-## `this`: Who's Holding the Tool?
-Imagine different workers in the workshop wearing different name tags depending on the tool they're currently using. If a worker has a "Welder" tag, you know that "this" worker is currently operating the welding equipment. In JavaScript, "this" is like the current name tag of a function, telling you which object the function is currently working with. This tag can change depending on how the function is called.
+**In JavaScript:** This is a regular function call, executing the function and assigning its return value.
 
-## CommonJS vs. ES Modules: Sharing Toys Nicely
-Let's revisit sharing toys in the classroom:
+### `const person = new Person()`: Building a Brand New Block Person
 
-### CommonJS: The "Gimme That!" System
-This is like the old way where kids would just shout, "I need that block from your pile!" right when they needed it. Each kid's pile just listed what they had.
+This is like saying, "Use the 'Person' building plan to **build a brand new 'Person'**!" The `new` keyword tells JavaScript to create a fresh, empty block person and follow the plan.
 
-### ES Modules: The Organized Toy Library
-This is the newer, more organized way. Each kid has a sign on their toy shelf saying, "I'm giving away these blocks." And if another kid needs a block, they write on their request list at the top, "I'm taking these blocks from your shelf." The teacher (JavaScript engine) can see who needs what in advance and keep things tidy.
+**In JavaScript:** Using `new` with a constructor function creates a new object, sets its prototype, and binds `this`.
+
+## Closures: Our Secret Sharing Circles
+
+Imagine we have a **secret sharing circle**. Only the kids in the circle know a special secret (a variable). Even if one of the kids leaves the circle, they still remember the secret! A **closure** in JavaScript is like this secret sharing circle – a function that remembers and can access the secrets (variables) from the circle (environment) where it was created, even after we've left that circle.
+
+**In JavaScript:** A closure is created when an inner function retains access to the outer function's variables after the outer function has finished executing.
+
+## Prototypal Inheritance: Borrowing Toys
+
+Imagine we have a **basic toy car**. Now, we want to make a race car. Instead of building a whole new car from scratch, we can say, "This race car is *like* the basic car, but it has a spoiler and faster wheels." The race car **borrows** the basic car features. That's **prototypal inheritance**: objects can borrow properties and abilities from other "prototype" (the basic car).
+
+**In JavaScript:** Prototypal inheritance allows objects to inherit properties and methods from their prototype object.
+
+## `Function.prototype.bind`: Tying Our Shoes to Our Feet
+
+Imagine you have a pair of shoes that anyone can try to wear ("`this`"). **`.bind()` is like permanently tying those shoes to *your* feet**. No matter who else tries to put them on, they'll always be stuck to you! That's what `.bind()` does – it makes sure a function's "`this`" value always refers to a specific object, no matter how or where the function is called later.
+
+**In JavaScript:** The `bind()` method creates a new function with a fixed `this` value.
+
+## `this`: Who's Playing with the Toy?
+
+Imagine different kids in the classroom wearing different **stickers** depending on which toy they're currently playing with. If a kid has a "Building Blocks" sticker, you know that "**this**" kid is the one playing with the building blocks right now. In JavaScript, "`this`" is like the current sticker of a function, telling you which object the function is currently working with.
+
+**In JavaScript:** The `this` keyword refers to the object that is currently executing the code, and its value depends on how the function is called.
+
+## CommonJS vs. ES Modules: Sharing Crayons
+
+Let's think about sharing crayons in our classroom:
+
+### CommonJS: The "Can I Borrow That?" System
+
+This is like the old way where if you needed a specific crayon, you'd just ask the person next to you, "Hey, can I borrow your blue crayon *right now*?"
+
+**In JavaScript:** CommonJS is a module system used primarily in Node.js, loading modules at runtime with `require()`.
+
+### ES Modules: The Organized Crayon Box
+
+This is the newer, more organized way. Before we even start drawing, everyone puts their crayons in a big community box and labels which ones they're willing to share. Then, if you need a crayon, you look at the box and say which ones you want to use at the beginning of your drawing time.
+
+**In JavaScript:** ES Modules are the standard module system in modern JavaScript, using `import` and `export` for static dependency analysis.
+
+Phew! We made it through JavaScript kindergarten! Hopefully, these simple stories will help those tricky concepts stick in our goldfish brains. Now let's go have some recess!
