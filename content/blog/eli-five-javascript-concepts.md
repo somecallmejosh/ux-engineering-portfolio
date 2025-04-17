@@ -1,6 +1,6 @@
 ---
 slug: eli-five-javascript-concepts
-publishedAt: 2025-04-16
+publishedAt: 2025-04-10
 title: 'Eli5: JavaScript Concepts That I Always Forget'
 description: "My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to my nephew in Kindergarten (or, you know, myself on a day when the goldfish outstmarts me)."
 tags: [javascript, programming]

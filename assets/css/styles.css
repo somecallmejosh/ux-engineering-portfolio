@@ -45,6 +45,15 @@ dt {
   font-weight: 400;
 }
 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  text-wrap: balance !important;
+}
+
 .prose h1 a,
 .prose h2 a,
 .prose h3 a,
@@ -55,7 +64,6 @@ dt {
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
-  text-wrap: pretty;
 
   &:hover {
     text-decoration: underline;

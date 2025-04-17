@@ -82,7 +82,7 @@ const allProjectCategories = await queryCollection('projects')
               class="mb-4"
             />
             <div class="prose">
-              <h2 class="text-balance mb-4">
+              <h2 class="text-balance mb-3">
                 {{ item.title }}
               </h2>
               <p v-html="item.description"></p>
