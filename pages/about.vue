@@ -78,55 +78,55 @@ const missionStatementItems = [
 ]
 
 const resumeItems = [
- {
+  {
     title: 'Senior UI Developer',
     company: 'Logatot, Inc.',
     date: '2023 – 2024',
-    description: 'Developed and maintained modular, accessible UI components using Ruby on Rails ViewComponents, ensuring design consistency and responsive layouts.'
+    description: "At Logatot, my focus was on building the visual heart of their application – those reusable UI components that make everything feel consistent and work smoothly on any device. Using Ruby on Rails ViewComponents, I aimed to create a library that not only looked good but was also accessible to everyone, ensuring a great experience for all users.",
   },
   {
     title: 'Senior Software Engineer',
     company: "America's Test Kitchen",
     date: '2022 – 2023',
-    description: 'Built and documented UI components with React, Next.js, and Storybook, streamlining feature delivery across multiple projects.'
+    description: "My time at America's Test Kitchen was all about making their delicious content shine online. I built and documented UI components using React, Next.js, and Storybook, creating a well-organized toolkit that helped the team deliver new features quickly and consistently across their various projects – ensuring every recipe and review looked its best!",
   },
   {
     title: 'Principal Design Engineer',
     company: 'Berkshire Hathaway Specialty Insurance',
     date: '2018 – 2022',
-    description: 'Created a custom UI component library within Vue.js/Nuxt.js, standardizing front-end development and accelerating feature rollouts.'
+    description: "As Principal Design Engineer at BHSI, I spearheaded the creation of a custom UI component library using Vue.js and Nuxt.js. This wasn't just about making things look the same; it was about setting a standard for front-end development that sped up how quickly we could roll out new features while keeping the user experience top-notch.",
   },
   {
     title: 'Lead UI Developer',
     company: "America's Test Kitchen",
     date: '2016 – 2018',
-    description: 'Designed and implemented a scalable UI utility system, reducing development overhead and improving team velocity.'
+    description: "Back at America's Test Kitchen, I took on the challenge of designing and implementing a smart system for styling the UI. This 'utility system' was all about streamlining our workflow, reducing the time developers spent on repetitive tasks, and ultimately making the whole team move faster and more efficiently.",
   },
   {
     title: 'UI Designer & Front End Developer',
     company: 'Sports Technologies, Inc.',
     date: '2013 - 2016',
-    description: 'Lead Designer and front-end developer for Ruby on Rails and Angular (6.x) web applications commissioned by elite sporting organizations such as NFL, NASCAR, NHL, MLS, PGA, and more.'
+    description: "This was a fantastic opportunity to blend my design and development skills, leading the charge on UI for Ruby on Rails and Angular web applications used by some of the biggest names in sports – the NFL, NASCAR, NHL, MLS, PGA, and more! It was all about creating intuitive and engaging experiences for these elite organizations.",
   },
   {
     title: 'Freelance UI Developer',
     company: 'Self-Employed',
     date: '2010 - Present',
-    description: 'Worked with various clients to develop and maintain web applications, focusing on performance optimization and accessibility.'
+    description: "Being self-employed has allowed me to collaborate with a diverse range of clients, helping them bring their web application ideas to life. My focus has always been on building solutions that not only look great but also perform smoothly and are accessible to everyone.",
   },
   {
     title: 'Web Designer & Front End Developer',
     company: 'ImageWorks, LLC',
     date: '2009 - 2013',
-    description: 'Front end developer and web designer for a variety of clients, including the Aetna Insurance.'
+    description: "At ImageWorks, I had the chance to wear both design and development hats, creating web experiences for a variety of clients, including Aetna Insurance. This role gave me a broad understanding of different industries and the importance of user-centered design.",
   },
   {
     title: 'Owner, Web Designer and Front End Developer',
     company: 'Para-Diddle Design, LLC',
     date: '2005 - 2009',
-    description: 'Responsible for vision, budgeting, marketing/sales, and other administrative tasks.'
+    description: "Running my own design and development company was an incredible learning experience. Beyond the coding and design, I was responsible for the whole picture – setting the vision, managing the budget, and even handling marketing and sales. It gave me a real appreciation for all the moving parts of a business.",
   },
-]
+];
 </script>
 
 <template>
