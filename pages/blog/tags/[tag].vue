@@ -34,7 +34,7 @@
         </li>
       </ul>
       <div class="prose">
-        <h1 class="capitalize">{{ tag }} Articles</h1>
+        <PageHeader>{{ tag }} Articles</PageHeader>
       </div>
       <div class="grid grid-cols-2 gap-12">
         <ul class="not-prose text-sm space-y-6">

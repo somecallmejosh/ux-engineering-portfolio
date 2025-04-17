@@ -34,7 +34,7 @@
         </li>
       </ul>
       <div class="prose">
-        <h1 class="capitalize">{{ tag }} Projects</h1>
+        <PageHeader>{{ tag }} Projects</PageHeader>
       </div>
       <div class="space-y-4">
         <div class="prose">

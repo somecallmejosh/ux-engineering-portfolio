@@ -61,7 +61,7 @@ const allProjectCategories = await queryCollection('projects')
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <h1 class="text-5xl text-balance">Projects</h1>
+      <PageHeader>Projects</PageHeader>
       <p>
         I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
       </p>
@@ -82,9 +82,10 @@ const allProjectCategories = await queryCollection('projects')
               class="mb-4"
             />
             <div class="prose">
-              <h2 class="text-balance mb-3">
+              <CardHeader class="mb-2.5">
+                {{ item.headline }}
                 {{ item.title }}
-              </h2>
+              </CardHeader>
               <p v-html="item.description"></p>
             </div>
             <NuxtLink :to="`/projects/${item.slug}`"

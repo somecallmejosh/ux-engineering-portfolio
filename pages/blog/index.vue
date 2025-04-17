@@ -30,7 +30,7 @@ const allBlogCategories = await queryCollection('blog')
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <h1 id="page-title">Blog Posts</h1>
+      <PageHeader>Blog Posts</PageHeader>
       <p>
         Welcome to my blog, where I explore how thoughtful UX Engineering can help businesses grow and deliver better digital products.
       </p>
@@ -51,7 +51,7 @@ const allBlogCategories = await queryCollection('blog')
               :scaleY="0.75"
               class="mb-4"
             />
-            <h2 class="text-balance mt-0 mb-0">{{ item.title }}</h2>
+            <CardHeader class="mb-0 mt-0">{{ item.title }}</CardHeader>
 
             <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
             <p class="mt-1.5" v-html="item.description"></p>

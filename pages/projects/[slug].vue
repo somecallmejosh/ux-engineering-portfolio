@@ -114,7 +114,7 @@ const skillIcons = [
   <div class="space-y-12">
     <Breadcrumbs baseUrl="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
-      <h1>{{  post.title }}</h1>
+      <PageHeader>{{  post.title }}</PageHeader>
       <div class="not-prose space-y-6 max-w-full">
         <AnimateImage
           :src="post.image"

@@ -11,9 +11,9 @@ useSeoMeta({
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <h1 class="text-5xl">
+      <PageHeader>
         Contact Me: Let's Build Something Great Together!
-      </h1>
+      </PageHeader>
     </div>
     <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
       <div class="prose order-2 lg:order-1">

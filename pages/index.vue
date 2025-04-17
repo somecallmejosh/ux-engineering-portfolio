@@ -7,66 +7,67 @@ useSeoMeta({
   ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
 })
-
 const capabilities = [
   {
     id: 1,
-    headline: 'Design System Architecture & Implementation',
-    description: '<strong>Development and maintenance of component libraries</strong> using Vue.js, ensuring adherence to design tokens and promoting cross-team consistency. Demonstrated experience with Storybook for component documentation and testing. Proven ability to implement version control strategies for design system components.',
+    headline: 'Building Blocks for the Web (Design Systems)',
+    description: "Think of those cool, reusable pieces on websites&mdash;<strong>buttons, menus, colors that all fit? That's all part of a design system!</strong> I build these <strong>Lego sets</strong> with modern front end developer tools, keeping everything consistent and making future work smoother. Plus, a clear instruction manual (Storybook) helps everyone build right.",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743964962/josh-portfolio/assets_task_01jr66de64evqaxfev44eyj7y0_img_0.webp',
-    image_alt: 'Design System Architecture & Implementation',
+    image_alt: 'Building Blocks for the Web (Design Systems)',
   },
 
   {
     id: 3,
-    headline: 'Web Accessibility (WCAG Compliance)',
-    description: 'Comprehensive <strong>implementation of WCAG 2.1 (or higher) guidelines</strong>, including semantic HTML, ARIA attributes, keyboard navigation, and color contrast adherence. Demonstrated experience with accessibility testing tools Axe, Lighthouse, and various screen readers.',
+    headline: 'Making the Web Accessible to Everyone (WCAG)',
+    description: "Imagine a playground for all! I ensure websites follow WCAG 2.1 (or better!) so everyone can use them. This means <strong>clear language for computers (semantic HTML), and helpful labels, keyboard navigation, and good color contrast for users</strong>. My <i>testing goggles</i> (Axe, Lighthouse, screen readers) ensure we pass the check!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
-    image_alt: 'Web Accessibility (WCAG Compliance)',
+    image_alt: 'Making the Web Accessible to Everyone (WCAG)',
   },
   {
     id: 2,
-    headline: 'Complex Enterprise Dashboard Development',
-    description: 'Expertise in building <strong>data-intensive dashboards with advanced visualization</strong> techniques using D3.js and Chart.js. Experience with handling large datasets, optimizing data fetching and rendering, and implementing real-time data updates. Proven ability to implement user permission and role-based access control within dashboards.',
+    headline: 'Building Mission Control for Data (Dashboards)',
+    description: "Got lots of data that needs to make sense? I build <strong>mission control dashboards</strong> with tools like D3.js and Chart.js to tell clear, visual stories. I make sure they handle tons of data without slowing down and can even show live updates. Plus, I can set up controls for who sees what based on their role!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744227298/josh-portfolio/assets_task_01jre017kredrsghw9rwhdb4er_img_0.webp',
-    image_alt: 'Complex Enterprise Dashboard Development',
+    image_alt: 'Building Mission Control for Data (Dashboards)',
   },
   {
     id: 5,
-    headline: 'Prototyping & Feasibility Testing & Validation',
-    description: 'Ability to translate design prototypes (Figma, Sketch, etc.) into <strong>functional code prototypes for feasibility testing and validation</strong>. Experience with identifying technical constraints early in the design process and communicating them effectively to design and product teams. Proven ability to create code prototypes that reflect design system components.',
+    headline: 'Testing Ideas Before We Build the Whole Thing (Prototyping)',
+    description: "Got a cool design in Figma or Sketch? <strong>I turn them into quick prototypes to test if they'll actually work!</strong> This helps catch tech issues early and keeps us aligned with designers and product folks. These prototypes often use our design system <i>Lego blocks</i> too!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
-    image_alt: 'Prototyping & Feasibility Testing & Validation',
+    image_alt: 'Testing Ideas Before We Build the Whole Thing (Prototyping)',
   },
   {
     id: 6,
-    headline: 'Backend Integration & API Interaction',
-    description: 'Experience <strong>integrating front-end interfaces with backend REST APIs</strong>. Proven ability to handle data exchange, error handling, and data validation. Experience with Ruby on Rails.',
+    headline: 'Making the Front Talk to the Back (API Integration)',
+    description: "Think of the front-end needing to chat with the back-end for info? I make those conversations happen with APIs. <strong>I ensure data flows smoothly, handle any errors, and check that the info is correct</strong>. I've connected front-ends with back-ends built with Ruby on Rails, Java, GoLang, PHP, and lots more!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966345/josh-portfolio/assets_task_01jr67rg5fftpa5naekz8czqd9_img_0.webp',
-    image_alt: 'Backend Integration & API Interaction',
+    image_alt: 'Making the Front Talk to the Back (API Integration)',
   },
   {
     id: 7,
-    headline: 'Unit/Integration Testing & Quality Assurance',
-    description: 'Experience with <strong>unit testing, integration testing, and end-to-end testing</strong> using Jest, Cypress, etc. Proven ability to implement automated testing strategies and ensure code quality.',
+    headline: 'Making Sure Everything Works Perfectly (Testing & QA)',
+    description: "<strong>Before shipping to production, we test everything!</strong> I do all sorts of testing – individual pieces (unit), parts working together (integration), and the whole thing for the user (end-to-end) with tools like Jest and Cypress. Automated tests help us catch issues early and keep code quality high!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966547/josh-portfolio/assets_task_01jr67z9nxeg98nryp77fhgy72_img_0.webp',
-    image_alt: 'Unit/Integration Testing & Quality Assurance',
+    image_alt: 'Making Sure Everything Works Perfectly (Testing & QA)',
   },
-]
-
+];
 </script>
 
 <template>
   <div class="space-y-12">
     <div class="space-y-16">
       <div class="prose">
-        <h2 class="text-5xl text-balance">Enterprise-Grade UX Engineering</h2>
-        <p>I specialize in <em>bridging the gap between web application design & engineering</em> within complex enterprise
-          environments. My focus is on translating intricate business requirements into robust, scalable, and accessible user interfaces.
-          With a deep understanding of design systems, data-driven applications, and accessibility standards, I deliver
-          solutions that prioritize both user experience and technical excellence. My expertise lies in building systems
-          that not only meet current needs but are designed to evolve and scale alongside the organization.</p>
+        <PageHeader>Enterprise-Grade UX Engineering</PageHeader>
+        <p>Hi, I'm Josh. I'm all about building web applications that not only look great and work flawlessly right now, but are also designed to grow and adapt as your organization evolves. I focus on creating systems that are both user-friendly and technically sound.</p>
+        <p>So, if you're wrestling with complex web challenges and need someone to bridge the design-engineering divide to create scalable, accessible, and downright effective user interfaces, let's connect! I'm ready to roll up my sleeves and make the web a little less tangled for you.</p>
       </div>
+      <div class="flex items-center gap-4">
+        <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
+        <h2 class="text-2xl lg:text-4xl capitalize">What Exactly is it That I Do, You Ask?</h2>
+        <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
+      </div>
+
       <ul class="space-y-24">
         <li v-for="(item, index) in capabilities"
         :key="item.id" class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
@@ -79,7 +80,7 @@ const capabilities = [
             />
           </div>
           <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
-            <h2 class="text-balance">{{ item.headline }}</h2>
+            <CardHeader>{{ item.headline }}</CardHeader>
             <p v-html="item.description"></p>
           </div>
         </li>

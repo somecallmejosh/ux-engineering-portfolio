@@ -129,9 +129,9 @@ const resumeItems = [
 
 <template>
   <div class="space-y-12">
-    <h1 class="text-5xl">
+    <PageHeader>
       About Me
-    </h1>
+    </PageHeader>
     <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
       <div class="prose order-2 lg:order-1">
         <p>
@@ -155,9 +155,9 @@ const resumeItems = [
         <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in missionStatementItems" :key="index">
           <div class="prose">
             <Icon size="2rem" :name="item.icon" />
-            <h3 class="text-balance text-xl mt-0">
+            <CardHeader element="h3" class="my-2">
               {{ item.header }}
-            </h3>
+            </CardHeader>
             <p>
               {{ item.description }}
             </p>
@@ -186,9 +186,9 @@ const resumeItems = [
         <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
           <small class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">{{ item.date }}</small>
           <div class="prose">
-            <h3 class="text-balance text-xl">
+            <CardHeader element="h3">
               {{ item.title }}
-            </h3>
+            </CardHeader>
             <p class="mb-2 font-semibold">
               {{ item.company }}
             </p>
