@@ -111,7 +111,7 @@ const skillIcons = [
 </script>
 
 <template>
-  <div class="space-y-12">
+  <div class="space-y-12 lg:-mt-12">
     <Breadcrumbs baseUrl="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
     <div v-if="post" class="prose">
       <PageHeader>{{  post.title }}</PageHeader>

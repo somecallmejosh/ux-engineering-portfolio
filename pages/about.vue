@@ -17,6 +17,7 @@ const goodFit = [
 
 const skillIcons = [
   'alpinejs-light',
+  'apple-light',
   'aws-light',
   'bootstrap',
   'css',
@@ -54,6 +55,7 @@ const skillIcons = [
   'vscode-light',
   'vuejs-light',
   'vuetify-light',
+  'windows-light',
   'xd',
 ]
 

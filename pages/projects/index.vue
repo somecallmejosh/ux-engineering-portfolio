@@ -61,9 +61,9 @@ const allProjectCategories = await queryCollection('projects')
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <PageHeader>Projects</PageHeader>
+      <PageHeader>What I've Been Building: Making the Web Feel Right</PageHeader>
       <p>
-        I strive to create web applications that feel natural for the people who use them, with <em>clarity, simplicity, and accessibility guiding every decision.</em> Below, you’ll find examples of how I blend design insights and hands-on development to deliver inclusive digital experiences.
+        For me, building web applications isn't just about writing code – <strong>it's about creating things that feel good and natural for the folks who use them</strong>. Think clear, simple, and accessible – those are my guiding stars in every decision I make.
       </p>
     </div>
     <div v-if="allPosts">
