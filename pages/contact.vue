@@ -4,35 +4,36 @@ useSeoMeta({
   ogTitle: 'Contact Me',
   description: 'Contact me for enterprise UX engineering and consulting services.',
   ogDescription: 'Contact me for enterprise UX engineering and consulting services.',
-  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317571/josh-portfolio/assets_task_01jrgpq4pdefgrxbb6xbx72yyw_img_0.webp'
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp'
 })
 </script>
 
 <template>
-  <div>
-    <div class="grid lg:grid-cols-2 gap-6 lg:gap-24">
+  <div class="space-y-12">
+    <div class="prose">
+      <h1 class="text-5xl">
+        Contact Me: Let's Build Something Great Together!
+      </h1>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
       <div class="prose order-2 lg:order-1">
-        <small class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">Contact Me</small>
-        <h1>Enterprise UX Engineering & Consulting</h1>
+        <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and build things that can grow without falling apart? That's pretty much my jam!</p>
         <p>
-          <strong>For organizations seeking an experienced UX engineer to lead front-end development</strong>, provide
-          expert consultation on
-          UI architecture, or implement scalable and accessible component libraries, I offer specialized services tailored
-          to enterprise requirements. I collaborate with teams that prioritize clear communication, efficient execution, and
-          measurable outcomes.
+          Need someone to steer the ship on your front-end projects and make sure everything's sailing smoothly?
+          Your user interface feels a bit like a tangled mess of wires? I can help you design a solid, easy-to-understand structure that makes future development a breeze.
+          Want to build a set of reusable UI pieces that are both beautiful and work like a charm, no matter how big your project gets? And make sure everyone can use them, no matter how they access your stuff? <strong>I can help!</strong>
         </p>
+
       </div>
       <div class="order-1 lg:order-2">
         <AnimateImage
-          src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317571/josh-portfolio/assets_task_01jrgpq4pdefgrxbb6xbx72yyw_img_0.webp"
+          src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp"
           class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
           alt="UX Engineer presenting to business people"
           :scaleY="0.75"
         />
       </div>
     </div>
-
-
 
     <div class="space-y-4">
       <h2 class="text-2xl">How to Reach Me</h2>

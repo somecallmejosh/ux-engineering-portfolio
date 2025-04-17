@@ -4,14 +4,6 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-  path: {
-    type: String,
-    required: true,
-  },
-  label: {
-    type: String,
-    default: 'Languages & Resources Used in this Project',
-  },
 })
 const formatTag = (tag) => {
   return tag.replace('-light', '').replace('js', 'JS')
@@ -21,19 +13,26 @@ const formatTag = (tag) => {
   .replace('html', 'HTML')
   .replace('htmx', 'HTMX')
   .replace('javascript', 'JavaScript')
+  .replace('jquery', 'jQuery')
+  .replace('less', 'LESS')
+  .replace('markdown', 'Markdown')
+  .replace('materialui', 'Material UI')
+  .replace('npm', 'NPM')
+  .replace('svg', 'SVG')
   .replace('typescript', 'TypeScript')
   .replace('rails', 'Ruby on Rails')
   .replace('styledcomponents', 'Styled Components')
+  .replace('xd', 'Adobe XD')
 }
 </script>
 <template>
-  <ul class="flex gap-x-4 not-prose flex-wrap justify-between">
-    <li v-for="(tag, index) in tags" :key="index">
+  <ul class="flex gap-3 not-prose flex-wrap justify-between">
+    <li class="flex size-[2em]" v-for="(tag, index) in tags" :key="index">
       <Tooltip :id="tag" :text="formatTag(tag)">
         <Icon
           :name="`skill-icons:${tag}`"
           size="2em"
-          class="text-xl grayscale hover:grayscale-0 transition-all duration-150 shrink-0"
+          class="grayscale hover:grayscale-0 transition-all duration-150 shrink-0"
         />
       </Tooltip>
     </li>
