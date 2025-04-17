@@ -16,10 +16,10 @@ useSeoMeta({
 
 <template>
   <!-- Render the blog post as Prose & Vue components -->
-  <div class="space-y-12">
+  <div class="space-y-12 lg:-mt-12">
     <Breadcrumbs baseUrl="blog" :slug="`${slug}`" label="Blog" :title="post.title" />
     <div v-if="post" class="prose">
-      <PageHeader>{{ post.title }}</PageHeader>
+      <PageHeader pill="Blog Article">{{ post.title }}</PageHeader>
       <figure>
         <AnimateImage
           :src="post.image"

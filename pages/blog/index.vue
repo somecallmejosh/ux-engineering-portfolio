@@ -30,9 +30,9 @@ const allBlogCategories = await queryCollection('blog')
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <PageHeader>Blog Posts</PageHeader>
+      <PageHeader pill="Blog">Brain Dump - My Digital Notebook</PageHeader>
       <p>
-        Welcome to my blog, where I explore how thoughtful UX Engineering can help businesses grow and deliver better digital products.
+        Welcome to my brain dump! This is where I stash ideas on making web stuff user-friendly and technically awesome (UX Engineering!). Mostly for my goldfish brain, but feel free to grab any nuggets of wisdom that help you build cooler things. Consider it open-source brain food!
       </p>
     </div>
     <div v-if="allPosts">
