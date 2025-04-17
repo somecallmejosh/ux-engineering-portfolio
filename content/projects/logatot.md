@@ -1,5 +1,5 @@
 ---
-slug: Logatot
+slug: logatot
 businessName: "Logatot"
 businessUrl: "https://www.Logatot.com"
 publishedAt: 2025-11-03
