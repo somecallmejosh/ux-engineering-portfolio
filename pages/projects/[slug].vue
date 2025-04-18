@@ -128,10 +128,6 @@ const skillIcons = [
               :tags="post.tags"
               class="mb-6"
             />
-            <a v-if="post.businessUrl" :href="post.businessUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium hover:underline block shrink-0">
-              <Icon name="ph:link-simple-bold" class="size-4" />
-              <span>Visit {{ post.businessName }}</span>
-            </a>
           </div>
         </div>
         <ContentRenderer :value="post" />
@@ -146,6 +142,12 @@ const skillIcons = [
             <div class="rounded-[2rem] overflow-hidden h-[426px] md:h-[654px] bg-white dark:bg-neutral-200">
               <iframe :title="`${post.businessName} website`" class="w-full h-full" :src="post.businessUrl" frameborder="0"></iframe>
             </div>
+          </div>
+          <div class="flex justify-center mt-4">
+            <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 text-sm font-medium hover:underline block shrink-0">
+              <span>Visit {{ post.businessName }}</span>
+              <Icon name="ph:arrow-square-out" class="size-4" />
+            </a>
           </div>
         </div>
       </div>
