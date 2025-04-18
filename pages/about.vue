@@ -172,7 +172,7 @@ const resumeItems = [
       <div class="prose py-12">
         <h2 class="text-3xl">Tools of the Trade</h2>
         <p>Now, you might be wondering about my "tools." Sure, I've got my favorites! I'm pretty handy with modern front-end frameworks like Vue and React – think of them as different types of really versatile building blocks. I also speak fluent CSS (whether it's plain vanilla, the utility-first approach of Tailwind, or the more structured Sass), which is like knowing all the different ways to paint and decorate. And I've even dabbled in full-stack stuff like Ruby on Rails – kind of like knowing how the plumbing and electrical work behind the walls.</p>
-        <p>But here's the thing: I see these tools as just that – tools. Like a carpenter with their saws and chisels, they help me do the job. What I *really* care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
+        <p>But here's the thing: <strong>I see these tools as just that&mdash;tools</strong>. Like a carpenter with their saws and chisels, they help me do the job. What I really care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
       </div>
       <div class="flex flex-col items-center justify-center bg-neutral-700 rounded-lg">
         <div class="p-10 lg:p-24 space-y-10">
