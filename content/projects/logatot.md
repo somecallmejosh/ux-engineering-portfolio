@@ -1,6 +1,7 @@
 ---
 slug: logatot
 businessName: "Logatot"
+businessUrl: "https://www.logatot.com"
 publishedAt: 2025-11-03
 title: "Logatot: Giving Child Care Providers a Voice with Tech"
 description: "Logatot is doing some really important work for child care providers. I got to collaborate with them on a project that used voice-logging to make their web application even more helpful and streamlined. It was all about leveraging technology to empower the people who care for our little ones."

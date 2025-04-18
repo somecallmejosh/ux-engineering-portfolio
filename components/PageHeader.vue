@@ -13,8 +13,10 @@ const props = defineProps({
         {{  pill }}
       </span>
     </template>
-    <h1 class="text-3xl lg:text-5xl text-balance capitalize">
-      <slot />
-    </h1>
+    <div class="prose">
+      <h1 class="text-3xl lg:text-5xl text-balance capitalize">
+        <slot />
+      </h1>
+    </div>
   </div>
 </template>

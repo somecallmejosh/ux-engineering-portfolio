@@ -28,7 +28,7 @@ const allBlogCategories = await queryCollection('blog')
 </script>
 
 <template>
-  <div class="space-y-12">
+  <PageWrapper>
     <div class="prose">
       <PageHeader pill="Blog">Brain Dump - My Digital Notebook</PageHeader>
       <p>
@@ -65,5 +65,5 @@ const allBlogCategories = await queryCollection('blog')
         </motion.li>
       </ul>
     </div>
-  </div>
+  </PageWrapper>
 </template>

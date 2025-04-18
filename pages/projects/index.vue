@@ -59,7 +59,7 @@ const allProjectCategories = await queryCollection('projects')
 </script>
 
 <template>
-  <div class="space-y-12">
+  <PageWrapper>
     <div class="prose">
       <PageHeader pill="Projects">What I've Been Building: Making the Web Feel Right</PageHeader>
       <p>
@@ -98,5 +98,5 @@ const allProjectCategories = await queryCollection('projects')
         </motion.li>
       </ul>
     </div>
-  </div>
+  </PageWrapper>
 </template>
