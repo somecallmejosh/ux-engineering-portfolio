@@ -117,7 +117,7 @@ const skillIcons = [
 
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
 
-    <div v-if="post" class="prose">
+      <div v-if="post" class="prose">
       <PageHeader class="" pill="Recent Project">{{  post.title }}</PageHeader>
       <AnimateImage
         :src="post.image"
@@ -143,17 +143,25 @@ const skillIcons = [
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
           </div>
           <motion.div
-            :initial="{ opacity: 0, y: 200}"
-            :whileInView="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.3 }"
-            class="relative mx-auto border-neutral-200 dark:border-neutral-200 bg-neutral-200 border-[14px] rounded-[2.5rem] h-[682px]  w-full">
-            <div class="h-[32px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-            <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-            <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-            <div class="h-[64px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-            <div class="rounded-[2rem] overflow-hidden h-[426px] h-[654px] bg-white dark:bg-neutral-200">
-              <iframe loading="lazy" :title="`${post.businessName} website`" class="w-full h-full " :src="post.businessUrl" frameborder="0"></iframe>
-            </div>
+            layoutScroll
+            :style="{ overflow: 'scroll' }"
+          >
+            <motion.div
+              :initial="{ opacity: 0, y: 200}"
+              :whileInView="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.3 }"
+            >
+              <div
+                class="relative mx-auto border-neutral-200 dark:border-neutral-200 bg-neutral-200 border-[14px] rounded-[2.5rem] h-[682px]  w-full">
+                <div class="h-[32px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+                <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+                <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+                <div class="h-[64px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                <div class="rounded-[2rem] overflow-hidden h-[426px] h-[654px] bg-white dark:bg-neutral-200">
+                  <iframe loading="lazy" :title="`${post.businessName} website`" class="w-full h-full " :src="post.businessUrl" frameborder="0"></iframe>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
           <div class="flex items-center gap-2 mt-6">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
