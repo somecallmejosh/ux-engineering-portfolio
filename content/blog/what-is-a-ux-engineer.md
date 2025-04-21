@@ -1,6 +1,6 @@
 ---
 slug: what-is-a-ux-engineer
-publishedAt: 2025-01-04
+publishedAt: 2024-12-18
 title: 'Somewhere Between Design and Dev: Life as a UX Engineer'
 description: 'Somewhere between Figma and GitHub, I found myself playing translator, firefighter, and design whisperer. This isn’t a definition—it’s a story about what it’s actually like to be the person making sure the user experience doesn’t get lost on the way to production.'
 tags: [nuxtjs, tailwindcss]

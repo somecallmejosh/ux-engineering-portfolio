@@ -1,6 +1,6 @@
 ---
 slug: how-to-assess-ux-engineering-outcomes
-publishedAt: 2025-02-13
+publishedAt: 2025-01-19
 title: 'How I Learned to Measure UX (the Hard Way)'
 description: 'This isn’t a guide, it’s a story&mdash;about redesigns that didn’t land, metrics that lied, and the moments that taught me how to actually measure whether UX changes were helping anyone. Spoiler: “time on page” means nothing if people are just confused.'
 tags: [forms, design]

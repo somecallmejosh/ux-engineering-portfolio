@@ -1,6 +1,6 @@
 ---
 slug: front-end-carpentry
-publishedAt: 2025-04-16
+publishedAt: 2025-03-02
 title: "Front-End Devs and Our Tools: It's the Craft, Not the Brand!"
 description: "Think a React developer is fundamentally different from a Vue wizard? Just like carpenters and their favorite tool brands, front-end frameworks are tools to get the job done. But does it really matter if your hammer is React or Vue?"
 tags: [javascript, programming]

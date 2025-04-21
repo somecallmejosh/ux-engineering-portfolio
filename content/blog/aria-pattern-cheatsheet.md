@@ -1,6 +1,6 @@
 ---
 slug: aria-pattern-cheatsheet
-publishedAt: 2025-01-19
+publishedAt: 2025-01-07
 title: 'ARIA Patterns and Practices Cheatsheet'
 description: 'Need a brain-friendly way to remember all those WAI-ARIA doohickeys? Same. This is a quick-hit reference guide for common UI patterns. It covers the essentials: required roles, ARIA attributes, keyboard behavior, and what happens when a component gets all interactive and fancy.'
 tags: [nuxtjs, tailwindcss]

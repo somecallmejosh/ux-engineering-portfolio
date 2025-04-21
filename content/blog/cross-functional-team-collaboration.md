@@ -1,6 +1,6 @@
 ---
 slug: cross-functional-team-collaboration
-publishedAt: 2025-03-11
+publishedAt: 2025-02-02
 title: 'Why Cross-Functional Teams Build Better Things'
 description: 'This isn’t a productivity hack&mdash;it’s just what happens when designers, engineers, and product folks actually talk to each other. A story about team trust, shared wins, and one nearly-doomed micro-interaction that brought everyone to the table.'
 tags: [forms, design]

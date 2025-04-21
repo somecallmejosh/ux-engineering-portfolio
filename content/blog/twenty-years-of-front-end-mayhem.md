@@ -1,6 +1,6 @@
 ---
 slug: 'twenty-years-of-front-end-mayhem'
-publishedAt: 2025-04-20
+publishedAt: 2025-04-01
 title: 'Twenty Years of Front-End Mayhem (and Why I Still Love It)'
 description: "A not-so-technical, slightly nostalgic look back at two decades of building websites, wrangling browsers, and riding the never-ending wave of what's new in front-end."
 tags: [forms, design]
