@@ -1,72 +1,50 @@
 ---
 slug: what-is-a-ux-engineer
 publishedAt: 2025-01-04
-title: 'What Exactly is a UX Engineer, and What Do They Do?'
-description: 'Discover how a UX Engineer merges design expertise and coding skills to create user-focused digital experiences. Learn what challenges they solve, the tools they use, and how this role differs from a standard front-end developer or architect.'
+title: 'Somewhere Between Design and Dev: Life as a UX Engineer'
+description: 'Somewhere between Figma and GitHub, I found myself playing translator, firefighter, and design whisperer. This isn’t a definition—it’s a story about what it’s actually like to be the person making sure the user experience doesn’t get lost on the way to production.'
 tags: [nuxtjs, tailwindcss]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp
 image_alt: 'What Exactly is a UX Engineer, and What Do They Do?'
 ---
+I didn’t know what a UX Engineer was when I became one.
 
-I still remember the day I discovered what being a UX Engineer truly meant. At the time, I was caught in the middle of a lively back-and-forth between a team of designers and a group of front-end developers. On one side, the designers had painstakingly crafted elaborate mockups, complete with nuanced micro-interactions and bold visual treatments. On the other side, the developers wrestled with the practicalities of coding these concepts under tight deadlines and performance constraints. Bridging that gap felt like a juggling act—until I realized this was exactly where a UX Engineer should step in.
+What I did know was that <strong>I was spending a lot of time stuck in the middle of two teams who didn’t seem to speak the same language</strong>. Designers handed off beautiful mockups with lovingly crafted animations and pixel-perfect layouts. Developers looked at those mockups and quietly panicked&mdash;performance deadlines, browser quirks, inconsistent specs, you name it.
 
-A UX Engineer occupies a unique space in the product design cycle. While on the surface they may share similarities with front-end developers, their primary mission is to translate user and design needs into clean, functional code that delights end users. Instead of simply checking off design tasks or focusing solely on performance metrics, a UX Engineer never loses sight of the user’s perspective. Every technical choice—from selecting a JavaScript framework to fine-tuning a button’s hover state—flows from the question, “What will serve the user best?”
+At some point, I realized… huh, maybe this awkward in-between spot? Maybe this is the job.
 
-## Key Challenges a UX Engineer Solves
-### Bridging Design & Development
-One of the biggest hurdles in any project is the disconnect between high-fidelity mockups and final implemented features. I’ve seen designers grow frustrated when their precise color palettes or spacing guides get lost in translation, and I’ve watched developers scramble to make sense of complex layouts that seem impossible to code under time constraints. This is where a UX Engineer truly shines. By maintaining open communication with both sides and speaking both “languages,” they ensure that design intent meets technical feasibility without compromising on quality.
+## Caught Between Two Worlds
+Being a UX Engineer means <strong>you live in that weird space between “this looks great in Figma” and “this needs to work in production.”</strong> It’s not just about writing code, and it’s not just about advocating for users. It’s about making sure the experience that was designed actually becomes the experience that gets shipped.
 
-### Maintaining Design Systems
-Many companies rely on design systems to keep their brand experience consistent across multiple products or platforms. But design systems are only effective if they’re actively maintained in the codebase. A UX Engineer often “owns” this code side of design systems, updating component libraries and ensuring that each product reflects the same cohesive look and feel. Having someone dedicated to these systems means fewer missed style guidelines, less duplication of efforts, and more trust across teams.
+It’s <strong>part front-end dev, part design translator, part user advocate</strong>. And yes, occasionally part firefighter.
 
-### Accessibility & Usability
-A beautifully designed interface is meaningless if it’s not usable by everyone, including people with disabilities. Beyond aesthetics, the UX Engineer focuses on accessibility—checking screen-reader compatibility, ensuring proper contrast levels, and verifying keyboard navigation. Time and again, I’ve seen how building with accessibility in mind leads to more intuitive interfaces overall, benefiting every type of user.
+Sometimes that means helping a developer untangle a layout that looks simple on a spec sheet but turns into a nine-layer CSS nightmare when you actually build it. Sometimes it means gently explaining to a designer why their hover animation might tank performance on older devices. And sometimes, it means realizing neither side has asked the user how they feel about any of this&mdash;and being the one to bring that up.
 
-### Iterative Testing & Feedback
-In the past, I’ve been part of teams that coded entire features straight from a static mockup, only to realize post-launch that the end product didn’t mesh with how people actually use the site. A UX Engineer helps avoid that pitfall by rapidly testing prototypes—whether through user interviews, stakeholder demos, or quick feedback loops—and incorporating what they learn back into the design. This cyclical process shortens the path from idea to user-centered implementation.
+## On the Job: What It Actually Looks Like
+I’ve spent a lot of time <strong>wrangling design systems&mdash;trying to keep component libraries from growing into unmaintainable spaghetti</strong> while also making sure nothing “feels off” across different products. When you're the one building and maintaining those shared components, you start to notice things like slightly different button padding haunting you across every page like some kind of UI ghost.
 
-## Common Tools & Practices
-While the day-to-day toolkit can vary, there are some mainstays in a UX Engineer’s arsenal. Tools like Figma or Sketch help with prototyping and communicating design ideas. A modern JavaScript framework (React, Vue, or Angular) offers a foundation for building dynamic, responsive interfaces. Version control platforms like GitHub make team collaboration seamless. And above all, following WCAG guidelines ensures the final product is accessible to users of all abilities.
+I've also been the one <strong>pushing for accessibility</strong>. Not because someone told me to, but because I've seen firsthand how much better interfaces get when they're built for everyone. Keyboard navigation, screen reader support, color contrast&mdash;it all matters. And it doesn’t have to be complicated. It just has to be intentional.
 
-## How a UX Engineer Differs from Other Roles
-It’s helpful to see how a UX Engineer compares to other, sometimes overlapping, positions:
-::OverflowX
-<table>
-<thead>
-<tr>
-<th class="text-nowrap">Role</th>
-<th class="text-nowrap">Primary Focus</th>
-<th class="text-nowrap">Key Responsibilities</th>
-<th class="text-nowrap">Tools & Skills</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>UX Engineer</strong></td>
-<td>Bridging user-centered design and front-end development</td>
-<td>Creating interactive prototypes<br/>Implementing and maintaining design systems<br/>Ensuring accessibility</td>
-<td>Figma, Sketch, InVision<br/>HTML, CSS, JS<br/>React, Vue, or Angular<br/>Accessibility best practices</td>
-</tr>
-<tr>
-<td><strong>Front-End Developer</strong></td>
-<td>Building front-end functionality, styling, and performance</td>
-<td>Writing code for UI components<br/>Managing state and data flows<br/>Optimizing performance</td>
-<td>HTML, CSS, JS<br/>React, Vue, or Angular<br/>Browser dev tools</td>
-</tr>
-<tr>
-<td><strong>Front-End Architect</strong></td>
-<td>High-level technical planning, system design, and code structure</td>
-<td>Defining project architecture<br/>Setting standards and best practices<br/>Overseeing performance strategies</td>
-<td>Advanced build tools (Webpack, Babel)<br/>CI/CD pipelines<br/>Code review processes</td>
-</tr>
-</tbody>
-</table>
-::
+And look, I’ve failed plenty. I’ve launched features that felt great on desktop but were miserable on mobile. I’ve built things that looked exactly like the spec but totally missed the spirit of the design. I’ve watched users fumble through flows I was sure were “super intuitive.” Spoiler: they weren’t.
 
-## Where a UX Engineer Fits In
-One of the best ways I’ve found to describe this role is “the translator.” If a front-end developer is mostly concerned with coding, and a front-end architect is primarily concerned with scalability and performance, the UX Engineer uniquely straddles both worlds—acting as a bridge between stakeholders, designers, and the engineering team. On a day-to-day basis, they might be refining a color palette based on real-time usability tests one minute, then jumping into code reviews to ensure accessibility standards the next.
+## Testing, Tinkering, and Learning the Hard Way
+One of the biggest lessons I’ve learned in this role? Don’t wait until after you ship to find out you got it wrong.
 
-## Why This Matters
-In my experience, having a UX Engineer on board often feels like an insurance policy against both broken designs and poor user experiences. Developers can rest assured that they won’t have to endlessly rework a feature to meet new design requests. Designers can trust that their vision will survive the translation to code. And most importantly, the end user benefits from interfaces that are easy to navigate, visually consistent, and built with empathy.
+That doesn’t mean every idea needs a full usability study. Sometimes it’s just watching someone try to use a prototype and seeing where they stumble. Sometimes it’s showing a half-baked version to the team and asking, “Does this feel right?” And sometimes it’s launching, realizing it’s not quite working, and fixing it fast.
 
-Whether you’re a hiring manager, a recruiter, or assembling a product team, recognizing the value of a UX Engineer can be a significant differentiator. Yes, a talented front-end developer can produce the code, and a skilled front-end architect can optimize it—but a UX Engineer makes sure that code truly serves the user in a way that feels seamless and scalable. In an age where user experience often defines market success, that perspective isn’t just nice to have—it’s essential.
+I’ve worked on projects where we coded a feature straight from a static comp, launched it, and only then realized nobody knew how to use it. Now? I try to build feedback into the process. Doesn’t have to be formal. Just frequent.
+
+## The Stuff I Actually Use
+If you care about tools, sure&mdash;I’ve used Figma, Sketch, InVision, React, Vue, Tailwind, PostCSS, Storybook, GitHub, you name it. But honestly, <strong>the most important tool? Curiosity</strong>. The willingness to ask, “Why does this feel clunky?” or “Is this actually helping anyone?” goes a lot further than knowing the hottest CSS trick of the week.
+
+## So… How Is This Different From a Front-End Dev?
+Here’s the short version: <strong>a front-end dev makes the thing. A UX Engineer makes sure the thing makes sense</strong>.
+
+<strong>A UX Engineer is thinking about how it looks, how it feels, how it behaves across devices, and how it aligns with what the user actually needs&mdash;not just what’s in the spec</strong>. They're the glue between design intent and engineering reality. And if you’ve ever watched a product get released and thought, “Why didn’t they just…?”&mdash;well, that’s the kind of thing a UX Engineer is trying to catch before it happens.
+
+## Why It Matters (At Least to Me)
+I’m not here to argue that every team needs a UX Engineer. But I will say this: when you have someone in the room who cares about design, usability, accessibility, performance, and implementation equally, things tend to go smoother.
+
+Designers feel heard. Developers feel supported. And users? They get something that doesn’t just look good or work well&mdash;it does both.
+
+At the end of the day, that’s the job. Not being the expert in everything, but being the person who sees the whole picture and helps it all fit together.
