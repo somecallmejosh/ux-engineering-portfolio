@@ -4,7 +4,7 @@ publishedAt: 2025-04-21
 title: "Forrest Gump, The UX Engineer the World Needs"
 description: "He’s not the loudest voice in the room, but he might just be the one who makes the whole product work better. A lighthearted thought experiment on what Forrest’s quiet strengths would look like on a cross-functional UX team."
 tags: [fictional-ux-engineers]
-image: https://res.cloudinary.com/dwjulenau/image/upload//ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745252408/josh-portfolio/assets_task_01jschr2wafjf8hks8ths3jz2t_img_0.webp
+image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745252408/josh-portfolio/assets_task_01jschr2wafjf8hks8ths3jz2t_img_0.webp
 image_alt: "Forrest Gump sitting on a park bench thinking about UX."
 ---
 <i>The first installment of “Famous Fictional UX Engineers”</i>
