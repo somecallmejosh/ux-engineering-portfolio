@@ -1,5 +1,5 @@
 ---
-slug: forrest-gump-ux-engineer
+slug: dwight-schrute-ux-engineer
 publishedAt: 2025-04-17
 title: "Dwight Schrute: Bears. Beets. Broken Interfaces."
 description: "He audits your components, writes 100% test coverage, and files accessibility bugs before you even notice they exist. He’s intense, meticulous, and secretly the reason your product finally works for everyone."
