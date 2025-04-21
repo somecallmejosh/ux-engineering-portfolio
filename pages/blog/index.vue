@@ -52,8 +52,6 @@ const allBlogCategories = await queryCollection('blog')
               class="mb-4"
             />
             <CardHeader class="mb-0 mt-0">{{ item.title }}</CardHeader>
-
-            <small>Published {{ useDateFormat(item.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
             <p class="mt-1.5" v-html="item.description"></p>
             <NuxtLink :to="`/blog/${item.slug}`"
               class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out">
