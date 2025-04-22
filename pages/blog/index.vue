@@ -31,7 +31,7 @@ const allBlogCategories = await queryCollection('blog')
     <div class="prose">
       <PageHeader pill="Blog">Brain Dump - My Digital Notebook</PageHeader>
       <p>
-        This is where I stash thoughts on building better web experiences—part memory bank, part storytelling outlet, part open-source therapy session. Lately, I’ve been exploring what it means to be a UX Engineer by imagining how famous fictional characters would handle the job. It’s not about hot takes or hype. It’s just some of my thoughts about craft, collaboration, and making the web a little more human—one post at a time.
+        This is where I stash thoughts on building better web experiences—part memory bank, <i>part storytelling outlet, part open-source therapy session</i>. Lately, I've been exploring what it means to be a UX Engineer by imagining how famous fictional characters would handle the job. It's not about hot takes or hype. It's just some of my thoughts about craft, collaboration, and making the web a little more human—one post at a time.
       </p>
     </div>
     <div v-if="allPosts">

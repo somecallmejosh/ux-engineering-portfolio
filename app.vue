@@ -125,7 +125,7 @@ header {
   }
 }
 
-.prose em {
+.prose i {
   font-style: normal;
   font-weight: 600;
   padding: 2px 3px 2px 3px;

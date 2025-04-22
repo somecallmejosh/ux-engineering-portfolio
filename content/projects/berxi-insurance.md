@@ -39,7 +39,7 @@ From my past experiences, I knew that marketing and content creators often get s
 
 I remember the first time a marketing manager excitedly told me she had just launched a whole new landing page variation all by herself – and nothing broke! Moments like that really showed that our user-focused design decisions were paying off. By giving non-developers more independence, we freed up the engineering team to tackle the bigger, more technical challenges, which sped up our overall progress. It was like giving them the keys to their own digital space.
 
-> I just launched a new landing page variant entirely on my own—and it didn’t break anything!
+> I just launched a new landing page variant entirely on my own—and it didn't break anything!
 
 ## Building a Consistent UI with Accessibility in Mind: For Everyone
 Of course, a design system isn't really complete unless it's built with accessibility in mind from the get-go. **We approached every single component – from buttons and forms to navigation menus – with a set of guidelines that covered things like color contrast, keyboard navigation, and those helpful ARIA labels**. Working closely with QA and using tools like Storybook, we documented every element so developers knew exactly how to use them while also meeting accessibility standards.

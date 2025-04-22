@@ -20,7 +20,7 @@ useSeoMeta({
         <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and build things that can grow without falling apart? That's pretty much my jam!</p>
         <p>
           Need someone to steer the ship on your front-end projects and make sure everything's sailing smoothly?
-          Your user interface feels a bit like a tangled mess of wires? I can help you design a solid, easy-to-understand structure that makes future development a breeze.
+          Your user interface feels a bit like a tangled mess of wires? <i>I can help you design a solid, easy-to-understand structure that makes future development a breeze</i>.
           Want to build a set of reusable UI pieces that are both beautiful and work like a charm, no matter how big your project gets? And make sure everyone can use them, no matter how they access your stuff? <strong>I can help!</strong>
         </p>
 

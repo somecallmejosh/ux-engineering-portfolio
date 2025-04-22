@@ -1,8 +1,8 @@
 <script setup lang="tsx">
 import { motion } from 'motion-v'
 useSeoMeta({
-  title: 'Josh Briley | Enterprise-Grade UX Engineering',
-  ogTitle: 'Josh Briley | Enterprise-Grade UX Engineering',
+  title: 'Josh Briley | Practical UX Engineering for Complex Products',
+  ogTitle: 'Josh Briley | Practical UX Engineering for Complex Products',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
@@ -19,7 +19,7 @@ const capabilities = [
   {
     id: 3,
     headline: 'Making the Web Accessible to Everyone (WCAG)',
-    description: "Imagine a playground for all! I ensure websites follow WCAG 2.1 (or better!) so everyone can use them. This means <strong>clear language for computers (semantic HTML), and helpful labels, keyboard navigation, and good color contrast for users</strong>. My <i>testing goggles</i> (Axe, Lighthouse, screen readers) ensure we pass the check!",
+    description: "Imagine a playground for all! I ensure websites follow WCAG 2.1 (or better!) so everyone can use them. This means <strong>clear language for computers (semantic HTML), and helpful labels, keyboard navigation, and good color contrast for users</strong>. My <em>testing goggles</em> (Axe, Lighthouse, screen readers) ensure we pass the check!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
     image_alt: 'Making the Web Accessible to Everyone (WCAG)',
   },
@@ -33,7 +33,7 @@ const capabilities = [
   {
     id: 5,
     headline: 'Testing Ideas Before We Build the Whole Thing (Prototyping)',
-    description: "Got a cool design in Figma or Sketch? <strong>I turn them into quick prototypes to test if they'll actually work!</strong> This helps catch tech issues early and keeps us aligned with designers and product folks. These prototypes often use our design system <i>Lego blocks</i> too!",
+    description: "Got a cool design in Figma or Sketch? <strong>I turn them into quick prototypes to test if they'll actually work!</strong> This helps catch tech issues early and keeps us aligned with designers and product folks. These prototypes often use our design system <em>Lego blocks</em> too!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
     image_alt: 'Testing Ideas Before We Build the Whole Thing (Prototyping)',
   },
@@ -58,9 +58,9 @@ const capabilities = [
   <div class="space-y-12">
     <div class="space-y-16">
       <div class="prose">
-        <PageHeader>Enterprise-Grade UX Engineering</PageHeader>
-        <p>Hi, I'm Josh. I'm all about building web applications that not only look great and work flawlessly right now, but are also designed to grow and adapt as your organization evolves. I focus on creating systems that are both user-friendly and technically sound.</p>
-        <p>So, if you're wrestling with complex web challenges and need someone to bridge the design-engineering divide to create scalable, accessible, and downright effective user interfaces, let's connect! I'm ready to roll up my sleeves and make the web a little less tangled for you.</p>
+        <PageHeader>Clear, Friendly User Interfaces. Built to Last.</PageHeader>
+        <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>&mdash;creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity. Whether it's a full design system, a dynamic dashboard, or connecting the front-end to an API, I'm all about building tools that are reliable, flexible, and genuinely useful.</p>
+        <p>If that sounds like the kind of energy you're looking for&mdash;I'd love to help.</p>
       </div>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
