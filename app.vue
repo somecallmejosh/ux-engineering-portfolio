@@ -20,6 +20,7 @@ const navOpen = ref(false)
 </script>
 <template>
   <NuxtLayout>
+    <a class="absolute sr-only" href="#main-content">Skip to main content</a>
     <div class="lg:flex lg:h-dvh gap-12 relative z-10">
       <header ref="target" class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'"
@@ -92,7 +93,7 @@ const navOpen = ref(false)
           </div>
         </nav>
       </header>
-      <main class="flex-grow overflow-y-scroll">
+      <main id="main-content" class="flex-grow overflow-y-scroll">
         <div class="hidden lg:block lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16">
           <Logo />
         </div>
