@@ -29,6 +29,8 @@ const Image = defineComponent({
         loading="lazy"
         variants={imgVariants}
         animate={imgInView}
+        height="600"
+        width="400"
       />
     )
   }
