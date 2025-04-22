@@ -4,7 +4,7 @@ publishedAt: 2025-01-19
 title: 'How I Learned to Measure UX (the Hard Way)'
 description: 'This isn’t a guide, it’s a story&mdash;about redesigns that didn’t land, metrics that lied, and the moments that taught me how to actually measure whether UX changes were helping anyone. Spoiler: “time on page” means nothing if people are just confused.'
 tags: [forms, design]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962937/josh-portfolio/assets_task_01jr64g84beg6t7tcdqqkhzccc_img_0.webp
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962937/josh-portfolio/assets_task_01jr64g84beg6t7tcdqqkhzccc_img_0.webp"
 image_alt: 'Measuring Impact: How to Assess UX Engineering Outcomes'
 ---
 

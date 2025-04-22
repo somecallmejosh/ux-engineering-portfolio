@@ -116,21 +116,20 @@ const skillIcons = [
     <Breadcrumbs baseUrl="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
 
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
-
       <div v-if="post" class="prose">
-      <PageHeader class="" pill="Recent Project">{{  post.title }}</PageHeader>
-      <AnimateImage
-        :src="post.image"
-        :alt="post.image_alt"
-        :scaleY="0.75"
-        />
-      <div class="not-prose space-y-6 max-w-full">
-        <TagLinks
-          v-if="post.tags"
-          :tags="post.tags"
-          class="mb-6"
-        />
-      </div>
+        <PageHeader class="" pill="Recent Project">{{  post.title }}</PageHeader>
+        <AnimateImage
+          :src="post.image"
+          :alt="post.meta.image_alt"
+          :scaleY="0.75"
+          />
+        <div class="not-prose space-y-6 max-w-full">
+          <TagLinks
+            v-if="post.tags"
+            :tags="post.tags"
+            class="mb-6"
+          />
+        </div>
         <div class="prose">
           <ContentRenderer :value="post" />
         </div>

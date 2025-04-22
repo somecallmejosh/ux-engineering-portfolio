@@ -4,7 +4,7 @@ publishedAt: 2025-04-12
 title: "Ron Swanson: No-Nonsense UX Engineering"
 description: "He hates meetings, doesn’t believe in user tracking, and would rather delete features than over-design them. And yet, he might be the most quietly effective UX Engineer on your team. A tribute to simplicity, privacy, and building only what truly matters."
 tags: [fictional-ux-engineers]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745257127/josh-portfolio/assets_task_01jscn5gg8etparqn9rdnrrx0d_img_1.webp
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745257127/josh-portfolio/assets_task_01jscn5gg8etparqn9rdnrrx0d_img_1.webp"
 image_alt: "Ron Swanson sitting at a desk with a computer, looking serious about UX."
 ---
 <i>Entry #2 in “Famous Fictional UX Engineers”</i>

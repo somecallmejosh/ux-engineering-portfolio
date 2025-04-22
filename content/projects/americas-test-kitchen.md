@@ -7,6 +7,7 @@ title: "America's Test Kitchen: Cooking Up a Better Web Experience"
 description: "Ever wonder how America's Test Kitchen makes their amazing recipes and content shine online? I had the chance to dive in and help blend smart design with solid development to make their web experience even tastier for all the food lovers out there."
 tags: [alpinejs-light, css, github-light, heroku, html, javascript, nextjs-light, rails, react-light, ruby, sass, styledcomponents, typescript]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743990869/josh-portfolio/assets_task_01jr6z5kt8efcsevzqzwek0gse_img_0.webp'
+image_alt: "America's Test Kitchen website screenshot showcasing a delicious recipe."
 ---
 ## My Time at America's Test Kitchen: Serving Up a Better Digital Experience
 America's Test Kitchen (ATK) is all about amazing recipes, smart cooking tips, and honest product reviews. **When I joined their team, my mission was to make sure their online experience was just as fantastic as their content** – a digital space where all that culinary goodness could really shine.

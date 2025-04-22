@@ -4,7 +4,7 @@ publishedAt: 2024-12-18
 title: 'Somewhere Between Design and Dev: Life as a UX Engineer'
 description: 'Somewhere between Figma and GitHub, I found myself playing translator, firefighter, and design whisperer. This isn’t a definition—it’s a story about what it’s actually like to be the person making sure the user experience doesn’t get lost on the way to production.'
 tags: [nuxtjs, tailwindcss]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962453/josh-portfolio/assets_task_01jr640wp5fhkbhaf2tvrataca_img_0.webp"
 image_alt: 'What Exactly is a UX Engineer, and What Do They Do?'
 ---
 I didn’t know what a UX Engineer was when I became one.

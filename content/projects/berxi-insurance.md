@@ -7,6 +7,7 @@ title: 'Berxi.com: Building a Consistent Look and Feel from the Ground Up'
 description: 'Berxi had a vision for a really unified and easy-to-use website. I teamed up with their crew to build a custom design system – think of it as a special set of building blocks – that helped bring a fresh, consistent feel to their entire online presence. It was all about making things smooth and polished for their users.'
 tags: [aws-light, css, figma-light, github-light, html, javascript, nuxtjs-light, pinia-light, tailwindcss-light, vite-light, vitest-light, vuejs-light]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991012/josh-portfolio/assets_task_01jr6z0n1bfqgrjwndjfn3v2q3_img_0.webp'
+image_alt: 'Berxi.com website screenshot showcasing a clean and modern design.'
 ---
 
 ## My Deep Dive with Berxi.com: Building a Digital Home They Could Be Proud Of

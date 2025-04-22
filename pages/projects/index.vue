@@ -77,7 +77,7 @@ const allProjectCategories = await queryCollection('projects')
           <div class="rounded-lg relative group">
             <AnimateImage
               :src="item.image"
-              :alt="item.image_alt"
+              :alt="item.meta.image_alt"
               :scaleY="0.75"
               class="mb-4"
             />

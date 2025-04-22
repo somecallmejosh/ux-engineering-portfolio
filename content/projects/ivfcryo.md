@@ -7,6 +7,7 @@ title: "IVFCRYO: Streamlining a Delicate Journey with Smart Tech"
 description: "Imagine the delicate process of shipping biological specimens for the fertility industry. It used to involve endless paperwork and uncertainty. I helped IVFCRYO transform this critical journey with a smart web app, saving time, reducing errors, and giving customers unprecedented real-time visibility – even learning invaluable lessons in accessibility along the way."
 tags: [aws-light, css, github-light, xd, html, javascript, java-light, tailwindcss-light, d3-light]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1744917502/josh-portfolio/assets_task_01js2js43afnqt5m68bxjmmd81_img_0.webp'
+image_alt: "IVFCRYO web application screenshot showcasing the shipping process."
 ---
 
 ## My Work with IVFCRYO: Streamlining a Delicate Journey with Smart Tech

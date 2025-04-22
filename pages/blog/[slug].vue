@@ -1,4 +1,5 @@
 <script setup>
+import { motion } from 'motion-v'
 const route = useRoute()
 const slug = route.params.slug
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
@@ -22,7 +23,7 @@ useSeoMeta({
       <figure>
         <AnimateImage
           :src="post.image"
-          :alt="post.image_alt"
+          :alt="post.meta.image_alt"
           :scaleY="0.75"
         />
       </figure>

@@ -7,6 +7,7 @@ title: "Logatot: Giving Child Care Providers a Voice with Tech"
 description: "Logatot is doing some really important work for child care providers. I got to collaborate with them on a project that used voice-logging to make their web application even more helpful and streamlined. It was all about leveraging technology to empower the people who care for our little ones."
 tags: [alpinejs-light, css, figma-light, github-light, heroku, html, htmx-light, illustrator, javascript, rails, ruby, tailwindcss-light]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991606/josh-portfolio/assets_task_01jr6zkaxkener6qnhca37gwmb_img_0.webp'
+image_alt: "Logatot web application screenshot showcasing the voice-logging feature."
 ---
 
 ## My Work with Logatot: Helping Child Caregivers Focus on What Matters Most

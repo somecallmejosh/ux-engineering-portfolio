@@ -4,7 +4,6 @@ const allPosts = await queryCollection('blog')
   .order('publishedAt', 'DESC')
   .all()
 
-
 useSeoMeta({
   title: 'Blog',
   ogTitle: 'Blog',
@@ -43,11 +42,10 @@ const allBlogCategories = await queryCollection('blog')
           class="space-y-4"
           :whilePress="{ y: 4 }"
           >
-
           <div class="prose rounded-lg relative group">
             <AnimateImage
               :src="item.image"
-              :alt="item.image_alt"
+              :alt="item.meta.image_alt"
               :scaleY="0.75"
               class="mb-4"
             />

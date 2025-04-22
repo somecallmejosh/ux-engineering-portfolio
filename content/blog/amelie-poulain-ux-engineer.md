@@ -4,7 +4,7 @@ publishedAt: 2025-04-19
 title: "Amélie Poulain: Building for Joy (and No One Ever Notices)"
 description: "Soft-spoken, wildly observant, and always building with care. What the whimsical heart of Amélie teaches us about quiet UX magic and the power of small, intentional design choices."
 tags: [fictional-ux-engineers]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745264875/josh-portfolio/assets_task_01jscxxd47f6qsaxehzc5adcmv_img_0.webp
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745264875/josh-portfolio/assets_task_01jscxxd47f6qsaxehzc5adcmv_img_0.webp"
 image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
 ---
 <i>Entry #5 in “Famous Fictional UX Engineers”</i>

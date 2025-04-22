@@ -4,7 +4,7 @@ publishedAt: 2025-04-17
 title: "Dwight Schrute: Bears. Beets. Broken Interfaces."
 description: "He audits your components, writes 100% test coverage, and files accessibility bugs before you even notice they exist. He’s intense, meticulous, and secretly the reason your product finally works for everyone."
 tags: [fictional-ux-engineers]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745258013/josh-portfolio/assets_task_01jscqjb7yezra0ccjh85eda8q_img_0.webp
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745258013/josh-portfolio/assets_task_01jscqjb7yezra0ccjh85eda8q_img_0.webp"
 image_alt: "Dwight Schrute scowling at a computer screen, upset by bad UX practices."
 ---
 <i>Entry #3 in “Famous Fictional UX Engineers”</i>
