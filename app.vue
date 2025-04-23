@@ -54,7 +54,7 @@ const navOpen = ref(false)
                   class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0 lg:hidden">
                   <li
                     v-for="item in nav" :key="item.path">
-                    <NuxtLink class="flex items-center gap-3 group transition-colors duration-150" :to="item.path">
+                    <NuxtLink class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
                       <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
                         <Icon :name="item.icon"
                           class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
@@ -76,7 +76,7 @@ const navOpen = ref(false)
               class="border-l border-neutral-200 mb-4 mt-0">
               <li
                 v-for="item in nav" :key="item.path">
-                <NuxtLink class="flex items-center gap-3 group transition-colors duration-150" :to="item.path">
+                <NuxtLink class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
                   <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
                     <Icon :name="item.icon"
                       class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
@@ -114,6 +114,7 @@ const navOpen = ref(false)
 header {
   nav {
     a {
+      color: var(--color-neutral-900);
       padding: 0.5em 1rem;
       border-left: 2px solid transparent;
       margin: 0 0 0 -1px;
