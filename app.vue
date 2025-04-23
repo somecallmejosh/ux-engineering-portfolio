@@ -102,7 +102,7 @@ const navOpen = ref(false)
         </div>
       </main>
     </div>
-    <span aria-hidden="true" class="script fixed -top-40 lg:top-1/3 lg:-translate-y-1/2 right-0 lg:right-20 text-[700px] lg:text-[1100px] opacity-[0.025] z-0 -rotate-90">jb</span>
+    <span aria-hidden="true" role="presentation" class="script fixed -top-40 lg:top-1/3 lg:-translate-y-1/2 right-0 lg:right-20 text-[700px] lg:text-[1100px] opacity-[0.025] z-0 -rotate-90">jb</span>
   </NuxtLayout>
 </template>
 
