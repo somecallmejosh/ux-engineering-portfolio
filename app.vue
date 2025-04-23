@@ -114,7 +114,7 @@ const navOpen = ref(false)
 header {
   nav {
     a {
-      color: var(--color-neutral-900);
+      color: var(--color-neutral-950);
       padding: 0.5em 1rem;
       border-left: 2px solid transparent;
       margin: 0 0 0 -1px;
