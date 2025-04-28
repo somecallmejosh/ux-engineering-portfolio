@@ -23,10 +23,17 @@ export default defineNuxtConfig({
       sqlPath: process.env.SQL_ALLOW_PATH,
     },
   },
-  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt', '@vueuse/nuxt'],
+  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxt/scripts'],
   icon: {
     serverBundle: {
       collections: ['ph', 'skill-icons']
+    }
+  },
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-2Z540WCTFV'
+      }
     }
   },
   vite: {
