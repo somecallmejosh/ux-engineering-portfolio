@@ -29,7 +29,6 @@ const filteredPosts = computed(() => {
   <div class="space-y-4 border-b border-neutral-200">
     <div class="not-prose flex items-center gap-2">
       <h2 class="flex items-center gap-1 text-lg">
-        <Icon name="ph:book-open-user" size="1.55em" />
         <slot />
       </h2>
       <div class="h-px flex-1 bg-neutral-200"></div>
@@ -37,7 +36,6 @@ const filteredPosts = computed(() => {
     <ol class="">
       <li v-for="tag in filteredPosts" :key="tag.id" class="capitalize">
         <NuxtLink :to="`/blog/${tag.slug}`" class="flex items-center gap-1 no-underline hover:underline!">
-          <Icon name="ph:read-cv-logo" />
           {{ tag.title }}
         </NuxtLink>
       </li>
@@ -45,14 +43,8 @@ const filteredPosts = computed(() => {
   </div>
 </template>
 <style scoped>
-a .iconify {
-  display: none;
-}
 [aria-current="page"] {
-  font-weight: 800;
+  font-weight: bold;
   pointer-events: none;
-  .iconify {
-    display: inline-flex;
-  }
 }
 </style>
