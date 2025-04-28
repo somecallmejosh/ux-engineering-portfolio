@@ -28,7 +28,11 @@ useSeoMeta({
         />
       </figure>
       <ContentRenderer :value="post" />
-      <small>Last updated on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
+    </div>
+    <div class="prose">
+      <div class="border-t border-neutral-200 pt-4">
+        <small>This blog post was last updated on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
+      </div>
     </div>
   </PageWrapper>
 </template>
