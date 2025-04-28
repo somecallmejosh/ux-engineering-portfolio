@@ -42,7 +42,7 @@ const formData = ref({
       </div>
     </div>
 
-    <div class="space-y-4 grid grid-cols-2 gap-24">
+    <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
         <h2 class="text-2xl">Drop Me a Line</h2>
         <form action="/contact-submit" method="POST" name="contact" netlify class="space-y-4">
@@ -62,11 +62,13 @@ const formData = ref({
         </form>
       </div>
       <div class="space-y-4 lg:space-y-8">
-        <h3 class="text-2xl">On the socials</h3>
+        <div class="prose">
+          <h3 class="text-2xl">Or Find Me On The Socials</h3>
+          <p>Admittendly, I don't post on social sites all that often, but I do receive notifcations from them when folks send me messages.</p>
+        </div>
         <ul class="not-prose space-y-4">
-          <li class="flex items-center gap-1"><Icon name="skill-icons:gcp-dark" /> josh@thebrileys.com</li>
-          <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" />/somecallmejosh</li>
-          <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" />/joshuabriley</li>
+          <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" size="1.5em" /><a href="https://linkedin.com/somecallmejosh" class="hover:underline" target="_blank" rel="noreferrer nofollow">/somecallmejosh</a></li>
+          <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" size="1.5em" /><a href="https://twitter.com/joshuabriley" class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a></li>
         </ul>
       </div>
     </div>
