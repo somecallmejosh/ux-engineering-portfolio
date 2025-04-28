@@ -47,16 +47,31 @@ const formData = ref({
         <h2 class="text-2xl">Drop Me a Line</h2>
         <form action="/contact-submit" method="POST" name="contact" netlify class="space-y-4">
           <div class="space-y-1">
-            <label for="name">Name</label>
-            <input name="name" type="text" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <div class="flex justify-between gap-1">
+              <label for="name">Name</label>
+              <small>Required</small>
+            </div>
+            <input name="name" id="name" type="text" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <div class="space-y-1">
+              <div class="flex justify-between gap-1">
+                <label for="email">Email</label>
+                <small>Required</small>
+              </div>
+              <input name="email" id="email" type="email" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div class="space-y-1">
+              <label for="phone">Phone Number</label>
+              <input name="phone" id="phone" type="tel" class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
           </div>
           <div class="space-y-1">
-            <label for="email">Email</label>
-            <input name="email" type="email" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-          </div>
-          <div class="space-y-1">
-            <label for="message">Message</label>
-            <textarea name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            <div class="flex justify-between gap-1">
+              <label for="message">Message</label>
+              <small>Required</small>
+            </div>
+            <textarea name="message" id="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
           </div>
           <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
         </form>
