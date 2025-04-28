@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 useSeoMeta({
   title: 'Contact Me',
   ogTitle: 'Contact Me',
@@ -6,6 +6,13 @@ useSeoMeta({
   ogDescription: 'Contact me for enterprise UX engineering and consulting services.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp'
 })
+
+const formData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
 </script>
 
 <template>
@@ -35,13 +42,42 @@ useSeoMeta({
       </div>
     </div>
 
-    <div class="space-y-4">
-      <h2 class="text-2xl">How to Reach Me</h2>
-      <ul class="not-prose space-y-4">
-        <li class="flex items-center gap-1"><Icon name="skill-icons:gcp-dark" /> josh@thebrileys.com</li>
-        <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" />/somecallmejosh</li>
-        <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" />/joshuabriley</li>
-      </ul>
+    <div class="space-y-4 grid grid-cols-2 gap-24">
+      <div class="space-y-4">
+        <h2 class="text-2xl">Drop Me a Line</h2>
+        <form action="/contact-submit" method="POST" name="contact" netlify class="space-y-4">
+          <div class="space-y-1">
+            <label for="name">Name</label>
+            <input name="name" type="text" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+          <div class="space-y-1">
+            <label for="email">Email</label>
+            <input name="email" type="email" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+          <div class="space-y-1">
+            <label for="message">Message</label>
+            <textarea name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+          </div>
+          <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
+        </form>
+      </div>
+      <div class="space-y-4 lg:space-y-8">
+        <h3 class="text-2xl">On the socials</h3>
+        <ul class="not-prose space-y-4">
+          <li class="flex items-center gap-1"><Icon name="skill-icons:gcp-dark" /> josh@thebrileys.com</li>
+          <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" />/somecallmejosh</li>
+          <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" />/joshuabriley</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
+<style scoped>
+label {
+  font-weight: 600;
+  display: block;
+}
+button {
+  cursor: pointer;
+}
+</style>
