@@ -7,7 +7,9 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745252408/josh-portfolio/assets_task_01jschr2wafjf8hks8ths3jz2t_img_0.webp"
 image_alt: "Forrest Gump sitting on a park bench thinking about UX."
 ---
-<em>The first installment of "Famous Fictional UX Engineers"</em>
+::BlogTagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::
 
 <strong>If Forrest Gump somehow stumbled his way into a UX Engineering role</strong>&mdash;maybe he was out running and wandered into a product team stand-up&mdash;he'd probably fit right in.
 

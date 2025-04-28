@@ -7,7 +7,9 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745261834/josh-portfolio/assets_task_01jscrb5fefj0rm0p4hzpwcm00_img_0.webp"
 image_alt: "Ted Lasso motivating a team of UX Engineers."
 ---
-<em>Entry #4 in "Famous Fictional UX Engineers"</em>
+::BlogTagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::
 
 Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, <em>"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."</em>
 

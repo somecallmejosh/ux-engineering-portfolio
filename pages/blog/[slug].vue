@@ -27,8 +27,8 @@ useSeoMeta({
           :scaleY="0.75"
         />
       </figure>
-      <small>Last updated on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
       <ContentRenderer :value="post" />
+      <small>Last updated on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
     </div>
   </PageWrapper>
 </template>

@@ -3,7 +3,7 @@ slug: invisible-work
 publishedAt: 2025-04-28
 title: "Invisible Work: Why the Stuff Nobody Sees Matters the Most"
 description: "A few stories from the trenches about the small fixes, quiet tweaks, and maintenance tasks that quietly made everything better&mdash;without anyone even noticing."
-tags: [fictional-ux-engineers]
+tags: [user-experience, accessibility, software-development]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745850929/josh-portfolio/assets_task_01jsyd2aywecbt350e85ffwwtf_1745850867_img_0.webp"
 image_alt: "UX Engineer working on things that nobody sees."
 ---

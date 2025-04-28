@@ -7,7 +7,9 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745851667/josh-portfolio/assets_task_01jsydsemre5p8ny253ck44386_1745851626_img_0.webp"
 image_alt: "Ron Swanson sitting at a desk with a computer, looking serious about UX."
 ---
-<em>Entry #2 in "Famous Fictional UX Engineers"</em>
+::BlogTagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::
 
 Ron Swanson never applied to be a UX Engineer. <strong>He was probably just trying to build a static site about canoe restoration</strong> and accidentally impressed someone on the hiring panel with the purity of his HTML. Next thing you know, he's on a cross-functional product team.
 

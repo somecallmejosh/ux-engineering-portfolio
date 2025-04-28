@@ -7,8 +7,9 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745264875/josh-portfolio/assets_task_01jscxxd47f6qsaxehzc5adcmv_img_0.webp"
 image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
 ---
-<em>Entry #5 in "Famous Fictional UX Engineers"</em>
-
+::BlogTagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::
 Let me start by saying, <strong>Amélie is one of my favorite movies, like ever</strong>! It's gentle, beautiful, strange in the best way&mdash;and packed with small, intentional moments that turn the mundane into something meaningful. Which, honestly, is also how I think about good UX work. Oh, and the French have the dryest sense of humor. I love it.
 
 So it's only fitting that Amélie herself would make one heck of a UX Engineer. She wouldn't chase big promotions. She wouldn't seek the spotlight. <strong>She'd just quietly make things better</strong>&mdash;one detail, one interface, one human interaction at a time.
