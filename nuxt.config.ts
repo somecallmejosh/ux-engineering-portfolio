@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
-import MotionResolver from 'motion-v/resolver'
 export default defineNuxtConfig({
   app: {
     head: {

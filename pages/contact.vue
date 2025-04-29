@@ -1,34 +1,34 @@
 <script setup>
+
 useSeoMeta({
   title: 'Contact Me',
   ogTitle: 'Contact Me',
   description: 'Contact me for enterprise UX engineering and consulting services.',
   ogDescription: 'Contact me for enterprise UX engineering and consulting services.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp'
+
 })
 
 const formData = ref({
   name: '',
   email: '',
-  message: ''
+  message: '',
+  phone: ''
 })
 
 const nameValid = ref(true)
 const validateName = () => {
   nameValid.value = formValidation().name()
 }
+
 const emailValid = ref(true)
 const validateEmail = () => {
   emailValid.value = formValidation().email()
 }
+
 const messageValid = ref(true)
 const validateMessage = () => {
   messageValid.value = formValidation().message()
-}
-
-const phoneValid = ref(true)
-const validatePhone = () => {
-  phoneValid.value = formValidation().phone()
 }
 
 const formValidation = () => ({
@@ -45,6 +45,7 @@ const formValidation = () => ({
     }
     return true
   },
+
   message: () => {
     if (!formData.value.message.trim()) {
       return false
@@ -53,41 +54,54 @@ const formValidation = () => ({
   }
 })
 
-
 const formSubmitted = ref(false)
+const formSubmitError = ref(false)
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+};
 
 const onSubmit = async (event) => {
-  event.preventDefault()
-  if (!formValidation().name() || !formValidation().email() || !formValidation().message()) {
-    // If validation fails, set the corresponding flags to false
-    nameValid.value = formValidation().name()
-    emailValid.value = formValidation().email()
-    messageValid.value = formValidation().message()
-    return
+  event.preventDefault();
+
+  validateName();
+  validateEmail();
+  validateMessage();
+
+  if (!nameValid.value || !emailValid.value || !messageValid.value) {
+    return;
   }
+
+  const postData = {
+    'form-name': 'contact',
+    ...formData.value,
+  };
 
   try {
     const response = await fetch('/', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData.value)
-    })
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(postData), // Use the encode function
+    });
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok')
+    if (response.ok) {
+      formSubmitted.value = true;
+      formSubmitError.value = false;
+      formData.value = { name: '', email: '', message: '', phone: '' };
+      nameValid.value = true;
+      emailValid.value = true;
+      messageValid.value = true;
+    } else {
+      console.error('Form submission failed:', response);
+      formSubmitError.value = true;
     }
-
-    formSubmitted.value = true
-    formData.value = { name: '', email: '', message: '' } // Reset form
   } catch (error) {
-    // Handle error (e.g., show an error message)
-    console.error('There was a problem with the fetch operation:', error)
-    alert('There was an error sending your message. Please try again later.')
+    console.error('There was a problem with the fetch operation:', error);
+    formSubmitError.value = true;
   }
-}
-
+};
 </script>
 
 <template>
@@ -99,83 +113,111 @@ const onSubmit = async (event) => {
     </div>
     <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
       <div class="prose order-2 lg:order-1">
-        <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and build things that can grow without falling apart? That's pretty much my jam!</p>
+        <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and
+          build things that can grow without falling apart? That's pretty much my jam!</p>
         <p>
           Need someone to steer the ship on your front-end projects and make sure everything's sailing smoothly?
-          Your user interface feels a bit like a tangled mess of wires? <i>I can help you design a solid, easy-to-understand structure that makes future development a breeze</i>.
-          Want to build a set of reusable UI pieces that are both beautiful and work like a charm, no matter how big your project gets? And make sure everyone can use them, no matter how they access your stuff? <strong>I can help!</strong>
-        </p>
+          Your user interface feels a bit like a tangled mess of wires? <i>I can help you design a solid,
+            easy-to-understand structure that makes future development a breeze</i>.
 
+          Want to build a set of reusable UI pieces that are both beautiful and work like a charm, no matter how big
+          your project gets? And make sure everyone can use them, no matter how they access your stuff? <strong>I can
+            help!</strong>
+        </p>
       </div>
       <div class="order-1 lg:order-2">
         <AnimateImage
           src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp"
           class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
-          alt="UX Engineer presenting to business people"
-          :scaleY="0.75"
-        />
+          alt="UX Engineer presenting to business people" :scaleY="0.75" />
       </div>
     </div>
-
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
-        <h2 class="text-2xl">Drop Me a Line</h2>
-        <form v-if="!formSubmitted" @submit.prevent="onSubmit" class="space-y-4">
+        <h2 class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
+        <form v-show="!formSubmitted" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
+          class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
+
           <div class="space-y-1">
-            <label for="name">Name *</label>
+            <label class="text-sm" for="name">Name *</label>
             <div>
-              <input aria-describedby="name-invalid" @blur="validateName" v-model="formData.name" name="name" type="text"
-              class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              :class="{'border-red-600': nameValid == false}"
-              >
+              <input aria-describedby="name-invalid" @blur="validateName" v-model="formData.name" name="name"
+                type="text"
+                class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                :class="{ 'border-red-600': nameValid == false }">
               <small id="name-invalid" class="text-red-600" v-if="nameValid == false">Enter your name</small>
             </div>
           </div>
           <div class="grid lg:grid-cols-2 gap-6">
             <div class="space-y-1">
-              <label for="email">Email *</label>
+              <label class="text-sm" for="email">Email *</label>
               <div>
-                <input aria-describedby="email-invalid" @blur="validateEmail" v-model="formData.email" name="email" type="email"
+                <input aria-describedby="email-invalid" @blur="validateEmail" v-model="formData.email" name="email"
+                  type="email"
                   class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  :class="{'border-red-600': emailValid == false}"
-                >
-                <small id="email-invalid" class="text-red-600" v-if="emailValid == false">Enter a valid email address.</small>
+                  :class="{ 'border-red-600': emailValid == false }">
+                <small id="email-invalid" class="text-red-600" v-if="emailValid == false">Enter a valid email
+                  address.</small>
               </div>
             </div>
             <div class="space-y-1">
-              <label for="phone">Phone</label>
-              <input v-model="formData.phone" name="phone" type="text" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <label class="text-sm" for="phone">Phone</label>
+              <input v-model="formData.phone" name="phone" type="text"
+                class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
           </div>
           <div class="space-y-1">
-            <label for="message">Message *</label>
+            <label class="text-sm" for="message">Message *</label>
             <div>
-              <textarea aria-describedby="message-invalid" @blur="validateMessage" v-model="formData.message" name="message"
-                class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                :class="{'border-red-600': messageValid == false}"
-              ></textarea>
-              <small id="message-invalid" class="text-red-600"  v-if="messageValid == false">Please enter a brief message.</small>
+              <textarea aria-describedby="message-invalid" @blur="validateMessage" v-model="formData.message"
+                name="message"
+                class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                :class="{ 'border-red-600': messageValid == false }"></textarea>
+              <small id="message-invalid" class="text-red-600" v-if="messageValid == false">Please enter a brief
+                message.</small>
             </div>
           </div>
-          <div class="flex justify-between items-center">
+
+          <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
             <div><small>* indicates a required field</small></div>
-            <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
+            <button type="submit"
+              class="bg-white font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200">Send
+              Message</button>
           </div>
         </form>
-        <div v-else class="space-y-4">
-          <p class="text-green-600">Thank you! Your message has been sent successfully.</p>
-          <p>If you need to reach me urgently, please feel free to contact me via email or social media.</p>
+
+        <div v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg" role="alert">
+          <h2>Thank you! Your message has been sent successfully.</h2>
+          <p>If you need to reach me urgently, please feel free to contact me via email at <a
+              href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or by phone at <a
+              href="tel:8602328250">860-232-8250</a>.</p>
+          <p>Otherwise, feel free to poke around my <NuxtLink to="/blog">blog</NuxtLink> or have a look at some of my
+            <NuxtLink to="/projects">recent projects</NuxtLink>
+          </p>
+        </div>
+        <div role="alert" v-if="formSubmitError" class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
+          <h2>Oops! Something went wrong.</h2>
+          <p>There was an error submitting your message&mdash;probably something on my end. If this is an urgent matter,
+            please contact me directly at <a href="mailto:josh@thebrileys.com">josh@thebrileys.com</a>, or you can try
+            the form again later.</p>
         </div>
       </div>
       <div class="space-y-4 lg:space-y-8">
         <div class="prose">
           <h3 class="text-2xl">Or Find Me On The Socials</h3>
-          <p>Admittendly, I don't post on social sites all that often, but I do receive notifcations from them when folks send me messages.</p>
+          <p>Admittendly, I don't post on social sites all that often, but I do receive notifcations from them when
+            folks send me messages.</p>
         </div>
         <ul class="not-prose space-y-4">
-          <li class="flex items-center gap-1"><Icon name="skill-icons:linkedin" size="1.5em" /><a href="https://linkedin.com/somecallmejosh" class="hover:underline" target="_blank" rel="noreferrer nofollow">/somecallmejosh</a></li>
-          <li class="flex items-center gap-1"><Icon name="skill-icons:twitter" size="1.5em" /><a href="https://twitter.com/joshuabriley" class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a></li>
+          <li class="flex items-center gap-1">
+            <Icon name="skill-icons:linkedin" size="1.5em" /><a href="https://linkedin.com/somecallmejosh"
+              class="hover:underline" target="_blank" rel="noreferrer nofollow">/somecallmejosh</a>
+          </li>
+          <li class="flex items-center gap-1">
+            <Icon name="skill-icons:twitter" size="1.5em" /><a href="https://twitter.com/joshuabriley"
+              class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -183,9 +225,10 @@ const onSubmit = async (event) => {
 </template>
 <style scoped>
 label {
-  font-weight: 600;
+  font-weight: 500;
   display: block;
 }
+
 button {
   cursor: pointer;
 }
