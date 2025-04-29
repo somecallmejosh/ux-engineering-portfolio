@@ -45,14 +45,14 @@ const formData = ref({
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
         <h2 class="text-2xl">Drop Me a Line</h2>
-        <form name="contact" netlify action="/contact-submit" class="space-y-4">
-          <input type="hidden" name="form-name" value="contact" />
+        <form netlify data-netlify-honeypot="bot-field" name="contact-form" action="/contact-submit" class="space-y-4" method="POST">
+          <input type="hidden" name="bot-field" />
           <div class="space-y-1">
             <div class="flex justify-between gap-1">
               <label for="name">Name</label>
               <small>Required</small>
             </div>
-            <input name="name" id="name" type="text" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <input name="name" type="text" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
           </div>
           <div class="grid lg:grid-cols-2 gap-6">
             <div class="space-y-1">
@@ -60,11 +60,11 @@ const formData = ref({
                 <label for="email">Email</label>
                 <small>Required</small>
               </div>
-              <input name="email" id="email" type="email" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <input name="email" type="email" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
             <div class="space-y-1">
               <label for="phone">Phone Number</label>
-              <input name="phone" id="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <input name="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
           </div>
           <div class="space-y-1">
@@ -72,7 +72,7 @@ const formData = ref({
               <label for="message">Message</label>
               <small>Required</small>
             </div>
-            <textarea name="message" id="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            <textarea name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
           </div>
           <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
         </form>
