@@ -32,6 +32,12 @@ That's invisible work in a nutshell. <strong>If you do it right, no one notices.
 
 Invisible work builds trust. It keeps systems usable, resilient, and accessible. It clears a path so that other people don't have to fight through the same frustrations you once did. It makes the product better not because someone demanded it, but because it should be better.
 
-Nobody hands out awards for clean ARIA attributes, accessible focus order, or documentation edits that make a new hire's life easier. And that's fine. <strong>Some wins aren't supposed to make noise</strong>. They're just supposed to make everything work a little better.
+Nobody hands out awards for clean ARIA attributes, accessible focus order, or documentation edits that make a new hire's life easier. And that's fine. <strong>Some wins aren't supposed to make noise</strong>. They're just supposed to make everything work a little better. And honestly, that's the kind of work I'm proudest of.
 
-And honestly, that's the kind of work I'm proudest of.
+## A Little Amélie in the Code
+It reminds me of one of my favorite movies, Amélie. If you've seen it, you know Amélie Poulain is someone who finds joy in making small, almost invisible improvements to the lives of the people around her. <strong>She fixes broken things quietly. She tucks little moments of magic into places no one else would think to look. She doesn't seek credit.</strong> She just believes that the little things matter — even (or maybe especially) when nobody notices. Check out this blog post that explains why I think [she'd be a great UX engineer](/blog/amelie-poulain-ux-engineer).
+
+Honestly, that’s what I hope for my work, too. Not every commit needs a standing ovation. Not every fix needs a trophy. Sometimes, the best thing you can build is the thing that quietly makes someone’s day a little easier, a little less frustrating, or maybe even a little more joyful.
+
+And if nobody ever knows you were there?
+Well — that's kind of the point.
