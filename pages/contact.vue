@@ -13,10 +13,58 @@ const formData = ref({
   message: ''
 })
 
+const nameValid = ref(true)
+const validateName = () => {
+  nameValid.value = formValidation().name()
+}
+const emailValid = ref(true)
+const validateEmail = () => {
+  emailValid.value = formValidation().email()
+}
+const messageValid = ref(true)
+const validateMessage = () => {
+  messageValid.value = formValidation().message()
+}
+
+const phoneValid = ref(true)
+const validatePhone = () => {
+  phoneValid.value = formValidation().phone()
+}
+
+const formValidation = () => ({
+  name: () => {
+    if (!formData.value.name.trim()) {
+      return false
+    }
+    return true
+  },
+  email: () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!formData.value.email.trim() || !emailPattern.test(formData.value.email)) {
+      return false
+    }
+    return true
+  },
+  message: () => {
+    if (!formData.value.message.trim()) {
+      return false
+    }
+    return true
+  }
+})
+
+
 const formSubmitted = ref(false)
 
 const onSubmit = async (event) => {
   event.preventDefault()
+  if (!formValidation().name() || !formValidation().email() || !formValidation().message()) {
+    // If validation fails, set the corresponding flags to false
+    nameValid.value = formValidation().name()
+    emailValid.value = formValidation().email()
+    messageValid.value = formValidation().message()
+    return
+  }
 
   try {
     const response = await fetch('/', {
@@ -74,33 +122,45 @@ const onSubmit = async (event) => {
         <h2 class="text-2xl">Drop Me a Line</h2>
         <form v-if="!formSubmitted" @submit.prevent="onSubmit" class="space-y-4">
           <div class="space-y-1">
-            <div class="flex justify-between gap-1">
-              <label for="name">Name</label>
-              <small>Required</small>
+            <label for="name">Name *</label>
+            <div>
+              <input aria-describedby="name-invalid" @blur="validateName" v-model="formData.name" name="name" type="text"
+              class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              :class="{'border-red-600': nameValid == false}"
+              >
+              <small id="name-invalid" class="text-red-600" v-if="nameValid == false">Enter your name</small>
             </div>
-            <input v-model="formData.name" name="name" type="text" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
           </div>
           <div class="grid lg:grid-cols-2 gap-6">
             <div class="space-y-1">
-              <div class="flex justify-between gap-1">
-                <label for="email">Email</label>
-                <small>Required</small>
+              <label for="email">Email *</label>
+              <div>
+                <input aria-describedby="email-invalid" @blur="validateEmail" v-model="formData.email" name="email" type="email"
+                  class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  :class="{'border-red-600': emailValid == false}"
+                >
+                <small id="email-invalid" class="text-red-600" v-if="emailValid == false">Enter a valid email address.</small>
               </div>
-              <input v-model="formData.email" name="email" type="email" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
             <div class="space-y-1">
-              <label for="phone">Phone Number</label>
+              <label for="phone">Phone</label>
               <input v-model="formData.phone" name="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
           </div>
           <div class="space-y-1">
-            <div class="flex justify-between gap-1">
-              <label for="message">Message</label>
-              <small>Required</small>
+            <label for="message">Message *</label>
+            <div>
+              <textarea aria-describedby="message-invalid" @blur="validateMessage" v-model="formData.message" name="message"
+                class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                :class="{'border-red-600': messageValid == false}"
+              ></textarea>
+              <small id="message-invalid" class="text-red-600"  v-if="messageValid == false">Please enter a brief message.</small>
             </div>
-            <textarea v-model="formData.message" name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
           </div>
-          <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
+          <div class="flex justify-between items-center">
+            <div><small>* indicates a required field</small></div>
+            <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
+          </div>
         </form>
         <div v-else class="space-y-4">
           <p class="text-green-600">Thank you! Your message has been sent successfully.</p>

@@ -11,20 +11,14 @@ useSeoMeta({
 <template>
   <div class="space-y-12">
     <div class="prose">
-      <PageHeader pill="Thank You">
-        Thanks for reaching out!
-      </PageHeader>
-      <p>Your message is officially on its way to my inbox. I'm genuinely glad you took the time to get in touch. If you're here about a project, collaboration, question, or even just to say hi—awesome. I'll do my best to get back to you soon.</p>
-
-      <p>
-        In the meantime, feel free to poke around the rest of the site.
-        (And if you find any weird typos or broken links... consider it a bonus bug bounty.)
-      </p>
-
-      <p>
-        Talk soon!<br>
-        — Josh
-      </p>
+      <form data-netlify="true" method="POST" name="contact">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <textarea name="message"></textarea>
+        <input type="tel" name="phone">
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </div>
 </template>
