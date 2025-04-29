@@ -13,6 +13,33 @@ const formData = ref({
   message: ''
 })
 
+const formSubmitted = ref(false)
+
+const onSubmit = async (event) => {
+  event.preventDefault()
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData.value)
+    })
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok')
+    }
+
+    formSubmitted.value = true
+    formData.value = { name: '', email: '', message: '' } // Reset form
+  } catch (error) {
+    // Handle error (e.g., show an error message)
+    console.error('There was a problem with the fetch operation:', error)
+    alert('There was an error sending your message. Please try again later.')
+  }
+}
+
 </script>
 
 <template>
@@ -45,14 +72,13 @@ const formData = ref({
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
         <h2 class="text-2xl">Drop Me a Line</h2>
-        <form netlify data-netlify-honeypot="bot-field" name="contact-form" action="/contact-submit" class="space-y-4" method="POST">
-          <input type="hidden" name="bot-field" />
+        <form v-if="!formSubmitted" @submit.prevent="onSubmit" class="space-y-4">
           <div class="space-y-1">
             <div class="flex justify-between gap-1">
               <label for="name">Name</label>
               <small>Required</small>
             </div>
-            <input name="name" type="text" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <input v-model="formData.name" name="name" type="text" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
           </div>
           <div class="grid lg:grid-cols-2 gap-6">
             <div class="space-y-1">
@@ -60,11 +86,11 @@ const formData = ref({
                 <label for="email">Email</label>
                 <small>Required</small>
               </div>
-              <input name="email" type="email" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <input v-model="formData.email" name="email" type="email" required class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
             <div class="space-y-1">
               <label for="phone">Phone Number</label>
-              <input name="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <input v-model="formData.phone" name="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
           </div>
           <div class="space-y-1">
@@ -72,10 +98,14 @@ const formData = ref({
               <label for="message">Message</label>
               <small>Required</small>
             </div>
-            <textarea name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            <textarea v-model="formData.message" name="message" required class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
           </div>
           <button type="submit" class="font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400">Send Message</button>
         </form>
+        <div v-else class="space-y-4">
+          <p class="text-green-600">Thank you! Your message has been sent successfully.</p>
+          <p>If you need to reach me urgently, please feel free to contact me via email or social media.</p>
+        </div>
       </div>
       <div class="space-y-4 lg:space-y-8">
         <div class="prose">
