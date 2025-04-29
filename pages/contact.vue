@@ -121,6 +121,7 @@ const onSubmit = async (event) => {
       <div class="space-y-4">
         <h2 class="text-2xl">Drop Me a Line</h2>
         <form v-if="!formSubmitted" @submit.prevent="onSubmit" class="space-y-4">
+          <input type="hidden" name="form-name" value="contact" />
           <div class="space-y-1">
             <label for="name">Name *</label>
             <div>
@@ -144,7 +145,7 @@ const onSubmit = async (event) => {
             </div>
             <div class="space-y-1">
               <label for="phone">Phone</label>
-              <input v-model="formData.phone" name="phone" type="tel" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <input v-model="formData.phone" name="phone" type="text" class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
             </div>
           </div>
           <div class="space-y-1">
