@@ -65,11 +65,6 @@ const navOpen = ref(false)
                     </NuxtLink>
                   </li>
               </ul>
-              <div class="mt-auto flex items-center gap-2">
-                <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
-                  alt="Josh Briley" width="40" height="40" />
-                <span>Hi, I'm josh!</span>
-              </div>
             </motion.div>
           </AnimatePresence>
           <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
@@ -88,9 +83,7 @@ const navOpen = ref(false)
               </li>
             </ul>
             <div class="flex items-center gap-2">
-              <NuxtImg src="/images/josh-mug-shot.jpg" class="grayscale size-10 rounded-full shrink-0"
-                alt="Josh Briley" width="40" height="40" />
-              <span>Hi, I'm josh!</span>
+              <a href="/docs/joshua-briley-resume.pdf" target="_blank" class="text-sm font-semibold border-0! flex items-center gap-1 bg-neutral-100 hover:bg-blue-50 p-3! rounded-md transition-colors duration-150"><Icon name="ph:file-pdf" size="1.5em" /> Download my resume</a>
             </div>
           </div>
         </nav>
