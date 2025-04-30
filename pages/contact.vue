@@ -1,5 +1,5 @@
 <script setup>
-
+import { motion } from 'motion-v'
 useSeoMeta({
   title: 'Contact Me',
   ogTitle: 'Contact Me',
@@ -134,7 +134,7 @@ const onSubmit = async (event) => {
     </div>
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
-        <h2  v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
+        <h2 v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
         <form v-show="!formSubmitted" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
           class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
@@ -146,7 +146,11 @@ const onSubmit = async (event) => {
                 type="text"
                 class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 :class="{ 'border-red-600': nameValid == false }">
-              <small id="name-invalid" class="text-red-600" v-if="nameValid == false">Enter your name</small>
+              <motion.small
+                :initial="{ y: 10, opacity: 0.25 }"
+                :whileInView="{ y: 4, opacity: 1 }"
+                :transition="{ duration: 0.5 }"
+                id="name-invalid" class="block text-red-600" v-if="nameValid == false">Enter your name</motion.small>
             </div>
           </div>
           <div class="grid lg:grid-cols-2 gap-6">
@@ -157,8 +161,11 @@ const onSubmit = async (event) => {
                   type="email"
                   class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   :class="{ 'border-red-600': emailValid == false }">
-                <small id="email-invalid" class="text-red-600" v-if="emailValid == false">Enter a valid email
-                  address.</small>
+                <motion.small
+                  :initial="{ y: 10, opacity: 0.25 }"
+                  :whileInView="{ y: 4, opacity: 1 }"
+                  :transition="{ duration: 0.5 }" id="email-invalid" class="block text-red-600" v-if="emailValid == false">Enter a valid email
+                  address.</motion.small>
               </div>
             </div>
             <div class="space-y-1">
@@ -174,19 +181,27 @@ const onSubmit = async (event) => {
                 name="message"
                 class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                 :class="{ 'border-red-600': messageValid == false }"></textarea>
-              <small id="message-invalid" class="text-red-600" v-if="messageValid == false">Please enter a brief
-                message.</small>
+              <motion.small
+                :initial="{ y: 10, opacity: 0.25 }"
+                :whileInView="{ y: 0, opacity: 1 }"
+                :transition="{ duration: 0.5 }"
+                id="message-invalid" class="block text-red-600" v-if="messageValid == false">Please enter a brief
+                message.</motion.small>
             </div>
           </div>
           <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
             <div><small>* indicates a required field</small></div>
-            <button type="submit"
+            <motion.button :whilePress="{ y: 2 }" type="submit"
               class="bg-white font-semibold px-6 py-2 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200">Send
-              Message</button>
+              Message</motion.button>
           </div>
         </form>
 
-        <div v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg" role="alert">
+        <motion.div
+          :initial="{ y: 10, opacity: 0.25 }"
+          :whileInView="{ y: 0, opacity: 1 }"
+          :transition="{ duration: 0.5 }"
+          v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg" role="alert">
           <h2>Hey There!</h2>
           <p>Thanks for reaching out. Your message is on the way to my inbox as you read this. If you need to reach me urgently, please feel free to contact me via email at <a
               href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or by phone at <a
@@ -194,13 +209,17 @@ const onSubmit = async (event) => {
           <p>Otherwise, feel free to poke around my <NuxtLink to="/blog">blog</NuxtLink> or have a look at some of my
             <NuxtLink to="/projects">recent projects</NuxtLink>
           </p>
-        </div>
-        <div role="alert" v-if="formSubmitError" class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
+        </motion.div>
+        <motion.div
+          :initial="{ y: 10, opacity: 0.25 }"
+          :whileInView="{ y: 0, opacity: 1 }"
+          :transition="{ duration: 0.5 }"
+          role="alert" v-if="formSubmitError" class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
           <h2>Oops! Something went wrong.</h2>
           <p>There was an error submitting your message&mdash;probably something on my end. If this is an urgent matter,
             please contact me directly at <a href="mailto:josh@thebrileys.com">josh@thebrileys.com</a>, or you can try
             the form again later.</p>
-        </div>
+        </motion.div>
       </div>
       <div class="space-y-4 lg:space-y-8">
         <div class="prose">

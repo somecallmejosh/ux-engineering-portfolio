@@ -14,8 +14,8 @@ const nav = [
   { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
   { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
   { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
-  { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
   { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
+  { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
 ]
 const navOpen = ref(false)
 </script>
