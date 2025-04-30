@@ -187,8 +187,8 @@ const onSubmit = async (event) => {
         </form>
 
         <div v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg" role="alert">
-          <h2>Hey {{ formData.name }}! Your message has been sent successfully.</h2>
-          <p>If you need to reach me urgently, please feel free to contact me via email at <a
+          <h2>Hey There!</h2>
+          <p>Thanks for reaching out. Your message is on the way to my inbox as you read this. If you need to reach me urgently, please feel free to contact me via email at <a
               href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or by phone at <a
               href="tel:8602328250">860-232-8250</a>.</p>
           <p>Otherwise, feel free to poke around my <NuxtLink to="/blog">blog</NuxtLink> or have a look at some of my
