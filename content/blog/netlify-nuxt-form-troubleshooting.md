@@ -20,7 +20,7 @@ And then... <em>crickets</em>.
 You check your Netlify Forms dashboard expecting to see a tidy list of submissions. Instead, it's just a cold, empty void staring back at you. A digital shrug. It's like shouting into a canyon and hearing nothing&mdash;not even your own echo. This is the story of how my form ghosted me, and how I finally figured out why.
 
 ## Everything Looked Right
-<i>SPOILER ALERT</i>: I've been rebuilding my portfolio site with Nuxt.js. I'd done this dance before on several sites in the past. Set up a form, add `data-netlify="true"`, toss in a hidden form-name field, and you're good to go. I even added a useFetch call to handle submissions via JavaScript so users wouldn't get redirected on form submission. Smooth, right?
+I've been rebuilding my portfolio site with Nuxt.js. I'd done this dance before on several sites in the past. Set up a form, add `data-netlify="true"`, toss in a hidden form-name field, and you're good to go. I even added a useFetch call to handle submissions via JavaScript so users wouldn't get redirected on form submission. Smooth, right?
 
 ```html
 <form
