@@ -6,6 +6,10 @@ description: "I built the same frontend project twice—once in Nuxt, once in Ne
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1746029455/josh-portfolio/assets_task_01jt3qb0ctfw2by32pxck2jszd_1746029408_img_0.webp"
 image_alt: "A side-by-side comparison of Nuxt.js and Next.js logos, symbolizing the exploration of two frameworks."
 ---
+::CallOut
+<strong>Spoiler alert</strong>: I still prefer Vue/Nuxt.js, but I'm definitely not opposed to React/Next.
+::
+
 I'll start by saying that this wasn't a complex project. It fetches some data from an API and displays it in a clean UI. No advanced logic. No complicated business rules. Just a simple front-end interface for browsing countries.
 
 But simple can be good.
@@ -49,7 +53,7 @@ Both frameworks have a version of reusable logic: hooks in React, composables in
 
 ## So, What's the Verdict?
 
-I still prefer Nuxt.
+In case you missed the spoiler above, I still prefer Nuxt.
 
 But if I'm honest, that preference is mostly about familiarity. It's hard to beat five years of muscle memory and framework habits. I know where everything lives. I know what to reach for. It's home.
 

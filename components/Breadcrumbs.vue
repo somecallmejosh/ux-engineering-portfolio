@@ -22,7 +22,7 @@
   <OverflowX>
     <ul class="not-prose text-sm flex gap-3 relative z-0">
       <li class="flex items-center gap-3">
-        <NuxtLink :to="`/${baseUrl}`" class="hover:underline">{{ label }}</NuxtLink>
+        <NuxtLink :to="`/${baseUrl}`" class="hover:underline text-nowrap">{{ label }}</NuxtLink>
         <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
       </li>
       <li class="text-neutral-700">
