@@ -17,7 +17,7 @@ const allPosts = await queryCollection('case_studies')
     <div class="prose">
       <PageHeader pill="Case Studies">Behind the Build</PageHeader>
       <p>
-        These aren't production projects, but rather <i>personal experiments and case studies that showcase my skills</i> in creating user-friendly, accessible, and scalable web applications.
+        These <i>personal experiments (and sometimes production projects) and case studies that showcase my skills</i> in creating user-friendly, accessible, and scalable web applications.
       </p>
     </div>
 
