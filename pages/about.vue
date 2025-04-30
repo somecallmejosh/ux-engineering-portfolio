@@ -130,7 +130,7 @@ const resumeItems = [
 </script>
 
 <template>
-  <div class="space-y-12">
+  <PageWrapper>
     <div class="space-y-12 lg:space-y-0">
       <div class="prose">
         <PageHeader pill="About Me">
@@ -205,5 +205,5 @@ const resumeItems = [
     <div class="prose">
       <p>So, if you're looking for someone with a good chunk of experience who's focused on building robust, accessible, and easy-to-live-with user interfaces, and who believes in good planning and teamwork, <NuxtLink to="/contact">then let's connect</NuxtLink>! I'm all about bridging the gap between the design vision and the engineering reality to deliver solutions that really work.</p>
     </div>
-  </div>
+  </PageWrapper>
 </template>

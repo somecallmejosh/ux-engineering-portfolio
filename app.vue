@@ -12,6 +12,7 @@ const navToggle = () => {
 const nav = [
   { title: 'Home', path: '/', icon: 'ph:house' },
   { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
+  { title: 'Case Studies', path: '/case-studies', icon: 'ph:book-open' },
   { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
   { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
   { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },

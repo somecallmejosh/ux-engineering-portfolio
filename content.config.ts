@@ -29,5 +29,16 @@ export default defineContentConfig({
         title: z.string(),
       }),
     }),
+    case_studies: defineCollection({
+      source: 'case-studies/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        image: z.string(),
+        publishedAt: z.date(),
+        slug: z.string(),
+      }),
+    }),
   },
 })

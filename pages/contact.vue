@@ -105,7 +105,7 @@ const onSubmit = async (event) => {
 </script>
 
 <template>
-  <div class="space-y-12">
+  <PageWrapper>
     <div class="prose">
       <PageHeader pill="Contact Me">
         Let's Build Something Great Together!
@@ -239,7 +239,7 @@ const onSubmit = async (event) => {
         </ul>
       </div>
     </div>
-  </div>
+  </PageWrapper>
 </template>
 <style scoped>
 label {

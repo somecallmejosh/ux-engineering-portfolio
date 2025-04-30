@@ -100,7 +100,7 @@ const testimonials = [
 </script>
 
 <template>
-  <div class="space-y-12">
+  <PageWrapper>
     <div class="prose">
       <PageHeader pill="Testimonials">
         Supportive Words from Clients and Colleagues
@@ -140,5 +140,5 @@ const testimonials = [
         </div>
       </div>
     </section>
-  </div>
+  </PageWrapper>
 </template>
