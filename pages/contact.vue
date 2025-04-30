@@ -134,7 +134,7 @@ const onSubmit = async (event) => {
     </div>
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <div class="space-y-4">
-        <h2 class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
+        <h2  v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
         <form v-show="!formSubmitted" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
           class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
@@ -178,7 +178,6 @@ const onSubmit = async (event) => {
                 message.</small>
             </div>
           </div>
-
           <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
             <div><small>* indicates a required field</small></div>
             <button type="submit"
@@ -188,7 +187,7 @@ const onSubmit = async (event) => {
         </form>
 
         <div v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg" role="alert">
-          <h2>Thank you! Your message has been sent successfully.</h2>
+          <h2>Hey {{ formData.name }}! Your message has been sent successfully.</h2>
           <p>If you need to reach me urgently, please feel free to contact me via email at <a
               href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or by phone at <a
               href="tel:8602328250">860-232-8250</a>.</p>
