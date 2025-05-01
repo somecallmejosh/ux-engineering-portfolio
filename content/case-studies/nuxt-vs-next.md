@@ -49,7 +49,7 @@ And then there's JSX. I know, I know. People love it. But as someone who spent y
 
 ## A Few Shared Patterns
 
-Both frameworks have a version of reusable logic: hooks in React, composables in Vue. They're not identical, but the mental shift between them wasn't that dramatic. Honestly, I could go either way there. Once you get used to the syntax, both patterns help keep logic clean and portable.
+Both frameworks have a version of reusable logic: hooks in React, composables in Vue. They're not identical, but the mental shift between them wasn't that dramatic. The same can be said for their routers. Not having to maintain a routes file is kind of nice. Honestly, I could go either way there. Once you get used to the syntax, both patterns help keep logic clean and portable.
 
 ## So, What's the Verdict?
 
