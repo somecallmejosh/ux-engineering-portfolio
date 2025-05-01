@@ -22,7 +22,7 @@ export default defineNuxtConfig({
       sqlPath: process.env.SQL_ALLOW_PATH,
     },
   },
-  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxt/scripts'],
+  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxt/scripts', '@nuxt/fonts'],
   icon: {
     serverBundle: {
       collections: ['ph', 'skill-icons']
