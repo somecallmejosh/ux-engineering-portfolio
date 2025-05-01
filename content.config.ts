@@ -40,5 +40,15 @@ export default defineContentConfig({
         slug: z.string(),
       }),
     }),
+    dev_notes: defineCollection({
+      source: 'dev-notes/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        publishedAt: z.date(),
+        slug: z.string(),
+      }),
+    }),
   },
 })
