@@ -1,7 +1,7 @@
 ---
 slug: eli-five-javascript-concepts
 publishedAt: 2025-02-16
-title: 'Eli5: JavaScript Concepts That I Always Forget'
+title: 'Eli5: JavaScript Concepts'
 description: "Just jotting down some Javascript concepts as if I were explaining them to a 5 year old."
 ---
 My brain has the memory of a goldfish, so I'm writing down Javascript concepts as if I were explaining them to my bestest friend (or, you know, myself on a day when the goldfish wins). Consider this our super-duper simple cheat sheet! We're going to imagine our JavaScript world is like our kindergarten classroom.

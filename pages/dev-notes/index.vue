@@ -6,8 +6,8 @@ const allPosts = await queryCollection('dev_notes')
   useSeoMeta({
   title: 'Dev Notes',
   ogTitle: 'Dev Notes',
-  description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
-  ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  description: 'A Place for me to jot down my thoughts, experiments, and learnings in web development.',
+  ogDescription: 'A Place for me to jot down my thoughts, experiments, and learnings in web development.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
   })
 </script>
@@ -15,9 +15,9 @@ const allPosts = await queryCollection('dev_notes')
 <template>
   <PageWrapper>
     <div class="prose">
-      <PageHeader pill="Dev Notes">My Dev Notes</PageHeader>
+      <PageHeader pill="Dev Notes">Notes to Future Me</PageHeader>
       <p>
-        If you happen to come across this page, enter at your own risk. This isn't intended for public consumption, but rather a collection of my own dev notes.
+        This section of the site is mostly for me&mdash;just a running log of things I've figured out (or halfway figured out) while building stuff. No promises of best practices, just real-world notes I wanted to remember. If it helps you too, great!
       </p>
     </div>
 

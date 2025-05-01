@@ -1,11 +1,11 @@
 ---
 slug: netlify-nuxt-form-troubleshooting
 publishedAt: 2025-04-29
-title: "The Case of the Missing Netlify Form Submissions: A Nuxt.js Debugging Odyssey"
-description: "I built a form. It looked perfect. Netlify ghosted me. Here's how I finally got the submissions to show up&mdash;and how to avoid the same five-hour rabbit hole the next time I have to build a simple form."
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745983435/josh-portfolio/assets_task_01jt2bea62fmnam8yqha1nb72d_1745983373_img_0.webp"
-image_alt: "A frustrated developer staring at a computer screen, trying to debug a form submission issue."
+title: "Netlify Forms with Nuxt 3"
+description: "Here's how I finally got the submissions to show up&mdash;and how to avoid the same five-hour rabbit hole the next time."
 ---
+This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's a bit more of a troubleshooting story than a how-to, but I hope it helps someone else out there.
+
 ::CallOut
 <strong>TLDR;</strong> If your Netlify form submissions have ghosted you, check your build command. And uhh, maybe keep a plain ol' form.html in your `/public` folder, just in case.
 ::

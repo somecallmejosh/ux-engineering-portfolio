@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from 'motion-v'
 import { onClickOutside } from '@vueuse/core'
 import { useTemplateRef } from 'vue'
+import { group } from '@nuxt/content/preview'
 const target = useTemplateRef('target')
 onClickOutside(target, event => navOpen.value = false)
 
@@ -11,12 +12,19 @@ const navToggle = () => {
 
 const nav = [
   { title: 'Home', path: '/', icon: 'ph:house' },
+  { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
+  { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
+  { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
   { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
   { title: 'Case Studies', path: '/case-studies', icon: 'ph:book-open' },
-  { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
-  { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
-  { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
+  { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:clipboard-text' },
   { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
+]
+
+const navGroups = [
+  { groupTitle: 'Main', items: nav.slice(0, 4) },
+  { groupTitle: 'Projects', items: nav.slice(4, 7) },
+  { groupTitle: 'Other', items: nav.slice(7) },
 ]
 const navOpen = ref(false)
 </script>
@@ -51,11 +59,34 @@ const navOpen = ref(false)
                 duration: 0.2,
               }"
             >
-              <ul
-                @click="navOpen = false"
-                  class="border-l border-neutral-200 mb-4 mt-6 lg:mt-0 lg:hidden">
+            <ul
+              @click="navOpen = false"
+              class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
+              <li v-for="(group, index) in navGroups">
+                <ul>
                   <li
-                    v-for="item in nav" :key="item.path">
+                    v-for="item in group.items" :key="item.path">
+                    <NuxtLink class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm" :to="item.path">
+                      <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
+                        <Icon :name="item.icon"
+                          class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
+                          {{ item.title }}
+                      </motion.span>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            </motion.div>
+          </AnimatePresence>
+          <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
+            <ul
+              @click="navOpen = false"
+              class="border-l border-neutral-200 mt-0 space-y-10">
+              <li v-for="(group, index) in navGroups">
+                <ul>
+                  <li
+                    v-for="item in group.items" :key="item.path">
                     <NuxtLink class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
                       <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
                         <Icon :name="item.icon"
@@ -64,22 +95,7 @@ const navOpen = ref(false)
                       </motion.span>
                     </NuxtLink>
                   </li>
-              </ul>
-            </motion.div>
-          </AnimatePresence>
-          <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
-            <ul
-              @click="navOpen = false"
-              class="border-l border-neutral-200 mb-4 mt-0">
-              <li
-                v-for="item in nav" :key="item.path">
-                <NuxtLink class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
-                  <motion.span :whilePress="{ y: 4 }" class="flex items-center gap-3">
-                    <Icon :name="item.icon"
-                      class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
-                      {{ item.title }}
-                  </motion.span>
-                </NuxtLink>
+                </ul>
               </li>
             </ul>
             <div class="flex items-center gap-2">
