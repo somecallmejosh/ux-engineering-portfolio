@@ -43,6 +43,7 @@ export class MyButton {
 }
 ```
 
+::OverflowX
 | Part | Meaning |
 |------|---------|
 | `@Component` | Defines metadata like the tag name and style path |
@@ -50,6 +51,7 @@ export class MyButton {
 | `shadow: true` | Uses Shadow DOM for style encapsulation |
 | `h()` | Hyperscript function (like React’s `createElement`) |
 | `render()` | Returns JSX, compiled to `createElement()` under the hood |
+::
 
 ### Usage in HTML
 Stencil builds this into a standard Web Component:
@@ -70,6 +72,7 @@ Stencil will auto-generate the proper JS to register this tag with the browser.
 
 Stencil offers several lifecycle methods — here are the ones you’ll use most:
 
+::OverflowX
 | Hook | When it runs |
 |------|--------------|
 | `componentWillLoad()` | Before the component first renders (sync or async) |
@@ -77,6 +80,7 @@ Stencil offers several lifecycle methods — here are the ones you’ll use most
 | `componentShouldUpdate()` | Before a re-render when props/state change |
 | `componentDidUpdate()` | After a re-render |
 | `componentDidUnload()` | When the component is removed from the DOM |
+::
 
 ```tsx
 componentWillLoad() {
