@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
+import { definePerson } from 'nuxt-schema-org/schema'
 export default defineNuxtConfig({
   app: {
     head: {
@@ -22,16 +23,72 @@ export default defineNuxtConfig({
       sqlPath: process.env.SQL_ALLOW_PATH,
     },
   },
-  modules: ['@nuxt/content', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt', '@vueuse/nuxt', '@nuxt/scripts', '@nuxt/fonts'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/icon',
+    '@nuxt/image',
+    'motion-v/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/scripts',
+    '@nuxt/fonts',
+    '@nuxtjs/seo',
+  ],
   icon: {
     serverBundle: {
       collections: ['ph', 'skill-icons']
     }
   },
+  schemaOrg: {
+    identity: definePerson({
+      name: 'Josh Briley',
+      url: process.env.NUXT_SITE_URL,
+      image: `${process.env.NUXT_SITE_URL}/images/josh-mug-shot.jpg`,
+      sameAs: [
+        'https://www.linkedin.com/in/somecallmejosh/',
+        'https://x.com/joshuabriley',
+        'https://github.com/somecallmejosh'
+      ]
+    })
+  },
   scripts: {
     registry: {
       googleAnalytics: {
         id: 'G-2Z540WCTFV'
+      }
+    }
+  },
+  site: {
+    url: process.env.NUXT_SITE_URL,
+    name: process.env.NUXT_SITE_NAME,
+    sitemaps: {
+      ['posts']: {
+        include: ['/blog/**',],
+        includeAppSources: true,
+        defaults: { priority: 0.7 },
+      },
+      ['projects']: {
+        includeAppSources: true,
+        include: ['/projects/**',],
+        defaults: { priority: 0.7 },
+      },
+      ['case_studies']: {
+        includeAppSources: true,
+        include: ['/case-studies/**',],
+        defaults: { priority: 0.7 },
+      },
+      ['dev_notes']: {
+        includeAppSources: true,
+        include: ['/dev-notes/**',],
+        defaults: { priority: 0.7 },
+      },
+      ['pages']: {
+        exclude: [
+          '/blog/**',
+          '/projects/**',
+          '/case-studies/**',
+          '/dev-notes/**',
+        ],
+        defaults: { priority: 0.8 },
       }
     }
   },
