@@ -105,6 +105,9 @@ const testimonials = [
       <PageHeader pill="Testimonials">
         Supportive Words from Clients and Colleagues
       </PageHeader>
+      <p>
+        I am grateful for the kind words and support from clients and colleagues who have worked with me over the years. Their testimonials reflect the collaborative spirit and dedication I strive to bring to every project.
+      </p>
     </div>
     <section class="md:columns-2 lg:columns-3 gap-8 space-y-12">
       <div v-for="(item, index) in testimonials" :key="index">

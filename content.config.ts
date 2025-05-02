@@ -45,6 +45,8 @@ export default defineContentConfig({
       type: 'page',
       schema: z.object({
         title: z.string(),
+        image: z.string().optional(),
+        image_alt: z.string().optional(),
         description: z.string(),
         publishedAt: z.date(),
         slug: z.string(),

@@ -3,6 +3,9 @@ slug: netlify-nuxt-form-troubleshooting
 publishedAt: 2025-04-29
 title: "Netlify Forms with Nuxt 3"
 description: "Here's how I finally got the submissions to show up&mdash;and how to avoid the same five-hour rabbit hole the next time."
+tags: [nuxt, netlify]
+image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1745983435/josh-portfolio/assets_task_01jt2bea62fmnam8yqha1nb72d_1745983373_img_0.webp"
+image_alt: "A screenshot of the Netlify Forms dashboard showing form submissions."
 ---
 This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's a bit more of a troubleshooting story than a how-to, but I hope it helps someone else out there.
 

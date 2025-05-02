@@ -136,20 +136,9 @@ const resumeItems = [
         <PageHeader pill="About Me">
           Hello, World (and Everything In Between)
         </PageHeader>
-      </div>
-      <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
-        <div class="prose order-2 lg:order-1">
-          <p>
-            Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <i>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</i>. I geek out over clean code and believe the web should be a welcoming place for everyone.
+        <p>
+            Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>>. I geek out over clean code and believe the web should be a welcoming place for everyone.
           </p>
-        </div>
-        <div class="order-1 lg:order-2">
-          <AnimateImage
-            src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317106/josh-portfolio/assets_task_01jrgnzqzhe1w9d68qj5z60crx_img_0.webp"
-            alt="UX Engineer presenting to business people"
-            :scaleY="0.75"
-            />
-        </div>
       </div>
     </div>
     <div class="prose max-w-full lg:mb-24">

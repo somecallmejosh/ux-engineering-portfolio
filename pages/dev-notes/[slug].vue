@@ -19,6 +19,13 @@ useSeoMeta({
     <Breadcrumbs baseUrl="dev-notes" :slug="`${slug}`" label="Dev Notes" :title="post.title" />
     <div v-if="post" class="prose">
       <PageHeader pill="Dev Notes">{{ post.title }}</PageHeader>
+      <figure>
+        <AnimateImage
+          :src="post.image"
+          :alt="post.meta.image_alt"
+          :scaleY="0.75"
+        />
+      </figure>
       <ContentRenderer :value="post" />
     </div>
   </PageWrapper>

@@ -10,21 +10,26 @@ const navToggle = () => {
   navOpen.value ? navOpen.value = false : navOpen.value = true
 }
 
-const nav = [
-  { title: 'Home', path: '/', icon: 'ph:house' },
-  { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
-  { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
-  { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
-  { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
-  { title: 'Case Studies', path: '/case-studies', icon: 'ph:book-open' },
-  { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:clipboard-text' },
-  { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
-]
-
 const navGroups = [
-  { groupTitle: 'Main', items: nav.slice(0, 4) },
-  { groupTitle: 'Projects', items: nav.slice(4, 7) },
-  { groupTitle: 'Other', items: nav.slice(7) },
+  { groupTitle: 'Main',
+    items: [
+    { title: 'Home', path: '/', icon: 'ph:house' },
+    { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
+    { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
+  ]},
+  { groupTitle: 'Projects',
+    items: [
+      { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
+      { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
+      { title: 'Case Studies', path: '/case-studies', icon: 'ph:book-open' },
+      { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:clipboard-text' },
+    ]
+  },
+  { groupTitle: 'Other',
+    items:  [
+      { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
+    ]
+  },
 ]
 const navOpen = ref(false)
 </script>
