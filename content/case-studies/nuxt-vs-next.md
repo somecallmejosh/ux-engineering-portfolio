@@ -2,7 +2,7 @@
 slug: nuxt-vs-next
 publishedAt: 2025-11-03
 title: "Nuxt vs. Next—A Side Project in Two Stacks"
-description: "Nuxt vs Next, but make it personal. A story about rebuilding the same project twice to compare developer experience, not crown a winner."
+description: "Nuxt vs Next: A story about rebuilding the same project twice to compare developer experience, not crown a winner."
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1746029455/josh-portfolio/assets_task_01jt3qb0ctfw2by32pxck2jszd_1746029408_img_0.webp"
 image_alt: "A side-by-side comparison of Nuxt.js and Next.js logos, symbolizing the exploration of two frameworks."
 ---
