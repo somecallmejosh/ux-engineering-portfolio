@@ -10,14 +10,12 @@ image_alt: "A screenshot of the Netlify Forms dashboard showing form submissions
 This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's a bit more of a troubleshooting story than a how-to, but I hope it helps someone else out there.
 
 ::CallOut
-<strong>TLDR;</strong> If your Netlify form submissions have ghosted you, check your build command. And uhh, maybe keep a plain ol' form.html in your `/public` folder, just in case.
+TLDR; If your Netlify form submissions have ghosted you, check your build command. And uhh, maybe keep a plain ol' form.html in your `/public` folder, just in case.
 ::
 
 We've all been there. You craft a clean little [contact form](/contact), sprinkle in some inline validation that you rolled from scratch, maybe even slap on a nice "Send Message" button that you're oddly proud of. You deploy it. It looks great. You give yourself a quiet nod of approval.
 
-And then... <em>crickets</em>.
-
-<strong>No messages. No leads. Nothing.</strong>
+And then... <em>crickets</em>. No messages. No leads. Nothing.
 
 You check your Netlify Forms dashboard expecting to see a tidy list of submissions. Instead, it's just a cold, empty void staring back at you. A digital shrug. It's like shouting into a canyon and hearing nothing&mdash;not even your own echo. This is the story of how my form ghosted me, and how I finally figured out why.
 
@@ -44,7 +42,7 @@ const { error } = await useFetch("/", {
 });
 ```
 
-I followed my own [RTFM advice](/projects/forever-project#rtfm-seriously) and double-checked the Netlify documentation. Everything was in place.<strong> I even got a nice 200 OK in the network tab. The request payload looked perfect. But nothing showed up in Netlify.</strong> Not even a little test message. It was like sending postcards to a mailbox that didn't exist. Sad face emoji. :-(
+I followed my own [RTFM advice](/projects/forever-project#rtfm-seriously) and double-checked the Netlify documentation. Everything was in place. I even got a nice 200 OK in the network tab. The request payload looked perfect. But nothing showed up in Netlify. Not even a little test message. It was like sending postcards to a mailbox that didn't exist. Sad face emoji. :-(
 
 ## The Debugging Spiral
 At first, I assumed I'd missed something obvious. But after several rounds of hair-pulling (honestly, I don't have 'hours' worth of hair to pull...minutes at best), here's what I tried (and maybe what you've tried, too):
@@ -57,10 +55,10 @@ At first, I assumed I'd missed something obvious. But after several rounds of ha
 1. Debugging an unrelated Vue error that made me briefly suspect reactivity gremlins. <em>Red herring.</em>
 1. Changing form field ordering, field names, timing of submission... <em>you get the idea.</em>
 
-<strong>Every fix felt promising for about 90 seconds</strong>. And then… <em>nothing</em>.
+Every fix felt promising for about 90 seconds. And then… <em>nothing</em>.
 
 ## The Real Culprit? The Build Command
-<strong>In a last-ditch effort</strong>, I did something I should've done earlier: I checked my Netlify build settings. My build command was set to:
+In a last-ditch effort, I did something I should've done earlier: I checked my Netlify build settings. My build command was set to:
 
 ```bash
 npm run build
@@ -114,4 +112,4 @@ Here's what I took away from the experience:
 - Sometimes the answer is outside your component. Not everything is a Vue problem. Sometimes it's the deployment pipeline quietly ruining your day.
 - Be patient. Be methodical. Or at least stubborn. That works too.
 
-This wasn't a glamorous bug fix. It didn't teach me a new algorithm. I didn't architect a groundbreaking system. <strong>But, a win is a win</strong>.
+This wasn't a glamorous bug fix. It didn't teach me a new algorithm. I didn't architect a groundbreaking system. But, a win is a win.

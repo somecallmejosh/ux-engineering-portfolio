@@ -2,7 +2,7 @@
 slug: forrest-gump-ux-engineer
 publishedAt: 2025-04-21
 title: "Forrest Gump, The UX Engineer the World Needs"
-description: "He's not the loudest voice in the room, but he might just be the one who makes the whole product work better. A lighthearted thought experiment on what Forrest's quiet strengths would look like on a cross-functional UX team."
+description: "Forrest isn’t loud, but he might be the reason your product works. A gentle take on focus, loyalty, and UX wins you didn’t see coming."
 tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745252408/josh-portfolio/assets_task_01jschr2wafjf8hks8ths3jz2t_img_0.webp"
 image_alt: "Forrest Gump sitting on a park bench thinking about UX."
@@ -11,9 +11,9 @@ image_alt: "Forrest Gump sitting on a park bench thinking about UX."
 Famous Fictional UX Engineers Series
 ::
 
-<strong>If Forrest Gump somehow stumbled his way into a UX Engineering role</strong>&mdash;maybe he was out running and wandered into a product team stand-up&mdash;he'd probably fit right in.
+If Forrest Gump somehow stumbled his way into a UX Engineering role&mdash;maybe he was out running and wandered into a product team stand-up&mdash;he'd probably fit right in.
 
-Not because he's a tech wizard. Not because he memorized WCAG or knows the difference between rem and em. But because <strong>Forrest is basically a masterclass in everything we say we value in UX</strong>: empathy, patience, clarity, consistency, and zero ego.
+Not because he's a tech wizard. Not because he memorized WCAG or knows the difference between rem and em. But because Forrest is basically a masterclass in everything we say we value in UX: empathy, patience, clarity, consistency, and zero ego.
 
 He wouldn't optimize for cleverness. He'd optimize for kindness.
 
@@ -36,7 +36,7 @@ Then he'd go build it. Nothing fancy&mdash;just something that works. Something 
 ## Zero Ego, 100% Care
 Forrest wouldn't care who got credit. He wouldn't push to present in the big demo or try to outshine his teammates in retros. He'd just make sure the details were right. That the component matched the spec. That the alt text was there. That the color contrast worked. That the tab order made sense.
 
-<strong>He'd build the kind of experiences that made users feel calm, not clever.</strong>
+He'd build the kind of experiences that made users feel calm, not clever.
 
 And if something was wrong? He'd quietly fix it.
 
@@ -55,6 +55,6 @@ They'd know he was the one who noticed that confusing error state. The one who m
 And somewhere out there, a user would breeze through a flow that used to be frustrating. They wouldn't know why it felt easier. But Forrest would.
 
 ## Why He'd Belong in UX
-<strong>Forrest doesn't chase success. He stumbles into it by being relentlessly kind, ridiculously focused, and unshakably loyal</strong>. He listens more than he talks. He doesn't panic under pressure. He just does the next right thing, every time.
+Forrest doesn't chase success. He stumbles into it by being relentlessly kind, ridiculously focused, and unshakably loyal. He listens more than he talks. He doesn't panic under pressure. He just does the next right thing, every time.
 
 And if you ask me, that's the kind of UX Engineer every team could use.

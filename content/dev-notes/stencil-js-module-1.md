@@ -13,7 +13,7 @@ image_alt: "A screenshot of a Stencil.js component in action, showcasing a web c
 - How Shadow DOM works and what encapsulation means
 - Slots and @Prop, @State, @Event, @Method
 
-<strong>Output</strong>: A simple `<fancy-button>` or `<my-modal>` component with props, styles, and events
+Output: A simple `<fancy-button>` or `<my-modal>` component with props, styles, and events
 
 ## What Is Stencil.js?
 Stencil is a compiler, not a runtime framework. You write components using a familiar syntax (it looks like JSX/React), and it compiles your code into standards-based Web Components.
@@ -163,7 +163,7 @@ export class FancyButton {
 ```
 
 ::CallOut
-🔎 <strong>React/Angular note</strong>: Event names are lowercase in Stencil but often need to be camelCased in React (e.g. onButtonClicked), and explicitly bound using addEventListener.
+🔎 React/Angular note: Event names are lowercase in Stencil but often need to be camelCased in React (e.g. onButtonClicked), and explicitly bound using addEventListener.
 ::
 
 ## Example Alert Banner Component
@@ -262,7 +262,7 @@ export class AlertBanner {
 </script>
 ```
 ::CallOut
-<strong>Important</strong>: Stencil treats `@Prop()` values as strings when passed via HTML attributes, so we must use "false" as a string.
+Important: Stencil treats `@Prop()` values as strings when passed via HTML attributes, so we must use "false" as a string.
 ::
 
 ## Alert Host

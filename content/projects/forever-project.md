@@ -3,7 +3,7 @@ slug: forever-project
 businessName: "Josh Briley"
 publishedAt: 2025-04-28
 title: "The Forever Project: Staying Curious (and Mostly Sane) in Web Development"
-description: "Staying current in web development isn't a finish line you cross — it's a forever project. Here's how I keep learning (and mostly stay afloat) through newsletters, tinkering, conversations, and a healthy dose of curiosity."
+description: "How I stay current in web development through newsletters, tinkering, conversations, and curiosity&mdash;because it’s a forever project, not a finish line."
 tags: []
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1745864263/josh-portfolio/assets_task_01jsysst5nfeqs183yj5ktphjj_1745864217_img_0.webp"
 image_alt: "Front end developer keeping current with web development trends"
@@ -43,16 +43,16 @@ It's like building a custom Twitter feed that acts as my early warning system fo
 ## Subscriptions for Deeper Dives
 When I want to go deeper, I lean on a few trusted subscriptions:
 
-- <strong>[Frontend Masters](https://www.frontendmasters.com)</strong> for structured, high-quality courses
-- <strong>[Frontend Mentor](https://www.frontendmentor.io)</strong> for real-world project practice
-- <strong>[Udemy](https://udemy.com)</strong> for quick, targeted lessons (when I know exactly what I need)
+- [Frontend Masters](https://www.frontendmasters.com) for structured, high-quality courses
+- [Frontend Mentor](https://www.frontendmentor.io) for real-world project practice
+- [Udemy](https://udemy.com) for quick, targeted lessons (when I know exactly what I need)
 
 I don't try to "complete" every course. I treat them more like a workshop: pop in, build something, pop out with a new idea or skill sharpened.
 
 A few courses that I have fully completed, recently purchased, and wholeheartedly recommend:
 
-- <strong>[Joy of React](https://www.joyofreact.com/)</strong> by Josh W. Comeau: It's not just the React stuff that makes this course great&mdash;it's the way Josh teaches how to think about building user interfaces. The React content is top-notch, but the real value is in the mindset shifts.
-- <strong>[Learn UX Design](https://www.learnui.design/courses/learn-ux-design.html)</strong> by Erik Kennedy: This probably isn't a course you'd expect to see on a web developer's list, but Erik's approach to UX design is incredibly practical and applicable to front-end work. Matter of fact, he started out in development and maintains a great balance between the two disciplines. It helped me think more critically about user flows and interface decisions.
+- [Joy of React](https://www.joyofreact.com/) by Josh W. Comeau: It's not just the React stuff that makes this course great&mdash;it's the way Josh teaches how to think about building user interfaces. The React content is top-notch, but the real value is in the mindset shifts.
+- [Learn UX Design](https://www.learnui.design/courses/learn-ux-design.html) by Erik Kennedy: This probably isn't a course you'd expect to see on a web developer's list, but Erik's approach to UX design is incredibly practical and applicable to front-end work. Matter of fact, he started out in development and maintains a great balance between the two disciplines. It helped me think more critically about user flows and interface decisions.
 
 Neither of these people know me, and have no idea I'm recommending their courses. I just think they're worth every penny. But, if they were compelled to send me a kickback or two, I wouldn't complain. :-)
 
@@ -68,10 +68,7 @@ Production code is great, but it's not the best place to throw ideas at the wall
 I use design assets provided by Frontend Mentor and Great Frontends for this. They range in degrees of difficulty, offering a variety of project types to keep the creative juices flowing. Recently, I've starting building out a few of these projects using different frameworks to see how they handle the same problem. Here are a couple of examples:
 
 ### Countries of the World API
-- <strong>React/Next Version</strong>: [Website](https://somecallmejosh-next-countries.netlify.app/) | [Source Code](https://github.com/somecallmejosh/rest-maps)
-- <strong>Vue/Nuxt Version</strong>: [Website](https://somecallmejosh-nuxt-countries.netlify.app/) | [Source Code](https://github.com/somecallmejosh/nuxt-rest-countries)
-
-Hands-on work makes everything stick better than just reading about it. At least for me, it does.
+I wrote [a case study on this project](/case-studies/nuxt-vs-next), so I won't go into much detail here. Suffice it to say, hands-on work makes everything stick better than just reading about it. At least for me, it does.
 
 ## Actual Side Projects
 

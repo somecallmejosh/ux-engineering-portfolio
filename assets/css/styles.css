@@ -99,7 +99,6 @@ dt {
     padding: 0.1rem 0.25rem;
     border-radius: 4px;
     color: var(--color-neutral-900);
-    border: 1px solid var(--color-blue-100);
   }
   [class^=language] {
     :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -112,10 +111,7 @@ dt {
     }
   }
 
-  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after {
-    content: "";
-  }
-
+  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after,
   :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
     content: "";
   }

@@ -7,7 +7,7 @@ tags: [nuxtjs, tailwindcss]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745245227/josh-portfolio/assets_task_01jscbab7dekctaz7mx7356yxp_img_0.webp
 image_alt: 'ARIA Patterns and Practices Cheatsheet'
 ---
-ARIA (short for Accessible Rich Internet Applications) is basically HTML's way of saying, "<strong>Hey assistive tech, I've got some extra context for you!</strong>" It's a bunch of attributes you sprinkle into your markup to help users with disabilities better understand and navigate your app.
+ARIA (short for Accessible Rich Internet Applications) is basically HTML's way of saying, "Hey assistive tech, I've got some extra context for you!" It's a bunch of attributes you sprinkle into your markup to help users with disabilities better understand and navigate your app.
 
 This cheatsheet isn't trying to be the entire WAI-ARIA Bible&mdash;it's more like a sticky note stuck to your monitor that reminds you what `aria-expanded` actually does. It focuses on the common stuff you'll hit regularly: what roles go where, what attributes to slap on, how users are expected to move around with a keyboard, and what's supposed to happen when stuff gets toggled, selected, or otherwise activated.
 
