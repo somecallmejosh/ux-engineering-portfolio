@@ -137,7 +137,7 @@ const resumeItems = [
           Hello, World (and Everything In Between)
         </PageHeader>
         <p>
-            Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>>. I geek out over clean code and believe the web should be a welcoming place for everyone.
+            Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>. I geek out over clean code and believe the web should be a welcoming place for everyone.
           </p>
       </div>
     </div>

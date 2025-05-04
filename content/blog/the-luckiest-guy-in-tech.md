@@ -17,7 +17,7 @@ Not because I wasn't learning, or building, or contributing&mdash;but because I 
 I've spent more time than I care to admit staring at PostgreSQL schema files like they were ancient scrolls. I've read the same Rails routing docs so many times I could probably quote them in my sleep. And yet, after all these years, I'm still a *very* mediocre backend developer. The kind of mediocre where you try something, it explodes, you walk away for six months, then come back and try it again like maybe it'll be different this time.
 
 ::CallOut
-Spoiler: it's never different. It keeps blowing up when you do the same things over and over.
+**Spoiler**: it's never different. It keeps blowing up when you do the same things over and over.
 ::
 
 ## Chasing the Wrong Kind of "More"
