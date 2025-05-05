@@ -232,11 +232,11 @@ const onSubmit = async (event) => {
         </div>
         <ul class="not-prose space-y-4">
           <li class="flex items-center gap-1">
-            <Icon name="skill-icons:linkedin" size="1.5em" /><a href="https://linkedin.com/somecallmejosh"
+            <Icon name="skill-icons:linkedin" size="1.5em" /><a href="https://www.linkedin.com/in/somecallmejosh/"
               class="hover:underline" target="_blank" rel="noreferrer nofollow">/somecallmejosh</a>
           </li>
           <li class="flex items-center gap-1">
-            <Icon name="skill-icons:twitter" size="1.5em" /><a href="https://twitter.com/joshuabriley"
+            <Icon name="skill-icons:twitter" size="1.5em" /><a href="https://x.com/joshuabriley"
               class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a>
           </li>
         </ul>
