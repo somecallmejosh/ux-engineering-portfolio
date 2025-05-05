@@ -95,7 +95,48 @@ const testimonials = [
     linkedIn: 'https://www.linkedin.com/in/owen-snyder?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BoLJj4Tr2RnKaiFGsvFGWEg%3D%3D',
     image: 'https://media.licdn.com/dms/image/v2/D5603AQEOJihSsidW-g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718307424961?e=1751500800&v=beta&t=UifhY36sXt-zg9XVsJ1LSRVyc72hN1tkyWgwcAsxIGk',
     testimonial: "<p>I had the pleasure of working with Josh for a year at America's Test Kitchen, and I can confidently say he is one of the most talented and adaptable front-end engineers I’ve ever collaborated with. What stands out about Josh is his ability to quickly learn and master new technologies, regardless of how complex or unfamiliar they might be.</p><p>Josh worked on projects involving a range of front-end frameworks and tools, from React.js to HTMX, and in addition to diving into a full-stack Ruby on Rails project. His ability to shift between these different technologies with ease is something that’s rare and highly valuable in today’s fast-paced development environment. Whether it was creating dynamic, component-driven UIs in React or implementing server-side rendered pages with HTMX, Josh was always able to pick up the right tool for the job and make it work seamlessly.</p><p>In addition to Josh's technical expertise, he was an excellent friend and teammate—someone I still keep in touch with even after our time at ATK. I highly recommend Josh for any position, from front-end UI/UX design to back-end development.</p>"
-  }
+  },
+  {
+    name: 'Chris Griffin',
+    title: 'Web Development Manager',
+    linkedIn: 'https://www.linkedin.com/in/christophergriffin?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BovWiiXA7TBawpd4biQe%2FfQ%3D%3D',
+    company: 'Burt Process Equipment, Inc',
+    image: 'https://media.licdn.com/dms/image/v2/C4E03AQF8nBYY6c1WMg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517745756980?e=1752105600&v=beta&t=z2vlsZzfjSZgioVGENKNybrw0vwLi4QVPWXToYTqk48',
+    testimonial: "<p>Joshua is highly skilled and always looking to expand his capabilities and grow professionally. He is highly intelligent and very adaptable. He would be a great addition to any development team.</p>"
+  },
+  {
+    name: 'Ethan Brown',
+    title: 'Chief Architect',
+    company: 'Domino Data Lab',
+    linkedIn: 'https://www.linkedin.com/in/ethanjbrown?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BovWiiXA7TBawpd4biQe%2FfQ%3D%3D',
+    image: 'https://media.licdn.com/dms/image/v2/C5603AQHS5zzvJI-mCQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1534223584206?e=1752105600&v=beta&t=bFV8VHl2_2_Gm0ItDX516kxtT2xcCPF7jBs3VZcWynE',
+    testimonial: '<p>Josh is a highly productive and well-organized front end designer. He was hired at East Point Systems to head up user interface design and implementation for an AngularJS based web application. </p><p>Josh was always ahead of schedule with the implementation of his responsibilities, so this allowed him to tackle other marketing duties where he saw a need for improvement. He personally interviewed staff to develop a benefits-based picture of product offerings, and he used this to simplify and relaunch a fresh design for the company website.</p>'
+  },
+  {
+    name: 'David Merkt',
+    title: 'Quality Assurance Engineer',
+    company: 'WEX Benefits',
+    linkedIn: 'https://www.linkedin.com/in/david-merkt-193a556?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BovWiiXA7TBawpd4biQe%2FfQ%3D%3D',
+    image: 'https://media.licdn.com/dms/image/v2/D4E03AQEEOKkmKukfqA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1725242965750?e=1752105600&v=beta&t=obs_cNYnYA_518ZGVQIwEJyaGtx3IxM-r8grFfe2BPM',
+    testimonial: '<p>Josh has a fantastic eye for elegant design, with the ability to distill complicated interface requirements into incredibly friendly user experiences. Once given project goals, he asks intelligent questions to verify goals, and produces a great product. He is a valuable member of any team.</p>'
+  },
+  {
+    name: 'Fred Johanns III',
+    title: 'VP of Software Engineering',
+    company: 'Chubb Insurance',
+    linkedIn: 'https://www.linkedin.com/in/fredj?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BovWiiXA7TBawpd4biQe%2FfQ%3D%3D',
+    image: 'https://media.licdn.com/dms/image/v2/C4E03AQG0yaFYD4S-gw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1517254154078?e=1752105600&v=beta&t=T4KPd5Ee4ErNB_whYPlA4PNqsVC4eqvaW8RgNsxnulA',
+    testimonial: '<p>Josh has a great eye for simple design. His web sites are clean yet comprehensive. Beyond this, Josh is a self-starter in every sense of the term. He consumed design and marketing tasks in short order while the rest of us tried to keep up. This left him opportunities to start branching out into development work and left me impressed with his ambition.</p>'
+  },
+  {
+    name: 'Ephraim "Corky" Mower',
+    title: 'Software Engineer & Architect',
+    company: 'ZSuite Technologies',
+    linkedIn: 'https://www.linkedin.com/in/ephraim-corky-mower-69a8478?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BovWiiXA7TBawpd4biQe%2FfQ%3D%3D',
+    image: 'https://media.licdn.com/dms/image/v2/D4E03AQFk9B_KjsrFag/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682788864056?e=1752105600&v=beta&t=_LKNc6fBmYh34EnAjtG8a875cCZfSozztBsh-lvc0DI',
+    testimonial: '<p>Josh was a pleasure to work with. Not only does he have a grasp on UI and UX concerns and best practices, he is very pragmatic and takes the time to really understand what a business offers and how to best represent that digitally. In addition, his skill with the technology stack was great and he was always pushing to learn more.</p>'
+  },
+
 ]
 </script>
 
