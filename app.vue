@@ -77,13 +77,13 @@ const blurAndRemoveFocus = () => {
                 <ul>
                   <li
                     v-for="item in group.items" :key="item.path">
-                    <motion.NuxtLink :whilePress="{ y: 4 }" class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm" :to="item.path">
+                    <NuxtLink :whilePress="{ y: 4 }" class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm" :to="item.path">
                       <span class="flex items-center gap-3">
                         <Icon :name="item.icon"
                           class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
                           {{ item.title }}
                       </span>
-                    </motion.NuxtLink>
+                    </NuxtLink>
                   </li>
                 </ul>
               </li>
