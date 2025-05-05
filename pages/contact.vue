@@ -150,6 +150,7 @@ const onSubmit = async (event) => {
                 :initial="{ y: 10, opacity: 0.25 }"
                 :whileInView="{ y: 4, opacity: 1 }"
                 :transition="{ duration: 0.5 }"
+                role="alert"
                 id="name-invalid" class="block text-red-600" v-if="nameValid == false">Enter your name</motion.small>
             </div>
           </div>
@@ -164,6 +165,7 @@ const onSubmit = async (event) => {
                 <motion.small
                   :initial="{ y: 10, opacity: 0.25 }"
                   :whileInView="{ y: 4, opacity: 1 }"
+                  role="alert"
                   :transition="{ duration: 0.5 }" id="email-invalid" class="block text-red-600" v-if="emailValid == false">Enter a valid email
                   address.</motion.small>
               </div>
@@ -185,6 +187,7 @@ const onSubmit = async (event) => {
                 :initial="{ y: 10, opacity: 0.25 }"
                 :whileInView="{ y: 0, opacity: 1 }"
                 :transition="{ duration: 0.5 }"
+                role="alert"
                 id="message-invalid" class="block text-red-600" v-if="messageValid == false">Please enter a brief
                 message.</motion.small>
             </div>

@@ -166,8 +166,9 @@ const testimonials = [
             </div>
           </div>
 
-          <a class="absolute inset-0" :href="item.linkedIn" target="_blank" rel="noopener noreferrer">
+          <a class="absolute inset-0 group ring-blue-100 outline-0 focus:ring-2 focus:ring-offset-2 rounded-lg" :href="item.linkedIn" target="_blank" rel="noopener noreferrer">
             <div class="sr-only">View {{ item.name }}'s' LinkedIn Profile</div>
+            <Icon name="ph:arrow-square-out-fill" size="1em" class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150 ease-in-out text-blue-600" />
           </a>
         </motion.div>
         <div class="pl-8">

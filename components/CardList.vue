@@ -11,11 +11,10 @@ const props = defineProps({
 </script>
 <template>
   <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
-    <motion.li
+    <li
       v-for="item in list"
       :key="item.id"
-      class="space-y-4"
-      :whilePress="{ y: 4 }"
+      class="space-y-4 hover:ring-2 ring-blue-200 ring-offset-4 rounded-lg"
       >
       <div class="rounded-lg relative group">
         <AnimateImage
@@ -32,13 +31,12 @@ const props = defineProps({
           </CardHeader>
           <p class="text-pretty" v-html="item.description"></p>
         </div>
-        <NuxtLink :to="`${fullPath}/${item.slug}`"
-        class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out">
-        <span class=" sr-only">{{
+        <NuxtLink :to="`${fullPath}/${item.slug}`" class="absolute not-prose inset-0 rounded-lg">
+        <span class="sr-only">{{
             item.title
           }}</span>
         </NuxtLink>
       </div>
-    </motion.li>
+    </li>
   </ul>
 </template>
