@@ -28,7 +28,7 @@ const testimonials = [
     name: 'Kevin Fecteau',
     title: 'Senior Rails Developer',
     company: 'Sincere Corporation',
-    linkedIn: 'https://www.linkedin.com/in/kevin-fecteau?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recommendations_details%3BwUWHui%2F1Tv%2BtCMpUiYya0w%3D%3D',
+    linkedIn: 'https://media.licdn.com/dms/image/v2/D4E35AQG9iwxONMmZqQ/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1729661660272?e=1747231200&v=beta&t=HTVkgegVSh6VwJ434vxt3i0R7MsvoOC-2PuRYH1N3RU',
     image: 'https://media.licdn.com/dms/image/v2/D4E35AQG9iwxONMmZqQ/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1729661660272?e=1746622800&v=beta&t=_IcfiZNp-32BkNnYp7JkHMUYRStPPPKIejXL_zT178I',
     testimonial: "<p>I had the absolute pleasure of working with Josh twice, once during his time at America's Test Kitchen and also at Sports Technologies. He was an irreplaceable part of both teams and brought so much expertise to the table. Josh creates truly amazing UI designs and has the passion to ensure they are not compromised. He excels at HTML, CSS and utilizes frameworks like Tailwind and Alpine.js to perfection.</p><p>On top of his technical skills, Josh is a fantastic team player. He’s approachable, collaborative, and always knows how to lighten the mood with his great sense of humor. We’ve stayed in touch since working together, which says a lot about the kind of supportive and genuine colleague he is.</p><p>I can’t recommend Josh highly enough. Any team would be lucky to have someone as talented, innovative, and all-around great as he is. He’s not just a professional asset—he’s a joy to work with!</p>"
   },
