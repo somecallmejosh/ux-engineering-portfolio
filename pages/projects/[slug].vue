@@ -123,18 +123,18 @@ const skillIcons = [
           :alt="post.meta.image_alt"
           :scaleY="0.75"
           />
-        <div class="not-prose space-y-6 max-w-full">
+        <section aria-label="Tools and languages used on this project" class="not-prose space-y-6 max-w-full">
           <TagLinks
             v-if="post.tags"
             :tags="post.tags"
             class="mb-6"
           />
-        </div>
-        <div class="prose">
+        </section>
+        <article class="prose">
           <ContentRenderer :value="post" />
-        </div>
+        </article>
       </div>
-      <div v-if="post.businessUrl" class="lg:flex-1 shrink-0">
+      <aside v-if="post.businessUrl" class="lg:flex-1 shrink-0">
         <div class="lg:sticky lg:top-16">
           <div class="flex items-center gap-2 mb-6 lg:mt-20">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
@@ -171,7 +171,7 @@ const skillIcons = [
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
           </div>
         </div>
-      </div>
+      </aside>
     </div>
   </PageWrapper>
 </template>

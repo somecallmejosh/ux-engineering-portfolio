@@ -14,7 +14,7 @@ const props = defineProps({
       </span>
     </template>
     <div class="prose">
-      <h1 class="text-3xl lg:text-5xl text-balance capitalize">
+      <h1 id="page-header" class="text-3xl lg:text-5xl text-balance capitalize">
         <slot />
       </h1>
     </div>

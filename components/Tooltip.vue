@@ -20,13 +20,13 @@ onClickOutside(target, event => toolTipVisible.value = false)
 </script>
 <template>
   <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @tap="visibilityToggle" class="tooltip group">
-    <div :aria-describedby="`tooltip-${id}`">
+    <span :aria-label="text">
       <slot></slot>
-    </div>
+    </span>
     <AnimatePresence :initial="false">
       <motion.div
         v-if="toolTipVisible"
-        aria-live="assertive"
+        aria-hidden="true"
         :initial="{ opacity: 0, scaleY: 0.9, y: 3, x: '-50%' }"
         :animate="{ opacity: 1, scaleY: 1, y: 0, x: '-50%' }"
         :exit="{ opacity: 0, scaleY: 0.9, y: 3, x: '-50%' }"

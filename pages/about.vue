@@ -132,17 +132,17 @@ const resumeItems = [
 <template>
   <PageWrapper>
     <div class="space-y-12 lg:space-y-0">
-      <div class="prose">
+      <section aria-describedby="page-header" class="prose">
         <PageHeader pill="About Me">
           Hello, World (and Everything In Between)
         </PageHeader>
         <p>
-            Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>. I geek out over clean code and believe the web should be a welcoming place for everyone.
-          </p>
-      </div>
+          Hey there! So, you're curious about the person behind the code, huh? For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>. I geek out over clean code and believe the web should be a welcoming place for everyone.
+        </p>
+      </section>
     </div>
-    <div class="prose max-w-full lg:mb-24">
-      <h2 class="text-3xl">My Mission</h2>
+    <section aria-labelledby="mission" class="prose max-w-full lg:mb-24">
+      <h2 id="mission" class="text-3xl">My Mission</h2>
       <ul class="grid lg:grid-cols-3 gap-12 not-prose gap-x-12 gap-y-6">
         <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in missionStatementItems" :key="index">
           <div class="prose">
@@ -156,10 +156,10 @@ const resumeItems = [
           </div>
         </li>
       </ul>
-    </div>
-    <div class="grid lg:grid-cols-2 lg:gap-12">
+    </section>
+    <section aria-labelledby="tools" class="grid lg:grid-cols-2 lg:gap-12">
       <div class="prose py-12">
-        <h2 class="text-3xl">Tools of the Trade</h2>
+        <h2 id="tools" class="text-3xl">Tools of the Trade</h2>
         <p>Now, you might be wondering about my "tools." Sure, I've got my favorites! I'm pretty handy with modern front-end frameworks like Vue and React – think of them as different types of really versatile building blocks. I also speak fluent CSS (whether it's plain vanilla, the utility-first approach of Tailwind, or the more structured Sass), which is like knowing all the different ways to paint and decorate. And I've even dabbled in full-stack stuff like Ruby on Rails – kind of like knowing how the plumbing and electrical work behind the walls.</p>
         <p>But here's the thing: <strong>I see these tools as just that&mdash;tools</strong>. Like a carpenter with their saws and chisels, they help me do the job. What I really care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
       </div>
@@ -171,9 +171,9 @@ const resumeItems = [
           <TagLinks :tags="skillIcons" class="text-center" />
         </div>
       </div>
-    </div>
-    <div class="prose max-w-full">
-      <h2 class="text-3xl">Experience</h2>
+    </section>
+    <section aria-labelledby="experience" class="prose max-w-full">
+      <h2 id="experience" class="text-3xl">Experience</h2>
       <ul class="not-prose grid md:grid-cols-2 2xl:grid-cols-3 gap-x-12 gap-y-6">
         <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
           <small class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">{{ item.date }}</small>
@@ -190,9 +190,9 @@ const resumeItems = [
           </div>
         </li>
       </ul>
-    </div>
-    <div class="prose">
+    </section>
+    <aside class="prose">
       <p>So, if you're looking for someone with a good chunk of experience who's focused on building robust, accessible, and easy-to-live-with user interfaces, and who believes in good planning and teamwork, <NuxtLink to="/contact">then let's connect</NuxtLink>! I'm all about bridging the gap between the design vision and the engineering reality to deliver solutions that really work.</p>
-    </div>
+    </aside>
   </PageWrapper>
 </template>

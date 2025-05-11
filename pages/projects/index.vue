@@ -60,12 +60,12 @@ const allProjectCategories = await queryCollection('projects')
 
 <template>
   <PageWrapper>
-    <div class="prose">
+    <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Projects">What I've Been Building: Making the Web Feel Right</PageHeader>
       <p>
         For me, building web applications isn't just about writing code – it's about creating things that feel good and natural for the folks who use them. Think clear, simple, and accessible – those are my guiding stars in every decision I make.
       </p>
-    </div>
+    </section>
     <CardList v-if="allPosts" :list="allPosts" />
   </PageWrapper>
 </template>

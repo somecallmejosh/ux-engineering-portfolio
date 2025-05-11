@@ -142,17 +142,17 @@ const testimonials = [
 
 <template>
   <PageWrapper>
-    <div class="prose">
+    <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Testimonials">
         Supportive Words from Clients and Colleagues
       </PageHeader>
       <p>
         I am grateful for the kind words and support from clients and colleagues who have worked with me over the years. Their testimonials reflect the collaborative spirit and dedication I strive to bring to every project.
       </p>
-    </div>
-    <section class="md:columns-2 lg:columns-3 gap-8 space-y-12">
-      <div v-for="(item, index) in testimonials" :key="index">
-        <motion.div
+    </section>
+    <section aria-label="Testimonials" class="md:columns-2 lg:columns-3 gap-8 space-y-12">
+      <ul v-for="(item, index) in testimonials" :key="index">
+        <motion.li
           :initial="{ y: 20, opacity: 0.25 }"
           :whileInView="{ y: 0, opacity: 1 }"
           :transition="{ duration: 0.5 }"
@@ -170,7 +170,7 @@ const testimonials = [
             <div class="sr-only">View {{ item.name }}'s' LinkedIn Profile</div>
             <Icon name="ph:arrow-square-out-fill" size="1em" class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150 ease-in-out text-blue-600" />
           </a>
-        </motion.div>
+        </motion.li>
         <div class="pl-8">
           <div class="border-l-4 border-neutral-100 pl-4 mt-6 relative">
             <motion.div
@@ -183,7 +183,7 @@ const testimonials = [
             <div class="prose relative" v-html="item.testimonial"></div>
           </div>
         </div>
-      </div>
+      </ul>
     </section>
   </PageWrapper>
 </template>

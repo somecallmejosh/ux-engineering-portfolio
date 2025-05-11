@@ -14,12 +14,12 @@ const allPosts = await queryCollection('case_studies')
 
 <template>
   <PageWrapper>
-    <div class="prose">
+    <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Case Studies">Behind the Build</PageHeader>
       <p>
         These personal experiments (and sometimes production projects) and case studies that showcase my skills in creating user-friendly, accessible, and scalable web applications.
       </p>
-    </div>
+    </section>
     <CardList v-if="allPosts" :list="allPosts" />
   </PageWrapper>
 </template>

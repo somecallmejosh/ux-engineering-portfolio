@@ -26,7 +26,9 @@ useSeoMeta({
           :scaleY="0.75"
         />
       </figure>
-      <ContentRenderer :value="post" />
+      <article>
+        <ContentRenderer :value="post" />
+      </article>
     </div>
   </PageWrapper>
 </template>

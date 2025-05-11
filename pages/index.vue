@@ -57,60 +57,64 @@ const capabilities = [
 <template>
   <div class="space-y-12">
     <div class="space-y-16">
-      <div class="prose">
+      <section aria-describedby="page-header" class="prose">
         <PageHeader>Clear, Friendly User Interfaces. Built to Last.</PageHeader>
         <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>&mdash;creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity. Whether it's a full design system, a dynamic dashboard, or connecting the front-end to an API, I'm all about building tools that are reliable, flexible, and genuinely useful.</p>
         <p>If that sounds like the kind of energy you're looking for&mdash;I'd love to help.</p>
-      </div>
+      </section>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
         <h2 class="text-2xl lg:text-4xl capitalize">What Exactly is it That I Do, You Ask?</h2>
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
       </div>
 
-      <ul class="space-y-24">
-        <li v-for="(item, index) in capabilities"
-        :key="item.id" class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
-          <div :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
-            <AnimateImage
-              :src="item.image"
-              :alt="item.image_alt"
-              :scaleY="0.75"
-              class="mb-4 lg:mb-0"
-            />
-          </div>
-          <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
-            <CardHeader>{{ item.headline }}</CardHeader>
-            <p v-html="item.description"></p>
-          </div>
-        </li>
-      </ul>
-      <ul class="grid grid-cols-2 items-center justify-between lg:hidden gap-12 border-t border-neutral-200 not-prose py-6 font-medium">
-        <li class="text-center prose">
-          <NuxtLink class="hover:underline" to="/projects">
-            <motion.div :whilePress="{ y: 4 }" >
+      <section aria-label="Capabilities">
+        <ul class="space-y-24">
+          <li v-for="(item, index) in capabilities"
+          :key="item.id" class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
+            <div :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
               <AnimateImage
-                src="https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp"
-                alt="Josh Briley"
+                :src="item.image"
+                :alt="item.image_alt"
                 :scaleY="0.75"
+                class="mb-4 lg:mb-0"
               />
-              Projects
-            </motion.div>
-          </NuxtLink>
-        </li>
-        <li class="text-center prose">
-          <NuxtLink class="hover:underline" to="/blog">
-            <motion.div :whilePress="{ y: 4 }" >
-              <AnimateImage
-                src="https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp"
-                alt="Josh Briley"
-                :scaleY="0.75"
-              />
-              Blog
-            </motion.div>
-          </NuxtLink>
-        </li>
-      </ul>
+            </div>
+            <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
+              <CardHeader>{{ item.headline }}</CardHeader>
+              <p v-html="item.description"></p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <nav class="lg:hidden" aria-label="Quick Links">
+        <ul class="grid grid-cols-2 items-center justify-between gap-12 border-t border-neutral-200 not-prose py-6 font-medium">
+          <li class="text-center prose">
+            <NuxtLink class="hover:underline" to="/projects">
+              <motion.div :whilePress="{ y: 4 }" >
+                <AnimateImage
+                  src="https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp"
+                  alt="Josh Briley"
+                  :scaleY="0.75"
+                />
+                Projects
+              </motion.div>
+            </NuxtLink>
+          </li>
+          <li class="text-center prose">
+            <NuxtLink class="hover:underline" to="/blog">
+              <motion.div :whilePress="{ y: 4 }" >
+                <AnimateImage
+                  src="https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp"
+                  alt="Josh Briley"
+                  :scaleY="0.75"
+                />
+                Blog
+              </motion.div>
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </template>

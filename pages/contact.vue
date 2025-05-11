@@ -106,12 +106,12 @@ const onSubmit = async (event) => {
 
 <template>
   <PageWrapper>
-    <div class="prose">
+    <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Contact Me">
         Let's Build Something Great Together!
       </PageHeader>
-    </div>
-    <div class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
+    </section>
+    <section aria-label="Explanation of value" class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
       <div class="prose order-2 lg:order-1">
         <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and
           build things that can grow without falling apart? That's pretty much my jam!</p>
@@ -131,10 +131,10 @@ const onSubmit = async (event) => {
           class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
           alt="UX Engineer presenting to business people" :scaleY="0.75" />
       </div>
-    </div>
+    </section>
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
-      <div class="space-y-4">
-        <h2 v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
+      <section aria-labelledby="contact-form" class="space-y-4">
+        <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
         <form v-show="!formSubmitted" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
           class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
@@ -223,10 +223,10 @@ const onSubmit = async (event) => {
             please contact me directly at <a href="mailto:josh@thebrileys.com">josh@thebrileys.com</a>, or you can try
             the form again later.</p>
         </motion.div>
-      </div>
-      <div class="space-y-4 lg:space-y-8">
+      </section>
+      <section aria-labelledby="social-media" class="space-y-4 lg:space-y-8">
         <div class="prose">
-          <h3 class="text-2xl">Or Find Me On The Socials</h3>
+          <h3 id="social-media" class="text-2xl">Or Find Me On The Socials</h3>
           <p>Admittendly, I don't post on social sites all that often, but I do receive notifcations from them when
             folks send me messages.</p>
         </div>
@@ -240,7 +240,7 @@ const onSubmit = async (event) => {
               class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a>
           </li>
         </ul>
-      </div>
+      </section>
     </div>
   </PageWrapper>
 </template>
