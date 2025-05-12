@@ -8,6 +8,7 @@ const props = defineProps({
 const formatTag = (tag) => {
   return tag.replace('-light', '').replace('js', 'JS')
   .replace('css', 'CSS')
+  .replace('alpine', 'Alpine ')
   .replace('aws', 'AWS')
   .replace('github', 'GitHub')
   .replace('html', 'HTML')
@@ -17,11 +18,16 @@ const formatTag = (tag) => {
   .replace('less', 'LESS')
   .replace('markdown', 'Markdown')
   .replace('materialui', 'Material UI')
+  .replace('next', 'Next ')
   .replace('npm', 'NPM')
+  .replace('nuxt', 'Nuxt ')
   .replace('svg', 'SVG')
   .replace('typescript', 'TypeScript')
   .replace('rails', 'Ruby on Rails')
   .replace('styledcomponents', 'Styled Components')
+  .replace('tailwind', 'Tailwind ')
+  .replace('vue', 'Vue ')
+  .replace('vscode', 'VS Code ')
   .replace('xd', 'Adobe XD')
 }
 </script>

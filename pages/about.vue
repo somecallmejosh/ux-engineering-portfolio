@@ -25,7 +25,6 @@ const skillIcons = [
   'd3-light',
   'figma-light',
   'github-light',
-  'github-light',
   'gulp',
   'heroku',
   'html',
