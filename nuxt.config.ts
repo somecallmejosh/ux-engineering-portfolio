@@ -38,6 +38,15 @@ export default defineNuxtConfig({
       collections: ['ph', 'skill-icons']
     }
   },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 4,
+        }
+      }
+    }
+  },
   schemaOrg: {
     identity: definePerson({
       name: 'Josh Briley',

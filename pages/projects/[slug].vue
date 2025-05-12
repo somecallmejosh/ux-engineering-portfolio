@@ -131,6 +131,7 @@ const skillIcons = [
           />
         </section>
         <article class="prose">
+          <TableOfContents :links="post.body.toc.links" />
           <ContentRenderer :value="post" />
         </article>
       </div>

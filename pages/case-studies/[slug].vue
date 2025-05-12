@@ -27,6 +27,7 @@ useSeoMeta({
         />
       </figure>
       <article>
+        <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
     </div>

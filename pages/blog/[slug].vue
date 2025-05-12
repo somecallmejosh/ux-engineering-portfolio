@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 const route = useRoute()
 const slug = route.params.slug
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
@@ -28,6 +27,7 @@ useSeoMeta({
         />
       </figure>
       <article>
+        <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
     </div>

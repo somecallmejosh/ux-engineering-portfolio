@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.text-body {
+  font-family: "Quicksand", sans-serif;
+}
+
 .shiki {
   background: var(--color-neutral-50);
   border-radius: 8px;
@@ -121,12 +125,12 @@ dt {
   --tw-prose-headings: var(--color-neutral-950);
 }
 
-a, .prose [class^="language"] {
+a, .prose [class^="language"], button {
   outline-color: var(--color-blue-200);
   outline-offset: 2px;
   transition: all 0.1s ease-in-out;
   &:focus-visible {
-    outline: 2px solid var(--color-blue-200);
+    outline: 2px solid var(--color-blue-300);
     outline-offset: 4px;
     border-radius: 6px;
   }
