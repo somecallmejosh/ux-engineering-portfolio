@@ -1,6 +1,6 @@
 ---
 slug: stencil-js-module-1
-publishedAt: 2025-11-03
+publishedAt: 2025-05-03
 title: "Web Component & Stencil.js"
 description: "Getting comfortable with what Stencil does and how it builds Web Components."
 tags: [stenciljs, webcomponents]

@@ -71,6 +71,11 @@ const onSubmit = async (event) => {
   validateMessage();
 
   if (!nameValid.value || !emailValid.value || !messageValid.value) {
+    // next tick
+    await nextTick();
+    // scroll to the top of the form
+    const invalidField = document.querySelector('.invalid');
+    invalidField?.focus()
     return;
   }
 
@@ -135,17 +140,16 @@ const onSubmit = async (event) => {
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <section aria-labelledby="contact-form" class="space-y-4">
         <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
-        <form v-show="!formSubmitted" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
+        <form v-show="!formSubmitted" name="contact" method="POST" novalidate data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
           class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
-
           <div class="space-y-1">
             <label class="text-sm" for="name">Name *</label>
             <div>
               <input aria-describedby="name-invalid" @blur="validateName" v-model="formData.name" name="name"
                 type="text"
                 class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                :class="{ 'border-red-600': nameValid == false }">
+                :class="{ 'border-red-600 invalid': nameValid == false }">
               <motion.small
                 :initial="{ y: 10, opacity: 0.25 }"
                 :whileInView="{ y: 4, opacity: 1 }"
@@ -161,7 +165,7 @@ const onSubmit = async (event) => {
                 <input aria-describedby="email-invalid" @blur="validateEmail" v-model="formData.email" name="email"
                   type="email"
                   class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  :class="{ 'border-red-600': emailValid == false }">
+                  :class="{ 'border-red-600 invalid': emailValid == false }">
                 <motion.small
                   :initial="{ y: 10, opacity: 0.25 }"
                   :whileInView="{ y: 4, opacity: 1 }"
@@ -182,7 +186,7 @@ const onSubmit = async (event) => {
               <textarea aria-describedby="message-invalid" @blur="validateMessage" v-model="formData.message"
                 name="message"
                 class="bg-white w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                :class="{ 'border-red-600': messageValid == false }"></textarea>
+                :class="{ 'border-red-600 invalid': messageValid == false }"></textarea>
               <motion.small
                 :initial="{ y: 10, opacity: 0.25 }"
                 :whileInView="{ y: 0, opacity: 1 }"
