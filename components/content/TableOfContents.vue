@@ -36,6 +36,22 @@ onMounted(() => {
 onBeforeUnmount(() => {
   document.removeEventListener('keydown', handleKeyDown)
 })
+
+// when link is clicked, scroll to the element, and offset by 100px
+const scrollToElement = (event) => {
+  event.preventDefault()
+  const targetId = event.currentTarget.getAttribute('href').substring(1)
+  const targetElement = document.getElementById(targetId)
+
+  if (targetElement) {
+    const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 100
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    })
+    menuOpen.value = false
+  }
+}
 </script>
 
 <template>
