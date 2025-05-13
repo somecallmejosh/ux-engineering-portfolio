@@ -9,9 +9,9 @@ image_alt: "Vibe coding"
 ---
 You've probably seen the memes:
 
-> "This component was built entirely on vibes."
+> This component was built entirely on vibes.
 
-> "Vibe coding my way through production like it's a jazz solo."
+> Vibe coding my way through production like it's a jazz solo.
 
 But what is vibe coding, really? Is it as reckless as it sounds? Is it secretly how we all code when no one's watching? And... am I doing it too? Let's find out together.
 
