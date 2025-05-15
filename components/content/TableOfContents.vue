@@ -39,7 +39,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="sticky top-24 lg:top-1 p-4 bg-white border border-neutral-200 rounded-lg" aria-labelledby="toc-header">
+  <section
+    class="overflow-hidden sticky top-24 lg:top-1 p-4 bg-white border border-neutral-200 rounded-lg relative toc" aria-labelledby="toc-header"
+
+    :class="menuOpen && 'open'">
     <button class="text-sm flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu" aria-controls="toc-menue" :aria-expanded="menuOpen">
       <h2 id="toc-header" class="flex items-center gap-2 text-body text-sm flex-1 group-hover:underline">
         <Icon name="ph:book-open-text" size="1.3em" />
@@ -53,37 +56,53 @@ onBeforeUnmount(() => {
       </span>
     </button>
     <AnimatePresence>
-      <motion.ul v-if="menuOpen" id="toc-menue" class="not-prose"
+      <motion.div
+        v-if="menuOpen"
         :exit="{ opacity: 0, height: 0 }"
         :initial="{ opacity: 0, height: 0 }"
         :animate="{ opacity: 1, height: 'auto' }"
-        @click="menuOpen = false"
+        id="toc-menue" class="max-h-96 overflow-y-auto relative"
       >
-        <li v-for="item in links" :key="item.id">
-          <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">
-            <Icon class="h-6 w-6 flex items-center justify-center border rounded-lg" :name="`codex:h${item.depth}`" /> {{ item.text }}
-          </a>
-          <ul v-if="item.children">
-            <li v-for="child in item.children" :key="child.id">
-              <a :href="`#${child.id}`" class="text-blue-500 hover:text-blue-700">
-                <Icon :name="`codex:h${child.depth}`" />  {{ child.text }}
-              </a>
-              <ul v-if="child.children">
-                <li v-for="subChild in child.children" :key="subChild.id">
-                  <a :href="`#${subChild.id}`" class="text-blue-500 hover:text-blue-700">
-                    <Icon :name="`codex:h${subChild.depth}`" />  {{ subChild.text }}
-                  </a>
-                  <component :is="TableOfContents" :links="[subChild]" />
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </motion.ul>
+        <ul class="not-prose relative relative z-0 pb-4"
+          @click="menuOpen = false"
+        >
+          <li v-for="item in links" :key="item.id">
+            <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">
+              <Icon class="h-6 w-6 flex items-center justify-center border rounded-lg" :name="`codex:h${item.depth}`" /> {{ item.text }}
+            </a>
+            <ul v-if="item.children">
+              <li v-for="child in item.children" :key="child.id">
+                <a :href="`#${child.id}`" class="text-blue-500 hover:text-blue-700">
+                  <Icon :name="`codex:h${child.depth}`" />  {{ child.text }}
+                </a>
+                <ul v-if="child.children">
+                  <li v-for="subChild in child.children" :key="subChild.id">
+                    <a :href="`#${subChild.id}`" class="text-blue-500 hover:text-blue-700">
+                      <Icon :name="`codex:h${subChild.depth}`" />  {{ subChild.text }}
+                    </a>
+                    <component :is="TableOfContents" :links="[subChild]" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </motion.div>
     </AnimatePresence>
   </section>
 </template>
 <style scoped>
+  .toc.open::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    pointer-events: none;
+    z-index: 100;
+    background-image: linear-gradient(to bottom, transparent, white);
+  }
   ul {
     margin-top: 1rem;
     ul {
