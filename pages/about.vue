@@ -80,7 +80,7 @@ const resumeItems = [
   {
     title: 'Software Engineer',
     company: 'Coming soon...',
-    date: 'Stargint June 2025',
+    date: 'Starting June 2025',
     description: "I am excited to announce that I will be joining a new company in June of 2025. Stay tuned for more details!",
   },
   {
