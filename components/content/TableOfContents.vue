@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="p-4 bg-white border border-neutral-200 rounded-lg" aria-labelledby="toc-header">
+  <section class="sticky top-24 lg:top-1 p-4 bg-white border border-neutral-200 rounded-lg" aria-labelledby="toc-header">
     <button class="text-sm flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu" aria-controls="toc-menue" :aria-expanded="menuOpen">
       <h2 id="toc-header" class="flex items-center gap-2 text-body text-sm flex-1 group-hover:underline">
         <Icon name="ph:book-open-text" size="1.3em" />
@@ -57,6 +57,7 @@ onBeforeUnmount(() => {
         :exit="{ opacity: 0, height: 0 }"
         :initial="{ opacity: 0, height: 0 }"
         :animate="{ opacity: 1, height: 'auto' }"
+        @click="menuOpen = false"
       >
         <li v-for="item in links" :key="item.id">
           <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">

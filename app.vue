@@ -114,11 +114,11 @@ const blurAndRemoveFocus = () => {
           </div>
         </nav>
       </header>
-      <div class="flex-grow overflow-y-scroll">
+      <div class="flex-grow lg:overflow-y-scroll">
         <div class="hidden lg:block lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16">
           <Logo />
         </div>
-        <main id="main-content" class="mx-auto p-6 lg:px-10 lg:pt-0 pb-12 scroll-mt-24 lg:scroll-mt-10">
+        <main id="main-content" class="mx-auto p-6 lg:px-10 lg:pt-0 pb-12">
           <NuxtPage />
         </main>
       </div>
