@@ -109,13 +109,14 @@ DateTime.fromISO("2025-05-07T12:00:00Z")
 ```
 
 ### Common Gotchas Recap
+::OverflowX
 | Gotcha                                   | Why It Happens                         | Solution                                      |
 | ---------------------------------------- | -------------------------------------- | --------------------------------------------- |
 | `new Date("2025-05-07")` is off by a day | Browser parses as UTC, shifts to local | Use full ISO with time: `2025-05-07T00:00:00` |
 | Formatting doesn't reflect language      | Defaults to system locale              | Use `toLocaleString(locale)`                  |
 | Data from API is UTC, UI shows local     | JS converts automatically              | Normalize time zone on display                |
 | `Date.now()` vs `new Date()`             | One is a timestamp, one is an object   | Use `Date.now()` for math                     |
-
+::
 
 ## When You Need Testable, Predictable Dates
 

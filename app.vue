@@ -20,7 +20,6 @@ const navGroups = [
     items: [
       { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
       { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
-      { title: 'Case Studies', path: '/case-studies', icon: 'ph:book-open' },
       { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:clipboard-text' },
     ]
   },

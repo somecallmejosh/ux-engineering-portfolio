@@ -36,22 +36,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   document.removeEventListener('keydown', handleKeyDown)
 })
-
-// when link is clicked, scroll to the element, and offset by 100px
-const scrollToElement = (event) => {
-  event.preventDefault()
-  const targetId = event.currentTarget.getAttribute('href').substring(1)
-  const targetElement = document.getElementById(targetId)
-
-  if (targetElement) {
-    const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 100
-    window.scrollTo({
-      top: offsetTop,
-      behavior: 'smooth'
-    })
-    menuOpen.value = false
-  }
-}
 </script>
 
 <template>
@@ -69,17 +53,54 @@ const scrollToElement = (event) => {
       </span>
     </button>
     <AnimatePresence>
-      <motion.ul v-if="menuOpen" id="toc-menue"
+      <motion.ul v-if="menuOpen" id="toc-menue" class="not-prose"
         :exit="{ opacity: 0, height: 0 }"
         :initial="{ opacity: 0, height: 0 }"
         :animate="{ opacity: 1, height: 'auto' }"
       >
         <li v-for="item in links" :key="item.id">
           <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">
-            {{ item.text }}
+            <Icon class="h-6 w-6 flex items-center justify-center border rounded-lg" :name="`codex:h${item.depth}`" /> {{ item.text }}
           </a>
+          <ul v-if="item.children">
+            <li v-for="child in item.children" :key="child.id">
+              <a :href="`#${child.id}`" class="text-blue-500 hover:text-blue-700">
+                <Icon :name="`codex:h${child.depth}`" />  {{ child.text }}
+              </a>
+              <ul v-if="child.children">
+                <li v-for="subChild in child.children" :key="subChild.id">
+                  <a :href="`#${subChild.id}`" class="text-blue-500 hover:text-blue-700">
+                    <Icon :name="`codex:h${subChild.depth}`" />  {{ subChild.text }}
+                  </a>
+                  <component :is="TableOfContents" :links="[subChild]" />
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
       </motion.ul>
     </AnimatePresence>
   </section>
 </template>
+<style scoped>
+  ul {
+    margin-top: 1rem;
+    ul {
+      margin-top: 0;
+      margin-left: 1.5rem;
+    }
+
+    a {
+      color: var(--color-neutral-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: var(--color-blue-50);
+        text-decoration: underline;
+      }
+    }
+  }
+</style>
