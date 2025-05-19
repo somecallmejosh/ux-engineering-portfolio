@@ -2,7 +2,7 @@
 slug: netlify-nuxt-form-troubleshooting
 publishedAt: 2025-04-29
 title: "Netlify Forms with Nuxt 3"
-description: "Here's how I finally got the submissions to show up&mdash;and how to avoid the same five-hour rabbit hole the next time."
+description: "Here's how I finally got the submissions to show up and how I learned tp avoid the same five-hour rabbit hole the next time."
 tags: [nuxt, netlify]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1745983435/josh-portfolio/assets_task_01jt2bea62fmnam8yqha1nb72d_1745983373_img_0.webp"
 image_alt: "A screenshot of the Netlify Forms dashboard showing form submissions."
@@ -17,7 +17,7 @@ We've all been there. You craft a clean little [contact form](/contact), sprinkl
 
 And then... <em>crickets</em>. No messages. No leads. Nothing.
 
-You check your Netlify Forms dashboard expecting to see a tidy list of submissions. Instead, it's just a cold, empty void staring back at you. A digital shrug. It's like shouting into a canyon and hearing nothing&mdash;not even your own echo. This is the story of how my form ghosted me, and how I finally figured out why.
+You check your Netlify Forms dashboard expecting to see a tidy list of submissions. Instead, it's just a cold, empty void staring back at you. A digital shrug. It's like shouting into a canyon and hearing nothing, not even your own echo. This is the story of how my form ghosted me, and how I finally figured out why.
 
 ## Everything Looked Right
 I've been rebuilding my portfolio site with Nuxt.js. I'd done this dance before on several sites in the past. Set up a form, add `data-netlify="true"`, toss in a hidden form-name field, and you're good to go. I even added a useFetch call to handle submissions via JavaScript so users wouldn't get redirected on form submission. Smooth, right?
@@ -50,7 +50,7 @@ At first, I assumed I'd missed something obvious. But after several rounds of ha
 1. Triple-checking the HTML in DevTools to make sure Netlify's attributes weren't being stripped during build. <em>Nope</em>. They were there.
 1. Submitting without JavaScript to eliminate fetch-related issues. <em>Still no luck.</em>
 1. Using FormData instead of URL-encoded strings. <em>Negatory.</em>
-1. Adding a plain HTML form (no Vue) in my `public/` directory. That worked perfectly&mdash;which told me the issue wasn't with Netlify, but with how my Nuxt app was being built.
+1. Adding a plain HTML form (no Vue) in my `public/` directory. That worked perfectly. This told me the issue wasn't with Netlify, but with how my Nuxt app was being built.
 1. Trying `useFetch` vs native `fetch`. <em>No difference.</em>
 1. Debugging an unrelated Vue error that made me briefly suspect reactivity gremlins. <em>Red herring.</em>
 1. Changing form field ordering, field names, timing of submission... <em>you get the idea.</em>
@@ -65,7 +65,7 @@ npm run build
 ```
 Which seems reasonable, right? That's how you build a Nuxt app. That's pretty much what I've always done. And this works just fine and dandy... <em>in Nuxt2 apps</em>.
 
-But for static site generation with Nuxt 3&mdash;and for Netlify Forms to work properly&mdash;you need to use:
+But for static site generation with Nuxt 3, and for Netlify Forms to work properly, you need to use:
 
 ```bash
 npm run generate

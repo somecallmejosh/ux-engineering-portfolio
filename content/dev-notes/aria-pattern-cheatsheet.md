@@ -9,7 +9,7 @@ image_alt: 'ARIA Patterns and Practices Cheatsheet'
 ---
 ARIA (short for Accessible Rich Internet Applications) is basically HTML's way of saying, "Hey assistive tech, I've got some extra context for you!" It's a bunch of attributes you sprinkle into your markup to help users with disabilities better understand and navigate your app.
 
-This cheatsheet isn't trying to be the entire WAI-ARIA Bible&mdash;it's more like a sticky note stuck to your monitor that reminds you what `aria-expanded` actually does. It focuses on the common stuff you'll hit regularly: what roles go where, what attributes to slap on, how users are expected to move around with a keyboard, and what's supposed to happen when stuff gets toggled, selected, or otherwise activated.
+This cheatsheet isn't trying to be the entire WAI-ARIA Bible. It's more like a sticky note stuck to your monitor that reminds you what `aria-expanded` actually does. It focuses on the common stuff you'll hit regularly: what roles go where, what attributes to slap on, how users are expected to move around with a keyboard, and what's supposed to happen when stuff gets toggled, selected, or otherwise activated.
 
 When in doubt (or when this page isn't cutting it), the [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/) has all the official words and wisdom. But if you're mid-sprint and your brain just went poof, this page is here to save the day.
 
@@ -33,5 +33,4 @@ When in doubt (or when this page isn't cutting it), the [WAI-ARIA Authoring Prac
 | Tabs        | `tablist`, `tab`, `tabpanel`           | `aria-selected`, `aria-controls`, `aria-labelledby`                             | `Left/Right` to switch tabs, `Tab` to enter tabpanel                                                    | Active tab uses `aria-selected="true"`; active panel shown                            |
 | Toolbar     | `toolbar`                              | `aria-label`, `aria-orientation`                                                | `Tab` to enter, `Arrow` keys to move between items                                                      | Toolbar buttons may use `aria-pressed` if toggleable                                  |
 | Tooltip     | `tooltip`                              | `aria-describedby` on target pointing to tooltip                                | Shown on `hover` or `focus`                                                                            | Tooltip content shown, referenced from target                                          |
-
 ::

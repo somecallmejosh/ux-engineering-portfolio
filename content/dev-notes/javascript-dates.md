@@ -19,7 +19,7 @@ const fromParts = new Date(2025, 4, 7); // Month is zero-based (4 = May)
 ### Important Gotchas:
 
 - Month is zero-based (0 = January)
-- Avoid `Date.parse("MM/DD/YYYY")` – results can vary by browser and locale
+- Avoid `Date.parse("MM/DD/YYYY")`. Results can vary by browser and locale
 - ISO format (YYYY-MM-DD) is your safest bet
 
 ## Time Zones: Where Things Get Weird

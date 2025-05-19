@@ -8,10 +8,10 @@ image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_pro
 image_alt: "A screenshot of a web developer building an accessible modal with StencilJS."
 ---
 
-This article walks through how I created an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS. It was a great exercise to learn how to structure my HTML, manage ARIA roles, trap focus, manage z-index layering, handle escape keys, and restore focus when the modal is closed&mdash;all while keeping the component flexible and composable.
+This article walks through how I created an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS. It was a great exercise to learn how to structure my HTML, manage ARIA roles, trap focus, manage z-index layering, handle escape keys, and restore focus when the modal is closed, keeping the component flexible and composable.
 
 ## Why Accessibility Matters for Modals
-Modals are one of the most misused and misunderstood UI components in web development&mdash;especially when it comes to accessibility. On the surface, they seem simple: display a box, cover the background, and throw in a close button. But for screen reader users or those navigating via keyboard, a poorly implemented modal can make a website completely unusable.
+Modals are one of the most misused and misunderstood UI components in web development, especially when it comes to accessibility. On the surface, they seem simple: display a box, cover the background, and throw in a close button. But for screen reader users or those navigating via keyboard, a poorly implemented modal can make a website completely unusable.
 
 Some of the most common accessibility issues with modals include:
 
@@ -20,7 +20,7 @@ Some of the most common accessibility issues with modals include:
 - Lack of keyboard support (e.g. no Escape key, broken tab flow)
 - No indication that a modal has opened or closed
 
-When building UI components in StencilJS&mdash;especially for use in a design system or shared library&mdash;these issues must be solved once and solved well. Fortunately, Web Components and Stencil give us the tools to encapsulate this complexity and deliver a reusable, standards-compliant modal dialog.
+When building UI components in StencilJS, especially for use in a design system or shared library, these issues must be solved once and solved well. Fortunately, Web Components and Stencil give us the tools to encapsulate this complexity and deliver a reusable, standards-compliant modal dialog.
 
 In this guide, we'll walk through how to build a robust, accessible modal component from scratch using StencilJS. We'll:
 
@@ -120,7 +120,7 @@ Here's a working markup prototype for the modal internals:
 This provides a semantic and flexible layout that can be styled easily, localized, and reused across many contexts.
 
 ## Styling the Modal
-An accessible modal isn't just about markup&mdash;it must be visibly obvious, keyboard-friendly, and non-disruptive for screen readers and users with motion sensitivity. Here's how to do it in CSS, particularly in the context of a StencilJS Web Component.
+An accessible modal isn't just about markup. It must be visibly obvious, keyboard-friendly, and non-disruptive for screen readers and users with motion sensitivity. Here's how to do it in CSS, particularly in the context of a StencilJS Web Component.
 
 ### Visibility Control: display, opacity, and inert
 
@@ -130,7 +130,7 @@ We'll use two layered elements:
 
 Visibility should be toggled by a prop like `@Prop()` open: boolean.
 
-Use opacity and visibility for transitions&mdash;not display: none (until animation completes), to avoid breaking transitions or screen reader detection.
+Use opacity and visibility for transitions as opposed to `display: none` (until animation completes), to avoid breaking transitions or screen reader detection.
 
 ```css
 :host {
@@ -328,7 +328,7 @@ private maintainFocus(event: KeyboardEvent) {
 }
 ```
 
-This ensures that when the user presses Tab (or Shift+Tab), focus loops within the modal. Without this, users could tab out to the background interface&mdash;which is exactly what `aria-modal="true"` tries to prevent.
+This ensures that when the user presses Tab (or Shift+Tab), focus loops within the modal. Without this, users could tab out to the background interface, which is exactly what `aria-modal="true"` tries to prevent.
 
 ### Scroll Lock Helpers
 ```ts
@@ -341,11 +341,11 @@ private unlockScroll() {
 }
 ```
 
-Simple approach&mdash;enough for most use cases, but consider supporting stacked modals later (e.g. with a global modal counter).
+Simple approach, enough for most use cases, but consider supporting stacked modals later (e.g. with a global modal counter).
 
 ## Accessibility Considerations
 
-Accessibility isn't a layer that's bolted on after the fact&mdash;it's baked into every decision about structure, focus, and interactivity. We should confirm that the modal meets WAI-ARIA standards and behaves as expected across assistive technologies.
+Accessibility isn't a layer that's bolted on after the fact. It's baked into every decision about structure, focus, and interactivity. We should confirm that the modal meets WAI-ARIA standards and behaves as expected across assistive technologies.
 
 ### Roles and Properties Recap
 Let's review the ARIA essentials:
@@ -419,7 +419,7 @@ To validate this:
 ### Reduced Motion and Visibility
 
 - Transitions respect `prefers-reduced-motion` media query.
-- Modal is never rendered with `display: none` when open&mdash;it fades in/out using opacity.
+- Modal is never rendered with `display: none` when open. It fades in/out using opacity.
 - Focus styles are visible (not removed with `outline: none`).
 
 ### Common A11y Pitfalls to Avoid
@@ -449,7 +449,7 @@ The goal is to make modal usage look something like this:
 Key features here:
 - open can be toggled as a prop or via methods.
 - Slots provide layout flexibility (title, default, footer).
-- Consumers don't need to know how the modal works&mdash;they just fill the slots.
+- Consumers don't need to know how the modal works. They just fill the slots.
 
 ### Exposing Methods for Programmatic Control
 Stencil allows you to expose methods on custom elements:
@@ -489,7 +489,7 @@ componentDidLoad() {
 }
 ```
 
-This works, but beware of styles and theme variables&mdash;I may need to reapply CSS variables or expose them via props when moving the element to another part of the DOM.
+This works, but beware of styles and theme variables. I may need to reapply CSS variables or expose them via props when moving the element to another part of the DOM.
 
 ### Supporting Nested Modals
 Nested modals are controversial, but common in enterprise apps (think: "Edit > Delete > Are you sure?").
