@@ -3,7 +3,7 @@ slug: forever-project
 businessName: "Josh Briley"
 publishedAt: 2025-04-28
 title: "The Forever Project: Staying Curious (and Mostly Sane) in Web Development"
-description: "How I stay current in web development through newsletters, tinkering, conversations, and curiosity&mdash;because it’s a forever project, not a finish line."
+description: "How I stay current in web development through newsletters, tinkering, conversations, and curiosity because, it’s a forever project, not a finish line."
 tags: []
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1745864263/josh-portfolio/assets_task_01jsysst5nfeqs183yj5ktphjj_1745864217_img_0.webp"
 image_alt: "Front end developer keeping current with web development trends"
@@ -21,7 +21,7 @@ I lean on a few good newsletters to filter the flood of new information into som
 - [Daily.dev](https://daily.dev/) (aggregated dev articles)
 - [web.dev](https://web.dev/) (best practices straight from Google)
 
-These are short, focused, and skimmable&mdash;which means I can keep an eye on what's happening without disappearing into five-hour YouTube rabbit holes every morning.
+These are short, focused, and skimmable. This means I can keep an eye on what's happening without disappearing into five-hour YouTube rabbit holes every morning.
 
 ## Following Smart People (So I Don't Have to Know Everything Myself)
 I don't try to keep up with everything firsthand. Instead, I follow people who are smarter than me and learn from the trends they spot:
@@ -51,7 +51,7 @@ I don't try to "complete" every course. I treat them more like a workshop: pop i
 
 A few courses that I have fully completed, recently purchased, and wholeheartedly recommend:
 
-- [Joy of React](https://www.joyofreact.com/) by Josh W. Comeau: It's not just the React stuff that makes this course great&mdash;it's the way Josh teaches how to think about building user interfaces. The React content is top-notch, but the real value is in the mindset shifts.
+- [Joy of React](https://www.joyofreact.com/) by Josh W. Comeau: It's not just the React stuff that makes this course great, it's the way Josh teaches how to think about building user interfaces. The React content is top-notch, but the real value is in the mindset shifts.
 - [Learn UX Design](https://www.learnui.design/courses/learn-ux-design.html) by Erik Kennedy: This probably isn't a course you'd expect to see on a web developer's list, but Erik's approach to UX design is incredibly practical and applicable to front-end work. Matter of fact, he started out in development and maintains a great balance between the two disciplines. It helped me think more critically about user flows and interface decisions.
 
 Neither of these people know me, and have no idea I'm recommending their courses. I just think they're worth every penny. But, if they were compelled to send me a kickback or two, I wouldn't complain. :-)
@@ -60,10 +60,10 @@ Neither of these people know me, and have no idea I'm recommending their courses
 I've dabbled in tech podcasts, but honestly, most of them aren't a great fit for me.
 Too much filler. Too many detours. Takes too long to get to the meat.
 
-I'd rather read an article or watch a 5-minute deep dive video than listen to 40 minutes of small talk about someone's coffee order before they mention the actual topic of the podcast. No disrespect to the podcast world &mdash; it just doesn't match how my brain likes to learn.
+I'd rather read an article or watch a 5-minute deep dive video than listen to 40 minutes of small talk about someone's coffee order before they mention the actual topic of the podcast. No disrespect to the podcast world, it just doesn't match how my brain likes to learn.
 
 ## Hands-On Tinkering
-Production code is great, but it's not the best place to throw ideas at the wall to see sticks. Sometimes I just like to try new things without worrying about the things that production web apps need&mdash;security, performance, scalability, etc. Tinkering gives me the chance to try new frameworks, new strategies for working with APIs, etc.
+Production code is great, but it's not the best place to throw ideas at the wall to see sticks. Sometimes I just like to try new things without worrying about the things that production web apps need, such as security, performance, scalability, etc. Tinkering gives me the chance to try new frameworks, new strategies for working with APIs, etc.
 
 I use design assets provided by Frontend Mentor and Great Frontends for this. They range in degrees of difficulty, offering a variety of project types to keep the creative juices flowing. Recently, I've starting building out a few of these projects using different frameworks to see how they handle the same problem. Here are a couple of examples:
 
@@ -78,7 +78,7 @@ I have a rule that I try to stick to when it comes to side projects: Use this as
 I'm lucky to have friends and peers who also work in the trenches. It's surprising how many musicians are also tech folks. Oh, did I mention that I'm also a musician? Details... Sometimes staying current just means having a casual conversation about the random quirks of the new Vue release, or swapping notes about weird browser bugs we've hit recently. A lot of good learning starts with, "Hey, have you seen this weird thing?"
 
 ## Reviewing PRs
-I learn a lot by reviewing other people's pull requests&mdash;and by having mine reviewed, too. You see different styles. Different ways to solve the same problem. Different ways to think about naming things, structuring components, or balancing performance vs clarity.
+I learn a lot by reviewing other people's pull requests and by having mine reviewed, too. You see different styles. Different ways to solve the same problem. Different ways to think about naming things, structuring components, or balancing performance vs clarity.
 
 PRs are like mini crash courses in real-world front-end problem solving. I'm also liking the way that GitHub is starting to surface AI-generated suggestions for PRs. It's not perfect, but it can help highlight potential issues or improvements that I might have missed.
 
@@ -98,4 +98,4 @@ Sometimes I'll pull up GitHub repos for open source projects or impressive produ
 ## OK, I Think That About Covers It
 Staying current doesn't mean chasing every new trend. For me, it's about keeping my eyes open, staying curious, and getting my hands dirty in lots of little ways.
 
-I'm not trying to learn everything. I'm trying to keep learning something&mdash;every week, every project, every rabbit hole I fall down accidentally (or intentionally). It's messy. It's imperfect. And honestly, it's the best part of the job.
+I'm not trying to learn everything. I'm trying to keep learning something every week, every project, every rabbit hole I fall down accidentally (or intentionally). It's messy. It's imperfect. And honestly, it's the best part of the job.

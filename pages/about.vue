@@ -86,32 +86,32 @@ const resumeItems = [
   {
     title: 'Senior UI Developer',
     company: 'Logatot, Inc.',
-    date: '2023 – 2024',
-    description: "At Logatot, my focus was on building the visual heart of their application – those reusable UI components that make everything feel consistent and work smoothly on any device. Using Ruby on Rails ViewComponents, I aimed to create a library that not only looked good but was also accessible to everyone, ensuring a great experience for all users.",
+    date: '2023 - 2024',
+    description: "At Logatot, my focus was on building the visual heart of their application, those reusable UI components that make everything feel consistent and work smoothly on any device. Using Ruby on Rails ViewComponents, I aimed to create a library that not only looked good but was also accessible to everyone, ensuring a great experience for all users.",
   },
   {
     title: 'Senior Software Engineer',
     company: "America's Test Kitchen",
-    date: '2022 – 2023',
-    description: "My time at America's Test Kitchen was all about making their delicious content shine online. I built and documented UI components using React, Next.js, and Storybook, creating a well-organized toolkit that helped the team deliver new features quickly and consistently across their various projects – ensuring every recipe and review looked its best!",
+    date: '2022 - 2023',
+    description: "My time at America's Test Kitchen was all about making their delicious content shine online. I built and documented UI components using React, Next.js, and Storybook, creating a well-organized toolkit that helped the team deliver new features quickly and consistently across their various projects, ensuring every recipe and review looked its best!",
   },
   {
     title: 'Principal Design Engineer',
     company: 'Berkshire Hathaway Specialty Insurance',
-    date: '2018 – 2022',
+    date: '2018 - 2022',
     description: "As Principal Design Engineer at BHSI, I spearheaded the creation of a custom UI component library using Vue.js and Nuxt.js. This wasn't just about making things look the same; it was about setting a standard for front-end development that sped up how quickly we could roll out new features while keeping the user experience top-notch.",
   },
   {
     title: 'Lead UI Developer',
     company: "America's Test Kitchen",
-    date: '2016 – 2018',
+    date: '2016 - 2018',
     description: "Back at America's Test Kitchen, I took on the challenge of designing and implementing a smart system for styling the UI. This 'utility system' was all about streamlining our workflow, reducing the time developers spent on repetitive tasks, and ultimately making the whole team move faster and more efficiently.",
   },
   {
     title: 'UI Designer & Front End Developer',
     company: 'Sports Technologies, Inc.',
     date: '2013 - 2016',
-    description: "This was a fantastic opportunity to blend my design and development skills, leading the charge on UI for Ruby on Rails and Angular web applications used by some of the biggest names in sports – the NFL, NASCAR, NHL, MLS, PGA, and more! It was all about creating intuitive and engaging experiences for these elite organizations.",
+    description: "This was a fantastic opportunity to blend my design and development skills, leading the charge on UI for Ruby on Rails and Angular web applications used by some of the biggest names in sports, the NFL, NASCAR, NHL, MLS, PGA, and more! It was all about creating intuitive and engaging experiences for these elite organizations.",
   },
   {
     title: 'Freelance UI Developer',
@@ -129,7 +129,7 @@ const resumeItems = [
     title: 'Owner, Web Designer and Front End Developer',
     company: 'Para-Diddle Design, LLC',
     date: '2005 - 2009',
-    description: "Running my own design and development company was an incredible learning experience. Beyond the coding and design, I was responsible for the whole picture – setting the vision, managing the budget, and even handling marketing and sales. It gave me a real appreciation for all the moving parts of a business.",
+    description: "Running my own design and development company was an incredible learning experience. Beyond the coding and design, I was responsible for the whole picture, setting the vision, managing the budget, and even handling marketing and sales. It gave me a real appreciation for all the moving parts of a business.",
   },
 ];
 </script>
@@ -165,8 +165,8 @@ const resumeItems = [
     <section aria-labelledby="tools" class="grid lg:grid-cols-2 lg:gap-12">
       <div class="prose py-12">
         <h2 id="tools" class="text-3xl">Tools of the Trade</h2>
-        <p>Now, you might be wondering about my "tools." Sure, I've got my favorites! I'm pretty handy with modern front-end frameworks like Vue and React – think of them as different types of really versatile building blocks. I also speak fluent CSS (whether it's plain vanilla, the utility-first approach of Tailwind, or the more structured Sass), which is like knowing all the different ways to paint and decorate. And I've even dabbled in full-stack stuff like Ruby on Rails – kind of like knowing how the plumbing and electrical work behind the walls.</p>
-        <p>But here's the thing: <strong>I see these tools as just that&mdash;tools</strong>. Like a carpenter with their saws and chisels, they help me do the job. What I really care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
+        <p>Now, you might be wondering about my "tools." Sure, I've got my favorites! I'm pretty handy with modern front-end frameworks like Vue and React. I think of them as different types of really versatile building blocks. I also speak fluent CSS (whether it's plain vanilla, the utility-first approach of Tailwind, or the more structured Sass), which is like knowing all the different ways to paint and decorate. And I've even dabbled in full-stack stuff like Ruby on Rails – kind of like knowing how the plumbing and electrical work behind the walls.</p>
+        <p>But here's the thing: <strong>I see these tools as just that, tools</strong>. Like a carpenter with their saws and chisels, they help me do the job. What I really care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
       </div>
       <div class="flex flex-col items-center justify-center bg-neutral-700 rounded-lg">
         <div class="p-10 lg:p-24 space-y-10">
