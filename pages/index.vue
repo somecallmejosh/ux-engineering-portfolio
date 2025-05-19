@@ -59,8 +59,7 @@ const capabilities = [
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
         <PageHeader>Clear, Friendly User Interfaces. Built to Last.</PageHeader>
-        <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>, creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity. Whether it's a full design system, a dynamic dashboard, or connecting the front-end to an API, I'm all about building tools that are reliable, flexible, and genuinely useful.</p>
-        <p>If that sounds like the kind of energy you're looking for, I'd love to help.</p>
+        <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>, creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity. If that sounds like the kind of energy you're looking for, I'd love to help.</p>
       </section>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>

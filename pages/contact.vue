@@ -115,31 +115,12 @@ const onSubmit = async (event) => {
       <PageHeader pill="Contact Me">
         Let's Build Something Great Together!
       </PageHeader>
-    </section>
-    <section aria-label="Explanation of value" class="grid lg:grid-cols-2 gap-6 lg:gap-24 lg:items-center">
-      <div class="prose order-2 lg:order-1">
-        <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and
+      <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and
           build things that can grow without falling apart? That's pretty much my jam!</p>
-        <p>
-          Need someone to steer the ship on your front-end projects and make sure everything's sailing smoothly?
-          Your user interface feels a bit like a tangled mess of wires? <i>I can help you design a solid,
-            easy-to-understand structure that makes future development a breeze</i>.
-
-          Want to build a set of reusable UI pieces that are both beautiful and work like a charm, no matter how big
-          your project gets? And make sure everyone can use them, no matter how they access your stuff? <strong>I can
-            help!</strong>
-        </p>
-      </div>
-      <div class="order-1 lg:order-2">
-        <AnimateImage
-          src="https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp"
-          class="w-full h-auto mb-4 rounded-lg border border-neutral-100 grayscale"
-          alt="UX Engineer presenting to business people" :scaleY="0.75" />
-      </div>
     </section>
     <div class="space-y-4 grid lg:grid-cols-2 lg:gap-24 gap-12 lg:items-center">
       <section aria-labelledby="contact-form" class="space-y-4">
-        <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl">Got a Project? A Question? A Bad Dad Joke?</h2>
+        <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance">Got a Project? A Question? A Bad Dad Joke? Drop me a line.</h2>
         <form v-show="!formSubmitted" name="contact" method="POST" novalidate data-netlify="true" netlify-honeypot="bot-field" @submit.prevent="onSubmit"
           class="space-y-4 p-6 bg-neutral-50 rounded-lg">
           <input type="hidden" name="form-name" value="contact" />
