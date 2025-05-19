@@ -30,7 +30,7 @@ const allBlogCategories = await queryCollection('blog')
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Blog">Brain Dump, My Digital Notebook</PageHeader>
       <p>
-        This is where I stash thoughts on building better web experiences. Part memory bank, part storytelling outlet, part open-source therapy session.
+        This is where I stash <i>thoughts on building better web experiences</i>. Consider this part memory bank, part storytelling outlet, part open-source therapy session.
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />

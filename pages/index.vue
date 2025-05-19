@@ -10,6 +10,7 @@ useSeoMeta({
 const capabilities = [
   {
     id: 1,
+    icon: 'lego',
     headline: 'Building Blocks for the Web (Design Systems)',
     description: "Think of those cool, reusable pieces on websites...<strong>buttons, menus, colors that all fit? That's all part of a design system!</strong> I build these <strong>Lego sets</strong> with modern front end developer tools, keeping everything consistent and making future work smoother. Plus, a clear instruction manual (Storybook) helps everyone build right.",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743964962/josh-portfolio/assets_task_01jr66de64evqaxfev44eyj7y0_img_0.webp',
@@ -18,6 +19,7 @@ const capabilities = [
 
   {
     id: 3,
+    icon: 'wheelchair',
     headline: 'Making the Web Accessible to Everyone (WCAG)',
     description: "Imagine a playground for all! I ensure websites follow WCAG 2.1 (or better!) so everyone can use them. This means <strong>clear language for computers (semantic HTML), and helpful labels, keyboard navigation, and good color contrast for users</strong>. My <em>testing goggles</em> (Axe, Lighthouse, screen readers) ensure we pass the check!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
@@ -25,6 +27,7 @@ const capabilities = [
   },
   {
     id: 2,
+    icon: 'chart-bar',
     headline: 'Building Mission Control for Data (Dashboards)',
     description: "Got lots of data that needs to make sense? I build <strong>mission control dashboards</strong> with tools like D3.js and Chart.js to tell clear, visual stories. I make sure they handle tons of data without slowing down and can even show live updates. Plus, I can set up controls for who sees what based on their role!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744227298/josh-portfolio/assets_task_01jre017kredrsghw9rwhdb4er_img_0.webp',
@@ -32,6 +35,7 @@ const capabilities = [
   },
   {
     id: 5,
+    icon: 'list-magnifying-glass',
     headline: 'Testing Ideas Before We Build the Whole Thing (Prototyping)',
     description: "Got a cool design in Figma or Sketch? <strong>I turn them into quick prototypes to test if they'll actually work!</strong> This helps catch tech issues early and keeps us aligned with designers and product folks. These prototypes often use our design system <em>Lego blocks</em> too!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
@@ -39,6 +43,7 @@ const capabilities = [
   },
   {
     id: 6,
+    icon: 'cloud-arrow-up',
     headline: 'Making the Front Talk to the Back (API Integration)',
     description: "Think of the front-end needing to chat with the back-end for info? I make those conversations happen with APIs. <strong>I ensure data flows smoothly, handle any errors, and check that the info is correct</strong>. I've connected front-ends with back-ends built with Ruby on Rails, Java, GoLang, PHP, and lots more!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966345/josh-portfolio/assets_task_01jr67rg5fftpa5naekz8czqd9_img_0.webp',
@@ -46,6 +51,7 @@ const capabilities = [
   },
   {
     id: 7,
+    icon: 'seal-check',
     headline: 'Making Sure Everything Works Perfectly (Testing & QA)',
     description: "<strong>Before shipping to production, we test everything!</strong> I do all sorts of testing – individual pieces (unit), parts working together (integration), and the whole thing for the user (end-to-end) with tools like Jest and Cypress. Automated tests help us catch issues early and keep code quality high!",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966547/josh-portfolio/assets_task_01jr67z9nxeg98nryp77fhgy72_img_0.webp',
@@ -58,12 +64,12 @@ const capabilities = [
   <div class="space-y-12">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <PageHeader>Clear, Friendly User Interfaces. Built to Last.</PageHeader>
-        <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>, creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity. If that sounds like the kind of energy you're looking for, I'd love to help.</p>
+        <PageHeader>Clear, User-Friendly Web Apps. Built to Last.</PageHeader>
+        <p>Hey, I'm Josh. <i>I work at the intersection of design and engineering</i>, creating scalable, accessible UI systems, prototyping ideas to life, and collaborating closely with teams to turn complexity into clarity.</p>
       </section>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
-        <h2 class="text-2xl lg:text-4xl capitalize">What Exactly is it That I Do, You Ask?</h2>
+        <h2 class="text-2xl lg:text-4xl capitalize">Accessible User Interface Development</h2>
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
       </div>
 
@@ -80,7 +86,12 @@ const capabilities = [
               />
             </div>
             <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
-              <CardHeader>{{ item.headline }}</CardHeader>
+              <div class="space-y-4">
+                <div class="size-10 flex shrink-0 items-center justify-center rounded-full bg-neutral-500 text-neutral-50">
+                  <Icon :name="`ph:${item.icon}`" size="1.5em" />
+                </div>
+                <CardHeader>{{ item.headline }}</CardHeader>
+              </div>
               <p v-html="item.description"></p>
             </div>
           </li>

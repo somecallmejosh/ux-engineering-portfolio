@@ -139,10 +139,10 @@ const resumeItems = [
     <div class="space-y-12 lg:space-y-0">
       <section aria-describedby="page-header" class="prose">
         <PageHeader pill="About Me">
-          Hello, World (and Everything In Between)
+          Hello, World!
         </PageHeader>
         <p>
-          For the last two decades, I've been happily crafting those cool, interactive bits you see online, turning complex ideas into smooth, user-friendly web experiences. <strong>While making things look good is part of the fun, my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</strong>. I geek out over clean code and believe the web should be a welcoming place for everyone.
+          While making things look good is part of the fun, <i>my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</i>. For the last two decades, I've been happily crafting those cool, interactive user interface bits you see online.
         </p>
       </section>
     </div>

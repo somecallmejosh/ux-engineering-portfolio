@@ -17,7 +17,7 @@ const allPosts = await queryCollection('dev_notes')
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Dev Notes">Notes to Future Me</PageHeader>
       <p>
-        This section of the site is mostly for me. It's just a running log of things I've figured out (or halfway figured out) while building stuff. No promises of best practices, just real-world notes I wanted to remember. If it helps you too, great!
+        This is just <i>a running log of things I've figured out (or halfway figured out) while building stuff</i>. No promises of best practices. Just real-world notes I wanted to remember. If it helps you too, great!
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
