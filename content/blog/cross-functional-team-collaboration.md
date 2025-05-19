@@ -9,12 +9,12 @@ image_alt: "Cross-Functional team collaborating on ideas."
 ---
 Reflection: There was a project that, on paper, should've gone sideways.
 
-Tight deadline. Vague requirements. Competing priorities. You know the type. The goal was to improve onboarding, and the team included designers, engineers, and product folks&mdash;each with strong opinions and just enough blind spots to make things interesting.
+Tight deadline. Vague requirements. Competing priorities. You know the type. The goal was to improve onboarding, and the team included designers, engineers, and product folks, each with strong opinions and just enough blind spots to make things interesting.
 
 But somehow… it worked. Not because we had perfect specs or a magical roadmap. It worked because people showed up ready to listen, adapt, and figure things out together.
 
 ## Collaboration That Actually Worked
-One of the first big tension points was over a small detail&mdash;a micro-interaction that looked great in the prototype but didn't play nice with our codebase. Normally, this would've turned into one of those "just ship it without the animation" situations. But instead of going into corners and grumbling, everyone got together for a quick chat.
+One of the first big tension points was over a small detail, a micro-interaction that looked great in the prototype but didn't play nice with our codebase. Normally, this would've turned into one of those "just ship it without the animation" situations. But instead of going into corners and grumbling, everyone got together for a quick chat.
 
 The designer walked through why the interaction mattered. Engineering laid out the technical trade-offs. And instead of throwing it out or digging in, the group found a middle ground that kept the spirit of the design without overloading the implementation.
 
@@ -23,9 +23,9 @@ Nobody "won." And that's what made it work.
 That one conversation set the tone: respectful, collaborative, and centered on the user.
 
 ## Clear Roles, Fewer Surprises
-A lot of the friction in cross-functional teams doesn't come from disagreement&mdash;it comes from assumption. People assume someone else is owning a task. Or they assume that because it looks easy in the design, it'll be easy to build.
+A lot of the friction in cross-functional teams doesn't come from disagreement, it comes from assumption. People assume someone else is owning a task. Or they assume that because it looks easy in the design, it'll be easy to build.
 
-On this project, the team got really good at spelling things out: who's updating the shared components, who's handling testing, who's keeping an eye on responsiveness, who's communicating the rollout. Nobody was micromanaged&mdash;just clear on what they were responsible for.
+On this project, the team got really good at spelling things out: who's updating the shared components, who's handling testing, who's keeping an eye on responsiveness, who's communicating the rollout. Nobody was micromanaged,, just clear on what they were responsible for.
 
 It wasn't about control. It was about ownership, and it made everything smoother.
 
@@ -34,12 +34,12 @@ There wasn't a single silver-bullet process. Just a lot of small, unglamorous th
 
 Designers gave engineers insight into their rationale instead of just handing off mockups. Engineers surfaced potential performance concerns early. Product made sure everyone had a consistent picture of the user's needs. The team shared context instead of just tasks.
 
-Trust started to build. Designers felt safe asking devs, "Does this layout feel realistic?" Devs felt empowered to suggest UI tweaks based on user behavior. And product gave space for both sides to influence the outcome&mdash;not just deliverables.
+Trust started to build. Designers felt safe asking devs, "Does this layout feel realistic?" Devs felt empowered to suggest UI tweaks based on user behavior. And product gave space for both sides to influence the outcome, not just deliverables.
 
 ## Staying Anchored to the User
 Even with a smooth process, it's easy to lose sight of the actual user. But this team kept circling back.
 
-When feedback started coming in&mdash;early tests, support tickets, anecdotes from actual users&mdash;it didn't just go to product. Everyone looked. Everyone listened. And sometimes, it was a developer who flagged a pattern, or a designer who simplified a flow based on real pain points.
+When feedback started coming in, it didn't just go to product. Everyone looked. Everyone listened. And sometimes, it was a developer who flagged a pattern, or a designer who simplified a flow based on real pain points.
 
 The result wasn't just that the feature worked. It felt right. For the people using it.
 
@@ -53,6 +53,6 @@ It's not magic. It's just what happens when people are working with each other i
 ## The Real Takeaway
 Cross-functional collaboration isn't just about shipping on time or keeping the peace between teams. It's about creating an environment where people feel heard, respected, and genuinely part of the outcome.
 
-Because when designers, engineers, and product folks all care about the same thing&mdash;and they trust each other enough to say, "Hey, let's figure this out together"&mdash;really good things tend to happen.
+Because when designers, engineers, and product folks all care about the same thing, and they trust each other enough to say, "Hey, let's figure this out together", really good things tend to happen.
 
 And the user? They usually end up noticing, too.

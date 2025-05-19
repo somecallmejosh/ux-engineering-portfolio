@@ -223,7 +223,7 @@ const onSubmit = async (event) => {
           :transition="{ duration: 0.5 }"
           role="alert" v-if="formSubmitError" class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
           <h2>Oops! Something went wrong.</h2>
-          <p>There was an error submitting your message&mdash;probably something on my end. If this is an urgent matter,
+          <p>There was an error submitting your message. If this is an urgent matter,
             please contact me directly at <a href="mailto:josh@thebrileys.com">josh@thebrileys.com</a>, or you can try
             the form again later.</p>
         </motion.div>

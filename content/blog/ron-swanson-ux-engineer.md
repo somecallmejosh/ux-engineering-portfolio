@@ -13,7 +13,7 @@ Famous Fictional UX Engineers Series
 
 Ron Swanson never applied to be a UX Engineer. He was probably just trying to build a static site about canoe restoration and accidentally impressed someone on the hiring panel with the purity of his HTML. Next thing you know, he's on a cross-functional product team.
 
-He doesn't understand why Figma requires an internet connection. He doesn't trust JavaScript. He doesn't believe in stand-ups, but shows up anyway&mdash;and says exactly one thing that ends the entire debate. And despite his deep skepticism of anything described as "human-centered," Ron turns out to be really good at UX.
+He doesn't understand why Figma requires an internet connection. He doesn't trust JavaScript. He doesn't believe in stand-ups, but shows up anyway, and says exactly one thing that ends the entire debate. And despite his deep skepticism of anything described as "human-centered," Ron turns out to be really good at UX.
 
 ## "Any user who needs instruction is already lost."
 Ron's first contribution to the codebase is deleting three modals, two animated tooltips, and a cookie banner. <em>"Unnecessary</em>," he mutters.
@@ -53,7 +53,7 @@ Like:
 - Does this make the interface clearer or just busier?
 - Are we respecting the user, or just tracking them?
 
-And over time, your product gets better. Not because it's more advanced&mdash;but because it's less annoying.
+And over time, your product gets better. Not because it's more advanced, but because it's less annoying.
 
 ## In the End
 Ron doesn't chase recognition. He's not looking to climb the career ladder. He just wants to build things that work, don't bother people, and never crash. And in a tech world that's constantly screaming for your attention, Ron's work feels like a quiet act of rebellion. Which, for him, is probably the point.

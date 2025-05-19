@@ -11,7 +11,7 @@ image_alt: "Forrest Gump sitting on a park bench thinking about UX."
 Famous Fictional UX Engineers Series
 ::
 
-If Forrest Gump somehow stumbled his way into a UX Engineering role&mdash;maybe he was out running and wandered into a product team stand-up&mdash;he'd probably fit right in.
+If Forrest Gump somehow stumbled his way into a UX Engineering role, maybe he was out running and wandered into a product team stand-up, he'd probably fit right in.
 
 Not because he's a tech wizard. Not because he memorized WCAG or knows the difference between rem and em. But because Forrest is basically a masterclass in everything we say we value in UX: empathy, patience, clarity, consistency, and zero ego.
 
@@ -31,7 +31,7 @@ And people would.
 
 Designers would explain what they were going for. Engineers would lay out the constraints. PMs would share user goals. Forrest would listen, nod a lot, and say something simple that somehow made it all make sense.
 
-Then he'd go build it. Nothing fancy&mdash;just something that works. Something people could use without a tutorial.
+Then he'd go build it. Nothing fancy, just something that works. Something people could use without a tutorial.
 
 ## Zero Ego, 100% Care
 Forrest wouldn't care who got credit. He wouldn't push to present in the big demo or try to outshine his teammates in retros. He'd just make sure the details were right. That the component matched the spec. That the alt text was there. That the color contrast worked. That the tab order made sense.

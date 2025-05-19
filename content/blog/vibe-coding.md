@@ -2,7 +2,7 @@
 slug: vibe-coding
 publishedAt: 2025-05-12
 title: "Vibe Coding: Am I Doing This, and Should I Be Worried?"
-description: "Exploring the ups and downs of vibe coding&mdash;what it is, why we all do it sometimes, and how to keep your instincts from turning into tech debt."
+description: "Exploring the ups and downs of vibe coding. What it is, why we all do it sometimes, and how to keep your instincts from turning into tech debt."
 tags: [coding, ux, design, product]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1747073875/josh-portfolio/assets_task_01jv2v7d2cf93scgzv30w73xfm_1747073673_img_0.webp"
 image_alt: "Vibe coding"
@@ -43,17 +43,17 @@ So no, I don't live in vibe mode. But I visit occasionally. And I'm willing to b
 
 ## Where LLMs and AI Tools Fit In (and Fuel the Fire)
 
-You might wonder, "Wait, isn't vibe coding just what happens when I let ChatGPT write my code?" Sort of. Large language models like ChatGPT, Gemini, Claude, and tools like GitHub Copilot or the Cursor code editor are increasingly involved in how we code&mdash;and they do encourage a certain kind of vibe coding. These tools often:
+You might wonder, "Wait, isn't vibe coding just what happens when I let ChatGPT write my code?" Sort of. Large language models like ChatGPT, Gemini, Claude, and tools like GitHub Copilot or the Cursor code editor are increasingly involved in how we code, and they do encourage a certain kind of vibe coding. These tools often:
 
 - Suggest code that looks right based on patterns, not guarantees.
 - Offer completions without context of your entire problem space.
 - Nudge you toward accepting solutions you don't fully understand (yet).
 
-Copilot, in particular, has been dubbed the patron saint of vibe coding&mdash;quietly finishing your thought before you've even formed it. Cursor pushes that even further by wrapping your editor in AI context and file awareness, making it feel like you're collaborating with an all-knowing assistant... even if it occasionally hallucinates your imports.
+Copilot, in particular, has been dubbed the patron saint of vibe coding, quietly finishing your thought before you've even formed it. Cursor pushes that even further by wrapping your editor in AI context and file awareness, making it feel like you're collaborating with an all-knowing assistant... even if it occasionally hallucinates your imports.
 
-So yes&mdash;AI can supercharge vibe coding. But that doesn't mean it's bad. It just means you need to treat AI-generated code with the same level of scrutiny you (hopefully) apply to your own hastily-written prototypes.
+So yes, AI can supercharge vibe coding. But that doesn't mean it's bad. It just means you need to treat AI-generated code with the same level of scrutiny you (hopefully) apply to your own hastily-written prototypes.
 
-Ultimately, vibe coding isn't about the tool&mdash;it's about your mindset. These tools make it easier to follow your gut, but they don't absolve you from using your brain.
+Ultimately, vibe coding isn't about the tool. It's about your mindset. These tools make it easier to follow your gut, but they don't absolve you from using your brain.
 
 ## When It's Actually Kinda Great
 
@@ -83,11 +83,11 @@ I've found a system that works for me:
 - Switch to structure before committing. Once the idea is proven, it's time for cleanup.
 - Comment when unsure. If you don't have time to rewrite it clearly, at least leave a trail.
 - Ask for a second pair of eyes. If it feels like a guess, a teammate might see the trap.
-- Treat LLMs like interns. Helpful, fast, occasionally brilliant&mdash;but double-check their work.
+- Treat LLMs like interns. Helpful, fast, occasionally brilliant, but please double-check their work.
 
 ## The Bottom Line
 
-Vibe coding is real. It's a little chaotic. And it's not always a bad thing. If you never vibe code, maybe you're too rigid. If you only vibe code, maybe slow down. But if you use it as a phase in your process&mdash;one you exit intentionally&mdash;then congrats, you've found the sweet spot between instincts and engineering.
+Vibe coding is real. It's a little chaotic. And it's not always a bad thing. If you never vibe code, maybe you're too rigid. If you only vibe code, maybe slow down. But if you use it as a phase in your process, one you exit intentionally, then congrats, you've found the sweet spot between instincts and engineering.
 
 So am I a vibe coder? Not full-time. But I've been known to play a solo or two when the situation calls for it. Sometimes with a little help from my robot bandmates.
 

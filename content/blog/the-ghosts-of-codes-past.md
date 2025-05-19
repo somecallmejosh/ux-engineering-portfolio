@@ -20,13 +20,13 @@ Whatever the reason, these decisions fossilize. They become part of the landscap
 
 ## Why We Don't Just Fix It
 
-If you're thinking, "Well, why don't we just clean it all up?"&mdash;oh, sweet summer child.
+If you're thinking, "Well, why don't we just clean it all up?", then please continue reading.
 
 The fear of updating changes across an entire codebase is real. Even when you *want* to do the right thing, a dozen invisible barriers start stacking up like the world's most passive-aggressive game of Jenga:
 
 * You foolishly believe that the tech debt you've been mentioning at standup for three months will be added to the next sprint. It won't.
 * The change would technically only take five minutes… followed by two hours of rewriting tests.
-* You *know* this will break something&mdash;probably something in the legacy parts of the app that no one's touched since the Obama administration.
+* You *know* this will break something, probably something in the legacy parts of the app that no one's touched since the Obama administration.
 * That "small" Jira ticket you picked up now means QA has to run full regression testing across three workflows, one of which only works in IE11 for reasons no one remembers.
 * Oh, and there's a non-zero chance that the PM will ask you, "What changed again? I thought this was a quick fix?"
 
@@ -50,6 +50,6 @@ I've learned to approach old code the way a good archaeologist approaches a dig:
 
 Will we ever eliminate legacy quirks entirely? Probably not. But we *can* document them. We *can* refactor when we have the time and the test coverage. We *can* write clearer code today so that someone else doesn't inherit our worst habits tomorrow.
 
-Because the truth is, someday your code&mdash;your beautiful, modern, perfectly linted code&mdash;will become legacy too. And when it does, you can only hope the next developer treats it with a little grace.
+Because the truth is, someday your code, your beautiful, modern, perfectly linted code, will become legacy too. And when it does, you can only hope the next developer treats it with a little grace.
 
 Until then, long live `klass`. May you rest in peace, eventually.

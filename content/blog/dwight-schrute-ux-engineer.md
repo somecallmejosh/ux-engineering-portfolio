@@ -11,7 +11,7 @@ image_alt: "Dwight Schrute scowling at a computer screen, upset by bad UX practi
 Famous Fictional UX Engineers Series
 ::
 
-Dwight Schrute was transferred from sales to UX Engineering after single-handedly spotting 327 accessibility violations in the company's intranet portal and filing them&mdash;anonymously&mdash;with HR.
+Dwight Schrute was transferred from sales to UX Engineering after single-handedly spotting 327 accessibility violations in the company's intranet portal and filing them, anonymously, with HR.
 
 He doesn't care about design awards. He doesn't care about "clean code" unless it is, in fact, military-grade clean. What he does care about is precision, discipline, and making sure every user has a secure, frictionless, error-free experience. He builds like he's preparing a digital bunker. And honestly? The man delivers.
 
@@ -25,21 +25,21 @@ If something breaks, well... it shouldn't have been in production.
 ## Accessibility Is Not Optional
 While others "prioritize accessibility when we have time," Dwight has already audited the entire app and created a 74-row spreadsheet categorizing every element by WCAG compliance level.
 
-He's not just checking contrast ratios. He's testing with screen readers, navigating with only a keyboard, and simulating slow internet connections on purpose&mdash;because "life does not always come with fiber optics."
+He's not just checking contrast ratios. He's testing with screen readers, navigating with only a keyboard, and simulating slow internet connections on purpose, because "life does not always come with fiber optics."
 
 To Dwight, an inaccessible feature is an attack on justice.
 
 ## Ruthless About Process. Surprisingly Good at Design Systems.
-Dwight thrives in the rules. Give him a component library with a strict naming convention, and he'll follow it to the letter&mdash;and then improve it, because your current ButtonPrimaryLarge is "insufficiently descriptive."
+Dwight thrives in the rules. Give him a component library with a strict naming convention, and he'll follow it to the letter, and then improve it, because your current `ButtonPrimaryLarge` is "insufficiently descriptive."
 
-He doesn't just build components&mdash;he creates extensive documentation, full of warnings, usage guidelines, and rare edge cases. He makes design tokens for fun. He enforces lint rules with zeal.
+He doesn't just build components, he creates extensive documentation, full of warnings, usage guidelines, and rare edge cases. He makes design tokens for fun. He enforces lint rules with zeal.
 
 When a teammate says, "I'm not sure which component to use," Dwight doesn't just help. He builds an internal tool to recommend the correct one based on business logic, user type, and moon phase.
 
 ## Cross-Functional… But With Boundaries
-Dwight will work with designers, product managers, and engineers&mdash;but only within a defined structure. He insists on detailed specs. He brings printouts to meetings. He corrects timelines. He double-checks the font stack.
+Dwight will work with designers, product managers, and engineers, but only within a defined structure. He insists on detailed specs. He brings printouts to meetings. He corrects timelines. He double-checks the font stack.
 
-But when people see how committed he is to protecting users&mdash;how much he genuinely cares that the thing works flawlessly for everyone&mdash;they start to trust him. Dwight might not be warm, but he's reliable. And when things go sideways, he's the one you want double-checking your production deployment at 3AM.
+But when people see how committed he is to protecting users, how much he genuinely cares that the thing works flawlessly for everyone, they start to trust him. Dwight might not be warm, but he's reliable. And when things go sideways, he's the one you want double-checking your production deployment at 3AM.
 
 ## The User Experience, Schrute-Style
 Dwight's idea of delight is a user completing a task without hesitation, error, or distraction. No pop-ups. No floating help bubbles. No "surprise and delight." He wants to create interfaces that let people complete a task perfectly the first time, and feel secure doing it.
