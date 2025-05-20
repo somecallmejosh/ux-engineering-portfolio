@@ -5,6 +5,7 @@ useSeoMeta({
   ogTitle: 'Testimonials',
   description: 'Shout outs from clients and colleagues.',
   ogDescription: 'Shout outs from clients and colleagues.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1747754360/josh-portfolio/assets_task_01jvq4ak6yfmma0mxqxrmvr922_1747754314_img_0.webp'
 })
 
 const testimonials = [
