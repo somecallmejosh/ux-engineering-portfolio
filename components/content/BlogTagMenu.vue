@@ -26,7 +26,7 @@ const filteredPosts = computed(() => {
 //   })
 </script>
 <template>
-  <div class="space-y-4 border-b border-neutral-200">
+  <div class="space-y-4 border-b border-neutral-200 pt-6">
     <div class="not-prose flex items-center gap-2">
       <h2 class="flex items-center gap-1 text-lg">
         <slot />

@@ -6,9 +6,6 @@ description: "Nuxt vs Next: A story about rebuilding the same project twice to c
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1746029455/josh-portfolio/assets_task_01jt3qb0ctfw2by32pxck2jszd_1746029408_img_0.webp"
 image_alt: "A side-by-side comparison of Nuxt.js and Next.js logos, symbolizing the exploration of two frameworks."
 ---
-::CallOut
-<strong>Spoiler alert</strong>: I still prefer Vue/Nuxt.js, but I'm definitely not opposed to React/Next.
-::
 
 I'll start by saying that this wasn't a complex project. It fetches some data from an API and displays it in a clean UI. No advanced logic. No complicated business rules. Just a simple front-end interface for browsing countries.
 
@@ -17,6 +14,10 @@ But simple can be good.
 In fact, it made for the perfect experiment: build the *same thing* in two frameworks and focus entirely on what I was actually there to explore, **the developer experience**.
 
 I already had this project built in Nuxt as part of a [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). It used the REST Countries API to display a list of countries with features like <strong>search</strong>, <strong>filter</strong>, <strong>theme switching</strong>, and d<strong>etail pages</strong>. A solid little interface. I figured: why not rebuild the whole thing in Next.js and see how the experience compares?
+
+::CallOut
+<strong>Spoiler alert</strong>: I still prefer Vue/Nuxt.js, but I'm definitely not opposed to React/Next.
+::
 
 It's worth mentioning: I've been using Nuxt (and Vue) for over five years. My experience with Next (and React) is closer to a year. So this wasn't about crowning a winner. It was about shifting perspective, using a known project to get out of my Nuxt-shaped comfort zone and spend some focused time in Next-land.
 

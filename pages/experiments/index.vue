@@ -17,7 +17,7 @@ const allPosts = await queryCollection('experiments')
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Experiments" pillIcon="ph:microscope">Tinkering and Testing</PageHeader>
       <p>
-        I love to tinker and test new ideas. Here are some of my experiments that showcase my skills in creating user-friendly, accessible, and scalable web applications.
+        These are my experiments. <i>I love to tinker and test new ideas</i>. Some are just for fun, some are for work, and some are just to see if I can do it. If you have any questions about any of them, feel free to reach out!
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
