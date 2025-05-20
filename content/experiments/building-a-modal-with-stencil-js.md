@@ -3,12 +3,20 @@ slug: building-a-modal-with-stencil-js
 publishedAt: 2025-05-13
 title: "Building an Accessible Modal with StencilJS"
 description: "This article walks through how to create an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS."
-tags: [stenciljs, webcomponents]
+tags: [modal]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747163308/josh-portfolio/assets_task_01jv5gn4pbf468dsctfq5fmm6w_1747163256_img_0.webp"
 image_alt: "A screenshot of a web developer building an accessible modal with StencilJS."
 ---
 
+::TagMenu{tag="modal" collection="experiments"}
+StencilJS Modal Series
+::
+
 This article walks through how I created an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS. It was a great exercise to learn how to structure my HTML, manage ARIA roles, trap focus, manage z-index layering, handle escape keys, and restore focus when the modal is closed, keeping the component flexible and composable.
+
+::CallOut
+<strong>There is a new version of this conent</strong>: I have since refactored this component to improve focus management, cleanup, and styling. You can find [the updated version here](/experiments/refactored-modal-with-stencil-js).
+::
 
 ## Why Accessibility Matters for Modals
 Modals are one of the most misused and misunderstood UI components in web development, especially when it comes to accessibility. On the surface, they seem simple: display a box, cover the background, and throw in a close button. But for screen reader users or those navigating via keyboard, a poorly implemented modal can make a website completely unusable.

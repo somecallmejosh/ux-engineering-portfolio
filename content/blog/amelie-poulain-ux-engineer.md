@@ -8,7 +8,7 @@ image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto
 image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
 ---
 
-::BlogTagMenu{tag="fictional-ux-engineers"}
+::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 

@@ -7,7 +7,7 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745851582/josh-portfolio/assets_task_01jsydq8k5ek98tww1ppe3dc7r_1745851552_img_0.webp"
 image_alt: "Dwight Schrute scowling at a computer screen, upset by bad UX practices."
 ---
-::BlogTagMenu{tag="fictional-ux-engineers"}
+::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 

@@ -7,7 +7,7 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745851667/josh-portfolio/assets_task_01jsydsemre5p8ny253ck44386_1745851626_img_0.webp"
 image_alt: "Ron Swanson sitting at a desk with a computer, looking serious about UX."
 ---
-::BlogTagMenu{tag="fictional-ux-engineers"}
+::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 

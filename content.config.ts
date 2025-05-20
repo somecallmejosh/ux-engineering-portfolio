@@ -37,6 +37,8 @@ export default defineContentConfig({
         image: z.string(),
         publishedAt: z.date(),
         slug: z.string(),
+        tags: z.array(z.string()).optional(),
+        image_alt: z.string().optional(),
       }),
     }),
     dev_notes: defineCollection({

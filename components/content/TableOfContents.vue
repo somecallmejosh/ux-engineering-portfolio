@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
 
 <template>
   <section
-    class="overflow-hidden sticky top-24 lg:top-1 p-4 bg-white border border-neutral-200 rounded-lg relative toc" aria-labelledby="toc-header"
+    class="overflow-hidden sticky top-20 lg:top-0 p-4 bg-white border border-neutral-200 rounded-lg relative z-50 toc" aria-labelledby="toc-header"
 
     :class="menuOpen && 'open'">
     <button class="text-sm flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu" aria-controls="toc-menue" :aria-expanded="menuOpen">
@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
         :animate="{ opacity: 1, height: 'auto' }"
         id="toc-menue" class="max-h-96 overflow-y-auto relative"
       >
-        <ul class="not-prose relative relative z-0 pb-4"
+        <ul class="not-prose relative relative z-0 pb-4 text-sm"
           @click="menuOpen = false"
         >
           <li v-for="item in links" :key="item.id">
@@ -116,6 +116,7 @@ onBeforeUnmount(() => {
       align-items: center;
       gap: 0.5rem;
       border-radius: 4px;
+      padding: .25rem 0;
 
       &:hover {
         background-color: var(--color-blue-50);

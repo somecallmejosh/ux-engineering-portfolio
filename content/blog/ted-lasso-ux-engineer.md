@@ -7,7 +7,7 @@ tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745261834/josh-portfolio/assets_task_01jscrb5fefj0rm0p4hzpwcm00_img_0.webp"
 image_alt: "Ted Lasso motivating a team of UX Engineers."
 ---
-::BlogTagMenu{tag="fictional-ux-engineers"}
+::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 
