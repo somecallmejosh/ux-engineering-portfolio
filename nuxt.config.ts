@@ -47,6 +47,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  robots: {
+    blockNonSeoBots: true
+  },
   schemaOrg: {
     identity: definePerson({
       name: 'Josh Briley',
