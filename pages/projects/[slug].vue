@@ -117,7 +117,7 @@ const skillIcons = [
 
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
       <div v-if="post" class="prose">
-        <PageHeader class="" pill="Recent Project">{{  post.title }}</PageHeader>
+        <PageHeader class="" pill="Project" pillIcon="ph:projector-screen-chart">{{  post.title }}</PageHeader>
         <AnimateImage
           :src="post.image"
           :alt="post.meta.image_alt"

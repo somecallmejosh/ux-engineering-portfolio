@@ -61,7 +61,7 @@ const allProjectCategories = await queryCollection('projects')
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Projects">Cool stuff I've been working on recently</PageHeader>
+      <PageHeader pill="Projects" pillIcon="ph:projector-screen-chart">Cool stuff I've been working on recently</PageHeader>
       <p>
         For me, building web applications isn't just about writing code, it's about creating things that feel good and natural for the folks who use them. <i>Clarity, simplicity, and accessibility</i> are the guiding stars in every decision I make.
       </p>

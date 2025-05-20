@@ -5,7 +5,6 @@ export default defineContentConfig({
     blog: defineCollection({
       source: 'blog/*.md',
       type: 'page',
-
       schema: z.object({
         description: z.string(),
         image: z.string(),
@@ -29,8 +28,8 @@ export default defineContentConfig({
         title: z.string(),
       }),
     }),
-    case_studies: defineCollection({
-      source: 'case-studies/*.md',
+    experiments: defineCollection({
+      source: 'experiments/*.md',
       type: 'page',
       schema: z.object({
         title: z.string(),

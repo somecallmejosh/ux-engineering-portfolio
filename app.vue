@@ -13,14 +13,15 @@ const navGroups = [
   { groupTitle: 'Main',
     items: [
     { title: 'Home', path: '/', icon: 'ph:house' },
-    { title: 'About', path: '/about', icon: 'ph:user-circle-check' },
+    { title: 'About Me', path: '/about', icon: 'ph:hand-waving' },
     { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
   ]},
   { groupTitle: 'Projects',
     items: [
       { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
       { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
-      { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:clipboard-text' },
+      { title: 'Experiments', path: '/experiments', icon: 'ph:microscope' },
+      { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:note-pencil' },
     ]
   },
   { groupTitle: 'Other',

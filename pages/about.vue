@@ -138,7 +138,7 @@ const resumeItems = [
   <PageWrapper>
     <div class="space-y-12 lg:space-y-0">
       <section aria-describedby="page-header" class="prose">
-        <PageHeader pill="About Me">
+        <PageHeader pill="About Me" pillIcon="ph:hand-waving">
           Hello, World!
         </PageHeader>
         <p>

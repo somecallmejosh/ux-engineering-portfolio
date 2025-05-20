@@ -1,8 +1,8 @@
 <script setup>
 const route = useRoute()
 const slug = route.params.slug
-const { data: post } = await useAsyncData(`case-studies-${slug}`, () => {
-  return queryCollection('case_studies').path(`/case-studies/${slug}`).first()
+const { data: post } = await useAsyncData(`experiments-${slug}`, () => {
+  return queryCollection('experiments').path(`/experiments/${slug}`).first()
 })
 
 useSeoMeta({
@@ -18,7 +18,7 @@ useSeoMeta({
   <PageWrapper>
     <Breadcrumbs baseUrl="case-studies" :slug="`${slug}`" label="Case Studies" :title="post.title" />
     <div v-if="post" class="prose">
-      <PageHeader pill="Case Study">{{ post.title }}</PageHeader>
+      <PageHeader pill="Experiment" pillIcon="ph:microscope">{{ post.title }}</PageHeader>
       <figure>
         <AnimateImage
           :src="post.image"

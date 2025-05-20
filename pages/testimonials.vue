@@ -143,7 +143,7 @@ const testimonials = [
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Testimonials">
+      <PageHeader pill="Testimonials" pillIcon="ph:chats">
         Supportive Words from Clients and Colleagues
       </PageHeader>
       <p>

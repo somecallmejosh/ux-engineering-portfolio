@@ -1,5 +1,5 @@
 <script setup>
-const allPosts = await queryCollection('case_studies')
+const allPosts = await queryCollection('experiments')
   .order('publishedAt', 'DESC')
   .all()
 
@@ -15,9 +15,9 @@ const allPosts = await queryCollection('case_studies')
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Case Studies">Behind the Build</PageHeader>
+      <PageHeader pill="Experiments" pillIcon="ph:microscope">Tinkering and Testing</PageHeader>
       <p>
-        These personal experiments (and sometimes production projects) and case studies that showcase my skills in creating user-friendly, accessible, and scalable web applications.
+        I love to tinker and test new ideas. Here are some of my experiments and case studies that showcase my skills in creating user-friendly, accessible, and scalable web applications.
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />

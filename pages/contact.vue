@@ -112,7 +112,7 @@ const onSubmit = async (event) => {
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Contact Me">
+      <PageHeader pill="Contact Me" pillIcon="ph:address-book">
         Let's Build Something Great Together!
       </PageHeader>
       <p>So, you're looking for someone who can really wrangle the front-end, make your user interfaces sing, and
