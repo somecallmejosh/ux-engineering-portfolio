@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    '@nuxt/content',
     '@nuxt/icon',
     '@nuxt/image',
     'motion-v/nuxt',
@@ -32,6 +31,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/fonts',
     '@nuxtjs/seo',
+    '@nuxt/content',
   ],
   icon: {
     serverBundle: {
@@ -72,37 +72,6 @@ export default defineNuxtConfig({
   site: {
     url: process.env.NUXT_SITE_URL,
     name: process.env.NUXT_SITE_NAME,
-    sitemaps: {
-      ['posts']: {
-        include: ['/blog/**',],
-        includeAppSources: true,
-        defaults: { priority: 0.7 },
-      },
-      ['projects']: {
-        includeAppSources: true,
-        include: ['/projects/**',],
-        defaults: { priority: 0.7 },
-      },
-      ['case_studies']: {
-        includeAppSources: true,
-        include: ['/case-studies/**',],
-        defaults: { priority: 0.7 },
-      },
-      ['dev_notes']: {
-        includeAppSources: true,
-        include: ['/dev-notes/**',],
-        defaults: { priority: 0.7 },
-      },
-      ['pages']: {
-        exclude: [
-          '/blog/**',
-          '/projects/**',
-          '/case-studies/**',
-          '/dev-notes/**',
-        ],
-        defaults: { priority: 0.8 },
-      }
-    }
   },
   vite: {
     plugins: [tailwindcss()],
