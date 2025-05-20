@@ -68,7 +68,7 @@ Production code is great, but it's not the best place to throw ideas at the wall
 I use design assets provided by Frontend Mentor and Great Frontends for this. They range in degrees of difficulty, offering a variety of project types to keep the creative juices flowing. Recently, I've starting building out a few of these projects using different frameworks to see how they handle the same problem. Here are a couple of examples:
 
 ### Countries of the World API
-I wrote [a case study on this project](/case-studies/nuxt-vs-next), so I won't go into much detail here. Suffice it to say, hands-on work makes everything stick better than just reading about it. At least for me, it does.
+I wrote [a case study on this project](/experiments/nuxt-vs-next), so I won't go into much detail here. Suffice it to say, hands-on work makes everything stick better than just reading about it. At least for me, it does.
 
 ## Actual Side Projects
 

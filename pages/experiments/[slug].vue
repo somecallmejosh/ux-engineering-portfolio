@@ -16,7 +16,7 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs baseUrl="case-studies" :slug="`${slug}`" label="Case Studies" :title="post.title" />
+    <Breadcrumbs baseUrl="experiments" :slug="`${slug}`" label="Experiments" :title="post.title" />
     <div v-if="post" class="prose">
       <PageHeader pill="Experiment" pillIcon="ph:microscope">{{ post.title }}</PageHeader>
       <figure>

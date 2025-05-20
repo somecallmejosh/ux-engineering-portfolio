@@ -4,8 +4,8 @@ const allPosts = await queryCollection('experiments')
   .all()
 
   useSeoMeta({
-  title: 'Case Studies',
-  ogTitle: 'Case Studies',
+  title: 'Experiments',
+  ogTitle: 'Experiments',
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
@@ -17,7 +17,7 @@ const allPosts = await queryCollection('experiments')
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Experiments" pillIcon="ph:microscope">Tinkering and Testing</PageHeader>
       <p>
-        I love to tinker and test new ideas. Here are some of my experiments and case studies that showcase my skills in creating user-friendly, accessible, and scalable web applications.
+        I love to tinker and test new ideas. Here are some of my experiments that showcase my skills in creating user-friendly, accessible, and scalable web applications.
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
