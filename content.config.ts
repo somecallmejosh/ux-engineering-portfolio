@@ -51,6 +51,7 @@ export default defineContentConfig({
         description: z.string(),
         publishedAt: z.date(),
         slug: z.string(),
+        tags: z.array(z.string()).optional(),
       }),
     }),
   },

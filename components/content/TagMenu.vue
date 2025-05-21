@@ -16,6 +16,13 @@ const filteredPosts = computed(() => {
   return allPosts.filter((post) => post.tags.includes(props.tag));
 });
 
+const collectionMap = {
+  blog: 'blog',
+  dev_notes: 'dev-notes',
+  projects: 'projects',
+  experiments: 'experiments',
+};
+
 </script>
 <template>
   <nav aria-labelledby="tag-menu-header" class="space-y-4 mt-6 bg-white border border-neutral-200 pt-5 px-4 rounded-lg">
@@ -30,7 +37,7 @@ const filteredPosts = computed(() => {
     </div>
     <ol class="text-sm">
       <li v-for="tag in filteredPosts" :key="tag.id" class="capitalize">
-        <NuxtLink :to="`/${props.collection}/${tag.slug}`" class="flex items-center gap-1 no-underline hover:underline! py-1">
+        <NuxtLink :to="`/${collectionMap[props.collection]}/${tag.slug}`" class="flex items-center gap-1 no-underline hover:underline! py-1">
           {{ tag.title }}
         </NuxtLink>
       </li>
