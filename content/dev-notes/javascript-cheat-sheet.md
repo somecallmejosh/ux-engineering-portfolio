@@ -4,12 +4,14 @@ publishedAt: 2025-05-21
 title: "Javascript Cheatsheet"
 description: "A reference for the core parts of JavaScript that show up in real-life UI development... At least the ones I use."
 tags: [javascript, cheatsheet]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747840964/josh-portfolio/assets_task_01jvspxqfcfpdbfryrgk4ezqmk_1747840922_img_1.webp"
+image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747854266/josh-portfolio/assets_task_01jvt3kmvmf92ajfb9ynn1je8c_1747854234_img_1.webp"
 image_alt: "An illustration of JavaScript code snippets."
 ---
+
 ::TagMenu{tag="cheatsheet" collection="dev_notes"}
 Cheatsheets
 ::
+
 Welcome! This guide is here to help you understand the core parts of JavaScript that actually show up in real-life UI development. You won't find any bubble sort or obscure bitwise operators. Just the stuff you touch every day when building real interfaces for real users who click real buttons.
 
 
