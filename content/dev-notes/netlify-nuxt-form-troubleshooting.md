@@ -10,7 +10,7 @@ image_alt: "A screenshot of the Netlify Forms dashboard showing form submissions
 This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's a bit more of a troubleshooting story than a how-to, but I hope it helps someone else out there.
 
 ::CallOut
-TLDR; If your Netlify form submissions have ghosted you, check your build command. And uhh, maybe keep a plain ol' form.html in your `/public` folder, just in case.
+<strong>TLDR;</strong> If your Netlify form submissions have ghosted you, check your build command. And keep a plain ol' `form.html` in your `/public` folder, just in case.
 ::
 
 We've all been there. You craft a clean little [contact form](/contact), sprinkle in some inline validation that you rolled from scratch, maybe even slap on a nice "Send Message" button that you're oddly proud of. You deploy it. It looks great. You give yourself a quiet nod of approval.
@@ -107,7 +107,7 @@ const onSubmit = async (event) => {
 
 Here's what I took away from the experience:
 
-- Use npm run generate, not npm run build, if you're using Nuxt 3 and Netlify Forms. (Seriously. Save yourself the headache.)
+- Use `npm run generate`, not npm run build, if you're using Nuxt 3 and Netlify Forms. (Seriously. Save yourself the headache.)
 - Plain HTML still rules for debugging weird Netlify issues. Strip it down and start simple. The <em>200 OK lie is real</em>. Just because your form submission looks fine doesn't mean Netlify is handling it.
 - Sometimes the answer is outside your component. Not everything is a Vue problem. Sometimes it's the deployment pipeline quietly ruining your day.
 - Be patient. Be methodical. Or at least stubborn. That works too.
