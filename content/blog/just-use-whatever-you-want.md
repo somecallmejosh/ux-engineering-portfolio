@@ -31,7 +31,7 @@ React isn't a lifestyle. Neither is HTML. They're tools. They have strengths, th
 
 Let's get one thing straight: I love semantic HTML. I've built entire design systems rooted in accessible markup. I've worked on sites where reducing bundle size was the difference between usable and unusable for end users. I believe in progressive enhancement. I think `fieldset`, `label`, and `aria-*` attributes are beautiful. But I've also seen people turn their "no-JS" purity into a nightmare.
 
-You know what's *not* fun? Reimplementing complex UI interactions from scratch using only `<details>`, `<summary>`, and duct tape. You know what's really easy to screw up? Keyboard interactions, focus management, aria-live regions, scroll locking, lazy loading, form validation, data syncing…
+You know what's *not* fun? Reimplementing complex UI interactions from scratch using only `<details>`, `<dialog>`, and duct tape. You know what's really easy to screw up? Keyboard interactions, focus management, aria-live regions, scroll locking, lazy loading, form validation, data syncing…
 
 Sometimes, the complexity of your problem *demands* a framework. And if it doesn't now, it might next quarter. Starting with "just HTML" is great, until it isn't. And unless you like rewriting everything in a month, maybe plan ahead?
 
