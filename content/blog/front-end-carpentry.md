@@ -3,7 +3,7 @@ slug: front-end-carpentry
 publishedAt: 2025-03-02
 title: "Front-End Devs and Our Tools: It's the Craft, Not the Brand!"
 description: "React or Vue? A light take on how your favorite front-end framework is just a tool—what matters is what you build with it."
-tags: [font-end-development, career]
+tags: [front-end-development, career]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744900289/josh-portfolio/assets_task_01js22ajq3emdaphyvchamy2d5_img_0.webp"
 image_alt: "Javascript developer and a carpenter sharing tools."
 ---

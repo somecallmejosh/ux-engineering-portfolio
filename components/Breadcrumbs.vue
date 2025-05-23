@@ -22,6 +22,14 @@
       default: false,
     },
   })
+
+  const finalPath = () => {
+    if (props.category) {
+      return `/${props.baseUrl}/categories/${props.slug}`
+    } else {
+      return `/${props.baseUrl}/${props.slug}`
+    }
+  }
 </script>
 <template>
   <OverflowX>
@@ -36,7 +44,7 @@
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li class="text-neutral-700">
-          <NuxtLink :to="`/${baseUrl}/${slug}`" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
+          <NuxtLink :to="finalPath" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
         </li>
       </ol>
     </nav>
