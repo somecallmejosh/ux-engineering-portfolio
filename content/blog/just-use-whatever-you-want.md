@@ -3,7 +3,7 @@ slug: just-use-whatever-you-want
 publishedAt: 2025-05-22
 title: "Tech Stacks: Just Use Whatever the F@ck You Want"
 description: "A brutally honest look at tech stack flame wars. Stop the dogma, skip the hype, and use whatever the f@ck solves your problem."
-tags: [zeitgeist, rant]
+tags: [zeitgeist, front-end-development, career]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1747921794/josh-portfolio/assets_task_01jvw3qp8ee6grfhphzzqsrvap_1747921470_img_1.webp"
 image_alt: "Developers arguing over which framework to use."
 ---

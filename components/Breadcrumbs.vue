@@ -1,4 +1,5 @@
 <script setup>
+  import { humanize } from '~/utilities/humanize'
   const props = defineProps({
     slug: {
       type: String,
@@ -16,6 +17,10 @@
       type: String,
       required: true,
     },
+    category: {
+      type: Boolean,
+      default: false,
+    },
   })
 </script>
 <template>
@@ -26,8 +31,12 @@
           <NuxtLink :to="`/${baseUrl}`" class="hover:underline text-nowrap">{{ label }}</NuxtLink>
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
+        <li v-if="category" class="flex items-center gap-3">
+          <NuxtLink :to="`/${baseUrl}/categories`" class="hover:underline text-nowrap">Categories</NuxtLink>
+          <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
+        </li>
         <li class="text-neutral-700">
-          <NuxtLink :to="`/${baseUrl}/${slug}`" class="text-nowrap">{{ title }}</NuxtLink>
+          <NuxtLink :to="`/${baseUrl}/${slug}`" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
         </li>
       </ol>
     </nav>

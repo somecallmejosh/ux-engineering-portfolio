@@ -3,7 +3,7 @@ slug: the-ghosts-of-codes-past
 publishedAt: 2025-05-07
 title: "Learning to Live with the Ghosts in Your Codebase"
 description: "A lighthearted look at legacy code, why we don't just <em>fix it</em>, and how to survive the haunted hallways of old decisions with a bit of grace."
-tags: [best-practices, code-quality]
+tags: [best-practices, front-end-development]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746631757/josh-portfolio/assets_task_01jtnn5dqsfy6svvg0yg1xdxbt_1746631115_img_0.webp"
 image_alt: "Developer looking at a computer screen with a haunted expression, surrounded by ghostly code snippets."
 ---

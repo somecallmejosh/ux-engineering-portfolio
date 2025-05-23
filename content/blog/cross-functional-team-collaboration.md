@@ -3,7 +3,7 @@ slug: cross-functional-team-collaboration
 publishedAt: 2025-02-02
 title: 'Why Cross-Functional Teams Build Better Things'
 description: "What happens when teams actually talk: a story of trust, shared wins, and a tiny UI detail that nearly derailed a launch."
-tags: [forms, design]
+tags: [front-end-development, design]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743963713/josh-portfolio/assets_task_01jr6589gne0h9rjapex810m08_img_0.webp"
 image_alt: "Cross-Functional team collaborating on ideas."
 ---

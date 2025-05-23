@@ -3,7 +3,7 @@ slug: aria-pattern-cheatsheet
 publishedAt: 2025-01-07
 title: "ARIA Cheatsheet"
 description: 'Need a brain-friendly way to remember all those WAI-ARIA doohickeys? Same. This is a quick-hit reference guide for common UI patterns.'
-tags: [nuxtjs, tailwindcss, cheatsheet]
+tags: [accessibility, cheatsheet]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745245227/josh-portfolio/assets_task_01jscbab7dekctaz7mx7356yxp_img_0.webp
 image_alt: 'ARIA Patterns and Practices Cheatsheet'
 ---

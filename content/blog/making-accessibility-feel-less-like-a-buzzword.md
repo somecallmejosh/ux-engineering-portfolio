@@ -3,7 +3,7 @@ slug: making-accessibility-feel-less-like-a-buzzword
 publishedAt: 2025-04-25
 title: "Making Accessibility Feel Less Like a Buzzword"
 description: "Accessibility clicked for me the moment I saw real users struggle with things I thought were good enough."
-tags: [ux-engineering, accessibility, craftsmanship]
+tags: [user-experience, accessibility, front-end-development]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745852354/josh-portfolio/assets_task_01jsyeevc3fyzsmsdzpmypg4p6_1745852329_img_0.webp"
 image_alt: "UX Engineer working on things that nobody sees."
 ---

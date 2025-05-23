@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 const { fullPath } = useRoute();
 const props = defineProps({
   label: {
@@ -12,6 +11,9 @@ const props = defineProps({
   }
 });
 
+// remove everthing after parent container (the first segment of the path)
+// e.g. /blog/categories/slug -> /blog/
+const path = fullPath.split('/').slice(0, 2).join('/');
 </script>
 <template>
   <section :aria-label="label">
@@ -36,7 +38,7 @@ const props = defineProps({
             </CardHeader>
             <p class="text-pretty" v-html="item.description"></p>
           </div>
-          <NuxtLink :to="`${fullPath}/${item.slug}`" class="absolute not-prose inset-0 rounded-lg">
+          <NuxtLink :to="`${path}/${item.slug}`" class="absolute not-prose inset-0 rounded-lg">
           <span class="sr-only">{{
               item.title
             }}</span>

@@ -10,6 +10,7 @@ const allPosts = await queryCollection('dev_notes')
   ogDescription: 'A Place for me to jot down my thoughts, experiments, and learnings in web development.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
   })
+
 </script>
 
 <template>
@@ -21,5 +22,9 @@ const allPosts = await queryCollection('dev_notes')
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
+    <TagLinkList
+      title="Dev Notes Categories"
+      collection="dev_notes"
+    />
   </PageWrapper>
 </template>
