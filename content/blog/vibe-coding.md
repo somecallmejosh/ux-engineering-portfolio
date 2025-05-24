@@ -3,7 +3,7 @@ slug: vibe-coding
 publishedAt: 2025-05-12
 title: "Vibe Coding: Am I Doing This, and Should I Be Worried?"
 description: "Exploring the ups and downs of vibe coding. What it is, why we all do it sometimes, and how to keep your instincts from turning into tech debt."
-tags: [front-end-development, user-experience, design]
+tags: [front-end-development, user-experience]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1747073875/josh-portfolio/assets_task_01jv2v7d2cf93scgzv30w73xfm_1747073673_img_0.webp"
 image_alt: "Vibe coding"
 ---

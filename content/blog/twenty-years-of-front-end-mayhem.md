@@ -3,7 +3,7 @@ slug: 'twenty-years-of-front-end-mayhem'
 publishedAt: 2025-04-01
 title: 'Twenty Years of Front-End Mayhem (and Why I Still Love It)'
 description: "Two decades of building the web, wrangling browsers, and keeping up with front-end trends—without losing the joy along the way."
-tags: [front-end-development, design]
+tags: [career, front-end-development]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745185005/josh-portfolio/assets_task_01jsahvg61efssrzm2pmnep1pa_img_0.webp"
 image_alt: "Front end developer reminiscing about the evolution of web development."
 ---

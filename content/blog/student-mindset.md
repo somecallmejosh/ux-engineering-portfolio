@@ -3,7 +3,7 @@ slug: student-mindset
 publishedAt: 2025-04-29
 title: "The Student Mindset: Pros, Cons, and Why I'm (Still) Glad I Have It"
 description: "How a lifelong student mindset helped me grow in tech—and how it sometimes kept me from trusting what I already knew."
-tags: [front-end-development, user-experience, career]
+tags: [career]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745935639/josh-portfolio/assets_task_01jt0xvxb2fffvrp6s52je2hej_1745935597_img_0.webp"
 image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
 ---
