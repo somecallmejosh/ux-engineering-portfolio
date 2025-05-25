@@ -72,6 +72,7 @@ export default defineNuxtConfig({
   site: {
     url: process.env.NUXT_SITE_URL,
     name: process.env.NUXT_SITE_NAME,
+    trailingSlash: true
   },
   vite: {
     plugins: [tailwindcss()],
