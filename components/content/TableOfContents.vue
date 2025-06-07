@@ -40,6 +40,7 @@ onBeforeUnmount(() => {
 
 <template>
   <section
+    v-if="links && links.length"
     class="overflow-hidden sticky top-20 lg:top-0 p-4 bg-white border border-neutral-200 rounded-lg relative z-50 toc" aria-labelledby="toc-header"
 
     :class="menuOpen && 'open'">

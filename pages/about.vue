@@ -79,9 +79,9 @@ const missionStatementItems = [
 const resumeItems = [
   {
     title: 'Software Engineer',
-    company: 'Coming soon...',
-    date: 'Starting June 2025',
-    description: "I am excited to announce that I will be joining a new company in June of 2025. Stay tuned for more details!",
+    company: 'Travelers',
+    date: '2025 - Present',
+    description: "I help build and maintain a component library that supports Travelers Insurance developers and designers across the US and UK.",
   },
   {
     title: 'Senior UI Developer',
