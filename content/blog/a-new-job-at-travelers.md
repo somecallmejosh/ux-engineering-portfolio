@@ -4,7 +4,7 @@ publishedAt: 2025-06-06
 title: "My First Week at Travelers Has Been Most Excellent"
 description: "Just wrapped up my first week as a Software Engineer at Travelers, and it’s been an awesome start."
 tags: [career]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/v1749257160/josh-portfolio/assets_task_01jx3xecxqey998djnp8ffzp0m_1749257028_img_0.webp"
+image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1749257160/josh-portfolio/assets_task_01jx3xecxqey998djnp8ffzp0m_1749257028_img_0.webp"
 image_alt: "A photo of a person sitting at a desk with a laptop, smiling and looking content."
 ---
 
