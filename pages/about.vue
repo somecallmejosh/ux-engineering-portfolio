@@ -62,17 +62,17 @@ const missionStatementItems = [
   {
     icon: 'ph:hammer',
     header: 'Building for the Long Haul',
-    description: 'I like to architect things so they can grow and change without turning into a tangled mess. Think of it as building a really solid foundation for a house.',
+    description: 'I design and build with the future in mind, creating foundations that can grow and adapt without turning into a tangled mess. Think solid house framing, but for code and design systems.',
   },
   {
-    header: 'Making it Accessible for Everyone',
     icon: 'ph:wheelchair',
-    description: 'The web should be for everyone, right? I make sure the interfaces I build are usable by people of all abilities, following accessibility guidelines like WCAG 2.1 (and often going above!).',
+    header: 'Making It Accessible for Everyone',
+    description: 'The web should welcome everyone. I make sure the interfaces I build are usable by people of all abilities, following WCAG 2.1 standards—and often going beyond them.',
   },
   {
-    header: 'Keeping Things Tidy',
     icon: 'ph:broom',
-    description: 'Nobody likes a messy codebase. I focus on writing clean, maintainable code that\'s easy for other developers (and my future self!) to understand and work with.',
+    header: 'Keeping Things Tidy',
+    description: 'Nobody likes a messy codebase. I focus on writing clean, maintainable code that’s easy for teammates—and my future self—to read, understand, and build on.',
   },
 ]
 
@@ -81,7 +81,7 @@ const resumeItems = [
     title: 'Software Engineer',
     company: 'Travelers',
     date: '2025 - Present',
-    description: "I help build and maintain a component library that supports Travelers Insurance developers and designers across the US and UK.",
+    description: "I build and maintain an accessible component library that powers applications used across the US and UK. My work focuses on creating scalable, reusable UI components and documentation that help designers and developers deliver consistent, user-friendly experiences.",
   },
   {
     title: 'Senior UI Developer',
@@ -142,7 +142,7 @@ const resumeItems = [
           Hello, World!
         </PageHeader>
         <p>
-          While making things look good is part of the fun, <i>my real passion lies in creating digital experiences that are not only beautiful but also robust and accessible</i>. For the last two decades, I've been happily crafting those cool, interactive user interface bits you see online.
+          I build digital experiences that are both good-looking and good-hearted. For over twenty years I've been the person behind the buttons you mash, the forms you fill out, and the little UI details that make websites feel less like machines and more like places you want to be. I love the sweet spot where design meets code, turning pixels and logic into something people actually enjoy using.
         </p>
       </section>
     </div>
@@ -165,8 +165,8 @@ const resumeItems = [
     <section aria-labelledby="tools" class="grid lg:grid-cols-2 lg:gap-12">
       <div class="prose py-12">
         <h2 id="tools" class="text-3xl">Tools of the Trade</h2>
-        <p>Now, you might be wondering about my "tools." Sure, I've got my favorites! I'm pretty handy with modern front-end frameworks like Vue and React. I think of them as different types of really versatile building blocks. I also speak fluent CSS (whether it's plain vanilla, the utility-first approach of Tailwind, or the more structured Sass), which is like knowing all the different ways to paint and decorate. And I've even dabbled in full-stack stuff like Ruby on Rails – kind of like knowing how the plumbing and electrical work behind the walls.</p>
-        <p>But here's the thing: <strong>I see these tools as just that, tools</strong>. Like a carpenter with their saws and chisels, they help me do the job. What I really care about is the core stuff: having a solid plan (good architecture), making sure everything is tested thoroughly (like checking if the door opens and closes properly), and building in a way that everyone can use what I create (accessibility!).</p>
+        <p>I work with many of the modern front-end staples such as Vue, React, and their ecosystems, which I think of as different sets of building blocks. CSS is where I really feel at home, whether that means writing it plain, structuring it with Sass, or moving quickly with utility classes in Tailwind. I have also spent time with Ruby on Rails, which feels a bit like knowing how the plumbing and wiring run behind the walls.</p>
+        <p>At the end of the day, tools are just tools. What matters to me is how they are used: starting with a clear plan, building on a solid foundation, testing to make sure everything works the way it should, and making it accessible so that everyone can use it. That is the part that lasts long after frameworks and libraries come and go.</p>
       </div>
       <div class="flex flex-col items-center justify-center bg-neutral-700 rounded-lg">
         <div class="p-10 lg:p-24 space-y-10">
