@@ -138,6 +138,7 @@ const resumeItems = [
   <PageWrapper>
     <div class="space-y-12 lg:space-y-0">
       <section aria-describedby="page-header" class="prose">
+        <img src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png" alt="Josh Briley, UX Engineer" class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
         <PageHeader pill="About Me" pillIcon="ph:hand-waving">
           Hello, World!
         </PageHeader>
