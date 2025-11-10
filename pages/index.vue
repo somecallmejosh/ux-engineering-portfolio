@@ -37,7 +37,7 @@ const capabilities = [
     id: 5,
     icon: 'hand-eye',
     headline: "Staying Grounded",
-    description: "When shiny new ideas come along, I try to ask myself: Will this make life better for the user? Will this make life easier for my team? Will this make me better at my craft? If the answer's yes, I'm in. If not… well, I'll probably tinker with it anyway — but only for 'research.'",
+    description: "When shiny new ideas come along, I try to ask myself: Will this make life better for the user? Will this make life easier for my team? Will this make me better at my craft? If the answer's yes, I'm in. If not… well, I'll probably tinker with it anyway, but only for 'research.'",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
     image_alt: 'UX Engineer staying grounded in core principles of accessibility and human-centered design',
   },
