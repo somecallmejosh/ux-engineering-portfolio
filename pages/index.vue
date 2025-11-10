@@ -12,7 +12,7 @@ const capabilities = [
     id: 1,
     icon: 'code-simple',
     headline: "What I Value",
-    description: "I value simplicity over complexity, choosing solutions that age well. I put humanness over hype, solving real problems instead of chasing trends. I prefer depth over distraction, going deep in my lane rather than scattering across shiny tools. And I believe progress comes through doing, learning by building instead of endless preparation.",
+    description: "I like working on teams that care about the people using the product and the ones building it. I believe in writing code that future-me (and my teammates) will thank me for, and in keeping things simple when possible, clever when necessary, and kind always. Good communication beats good guesswork every time.",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743964962/josh-portfolio/assets_task_01jr66de64evqaxfev44eyj7y0_img_0.webp',
     image_alt: 'UX Engineer Building Accessible, Human-Centered Front Ends',
   },
@@ -21,7 +21,7 @@ const capabilities = [
     id: 3,
     icon: 'users-four',
     headline: "What I Do Best",
-    description: "I focus on building accessible, human-centered front ends. My strengths include making the web usable for everyone, creating scalable and intuitive design systems and components, practicing the craft of semantic HTML, CSS, and JavaScript, and serving as a bridge between designers and developers so product visions remain intact.",
+    description: "I help teams build front ends that feel solid, accessible, and friendly. That usually means building design systems, creating reusable components, and keeping designers and developers on the same page, literally. I'm happiest when I'm deep in the details but still part of the bigger conversation about what we're making and why it matters.",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
     image_alt: 'UX Engineer building with modern front-end with a focus on accessibility and human-centered design',
   },
@@ -29,7 +29,7 @@ const capabilities = [
     id: 2,
     icon: 'compass-rose',
     headline: "Where I'm Heading",
-    description: "I am continuing to deepen my front-end expertise in JavaScript, accessibility, scalable CSS, and web components. I want to build systems that outlast trends, like design systems and component libraries, while also sharing stories and reflections that help others bridge design and development. Through it all, I plan to stay grounded in UI/UX engineering, even as the industry evolves with AI and new frameworks.",
+    description: "I'm continuing to level up in accessibility, JavaScript, and scalable CSS. I'm also deep diving into web components, because I like things that last longer than my coffee. I love learning from smart people, sharing what I've figured out (and what I've messed up), and helping teams make great things together.",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744227298/josh-portfolio/assets_task_01jre017kredrsghw9rwhdb4er_img_0.webp',
     image_alt: 'UX engineer looking to the future of web development with a focus on accessibility and human-centered design',
   },
@@ -37,7 +37,7 @@ const capabilities = [
     id: 5,
     icon: 'hand-eye',
     headline: "Staying Grounded",
-    description: "When I feel pulled by a new idea or doomsday fears du jour , I ask myself whether it strengthens my lane as a UI/UX engineer, whether it helps humans use technology better instead of chasing hype, and whether future-me in five years will thank me for the time invested.",
+    description: "When shiny new ideas come along, I try to ask myself: Will this make life better for the user? Will this make life easier for my team? Will this make me better at my craft? If the answer's yes, I'm in. If not… well, I'll probably tinker with it anyway — but only for 'research.'",
     image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
     image_alt: 'UX Engineer staying grounded in core principles of accessibility and human-centered design',
   },
@@ -48,10 +48,8 @@ const capabilities = [
   <div class="space-y-12">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <PageHeader>I build accessible, human-centered front ends that outlast trends.</PageHeader>
-        <p>I'm a UI/UX engineer who builds accessible, human-centered front ends. My work focuses on design systems,
-          component libraries, and the craft of making interfaces that are simple, scalable, and inclusive. I care less
-          about chasing trends and more about creating solutions that last.</p>
+        <PageHeader>I build accessible, human centered front ends that make sense.</PageHeader>
+        <p>I'm a UI/UX engineer who loves turning design ideas into interfaces that just work. I focus on design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe even a little fun along the way.</p>
       </section>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
