@@ -134,7 +134,7 @@ export function getNow() {
 ```
 
 ## Real-World Challenge: Saving Dates Accurately
-In both the [IVFCRYO](/projects/ivfcryo) and [Logatot](/projects/logatot) projects, we ran into a deceptively simple problem: recording a date or timestamp and having it mean the same thing for everyone involved. Turns out, when users in different time zones are saving "the same" date, you're either:
+In both [IVFCRYO](/projects/ivfcryo/) and project, we ran into a deceptively simple problem: recording a date or timestamp and having it mean the same thing for everyone involved. Turns out, when users in different time zones are saving "the same" date, you're either:
 
 - accidentally shifting it behind or ahead depending on the user's device time,
 - or storing the same calendar date but ending up with inconsistent meaning across systems.
@@ -148,8 +148,7 @@ new Date("2025-05-07"); // gets parsed as midnight UTC
 
 That might actually render as May 6, 2025, 8:00 PM if you're on the East Coast of the U.S. That's a big problem for things like:
 
-- logging critical biological specimen milestones (IVFCRYO),
-- recording daily child care activities like naps and meals (Logatot).
+- logging critical biological specimen milestones (IVFCRYO)
 
 ### The Fix: Save the Time Zone
 Our workaround? Ask users to explicitly set their time zone as part of their profile. Then we:

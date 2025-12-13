@@ -94,7 +94,7 @@ const capabilities = [
         <ul
           class="grid grid-cols-2 items-center justify-between gap-12 border-t border-neutral-200 not-prose py-6 font-medium">
           <li class="text-center prose">
-            <NuxtLink class="hover:underline" to="/projects">
+            <NuxtLink class="hover:underline" to="/projects/">
               <motion.div :whilePress="{ y: 4 }">
                 <AnimateImage
                   src="https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp"
@@ -104,7 +104,7 @@ const capabilities = [
             </NuxtLink>
           </li>
           <li class="text-center prose">
-            <NuxtLink class="hover:underline" to="/blog">
+            <NuxtLink class="hover:underline" to="/blog/">
               <motion.div :whilePress="{ y: 4 }">
                 <AnimateImage
                   src="https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp"

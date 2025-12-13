@@ -27,7 +27,7 @@ useSeoMeta({
         />
       </figure>
       <article>
-        <CallOut class="mb-6"><strong>Dev Notes Disclaimer</strong>: Each artile in the <em>Dev Notes</em> section of my webiste may or may not be unfinished work. I don't always have time to write a full post. If you see something that looks like a half-baked idea, it probably is! If you have any questions or suggestions, feel free to <NuxtLink to="/contact">reach out</NuxtLink>.</CallOut>
+        <CallOut class="mb-6"><strong>Dev Notes Disclaimer</strong>: Each artile in the <em>Dev Notes</em> section of my webiste may or may not be unfinished work. I don't always have time to write a full post. If you see something that looks like a half-baked idea, it probably is! If you have any questions or suggestions, feel free to <NuxtLink to="/contact/">reach out</NuxtLink>.</CallOut>
         <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
