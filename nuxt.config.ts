@@ -82,12 +82,6 @@ export default defineNuxtConfig({
     name: process.env.NUXT_SITE_NAME,
     trailingSlash: true
   },
-  nitro: {
-    routeRules: {
-      // Redirect any non-slashed route to its trailing-slash variant
-      '/**': { redirect: { to: '/:splat/', statusCode: 301 } },
-    },
-  },
   vite: {
     plugins: [tailwindcss()],
     build: {
