@@ -1,5 +1,5 @@
 <script setup>
-import { AnimatePresence, motion } from 'motion-v'
+import { motion } from 'motion-v'
 import { onClickOutside } from '@vueuse/core'
 import { useTemplateRef } from 'vue'
 const target = useTemplateRef('target')
@@ -60,6 +60,7 @@ const blurAndRemoveFocus = () => {
           </div>
         </div>
         <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
+          <!-- AnimatePresence is auto-registered by motion-v/nuxt; avoid explicit imports to prevent duplicate warnings -->
           <AnimatePresence :initial="false">
             <motion.div
               v-if="navOpen"

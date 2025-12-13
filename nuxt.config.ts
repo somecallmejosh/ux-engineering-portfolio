@@ -49,7 +49,14 @@ export default defineNuxtConfig({
     }
   },
   robots: {
-    blockNonSeoBots: true
+    // Keep non-SEO bots blocked, but ensure a valid group exists
+    blockNonSeoBots: true,
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      }
+    ]
   },
   schemaOrg: {
     identity: definePerson({
@@ -75,8 +82,17 @@ export default defineNuxtConfig({
     name: process.env.NUXT_SITE_NAME,
     trailingSlash: true
   },
+  nitro: {
+    routeRules: {
+      // Redirect any non-slashed route to its trailing-slash variant
+      '/**': { redirect: { to: '/:splat/', statusCode: 301 } },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      sourcemap: false
+    },
     server: {
       // https://stackoverflow.com/questions/74902697/error-the-request-url-is-outside-of-vite-serving-allow-list-after-git-init
       fs: {

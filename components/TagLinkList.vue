@@ -6,7 +6,7 @@ const props = defineProps({
     required: true,
   },
   collection: {
-    type: Array,
+    type: String,
     required: true,
   },
 })
@@ -38,7 +38,7 @@ const collectionMap = {
     <ul role="list" class="flex flex-wrap gap-4 not-prose">
       <li v-for="(category) in list" :key="category">
         <NuxtLink
-          :to="`/${collectionMap[collection]}/categories/${category}`"
+          :to="`/${collectionMap[collection]}/categories/${category}/`"
           class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-medium rounded-md px-3 py-1.5 text-center "
         >{{ humanize(category) }}</NuxtLink>
       </li>
