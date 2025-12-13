@@ -44,19 +44,19 @@ const capabilities = [
   },
 ];
 
-const mostRecentPost = await queryCollection('blog')
-  .order('publishedAt', 'DESC')
-  .first()
+// const mostRecentPost = await queryCollection('blog')
+//   .order('publishedAt', 'DESC')
+//   .first()
 
-const mostRecentDevNote = await queryCollection('dev_notes')
-  .order('publishedAt', 'DESC')
-  .first()
+// const mostRecentDevNote = await queryCollection('dev_notes')
+//   .order('publishedAt', 'DESC')
+//   .first()
 
-const mostRecentProject = await queryCollection('projects')
-  .order('publishedAt', 'DESC')
-  .first()
+// const mostRecentProject = await queryCollection('projects')
+//   .order('publishedAt', 'DESC')
+//   .first()
 
-const combinedPosts = [mostRecentProject, mostRecentPost, mostRecentDevNote].filter(Boolean)
+// const combinedPosts = [mostRecentProject, mostRecentPost, mostRecentDevNote].filter(Boolean)
 
 </script>
 
@@ -68,12 +68,6 @@ const combinedPosts = [mostRecentProject, mostRecentPost, mostRecentDevNote].fil
         <p>I'm a UI/UX engineer who loves turning design ideas into interfaces that just work. I focus on design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe even a little fun along the way.</p>
       </section>
 
-      <section aria-labelledby="thoughts" class="bg-neutral-900/5 p-6 lg:p-12 rounded-lg">
-          <h2 id="thoughts" class="text-3xl mb-6 flex items-center gap-2">
-            <Icon name="ph:devices" /> Recent Projects, Thoughts, and Ideas <span class="h-px bg-white/50 flex-1"></span>
-          </h2>
-        <CardList v-if="combinedPosts.length" :list="combinedPosts" />
-      </section>
       <div class="flex items-center gap-4">
         <span aria-hidden="true" class="hidden lg:block flex-1 h-px bg-neutral-200"></span>
         <h2 class="text-2xl lg:text-4xl capitalize">In Case You Were Wondering</h2>
