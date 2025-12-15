@@ -23,13 +23,13 @@ const props = defineProps({
         class="mb-4"
       />
       <div class="prose">
+        <pill class="mb-4" v-if="item.headline" :pill="item.headline"></pill>
         <CardHeader class="mb-2.5">
-          {{ item.headline }}
           {{ item.title }}
         </CardHeader>
         <p v-html="item.description"></p>
       </div>
-      <NuxtLink :to="`/projects/${item.slug}`"
+      <NuxtLink :to="item.to || `/projects/${item.slug}/`"
       class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out">
       <span class=" sr-only">{{
           item.title

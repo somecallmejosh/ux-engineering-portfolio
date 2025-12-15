@@ -20,8 +20,7 @@ In reality, it made me realize how fuzzy my mental model really was.
 ## When Everything Works... But Nothing Works
 The app started out polite. Users could sign up and log in. Sessions appeared. Profiles got created in the database. Everything looked fine. But when I tried to fetch the current user's profile? Nothing. Empty. Null. Every single time. I blamed everything except myself:
 
-> "Must be a typo.<br /> Nuxt SSR is messing with it.<br /> Supabase is being too clever."<br/>
-> -- yours truly
+> Must be a typo.<br /> Nuxt SSR is messing with it.<br /> Supabase is being too clever.
 
 Nope. The system was working exactly as designed. I just didn't understand the design yet.
 
