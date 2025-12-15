@@ -1,6 +1,6 @@
 ---
 slug: supabase-auth
-publishedAt: 2025-12-13
+publishedAt: 2025-12-14
 title: "Setting Up Supabase Auth in Nuxt"
 description: 'Add secure Supabase auth to Nuxt: env keys, redirects, sign‑in/callback, profiles with RLS + trigger, role‑based middleware, useProfile, logout.'
 tags: [nuxt, supabase, auth]
