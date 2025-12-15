@@ -80,7 +80,7 @@ const combinedPosts = [
   <div class="space-y-12">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <PageHeader>I build accessible, human centered front ends that make sense.</PageHeader>
+        <PageHeader>I build intuitive, inclusive websites & apps that are easy to use & simple to maintain.</PageHeader>
         <p>I'm a UI/UX engineer who loves turning design ideas into interfaces that just work. I focus on design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe even a little fun along the way.</p>
       </section>
 
