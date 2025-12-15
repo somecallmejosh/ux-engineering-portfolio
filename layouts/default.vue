@@ -38,6 +38,20 @@ const blurAndRemoveFocus = () => {
     navOpen.value = false;
   }
 }
+
+// Keyboard shortcut: press '/' to focus header search
+onMounted(() => {
+  const handler = (e) => {
+    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      const el = document.getElementById('site-search')
+      if (el) {
+        e.preventDefault()
+        el.focus()
+      }
+    }
+  }
+  window.addEventListener('keydown', handler)
+})
 </script>
 <template>
   <div>
@@ -71,6 +85,9 @@ const blurAndRemoveFocus = () => {
                 duration: 0.2,
               }"
             >
+            <div class="flex-1 lg:hidden my-6 p-2 rounded-lg bg-neutral-50">
+              <SearchBox @close="navOpen = false" />
+            </div>
             <ul
               @click="navOpen = false"
               class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
@@ -117,8 +134,13 @@ const blurAndRemoveFocus = () => {
         </nav>
       </header>
       <div class="flex-grow lg:overflow-y-scroll">
-        <div class="hidden lg:block lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16">
-          <Logo />
+        <div class="hidden lg:flex lg:justify-between lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16 lg:gap-6">
+          <div class="flex-1">
+            <Logo />
+          </div>
+          <div class="flex-1">
+            <SearchBox @close="navOpen = false" />
+          </div>
         </div>
         <main id="main-content" class="p-6 lg:px-10 lg:pt-0 pb-12 w-full max-w-6xl">
           <slot />
