@@ -39,8 +39,8 @@ const onKeydown = (e: KeyboardEvent) => {
 <template>
   <div ref="root" class="search-box relative flex gap-4 items-center">
     <label for="site-search" class="block font-medium">
-      <span class="flex flex-col items-center justify-center">
-        <Icon aria-hidden="true" name="ph:magnifying-glass" size="1.5em" class="text-neutral-500 pointer-events-none" />
+      <span class="flex flex-col items-center justify-center lg:text-2xl">
+        <Icon aria-hidden="true" name="ph:magnifying-glass" size="1em" class="text-neutral-500 pointer-events-none" />
         <span class="text-xs">Search</span>
       </span>
     </label>
@@ -57,13 +57,23 @@ const onKeydown = (e: KeyboardEvent) => {
     <div class="sr-only" role="status" aria-live="polite">
       {{ q ? (results.length ? results.length + ' results for ' + q : 'No results') : '' }}
     </div>
-    <div v-if="q && results.length" :id="resultsId" role="listbox" class="not-prose absolute z-10 bg-white border border-neutral-200 rounded-md w-full max-h-80 overflow-y-auto shadow-lg p-4 top-full">
-      <ul class="space-y-4 divide-y divide-neutral-200" @click="resetSearch">
+    <div v-if="q && results.length" :id="resultsId" role="listbox" class="not-prose absolute z-10 bg-white border border-neutral-200 rounded-md w-full max-h-80 overflow-y-auto shadow-lg p-6 top-full translate-y-2">
+      <div class="flex justify-between items-center">
+        <h2 class="px-2 flex items-center gap-2">
+          <Icon aria-hidden="true" name="ph:list-magnifying-glass" size="1.25em" class="text-neutral-500 pointer-events-none shrink-0" />
+          Search results:
+        </h2>
+        <button @click="resetSearch" class="flex items-center bg-white font-semibold px-2 lg:pr-3.5 lg:pl-3 py-1 border border-neutral-300 rounded-lg hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors duration-200 cursor-pointer text-sm gap-0.5 group">
+          <Icon aria-hidden="true" name="ph:x-bold" size="1em" />
+          <span class="group-hover:underline">Close <span class="hidden">Search Results</span></span>
+        </button>
+      </div>
+      <ul class="-mx-2" @click="resetSearch">
         <li v-for="r in results" :key="r.id" role="option">
-          <NuxtLink :to="r.route" class="flex pb-4">
+          <NuxtLink :to="r.route" class="flex p-4 transition-colors duration-200 hover:bg-blue-50 group rounded-lg">
             <div>
               <Pill :pill="humanize(r.collection)" :pillIcon="r.collection === 'blog' ? 'ph:article-ny-times' : r.collection === 'projects' ? 'ph:projector-screen-chart' : r.collection === 'dev_notes' ? 'ph:note-pencil' : 'ph:microscope'"></Pill>
-              <div class="font-semibold">{{ r.title }}</div>
+              <div class="font-semibold group-hover:underline">{{ r.title }}</div>
               <div class="text-sm text-neutral-600 line-clamp-2">{{ r.description }}</div>
             </div>
           </NuxtLink>

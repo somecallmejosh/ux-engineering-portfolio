@@ -60,7 +60,7 @@ onMounted(() => {
       <header ref="target" class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'"
       >
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between mb-6">
           <Logo class="lg:hidden" />
           <div>
             <motion.button @click="navToggle"
@@ -85,8 +85,8 @@ onMounted(() => {
                 duration: 0.2,
               }"
             >
-            <div class="flex-1 lg:hidden my-6 p-2 rounded-lg bg-neutral-50">
-              <SearchBox @close="navOpen = false" />
+            <div class="lg:hidden p-2 rounded-lg bg-neutral-50 mb-6">
+              <SearchBox @close="navOpen = false"/>
             </div>
             <ul
               @click="navOpen = false"
