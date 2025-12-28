@@ -28,9 +28,9 @@ Next, authenticate the CLI with your Github account:
 gh auth login
 ```
 
-Now create a bash script called `archive-repos.sh`.
+Demo'ing my fizzbuzz and fibonacci repos isn't really necessary, but I didn't really want to delete these old relics. Hoarder? Maybe. Nostalgia? Definitely. I just wanted to archive the repositories and make them private.
 
-Demo'ing my fizzbuzz and fibonacci repos isn't really necessary, but I didn't really want to delete these old relics. Hoarder? Maybe. Nostalgia? Definitely. I just wanted to archive the repositories and make them private. Here's the script:
+Now create a bash script called `archive-repos.sh`.
 
 ```bash
 #!/usr/bin/env bash
