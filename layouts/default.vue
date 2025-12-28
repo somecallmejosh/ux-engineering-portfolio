@@ -13,14 +13,14 @@ const navGroups = [
   { groupTitle: 'Main',
     items: [
     { title: 'Home', path: '/', icon: 'ph:house' },
-    { title: 'About Me', path: '/about', icon: 'ph:hand-waving' },
+    { title: 'About Me', path: '/about', icon: 'ph:lego-smiley' },
     { title: 'Testimonials', path: '/testimonials', icon: 'ph:chats' },
   ]},
   { groupTitle: 'Projects',
     items: [
       { title: 'Projects', path: '/projects', icon: 'ph:projector-screen-chart' },
       { title: 'Blog', path: '/blog', icon: 'ph:article-ny-times' },
-      { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:note-pencil' },
+      { title: 'Dev Notes', path: '/dev-notes', icon: 'ph:notepad' },
     ]
   },
   { groupTitle: 'Other',
@@ -96,7 +96,7 @@ onMounted(() => {
                     v-for="item in group.items" :key="item.path">
                     <NuxtLink :whilePress="{ y: 4 }" class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm" :to="item.path">
                       <span class="flex items-center gap-3">
-                        <Icon :name="item.icon"
+                        <Icon :name="item.icon" size="1.2rem"
                           class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
                           {{ item.title }}
                       </span>
@@ -117,7 +117,7 @@ onMounted(() => {
                     v-for="item in group.items" :key="item.path">
                     <NuxtLink @click="blurAndRemoveFocus" class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
                       <span class="flex items-center gap-3">
-                        <Icon :name="item.icon"
+                        <Icon :name="item.icon" size="1.25rem"
                           class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
                           {{ item.title }}
                       </span>

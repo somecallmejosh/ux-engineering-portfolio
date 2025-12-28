@@ -6,6 +6,43 @@ useSeoMeta({
   ogDescription: 'Learn about my experience in enterprise UX engineering and front-end development.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317106/josh-portfolio/assets_task_01jrgnzqzhe1w9d68qj5z60crx_img_0.webp'
 })
+
+const capabilities = [
+  {
+    id: 1,
+    icon: 'code-simple',
+    headline: "What I Value",
+    description: "I like working on teams that care about the people using the product and the ones building it. I believe in writing code that future-me (and my teammates) will thank me for, and in keeping things simple when possible, clever when necessary, and kind always. Good communication beats good guesswork every time.",
+    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743964962/josh-portfolio/assets_task_01jr66de64evqaxfev44eyj7y0_img_0.webp',
+    image_alt: 'UX Engineer Building Accessible, Human-Centered Front Ends',
+  },
+
+  {
+    id: 3,
+    icon: 'users-four',
+    headline: "What I Do Best",
+    description: "I help teams build front ends that feel solid, accessible, and friendly. That usually means building design systems, creating reusable components, and keeping designers and developers on the same page, literally. I'm happiest when I'm deep in the details but still part of the bigger conversation about what we're making and why it matters.",
+    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743965801/josh-portfolio/assets_task_01jr677h9hebkr1b6ash0hq066_img_0.webp',
+    image_alt: 'UX Engineer building with modern front-end with a focus on accessibility and human-centered design',
+  },
+  {
+    id: 2,
+    icon: 'compass-rose',
+    headline: "Where I'm Heading",
+    description: "I'm continuing to level up in accessibility, JavaScript, and scalable CSS. I'm also deep diving into web components, because I like things that last longer than my coffee. I love learning from smart people, sharing what I've figured out (and what I've messed up), and helping teams make great things together.",
+    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744227298/josh-portfolio/assets_task_01jre017kredrsghw9rwhdb4er_img_0.webp',
+    image_alt: 'UX engineer looking to the future of web development with a focus on accessibility and human-centered design',
+  },
+  {
+    id: 5,
+    icon: 'hand-eye',
+    headline: "Staying Grounded",
+    description: "When shiny new ideas come along, I try to ask myself: Will this make life better for the user? Will this make life easier for my team? Will this make me better at my craft? If the answer's yes, I'm in. If not… well, I'll probably tinker with it anyway, but only for 'research.'",
+    image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743966141/josh-portfolio/assets_task_01jr67hz6xfepsyspa83m9435c_img_0.webp',
+    image_alt: 'UX Engineer staying grounded in core principles of accessibility and human-centered design',
+  },
+];
+
 const goodFit = [
   'Proven experience in delivering <strong>high-quality, maintainable code within complex enterprise environments</strong>.',
   'Strong communication and collaboration skills, with the <strong>ability to bridge the gap between design and engineering teams</strong>.',
@@ -19,33 +56,23 @@ const skillIcons = [
   'alpinejs-light',
   'apple-light',
   'aws-light',
-  'bootstrap',
   'css',
   'cypress-light',
   'd3-light',
   'figma-light',
   'github-light',
-  'gulp',
   'heroku',
   'html',
   'htmx-light',
-  'illustrator',
   'javascript',
-  'jquery',
-  'less-light',
-  'markdown-light',
-  'materialui-light',
   'npm-light',
   'netlify-light',
   'nextjs-light',
   'nuxtjs-light',
-  'pinia-light',
-  'photoshop',
   'rails',
   'react-light',
   'ruby',
   'sass',
-  'styledcomponents',
   'svg-light',
   'tailwindcss-light',
   'typescript',
@@ -53,9 +80,7 @@ const skillIcons = [
   'vitest-light',
   'vscode-light',
   'vuejs-light',
-  'vuetify-light',
   'windows-light',
-  'xd',
 ]
 
 const missionStatementItems = [
@@ -136,17 +161,42 @@ const resumeItems = [
 
 <template>
   <PageWrapper>
-    <div class="space-y-12 lg:space-y-0">
-      <section aria-describedby="page-header" class="prose">
-        <img src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png" alt="Josh Briley, UX Engineer" class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
-        <PageHeader pill="About Me" pillIcon="ph:hand-waving">
-          Hello, World!
-        </PageHeader>
-        <p>
-          I build digital experiences that are both good-looking and good-hearted. For over twenty years I've been the person behind the buttons you mash, the forms you fill out, and the little UI details that make websites feel less like machines and more like places you want to be. I love the sweet spot where design meets code, turning pixels and logic into something people actually enjoy using.
-        </p>
-      </section>
-    </div>
+    <section aria-describedby="page-header" class="prose">
+      <img
+        src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
+        alt="Josh Briley, UX Engineer"
+        class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
+      <PageHeader pill="About Me" pillIcon="ph:lego-smiley">
+        Hello, World!
+      </PageHeader>
+      <p>
+        I build digital experiences that are both good-looking and good-hearted. For over twenty years I've been the
+        person behind the buttons you mash, the forms you fill out, and the little UI details that make websites feel
+        less like machines and more like places you want to be. I love the sweet spot where design meets code, turning
+        pixels and logic into something people actually enjoy using.
+      </p>
+    </section>
+        <section aria-labelledby="experience" class="prose max-w-full">
+      <h2 id="experience" class="text-3xl">Experience</h2>
+      <ul class="not-prose grid md:grid-cols-2 2xl:grid-cols-3 gap-x-12 gap-y-6">
+        <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
+          <small
+            class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">{{
+              item.date }}</small>
+          <div class="prose">
+            <CardHeader element="h3">
+              {{ item.title }}
+            </CardHeader>
+            <p class="mb-2 font-semibold">
+              {{ item.company }}
+            </p>
+            <p>
+              {{ item.description }}
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
     <section aria-labelledby="mission" class="prose max-w-full lg:mb-24">
       <h2 id="mission" class="text-3xl">My Mission</h2>
       <ul class="grid lg:grid-cols-3 gap-12 not-prose gap-x-12 gap-y-6">
@@ -163,11 +213,35 @@ const resumeItems = [
         </li>
       </ul>
     </section>
+
+    <section aria-label="Capabilities" class="space-y-12">
+
+      <ul class="space-y-24">
+        <li v-for="(item, index) in capabilities" :key="item.id"
+          class="grid lg:grid-cols-2 items-center gap-1 lg:gap-24">
+          <div :class="index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'">
+            <AnimateImage :src="item.image" :alt="item.image_alt" :scaleY="0.75" class="mb-4 lg:mb-0" />
+          </div>
+          <div class="prose" :class="index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'">
+            <div class="space-y-4">
+              <CardHeader>{{ item.headline }}</CardHeader>
+            </div>
+            <p v-html="item.description"></p>
+          </div>
+        </li>
+      </ul>
+    </section>
     <section aria-labelledby="tools" class="grid lg:grid-cols-2 lg:gap-12">
       <div class="prose py-12">
         <h2 id="tools" class="text-3xl">Tools of the Trade</h2>
-        <p>I work with many of the modern front-end staples such as Vue, React, and their ecosystems, which I think of as different sets of building blocks. CSS is where I really feel at home, whether that means writing it plain, structuring it with Sass, or moving quickly with utility classes in Tailwind. I have also spent time with Ruby on Rails, which feels a bit like knowing how the plumbing and wiring run behind the walls.</p>
-        <p>At the end of the day, tools are just tools. What matters to me is how they are used: starting with a clear plan, building on a solid foundation, testing to make sure everything works the way it should, and making it accessible so that everyone can use it. That is the part that lasts long after frameworks and libraries come and go.</p>
+        <p>I work with many of the modern front-end staples such as Vue, React, and their ecosystems, which I think of
+          as different sets of building blocks. CSS is where I really feel at home, whether that means writing it plain,
+          structuring it with Sass, or moving quickly with utility classes in Tailwind. I have also spent time with Ruby
+          on Rails, which feels a bit like knowing how the plumbing and wiring run behind the walls.</p>
+        <p>At the end of the day, tools are just tools. What matters to me is how they are used: starting with a clear
+          plan, building on a solid foundation, testing to make sure everything works the way it should, and making it
+          accessible so that everyone can use it. That is the part that lasts long after frameworks and libraries come
+          and go.</p>
       </div>
       <div class="flex flex-col items-center justify-center bg-neutral-700 rounded-lg">
         <div class="p-10 lg:p-24 space-y-10">
@@ -178,27 +252,12 @@ const resumeItems = [
         </div>
       </div>
     </section>
-    <section aria-labelledby="experience" class="prose max-w-full">
-      <h2 id="experience" class="text-3xl">Experience</h2>
-      <ul class="not-prose grid md:grid-cols-2 2xl:grid-cols-3 gap-x-12 gap-y-6">
-        <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
-          <small class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">{{ item.date }}</small>
-          <div class="prose">
-            <CardHeader element="h3">
-              {{ item.title }}
-            </CardHeader>
-            <p class="mb-2 font-semibold">
-              {{ item.company }}
-            </p>
-            <p>
-              {{ item.description }}
-            </p>
-          </div>
-        </li>
-      </ul>
-    </section>
+
     <aside class="prose">
-      <p>So, if you're looking for someone with a good chunk of experience who's focused on building robust, accessible, and easy-to-live-with user interfaces, and who believes in good planning and teamwork, <NuxtLink to="/contact/">then let's connect</NuxtLink>! I'm all about bridging the gap between the design vision and the engineering reality to deliver solutions that really work.</p>
+      <p>So, if you're looking for someone with a good chunk of experience who's focused on building robust, accessible,
+        and easy-to-live-with user interfaces, and who believes in good planning and teamwork, <NuxtLink to="/contact/">
+          then let's connect</NuxtLink>! I'm all about bridging the gap between the design vision and the engineering
+        reality to deliver solutions that really work.</p>
     </aside>
   </PageWrapper>
 </template>

@@ -18,7 +18,7 @@ useSeoMeta({
   <PageWrapper>
     <Breadcrumbs baseUrl="dev-notes" :slug="`${slug}`" label="Dev Notes" :title="post.title" />
     <div v-if="post" class="prose">
-      <PageHeader pill="Dev Note" pillIcon="ph:note-pencil" :publishedAt="post.publishedAt">{{ post.title }}</PageHeader>
+      <PageHeader pill="Dev Note" pillIcon="ph:notepad" :publishedAt="post.publishedAt">{{ post.title }}</PageHeader>
       <figure>
         <AnimateImage
           :src="post.image"

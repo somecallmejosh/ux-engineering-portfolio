@@ -72,7 +72,7 @@ const onKeydown = (e: KeyboardEvent) => {
         <li v-for="r in results" :key="r.id" role="option">
           <NuxtLink :to="r.route" class="flex p-4 transition-colors duration-200 hover:bg-blue-50 group rounded-lg">
             <div>
-              <Pill :pill="humanize(r.collection)" :pillIcon="r.collection === 'blog' ? 'ph:article-ny-times' : r.collection === 'projects' ? 'ph:projector-screen-chart' : r.collection === 'dev_notes' ? 'ph:note-pencil' : 'ph:microscope'"></Pill>
+              <Pill :pill="humanize(r.collection)" :pillIcon="r.collection === 'blog' ? 'ph:article-ny-times' : r.collection === 'projects' ? 'ph:projector-screen-chart' : r.collection === 'dev_notes' ? 'ph:notepad' : 'ph:microscope'"></Pill>
               <div class="font-semibold group-hover:underline">{{ r.title }}</div>
               <div class="text-sm text-neutral-600 line-clamp-2">{{ r.description }}</div>
             </div>
