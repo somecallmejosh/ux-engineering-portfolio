@@ -55,11 +55,11 @@ onMounted(() => {
 <template>
   <div>
     <a class="absolute -top-full left-1/2 -translate-x-1/2 z-50 p-4 bg-white rounded-lg focus:top-2 transition-all duration-300" href="#main-content">Skip to main content</a>
-    <div class="lg:flex lg:h-dvh gap-12 relative z-10">
+    <div class="lg:flex h-dvh gap-12 relative z-10">
       <header ref="target" class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'"
       >
-        <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
           <div>
             <motion.button @click="navToggle"
