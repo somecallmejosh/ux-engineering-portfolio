@@ -12,7 +12,7 @@ useSeoMeta({
   <PageWrapper>
     <Breadcrumbs baseUrl="dev-notes" slug="categories" label="Dev Notes" title="Categories" />
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Blog" pillIcon="ph:article-ny-times">Dev Notes Categories</PageHeader>
+      <PageHeader pill="Dev Notes" pillIcon="ph:notepad">Dev Notes Categories</PageHeader>
     </section>
     <TagLinkList
       title="Dev Notes Links"

@@ -33,8 +33,8 @@ const collectionMap = {
 }
 </script>
 <template>
-  <nav aria-labelledby="categories" class="prose">
-    <h2 id="categories" class="capitalize">{{title}}</h2>
+  <nav :aria-label="`${humanize(collection)} Categories`" class="prose">
+    <h2 v-if="title" class="capitalize">{{title}}</h2>
     <ul role="list" class="flex flex-wrap gap-4 not-prose">
       <li v-for="(category) in list" :key="category">
         <NuxtLink

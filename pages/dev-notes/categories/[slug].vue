@@ -29,13 +29,12 @@ onMounted(() => {
     <template v-if="allPosts">
       <Breadcrumbs baseUrl="dev-notes" :slug="`${slug}`" :category="true" label="Dev Notes" :title="slug" />
       <section aria-labelledby="page-header" class="prose">
-        <PageHeader pill="Dev Notes Category" pillIcon="ph:article-ny-times">Category: {{ humanize(slug) }}</PageHeader>
+        <PageHeader pill="Dev Notes Category" pillIcon="ph:notepad">Dev Notes About {{ humanize(slug) }}</PageHeader>
       </section>
-      <CardList :list="allPosts" />
       <TagLinkList
-        title="Dev Notes Categories"
         collection="dev_notes"
       />
+      <CardList :list="allPosts" />
     </template>
   </PageWrapper>
 </template>

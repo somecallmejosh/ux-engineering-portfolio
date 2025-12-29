@@ -30,11 +30,13 @@ useSeoMeta({
         <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
+      <aside class="bg-blue-100/10 rounded-lg p-6 space-y-6 lg:space-y-12">
+        <TagLinkList
+          title="Blog Categories"
+          collection="blog"
+        />
+        <CallOut class="mb-6"><strong>Blog Disclaimer</strong>: Each article in my blog is strictly my own opinion. Nothing in here is a reflection of the views of my employer or any other organization. If you have any questions or suggestions, feel free to <NuxtLink to="/contact/">reach out</NuxtLink>.</CallOut>
+      </aside>
     </div>
-    <aside class="prose">
-      <div class="border-t border-neutral-200 pt-4">
-        <small>This blog post was last updated on {{ useDateFormat(post.publishedAt, 'MMM Do, YYYY', { locales: 'en-US' }) }}</small>
-      </div>
-    </aside>
   </PageWrapper>
 </template>

@@ -8,29 +8,46 @@ image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,
 image_alt: 'Developer automating GitHub repository updates management on a laptop.'
 ---
 
-It's the end of the year and I figured I'd do a little Github pruning. I've created (and abandoned) over 100 repos over the years, so using the Github UI to archive all this mess would be awfully time-consuming. So I asked ChatGPT to help me write a quick bash script to do it for me.
+<strong>It's the end of the year, which apparently means it's [time for reflection](/blog/2025-a-year-in-review) and GitHub cleanup.</strong> Over the years, I've created (and quietly abandoned) a lot of repositories. Side projects. Experiments. "I'll totally finish this later" ideas. At some point I crossed the 100-repo mark, which made using the GitHub UI to clean things up feel like a punishment I didn't sign up for.
 
-For Mac folks, first install the Github CLI if you haven't already:
+So instead of clicking my way into carpal tunnel, I did what any reasonable modern-day developer would do:
 
-```bash
-brew install gh
-```
+::CallOut
+<strong>I asked ChatGPT to help me write a small bash script</strong> and let the computer do the boring part.
+::
 
-I'm not familiar with Windows, but Google tells me that you can install it with winget:
+The goal was simple:
 
-```bash
-winget install --id GitHub.cli
-```
+- Archive old repos
+- Make them private
+- Preserve my todos, half-baked-sass ideas, fizzbuzzes and fibonacci experiments for historical reasons (Nostalgia? Maybe. Hoarder? Absolutely.)
 
-Next, authenticate the CLI with your Github account:
+## Step 1: Install the GitHub CLI
 
-```bash
-gh auth login
-```
+If you're on a Mac and don't already have the GitHub CLI installed:
 
-Demo'ing my fizzbuzz and fibonacci repos isn't really necessary, but I didn't really want to delete these old relics. Nostalgia? Maybe. Hoarder? Definitely. I just wanted to archive the repositories and make them private.
+`brew install gh`
 
-Now create a bash script called `archive-repos.sh`.
+
+If you're on Windows, Google tells me this works:
+
+`winget install --id GitHub.cli`
+
+(I'll trust Google on this one.)
+
+## Step 2: Authenticate
+
+Once installed, authenticate the CLI with your GitHub account:
+
+`gh auth login`
+
+Follow the prompts and you're good to go.
+
+## Step 3: Create the script
+
+Create a new file called `archive-repos.sh` or whatever filename you prefer.
+
+Here's the script I ended up with:
 
 ```bash
 #!/usr/bin/env bash
@@ -84,29 +101,37 @@ while IFS= read -r r; do
 done < repos.txt
 ```
 
-This script reads a list of repositories from a file called `repos.txt`. Create that file and add the repositories you want to archive, one per line, in the format `owner/repo-name`:
+## Step 4: Tell the script what to clean up
+
+Create a file called `repos.txt` (or whatever). This is just a list of repositories you want to archive, one per line, using the format owner/repo-name.
 
 ``` bash
-#repos.txt
+# repos.txt
 your-github-username/repo1
 your-github-username/repo2
 your-github-username/repo3
 # etc.
 ```
 
+This makes it easy to add or remove repos without touching the script itself, which feels like the polite thing to do.
+
+<em>Yeh, yeh... I know.</em>
+
+That script could be refactored to include the GitHub username so you don't have to repeat it for each repo, but hey, this is a quick-and-dirty script.
+
+## Step 5: Run it
+
 Make the script executable:
 
-```bash
-chmod +x archive-repos.sh
-```
+`chmod +x archive-repos.sh`
 
-Finally, run the script:
 
-```bash
-./archive-repos.sh
-```
+Then run it:
 
-A sample output might look like this:
+`./archive-repos.sh`
+
+
+You'll see output something like this:
 
 ```bash
 Checking your-github-username/repo1
@@ -120,4 +145,6 @@ Checking your-github-username/repo3
   → Archiving
 ```
 
-And that's it! The script will go through each repository listed in `repos.txt`, make it private if it's not already, and then archive it. This should save you a lot of time compared to doing it manually through the GitHub UI.
+The script walks through each repository, makes it private if needed, and then archives it. No clicking. No UI fatigue. No second-guessing whether you really need that half-finished side project from 2017. Your GitHub stays tidy and your old experiments stay preserved. Everyone wins.
+
+If nothing else, this is a good reminder that automation is just empathy for your future self.
