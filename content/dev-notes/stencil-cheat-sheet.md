@@ -3,7 +3,7 @@ slug: stencil-cheat-sheet
 publishedAt: 2025-06-01
 title: "StencilJS Cheatsheet"
 description: "This guide walks through JavaScript concepts that are essential to understanding and writing effective Stencil.js Web Components, with examples and usage in context."
-tags: [javascript, cheatsheet]
+tags: [javascript, cheatsheet, web-components, stencil-js]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1748818817/josh-portfolio/assets_task_01jwpve66ef7899m8z3zjgmxhr_1748818728_img_1.webp"
 image_alt: "An illustration of a developer referencing a StencilJS cheat sheet."
 ---

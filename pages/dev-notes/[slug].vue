@@ -27,12 +27,13 @@ useSeoMeta({
         />
       </figure>
       <article>
+        <CategoryLinks tag="dev-notes" :collection="post.tags" title="Tags" />
         <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
       <aside class="bg-blue-100/10 rounded-lg p-6 space-y-6 lg:space-y-12">
         <TagLinkList
-          title="Dev Notes Categories"
+          title="Dev Notes Tags"
           collection="dev_notes"
         />
         <CallOut class="mb-6"><strong>Dev Notes Disclaimer</strong>: Each artile in the <em>Dev Notes</em> section of my webiste may or may not be unfinished work. I don't always have time to write a full post. If you see something that looks like a half-baked idea, it probably is! As with anything you find on the internet, be sure to review and understand the script or code before running it, especially if you plan to modify it. Always back up any important data before making bulk changes to your repositories. If you have any questions or suggestions, feel free to <NuxtLink to="/contact/">reach out</NuxtLink>.</CallOut>

@@ -16,6 +16,12 @@ export default defineNuxtConfig({
       script: [{ src: 'https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js' }]
     },
   },
+  nitro: {
+    routeRules: {
+      '/blog/categories/**': { redirect: { to: '/blog/tags/**', statusCode: 301 } },
+      '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**', statusCode: 301 } },
+    }
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['@/assets/css/styles.css'],

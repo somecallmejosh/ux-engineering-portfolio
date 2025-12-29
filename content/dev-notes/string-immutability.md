@@ -3,7 +3,7 @@ slug: string-immutability
 publishedAt: 2025-12-29
 title: "What's Up with String Immutability?"
 description: 'A quick refresher on why strings in JavaScript can feel a little... stubborn. Spoiler: You can’t change them in place.'
-tags: [nuxt, supabase, auth]
+tags: [javascript]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1767023387/josh-portfolio/javascript-primitive-immutability-confusion.png
 image_alt: 'A web developer confused about string immutability in JavaScript.'
 ---

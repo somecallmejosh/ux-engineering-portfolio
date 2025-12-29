@@ -3,7 +3,7 @@ slug: javascript-dates
 publishedAt: 2025-05-10
 title: "Dealing with Dates in JavaScript"
 description: "JavaScript dates are like that one coworker who means well but always shows up late and forgets daylight savings."
-tags: [javascript]
+tags: [javascript, dates]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747076064/josh-portfolio/assets_task_01jv2xcacpf9e8442cz03j7b86_1747075929_img_0.webp"
 image_alt: "An illustration of me learning Javascript."
 ---

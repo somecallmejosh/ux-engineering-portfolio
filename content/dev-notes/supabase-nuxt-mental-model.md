@@ -3,7 +3,7 @@ slug: supabase-nuxt-mental-model
 publishedAt: 2025-12-15
 title: "Supabase, RLS, and the Day My Brain Refused to Understand It"
 description: 'Debugging Supabase auth & RLS in Nuxt: a funny story of silent failures, recursion traps, and fixing my mental model for smoother projects.'
-tags: [nuxt, supabase, auth]
+tags: [nuxt, supabase, authentication]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1765805949/josh-portfolio/supabase-confusion.webp
 image_alt: 'Developer Confused by Supabase Postgres Row Level Security and Nuxt Integration'
 ---

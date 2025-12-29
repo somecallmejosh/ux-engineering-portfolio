@@ -23,7 +23,7 @@ const allPosts = await queryCollection('dev_notes')
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
     <TagLinkList
-      title="Dev Notes Categories"
+      title="Dev Notes Tags"
       collection="dev_notes"
     />
   </PageWrapper>

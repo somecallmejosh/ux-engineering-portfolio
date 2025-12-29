@@ -3,7 +3,7 @@ slug: container-queries
 publishedAt: 2025-09-29
 title: "Container Queries: A Game-Changer for Responsive Design"
 description: 'Taking a look at container queries... the good, the bad, and the future.'
-tags: [css, frontend]
+tags: [css]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745245227/josh-portfolio/assets_task_01jscbab7dekctaz7mx7356yxp_img_0.webp
 image_alt: 'Container Queries Cheatsheet'
 ---

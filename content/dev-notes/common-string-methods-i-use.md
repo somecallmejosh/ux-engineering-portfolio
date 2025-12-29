@@ -3,7 +3,7 @@ slug: common-string-methods-i-use
 publishedAt: 2025-05-21
 title: "JavaScript String Methods"
 description: "There are many libraries for string manipulation, but I often find myself rewriting these simple functions in every new code base."
-tags: [javascript]
+tags: [javascript, dates]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747840698/josh-portfolio/assets_task_01jvspmqeyek1ag6z579gaqhb0_1747840627_img_0.webp"
 image_alt: "A whimsical illustration of string manipulation in JavaScript, featuring playful characters."
 ---

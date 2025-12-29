@@ -33,13 +33,16 @@ const collectionMap = {
 }
 </script>
 <template>
-  <nav :aria-label="`${humanize(collection)} Categories`" class="prose">
-    <h2 v-if="title" class="capitalize">{{title}}</h2>
-    <ul role="list" class="flex flex-wrap gap-4 not-prose">
+  <nav :aria-label="`${humanize(collection)} Tags`" class="prose">
+    <h2 v-if="title" class="capitalize">
+      {{title}}
+    </h2>
+    <ul role="list" class="flex flex-wrap gap-2 not-prose">
       <li v-for="(category) in list" :key="category">
         <NuxtLink
-          :to="`/${collectionMap[collection]}/categories/${category}/`"
-          class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-medium rounded-md px-3 py-1.5 text-center "
+          prefetch-on="interaction"
+          :to="`/${collectionMap[collection]}/tags/${category}/`"
+          class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-semibold rounded-md px-1.5 py-1 text-center "
         >{{ humanize(category) }}</NuxtLink>
       </li>
     </ul>
@@ -47,8 +50,8 @@ const collectionMap = {
 </template>
 <style scoped>
 a[aria-current] {
-  background-color: var(--color-neutral-50);
-  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-950);
+  color: var(--color-neutral-50);
   pointer-events: none;
 }
 </style>

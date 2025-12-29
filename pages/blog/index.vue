@@ -35,7 +35,7 @@ const allBlogCategories = await queryCollection('blog')
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
     <TagLinkList
-      title="Blog Categories"
+      title="Blog Tags"
       collection="blog"
     />
   </PageWrapper>

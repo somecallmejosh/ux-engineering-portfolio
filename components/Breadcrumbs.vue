@@ -25,7 +25,7 @@
 
   const finalPath = () => {
     if (props.category) {
-      return `/${props.baseUrl}/categories/${props.slug}`
+      return `/${props.baseUrl}/tags/${props.slug}`
     } else {
       return `/${props.baseUrl}/${props.slug}`
     }
@@ -40,7 +40,7 @@
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li v-if="category" class="flex items-center gap-3">
-          <NuxtLink :to="`/${baseUrl}/categories`" class="hover:underline text-nowrap">Categories</NuxtLink>
+          <NuxtLink :to="`/${baseUrl}/tags`" class="hover:underline text-nowrap">Tags</NuxtLink>
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li class="text-neutral-700">
