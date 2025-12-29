@@ -72,4 +72,4 @@ We're just pointing the variable hello at a new string. Think of it like replaci
 Strings in JavaScript don't change. Variables do. Whenever I need to "change" a string, I remind myself that I'm really just creating a new one and moving on.
 
 I've also written about some of the string methods I reach for most often:
-[Common String Methods I Use](common-string-methods-i-use). They're small tools, but they do a lot of heavy lifting.
+[Common String Methods I Use](/dev_notes/common-string-methods-i-use). They're small tools, but they do a lot of heavy lifting.
