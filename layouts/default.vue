@@ -39,18 +39,18 @@ const blurAndRemoveFocus = () => {
 }
 
 // Keyboard shortcut: press '/' to focus header search
-onMounted(() => {
-  const handler = (e) => {
-    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
-      const el = document.getElementById('site-search')
-      if (el) {
-        e.preventDefault()
-        el.focus()
-      }
-    }
-  }
-  window.addEventListener('keydown', handler)
-})
+// onMounted(() => {
+//   const handler = (e) => {
+//     if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+//       const el = document.getElementById('site-search')
+//       if (el) {
+//         e.preventDefault()
+//         el.focus()
+//       }
+//     }
+//   }
+//   window.addEventListener('keydown', handler)
+// })
 </script>
 <template>
   <div>
@@ -136,9 +136,6 @@ onMounted(() => {
         <div class="hidden lg:flex lg:justify-between lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16 lg:gap-6">
           <div class="flex-1">
             <Logo />
-          </div>
-          <div class="flex-1">
-            <SearchBox @close="navOpen = false" />
           </div>
         </div>
         <main id="main-content" class="p-6 lg:px-10 lg:pt-0 pb-12 w-full max-w-6xl">
