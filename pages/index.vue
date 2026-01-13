@@ -1,6 +1,4 @@
 <script setup lang="tsx">
-import { motion } from 'motion-v'
-
 useSeoMeta({
   title: 'Josh Briley | Practical UX Engineering for Complex Products',
   ogTitle: 'Josh Briley | Practical UX Engineering for Complex Products',
