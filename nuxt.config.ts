@@ -62,7 +62,8 @@ export default defineNuxtConfig({
         userAgent: '*',
         allow: '/',
       }
-    ]
+    ],
+    sitemap: `${process.env.NUXT_SITE_URL}/sitemap.xml`,
   },
   schemaOrg: {
     identity: definePerson({
