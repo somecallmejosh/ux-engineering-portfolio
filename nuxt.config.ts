@@ -18,8 +18,8 @@ export default defineNuxtConfig({
   },
   nitro: {
     routeRules: {
-      '/blog/categories/**': { redirect: { to: '/blog/tags/**', statusCode: 301 } },
-      '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**', statusCode: 301 } },
+      '/blog/categories/**': { redirect: { to: '/blog/tags/**/', statusCode: 301 } },
+      '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**/', statusCode: 301 } },
     }
   },
   compatibilityDate: '2024-11-01',
