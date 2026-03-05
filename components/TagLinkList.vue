@@ -1,5 +1,5 @@
 <script setup>
-  import { humanize } from '~/utilities/humanize'
+import { humanize } from '~/utilities/humanize'
 const props = defineProps({
   title: {
     type: String,
@@ -35,15 +35,13 @@ const collectionMap = {
 <template>
   <nav :aria-label="`${humanize(collection)} Tags`" class="prose">
     <h2 v-if="title" class="capitalize">
-      {{title}}
+      {{ title }}
     </h2>
     <ul role="list" class="flex flex-wrap gap-2 not-prose">
       <li v-for="(category) in list" :key="category">
-        <NuxtLink
-          prefetch-on="interaction"
-          :to="`/${collectionMap[collection]}/tags/${category}/`"
-          class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-semibold rounded-md px-1.5 py-1 text-center "
-        >{{ humanize(category) }}</NuxtLink>
+        <NuxtLink prefetch-on="interaction" :to="`/${collectionMap[collection]}/tags/${category}/`"
+          class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-semibold rounded-md px-1.5 py-1 text-center">
+          {{ humanize(category) }}</NuxtLink>
       </li>
     </ul>
   </nav>

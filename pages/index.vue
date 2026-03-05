@@ -44,18 +44,20 @@ const combinedPosts = [
   <div class="space-y-12">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <PageHeader>I build intuitive, inclusive websites & apps that are easy to use & simple to maintain.</PageHeader>
-        <p>I'm a UI/UX engineer who loves turning design ideas into interfaces that just work. I focus on design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe even a little fun along the way.</p>
+        <PageHeader>I help product teams build component libraries that scale, with accessibility built in from the
+          start.</PageHeader>
+        <p>I'm a Design Systems Engineer who loves turning design ideas into interfaces that just work. I focus on
+          design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe
+          even a little fun along the way.</p>
       </section>
 
+      <Services />
       <section aria-labelledby="recent">
         <h2 class="text-2xl mb-4" id="recent">Recent Posts</h2>
         <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
           <CardListItem :data="combinedPosts" />
         </ul>
       </section>
-
-
     </div>
   </div>
 </template>
