@@ -2,10 +2,10 @@
 slug: design-systems-for-the-rest-of-us
 publishedAt: 2025-05-04
 title: 'Design Systems & Component Libraries for the Rest of Us'
-description: "A lighthearted look at building design systems without the ceremony, complexity, or committee-induced paralysis."
-tags: [design, front-end-development, accessibility]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746369173/josh-portfolio/assets_task_01jtdv9wbkem5r50p1yxnnqpvb_1746369114_img_0.webp"
-image_alt: "A whimsical illustration of a design system with playful components, colors, and patterns."
+description: 'A lighthearted look at building design systems without the ceremony, complexity, or committee-induced paralysis.'
+tags: [design, design-systems, front-end-development, accessibility]
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746369173/josh-portfolio/assets_task_01jtdv9wbkem5r50p1yxnnqpvb_1746369114_img_0.webp'
+image_alt: 'A whimsical illustration of a design system with playful components, colors, and patterns.'
 ---
 
 ::CallOut
@@ -18,9 +18,10 @@ But most of us aren't in that world. We're building scrappy apps, balancing five
 
 This post is for that version of you...the one who wants a little consistency without all the overhead. A design system that doesn't take six meetings to update. Something light, flexible, and maybe even a little fun.
 
-## So what exactly *is* a design system?
+## So what exactly _is_ a design system?
 
 At its core, it's just a shared set of decisions:
+
 - What color is the primary button?
 - How much space goes between things?
 - What happens when someone tabs through the form?
@@ -32,40 +33,50 @@ Whether those decisions live in a polished component library or a sticky note on
 Let me tell you what I've seen.
 
 ### 1. The One Button to Rule Them All
+
 You know the one. It checks if there's an `href` so it can become a link. Then it checks if it's an external link to decide whether to add `rel="noopener noreferrer"` and `target="_blank"`. Then there's logic for `variant`, `size`, `icon`, `fullWidth`, `loading`, `disabled`, `aria-busy`, `type="button"` in case it's rendered in a form, and now your team is afraid to touch it.
 
 ### 2. The 50-line Horizontal Row
+
 Not a joke. I've seen `<hr>` components where half the logic is layout gymnastics and the other half is defensive code that no one understands anymore. At some point, someone added a prop called `forceLeft` and nobody asked why.
 
 The wildest part? It could've been **five simple characters**: `<hr />`. Six, if you count the space. One line of CSS, and done. But somehow we ended up with a full-blown component, tests, and documentation just to draw a line on the page. Welcome to the overengineering olympics.
 
 ### 3. The Banner That Became a Maze
+
 You start with a simple masthead. Then someone wants an image on the right. Then someone wants a CTA. Then no image. Then centered text. Then "can we make it editable in the CMS?" Now you've got a single component trying to solve 12 layout problems with 9 props, 4 conditionals, and zero joy.
 
 ### 4. The Component Graveyard
+
 It starts with good intentions. But then you realize half the components in the repo are only used once. Some of them aren't used at all. You don't even remember why someone added `AnimatedBadgeWithTooltip` or why it has 30 lines of animation config. Every system has a few of these. That's okay. But too many, and you're just shoveling tech debt into your own backyard.
 
 ## What's worked better for me
 
 ### Keep it boring
+
 Pick your colors. Choose your spacing. Stick to them. Name them clearly. You don't need to invent a token naming strategy unless you're supporting multiple themes or working across platforms.
 
 ### Build what repeats
-If I've written the same thing two or three times, that's usually my signal to extract a component. Not before. The fastest way to over-engineer your UI is to start building components you *might* need someday. <abbr title="Just in Time">JIT</abbr> development is totally cool and usually the best way to go.
+
+If I've written the same thing two or three times, that's usually my signal to extract a component. Not before. The fastest way to over-engineer your UI is to start building components you _might_ need someday. <abbr title="Just in Time">JIT</abbr> development is totally cool and usually the best way to go.
 
 ### Make it understandable at a glance
+
 Whether you use Tailwind, Sass, or just straight-up CSS, the rule is the same: if you have to stop and think about how to use a component, it's not helping you.
 
 ### Accessibility isn't optional
+
 Accessible components don't just help users, they help you sleep better at night. Add roles, labels, keyboard behavior, and focus styles. If you're gonna systematize something, systematize inclusion.
 
 ### UI frameworks? Totally valid
+
 Bootstrap, Chakra, ShadCN, DaisyUI, Tailwind UI...they're all solid. Well-documented, battle-tested, and a huge time-saver when used wisely. No shame in that game.
 
 But here's something worth considering:
 If you have the skill to customize these frameworks to fit your brand and design style, you probably also have the skill to build your own from scratch.
 
-That doesn't mean you *should*. But rolling your own means:
+That doesn't mean you _should_. But rolling your own means:
+
 - No versioning headaches
 - No extra dependencies
 - No unused code (even though most frameworks are pretty great about tree shaking these days)
@@ -74,10 +85,11 @@ Sometimes the best system is the one you understand top to bottom.
 
 ## A rule of thumb
 
-If a piece of UI does the same thing in three different places, it's probably worth making a component. If it does *kind of* the same thing in three places but looks and behaves totally differently in each… maybe not.
+If a piece of UI does the same thing in three different places, it's probably worth making a component. If it does _kind of_ the same thing in three places but looks and behaves totally differently in each… maybe not.
 
 When in doubt, ask:
-> *Does this make the next developer's life easier, or harder?*
+
+> _Does this make the next developer's life easier, or harder?_
 
 If it's easier, componentize. If it's harder, hold off.
 
