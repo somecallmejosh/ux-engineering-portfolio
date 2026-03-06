@@ -31,9 +31,11 @@ useSeoMeta({
       </article>
       <aside class="space-y-6 lg:space-y-12">
         <TagLinkList title="Blog Tags" collection="blog" />
-        <CallOut class="mb-6"><strong>Blog Disclaimer</strong>: Each article in my blog is strictly my own opinion.
-          Nothing in here is a reflection of the views of my employer or any other organization. If you have any
-          questions or suggestions, feel free to <NuxtLink to="/contact/">reach out</NuxtLink>.</CallOut>
+        <CallOut class="mb-6">
+          <strong>Blog disclaimer:</strong> Each article on this blog is strictly my own opinion and
+          doesn't reflect the views of my employer or any other organization. <NuxtLink to="/contact/">Reach out
+          </NuxtLink> if you have questions or feedback.
+        </CallOut>
       </aside>
     </div>
   </PageWrapper>

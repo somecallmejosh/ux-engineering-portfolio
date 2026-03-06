@@ -15,23 +15,23 @@ const navGroups = [
     items: [
       { title: 'Home', path: '/', icon: 'ph:house' },
       { title: 'Services', path: '/services/', icon: 'ph:handshake' },
+      { title: 'Recent Projects', path: '/projects/', icon: 'ph:projector-screen-chart' },
+    ]
+  },
+
+  {
+    groupTitle: 'Personal',
+    items: [
+      { title: 'Testimonials', path: '/testimonials/', icon: 'ph:chats' },
       { title: 'About Me', path: '/about/', icon: 'ph:lego-smiley' },
-      { title: 'Contact', path: '/contact/', icon: 'ph:address-book' },
+      { title: 'Contact Me', path: '/contact/', icon: 'ph:address-book' },
     ]
   },
   {
-    groupTitle: 'Projects',
+    groupTitle: 'Writing',
     items: [
-      { title: 'Projects', path: '/projects/', icon: 'ph:projector-screen-chart' },
-      { title: 'Testimonials', path: '/testimonials/', icon: 'ph:chats' },
       { title: 'Blog', path: '/blog/', icon: 'ph:article-ny-times' },
       { title: 'Dev Notes', path: '/dev-notes/', icon: 'ph:notepad' },
-    ]
-  },
-  {
-    groupTitle: 'Other',
-    items: [
-
     ]
   },
 ]

@@ -28,15 +28,13 @@ const allBlogCategories = await queryCollection('blog')
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Blog" pillIcon="ph:article-ny-times">Brain Dump, My Digital Notebook</PageHeader>
-      <p>
-        This is where I stash thoughts on building better web experiences. Consider this part memory bank, part storytelling outlet, part open-source therapy session.
+      <PageHeader pill="Blog" pillIcon="ph:article-ny-times">UX Design & Development Blog</PageHeader>
+      <p class="text-pretty">
+        Practical takes, honest opinions, and the occasional
+        fictional UX engineer.
       </p>
     </section>
     <CardList v-if="allPosts" :list="allPosts" />
-    <TagLinkList
-      title="Blog Tags"
-      collection="blog"
-    />
+    <TagLinkList title="Blog Tags" collection="blog" />
   </PageWrapper>
 </template>

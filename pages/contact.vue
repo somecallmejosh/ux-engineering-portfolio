@@ -188,8 +188,7 @@ const onSubmit = async (event) => {
               <div><small>* indicates a required field</small></div>
               <motion.button :whilePress="{ y: 2 }" type="submit"
                 class="inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Send
-                Message</motion.button>
+                Send Message</motion.button>
             </div>
           </form>
 
@@ -218,14 +217,24 @@ const onSubmit = async (event) => {
             <div class="prose">
               <h2 id="social-media" class="text-lg mb-2">Social Media</h2>
             </div>
-            <ul class="not-prose grid grid-cols-2">
+            <ul class="not-prose flex gap-6 items-center justify-between flex-grow">
               <li class="flex items-center gap-1">
-                <Icon name="logos:linkedin-icon" size="1.5em" /><a href="https://www.linkedin.com/in/joshuabriley/"
-                  class="hover:underline" target="_blank" rel="noreferrer nofollow">/joshuabriley</a>
+                <div class="no-shrink translate-y-1">
+                  <Icon name="logos:linkedin-icon" size="1em" />
+                </div>
+                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank">
+                  <span class="sr-only">LinkedIn.com/</span>
+                  joshuabriley
+                </a>
               </li>
               <li class="flex items-center gap-1">
-                <Icon name="logos:x" size="1.5em" /><a href="https://x.com/joshuabriley" class="hover:underline"
-                  target="_blank" rel="noreferrer nofollow">/joshuabriley</a>
+                <div class="no-shrink translate-y-1">
+                  <Icon name="logos:x" size="1em" />
+                </div>
+                <a href="https://x.com/joshuabriley" class="hover:underline" target="_blank">
+                  <span class="sr-only">x.com/</span>
+                  joshuabriley
+                </a>
               </li>
             </ul>
           </callout>
