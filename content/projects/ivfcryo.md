@@ -1,35 +1,66 @@
 ---
 slug: ivfcryo
-businessName: "IVFCryo, LLC"
-businessUrl: "https://www.ivfcryo.com"
+businessName: 'IVFCryo, LLC'
+businessUrl: 'https://www.ivfcryo.com'
 publishedAt: 2025-11-03
-title: "IVFCRYO: Streamlining a Delicate Journey with Smart Tech"
-description: "How I helped IVFCRYO modernize fertility specimen shipping with a smart, accessible web app that brought clarity, speed, and peace of mind."
-tags: [aws-light, css, github-light, xd, html, javascript, java-light, tailwindcss-light, d3-light]
+title: 'IVFCRYO: shipping application and accessibility-first development'
+description: 'Building a self-service shipping application for a fertility specimen logistics provider — with real-time environmental tracking, multi-carrier label printing, and accessibility built in from day one.'
+tags:
+  [
+    aws-light,
+    css,
+    github-light,
+    xd,
+    html,
+    javascript,
+    java-light,
+    tailwindcss-light,
+    d3-light,
+  ]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1744917502/josh-portfolio/assets_task_01js2js43afnqt5m68bxjmmd81_img_0.webp'
-image_alt: "IVFCRYO web application screenshot showcasing the shipping process."
+image_alt: 'IVFCRYO web application screenshot showcasing the shipping process.'
 ---
 
-## My Work with IVFCRYO: Streamlining a Delicate Journey with Smart Tech
+## Overview
 
-IVFCRYO is on a crucial mission: to safeguard precious biological specimens within the fertility industry, minimizing the risk of loss. Starting as a consultancy, they've grown into a full-service "everything-cryo" provider.
+IVFCRYO provides cryogenic specimen logistics for the fertility industry. Their work involves coordinating the safe transport of biological specimens under strict environmental conditions, where errors in process or documentation carry serious consequences.
 
-When I connected with them, they had a vital need: to transform their time-consuming, error-prone manual shipping process into a smooth, user-friendly web application. This project wasn't just about saving time; it was about bringing peace of mind to both IVFCRYO and their clients during a sensitive process.
+When I started working with them, their shipping workflow was entirely manual. Staff processed each shipment through paperwork, handwritten labels, and phone-based coordination with shipping carriers. The process was time-consuming, error-prone, and offered clients no visibility into what was happening with their specimens during transit.
+The goal was to replace that manual workflow with a self-service web application that clients could use independently, that integrated directly with major shipping carriers, and that surfaced real-time environmental data from hardware already in use during shipments.
 
-## From Paper Trails to Digital Pathways: Building a Seamless Shipping App
-The old way of handling shipments at IVFCRYO involved a lot of manual paperwork, which was eating up valuable time and leaving room for errors. Printing labels constantly was another major hurdle. Recognizing the need for a digital solution, we set out to build a web application that would let customers manage their shipments themselves, a true self-service experience.
+## Replacing a manual workflow with a self-service application
 
-The impact was immediate. By automating the process, IVFCRYO saved nearly an hour per shipment. This is a huge win when you're dealing with critical timelines. The app's built-in defaults also significantly reduced those pesky handwritten documentation errors. But we didn't stop there. We connected the app with the APIs of major shipping carriers like FedEx, so printing all the necessary labels for multi-carrier shipments became a breeze.
+### The problem
 
-## Adding a Layer of Security and Visibility: Integrating Cutting-Edge Tracking
-What made this project particularly exciting was the integration with IVFCRYO's Sense device. This clever piece of tech tracks and monitors crucial environmental factors during transit. We brought that data right into the app, giving customers real-time updates on the GPS location of their shipment, the internal temperature where their specimens were safely stored, the outside temperature conditions, humidity levels, and even atmospheric pressure. This level of transparency wasn't just convenient; it added a significant layer of security and trust.
+Each shipment required staff to manually complete paperwork, print labels for multiple carriers, and field status inquiries from clients by phone or email. Processing a single shipment took close to an hour. Across a day's worth of shipments, that overhead added up significantly, and it created room for documentation errors that had real downstream consequences.
 
-For customers, this meant saying goodbye to stressful phone calls and manually written email requests. With our new shipping app, requesting a shipment became a simple two-click process. Again, this is a huge time and headache saver! Plus, those who opted in received real-time text notifications alongside the in-app updates. We also implemented real-time email updates that detailed the chain of custody exchanges during the shipment journey, providing even more reassurance.
+### What I built
 
-## Tech That Works for Everyone: A Powerful Lesson in Accessibility
-One of the most profound aspects of this project was the opportunity to work closely with one of IVFCRYO's customers who was legally blind. He generously agreed to be a partner throughout the development process, providing invaluable feedback from the perspective of a user with visual impairments. This experience was a massive eye-opener for me. It was the best education I could have ever received in the importance of web accessibility. His insights directly shaped how we designed the interface, ensuring it was navigable and usable for everyone, regardless of their visual abilities.
+A web application that allowed clients to initiate and manage their own shipments without staff intervention. Clients could request a shipment in two steps, with built-in defaults that enforced documentation requirements and reduced the likelihood of input errors.
+The application connected directly to the APIs of major shipping carriers, including FedEx, so all required labels for multi-carrier shipments could be generated and printed from within the application. No manual label creation, no separate carrier portals.
 
-## The Impact: Building Trust and Efficiency in a Critical Industry
-The shipping application we created for IVFCRYO did more than just digitize a process. It saved the company significant time, reduced errors, and streamlined their operations. But more importantly, it empowered their customers with unprecedented visibility and control over their sensitive shipments, fostering increased loyalty and retention.
+### The result
 
-This project underscored the power of technology to not only improve efficiency but also to enhance trust and provide peace of mind. By focusing on user needs, including those with accessibility challenges, we built a solution that truly served both IVFCRYO and their customers, making a delicate process a little bit easier and a lot more transparent. It's a project I'm incredibly proud to have been a part of.
+Processing time per shipment dropped by nearly an hour. Documentation errors decreased because the application enforced required fields and applied sensible defaults. Staff time previously spent on shipment coordination shifted to higher-value work.
+
+## Real-time environmental tracking via hardware integration
+
+IVFCRYO uses a hardware device called Sense that monitors environmental conditions inside specimen containers during transit. The data it captures — GPS location, internal temperature, external temperature, humidity, and atmospheric pressure — was previously only accessible after the fact.
+
+I integrated the Sense device API into the shipping application so that data was surfaced to clients in real time. During a shipment, clients could see exactly where their specimens were and confirm that environmental conditions remained within safe parameters throughout the journey.
+
+The application also sent automated notifications at key points in the shipment lifecycle. Clients who opted in received real-time text messages alongside in-app updates. Automated emails documented each chain-of-custody exchange, giving clients a detailed record of their shipment without requiring them to contact staff.
+For an industry where trust is the product, giving clients direct visibility into what was happening replaced anxiety with confidence.
+
+## Building with a visually impaired user as a design partner
+
+One of IVFCRYO's clients is legally blind and agreed to participate in the development process as an active design partner, not just a tester at the end. He provided ongoing feedback throughout the build, from early wireframes through to final implementation.
+Working directly with a user who relied on a screen reader and keyboard navigation changed how I approached every design decision. Navigation structure, focus order, label clarity, error messaging, and interactive feedback all went through review with his direct input. Issues were caught and resolved in context, during development, rather than discovered in an audit after launch.
+
+This is the most effective accessibility work I've done. Having a real user with a genuine stake in the outcome as a collaborator produces results that automated tooling and internal review alone cannot replicate. The application launched meeting Web Content Accessibility Guidelines (WCAG) 2.1 AA standards, with interaction patterns validated by someone who depended on them.
+
+## What I took from this project
+
+The IVFCRYO project clarified something I'd believed but not fully tested: the best accessibility work happens when people with disabilities are part of the design process, not subjects of a review at the end. The difference in outcome is significant, and the process is more straightforward than most teams assume.
+
+It also reinforced that digitizing a manual process is only valuable if the replacement is genuinely easier to use than what it replaced. A shipping application that required training or staff assistance would have failed the brief, regardless of how technically sound the implementation was. The measure of success was whether clients could use it confidently on their own.

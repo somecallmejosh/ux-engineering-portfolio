@@ -1,9 +1,12 @@
 <script setup lang="tsx">
+const title = "Josh Briley | Design Systems Engineer & Frontend Consultant"
+const description = "Fixed-scope consulting for design system audits, component library builds, and design-to-code workflow optimization. Clear deliverables, clear pricing."
+
 useSeoMeta({
-  title: 'Josh Briley | Practical UX Engineering for Complex Products',
-  ogTitle: 'Josh Briley | Practical UX Engineering for Complex Products',
-  description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
-  ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
 })
 
@@ -46,18 +49,31 @@ const combinedPosts = [
       <section aria-describedby="page-header" class="prose">
         <PageHeader>I help product teams build component libraries that scale, with accessibility built in from the
           start.</PageHeader>
-        <p>I'm a Design Systems Engineer who loves turning design ideas into interfaces that just work. I focus on
-          design systems, component libraries, and building products that are easy to use, easy to maintain, and maybe
-          even a little fun along the way.</p>
+        <p class="mb-2">I'm a Design Systems Engineer with 20 years of experience helping teams ship consistent,
+          accessible interfaces and keep them that way.</p>
+        <div class="flex items-center gap-2">
+          <ButtonLink to="/services/">
+            View my services
+          </ButtonLink>
+          <ButtonLink to="/contact/" variant="inverse">
+            Get in touch
+          </ButtonLink>
+        </div>
       </section>
-
       <Services />
       <section aria-labelledby="recent">
-        <h2 class="text-2xl mb-4" id="recent">Recent Posts</h2>
+        <h2 class="text-2xl mb-4" id="recent">Recent work and writing</h2>
         <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
           <CardListItem :data="combinedPosts" />
         </ul>
       </section>
+      <Callout>
+        <h2 id="get-started">Ready to get started?</h2>
+        <p>Whether you need a full audit or a fresh component library foundation, let's figure out if there's a fit.</p>
+        <ButtonLink to="/contact/">
+          Get in touch
+        </ButtonLink>
+      </Callout>
     </div>
   </div>
 </template>

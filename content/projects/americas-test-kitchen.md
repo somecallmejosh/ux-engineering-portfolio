@@ -1,43 +1,94 @@
 ---
 slug: americas-test-kitchen
 businessName: "America's Test Kitchen"
-businessUrl: "https://www.americastestkitchen.com"
+businessUrl: 'https://www.americastestkitchen.com'
 publishedAt: 2025-11-03
-title: "America's Test Kitchen: Cooking Up a Better Web Experience"
-description: "Helping America’s Test Kitchen serve up a tastier web experience by blending accessible design and thoughtful front-end development."
-tags: [alpinejs-light, css, github-light, heroku, html, javascript, nextjs-light, rails, react-light, ruby, sass, styledcomponents, typescript]
+title: "America's Test Kitchen: design system and CMS development"
+description: 'Building a custom CMS, a cross-brand component library, and an accessible UI foundation for one of the most recognized cooking brands in the US.'
+tags:
+  [
+    alpinejs-light,
+    css,
+    github-light,
+    heroku,
+    html,
+    javascript,
+    nextjs-light,
+    rails,
+    react-light,
+    ruby,
+    sass,
+    styledcomponents,
+    typescript,
+  ]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743990869/josh-portfolio/assets_task_01jr6z5kt8efcsevzqzwek0gse_img_0.webp'
 image_alt: "America's Test Kitchen website screenshot showcasing a delicious recipe."
 ---
-## My Time at America's Test Kitchen: Serving Up a Better Digital Experience
-America's Test Kitchen (ATK) is all about amazing recipes, smart cooking tips, and honest product reviews. When I joined their team, my mission was to make sure their online experience was just as fantastic as their content.
 
-## Taming the Content Beast: Building Barista, a CMS Just for Them
-One of the first things I noticed was a bottleneck for the editorial team. They had to rely on the engineering squad for every little update, which slowed down getting those fresh recipes and reviews out to hungry audiences. Seeing how this could hold ATK back, I started dreaming up a custom content kitchen, a CMS we eventually named "Barista."
+## Overview
 
-Barista wasn't built in a vacuum. It came from lots of chats with the editors, project managers, and my fellow developers. I wanted to create a system that not only made the editorial flow smoother but also gave the team the power to publish updates without constantly tapping on the engineers' shoulders. By keeping the design super intuitive, simple menus, clear ways to organize content, even folks who weren't tech wizards could pick it up quickly. The day Barista launched? The editorial team practically got hours back in their day, meaning those delicious new recipes and product scoops hit the web way faster. Talk about a game-changer for getting content to their audience!
+America's Test Kitchen (ATK) produces recipes, cooking guides, and product reviews across multiple brands, publications, and websites. When I joined the team, the engineering and editorial workflows were tightly coupled in ways that slowed content delivery and made cross-brand consistency hard to maintain.
 
-## Making Barista Feel Like Home: Focusing on Ease and Consistency
-Once Barista was up and running, I noticed some folks were still finding their way around. Editors would occasionally get tripped up by a feature or have trouble finding the right template. Instead of just slapping on a quick fix, I really listened to their feedback. I set up regular check-ins where they could tell me what was working and what wasn't. Armed with those insights, I tweaked the interface to better match how they actually worked.
+My work focused on three areas: building a custom content management system (CMS) for the editorial team, creating a shared React component library that worked across ATK's brand portfolio, and making accessibility a built-in standard rather than a late-stage consideration.
 
-These might sound like small changes. Moving a button here, renaming a dropdown there  added up big time. Over a few design sprints, Barista started to feel less like a new tool they had to use and more like a natural part of their editorial rhythm. That comfort level boosted their confidence, and they started feeling more free to experiment with fresh content ideas. It was like making their digital workspace a joy to be in!
+## Building Barista, a custom CMS for the editorial team
 
-## Accessibility: Baking it In from the Start
-Meanwhile, I was also thinking a lot about making sure everyone could use Barista without any hiccups, no matter their abilities. Sometimes accessibility gets pushed to the side when you're rushing to launch new stuff, but I saw it as a fundamental ingredient for a great user experience. I teamed up with our QA testers and accessibility champions to really dig into the platform. We checking color contrasts, making sure headings were clear, and ensuring you could navigate everything with just a keyboard. It was about building an application that's welcoming to everyone.
+### The problem
 
-## Building Once, Serving Many: Reusable Components for All the ATK Brands
-ATK isn't just one flavor; it's a whole buffet of cooking shows, magazines, and websites (at least it was when I was there!). That meant our digital tools had to work across different platforms and styles while still feeling like they were part of the ATK family. I joined forces with our design and marketing gurus to create a set of reusable UI components. Think of them as versatile kitchen utensils that work for any recipe.
+The editorial team couldn't publish content updates without engineering involvement. Every new recipe, review, or article required a developer to intervene, which created a bottleneck that slowed ATK's content output and pulled engineers away from product work.
 
-Being a React shop, we used Next.js to build this library of UI elements that could be dropped into different brands. We built everything from basic buttons to fancy carousels, to modals with tab trapping, the works. This was key because ATK's audience might hop between different brands without even realizing it. We wanted that transition to feel smooth, even if the tech behind the scenes was different.
+### What I built
 
-It might sound complicated, but by carefully separating the visual style from how things actually worked, we kept the designs flexible. This was a huge time-saver. Instead of coding every new feature from scratch for each brand, we could build it once and then style it however we needed. Plus, it cut down on little inconsistencies like a slightly off color or a missing button style was easy to spot and fix in one central place. It was like having a well-organized spice rack where everything is easy to find and use!
+I designed and built a custom CMS we named Barista. The goal was to give editors full control over content publishing without requiring technical knowledge.
 
-## The Storybook Recipe: Documenting for Everyone
-Once we had this ever-growing collection of components, we faced another challenge: making sure everyone knew how to use them! Teams needed a reliable guide to understand what each component did, when to use it, and how to keep everything accessible. That's where Storybook became our trusty recipe book. I worked with QA and other engineers to document each component's function, when to use it, and the important accessibility guidelines.
+The process started with direct conversations with editors, project managers, and engineers. I mapped their actual workflows before writing any code, which shaped the information architecture, navigation, and template structure from the start.
 
-This wasn't just for the developers; it was super helpful for designers and even the marketing team who wanted to see how things worked under the hood. If someone needed a form widget that could handle different kinds of information, they could just check Storybook and see examples of how it behaved. This level of openness sped up our development process and created a clear roadmap for future improvements. It was like having a shared language for building the digital kitchen.
+The interface was deliberately simple: clear content hierarchies, straightforward templates, and consistent interaction patterns throughout. Editors could find what they needed without training, and the learning curve was minimal.
 
-## The Delicious Results: Stronger Digital Foundations
-Looking back at my time at America's Test Kitchen, I'm really proud of how these efforts came together to build a strong digital foundation for such a beloved brand. By empowering the editorial team with Barista, focusing on making things easy to use, and making accessibility a core part of our platform, we made it better for everyone to enjoy and contribute to ATK's culinary adventures.
+### The result
 
-Maybe the biggest takeaway for me was the power of teamwork. None of this would have been possible without the editors who shared their frustrations, the designers who collaborated on solutions, or the marketing teams who always kept the end-user in mind. Together, we created a more efficient, inclusive, and user-friendly digital environment that continues to help ATK grow. It was a real team effort, and that's what made it so rewarding.
+After Barista launched, the editorial team could publish updates independently. Content that previously required an engineering ticket went live directly, which reduced turnaround time significantly and freed the engineering team to focus on product development.
+
+## Refining the tool based on real usage
+
+After launch, I monitored how the editorial team actually used Barista and set up regular feedback sessions to surface friction points.
+
+What came back wasn't about missing features. Editors were occasionally confused by navigation labels or couldn't find the right template quickly. Small things, but they added up across a busy editorial calendar.
+
+I worked through several design iterations based on that feedback: reorganizing navigation, renaming options to match editorial language, and making template selection more predictable. Each change was small. The cumulative effect was that Barista stopped feeling like a tool the team had to use and started feeling like a natural part of their workflow.
+
+## Accessibility built in from the start
+
+Accessibility wasn't treated as a final checklist item. I worked alongside QA testers and accessibility specialists throughout development to audit the platform as it was being built.
+
+The audit process covered color contrast ratios, heading structure and hierarchy, keyboard navigation across all interactions, and screen reader compatibility. Issues were addressed in the same sprint they were found, not deferred to a later phase.
+
+The result was a CMS that met Web Content Accessibility Guidelines (WCAG) 2.1 AA standards and was usable by team members with a range of abilities and assistive technology preferences.
+
+## A shared component library across ATK's brand portfolio
+
+### The problem
+
+ATK operates several brands, each with its own visual identity, but the underlying UI patterns and interactions needed to work consistently across all of them. Building and maintaining separate component implementations for each brand wasn't sustainable.
+
+### What I built
+
+Working with the design and marketing teams, I built a shared React component library using Next.js. The library covered a full range of UI elements: buttons, form inputs, carousels, modals with focus trapping, navigation patterns, and more.
+
+The key architectural decision was separating visual styling from component behavior. Each component handled its own logic and accessibility requirements. Visual customization happened at the brand level through design tokens and style overrides. This meant a component built once could look and feel distinct across brands while sharing the same accessible, tested foundation.
+
+### The result
+
+New features no longer had to be rebuilt from scratch for each brand. The team built once and styled as needed. Visual inconsistencies like mismatched colors or missing button states were easy to identify and fix in one place, and the fix propagated across all brands automatically.
+
+## Storybook documentation for the whole team
+
+As the component library grew, discoverability became a challenge. Teams needed a reliable reference for understanding what each component did, when to use it, and what accessibility requirements applied.
+
+I worked with QA and other engineers to document every component in Storybook. Each entry included a description of the component's purpose, usage guidance, variant examples, and accessibility notes.
+
+The documentation wasn't written for developers alone. Designers used it to verify that implementations matched their intentions. Marketing and content teams used it to understand what was available before requesting new work. A shared, accessible reference reduced miscommunication across disciplines and made onboarding new team members faster.
+
+## What I took from this project
+
+The work at ATK reinforced something I've found to be true across every design system project: the most important decisions happen before the first line of code. Talking to the editorial team before building Barista shaped everything that came after. Documenting components for a cross-functional audience made the library more useful than one built for developers alone. Good systems are built with the people who use them, not just for them.

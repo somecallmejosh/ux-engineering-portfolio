@@ -117,19 +117,9 @@ const skillIcons = [
 
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
       <div v-if="post" class="prose">
-        <PageHeader class="" pill="Project" pillIcon="ph:projector-screen-chart">{{  post.title }}</PageHeader>
-        <AnimateImage
-          :src="post.image"
-          :alt="post.meta.image_alt"
-          :scaleY="0.75"
-          />
-        <section aria-label="Tools and languages used on this project" class="not-prose space-y-6 max-w-full">
-          <TagLinks
-            v-if="post.tags"
-            :tags="post.tags"
-            class="mb-6"
-          />
-        </section>
+        <PageHeader class="" pill="Project" pillIcon="ph:projector-screen-chart">{{ post.title }}</PageHeader>
+        <AnimateImage :src="post.image" :alt="post.meta.image_alt" :scaleY="0.75" />
+
         <article class="prose">
           <TableOfContents :links="post.body.toc.links" />
           <ContentRenderer :value="post" />
@@ -139,33 +129,37 @@ const skillIcons = [
         <div class="lg:sticky lg:top-16">
           <div class="flex items-center gap-2 mb-6 lg:mt-20">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
-            <CardHeader>{{  post.businessName }}</CardHeader>
+            <CardHeader>{{ post.businessName }}</CardHeader>
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
           </div>
-          <motion.div
-            layoutScroll
-            :style="{ overflow: 'scroll' }"
-          >
-            <motion.div
-              :initial="{ opacity: 0, y: 200}"
-              :whileInView="{ opacity: 1, y: 0 }"
-              :transition="{ duration: 0.3 }"
-            >
+          <motion.div layoutScroll :style="{ overflow: 'scroll' }">
+            <motion.div :initial="{ opacity: 0, y: 200 }" :whileInView="{ opacity: 1, y: 0 }"
+              :transition="{ duration: 0.3 }">
               <div
                 class="relative mx-auto border-neutral-200 dark:border-neutral-200 bg-neutral-200 border-[14px] rounded-[2.5rem] h-[682px]  w-full">
-                <div class="h-[32px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-                <div class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-                <div class="h-[64px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+                <div
+                  class="h-[32px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[72px] rounded-s-lg">
+                </div>
+                <div
+                  class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[124px] rounded-s-lg">
+                </div>
+                <div
+                  class="h-[46px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -start-[17px] top-[178px] rounded-s-lg">
+                </div>
+                <div
+                  class="h-[64px] w-[3px] bg-neutral-200 dark:bg-neutral-200 absolute -end-[17px] top-[142px] rounded-e-lg">
+                </div>
                 <div class="rounded-[2rem] overflow-hidden h-[426px] h-[654px] bg-white dark:bg-neutral-200">
-                  <iframe loading="lazy" :title="`${post.businessName} website`" class="w-full h-full " :src="post.businessUrl" frameborder="0"></iframe>
+                  <iframe loading="lazy" :title="`${post.businessName} website`" class="w-full h-full "
+                    :src="post.businessUrl" frameborder="0"></iframe>
                 </div>
               </div>
             </motion.div>
           </motion.div>
           <div class="flex items-center gap-2 mt-6">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
-            <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 text-sm font-medium hover:underline block shrink-0">
+            <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-1 text-sm font-medium hover:underline block shrink-0">
               <span>Visit {{ post.businessName }}</span>
               <Icon name="ph:arrow-square-out" class="size-4" />
             </a>

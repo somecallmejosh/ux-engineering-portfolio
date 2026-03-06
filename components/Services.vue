@@ -55,12 +55,10 @@ const services = [
 <template>
   <section class="space-y-8" aria-labelledby="services-heading">
     <div class="prose">
-      <h2 id="services-heading" class="text-2xl">Let's Work Together</h2>
-      <p>Three focused engagements at fixed scope and price. You know exactly what you're getting. No surprises, no
-        scope creep.</p>
+      <h2 id="services-heading" class="text-2xl">Work with me</h2>
+      <p>Three focused engagements at fixed scope and price. You know exactly what you're getting before we start.</p>
     </div>
-
-    <ul class="not-prose grid md:grid-cols-3 gap-6 md:gap-y-5 list-none p-0 m-0">
+    <ul class="not-prose grid md:grid-cols-3 gap-6 md:gap-y-5 list-none p-0 m-0 mb-6">
       <li v-for="service in services" :key="service.id"
         class="service-card rounded-lg border-2 border-neutral-200 bg-white p-6 prose">
         <div class="space-y-0.5">
@@ -92,14 +90,15 @@ const services = [
         </p>
 
         <div class="not-prose">
-          <NuxtLink to="/contact/"
-            class="inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <ButtonLink to="/contact/">
             Get in touch
-            <Icon name="ph:arrow-right" size="0.9rem" />
-          </NuxtLink>
+          </ButtonLink>
         </div>
       </li>
     </ul>
+    <trust-bar class="mb-6"> Component libraries shipped at <strong>Travelers</strong>, <strong>
+        Berkshire Hathaway Specialty Insurance</strong>, and <strong> America's Test Kitchen</strong>.
+    </trust-bar>
   </section>
 </template>
 
