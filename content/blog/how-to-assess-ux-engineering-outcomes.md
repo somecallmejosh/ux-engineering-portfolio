@@ -2,15 +2,15 @@
 slug: how-to-assess-ux-engineering-outcomes
 publishedAt: 2025-01-19
 title: 'How I Learned to Measure UX (the Hard Way)'
-description: "A story about the real metrics that matter in UX—and why time on page means nothing if your users are just confused."
+description: "A story about the real metrics that matter in UX, and why time on page means nothing if your users are just confused."
 tags: [user-experience]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1743962937/josh-portfolio/assets_task_01jr64g84beg6t7tcdqqkhzccc_img_0.webp"
 image_alt: 'Measuring Impact: How to Assess UX Engineering Outcomes'
 ---
 
-There was a time in my career when we'd roll out a shiny new interface and just… hope for the best. We'd have standups where someone might say, "It feels better," or "I think this flow is smoother," and we'd all nod like that meant something.
+There was a time in my career when we'd roll out a shiny new interface and just hope for the best. We'd have standups where someone might say, "It feels better," or "I think this flow is smoother," and we'd all nod like that meant something.
 
-I remember one project in particular where we'd redesigned a key section of the app. It looked better, no doubt. We had cleaner visuals, fewer steps. We shipped it, high-fived, and waited for praise to roll in. A few days later, the product manager burst in with a fresh batch of analytics and a concerned look on their face. "So… did this actually help users? Because our support tickets just went up."
+I remember one project in particular where we'd redesigned a key section of the app. It looked better, no doubt. We had cleaner visuals, fewer steps. We shipped it, high-fived, and waited for praise to roll in. A few days later, the product manager burst in with a fresh batch of analytics and a concerned look on their face. "So, did this actually help users? Because our support tickets just went up."
 
 That was the moment it hit me: we didn't know how to measure what success looked like.
 
@@ -45,6 +45,6 @@ That flexibility, knowing when to let go of the old yardstick and pick up a new 
 ## What I Know Now (That I Didn't Back Then)
 I don't have a perfect system for measuring UX impact. I've definitely shipped features without clear metrics. I've misunderstood what the data was telling me. I've made assumptions that didn't hold up.
 
-But over time, I've learned to slow down and ask better questions before diving into a redesign. I've learned to pair analytics with actual human feedback. And I've learned that the real win isn't just making something look better. It's about making it work better, in ways we can see and explain.
+But over time, I've learned to slow down and ask better questions before starting a redesign. I've learned to pair analytics with actual human feedback. And I've learned that the real win isn't just making something look better. It's about making it work better, in ways we can see and explain.
 
 UX Engineering isn't just about clean code and smooth animations. It's about outcomes. It's about impact. And the only way to know if we're doing it right is to measure, listen, and keep learning, even after launch.

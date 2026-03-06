@@ -11,7 +11,7 @@ Reflection: There was a project that, on paper, should've gone sideways.
 
 Tight deadline. Vague requirements. Competing priorities. You know the type. The goal was to improve onboarding, and the team included designers, engineers, and product folks, each with strong opinions and just enough blind spots to make things interesting.
 
-But somehow… it worked. Not because we had perfect specs or a magical roadmap. It worked because people showed up ready to listen, adapt, and figure things out together.
+But it worked. Not because we had perfect specs or a magical roadmap. It worked because people showed up ready to listen, adapt, and figure things out together.
 
 ## Collaboration That Actually Worked
 One of the first big tension points was over a small detail, a micro-interaction that looked great in the prototype but didn't play nice with our codebase. Normally, this would've turned into one of those "just ship it without the animation" situations. But instead of going into corners and grumbling, everyone got together for a quick chat.
@@ -25,7 +25,7 @@ That one conversation set the tone: respectful, collaborative, and centered on t
 ## Clear Roles, Fewer Surprises
 A lot of the friction in cross-functional teams doesn't come from disagreement, it comes from assumption. People assume someone else is owning a task. Or they assume that because it looks easy in the design, it'll be easy to build.
 
-On this project, the team got really good at spelling things out: who's updating the shared components, who's handling testing, who's keeping an eye on responsiveness, who's communicating the rollout. Nobody was micromanaged,, just clear on what they were responsible for.
+On this project, the team got really good at spelling things out: who's updating the shared components, who's handling testing, who's keeping an eye on responsiveness, who's communicating the rollout. Nobody was micromanaged, just clear on what they were responsible for.
 
 It wasn't about control. It was about ownership, and it made everything smoother.
 
@@ -53,6 +53,6 @@ It's not magic. It's just what happens when people are working with each other i
 ## The Real Takeaway
 Cross-functional collaboration isn't just about shipping on time or keeping the peace between teams. It's about creating an environment where people feel heard, respected, and genuinely part of the outcome.
 
-Because when designers, engineers, and product folks all care about the same thing, and they trust each other enough to say, "Hey, let's figure this out together", really good things tend to happen.
+Because when designers, engineers, and product folks all care about the same thing, and they trust each other enough to say, "Hey, let's figure this out together," really good things tend to happen.
 
 And the user? They usually end up noticing, too.

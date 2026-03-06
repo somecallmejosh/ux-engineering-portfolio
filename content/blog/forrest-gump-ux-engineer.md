@@ -17,7 +17,7 @@ Not because he's a tech wizard. Not because he memorized WCAG or knows the diffe
 
 He wouldn't optimize for cleverness. He'd optimize for kindness.
 
-## "I'm not a smart man… but I know what users need."
+## "I'm not a smart man, but I know what users need."
 Forrest wouldn't obsess over dark mode toggle animations or whether the border radius on a button should be 6px or 8px. He'd care about whether someone could click it easily. Whether the contrast was clear. Whether people could fill out a form without getting frustrated.
 
 He wouldn't talk about "user-centered design." He'd just do it.
@@ -25,7 +25,7 @@ He wouldn't talk about "user-centered design." He'd just do it.
 And while other folks were deep in philosophical debates about React Server Components, Forrest would be off quietly building something that worked on a flip phone.
 
 ## The Glue in the Room
-On a cross-functional team, Forrest wouldn't have a flashy role. He wouldn't call himself a 10x engineer. But he'd be the one who asked, "<em>Well… why don't we just talk about it?</em>"
+On a cross-functional team, Forrest wouldn't have a flashy role. He wouldn't call himself a 10x engineer. But he'd be the one who asked, "<em>Well, why don't we just talk about it?</em>"
 
 And people would.
 

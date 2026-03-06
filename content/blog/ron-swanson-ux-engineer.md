@@ -40,9 +40,7 @@ Everything is semantic. Everything is readable. His styles are written in plain 
 And it's fast. Really fast. Because there's nothing getting in the way.
 
 ## The Philosophy of UX According to Ron
-Ron doesn't obsess over delight or engagement metrics. He doesn't A/B test things for fun. He doesn't believe every user journey needs to be "magical." He builds tools. Quietly. With care. With restraint. If you asked Ron for his UX philosophy, he'd probably say: <em>If it respects the user's time, their privacy, and their intelligence… it's good enough</em>. And then he'd walk away.
-
-
+Ron doesn't obsess over delight or engagement metrics. He doesn't A/B test things for fun. He doesn't believe every user journey needs to be "magical." He builds tools. Quietly. With care. With restraint. If you asked Ron for his UX philosophy, he'd probably say: <em>If it respects the user's time, their privacy, and their intelligence, it's good enough.</em> And then he'd walk away.
 
 ## What Teams Learn From Working With Ron
 Ron's not going to mentor junior devs in a Slack channel. He's not going to give a talk at a UX conference called "Digital Minimalism and the Quiet Interface." But if you work next to him, you'll start asking better questions.

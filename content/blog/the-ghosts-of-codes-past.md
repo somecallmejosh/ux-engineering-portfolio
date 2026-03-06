@@ -8,13 +8,13 @@ image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto
 image_alt: "Developer looking at a computer screen with a haunted expression, surrounded by ghostly code snippets."
 ---
 
-When I first started writing code, I assumed there was some secret adult version of programming that happened behind closed doors. You know, where variable names made sense, patterns were consistent, and nobody left cryptic TODO comments dated 2017. I've since learned: that place doesn't exist.
+When I first started writing code, I assumed there was some secret adult version of programming that happened behind closed doors, where variable names made sense, patterns were consistent, and nobody left cryptic TODO comments dated 2017. I've since learned: that place doesn't exist.
 
 Every codebase has ghosts. And if you've ever opened a file and seen a key like `klass` (yes, with a "k") sitting awkwardly next to a shiny new `class`, you've met one.
 
 ## The Archaeology of Old Decisions
 
-Legacy code isn't always bad code. Sometimes it's just… older. It was written under constraints, pressure, or with information that no longer applies. Maybe the team didn't want to use reserved keywords like `class`, so `klass` was the workaround. Maybe it was a typo no one dared fix. Maybe someone was on a deadline and just needed it to work.
+Legacy code isn't always bad code. Sometimes it's just older. It was written under constraints, pressure, or with information that no longer applies. Maybe the team didn't want to use reserved keywords like `class`, so `klass` was the workaround. Maybe it was a typo no one dared fix. Maybe someone was on a deadline and just needed it to work.
 
 Whatever the reason, these decisions fossilize. They become part of the landscape. And soon, you're writing new features using both `klass` and `class`, because changing one would mean changing *everything*.
 
@@ -25,12 +25,12 @@ If you're thinking, "Well, why don't we just clean it all up?", then please cont
 The fear of updating changes across an entire codebase is real. Even when you *want* to do the right thing, a dozen invisible barriers start stacking up like the world's most passive-aggressive game of Jenga:
 
 * You foolishly believe that the tech debt you've been mentioning at standup for three months will be added to the next sprint. It won't.
-* The change would technically only take five minutes… followed by two hours of rewriting tests.
+* The change would technically only take five minutes, followed by two hours of rewriting tests.
 * You *know* this will break something, probably something in the legacy parts of the app that no one's touched since the Obama administration.
 * That "small" Jira ticket you picked up now means QA has to run full regression testing across three workflows, one of which only works in IE11 for reasons no one remembers.
 * Oh, and there's a non-zero chance that the PM will ask you, "What changed again? I thought this was a quick fix?"
 
-All of that&mdash;*all* of it&mdash;just to rename `klass` to `class`.
+All of that, *all* of it, just to rename `klass` to `class`.
 
 So sometimes, yes, you leave the weird key alone. You put your mouse down. You sigh. And you whisper to yourself, *Not today, demon. Not today.*
 

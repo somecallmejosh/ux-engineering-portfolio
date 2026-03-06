@@ -2,7 +2,7 @@
 slug: student-mindset
 publishedAt: 2025-04-29
 title: "The Student Mindset: Pros, Cons, and Why I'm (Still) Glad I Have It"
-description: "How a lifelong student mindset helped me grow in tech—and how it sometimes kept me from trusting what I already knew."
+description: "How a lifelong student mindset helped me grow in tech, and how it sometimes kept me from trusting what I already knew."
 tags: [career]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745935639/josh-portfolio/assets_task_01jt0xvxb2fffvrp6s52je2hej_1745935597_img_0.webp"
 image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
@@ -30,6 +30,6 @@ That doesn't mean abandoning the student mindset. It just means balancing it wit
 When I think back to what my teacher said, I don't see it as a critique anymore.
 I see it as a reminder: Learning is powerful. But so is stepping forward and trusting what you already know.
 
-I'm still proud to have a student mindset. I still seek out mentors, trusted peers, and better ways of doing things. (Heck, even the President has advisors.) Being a student isn't something you outgrow. It's something you carry with you, the same way you carry curiosity and humility.
+I'm still proud to have a student mindset. I still seek out mentors, trusted peers, and better ways of doing things. Heck, even the President has advisors. Being a student isn't something you outgrow. It's something you carry with you, the same way you carry curiosity and humility.
 
-But experience has taught me that sometimes you also need to lean into the role of builder, problem-solver, decision-maker, even while you're still learning. You don't have to "graduate" to be ready. You just have to be willing to move forward, learn on your feet, and keep reaching for better. And honestly, I wouldn't want it any other way.
+But experience has taught me that sometimes you also need to lean into the role of builder, problem-solver, decision-maker, even while you're still learning. You don't have to "graduate" to be ready. You just have to be willing to move forward, learn on your feet, and keep reaching for better. I wouldn't want it any other way.

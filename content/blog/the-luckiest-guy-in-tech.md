@@ -38,7 +38,7 @@ Thank God for these people. They saw things in me that I hadn't learned to see i
 
 ## Turns Out, the Front-End Stuff *Is* the Job
 
-What I didn't realize, or maybe just didn't let myself believe, is that this "front-end stuff" I've been doing for years? That *is* the job. It's not a stepping stone. It's not a placeholder until I become "a real engineer." It's what I'm good at.It's what I love doing. And it's the thing I keep showing up for, even when nobody's asking me to.
+What I didn't realize, or maybe just didn't let myself believe, is that this "front-end stuff" I've been doing for years? That *is* the job. It's not a stepping stone. It's not a placeholder until I become "a real engineer." It's what I'm good at. It's what I love doing. And it's the thing I keep showing up for, even when nobody's asking me to.
 
 I don't have to brute-force myself into front-end work. I don't need coffee to get through a video on accessible components. I don't need willpower to finish a blog post about layout strategies or design tokens or container queries. I *want* to be there. That's the difference.
 
@@ -52,7 +52,7 @@ Somehow, all those moments I thought I was falling short were actually moments o
 ## Why I Feel Like the Luckiest Guy in Tech
 
 I don't say that because I landed some dream job or solved some billion-dollar problem.
-I say it because I finally see the value in the work I've been doing all along&mdash;the quiet, thoughtful, user-centered, front-end work that's kept me learning, growing, and contributing without burning out.
+I say it because I finally see the value in the work I've been doing all along: the quiet, thoughtful, user-centered, front-end work that's kept me learning, growing, and contributing without burning out.
 
 I'm lucky because I've found a path that feeds my curiosity instead of draining it. I'm lucky because I have a network of generous people who helped me see myself more clearly. And I'm lucky that my failed attempts at being something I'm not never fully pulled me away from what I actually love.
 

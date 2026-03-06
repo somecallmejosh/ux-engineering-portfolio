@@ -37,14 +37,14 @@ None of it is the knockout. But it wears you down. Each hit takes something. A l
 
 ## The Uppercut: That One Comment
 
-Eventually, it lands. Sometimes it is a slack message. Sometimes it is a code review. Sometimes it is a bug report that shows up late on a Friday with a subject line that just says "URGENT." It doesn't matter what it is. It lands. Right on the chin. And you feel it. That is when the phrase shows up. Quiet. Familiar.
+Eventually, it lands. Sometimes it is a Slack message. Sometimes it is a code review. Sometimes it is a bug report that shows up late on a Friday with a subject line that just says "URGENT." It doesn't matter what it is. It lands. Right on the chin. And you feel it. That is when the phrase shows up. Quiet. Familiar.
 
 > They beat the care out of me.
 
 ## What Saved Me
 I have been close. I have felt the fatigue. I have felt the distance forming between me and the work. But I have not lost the care. And if I'm honest, part of that is because I failed at trying to be someone I'm not.
 
-I've tried to be good at everything. I've tried to learn Postgres. I've tried to get comfortable with server infrastructure. I've tried to understand security architecture and access policies and shell scripting and devops pipelines. But I couldn't get there. Not because I wasn't smart enough (ok, maybe because I wasn't smart enough). But because I wasn't interested enough.
+I've tried to be good at everything. I've tried to learn Postgres. I've tried to get comfortable with server infrastructure. I've tried to understand security architecture and access policies and shell scripting and DevOps pipelines. But I couldn't get there. Not because I wasn't smart enough. Because I wasn't interested enough.
 
 I did not want to spend my nights and weekends chasing concepts that didn't click. I did not want to build things I wouldn't use. I did not want to spend ten hours trying to fix a docker issue just so I could get back to styling a form.
 
@@ -64,7 +64,7 @@ Stay close to the work you believe in. Let the hype pass by. Let someone else wi
 
 If you still care, hold onto it. If you've lost it, be gentle with yourself. You might just need a break between rounds.
 
-But if you feel like you're standing in the ring and all you can do is shrug and say the phrase...
+But if you feel like you're standing in the ring and all you can do is shrug and say the phrase,
 
 > They beat the care out of me.
 

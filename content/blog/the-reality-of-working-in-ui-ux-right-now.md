@@ -18,7 +18,7 @@ I've been in this field long enough to watch the definition of UI/UX evolve. It 
 
 This shift means more opportunities to shape things. More ways to connect design and development. More chances to build systems that work for the people using them. That's exciting.
 
-The tools are getting better. AI can generate layouts and code. It can suggest patterns. It can handle the boring parts like creating a big list of meaningful fake data (sorry Faker), or reviewing my posts for grammatical errors and redundancy. Yes, guilty... I let ChatGPT proof read my stuff before publishing it (sorry Grammarly). Instead of worrying, I've started to feel curious. What happens when the basics are covered? What new types of work can we do?
+The tools are getting better. AI can generate layouts and code. It can suggest patterns. It can handle the boring parts like generating placeholder data or reviewing copy for redundancy. Instead of worrying, I've started to feel curious. What happens when the basics are covered? What new types of work can we do?
 
 ## Why AI isn't the end of us (but I'm still paying attention)
 
@@ -56,7 +56,7 @@ I haven't overhauled my career. I haven't pivoted or gone back to school. But I'
 
 I'm spending more time building systems instead of one-off solutions. I want to leave behind tools that can keep working even if I'm not around.
 
-I've started writing more. Not just code, but reflections like this one. Writing helps me see patterns. It helps me connect dots. It also gives me something I can share with others—something real that shows how I think and work.
+I've started writing more. Not just code, but reflections like this one. Writing helps me see patterns. It helps me connect dots. It also gives me something I can share with others, something real that shows how I think and work.
 
 I've also adjusted how I learn. I don't try to chase every trend anymore. I follow my curiosity. If something grabs my attention, I follow it for a while. If it doesn't, I don't force it.
 

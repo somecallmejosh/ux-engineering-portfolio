@@ -16,11 +16,11 @@ Most of the articles you'll find about design systems come from people working o
 
 But most of us aren't in that world. We're building scrappy apps, balancing five priorities at once, or inheriting a pile of CSS someone named `new-styles-final-final.css`. Maybe you're the only developer on the project. Maybe you're the one person keeping the design system alive between sprints, bug fixes, and production fires.
 
-This post is for that version of you...the one who wants a little consistency without all the overhead. A design system that doesn't take six meetings to update. Something light, flexible, and maybe even a little fun.
+This post is for that version of you, the one who wants a little consistency without all the overhead. A design system that doesn't take six meetings to update. Something light, flexible, and maybe even a little fun.
 
 ## So what exactly _is_ a design system?
 
-At its core, it's just a shared set of decisions:
+It's just a shared set of decisions:
 
 - What color is the primary button?
 - How much space goes between things?
@@ -70,7 +70,7 @@ Accessible components don't just help users, they help you sleep better at night
 
 ### UI frameworks? Totally valid
 
-Bootstrap, Chakra, ShadCN, DaisyUI, Tailwind UI...they're all solid. Well-documented, battle-tested, and a huge time-saver when used wisely. No shame in that game.
+Bootstrap, Chakra, ShadCN, DaisyUI, and Tailwind UI are all solid. Well-documented, battle-tested, and a huge time-saver when used wisely.
 
 But here's something worth considering:
 If you have the skill to customize these frameworks to fit your brand and design style, you probably also have the skill to build your own from scratch.
@@ -85,7 +85,7 @@ Sometimes the best system is the one you understand top to bottom.
 
 ## A rule of thumb
 
-If a piece of UI does the same thing in three different places, it's probably worth making a component. If it does _kind of_ the same thing in three places but looks and behaves totally differently in each… maybe not.
+If a piece of UI does the same thing in three different places, it's probably worth making a component. If it does _kind of_ the same thing in three places but looks and behaves totally differently in each, maybe not.
 
 When in doubt, ask:
 
@@ -95,10 +95,10 @@ If it's easier, componentize. If it's harder, hold off.
 
 ## Final thoughts
 
-You don't need a heavyweight design system. You need one that works for your team&mdash;your actual team, not the imaginary one with five designers and a dedicated Figma plugin engineer.
+You don't need a heavyweight design system. You need one that works for your team, your actual team, not the imaginary one with five designers and a dedicated Figma plugin engineer.
 
 Start small. Be consistent. Fix things that are confusing. Leave the rest alone. And don't be afraid to delete a component when it's no longer helping. That, too, is part of the system.
 
 As for how you build your components? Honestly, it doesn't matter that much. If you're full React, cool. Build your system in React. If you're working across multiple codebases using different front end libraries/frameworks, maybe native Web Components are a better fit. If you hate writing native Web Components by hand, Stencil or Lit can take the edge off. If you're in the Ruby on Rails world, definitely check out [ViewComponents](https://viewcomponent.org/) by the GitHub team. They're solid.
 
-The key is to be consistent, take your team's skillsets into account, and stick with an approach that makes sense for the way you work. Don't overthink it. Just pick a direction and rock with it. You got this!
+The key is to be consistent, take your team's skillsets into account, and stick with an approach that makes sense for the way you work. Don't overthink it. Just pick a direction and stick with it.
