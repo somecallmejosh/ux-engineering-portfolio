@@ -80,7 +80,7 @@ date.toLocaleString("en-US", {
 ```
 
 ::CallOut
-I have some more in depth notes on date formatting in this post on [common string methods I use](/dev-notes/common-string-methods-i-use#date-formatting).
+I have some more in depth notes on date formatting in this post on [common string methods I use](/dev-notes/common-string-methods-i-use/#date-formatting).
 ::
 
 ### Popular Libraries:

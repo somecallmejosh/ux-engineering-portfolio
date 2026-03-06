@@ -221,4 +221,4 @@ function convertDateFormat(dateStr, outputFormat, inputFormat) {
 }
 ```
 
-I have another article on [JavaScript Dates](/dev-notes/javascript-dates) that goes into more detail about the pains of working with dates.
+I have another article on [JavaScript Dates](/dev-notes/javascript-dates/) that goes into more detail about the pains of working with dates.

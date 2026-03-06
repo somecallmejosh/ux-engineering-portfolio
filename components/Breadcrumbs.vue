@@ -25,9 +25,9 @@
 
   const finalPath = () => {
     if (props.category) {
-      return `/${props.baseUrl}/tags/${props.slug}`
+      return `/${props.baseUrl}/tags/${props.slug}/`
     } else {
-      return `/${props.baseUrl}/${props.slug}`
+      return `/${props.baseUrl}/${props.slug}/`
     }
   }
 </script>
@@ -36,15 +36,15 @@
     <nav aria-label="Breadcrumbs">
       <ol class="not-prose text-sm flex gap-3 relative z-0">
         <li class="flex items-center gap-3">
-          <NuxtLink :to="`/${baseUrl}`" class="hover:underline text-nowrap">{{ label }}</NuxtLink>
+          <NuxtLink :to="`/${baseUrl}/`" class="hover:underline text-nowrap">{{ label }}</NuxtLink>
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li v-if="category" class="flex items-center gap-3">
-          <NuxtLink :to="`/${baseUrl}/tags`" class="hover:underline text-nowrap">Tags</NuxtLink>
+          <NuxtLink :to="`/${baseUrl}/tags/`" class="hover:underline text-nowrap">Tags</NuxtLink>
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li class="text-neutral-700">
-          <NuxtLink :to="finalPath" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
+          <NuxtLink :to="finalPath()" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
         </li>
       </ol>
     </nav>

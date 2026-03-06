@@ -37,7 +37,7 @@ const collectionMap = {
     </div>
     <ol class="text-sm">
       <li v-for="tag in filteredPosts" :key="tag.id" class="capitalize">
-        <NuxtLink :to="`/${collectionMap[props.collection]}/${tag.slug}`" class="flex items-center gap-1 no-underline hover:underline! py-1">
+        <NuxtLink :to="`/${collectionMap[props.collection]}/${tag.slug}/`" class="flex items-center gap-1 no-underline hover:underline! py-1">
           {{ tag.title }}
         </NuxtLink>
       </li>

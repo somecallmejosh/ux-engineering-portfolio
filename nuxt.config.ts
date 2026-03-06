@@ -89,6 +89,9 @@ export default defineNuxtConfig({
     name: process.env.NUXT_SITE_NAME,
     trailingSlash: true
   },
+  linkChecker: {
+    excludeLinks: [/^#/],
+  },
   vite: {
     plugins: [tailwindcss()],
     build: {

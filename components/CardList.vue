@@ -38,7 +38,7 @@ const path = fullPath.split('/').slice(0, 2).join('/');
             </CardHeader>
             <p class="text-pretty" v-html="item.description"></p>
           </div>
-          <NuxtLink :to="`${path}/${item.slug}`" class="absolute not-prose inset-0 rounded-lg">
+          <NuxtLink :to="`${path}/${item.slug}/`" class="absolute not-prose inset-0 rounded-lg">
           <span class="sr-only">{{
               item.title
             }}</span>

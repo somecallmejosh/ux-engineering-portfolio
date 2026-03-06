@@ -12,7 +12,7 @@ image_alt: "A screenshot of a web developer building an accessible modal with St
 StencilJS Modal Series
 ::
 
-Back when I first published my [original article](/experiments/building-a-modal-with-stencil-js), I walked through how to build an accessible modal dialog using StencilJS. It worked. But like most things in front-end development, there's always room to improve.
+Back when I first published my [original article](/experiments/building-a-modal-with-stencil-js/), I walked through how to build an accessible modal dialog using StencilJS. It worked. But like most things in front-end development, there's always room to improve.
 
 This post is a revisit of that same component, after some thoughtful refactoring. The goal is still the same: keep it simple, make it accessible, and make sure it plays well with keyboard users. But this version adds better cleanup, stronger focus handling, and cleaner styles.
 
@@ -443,4 +443,4 @@ This modal doesn't try to be everything. It avoids unnecessary complexity and fo
 
 Once compiled, you can use it in any app. It supports programmatic control and works with global CSS styles. And it gives users a reliable, usable experience.
 
-[Read the original version here](/experiments/building-a-modal-with-stencil-js) to see where it started.
+[Read the original version here](/experiments/building-a-modal-with-stencil-js/) to see where it started.

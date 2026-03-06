@@ -1,14 +1,14 @@
 ---
 slug: how-to-archive-multiple-github-repos
 publishedAt: 2025-12-28
-title: "How to Archive Multiple GitHub Repos"
+title: 'How to Archive Multiple GitHub Repos'
 description: 'Using the Github UI to archive lots of projects would be time-consuming. So I asked ChatGPT to help me write a quick bash script to do it for me.'
 tags: [github, automation, bash]
 image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1766942768/josh-portfolio/github-automation.png
 image_alt: 'Developer automating GitHub repository updates management on a laptop.'
 ---
 
-<strong>It's the end of the year, which apparently means it's [time for reflection](/blog/2025-a-year-in-review) and GitHub cleanup.</strong> Over the years, I've created (and quietly abandoned) a lot of repositories. Side projects. Experiments. "I'll totally finish this later" ideas. At some point I crossed the 100-repo mark, which made using the GitHub UI to clean things up feel like a punishment I didn't sign up for.
+<strong>It's the end of the year, which apparently means it's time for GitHub cleanup.</strong> Over the years, I've created (and quietly abandoned) a lot of repositories. Side projects. Experiments. "I'll totally finish this later" ideas. At some point I crossed the 100-repo mark, which made using the GitHub UI to clean things up feel like a punishment I didn't sign up for.
 
 So instead of clicking my way into carpal tunnel, I did what any reasonable modern-day developer would do:
 
@@ -27,7 +27,6 @@ The goal was simple:
 If you're on a Mac and don't already have the GitHub CLI installed:
 
 `brew install gh`
-
 
 If you're on Windows, Google tells me this works:
 
@@ -105,7 +104,7 @@ done < repos.txt
 
 Create a file called `repos.txt` (or whatever). This is just a list of repositories you want to archive, one per line, using the format owner/repo-name.
 
-``` bash
+```bash
 # repos.txt
 your-github-username/repo1
 your-github-username/repo2
@@ -125,11 +124,9 @@ Make the script executable:
 
 `chmod +x archive-repos.sh`
 
-
 Then run it:
 
 `./archive-repos.sh`
-
 
 You'll see output something like this:
 

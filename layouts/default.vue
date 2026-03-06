@@ -16,7 +16,7 @@ const navGroups = [
       { title: 'Home', path: '/', icon: 'ph:house' },
       { title: 'Services', path: '/services/', icon: 'ph:handshake' },
       { title: 'About Me', path: '/about/', icon: 'ph:lego-smiley' },
-      { title: 'Contact', path: '/contact', icon: 'ph:address-book' },
+      { title: 'Contact', path: '/contact/', icon: 'ph:address-book' },
     ]
   },
   {

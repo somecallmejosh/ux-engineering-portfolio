@@ -15,7 +15,7 @@ StencilJS Modal Series
 This article walks through how I created an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS. It was a great exercise to learn how to structure my HTML, manage ARIA roles, trap focus, manage z-index layering, handle escape keys, and restore focus when the modal is closed, keeping the component flexible and composable.
 
 ::CallOut
-<strong>There is a new version of this conent</strong>: I have since refactored this component to improve focus management, cleanup, and styling. You can find [the updated version here](/experiments/refactored-modal-with-stencil-js).
+<strong>There is a new version of this conent</strong>: I have since refactored this component to improve focus management, cleanup, and styling. You can find [the updated version here](/experiments/refactored-modal-with-stencil-js/).
 ::
 
 ## Why Accessibility Matters for Modals
