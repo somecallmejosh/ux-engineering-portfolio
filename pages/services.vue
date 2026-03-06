@@ -44,7 +44,7 @@ const faqs = [
       </p>
     </section>
 
-    <services />
+    <services variant="full" />
 
 
     <section aria-labelledby="faq">
@@ -57,32 +57,15 @@ const faqs = [
         </details>
       </div>
     </section>
-    <split-content>
-
-      <template #primary>
-        <blockquote class="border-l-4 border-neutral-200 pl-6 prose">
-          <p class="italic">
-            Working with Josh was an absolute privilege and pleasure. His strategic approach and focus on upstream
-            requirement definition made our projects smoother and more efficient. His ability to foresee challenges and
-            simplify implementation was invaluable.
-          </p>
-          <cite>Rebecca Cachia, PMP, Web Product & Project Manager, Publicis Sapient</cite>
-        </blockquote>
-      </template>
-      <template #secondary>
-        <Callout>
-          <h2>Not sure which engagement is right for you?</h2>
-          <p>
-
-            That's what the intro call is for. It's 30 minutes, no obligation, and you'll leave with a clear picture of
-            what
-            would actually move the needle for your team.
-          </p>
-          <ButtonLink to="/contact/">
-            Send a message
-          </ButtonLink>
-        </Callout>
-      </template>
-    </split-content>
+    <Callout>
+      <h2>Not sure which engagement is right for you?</h2>
+      <p>
+        That's what the intro call is for. It's 30 minutes, no obligation, and you'll leave with a clear picture of
+        what would actually move the needle for your team.
+      </p>
+      <ButtonLink to="/contact/">
+        Send a message
+      </ButtonLink>
+    </Callout>
   </PageWrapper>
 </template>
