@@ -5,45 +5,52 @@ title: "Ted Lasso: Building Interfaces with Biscuits and Belief"
 description: "What happens when optimism, empathy, and detail meet cross-functional teamwork. He's not the most technical, but maybe the most impactful."
 tags: [fictional-ux-engineers]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745261834/josh-portfolio/assets_task_01jscrb5fefj0rm0p4hzpwcm00_img_0.webp"
-image_alt: "Ted Lasso motivating a team of UX Engineers."
+image_alt: "Ted Lasso motivating a team of UX engineers."
 ---
 ::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 
-Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, <em>"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."</em>
+Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, *"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."*
 
-But somehow, he ends up on a product team. As a UX Engineer. And wouldn't you know it? He's great at it.
+But somehow, he ends up on a product team. As a UX engineer. He's great at it.
 
-## It's Not About the Stack. It's About the People.
+## It's not about the stack, it's about the people
+
 Ted doesn't obsess over tech choices. He doesn't argue about frameworks. He just wants to make sure people feel good when they use what you've built.
 
-He's the kind of guy who reads a bug report and says, <em>"Bless their heart, this must've been frustrating."</em> And then fixes it with a smile and a note in the commit message that says, "Hope this helps, partner."
+He's the kind of guy who reads a bug report and says, *"Bless their heart, this must've been frustrating."* And then fixes it with a smile and a note in the commit message that says, "Hope this helps, partner."
 
-## Error Messages, but Make 'Em Kind
+## Kind error messages
+
 Ted's app doesn't yell at you when you mess up. If you submit a form without filling in a field, it doesn't scold you in red text. It gently reminds you, "Looks like we missed a spot. Happens to the best of us."
 
 If a server goes down, the app doesn't display a blank screen of doom. It shows a message that says, "Well, that's a hiccup. We're on it like mustard on a hot dog." Ted writes the kind of UX copy that makes users feel better about being human.
 
-## The Ultimate Cross-Functional Teammate
+## The ultimate cross-functional teammate
+
 On a cross-functional team, Ted isn't the expert in everything. But he's the glue that holds it together. He makes sure everyone's voice is heard. He encourages designers to share their "weird ideas." He tells engineers, "I know this might be tricky, but I believe in you." He asks product managers how they're really doing.
 
 And when tensions run high? He brings biscuits. Actual biscuits. Well, cookies, if you're in the US. But you get the idea. The team might not always agree, but with Ted around, they never forget they're on the same side.
 
-## Accessibility Is Hospitality
-Ted doesn't use the word "A11Y." But he still checks every interactive element with a keyboard. Not because it's a checklist item, but because he believes in hospitality. Everyone should feel welcome.
+## Accessibility is hospitality
+
+Ted doesn't use the term "A11Y" (accessibility shorthand). But he still checks every interactive element with a keyboard. Not because it's a checklist item, but because he believes in hospitality. Everyone should feel welcome.
 
 He turns on screen readers just to hear what the app sounds like. He adjusts font sizes to see if the layout holds up. He tests with a slow connection and says, "We should make this thing work even when the Wi-Fi's having a bad day." To Ted, accessibility isn't compliance. It's just the decent thing to do.
 
-## Feedback Loops and Goldfish Memory
+## Feedback loops and goldfish memory
+
 Ted doesn't take critique personally. He celebrates feedback like it's a win. "Hey, thanks for catching that! You just made this better for someone." He encourages user testing early and often. He doesn't wait for perfection. He ships something real, then listens, learns, and adjusts.
 
 And when a teammate makes a mistake? He says, "Be a goldfish." Forgives. Moves on. Builds again.
 
-## The Ted Lasso Experience
+## The Ted Lasso experience
+
 Using an interface Ted built feels like getting a warm cup of tea handed to you by someone who genuinely cares that you enjoy it. Nothing flashy. Nothing overcomplicated. Just clear, welcoming, thoughtful design. You leave the page feeling better than when you arrived.
 
-## What We'd Learn from Ted
+## What we'd learn from Ted
+
 Ted wouldn't teach a masterclass. But working with him would change the way you work. You'd start thinking about tone. About kindness. About how the smallest moments in an app can leave the biggest impressions. You'd write commit messages with more heart. You'd test things more thoroughly, not out of fear, but because Ted reminded you that someone out there needs this to work just right.
 
 And you'd remember that building software is a people business.

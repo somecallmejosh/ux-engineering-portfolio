@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = "Design systems consulting services | Josh Briley"
-const description = "Fixed-scope consulting for design system audits, component library builds, and design-to-code workflow optimization. Clear deliverables, clear pricing, no surprises."
+const description = "Fixed-scope consulting for design system audits, component library builds, and design-to-code workflow optimization. Clear deliverables, clear pricing, defined from the start."
 useSeoMeta({
   title,
   ogTitle: title,
@@ -48,7 +48,7 @@ const faqs = [
 
 
     <section aria-labelledby="faq">
-      <h2 id="faq" class="text-2xl mb-6">Frequently Asked Questions</h2>
+      <h2 id="faq" class="text-2xl mb-6">Frequently asked questions</h2>
       <div class="space-y-2">
         <details name="frequently asked question" v-for="faq in faqs" :key="faq.question"
           class="border rounded-lg border-neutral-200 bg-white p-6">
@@ -61,7 +61,7 @@ const faqs = [
       <h2>Not sure which engagement is right for you?</h2>
       <p>
         That's what the intro call is for. It's 30 minutes, no obligation, and you'll leave with a clear picture of
-        what would actually move the needle for your team.
+        what would actually help your team.
       </p>
       <ButtonLink to="/contact/">
         Send a message

@@ -34,7 +34,7 @@ const collectionMap = {
 </script>
 <template>
   <nav :aria-label="`${humanize(collection)} Tags`" class="prose">
-    <h2 v-if="title" class="capitalize">
+    <h2 v-if="title">
       {{ title }}
     </h2>
     <ul role="list" class="flex flex-wrap gap-2 not-prose">

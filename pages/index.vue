@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 const title = "Josh Briley | Design Systems Engineer & Frontend Consultant"
-const description = "Fixed-scope consulting for design system audits, component library builds, and design-to-code workflow optimization. Clear deliverables, clear pricing."
+const description = "Fixed-scope consulting for design system audits, component library builds, and handoff workflow improvements. Clear deliverables, clear pricing."
 
 useSeoMeta({
   title,
@@ -51,7 +51,7 @@ const combinedPosts = [
           start.</PageHeader>
         <p class="mb-4">I'm a Design Systems Engineer with 20 years of experience helping teams ship consistent,
           accessible interfaces and keep them that way.</p>
-        <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+        <div class="flex flex-col sm:flex-row lg:items-center gap-2">
           <ButtonLink to="/services/">
             View my services
           </ButtonLink>
@@ -68,8 +68,8 @@ const combinedPosts = [
         </ul>
       </section>
       <Callout>
-        <h2 id="get-started">Ready to get started?</h2>
-        <p>Whether you need a full audit or a fresh component library foundation, let's figure out if there's a fit.</p>
+        <h2 id="get-started">Want to work together?</h2>
+        <p>Whether you need a full audit or a component library foundation, get in touch to see if we're a good fit.</p>
         <ButtonLink to="/contact/">
           Get in touch
         </ButtonLink>

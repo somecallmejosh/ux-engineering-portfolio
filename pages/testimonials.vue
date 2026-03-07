@@ -3,8 +3,8 @@ import { motion } from 'motion-v'
 useSeoMeta({
   title: 'Testimonials',
   ogTitle: 'Testimonials',
-  description: 'Shout outs from clients and colleagues.',
-  ogDescription: 'Shout outs from clients and colleagues.',
+  description: 'Testimonials from clients and colleagues I\'ve worked with over the years.',
+  ogDescription: 'Testimonials from clients and colleagues I\'ve worked with over the years.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1747754360/josh-portfolio/assets_task_01jvq4ak6yfmma0mxqxrmvr922_1747754314_img_0.webp'
 })
 
@@ -145,10 +145,10 @@ const testimonials = [
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Testimonials" pillIcon="ph:chats">
-        Supportive Words from Clients and Colleagues
+        What clients and colleagues say
       </PageHeader>
       <p>
-        I am grateful for the kind words and support from clients and colleagues who have worked with me over the years. Their testimonials reflect the collaborative spirit and dedication I strive to bring to every project.
+        These testimonials come from clients and colleagues I've had the pleasure of working with. Their words reflect what I care about most: collaboration, accessibility, and work that holds up over time.
       </p>
     </section>
     <section aria-label="Testimonials" class="md:columns-2 lg:columns-3 gap-8 space-y-12">
@@ -158,7 +158,7 @@ const testimonials = [
           :whileInView="{ y: 0, opacity: 1 }"
           :transition="{ duration: 0.5 }"
            class="flex gap-4 group hover:bg-blue-50 relative -m-2 p-2 rounded-lg transition-colors duration-150 ease-in-out">
-          <img :src="item.image" alt="Profile picture of {{ item.name }}" class="w-16 h-16 rounded-full shrink-0" />
+          <img :src="item.image" :alt="item.name" class="w-16 h-16 rounded-full shrink-0" />
           <div>
             <h2>{{ item.name }}</h2>
             <div>
@@ -168,7 +168,7 @@ const testimonials = [
           </div>
 
           <a class="absolute inset-0 group ring-blue-100 outline-0 focus:ring-2 focus:ring-offset-2 rounded-lg" :href="item.linkedIn" target="_blank" rel="noopener noreferrer">
-            <div class="sr-only">View {{ item.name }}'s' LinkedIn Profile</div>
+            <div class="sr-only">View {{ item.name }}'s LinkedIn Profile</div>
             <Icon name="ph:arrow-square-out-fill" size="1em" class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150 ease-in-out text-blue-600" />
           </a>
         </motion.li>

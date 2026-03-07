@@ -12,12 +12,12 @@ One of my old bosses had a phrase he used when a customer pushed too far. He'd l
 
 Lately, I've been thinking about that phrase again. Not because I've lost my care, but because I can feel the gloves hitting more often.
 
-## The First Jab: A Job with No Name
+## The first jab: a job with no name
 I work in front-end development. Or UI development. Or UX engineering. Or maybe I'm a design technologist. It depends on who is doing the hiring.
 
 Whatever the title, the job is simple. I build the part of the web people touch. The part that helps someone apply for a loan. Or schedule an appointment. Or find their kid's report card. The part that needs to load quickly, read clearly, and respond when someone taps, clicks, or swipes. But this work does not come at you gently.
 
-## The One-Two Combo: Tools and Opinions
+## The one-two combo: tools and opinions
 New component libraries show up every week. Each one swears it has solved all the problems the last one introduced. Everyone has a favorite. Everyone is certain their way is the best way.
 
 Frameworks move fast. Too fast. Version 3 does not look like version 2. What worked last year now needs a plugin. Or a shim. Or a migration guide that ends with you starting from scratch.
@@ -26,7 +26,7 @@ People argue about everything. File structure. Naming conventions. How to write 
 
 And if you find a tutorial that actually makes sense, there is a good chance it ends with a checkout page. None of this is fatal. But it's exhausting. These are the jabs. Constant. Fast. Always in your face.
 
-## The Body Shots: More Than Just the UI
+## The body shots: more than just the UI
 Just when you think you've learned enough to stay on your feet, the real fight starts. Now you're expected to know backend logic. Authentication flows. Database schema. ORM relationships. API design. Query performance. Caching. Rate limits.
 
 You need to think about Docker. You need to push to staging. You need to debug the build. You need to remember why the linter is failing. And you need to explain it to someone who has never opened the terminal.
@@ -35,13 +35,13 @@ You also need to be in the planning meeting. You need to be in the retro. You ne
 
 None of it is the knockout. But it wears you down. Each hit takes something. A little energy. A little focus. A little care.
 
-## The Uppercut: That One Comment
+## The uppercut: that one comment
 
 Eventually, it lands. Sometimes it is a Slack message. Sometimes it is a code review. Sometimes it is a bug report that shows up late on a Friday with a subject line that just says "URGENT." It doesn't matter what it is. It lands. Right on the chin. And you feel it. That is when the phrase shows up. Quiet. Familiar.
 
 > They beat the care out of me.
 
-## What Saved Me
+## What saved me
 I have been close. I have felt the fatigue. I have felt the distance forming between me and the work. But I have not lost the care. And if I'm honest, part of that is because I failed at trying to be someone I'm not.
 
 I've tried to be good at everything. I've tried to learn Postgres. I've tried to get comfortable with server infrastructure. I've tried to understand security architecture and access policies and shell scripting and DevOps pipelines. But I couldn't get there. Not because I wasn't smart enough. Because I wasn't interested enough.
@@ -50,13 +50,13 @@ I did not want to spend my nights and weekends chasing concepts that didn't clic
 
 I used to feel bad about that. But now I think it saved me. Because I stayed close to the part I care about. The human part. HTML that reads like a story. CSS that doesn't fight the browser. Interfaces that make sense to the people who need them. That is the part I can still stand up for.
 
-##  Listen for the Bell
+## Listen for the bell
 
-There is no ref in this fight. No one calls time. You have to listen for your own bell. I know mine. I hear it when I stop asking "how I can help" and start asking "what do they want <em>now</em>".
+There is no ref in this fight. No one calls time. You have to listen for your own bell. I know mine. I hear it when I stop asking "how I can help" and start asking "what do they want *now*".
 
 That's when I know it's time to take a step back. Because I still care. And I want to keep it that way.
 
-## Final Round
+## Final round
 
 This job asks for a lot. It hits hard and it hits often. You can't block everything. But you can protect what matters.
 

@@ -7,7 +7,7 @@ const props = defineProps({
 })
 </script>
 <template>
-<component :is="element" class="text-lg lg:text-2xl text-pretty capitalize mt-0">
-  <slot />
-</component>
+  <component :is="element" class="text-lg lg:text-2xl text-pretty mt-0">
+    <slot />
+  </component>
 </template>

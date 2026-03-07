@@ -1,7 +1,7 @@
 <script setup>
 import { motion } from 'motion-v'
 const title = "Contact Josh Briley | Design systems consulting"
-const description = "Get in touch to discuss a design system audit, component library build, or design-to-code workflow engagement. Response within one business day."
+const description = "Get in touch to discuss a design system audit, component library build, or design-to-code workflow. I respond within one business day."
 useSeoMeta({
   title,
   ogTitle: title,
@@ -119,7 +119,7 @@ const onSubmit = async (event) => {
         Let's talk
       </PageHeader>
       <p>Whether you're dealing with component library debt, an accessibility audit deadline, or a Figma-to-code handoff
-        that's eating your sprints, fill out the form and I'll get back to you within one business day.</p>
+        that's slowing your team down, fill out the form and I'll get back to you within one business day.</p>
     </section>
     <split-content>
       <template #primary>
@@ -180,14 +180,13 @@ const onSubmit = async (event) => {
                   :class="{ 'border-red-600 invalid': messageValid == false }"></textarea>
                 <motion.small :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
                   :transition="{ duration: 0.5 }" role="alert" id="message-invalid" class="block text-red-600"
-                  v-if="messageValid == false">Please enter a brief
-                  message.</motion.small>
+                  v-if="messageValid == false">Enter a brief message.</motion.small>
               </div>
             </div>
             <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
               <div><small>* indicates a required field</small></div>
               <motion.button :whilePress="{ y: 2 }" type="submit"
-                class="inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                class="inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 justify-center">
                 Send Message</motion.button>
             </div>
           </form>
@@ -195,10 +194,9 @@ const onSubmit = async (event) => {
           <motion.div :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
             :transition="{ duration: 0.5 }" v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg"
             role="alert">
-            <h2>Hey There!</h2>
-            <p>Thanks for reaching out. Your message is on the way to my inbox as you read this. If you need to reach me
-              urgently, please feel free to contact me via email at <a
-                href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or by phone at <a
+            <h2>Message received</h2>
+            <p>Thanks for reaching out. If you need to reach me urgently, you can email me at <a
+                href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or call <a
                 href="tel:8602328250">860-232-8250</a>.</p>
             <p>Otherwise, feel free to poke around my <NuxtLink to="/blog/">blog</NuxtLink> or have a look at some of my
               <NuxtLink to="/projects/">recent projects</NuxtLink>
@@ -207,10 +205,9 @@ const onSubmit = async (event) => {
           <motion.div :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
             :transition="{ duration: 0.5 }" role="alert" v-if="formSubmitError"
             class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
-            <h2>Oops! Something went wrong.</h2>
-            <p>There was an error submitting your message. If this is an urgent matter,
-              please contact me directly at <a href="mailto:josh@thebrileys.com">josh@thebrileys.com</a>, or you can try
-              the form again later.</p>
+            <h2>Something went wrong</h2>
+            <p>Your message couldn't be submitted. If this is urgent, email me at <a
+                href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or try the form again later.</p>
           </motion.div>
 
           <callout>
@@ -245,7 +242,7 @@ const onSubmit = async (event) => {
         <ul>
           <li>Send a message. It takes about two minutes.</li>
           <li>I review and respond within one business day.</li>
-          <li>We have a 30-minute call, no obligation, just a conversation.</li>
+          <li>We have a 30-minute introductory call with no obligation.</li>
           <li>If there's a fit, I'll send a simple proposal.</li>
         </ul>
 

@@ -70,7 +70,7 @@ const resumeItems = [
 <template>
   <PageWrapper>
 
-    <section aria-describedby="page-header" class="prose">
+    <section class="prose">
       <img
         src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
         alt="Josh Briley, UX Engineer"
@@ -82,7 +82,7 @@ const resumeItems = [
         I work with product teams on design system audits, component library builds, and design-to-code workflow
         optimization. Fixed scope, fixed price. I've spent 20 years building the component libraries and design systems
         that product teams depend on. Now I help
-        other teams do the same. <strong>I am currently vailable for consulting engagements.</strong>
+        other teams do the same. <strong>I'm currently available for consulting engagements.</strong>
       </p>
     </section>
     <section aria-labelledby="bio" class="prose max-w-full lg:mb-24">

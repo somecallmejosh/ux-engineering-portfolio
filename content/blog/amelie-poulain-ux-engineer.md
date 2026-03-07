@@ -16,13 +16,13 @@ Amélie is one of my favorite movies. It's gentle, beautiful, strange in the bes
 
 So it's only fitting that Amélie herself would make one heck of a UX Engineer. She wouldn't chase big promotions. She wouldn't seek the spotlight. She'd just quietly make things better one detail, one interface, one human interaction at a time.
 
-## She Builds for Joy, Not Credit
+## She builds for joy, not credit
 
-Amélie wouldn't care about OKRs or conversion funnels. She wouldn't fight to be assigned the "important" features. She'd gravitate toward the overlooked stuff like the tooltip with confusing wording, the odd tab order, the default state of a dropdown that just feels wrong. And she'd fix it. Lovingly. Without telling anyone.
+Amélie wouldn't care about Objectives and Key Results (OKRs) or conversion funnels. She wouldn't fight to be assigned the "important" features. She'd gravitate toward the overlooked stuff like the tooltip with confusing wording, the odd tab order, the default state of a dropdown that just feels wrong. And she'd fix it. Lovingly. Without telling anyone.
 
 Her PRs would have poetic commit messages and perfectly indented code. She'd tuck in Easter eggs that only a few people would ever find, just because it might make someone smile.
 
-## Empathy in Every Pixel
+## Empathy in every pixel
 
 Amélie would be obsessed with how things feel. Not just visually, but emotionally. She'd choose colors that comfort rather than impress. She'd write microcopy that feels like someone's holding your hand. Her error messages would never blame the user. They'd say things like,
 
@@ -30,9 +30,9 @@ Amélie would be obsessed with how things feel. Not just visually, but emotional
 
 Her focus wouldn't be usability for its own sake, it would be creating moments of warmth in a medium that so often forgets to be human.
 
-## Invisible But Impactful
+## Invisible but impactful
 
-On a cross-functional team, Amélie wouldn't dominate meetings. She might not even turn her camera on. But her work would speak volumes. She'd anticipate what others needed before they said anything. That label that needed updating? Already done. That bug that hadn't been logged yet? Fixed and documented.
+On a cross-functional team, Amélie wouldn't dominate meetings. She might not even turn on her camera. But her work would speak volumes. She'd anticipate what others needed before they said anything. That label that needed updating? Already done. That bug that hadn't been logged yet? Fixed and documented.
 
 She'd send thoughtful messages like,
 
@@ -40,17 +40,17 @@ She'd send thoughtful messages like,
 
 No fanfare. Just gentle nudges that made everyone's work better.
 
-## Testing Like a Romantic Detective
+## Testing like a romantic detective
 
 Amélie would treat usability testing like an act of curiosity. She'd watch sessions with the same quiet wonder she used to spy on the lives of her Montmartre neighbors. Not to critique, but to understand.
 
 She'd pick up on subtle hesitations, half-clicks, micro-pauses. She'd map out friction like footprints in a garden. Then, late at night, she'd quietly deploy fixes that smoothed out those invisible snags.
 
-## A UX Engineer With a Heart for the Hidden
+## A UX engineer with a heart for the hidden
 
 Amélie wouldn't care if her work was anonymous. She'd care that someone, maybe someone anxious, maybe someone tired, found a task just a little easier because of what she built. That someone felt seen. That someone smiled when they didn't expect to. And she'd do it again tomorrow.
 
-## What We'd Learn from Amélie
+## What we'd learn from Amélie
 
 Amélie would remind us that UX isn't just about speed and efficiency. It's about care. It's about asking,
 

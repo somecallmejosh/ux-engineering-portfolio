@@ -3,7 +3,7 @@
     <div class="shrink-0 translate-y-0.5">
       <Icon name="ph:dots-nine" size="1.5rem" class="text-blue-400 no-shrink" />
     </div>
-    <div class="prose prose-headings:text-neutral-900 prose-p:leading-relaxed prose-p:text-blue-900">
+    <div class="prose prose-headings:text-neutral-900 prose-p:leading-relaxed prose-p:text-neutral-900">
       <slot />
     </div>
   </div>

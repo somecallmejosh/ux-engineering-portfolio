@@ -1,27 +1,13 @@
 <script setup>
-import { motion } from 'motion-v'
 const allPosts = await queryCollection('projects')
   .order('publishedAt', 'DESC')
   .all()
 
-const allProjectCategories = await queryCollection('projects')
-  .all()
-  .then((posts) => {
-    return posts.reduce((acc, post) => {
-      post.tags.forEach((tag) => {
-        if (!acc.includes(tag)) {
-          acc.push(tag)
-        }
-      })
-      return acc
-    }, [])
-  })
-
 useSeoMeta({
   title: 'Recent Projects',
   ogTitle: 'Recent Projects',
-  description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
-  ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
+  description: 'UX engineering projects including component libraries, design systems, and accessible web applications built for real teams.',
+  ogDescription: 'UX engineering projects including component libraries, design systems, and accessible web applications built for real teams.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
 })
 const skillIcons = [

@@ -43,20 +43,6 @@ const blurAndRemoveFocus = () => {
     navOpen.value = false;
   }
 }
-
-// Keyboard shortcut: press '/' to focus header search
-// onMounted(() => {
-//   const handler = (e) => {
-//     if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
-//       const el = document.getElementById('site-search')
-//       if (el) {
-//         e.preventDefault()
-//         el.focus()
-//       }
-//     }
-//   }
-//   window.addEventListener('keydown', handler)
-// })
 </script>
 <template>
   <div>
@@ -85,15 +71,12 @@ const blurAndRemoveFocus = () => {
               :exit="{ opacity: 0, height: 0 }" :transition="{
                 duration: 0.2,
               }">
-              <div class="lg:hidden p-2 rounded-lg bg-neutral-50 mb-6">
-                <SearchBox @close="navOpen = false" />
-              </div>
               <ul @click="navOpen = false" class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
                 <li v-for="(group, index) in navGroups">
                   <ul>
                     <li v-for="item in group.items" :key="item.path">
                       <NuxtLink :whilePress="{ y: 4 }"
-                        class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm"
+                        class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
                         :to="item.path">
                         <span class="flex items-center gap-3">
                           <Icon :name="item.icon" size="1.2rem"

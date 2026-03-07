@@ -1,7 +1,7 @@
 ---
 slug: design-systems-for-the-rest-of-us
 publishedAt: 2025-05-04
-title: 'Design Systems & Component Libraries for the Rest of Us'
+title: 'Design Systems and Component Libraries for the Rest of Us'
 description: 'A lighthearted look at building design systems without the ceremony, complexity, or committee-induced paralysis.'
 tags: [design, design-systems, front-end-development, accessibility]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746369173/josh-portfolio/assets_task_01jtdv9wbkem5r50p1yxnnqpvb_1746369114_img_0.webp'
@@ -18,7 +18,7 @@ But most of us aren't in that world. We're building scrappy apps, balancing five
 
 This post is for that version of you, the one who wants a little consistency without all the overhead. A design system that doesn't take six meetings to update. Something light, flexible, and maybe even a little fun.
 
-## So what exactly _is_ a design system?
+## What is a design system?
 
 It's just a shared set of decisions:
 
@@ -32,21 +32,21 @@ Whether those decisions live in a polished component library or a sticky note on
 
 Let me tell you what I've seen.
 
-### 1. The One Button to Rule Them All
+### 1. The one button to rule them all
 
 You know the one. It checks if there's an `href` so it can become a link. Then it checks if it's an external link to decide whether to add `rel="noopener noreferrer"` and `target="_blank"`. Then there's logic for `variant`, `size`, `icon`, `fullWidth`, `loading`, `disabled`, `aria-busy`, `type="button"` in case it's rendered in a form, and now your team is afraid to touch it.
 
-### 2. The 50-line Horizontal Row
+### 2. The 50-line horizontal row
 
 Not a joke. I've seen `<hr>` components where half the logic is layout gymnastics and the other half is defensive code that no one understands anymore. At some point, someone added a prop called `forceLeft` and nobody asked why.
 
 The wildest part? It could've been **five simple characters**: `<hr />`. Six, if you count the space. One line of CSS, and done. But somehow we ended up with a full-blown component, tests, and documentation just to draw a line on the page. Welcome to the overengineering olympics.
 
-### 3. The Banner That Became a Maze
+### 3. The banner that became a maze
 
 You start with a simple masthead. Then someone wants an image on the right. Then someone wants a CTA. Then no image. Then centered text. Then "can we make it editable in the CMS?" Now you've got a single component trying to solve 12 layout problems with 9 props, 4 conditionals, and zero joy.
 
-### 4. The Component Graveyard
+### 4. The component graveyard
 
 It starts with good intentions. But then you realize half the components in the repo are only used once. Some of them aren't used at all. You don't even remember why someone added `AnimatedBadgeWithTooltip` or why it has 30 lines of animation config. Every system has a few of these. That's okay. But too many, and you're just shoveling tech debt into your own backyard.
 
@@ -58,7 +58,7 @@ Pick your colors. Choose your spacing. Stick to them. Name them clearly. You don
 
 ### Build what repeats
 
-If I've written the same thing two or three times, that's usually my signal to extract a component. Not before. The fastest way to over-engineer your UI is to start building components you _might_ need someday. <abbr title="Just in Time">JIT</abbr> development is totally cool and usually the best way to go.
+If I've written the same thing two or three times, that's usually my signal to extract a component. Not before. The fastest way to over-engineer your UI is to start building components you _might_ need someday. <abbr title="Just in Time">JIT</abbr> development is a perfectly valid approach and usually the best way to go.
 
 ### Make it understandable at a glance
 
@@ -68,12 +68,11 @@ Whether you use Tailwind, Sass, or just straight-up CSS, the rule is the same: i
 
 Accessible components don't just help users, they help you sleep better at night. Add roles, labels, keyboard behavior, and focus styles. If you're gonna systematize something, systematize inclusion.
 
-### UI frameworks? Totally valid
+### UI frameworks
 
 Bootstrap, Chakra, ShadCN, DaisyUI, and Tailwind UI are all solid. Well-documented, battle-tested, and a huge time-saver when used wisely.
 
-But here's something worth considering:
-If you have the skill to customize these frameworks to fit your brand and design style, you probably also have the skill to build your own from scratch.
+But here's something worth considering: if you have the skill to customize these frameworks to fit your brand and design style, you probably also have the skill to build your own from scratch.
 
 That doesn't mean you _should_. But rolling your own means:
 
@@ -81,9 +80,9 @@ That doesn't mean you _should_. But rolling your own means:
 - No extra dependencies
 - No unused code (even though most frameworks are pretty great about tree shaking these days)
 
-Sometimes the best system is the one you understand top to bottom.
+Sometimes the best system is the one you understand from top to bottom.
 
-## A rule of thumb
+## When to extract a component
 
 If a piece of UI does the same thing in three different places, it's probably worth making a component. If it does _kind of_ the same thing in three places but looks and behaves totally differently in each, maybe not.
 
@@ -93,12 +92,12 @@ When in doubt, ask:
 
 If it's easier, componentize. If it's harder, hold off.
 
-## Final thoughts
+## Keep it simple
 
 You don't need a heavyweight design system. You need one that works for your team, your actual team, not the imaginary one with five designers and a dedicated Figma plugin engineer.
 
 Start small. Be consistent. Fix things that are confusing. Leave the rest alone. And don't be afraid to delete a component when it's no longer helping. That, too, is part of the system.
 
-As for how you build your components? Honestly, it doesn't matter that much. If you're full React, cool. Build your system in React. If you're working across multiple codebases using different front end libraries/frameworks, maybe native Web Components are a better fit. If you hate writing native Web Components by hand, Stencil or Lit can take the edge off. If you're in the Ruby on Rails world, definitely check out [ViewComponents](https://viewcomponent.org/) by the GitHub team. They're solid.
+As for how you build your components? In practice, it doesn't matter that much. If you're all in on React, build your system in React. If you're working across multiple codebases using different front end libraries/frameworks, maybe native Web Components are a better fit. If you hate writing native Web Components by hand, Stencil or Lit can take the edge off. If you're in the Ruby on Rails world, definitely check out [ViewComponents](https://viewcomponent.org/) by the GitHub team. They're solid.
 
-The key is to be consistent, take your team's skillsets into account, and stick with an approach that makes sense for the way you work. Don't overthink it. Just pick a direction and stick with it.
+The key is to be consistent, take your team's skill sets into account, and stick with an approach that makes sense for the way you work. Don't overthink it. Just pick a direction and stick with it.
