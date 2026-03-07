@@ -1,17 +1,18 @@
 ---
 slug: css-cheat-sheet
 publishedAt: 2025-05-21
-title: "CSS Cheatsheet"
-description: "This is the CSS version of my cheatsheet collection, a real-world set of styles and features I actually use in UI development."
+title: 'CSS cheatsheet'
+description: 'The CSS version of my cheatsheet collection: real-world styles and features I actually use in UI development.'
 tags: [css, cheatsheet]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747854516/josh-portfolio/assets_task_01jvt3tc9vfj7b24h9jabzn9e0_1747854456_img_2.webp"
-image_alt: "An illustration of CSS code snippets."
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747854516/josh-portfolio/assets_task_01jvt3tc9vfj7b24h9jabzn9e0_1747854456_img_2.webp'
+image_alt: 'An illustration of CSS code snippets.'
 ---
+
 ::TagMenu{tag="cheatsheet" collection="dev_notes"}
 Cheatsheets
 ::
 
-Welcome to the CSS version of my cheatsheet collection, real-world set of styles and features I actually use in UI development. No exhaustive encyclopedias here, just the essentials that make real interfaces better for real people.
+A real-world set of styles and features I actually use in UI development. No exhaustive encyclopedias here, just the essentials that make interfaces better for people.
 
 ## Reset and Normalize
 
@@ -28,17 +29,23 @@ Welcome to the CSS version of my cheatsheet collection, real-world set of styles
 }
 ```
 
-## Selectors & Specificity
+## Selectors and specificity
 
 ```css
 /* Class selector */
-.button { background: blue; }
+.button {
+  background: blue;
+}
 
 /* ID selector (higher specificity) */
-#main-button { background: red; }
+#main-button {
+  background: red;
+}
 
 /* Attribute selector */
-input[type="email"] { border-color: green; }
+input[type='email'] {
+  border-color: green;
+}
 
 /* Pseudo-elements */
 .card::before {
@@ -52,10 +59,10 @@ li:nth-child(odd) {
 }
 ```
 
-## The Box Model
+## The box model
 
 ::CallOut
-**Box-sizing: border-box** is your friend. Just use it and saver yourself the headache of calculating widths and heights. It makes everything easier to manage.
+**Box-sizing: border-box** is your friend. Just use it and save yourself the headache of calculating widths and heights. It makes everything easier to manage.
 ::
 
 ```css
@@ -67,7 +74,7 @@ li:nth-child(odd) {
 }
 ```
 
-## Layout Systems
+## Layout systems
 
 ### Flexbox
 
@@ -111,7 +118,7 @@ h1 {
 }
 ```
 
-## Custom Properties (CSS Variables) + Theming
+## Custom properties (CSS variables) and theming
 
 ```css
 :root {
@@ -149,7 +156,7 @@ body {
 }
 ```
 
-## Button & Form States
+## Button and form states
 
 ```css
 input,
@@ -183,7 +190,7 @@ input:invalid {
 }
 ```
 
-## @media / Responsive Design
+## @media and responsive design
 
 ```css
 @media (min-width: 768px) {
@@ -208,7 +215,7 @@ input:invalid {
 }
 ```
 
-## Transitions & Animations
+## Transitions and animations
 
 ```css
 .button {
@@ -216,8 +223,12 @@ input:invalid {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal {
@@ -225,7 +236,7 @@ input:invalid {
 }
 ```
 
-## Scroll Behavior
+## Scroll behavior
 
 ```css
 html {
@@ -243,7 +254,7 @@ html {
 }
 ```
 
-## Media & Object Fitting
+## Media and object fitting
 
 ```css
 .image {
@@ -254,7 +265,7 @@ html {
 }
 ```
 
-## Gradients & Shadows
+## Gradients and shadows
 
 ```css
 .button {
@@ -308,7 +319,7 @@ html {
 }
 ```
 
-## Advanced CSS Features
+## Advanced CSS features
 
 ### Owl Selector
 
@@ -343,7 +354,7 @@ A visual rhythm system for typography and spacing.
 }
 ```
 
-#### Color Functions
+#### Color functions
 
 ```css
 :root {
@@ -352,7 +363,7 @@ A visual rhythm system for typography and spacing.
 }
 ```
 
-### `:not()` Selector
+### `:not()` selector
 
 ```css
 .button:not(.disabled) {
@@ -363,7 +374,7 @@ A visual rhythm system for typography and spacing.
 }
 ```
 
-### `:has()` Selector
+### `:has()` selector
 
 ```css
 .container:has(.active) {
@@ -374,7 +385,7 @@ A visual rhythm system for typography and spacing.
 }
 ```
 
-## Keeping an Eye on the These Features
+## Features to watch
 
 - Anchor Positioning
 - Popover API

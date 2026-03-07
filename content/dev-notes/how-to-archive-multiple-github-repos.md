@@ -10,7 +10,7 @@ image_alt: 'Developer automating GitHub repository updates management on a lapto
 
 <strong>It's the end of the year, which apparently means it's time for GitHub cleanup.</strong> Over the years, I've created (and quietly abandoned) a lot of repositories. Side projects. Experiments. "I'll totally finish this later" ideas. At some point I crossed the 100-repo mark, which made using the GitHub UI to clean things up feel like a punishment I didn't sign up for.
 
-So instead of clicking my way into carpal tunnel, I did what any reasonable modern-day developer would do:
+So instead of clicking through hundreds of repository settings, I did what any reasonable developer would do:
 
 ::CallOut
 <strong>I asked ChatGPT to help me write a small bash script</strong> and let the computer do the boring part.
@@ -28,11 +28,9 @@ If you're on a Mac and don't already have the GitHub CLI installed:
 
 `brew install gh`
 
-If you're on Windows, Google tells me this works:
+If you're on Windows, this works:
 
 `winget install --id GitHub.cli`
-
-(I'll trust Google on this one.)
 
 ## Step 2: Authenticate
 
@@ -114,9 +112,7 @@ your-github-username/repo3
 
 This makes it easy to add or remove repos without touching the script itself, which feels like the polite thing to do.
 
-<em>Yeh, yeh... I know.</em>
-
-That script could be refactored to include the GitHub username so you don't have to repeat it for each repo, but hey, this is a quick-and-dirty script.
+That script could be refactored to include the GitHub username so you don't have to repeat it for each repo, but this is a quick script and that tradeoff is fine.
 
 ## Step 5: Run it
 

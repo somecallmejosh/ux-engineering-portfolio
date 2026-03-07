@@ -1,10 +1,9 @@
 ---
 slug: americas-test-kitchen
 businessName: "America's Test Kitchen"
-businessUrl: 'https://www.americastestkitchen.com'
 publishedAt: 2025-11-03
-title: "America's Test Kitchen: design system and CMS development"
-description: 'Building a custom CMS, a cross-brand component library, and an accessible UI foundation for one of the most recognized cooking brands in the US.'
+title: "America's Test Kitchen: CMS remediation and design system"
+description: 'Improving an inaccessible CMS and building a shared component library for one of the most recognized cooking brands in the US.'
 tags:
   [
     alpinejs-light,
@@ -22,48 +21,40 @@ tags:
     typescript,
   ]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743990869/josh-portfolio/assets_task_01jr6z5kt8efcsevzqzwek0gse_img_0.webp'
-image_alt: "America's Test Kitchen website screenshot showcasing a delicious recipe."
+image_alt: "Screenshot of the America's Test Kitchen website homepage."
 ---
 
 ## Overview
 
 America's Test Kitchen (ATK) produces recipes, cooking guides, and product reviews across multiple brands, publications, and websites. When I joined the team, the engineering and editorial workflows were tightly coupled in ways that slowed content delivery and made cross-brand consistency hard to maintain.
 
-My work focused on three areas: building a custom content management system (CMS) for the editorial team, creating a shared React component library that worked across ATK's brand portfolio, and making accessibility a built-in standard rather than a late-stage consideration.
+My work focused on two areas: improving an existing content management system (CMS) for the editorial team, and creating a shared React component library that worked across ATK's brand portfolio.
 
-## Building Barista, a custom CMS for the editorial team
+## Rehabilitating Barista, ATK's custom CMS
 
 ### The problem
 
-The editorial team couldn't publish content updates without engineering involvement. Every new recipe, review, or article required a developer to intervene, which created a bottleneck that slowed ATK's content output and pulled engineers away from product work.
+Barista was built by back-end developers and launched without accessibility or editorial usability in mind. There were no reusable components, no consistent interaction patterns, and no involvement from the people who would use it daily. The interface was difficult for the editorial team to navigate, and the experience showed it.
 
-### What I built
+I was re-hired specifically to address these issues. My mandate was to make Barista accessible and usable by working directly with the editorial team to understand where the interface was failing them.
 
-I designed and built a custom CMS we named Barista. The goal was to give editors full control over content publishing without requiring technical knowledge.
+### My role
 
-The process started with direct conversations with editors, project managers, and engineers. I mapped their actual workflows before writing any code, which shaped the information architecture, navigation, and template structure from the start.
+I started by talking to editors, project managers, and content leads to map the actual friction in their day-to-day workflows. The problems weren't subtle: navigation labels didn't match editorial language, template selection was unpredictable, and the interface had no accessibility baseline.
 
-The interface was deliberately simple: clear content hierarchies, straightforward templates, and consistent interaction patterns throughout. Editors could find what they needed without training, and the learning curve was minimal.
+From there, I made targeted changes. I reorganized the navigation, renamed options to reflect how editors actually talked about their work, and made template selection more consistent and predictable. Across the interface, I introduced reusable component patterns where previously everything had been built one-off.
 
 ### The result
 
-After Barista launched, the editorial team could publish updates independently. Content that previously required an engineering ticket went live directly, which reduced turnaround time significantly and freed the engineering team to focus on product development.
+The editorial team went from working around Barista to working with it. Content that had required workarounds or tribal knowledge became straightforward. Feedback sessions that had surfaced frustration started surfacing smaller, more specific requests instead.
 
-## Refining the tool based on real usage
+## Accessibility as remediation
 
-After launch, I monitored how the editorial team actually used Barista and set up regular feedback sessions to surface friction points.
+Barista launched without an accessibility baseline. Keyboard navigation was incomplete, heading structure was inconsistent, and color contrast fell short of acceptable thresholds.
 
-What came back wasn't about missing features. Editors were occasionally confused by navigation labels or couldn't find the right template quickly. Small things, but they added up across a busy editorial calendar.
+I worked alongside QA testers and accessibility specialists to audit the platform and address issues as they were identified. The audit covered color contrast ratios, heading hierarchy, keyboard navigation across all interactions, and screen reader compatibility.
 
-I worked through several design iterations based on that feedback: reorganizing navigation, renaming options to match editorial language, and making template selection more predictable. Each change was small. The cumulative effect was that Barista stopped feeling like a tool the team had to use and started feeling like a natural part of their workflow.
-
-## Accessibility built in from the start
-
-Accessibility wasn't treated as a final checklist item. I worked alongside QA testers and accessibility specialists throughout development to audit the platform as it was being built.
-
-The audit process covered color contrast ratios, heading structure and hierarchy, keyboard navigation across all interactions, and screen reader compatibility. Issues were addressed in the same sprint they were found, not deferred to a later phase.
-
-The result was a CMS that met Web Content Accessibility Guidelines (WCAG) 2.1 AA standards and was usable by team members with a range of abilities and assistive technology preferences.
+The remediation brought Barista to Web Content Accessibility Guidelines (WCAG) 2.1 AA standards and made the tool usable by team members with a range of abilities and assistive technology preferences.
 
 ## A shared component library across ATK's brand portfolio
 
@@ -91,4 +82,6 @@ The documentation wasn't written for developers alone. Designers used it to veri
 
 ## What I took from this project
 
-The work at ATK reinforced something I've found to be true across every design system project: the most important decisions happen before the first line of code. Talking to the editorial team before building Barista shaped everything that came after. Documenting components for a cross-functional audience made the library more useful than one built for developers alone. Good systems are built with the people who use them, not just for them.
+The work at ATK reinforced what happens when teams build technical tools without involving the people who will use them. Barista wasn't broken because of bad intentions. It was built by back-end developers who were focused on what the system could do, not on how editors would experience it day to day.
+
+Fixing that required conversations before code. Understanding what editors actually needed, in their language, shaped every decision about navigation, naming, and structure. The component library followed the same principle: documenting it for a cross-functional audience made it more useful than if it had been written for developers alone. Good systems are built with the people who use them, not just for them.

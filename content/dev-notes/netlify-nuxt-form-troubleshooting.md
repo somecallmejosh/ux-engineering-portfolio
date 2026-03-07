@@ -2,27 +2,27 @@
 slug: netlify-nuxt-form-troubleshooting
 publishedAt: 2025-04-29
 title: 'Netlify Forms with Nuxt 3'
-description: "Here's how I finally got the submissions to show up and how I learned tp avoid the same five-hour rabbit hole the next time."
+description: "Here's how I finally got form submissions to show up and how I learned to avoid the same five-hour rabbit hole next time."
 tags: [hosting, javascript, nuxt, netlify]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1745983435/josh-portfolio/assets_task_01jt2bea62fmnam8yqha1nb72d_1745983373_img_0.webp'
 image_alt: 'A screenshot of the Netlify Forms dashboard showing form submissions.'
 ---
 
-This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's a bit more of a troubleshooting story than a how-to, but I hope it helps someone else out there.
+This was originally posted as a blog post, but I thought it would be a good addition to my Dev Notes. It's more of a troubleshooting story than a how-to, but I hope it helps someone out there.
 
 ::CallOut
-<strong>TLDR;</strong> If your Netlify form submissions have ghosted you, check your build command. And keep a plain ol' `form.html` in your `/public` folder, just in case.
+<strong>TLDR;</strong> If your Netlify form submissions aren't arriving, check your build command. And keep a plain `form.html` in your `/public` folder as a debugging baseline.
 ::
 
-We've all been there. You craft a clean little [contact form](/contact/), sprinkle in some inline validation that you rolled from scratch, maybe even slap on a nice "Send Message" button that you're oddly proud of. You deploy it. It looks great. You give yourself a quiet nod of approval.
+You craft a clean [contact form](/contact/), add some inline validation, and deploy it. It looks great.
 
-And then... <em>crickets</em>. No messages. No leads. Nothing.
+And then: crickets. No messages, no leads, nothing.
 
-You check your Netlify Forms dashboard expecting to see a tidy list of submissions. Instead, it's just a cold, empty void staring back at you. A digital shrug. It's like shouting into a canyon and hearing nothing, not even your own echo. This is the story of how my form ghosted me, and how I finally figured out why.
+You check your Netlify Forms dashboard expecting a tidy list of submissions. Instead, it's empty. You submit a test message. Still nothing. This is the story of how I tracked down why, and what actually fixed it.
 
-## Everything Looked Right
+## Everything looked right
 
-I've been rebuilding my portfolio site with Nuxt.js. I'd done this dance before on several sites in the past. Set up a form, add `data-netlify="true"`, toss in a hidden form-name field, and you're good to go. I even added a useFetch call to handle submissions via JavaScript so users wouldn't get redirected on form submission. Smooth, right?
+I'd done this before on several past sites. Add `data-netlify="true"`, include a hidden `form-name` field, and you're good to go. I even added a `useFetch` call to handle submissions via JavaScript so users wouldn't get redirected on submit:
 
 ```html
 <form
@@ -48,45 +48,45 @@ const { error } = await useFetch('/', {
 })
 ```
 
-I followed my the age old "RTFM" advice and double-checked the Netlify documentation. Everything was in place. I even got a nice 200 OK in the network tab. The request payload looked perfect. But nothing showed up in Netlify. Not even a little test message. It was like sending postcards to a mailbox that didn't exist. Sad face emoji. :-(
+I double-checked the Netlify documentation. Everything was in place. The network tab showed a clean `200 OK`. The request payload looked correct. But nothing appeared in Netlify.
 
-## The Debugging Spiral
+## The debugging spiral
 
-At first, I assumed I'd missed something obvious. But after several rounds of hair-pulling (honestly, I don't have 'hours' worth of hair to pull...minutes at best), here's what I tried (and maybe what you've tried, too):
+Here's what I tried, in roughly the order I tried it:
 
-1. Triple-checking the HTML in DevTools to make sure Netlify's attributes weren't being stripped during build. <em>Nope</em>. They were there.
-1. Submitting without JavaScript to eliminate fetch-related issues. <em>Still no luck.</em>
-1. Using FormData instead of URL-encoded strings. <em>Negatory.</em>
-1. Adding a plain HTML form (no Vue) in my `public/` directory. That worked perfectly. This told me the issue wasn't with Netlify, but with how my Nuxt app was being built.
-1. Trying `useFetch` vs native `fetch`. <em>No difference.</em>
-1. Debugging an unrelated Vue error that made me briefly suspect reactivity gremlins. <em>Red herring.</em>
-1. Changing form field ordering, field names, timing of submission... <em>you get the idea.</em>
+1. Triple-check the HTML in DevTools to confirm Netlify's attributes weren't being stripped during build. They were there.
+1. Submit without JavaScript to rule out fetch-related issues. Still nothing.
+1. Use `FormData` instead of URL-encoded strings. No difference.
+1. Add a plain HTML form (no Vue) to my `public/` directory. That worked perfectly, which told me the issue wasn't with Netlify itself but with how my Nuxt app was being built.
+1. Try `useFetch` versus native `fetch`. No difference.
+1. Debug an unrelated Vue error that turned out to be a red herring.
+1. Change field ordering, field names, and submission timing.
 
-Every fix felt promising for about 90 seconds. And then… <em>nothing</em>.
+Every fix looked promising for about 90 seconds. Then nothing.
 
-## The Real Culprit? The Build Command
+## The real culprit: the build command
 
-In a last-ditch effort, I did something I should've done earlier: I checked my Netlify build settings. My build command was set to:
+As a last resort, I checked my Netlify build settings. My build command was:
 
 ```bash
 npm run build
 ```
 
-Which seems reasonable, right? That's how you build a Nuxt app. That's pretty much what I've always done. And this works just fine and dandy... <em>in Nuxt2 apps</em>.
+That seems reasonable. It's how you build a Nuxt app, and it works fine for Nuxt 2 projects.
 
-But for static site generation with Nuxt 3, and for Netlify Forms to work properly, you need to use:
+But for static site generation with Nuxt 3, and for Netlify Forms to work, you need:
 
 ```bash
 npm run generate
 ```
 
-That small switch was the entire difference. `npm run build` compiles your app, but it doesn't actually pre-render static pages. Netlify Forms needs to see the actual HTML during the build so it can parse it, configure itself, and know where to send form submissions.
+That one change was the entire fix. `npm run build` compiles your app but doesn't pre-render static HTML pages. Netlify Forms needs to parse actual HTML during the build so it can configure itself and know where to send submissions.
 
-Once I switched to `npm run generate`, redeployed the site, and tried again… boom. Submissions flowed into Netlify like they'd been there all along.
+After switching to `npm run generate` and redeploying, submissions started arriving immediately.
 
-## Final Setup
+## Final setup
 
-Once the correct build command was in place, my original form and fetch code worked fine. Here's the version I ended up sticking with:
+Once the correct build command was in place, the original form and fetch code worked fine. Here's the version I kept:
 
 ```js
 const encode = (data) =>
@@ -112,13 +112,11 @@ const onSubmit = async (event) => {
 }
 ```
 
-## Lessons Learned (and Then Some)
+## Lessons learned
 
-Here's what I took away from the experience:
+- Use `npm run generate`, not `npm run build`, when using Nuxt 3 with Netlify Forms.
+- A plain HTML form in `public/` is the fastest way to isolate whether the issue is with Netlify or with your framework's build output.
+- A `200 OK` response doesn't mean Netlify processed the submission. If Netlify never saw the form during the build, it has no idea what to do with the POST.
+- Not every form bug is a Vue bug. Sometimes it's the build pipeline.
 
-- Use `npm run generate`, not npm run build, if you're using Nuxt 3 and Netlify Forms. (Seriously. Save yourself the headache.)
-- Plain HTML still rules for debugging weird Netlify issues. Strip it down and start simple. The <em>200 OK lie is real</em>. Just because your form submission looks fine doesn't mean Netlify is handling it.
-- Sometimes the answer is outside your component. Not everything is a Vue problem. Sometimes it's the deployment pipeline quietly ruining your day.
-- Be patient. Be methodical. Or at least stubborn. That works too.
-
-This wasn't a glamorous bug fix. It didn't teach me a new algorithm. I didn't architect a groundbreaking system. But, a win is a win.
+This wasn't a glamorous fix, but a win is a win.

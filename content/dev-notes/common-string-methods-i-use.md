@@ -7,7 +7,7 @@ tags: [javascript, dates]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747840698/josh-portfolio/assets_task_01jvspmqeyek1ag6z579gaqhb0_1747840627_img_0.webp"
 image_alt: "A whimsical illustration of string manipulation in JavaScript, featuring playful characters."
 ---
-Sure, there are many libraries and built-in methods for string manipulation, but I often find myself rewriting these simple functions in every new code base. Here are some of them:
+There are many libraries and built-in methods for string manipulation, but I often find myself rewriting these simple functions in every new codebase. Here are some of them:
 
 ## Truncate String
 This function truncates a string to a specified length and adds an ellipsis if it exceeds that length. I use this often for displaying text in UI elements where space is limited. I try to keep accessibility and try to include the full string in an `.sr-only` element, a tooltip, or by some other means.
@@ -47,7 +47,7 @@ function replaceCharacter(str, char, replacement) {
 }
 ```
 
-## Check if String is an Email
+## Check if a string is an email
 
 Sometimes I need to validate an email address format. Here's a simple regex-based function to do that.
 
@@ -63,7 +63,7 @@ function checkIsEmail(str) {
 }
 ```
 
-## Check if String is a URL
+## Check if a string is a URL
 
 When you need to check if a string is a valid URL, you can use this function. It uses a regex pattern to validate the URL format.
 
@@ -77,14 +77,14 @@ function checkIsUrl(str) {
 }
 ```
 
-## Title Case a String that is Hyphenated
+## Title-case a hyphenated string
 
 This function capitalizes the first letter of each part of a hyphenated string. I use this often with breadcrumbs or other UI elements where I need to display a hyphenated string in a more readable format.
 
 ```js
 function capitalizeHyphenated(value) {
   // Check if the string is valid and not empty
-  if (typeof str !== "string" || !str) {
+  if (typeof value !== "string" || !value) {
     return ""
   }
 
@@ -101,7 +101,7 @@ function capitalizeHyphenated(value) {
 If you can use a date library like [date-fns](https://date-fns.org/) or [day.js](https://day.js.org/), I highly recommend it. They handle a lot of edge cases and provide a more robust solution for date manipulation. If not, here are some simple functions to help you with date formatting. Also, shoutout to [Ross Hazelett](https://www.linkedin.com/in/ross-hazelett/) for the inspiration on this section. I took a lot of his ideas and made them my own.
 ::
 
-Date formatting can be tricky, especially when dealing with different formats. Here's a couple of  functions that convert a date string from one format to another. It's also good to infer the input format if not provided.
+Date formatting can be tricky, especially when dealing with different formats. Here are a couple of functions that convert a date string from one format to another. It's also good to infer the input format if not provided.
 
 
 ### Is the string a date?

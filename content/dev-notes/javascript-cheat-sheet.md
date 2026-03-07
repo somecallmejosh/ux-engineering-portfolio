@@ -164,8 +164,8 @@ if (!isLoggedIn) {
 ### for loop with iterator and index
 ```js
 // Basic looping.
-// I almost never use this approach anymore, but it's perfectly valid
-// and probably more performant than the others.
+// You'll rarely reach for this in modern code, but it's perfectly valid
+// and generally more performant than the alternatives.
 for (let i = 0; i < items.length; i++) {
   console.log(items[i]);
 }
@@ -173,7 +173,7 @@ for (let i = 0; i < items.length; i++) {
 ```
 ### for
 ```js
-// Cleaner syntax. I seldom use this for anything other than simple iteration.
+// Cleaner syntax. Useful for simple iteration without needing an index.
 for (const item of items) {
   renderItem(item);
 }
@@ -181,7 +181,7 @@ for (const item of items) {
 
 ### forEach
 ```js
-// I find myself using this a lot for iterating over objects, arrays, etc.
+// A common choice for iterating over objects, arrays, and node lists.
 items.forEach((item, i) => {
   console.log(`Item ${i}: ${item}`);
 });
@@ -247,7 +247,7 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 ```
 
 ```js
-// Using `Set` to remove duplicates. Super handy for lists.
+// Using `Set` to remove duplicates. Useful for de-duplicating lists.
 const uniqueItems = [...new Set(items)];
 ```
 
@@ -292,7 +292,7 @@ const [first, , third] = items;
 ## Objects
 
 ```js
-// Reading values. Step one.
+// Reading values.
 const user = { name: 'Josh', age: 40 };
 console.log(user.name);
 ```
@@ -330,7 +330,7 @@ const [{ name }, ...others] = users;
 
 ### Mapping Over Objects
 
-I use this a lot for mapping over objects, especially when I need to convert keys or values.
+Use this pattern for mapping over objects when you need to convert keys or values.
 
 ```js
 const collectionMap = {
@@ -612,10 +612,10 @@ const config = { attributes: true, childList: true, subtree: true };
 observer.observe(targetNode, config);
 ```
 
-## Honarable Mentions
+## Honorable mentions
 
 ### Recursion
-Admittedly, I don't use recursion a ton in UI development, but it's still a useful tool to have in the toolbox.
+You won't reach for recursion often in UI development, but it's a useful technique for the right problems.
 
 ```js
 // The basics: function that calls itself until a stop condition.
@@ -647,4 +647,4 @@ function renderTree(nodes) {
 
 ## Final Thoughts
 
-JavaScript isn't just for clever solutions. In UI development, it's about making things work smoothly, responding to users quickly, and <em>not confusing yourself or your teammates</em>. Keep it simple. Keep it readable. And always test it like someone is going to mash the keyboard and click five times in a row.
+JavaScript isn't just for clever solutions. In UI development, it's about making things work smoothly, responding to users quickly, and *not confusing yourself or your teammates*. Keep it simple. Keep it readable. And always test it like someone is going to mash the keyboard and click five times in a row.

@@ -1,8 +1,8 @@
 ---
 slug: stencil-cheat-sheet
 publishedAt: 2025-06-01
-title: "StencilJS Cheatsheet"
-description: "This guide walks through JavaScript concepts that are essential to understanding and writing effective Stencil.js Web Components, with examples and usage in context."
+title: "StencilJS cheatsheet"
+description: "JavaScript concepts you need to understand and write effective Stencil.js web components, with examples in context."
 tags: [javascript, cheatsheet, web-components, stencil-js]
 image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1748818817/josh-portfolio/assets_task_01jwpve66ef7899m8z3zjgmxhr_1748818728_img_1.webp"
 image_alt: "An illustration of a developer referencing a StencilJS cheat sheet."
@@ -11,17 +11,17 @@ image_alt: "An illustration of a developer referencing a StencilJS cheat sheet."
 Cheatsheets
 ::
 
-This guide walks through JavaScript concepts that are essential to understanding and writing effective Stencil.js Web Components, with examples and usage in context.
+This guide covers JavaScript concepts you need to understand and write effective Stencil.js web components, with examples in context.
 
-## Classes, Class Fields & Decorators
-### JavaScript Concept:
+## Classes, class fields, and decorators
+### JavaScript concept:
 
 - `class` syntax introduces blueprint-based object creation in ES6.
 - Fields declared directly inside the class (not in the constructor) are called class fields.
 - In TypeScript, you can use decorators to annotate class members with metadata or functionality.
 
-### Stencil-Specific:
-Stencil uses decorators provided by `@stencil/core` to add Web Component behavior.
+### Stencil-specific:
+Stencil uses decorators from `@stencil/core` to add web component behavior.
 
 #### Common decorators:
 ::OverflowX
@@ -55,26 +55,26 @@ export class MyCard {
 }
 ```
 
-> Decorators are not native JavaScript yet. They're enabled via the TypeScript compiler and Stencil's tooling.
+> Decorators are not native JavaScript. The TypeScript compiler and Stencil's tooling enable them.
 
 
-## Modules: import / export
-### JavaScript Concept:
-- ES Modules (`import`/`export`) allow you to split and reuse logic across files.
-- `default` and `named` exports provide flexible import patterns.
+## Modules: import and export
+### JavaScript concept:
+- ES modules (`import`/`export`) let you split and reuse logic across files.
+- `default` and named exports provide flexible import patterns.
 
-### Stencil-Specific:
-Stencil relies heavily on module imports to bring in decorators, JSX helpers, and utility functions.
+### Stencil-specific:
+Stencil relies on module imports to bring in decorators, JSX helpers, and utility functions.
 
 ```ts
 import { Component, Prop, h } from '@stencil/core';
 ```
 
-## Arrow Functions & this Context
-### JavaScript Concept:
-Arrow functions do not bind their own `this`. They inherit from the enclosing scope. This avoids `this` binding bugs.
+## Arrow functions and `this` context
+### JavaScript concept:
+Arrow functions don't bind their own `this`. They inherit it from the enclosing scope, which avoids `this` binding bugs.
 
-### Stencil-Specific:
+### Stencil-specific:
 Use arrow functions for event handlers or callbacks to preserve component context.
 
 ```ts
@@ -84,11 +84,11 @@ handleClick = () => {
 ```
 
 ## Destructuring
-### JavaScript Concept:
-Pull out values from arrays or objects directly into variables.
+### JavaScript concept:
+Pull values from arrays or objects directly into variables.
 
-### Stencil-Specific:
-Useful in render() to simplify code when referencing `@Prop()` or `@State()` values.
+### Stencil-specific:
+Useful in `render()` to simplify references to `@Prop()` or `@State()` values.
 
 ```ts
 render() {
@@ -97,23 +97,23 @@ render() {
 }
 ```
 
-## Rest & Spread Syntax
-### JavaScript Concept:
-`...` syntax is used to gather (`rest`) or distribute (`spread`) values.
+## Rest and spread syntax
+### JavaScript concept:
+The `...` syntax gathers (`rest`) or distributes (`spread`) values.
 
-### Stencil-Specific:
-Helps with immutability, prop merging, or passing down attributes.
+### Stencil-specific:
+Useful for immutability, prop merging, or passing attributes down.
 
 ```ts
 const newUser = { ...this.user, isActive: true };
 ```
 
-## JSX + Conditional Logic
-### JavaScript Concept:
+## JSX and conditional logic
+### JavaScript concept:
 JSX is syntactic sugar for DOM construction, powered by functions.
 
-### Stencil-Specific:
-Stencil uses JSX for rendering templates in `render()`. You can use logic like `&&`, ternaries, or `.map()` inside templates.
+### Stencil-specific:
+Stencil uses JSX for rendering templates in `render()`. You can use `&&`, ternaries, or `.map()` inside templates.
 
 ```tsx
 render() {
@@ -126,12 +126,12 @@ render() {
 }
 ```
 
-## Async / Await
-### JavaScript Concept:
-`async`/`await` simplifies handling of asynchronous operations (e.g. API calls).
+## Async/await
+### JavaScript concept:
+`async`/`await` simplifies handling asynchronous operations, such as API calls.
 
-### Stencil-Specific:
-Use in lifecycle methods like `componentWillLoad()` to fetch data before initial render.
+### Stencil-specific:
+Use in lifecycle methods like `componentWillLoad()` to fetch data before the initial render.
 
 ```ts
 async componentWillLoad() {
@@ -140,12 +140,12 @@ async componentWillLoad() {
 
 ```
 
-## Custom Events
-### JavaScript Concept:
+## Custom events
+### JavaScript concept:
 `CustomEvent` lets you create custom DOM events that bubble up and carry data.
 
-### Stencil-Specific:
-Stencil uses `@Event()` and `EventEmitter` to create custom events in a declarative way.
+### Stencil-specific:
+Stencil uses `@Event()` and `EventEmitter` to declare custom events.
 
 ```ts
 @Event() userClicked: EventEmitter<string>;
@@ -155,9 +155,9 @@ handleClick() {
 }
 ```
 
-## Lifecycle Hooks
+## Lifecycle hooks
 ::OverflowX
-| Lifecycle Method          | When it runs                            |
+| Lifecycle method          | When it runs                            |
 | ------------------------- | --------------------------------------- |
 | `componentWillLoad()`     | Before the first render (async allowed) |
 | `componentDidLoad()`      | After initial render                    |
@@ -173,11 +173,11 @@ componentDidLoad() {
 ```
 
 ## Watchers
-### JavaScript Concept:
+### JavaScript concept:
 Reacts to changes in values or props.
 
-### Stencil-Specific:
-Use `@Watch()` to run logic when a `@Prop` or `@State` changes.
+### Stencil-specific:
+Use `@Watch()` to run logic when a `@Prop` or `@State` value changes.
 
 ```ts
 @Prop() count: number;
@@ -188,13 +188,13 @@ handleCountChange(newVal: number, oldVal: number) {
 }
 ```
 
-## Array Methods: .map(), .filter()
-### JavaScript Concept:
+## Array methods: `.map()` and `.filter()`
+### JavaScript concept:
 - `.map()` transforms arrays.
-- `.filter()` filters based on condition.
+- `.filter()` filters based on a condition.
 
-### Stencil-Specific:
-Use to loop over and render lists dynamically inside JSX.
+### Stencil-specific:
+Use these to loop over and render lists dynamically in JSX.
 
 ```tsx
 <ul>
@@ -204,11 +204,11 @@ Use to loop over and render lists dynamically inside JSX.
 </ul>
 ```
 
-## Truthy/Falsy & Ternary Operators
-### JavaScript Concept:
+## Truthy/falsy and ternary operators
+### JavaScript concept:
 Evaluate conditions inline using logical short-circuiting or ternaries.
 
-### Stencil-Specific:
+### Stencil-specific:
 Common in `render()` logic.
 
 ```tsx
@@ -216,13 +216,13 @@ Common in `render()` logic.
 {this.hasError && <p>Something went wrong.</p>}
 ```
 
-## Closures, Factory Methods & Dynamic Handlers
-### JavaScript Concept:
-- **Closures** are functions that "remember" variables from the scope where they were created.
-- **Factory methods** return new functions or objects, often customized for specific use.
-- **Dynamic handlers** are functions generated on-the-fly for context-specific behavior.
+## Closures, factory methods, and dynamic handlers
+### JavaScript concept:
+- **Closures** are functions that remember variables from the scope where they were created.
+- **Factory methods** return new functions or objects, often customized for a specific use.
+- **Dynamic handlers** are functions generated on the fly for context-specific behavior.
 
-### Stencil-Specific:
+### Stencil-specific:
 Closures and factory functions help create reusable logic for event handlers or conditional behavior.
 
 Closure example:
@@ -244,14 +244,14 @@ getClickHandler(msg: string) {
   return () => console.log(msg);
 }
 ```
-> This is powerful for rendering lists where each button needs a unique handler.
+> Use this pattern when rendering lists where each item needs a unique handler.
 
-## TypeScript Essentials
-Stencil uses TypeScript by default. Know these basics:
+## TypeScript essentials
+Stencil uses TypeScript by default. These are the basics most relevant to Stencil:
 
-- Primitive types: `string`, `number`, `boolean`, etc.
+- Primitive types: `string`, `number`, `boolean`, and so on.
 - Union types: `'sm'` | `'md'` | `'lg'`
-- Interfaces: Define shape of props or data models.
+- Interfaces: define the shape of props or data models.
 - Optional props: `@Prop() label?: string`
 
 ```ts
@@ -263,10 +263,10 @@ interface User {
 }
 ```
 
-## DOM APIs & Focus Management
+## DOM APIs and focus management
 Stencil gives you access to native DOM APIs via `@Element()`.
 
-### Use cases:
+Common uses:
 - Setting focus
 - Managing keyboard interaction
 - Querying child elements
@@ -279,13 +279,13 @@ focusInput() {
 }
 ```
 
-## Common Gotchas & Fixes
+## Common gotchas and fixes
 
 ::OverflowX
 | Problem                           | Solution                                                       |
 | --------------------------------- | -------------------------------------------------------------- |
 | Prop doesn't trigger re-render    | Use `@State` or `@Watch` instead of mutating props directly    |
-| `this` is `undefined` in a method | Use arrow function or bind in constructor                      |
-| Custom event doesn’t bubble       | Add `{ bubbles: true, composed: true }` to `CustomEvent`       |
+| `this` is `undefined` in a method | Use an arrow function or bind in the constructor               |
+| Custom event doesn't bubble       | Add `{ bubbles: true, composed: true }` to `CustomEvent`       |
 | Shadow DOM styles not applying    | Use `:host`, `::part`, or disable shadow DOM (`shadow: false`) |
 ::
