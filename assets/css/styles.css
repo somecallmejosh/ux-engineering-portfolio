@@ -3,7 +3,7 @@
 
 html {
   interpolate-size: allow-keywords;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -12,21 +12,21 @@ html {
 }
 
 .text-body {
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .shiki {
   background: var(--color-neutral-50);
   border-radius: 8px;
   border: none;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   margin: 1.5rem 0;
   overflow: auto;
   padding: 16px;
 }
 
 .text-mono {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   background-color: var(--color-neutral-50);
   font-weight: 400;
   /* letter-spacing: -0.5px; */
@@ -39,13 +39,13 @@ h4,
 h5,
 h6,
 dt {
-  font-family: "DM Serif Text", serif;
+  font-family: 'DM Serif Text', serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .script {
-  font-family: "Style Script", cursive;
+  font-family: 'Style Script', cursive;
   font-weight: 400;
 }
 
@@ -64,7 +64,7 @@ dt {
 .prose h4 a,
 .prose h5 a,
 .prose h6 a {
-  font-family: "DM Serif Text", serif;
+  font-family: 'DM Serif Text', serif;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -119,40 +119,43 @@ dt {
 }
 
 .prose {
-  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
     font-weight: 500;
     background-color: var(--color-blue-50);
     padding: 0.1rem 0.25rem;
     border-radius: 4px;
     color: var(--color-neutral-900);
   }
-  [class^=language] {
-    :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  [class^='language'] {
+    :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
       background-color: transparent;
       font-weight: 400;
       border: 0;
-      content: "";
+      content: '';
       padding: 0;
       border-radius: 0;
     }
   }
 
-  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after,
-  :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
-    content: "";
+  :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *))::after,
+  :where(code):not(
+      :where([class~='not-prose'], [class~='not-prose'] *)
+    )::before {
+    content: '';
   }
 
   --tw-prose-body: var(--color-neutral-950);
   --tw-prose-headings: var(--color-neutral-950);
 }
 
-a, .prose [class^="language"], button {
+a,
+.prose [class^='language'],
+button {
   outline-color: var(--color-blue-200);
   outline-offset: 2px;
   transition: all 0.1s ease-in-out;
   &:focus-visible {
     outline: 2px solid var(--color-blue-300);
-    outline-offset: 4px;
-    border-radius: 6px;
+    outline-offset: 2px;
   }
 }

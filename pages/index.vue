@@ -49,9 +49,9 @@ const combinedPosts = [
       <section aria-describedby="page-header" class="prose">
         <PageHeader>I help product teams build component libraries that scale, with accessibility built in from the
           start.</PageHeader>
-        <p class="mb-2">I'm a Design Systems Engineer with 20 years of experience helping teams ship consistent,
+        <p class="mb-4">I'm a Design Systems Engineer with 20 years of experience helping teams ship consistent,
           accessible interfaces and keep them that way.</p>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-2">
           <ButtonLink to="/services/">
             View my services
           </ButtonLink>
