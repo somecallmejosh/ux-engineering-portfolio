@@ -5,7 +5,6 @@ title: 'Everything you need to know about design tokens'
 description: 'Design tokens are the foundation of any scalable design system. This guide explains what they are, how they work, how to name and structure them, and how to use them across Figma and code.'
 tags: [design-systems, component-libraries, best-practices, design-system-guide]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772937784/josh-portfolio/20260307_2142_Image_Generation_simple_compose_01kk5n5vb0e7wvah7dxysv9dt8.png'
-
 image_alt: 'A developer working on a design system.'
 ---
 

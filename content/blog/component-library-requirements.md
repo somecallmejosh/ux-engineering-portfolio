@@ -22,7 +22,7 @@ Before getting into rendering-model specifics, some things are universal. A comp
 
 ### Consistent design tokens
 
-Every component should reference shared tokens for color, spacing, typography, border radius, and shadow rather than hard-coded values. Tokens make global changes predictable and keep the visual system coherent as the library grows. For a full treatment of tokens, see [everything you need to know about design tokens](/blog/design-tokens/).
+Every component should reference shared tokens for color, spacing, typography, border radius, and shadow rather than hard-coded values. Tokens make global changes predictable and keep the visual system coherent as the library grows. For a full treatment of tokens, see [everything you need to know about design tokens](/blog/design-system-tokens/).
 
 ### Documented component API
 

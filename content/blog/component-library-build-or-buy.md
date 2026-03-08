@@ -117,7 +117,7 @@ Work through these before committing to either path.
 
 **How long will this product run?** A short-lived marketing campaign has different maintenance considerations from a product that will be in production for five years.
 
-**Do you support multiple frameworks?** If your team builds for React, Vue, and Angular simultaneously, neither a custom library nor most pre-built libraries solve the multi-framework problem cleanly. See [part three of this series](/blog/component-libraries-multiple-frameworks/) for how teams address that.
+**Do you support multiple frameworks?** If your team builds for React, Vue, and Angular simultaneously, neither a custom library nor most pre-built libraries solve the multi-framework problem cleanly. See [part three of this series](/blog/component-library-for-multi-framework-teams/) for how teams address that.
 
 ## A note on "free"
 
@@ -126,7 +126,5 @@ Pre-built libraries are free to use but not free to adopt. They carry integratio
 The same is true in reverse. A custom library is "free" of licensing fees but carries significant build and maintenance cost that compounds as the system grows.
 
 Neither option is cheaper by default. The cheaper option is the one that fits your situation.
-
-This series continues with [what your component library actually needs, organized by rendering model](/blog/component-library-bare-essentials/), and [component libraries for teams that support multiple frameworks](/blog/component-libraries-multiple-frameworks/).
 
 If you're weighing these options for a real product and want a clearer picture of what makes sense for your specific situation, the [component library starter service](/services/) is one way to get a well-architected foundation without the upfront investment of building everything from scratch.
