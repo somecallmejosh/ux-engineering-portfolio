@@ -17,7 +17,7 @@ tags:
     d3-light,
   ]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1744917502/josh-portfolio/assets_task_01js2js43afnqt5m68bxjmmd81_img_0.webp'
-image_alt: 'IVFCRYO web application screenshot showcasing the shipping process.'
+image_alt: 'IVFCRYO web application shipping process.'
 ---
 
 ## Overview

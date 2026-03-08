@@ -1,11 +1,11 @@
 ---
 slug: refactored-modal-with-stencil-js
 publishedAt: 2025-05-20
-title: "Building a Better Modal: Revisiting My StencilJS Component"
-description: "This article walks through how to create an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS."
+title: 'Building a Better Modal: Revisiting My StencilJS Component'
+description: 'This article walks through how to create an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS.'
 tags: [modal]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747163308/josh-portfolio/assets_task_01jv5gn4pbf468dsctfq5fmm6w_1747163256_img_0.webp"
-image_alt: "A screenshot of a web developer building an accessible modal with StencilJS."
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747163308/josh-portfolio/assets_task_01jv5gn4pbf468dsctfq5fmm6w_1747163256_img_0.webp'
+image_alt: 'A web developer building an accessible modal with StencilJS.'
 ---
 
 ::TagMenu{tag="modal" collection="experiments"}
@@ -21,22 +21,27 @@ This post is a revisit of that same component, after some thoughtful refactoring
 The structure is mostly the same. It still uses a `open` prop to control visibility. It still supports Escape to close. But here's what I added or cleaned up:
 
 ### Focus Restoration
+
 ```ts
 this.previouslyFocusedElement = document.activeElement as HTMLElement;
 ...
 this.previouslyFocusedElement?.focus();
 ```
+
 Focus is restored to the element that was active before the modal opened.
 
 ### Focus on Render
+
 ```ts
 requestAnimationFrame(() => {
-  this.dialogElement.focus();
-});
+  this.dialogElement.focus()
+})
 ```
+
 This ensures the modal is actually focusable when it gets opened.
 
 ### Focus Trap
+
 ```ts
 private maintainFocus(event: KeyboardEvent) {
   const focusable = Array.from(
@@ -45,9 +50,11 @@ private maintainFocus(event: KeyboardEvent) {
   ...
 }
 ```
+
 This prevents users from tabbing outside the modal when it's open.
 
 ### Scroll Lock
+
 ```ts
 private lockScroll() {
   document.body.style.overflow = 'hidden';
@@ -57,15 +64,18 @@ private unlockScroll() {
   document.body.style.overflow = '';
 }
 ```
+
 This keeps background content from scrolling while the modal is open.
 
 ### Cleanup on Disconnect
+
 ```ts
 disconnectedCallback() {
   document.removeEventListener('keydown', this.handleKeydown);
   this.unlockScroll();
 }
 ```
+
 Event listeners are removed when the modal is removed from the DOM.
 
 ## What Changed in the CSS?
@@ -73,6 +83,7 @@ Event listeners are removed when the modal is removed from the DOM.
 The CSS keeps things minimal, flexible, and accessible.
 
 ### Uses CSS Custom Properties
+
 ```css
 :root {
   --r-modal-backdrop-bg: rgba(0, 0, 0, 0.4);
@@ -80,9 +91,11 @@ The CSS keeps things minimal, flexible, and accessible.
   ...
 }
 ```
+
 These make theming and overrides simple.
 
 ### Reduced Motion
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   .modal,
@@ -91,47 +104,56 @@ These make theming and overrides simple.
   }
 }
 ```
+
 This respects user settings for reduced motion.
 
 ### Focus Outline
+
 ```css
 .modal:focus-visible {
   outline: 2px solid var(--r-modal-focus-outline-color);
   outline-offset: 2px;
 }
 ```
+
 Keyboard users get a clear visual indication of focus.
 
 ## Accessibility and Keyboard Support
 
 - **Escape key closes modal**:
+
 ```ts
 if (event.key === 'Escape') {
-  this.closeModal();
+  this.closeModal()
 }
 ```
 
 - **Focus trapping** ensures keyboard navigation stays within the modal.
 - **ARIA roles and attributes**:
+
 ```html
 <div
   role="dialog"
   aria-modal="true"
   aria-labelledby="modal-title"
   aria-describedby="modal-description"
->
+></div>
 ```
+
 These help screen readers understand the structure.
 
 - **Slots for title, body, and footer**:
+
 ```html
 <slot name="title" />
 <slot />
 <slot name="footer" />
 ```
+
 These keep the content flexible.
 
 ## Final Code
+
 ```ts
 // r-modal.tsx
 import {
@@ -429,7 +451,6 @@ r-modal[open] .modal {
     transition: none !important; /* Disables all transitions */
   }
 }
-
 ```
 
 ## Final Thoughts

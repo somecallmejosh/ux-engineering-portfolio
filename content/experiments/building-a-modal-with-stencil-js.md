@@ -1,11 +1,11 @@
 ---
 slug: building-a-modal-with-stencil-js
 publishedAt: 2025-05-13
-title: "Building an Accessible Modal with StencilJS"
-description: "This article walks through how to create an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS."
+title: 'Building an Accessible Modal with StencilJS'
+description: 'This article walks through how to create an accessible, keyboard-navigable, WCAG-compliant modal dialog using StencilJS.'
 tags: [modal]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747163308/josh-portfolio/assets_task_01jv5gn4pbf468dsctfq5fmm6w_1747163256_img_0.webp"
-image_alt: "A screenshot of a web developer building an accessible modal with StencilJS."
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747163308/josh-portfolio/assets_task_01jv5gn4pbf468dsctfq5fmm6w_1747163256_img_0.webp'
+image_alt: 'A web developer building an accessible modal with StencilJS.'
 ---
 
 ::TagMenu{tag="modal" collection="experiments"}
@@ -19,6 +19,7 @@ This article walks through how I created an accessible, keyboard-navigable, WCAG
 ::
 
 ## Why Accessibility Matters for Modals
+
 Modals are one of the most misused and misunderstood UI components in web development, especially when it comes to accessibility. On the surface, they seem simple: display a box, cover the background, and throw in a close button. But for screen reader users or those navigating via keyboard, a poorly implemented modal can make a website completely unusable.
 
 Some of the most common accessibility issues with modals include:
@@ -39,6 +40,7 @@ In this guide, we'll walk through how to build a robust, accessible modal compon
 - Make it reusable, composable, and easy to consume in apps
 
 ## Basic Modal Markup
+
 The structure of an accessible modal is deceptively complex. It must not only look like a modal but behave as one in the eyes of assistive technology.
 
 Here's what our modal needs to do at the markup level:
@@ -50,6 +52,7 @@ Here's what our modal needs to do at the markup level:
 - Optionally block interaction with the background.
 
 ### ARIA Roles and Attributes
+
 The minimal required ARIA structure:
 
 ```html
@@ -77,14 +80,12 @@ StencilJS will generate the shadow DOM, but these ARIA attributes must still wor
 - Expose internals using part, aria-owns, or provide fallback messaging externally.
 
 ### Slot-Based Composition
+
 Here's a working markup prototype for the modal internals:
 
 ```js
 <Host>
-  <div
-    class="modal-backdrop"
-    onClick={this.handleBackdropClick}
-  />
+  <div class="modal-backdrop" onClick={this.handleBackdropClick} />
 
   <div
     class="modal"
@@ -92,7 +93,7 @@ Here's a working markup prototype for the modal internals:
     aria-modal="true"
     aria-labelledby="modal-title"
     aria-describedby="modal-description"
-    ref={el => this.dialogElement = el}
+    ref={(el) => (this.dialogElement = el)}
     tabindex="-1"
   >
     <header class="modal-header">
@@ -121,6 +122,7 @@ Here's a working markup prototype for the modal internals:
 ```
 
 ## Slot Strategy
+
 - `<slot name="title" />`: Enables consumers to customize the modal heading.
 - `<slot />`: Default slot for main body content.
 - `<slot name="footer" />`: Optional actions area (buttons, etc).
@@ -128,11 +130,13 @@ Here's a working markup prototype for the modal internals:
 This provides a semantic and flexible layout that can be styled easily, localized, and reused across many contexts.
 
 ## Styling the Modal
+
 An accessible modal isn't just about markup. It must be visibly obvious, keyboard-friendly, and non-disruptive for screen readers and users with motion sensitivity. Here's how to do it in CSS, particularly in the context of a StencilJS Web Component.
 
 ### Visibility Control: display, opacity, and inert
 
 We'll use two layered elements:
+
 - A backdrop overlay (`.modal-backdrop`)
 - The modal dialog container itself (`.modal`)
 
@@ -181,6 +185,7 @@ Use opacity and visibility for transitions as opposed to `display: none` (until 
 ```
 
 ### Preventing Scroll on Body
+
 When the modal is open, the document body should not scroll. Handle this in the component logic:
 
 ```js
@@ -197,6 +202,7 @@ onOpenChanged(isOpen: boolean) {
 ```
 
 ### Reduced Motion Support
+
 Respect users with prefers-reduced-motion:
 
 ```css
@@ -209,6 +215,7 @@ Respect users with prefers-reduced-motion:
 ```
 
 ### Keyboard Focus Visibility
+
 Stencil (like other frameworks) may not handle focus rings well by default. Add a reset + accessibility-friendly focus style:
 
 ```css
@@ -231,11 +238,13 @@ For large systems, a central z-index scale may be useful (`--z-modal`, `--z-drop
 ### Styling Recap
 
 With this CSS setup:
+
 - The modal is visually centered and responsive.
 - It fades in smoothly, respects motion preferences, and avoids layout shifts.
 - Focus outlines are clear, and screen readers won't be blocked by display: none.
 
 ## JavaScript Behavior
+
 A modal's interactivity hinges on how well it manages state, focus, and keyboard events. We're aiming for:
 
 - Smooth open/close behavior
@@ -245,6 +254,7 @@ A modal's interactivity hinges on how well it manages state, focus, and keyboard
 - Programmatic control
 
 ### Props and Refs
+
 Start by defining props and internal refs for modal control:
 
 ```ts
@@ -259,6 +269,7 @@ private previouslyFocusedElement: HTMLElement | null = null;
 - `previouslyFocusedElement` is used to restore focus when modal closes
 
 ### Lifecycle and Watchers
+
 Set up lifecycle methods to handle open/close behavior:
 
 ```ts
@@ -339,6 +350,7 @@ private maintainFocus(event: KeyboardEvent) {
 This ensures that when the user presses Tab (or Shift+Tab), focus loops within the modal. Without this, users could tab out to the background interface, which is exactly what `aria-modal="true"` tries to prevent.
 
 ### Scroll Lock Helpers
+
 ```ts
 private lockScroll() {
   document.body.style.overflow = 'hidden';
@@ -356,6 +368,7 @@ Simple approach, enough for most use cases, but consider supporting stacked moda
 Accessibility isn't a layer that's bolted on after the fact. It's baked into every decision about structure, focus, and interactivity. We should confirm that the modal meets WAI-ARIA standards and behaves as expected across assistive technologies.
 
 ### Roles and Properties Recap
+
 Let's review the ARIA essentials:
 
 ```html
@@ -383,20 +396,22 @@ Stencil renders this via Shadow DOM, so consider:
 - Exposing inner parts with the part attribute if assistive tech or styling needs access.
 
 ### Keyboard Behavior Expectations
+
 According to WAI-ARIA Authoring Practices 1.2: Modal Dialog Pattern, a modal must support the following keyboard behavior:
 
 ::OverflowX
-| Key           | Behavior                                                      |
+| Key | Behavior |
 | ------------- | ------------------------------------------------------------- |
-| `Tab`         | Moves focus to the next tabbable element *within* the modal   |
-| `Shift + Tab` | Moves focus to the previous tabbable element                  |
-| `Escape`      | Closes the modal                                              |
-| `Enter`       | (Optional) Confirms the modal's primary action, if applicable |
+| `Tab` | Moves focus to the next tabbable element _within_ the modal |
+| `Shift + Tab` | Moves focus to the previous tabbable element |
+| `Escape` | Closes the modal |
+| `Enter` | (Optional) Confirms the modal's primary action, if applicable |
 ::
 
 All of this is already supported with the maintainFocus() method and keydown listener.
 
 ### Focus Management
+
 On open:
 
 - The modal container (`.modal`) receives `focus()` and has `tabindex="-1"` so it's focusable.
@@ -410,6 +425,7 @@ On close:
 Optional enhancement: move focus to a specific action button (like "Cancel" or "Confirm") by exposing a `firstFocusEl` selector prop or a `data-autofocus` attribute.
 
 ### Screen Reader Behavior
+
 Here's how this modal will be announced in most modern screen readers (NVDA, JAWS, VoiceOver):
 
 - When opened, the modal container receives focus.
@@ -437,15 +453,17 @@ To validate this:
 - Not restoring focus: After closing, users are left stranded.
 - Keyboard trap is incomplete: Focus escapes to the background when tabb
 
-
 ## Declarative Usage Example
+
 The goal is to make modal usage look something like this:
 
 ```html
 <my-modal open>
   <span slot="title">Delete Confirmation</span>
 
-  <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+  <p>
+    Are you sure you want to delete this item? This action cannot be undone.
+  </p>
 
   <div slot="footer">
     <button class="secondary" onclick="modal.close()">Cancel</button>
@@ -455,11 +473,13 @@ The goal is to make modal usage look something like this:
 ```
 
 Key features here:
+
 - open can be toggled as a prop or via methods.
 - Slots provide layout flexibility (title, default, footer).
 - Consumers don't need to know how the modal works. They just fill the slots.
 
 ### Exposing Methods for Programmatic Control
+
 Stencil allows you to expose methods on custom elements:
 
 ```ts
@@ -479,6 +499,7 @@ Now developers can call `modalEl.openModal()` or `modalEl.closeModal()` from any
 This is especially helpful when paired with a service-like wrapper or a global state trigger.
 
 ### Avoiding DOM Nesting Issues: Portals
+
 Sometimes modals must render outside their logical parent (e.g., inside a layout that applies overflow: hidden or a z-index context).
 
 Stencil doesn't support React-style portals out of the box, but you can simulate them:
@@ -500,6 +521,7 @@ componentDidLoad() {
 This works, but beware of styles and theme variables. I may need to reapply CSS variables or expose them via props when moving the element to another part of the DOM.
 
 ### Supporting Nested Modals
+
 Nested modals are controversial, but common in enterprise apps (think: "Edit > Delete > Are you sure?").
 
 To support this:
@@ -536,6 +558,7 @@ If necessary, expose minor variants like:
 Use CSS classes based on those props, not logic-heavy JS branches.
 
 ### Consider a Modal Manager (Optional)
+
 If the app will have global modals that aren't tied to a parent component, consider building a modal manager:
 
 ```ts
@@ -559,16 +582,9 @@ But: it requires strict control of styling and behavior to stay maintainable.
 ## Full Code Listing & Usage Example
 
 ### my-modal.tsx (Stencil Component)
+
 ```tsx
-import {
-  Component,
-  Prop,
-  h,
-  Method,
-  Element,
-  Watch,
-  Host
-} from '@stencil/core';
+import { Component, Prop, h, Method, Element, Watch, Host } from '@stencil/core'
 
 @Component({
   tag: 'my-modal',
@@ -576,89 +592,86 @@ import {
   shadow: false, // For better screen reader compatibility
 })
 export class MyModal {
-  @Prop({ reflect: true, mutable: true }) open: boolean = false;
-  @Element() host: HTMLElement;
-  private dialogElement: HTMLElement;
-  private previouslyFocusedElement: HTMLElement | null = null;
+  @Prop({ reflect: true, mutable: true }) open: boolean = false
+  @Element() host: HTMLElement
+  private dialogElement: HTMLElement
+  private previouslyFocusedElement: HTMLElement | null = null
 
   @Watch('open')
   handleOpenChanged(isOpen: boolean) {
     if (isOpen) {
-      this.previouslyFocusedElement = document.activeElement as HTMLElement;
-      this.dialogElement.focus();
-      this.lockScroll();
-      document.addEventListener('keydown', this.handleKeydown);
+      this.previouslyFocusedElement = document.activeElement as HTMLElement
+      this.dialogElement.focus()
+      this.lockScroll()
+      document.addEventListener('keydown', this.handleKeydown)
     } else {
-      this.unlockScroll();
-      document.removeEventListener('keydown', this.handleKeydown);
-      this.previouslyFocusedElement?.focus();
+      this.unlockScroll()
+      document.removeEventListener('keydown', this.handleKeydown)
+      this.previouslyFocusedElement?.focus()
     }
   }
 
   componentDidLoad() {
     if (this.open) {
-      this.dialogElement.focus();
+      this.dialogElement.focus()
     }
   }
 
   @Method()
   async openModal() {
-    this.open = true;
+    this.open = true
   }
 
   @Method()
   async closeModal() {
-    this.open = false;
-    this.host.dispatchEvent(new CustomEvent('close', { bubbles: true }));
+    this.open = false
+    this.host.dispatchEvent(new CustomEvent('close', { bubbles: true }))
   }
 
   private handleKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
-      this.closeModal();
+      this.closeModal()
     } else if (event.key === 'Tab') {
-      this.maintainFocus(event);
+      this.maintainFocus(event)
     }
-  };
+  }
 
   private handleBackdropClick = (event: MouseEvent) => {
     if ((event.target as HTMLElement).classList.contains('modal-backdrop')) {
-      this.closeModal();
+      this.closeModal()
     }
-  };
+  }
 
   private maintainFocus(event: KeyboardEvent) {
     const focusable = Array.from(
       this.dialogElement.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), textarea, input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      )
-    );
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
+        'a[href], button:not([disabled]), textarea, input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
+    )
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
 
     if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
+      event.preventDefault()
+      last.focus()
     } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
+      event.preventDefault()
+      first.focus()
     }
   }
 
   private lockScroll() {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'
   }
 
   private unlockScroll() {
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''
   }
 
   render() {
     return (
       <Host>
-        <div
-          class="modal-backdrop"
-          onClick={this.handleBackdropClick}
-        ></div>
+        <div class="modal-backdrop" onClick={this.handleBackdropClick}></div>
 
         <div
           class="modal"
@@ -692,12 +705,13 @@ export class MyModal {
           </footer>
         </div>
       </Host>
-    );
+    )
   }
 }
 ```
 
 ### my-modal.css
+
 ```css
 :host {
   display: block;
@@ -752,6 +766,7 @@ export class MyModal {
 ```
 
 ### Usage Example
+
 ```html
 <button onclick="document.querySelector('my-modal').openModal()">
   Open Modal
@@ -761,7 +776,9 @@ export class MyModal {
   <span slot="title">Sign Out?</span>
   <p>This will end your session and log you out of the system.</p>
   <div slot="footer">
-    <button onclick="document.querySelector('my-modal').closeModal()">Cancel</button>
+    <button onclick="document.querySelector('my-modal').closeModal()">
+      Cancel
+    </button>
     <button class="danger">Sign Out</button>
   </div>
 </my-modal>

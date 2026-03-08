@@ -2,14 +2,15 @@
 slug: student-mindset
 publishedAt: 2025-04-29
 title: "The Student Mindset: Pros, Cons, and Why I'm (Still) Glad I Have It"
-description: "How a lifelong student mindset helped me grow in tech, and how it sometimes kept me from trusting what I already knew."
+description: 'How a lifelong student mindset helped me grow in tech, and how it sometimes kept me from trusting what I already knew.'
 tags: [career]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745935639/josh-portfolio/assets_task_01jt0xvxb2fffvrp6s52je2hej_1745935597_img_0.webp"
-image_alt: "Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression."
+image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745935639/josh-portfolio/assets_task_01jt0xvxb2fffvrp6s52je2hej_1745935597_img_0.webp'
+image_alt: 'A student playing drums.'
 ---
+
 I once had a drum teacher tell me I had "too much of a student mindset." At the time, I wasn't sure what to make of it. Wasn't being a student a good thing? I was there to learn. I wanted to improve. It seemed like the whole point.
 
-But the way he said it, the way he emphasized *too much*, stuck with me. He wasn't criticizing my effort. He was hinting at something else. Something about mindset, not just skill level. And lately, I've been thinking about how that comment applies to my career, too.
+But the way he said it, the way he emphasized _too much_, stuck with me. He wasn't criticizing my effort. He was hinting at something else. Something about mindset, not just skill level. And lately, I've been thinking about how that comment applies to my career, too.
 
 ## The pros of the student mindset
 

@@ -5,7 +5,7 @@ title: 'CSS cheatsheet'
 description: 'The CSS version of my cheatsheet collection: real-world styles and features I actually use in UI development.'
 tags: [css, cheatsheet]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747854516/josh-portfolio/assets_task_01jvt3tc9vfj7b24h9jabzn9e0_1747854456_img_2.webp'
-image_alt: 'An illustration of CSS code snippets.'
+image_alt: 'An illustration of CSS code snippets'
 ---
 
 ::TagMenu{tag="cheatsheet" collection="dev_notes"}
