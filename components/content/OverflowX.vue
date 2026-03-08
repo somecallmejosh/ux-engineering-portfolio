@@ -1,30 +1,18 @@
 <script setup>
 const overflowContainer = ref(null)
+const overflowWrapper = ref(null)
+const showBefore = ref(false)
+const showAfter = ref(false)
 
 const handleScroll = () => {
   const container = overflowContainer.value
   if (!container) return
 
-  const wrapperEl = container.closest('div.overflow-wrapper')
-  if (!wrapperEl) return
+  showBefore.value = container.scrollLeft > 0
 
-  // Show `.before` if NOT at far-left edge
-  if (container.scrollLeft > 0) {
-    wrapperEl.classList.add('before')
-  } else {
-    wrapperEl.classList.remove('before')
-  }
-
-  // Show `.after` if horizontally overflowing AND not near far-right edge
-  // Using '-1' (or '-2') to counter floating point/rounding issues
-  if (
+  showAfter.value =
     container.scrollWidth > container.clientWidth &&
     container.scrollLeft + container.clientWidth < container.scrollWidth - 1
-  ) {
-    wrapperEl.classList.add('after')
-  } else {
-    wrapperEl.classList.remove('after')
-  }
 }
 
 onMounted(() => {
@@ -45,7 +33,7 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- The nav element has .overflow-wrapper for the pseudo-elements -->
-  <component ref="overflowWrapper" is="div" class="overflow-wrapper relative w-full max-w-full">
+  <div ref="overflowWrapper" class="overflow-wrapper relative w-full max-w-full" :class="{ before: showBefore, after: showAfter }">
     <div class="w-full max-w-full overflow-visible">
       <div
         ref="overflowContainer"
@@ -54,7 +42,7 @@ onBeforeUnmount(() => {
         <slot />
       </div>
     </div>
-  </component>
+  </div>
 </template>
 
 <style scoped>

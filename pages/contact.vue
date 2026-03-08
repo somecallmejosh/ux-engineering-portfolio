@@ -131,7 +131,7 @@ const onSubmit = async (event) => {
             <div class="space-y-1">
               <label class="text-sm" for="name">Name *</label>
               <div>
-                <input aria-describedby="name-invalid" @blur="validateName" v-model="formData.name" name="name"
+                <input aria-describedby="name-invalid" :aria-invalid="nameValid === false || undefined" @blur="validateName" v-model="formData.name" name="name"
                   type="text"
                   class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   :class="{ 'border-red-600 invalid': nameValid == false }">
@@ -144,7 +144,7 @@ const onSubmit = async (event) => {
               <div class="space-y-1">
                 <label class="text-sm" for="email">Email *</label>
                 <div>
-                  <input aria-describedby="email-invalid" @blur="validateEmail" v-model="formData.email" name="email"
+                  <input aria-describedby="email-invalid" :aria-invalid="emailValid === false || undefined" @blur="validateEmail" v-model="formData.email" name="email"
                     type="email"
                     class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     :class="{ 'border-red-600 invalid': emailValid == false }">
@@ -174,7 +174,7 @@ const onSubmit = async (event) => {
             <div class="space-y-1">
               <label class="text-sm" for="message">Message *</label>
               <div>
-                <textarea aria-describedby="message-invalid" @blur="validateMessage" v-model="formData.message"
+                <textarea aria-describedby="message-invalid" :aria-invalid="messageValid === false || undefined" @blur="validateMessage" v-model="formData.message"
                   name="message"
                   class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   :class="{ 'border-red-600 invalid': messageValid == false }"></textarea>
@@ -219,7 +219,7 @@ const onSubmit = async (event) => {
                 <div class="no-shrink translate-y-1">
                   <Icon name="logos:linkedin-icon" size="1em" />
                 </div>
-                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank">
+                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank" rel="noopener noreferrer">
                   <span class="sr-only">LinkedIn.com/</span>
                   joshuabriley
                 </a>
@@ -228,7 +228,7 @@ const onSubmit = async (event) => {
                 <div class="no-shrink translate-y-1">
                   <Icon name="logos:x" size="1em" />
                 </div>
-                <a href="https://x.com/joshuabriley" class="hover:underline" target="_blank">
+                <a href="https://x.com/joshuabriley" class="hover:underline" target="_blank" rel="noopener noreferrer">
                   <span class="sr-only">x.com/</span>
                   joshuabriley
                 </a>

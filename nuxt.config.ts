@@ -100,9 +100,7 @@ export default defineNuxtConfig({
     server: {
       // https://stackoverflow.com/questions/74902697/error-the-request-url-is-outside-of-vite-serving-allow-list-after-git-init
       fs: {
-        allow: [
-          '/Users/joshuabriley/Documents/personal/nuxt-apps/josh-dev-blog',
-        ],
+        allow: [process.cwd()],
       },
     },
   },

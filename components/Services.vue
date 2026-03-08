@@ -103,8 +103,8 @@ const { services, testimonials } = useServices()
       </li>
     </ul>
 
-    <trust-bar class="mb-6">Component libraries shipped at <strong>Travelers</strong>, <strong>Berkshire Hathaway
-        Specialty Insurance</strong>, and <strong>America's Test Kitchen</strong>.</trust-bar>
+    <TrustBar class="mb-6">Component libraries shipped at <strong>Travelers</strong>, <strong>Berkshire Hathaway
+        Specialty Insurance</strong>, and <strong>America's Test Kitchen</strong>.</TrustBar>
   </section>
 </template>
 

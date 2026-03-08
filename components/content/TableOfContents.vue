@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { motion, AnimatePresence } from 'motion-v'
 const props = defineProps({
   links: {
@@ -12,18 +12,22 @@ const toggleMenu = () => {
   menuOpen.value = !menuOpen.value
 }
 
-const handleKeyDown = (event) => {
-  const items = document.querySelectorAll('#toc-menue a')
-  const currentIndex = Array.from(items).indexOf(document.activeElement)
+const tocMenuRef = ref<HTMLElement | null>(null)
+
+const handleKeyDown = (event: KeyboardEvent) => {
+  const items = tocMenuRef.value
+    ? Array.from(tocMenuRef.value.querySelectorAll('a'))
+    : []
+  const currentIndex = items.indexOf(document.activeElement as HTMLAnchorElement)
 
   if (event.key === 'ArrowDown') {
     event.preventDefault()
     const nextIndex = (currentIndex + 1) % items.length
-    items[nextIndex].focus()
+    items[nextIndex]?.focus()
   } else if (event.key === 'ArrowUp') {
     event.preventDefault()
     const prevIndex = (currentIndex - 1 + items.length) % items.length
-    items[prevIndex].focus()
+    items[prevIndex]?.focus()
   } else if (event.key === 'Escape') {
     event.preventDefault()
     menuOpen.value = false
@@ -43,7 +47,7 @@ onBeforeUnmount(() => {
     class="overflow-hidden sticky top-20 lg:top-0 p-4 bg-white border border-neutral-200 rounded-lg z-50 toc"
     aria-labelledby="toc-header" :class="menuOpen && 'open'">
     <button class="text-sm flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu"
-      aria-controls="toc-menue" :aria-expanded="menuOpen">
+      aria-controls="toc-menu" :aria-expanded="menuOpen">
       <h2 id="toc-header" class="flex items-center gap-2 text-body text-sm flex-1 group-hover:underline">
         <Icon name="ph:book-open-text" size="1.3em" />
         <strong>Table of Contents</strong>
@@ -55,8 +59,8 @@ onBeforeUnmount(() => {
       </span>
     </button>
     <AnimatePresence>
-      <motion.div v-if="menuOpen" :exit="{ opacity: 0, height: 0 }" :initial="{ opacity: 0, height: 0 }"
-        :animate="{ opacity: 1, height: 'auto' }" id="toc-menue" class="max-h-96 overflow-y-auto relative">
+      <motion.div v-if="menuOpen" ref="tocMenuRef" :exit="{ opacity: 0, height: 0 }" :initial="{ opacity: 0, height: 0 }"
+        :animate="{ opacity: 1, height: 'auto' }" id="toc-menu" class="max-h-96 overflow-y-auto relative">
         <ul class="not-prose relative z-0 pb-4 text-sm" @click="menuOpen = false">
           <li v-for="item in links" :key="item.id">
             <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">

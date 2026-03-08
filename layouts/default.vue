@@ -2,6 +2,7 @@
 import { motion } from 'motion-v'
 import { onClickOutside } from '@vueuse/core'
 import { useTemplateRef } from 'vue'
+import { ROUTES } from '@/utils/routes'
 const target = useTemplateRef('target')
 onClickOutside(target, event => navOpen.value = false)
 
@@ -13,25 +14,25 @@ const navGroups = [
   {
     groupTitle: 'Main',
     items: [
-      { title: 'Home', path: '/', icon: 'ph:house' },
-      { title: 'Services', path: '/services/', icon: 'ph:handshake' },
-      { title: 'Recent Projects', path: '/projects/', icon: 'ph:projector-screen-chart' },
+      { title: 'Home', path: ROUTES.home, icon: 'ph:house' },
+      { title: 'Services', path: ROUTES.services, icon: 'ph:handshake' },
+      { title: 'Recent Projects', path: ROUTES.projects, icon: 'ph:projector-screen-chart' },
     ]
   },
 
   {
     groupTitle: 'Personal',
     items: [
-      { title: 'Testimonials', path: '/testimonials/', icon: 'ph:chats' },
-      { title: 'About Me', path: '/about/', icon: 'ph:lego-smiley' },
-      { title: 'Contact Me', path: '/contact/', icon: 'ph:address-book' },
+      { title: 'Testimonials', path: ROUTES.testimonials, icon: 'ph:chats' },
+      { title: 'About Me', path: ROUTES.about, icon: 'ph:lego-smiley' },
+      { title: 'Contact Me', path: ROUTES.contact, icon: 'ph:address-book' },
     ]
   },
   {
     groupTitle: 'Writing',
     items: [
-      { title: 'Blog', path: '/blog/', icon: 'ph:article-ny-times' },
-      { title: 'Dev Notes', path: '/dev-notes/', icon: 'ph:notepad' },
+      { title: 'Blog', path: ROUTES.blog, icon: 'ph:article-ny-times' },
+      { title: 'Dev Notes', path: ROUTES.devNotes, icon: 'ph:notepad' },
     ]
   },
 ]

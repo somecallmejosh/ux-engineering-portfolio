@@ -6,6 +6,7 @@ const q = ref('')
 const results = ref<any[]>([])
 const { loading, search } = useSearch()
 const root = ref<HTMLElement | null>(null)
+const searchInput = ref<HTMLInputElement | null>(null)
 const emit = defineEmits<{ (e: 'close'): void }>()
 const resultsId = 'site-search-results'
 
@@ -30,8 +31,7 @@ onClickOutside(root, () => {
 const onKeydown = (e: KeyboardEvent) => {
   if (e.key === 'Escape') {
     resetSearch()
-    const el = document.getElementById('site-search') as HTMLInputElement | null
-    el?.focus()
+    searchInput.value?.focus()
   }
 }
 </script>
@@ -45,6 +45,7 @@ const onKeydown = (e: KeyboardEvent) => {
       </span>
     </label>
     <input
+      ref="searchInput"
       id="site-search"
       v-model="q"
       type="search"
@@ -69,7 +70,7 @@ const onKeydown = (e: KeyboardEvent) => {
         </button>
       </div>
       <ul class="-mx-2" @click="resetSearch">
-        <li v-for="r in results" :key="r.id" role="option" class="flex p-4 transition-colors duration-200 hover:bg-blue-50 group rounded-lg relative">
+        <li v-for="r in results" :key="r.id" role="option" aria-selected="false" class="flex p-4 transition-colors duration-200 hover:bg-blue-50 group rounded-lg relative">
           <div>
             <Pill :pill="humanize(r.collection)" :pillIcon="r.collection === 'blog' ? 'ph:article-ny-times' : r.collection === 'projects' ? 'ph:projector-screen-chart' : r.collection === 'dev_notes' ? 'ph:notepad' : 'ph:microscope'"></Pill>
             <div class="font-semibold group-hover:underline">{{ r.title }}</div>
