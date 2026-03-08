@@ -4,7 +4,7 @@ publishedAt: 2026-03-02
 title: 'How to improve your Figma-to-code workflow'
 description: 'Figma-to-code handoff breaks down in predictable ways. This article explains why, and gives practical steps for designers and developers to fix it together.'
 tags: [design, design-systems, front-end-development, best-practices]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772940876/josh-portfolio/20260307_2233_Image_Generation_simple_compose_01kk5r2jkqe50vkkx4zpsfn56n.png'
+image: "/images/blog/figma-to-code-workflow.png"
 image_alt: 'Designer and developers collaborating on a Figma file.'
 ---
 

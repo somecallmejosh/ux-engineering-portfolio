@@ -4,7 +4,7 @@ publishedAt: 2025-05-21
 title: "Javascript Cheatsheet"
 description: "A reference for the core parts of JavaScript that show up in real-life UI development... At least the ones I use."
 tags: [javascript, cheatsheet]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747854266/josh-portfolio/assets_task_01jvt3kmvmf92ajfb9ynn1je8c_1747854234_img_1.webp"
+image: "/images/dev-notes/javascript-cheat-sheet.webp"
 image_alt: "An illustration of JavaScript code snippets."
 ---
 

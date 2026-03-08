@@ -5,7 +5,7 @@ title: 'Build or Buy: Making the Right Choice for Your Design System'
 description: "Deciding whether to build a design system in-house or buy a commercial solution is a critical choice. Here's how to evaluate your options and make the best decision for your team."
 tags:
   [design-systems, component-libraries, best-practices, component-library-guide]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772937057/josh-portfolio/20260307_2130_UX_Engineer_s_Dilemma_simple_compose_01kk5mf0kve118jetzhhy3zkrn.png'
+image: "/images/blog/component-library-build-or-buy.png"
 image_alt: 'A developer working on a design system.'
 ---
 

@@ -19,7 +19,7 @@ tags:
     vitest-light,
     vuejs-light,
   ]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743991012/josh-portfolio/assets_task_01jr6z0n1bfqgrjwndjfn3v2q3_img_0.webp'
+image: "/images/projects/berxi-insurance.webp"
 image_alt: 'Berxi.com website showcasing a clean and modern design.'
 ---
 

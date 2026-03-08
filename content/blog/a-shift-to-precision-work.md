@@ -4,7 +4,7 @@ publishedAt: 2025-07-18
 title: "Precision Work and Learning to Slow Down"
 description: "Learning to slow down as a developer after years of being rewarded for speed. Reflections on pace, precision, and building systems that last."
 tags: [career]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1752853300/josh-portfolio/assets_task_01k0f2yh4eenqs4jf6299vnq45_1752853179_img_0.webp"
+image: "/images/blog/a-shift-to-precision-work.webp"
 image_alt: "A tortoise and a hare racing towards the finish line."
 ---
 

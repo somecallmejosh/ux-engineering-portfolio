@@ -4,7 +4,7 @@ publishedAt: 2026-03-07
 title: 'Accessibility Audit Cheatsheet'
 description: 'A practical accessibility audit cheatsheet for developers and designers. Covers keyboard testing, screen readers, color contrast, HTML structure, focus management, and automated tooling'
 tags: [accessibility, best-practices, front-end-development, cheatsheet]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772940161/josh-portfolio/20260307_2221_Image_Generation_simple_compose_01kk5qccaxfc5ayx484dj1p8nc.png'
+image: "/images/dev-notes/accessibility-audit-cheatsheet.png"
 image_alt: "Developer who's excited he found an accessibility audit cheatsheet."
 ---
 

@@ -4,7 +4,7 @@ publishedAt: 2026-03-04
 title: 'Design Systems Are Easy Until You Ship One'
 description: "Design systems look simple from a distance. A shared library. A consistent UI. Faster delivery. Fewer bugs. Fewer debates. It's a compelling story, and it's not wrong."
 tags: [accessibility, design-systems, design-system-guide]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772682841/josh-portfolio/20260304_2252_Image_Generation_simple_compose_01kjy20dbsfdrr674m4ba5wm0r.png'
+image: "/images/blog/design-systems-are-easy-until-you-ship-one.png"
 image_alt: 'A developer working on a design system.'
 ---
 

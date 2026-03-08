@@ -4,7 +4,7 @@ publishedAt: 2025-12-28
 title: 'How to Archive Multiple GitHub Repos'
 description: 'Using the Github UI to archive lots of projects would be time-consuming. So I asked ChatGPT to help me write a quick bash script to do it for me.'
 tags: [github, automation, bash]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1766942768/josh-portfolio/github-automation.png
+image: "/images/dev-notes/how-to-archive-multiple-github-repos.png"
 image_alt: 'Developer automating GitHub repository updates management on a laptop.'
 ---
 

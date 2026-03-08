@@ -5,12 +5,19 @@ const { data: post } = await useAsyncData(`projects-${slug}`, () => {
   return queryCollection('projects').path(`/projects/${slug}`).first()
 })
 
+const siteUrl = useRuntimeConfig().public.siteUrl
+const ogImage = computed(() => {
+  const img = post.value?.image
+  if (!img) return undefined
+  return img.startsWith('http') ? img : `${siteUrl}${img}`
+})
+
 useSeoMeta({
   title: post.value?.title,
   ogTitle: post.value?.title,
   description: post.value?.description,
   ogDescription: post.value?.description,
-  ogImage: post.value?.image,
+  ogImage: ogImage.value,
 })
 
 </script>

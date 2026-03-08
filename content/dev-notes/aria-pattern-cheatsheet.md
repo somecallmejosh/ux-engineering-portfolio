@@ -4,7 +4,7 @@ publishedAt: 2026-01-07
 title: 'ARIA Cheatsheet'
 description: 'A quick reference for common WAI-ARIA patterns: required roles, ARIA attributes, keyboard behavior, and active state handling.'
 tags: [accessibility, cheatsheet]
-image: https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745245227/josh-portfolio/assets_task_01jscbab7dekctaz7mx7356yxp_img_0.webp
+image: "/images/dev-notes/aria-pattern-cheatsheet.webp"
 image_alt: 'ARIA Patterns and Practices Cheatsheet'
 ---
 

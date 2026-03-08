@@ -4,7 +4,7 @@ publishedAt: 2025-05-24
 title: "They Beat the Care Out of Me"
 description: "One of my old bosses had a phrase he used when a customer pushed too far. He'd lean back in his chair, crack his knuckles, and say, \"They beat the care out of me.\""
 tags: [career]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1748102211/josh-portfolio/assets_task_01jw1g1c72e9q85pc0g3dgbshc_1748102137_img_1.webp"
+image: "/images/blog/they-beat-the-care-out-of-me.webp"
 image_alt: "An illustration of a person in a boxing ring, symbolizing the challenges of a front-end developer."
 ---
 

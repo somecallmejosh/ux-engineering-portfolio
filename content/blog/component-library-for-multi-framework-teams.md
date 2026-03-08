@@ -4,7 +4,7 @@ publishedAt: 2026-03-06
 title: 'Component libraries for teams that support multiple frameworks'
 description: 'Teams that build for React, Vue, and Angular face a real architecture challenge. This article covers the three main approaches: web components, headless patterns, and token-driven architecture.'
 tags: [design-systems, front-end-development, component-library-guide]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772939496/josh-portfolio/20260307_2210_Image_Generation_simple_compose_01kk5psekae8094pyvzd2zd4a0.png'
+image: "/images/blog/component-library-for-multi-framework-teams.png"
 image_alt: 'Team discussing component library strategies.'
 ---
 

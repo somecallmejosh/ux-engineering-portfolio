@@ -4,7 +4,7 @@ publishedAt: 2025-05-02
 title: 'Why I Feel Like the Luckiest Guy in Tech'
 description: "A reflection on failing at backend, thriving at UI/UX, and finally realizing that staying in my lane might've been the best thing I could've done."
 tags: [career]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746208059/josh-portfolio/assets_task_01jt91nja6eehvgyhdhw0qp05e_1746208014_img_0.webp'
+image: "/images/blog/the-luckiest-guy-in-tech.webp"
 image_alt: 'Computer programmer sitting at a desk, looking content and satisfied with their work.'
 ---
 

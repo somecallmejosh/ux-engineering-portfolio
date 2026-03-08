@@ -4,7 +4,7 @@ publishedAt: 2025-05-23
 title: "The reality of working in UI/UX right now"
 description: "Trying to stay relevant in the game as a UI/UX developer. Thoughts on AI, shifting expectations, burnout, and what keeps me hopeful about what's next."
 tags: [zeitgeist]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1748009339/josh-portfolio/assets_task_01jvyqe2s0ej2asb8rtx2jx2cw_1748009241_img_0.webp"
+image: "/images/blog/the-reality-of-working-in-ui-ux-right-now.webp"
 image_alt: "UX developer embracing AI, communicating with team members, and looking forward to a long career in the industry."
 ---
 

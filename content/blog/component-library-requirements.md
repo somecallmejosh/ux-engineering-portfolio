@@ -4,7 +4,7 @@ publishedAt: 2026-03-01
 title: 'What your component library actually needs'
 description: 'What a component library needs varies significantly depending on your rendering model. This guide covers the bare essentials for server-rendered monoliths, client-rendered frameworks, and hybrid frameworks.'
 tags: [accessibility, design-systems, best-practices, component-library-guide]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772938565/josh-portfolio/20260307_2155_Image_Generation_simple_compose_01kk5nwjhzf5wspkh35zj994yq.png'
+image: "/images/blog/component-library-requirements.png"
 image_alt: 'A designer and two developers working on a design system.'
 ---
 

@@ -4,7 +4,7 @@ publishedAt: 2025-03-02
 title: "Front-End Developers and Their Tools: It's the Craft, Not the Brand"
 description: "Your framework is just a tool. What makes front-end developers effective is a strong grasp of HTML, CSS, and JavaScript, not which tool they've used most."
 tags: [front-end-development, best-practices]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744900289/josh-portfolio/assets_task_01js22ajq3emdaphyvchamy2d5_img_0.webp"
+image: "/images/blog/front-end-carpentry.webp"
 image_alt: "A JavaScript developer and a carpenter sharing tools."
 ---
 

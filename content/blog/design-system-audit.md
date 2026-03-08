@@ -4,7 +4,7 @@ publishedAt: 2026-03-06
 title: 'What is a design system audit?'
 description: "A design system audit identifies inconsistencies, accessibility gaps, and structural problems in your component library before they become expensive. Here's what one covers and why teams commission them."
 tags: [accessibility, design-systems, best-practices, design-system-guide]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1772832329/josh-portfolio/20260306_1624_Friendly_UX_Engineering_simple_compose_01kk2gj3wzfect22q2fcgb5nwr.png'
+image: "/images/blog/design-system-audit.png"
 image_alt: 'A developer working on a design system.'
 ---
 

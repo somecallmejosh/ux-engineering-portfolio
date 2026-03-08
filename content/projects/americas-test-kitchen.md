@@ -20,7 +20,7 @@ tags:
     styledcomponents,
     typescript,
   ]
-image: 'https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1743990869/josh-portfolio/assets_task_01jr6z5kt8efcsevzqzwek0gse_img_0.webp'
+image: "/images/projects/americas-test-kitchen.webp"
 image_alt: "America's Test Kitchen."
 ---
 

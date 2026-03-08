@@ -4,7 +4,7 @@ publishedAt: 2025-04-21
 title: "Forrest Gump, The UX Engineer the World Needs"
 description: "Forrest isn’t loud, but he might be the reason your product works. A gentle take on focus, loyalty, and UX wins you didn’t see coming."
 tags: [fictional-ux-engineers]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745252408/josh-portfolio/assets_task_01jschr2wafjf8hks8ths3jz2t_img_0.webp"
+image: "/images/blog/forrest-gump-ux-engineer.webp"
 image_alt: "Forrest Gump sitting on a park bench thinking about UX."
 ---
 ::TagMenu{tag="fictional-ux-engineers"}

@@ -31,7 +31,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       sqlPath: process.env.SQL_ALLOW_PATH,
+      siteUrl: process.env.NUXT_SITE_URL ?? 'http://localhost:3000',
     },
+  },
+  image: {
+    provider: 'none',
   },
   modules: [
     '@nuxt/icon',

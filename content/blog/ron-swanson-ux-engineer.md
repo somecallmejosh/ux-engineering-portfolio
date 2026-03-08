@@ -4,7 +4,7 @@ publishedAt: 2025-04-12
 title: "Ron Swanson: No-Nonsense UX Engineering"
 description: "A tribute to simplicity, privacy, and the quietly effective UX engineer who believes less is more (and still hates meetings)."
 tags: [fictional-ux-engineers]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1745851667/josh-portfolio/assets_task_01jsydsemre5p8ny253ck44386_1745851626_img_0.webp"
+image: "/images/blog/ron-swanson-ux-engineer.webp"
 image_alt: "Ron Swanson sitting at a desk with a computer, looking serious about UX."
 ---
 ::TagMenu{tag="fictional-ux-engineers"}

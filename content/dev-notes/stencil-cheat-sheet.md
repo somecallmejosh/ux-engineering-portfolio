@@ -4,7 +4,7 @@ publishedAt: 2025-06-01
 title: "StencilJS cheatsheet"
 description: "JavaScript concepts you need to understand and write effective Stencil.js web components, with examples in context."
 tags: [javascript, cheatsheet, web-components, stencil-js]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1748818817/josh-portfolio/assets_task_01jwpve66ef7899m8z3zjgmxhr_1748818728_img_1.webp"
+image: "/images/dev-notes/stencil-cheat-sheet.webp"
 image_alt: "An illustration of a developer referencing a StencilJS cheat sheet."
 ---
 ::TagMenu{tag="cheatsheet" collection="dev_notes"}

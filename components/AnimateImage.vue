@@ -6,12 +6,12 @@ defineProps<{
 </script>
 
 <template>
-  <img
+  <NuxtImg
     :src="src"
     :alt="alt"
+    width="900"
+    height="600"
     class="w-full rounded-lg grayscale"
     loading="lazy"
-    height="600"
-    width="400"
   />
 </template>

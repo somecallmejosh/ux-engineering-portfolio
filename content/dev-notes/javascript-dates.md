@@ -4,7 +4,7 @@ publishedAt: 2025-05-10
 title: "Dealing with Dates in JavaScript"
 description: "JavaScript's Date object is straightforward until it isn't. Time zones, locale formatting, and parsing quirks trip up even experienced developers."
 tags: [javascript, dates]
-image: "https://res.cloudinary.com/dwjulenau/image/upload/dpr_auto,f_auto,fl_progressive,q_auto/v1747076064/josh-portfolio/assets_task_01jv2xcacpf9e8442cz03j7b86_1747075929_img_0.webp"
+image: "/images/dev-notes/javascript-dates.webp"
 image_alt: "A cartoon illustration of a developer sitting at a desk surrounded by floating clock and calendar icons."
 ---
 JavaScript's `Date` object is straightforward until it isn't. Time zones, locale formatting, and parsing quirks trip up even experienced developers. This guide covers the essentials so you can spend less time debugging `new Date()` and more time shipping features.
