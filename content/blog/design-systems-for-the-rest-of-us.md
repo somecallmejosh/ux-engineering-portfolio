@@ -3,10 +3,21 @@ slug: design-systems-for-the-rest-of-us
 publishedAt: 2025-05-04
 title: 'Design Systems and Component Libraries for the Rest of Us'
 description: 'A lighthearted look at building design systems without the ceremony, complexity, or committee-induced paralysis.'
-tags: [design, design-systems, front-end-development, accessibility]
+tags:
+  [
+    design,
+    design-systems,
+    front-end-development,
+    accessibility,
+    design-system-guide,
+  ]
 image: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1746369173/josh-portfolio/assets_task_01jtdv9wbkem5r50p1yxnnqpvb_1746369114_img_0.webp'
 image_alt: 'A whimsical illustration of a design system with playful components, colors, and patterns.'
 ---
+
+::TagMenu{tag="design-system-guide"}
+Component libraries: a practical guide
+::
 
 ::CallOut
 **Spoiler**: You don't need a Storybook to have a system.
