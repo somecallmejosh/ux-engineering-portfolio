@@ -10,11 +10,6 @@ export type SearchDoc = {
   route: string
 }
 
-function normalizeCollectionName(name: string) {
-  if (name === 'dev_notes') return 'dev-notes'
-  return name
-}
-
 async function fetchAllDocs(): Promise<SearchDoc[]> {
   const collections = ['blog', 'projects', 'dev_notes', 'experiments'] as const
   const results: SearchDoc[] = []
@@ -30,7 +25,7 @@ async function fetchAllDocs(): Promise<SearchDoc[]> {
         tags: post.tags,
         image: post.image,
         image_alt: post?.meta?.image_alt,
-        route: `/${normalizeCollectionName(c)}/${post.slug}/`,
+        route: `/${collectionPath(c)}/${post.slug}/`,
       })
     }
   }

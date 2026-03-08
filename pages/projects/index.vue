@@ -10,38 +10,6 @@ useSeoMeta({
   ogDescription: 'UX engineering projects including component libraries, design systems, and accessible web applications built for real teams.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
 })
-const skillIcons = [
-  'html',
-  'css',
-  'sass',
-  'styledcomponents',
-  'tailwindcss-light',
-  'typescript',
-  'javascript-light',
-  'javascript',
-  'alpinejs-light',
-  'htmx-light',
-  'jquery',
-  'vuejs-light',
-  'nuxtjs-light',
-  'pinia-light',
-  'illustrator-light',
-  'github-light',
-  'react-light',
-  'nextjs-light',
-  'd3-light',
-  'vite-light',
-  'vitest-light',
-  'cypress-light',
-  'ruby',
-  'rails',
-  'figma-light',
-  'illustrator',
-  'github-light',
-  'aws-light',
-  'heroku',
-  'netlify-light',
-]
 </script>
 
 <template>

@@ -1,35 +1,17 @@
-<script setup>
-  import { humanize } from '~/utilities/humanize'
-  const props = defineProps({
-    slug: {
-      type: String,
-      required: true,
-    },
-    label: {
-      type: String,
-      required: true,
-    },
-    baseUrl: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    category: {
-      type: Boolean,
-      default: false,
-    },
-  })
+<script setup lang="ts">
+const props = defineProps<{
+  slug: string
+  label: string
+  baseUrl: string
+  title: string
+  category?: boolean
+}>()
 
-  const finalPath = () => {
-    if (props.category) {
-      return `/${props.baseUrl}/tags/${props.slug}/`
-    } else {
-      return `/${props.baseUrl}/${props.slug}/`
-    }
-  }
+function finalPath(): string {
+  return props.category
+    ? `/${props.baseUrl}/tags/${props.slug}/`
+    : `/${props.baseUrl}/${props.slug}/`
+}
 </script>
 <template>
   <OverflowX>
@@ -44,7 +26,7 @@
           <Icon class="size-3 opacity-30" name="ph:caret-right-fill" />
         </li>
         <li class="text-neutral-700">
-          <NuxtLink :to="finalPath()" class="text-nowrap cap">{{ humanize(title) }}</NuxtLink>
+          <NuxtLink :to="finalPath()" class="text-nowrap">{{ humanize(title) }}</NuxtLink>
         </li>
       </ol>
     </nav>

@@ -1,25 +1,20 @@
-<script setup>
-import { motion } from 'motion-v'
+<script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
-const props = defineProps({
-  text: {
-    type: String,
-    required: true
-  },
-  id: {
-    type: String,
-    required: true
-  }
-})
+
+defineProps<{
+  text: string
+  id: string
+}>()
+
 const target = useTemplateRef('target')
 const toolTipVisible = ref(false)
 const visibilityToggle = () => {
   toolTipVisible.value = !toolTipVisible.value
 }
-onClickOutside(target, event => toolTipVisible.value = false)
+onClickOutside(target, () => { toolTipVisible.value = false })
 </script>
 <template>
-  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @tap="visibilityToggle" class="tooltip group">
+  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @click="visibilityToggle" class="tooltip group">
     <span :aria-label="text">
       <slot></slot>
     </span>
@@ -51,7 +46,7 @@ onClickOutside(target, event => toolTipVisible.value = false)
   text-align: center;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position the tooltip above the text */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
 }

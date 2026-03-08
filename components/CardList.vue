@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-
 interface CardItem {
   id: string
   title: string
@@ -9,54 +7,30 @@ interface CardItem {
   image?: string
   meta?: { image_alt: string }
   headline?: string
+  to?: string
 }
 
-const { fullPath } = useRoute();
-const props = defineProps({
-  label: {
-    type: String,
-    default: 'Reading List'
-  },
-  list: {
-    type: Array as PropType<CardItem[]>,
-    required: true
-  }
-});
+const { fullPath } = useRoute()
+const props = defineProps<{
+  list: CardItem[]
+  label?: string
+}>()
 
-// remove everthing after parent container (the first segment of the path)
-// e.g. /blog/categories/slug -> /blog/
-const path = fullPath.split('/').slice(0, 2).join('/');
+const basePath = fullPath.split('/').slice(0, 2).join('/')
+
+function itemUrl(item: CardItem): string {
+  return item.to ?? `${basePath}/${item.slug}/`
+}
 </script>
 <template>
-  <section :aria-label="label">
+  <section :aria-label="label ?? 'Reading List'">
     <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
-      <li
+      <CardListItem
         v-for="item in list"
         :key="item.id"
-        class="space-y-4 hover:ring-2 ring-blue-200 ring-offset-4 rounded-lg"
-        >
-        <div class="rounded-lg relative group">
-          <AnimateImage
-            v-if="item.image"
-            :src="item.image"
-            :alt="item.meta.image_alt"
-            :scaleY="0.75"
-            class="mb-4"
-          />
-          <div class="prose">
-            <CardHeader class="mb-2.5">
-              {{ item.headline }}
-              {{ item.title }}
-            </CardHeader>
-            <p class="text-pretty">{{ item.description }}</p>
-          </div>
-          <NuxtLink :to="`${path}/${item.slug}/`" class="absolute not-prose inset-0 rounded-lg">
-          <span class="sr-only">{{
-              item.title
-            }}</span>
-          </NuxtLink>
-        </div>
-      </li>
+        :item="item"
+        :to="itemUrl(item)"
+      />
     </ul>
   </section>
 </template>

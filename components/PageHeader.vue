@@ -1,19 +1,9 @@
-<script setup>
-import { formatDate } from '~/utilities/formatDate.js'
-const props = defineProps({
-  pill: {
-    type: String,
-    required: false
-  },
-  pillIcon: {
-    type: String,
-    required: false
-  },
-  publishedAt: {
-    type: String,
-    required: false
-  }
-})
+<script setup lang="ts">
+defineProps<{
+  pill?: string
+  pillIcon?: string
+  publishedAt?: string
+}>()
 </script>
 <template>
   <div class="space-y-6">

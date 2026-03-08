@@ -1,14 +1,8 @@
-<script setup>
-defineProps({
-  pill: {
-    type: String,
-    required: true
-  },
-  pillIcon: {
-    type: String,
-    required: false
-  }
-});
+<script setup lang="ts">
+defineProps<{
+  pill: string
+  pillIcon?: string
+}>()
 </script>
 <template>
   <span
