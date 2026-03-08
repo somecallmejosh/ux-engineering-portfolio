@@ -1,4 +1,4 @@
-const acronyms = {
+const acronyms: Record<string, string> = {
   html: 'HTML',
   css: 'CSS',
   js: 'JS',
@@ -10,7 +10,7 @@ const acronyms = {
   npm: 'NPM',
 }
 
-export function humanize(str) {
+export function humanize(str: string): string {
   if (!str) return ''
   return str
     .replace(/[_-]+/g, ' ')

@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 import { onClickOutside } from '@vueuse/core'
 import { useTemplateRef } from 'vue'
 import { ROUTES } from '@/utils/routes'
@@ -56,44 +55,38 @@ const blurAndRemoveFocus = () => {
         <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
           <div>
-            <motion.button @click="navToggle" :whilePress="{ scale: 1.1 }"
-              class="flex lg:hidden cursor-pointer flex items-center gap-1 text-xs uppercase font-medium"
+            <button @click="navToggle"
+              class="menu-toggle flex lg:hidden cursor-pointer items-center gap-1 text-xs uppercase font-medium"
               aria-label="Toggle nav menu visibility">
               Menu
               <Icon v-if="!navOpen" name="ph:equals-bold" size="1.5em" />
               <Icon v-if="navOpen" name="ph:x-bold" size="1.5em" />
-            </motion.button>
+            </button>
           </div>
         </div>
         <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
-          <!-- AnimatePresence is auto-registered by motion-v/nuxt; avoid explicit imports to prevent duplicate warnings -->
-          <AnimatePresence :initial="false">
-            <motion.div v-if="navOpen" :initial="{ opacity: 0, height: 0 }" :animate="{ opacity: 1, height: 'auto' }"
-              :exit="{ opacity: 0, height: 0 }" :transition="{
-                duration: 0.2,
-              }">
-              <ul @click="navOpen = false" class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
-                <li v-for="(group, index) in navGroups">
-                  <ul>
-                    <li v-for="item in group.items" :key="item.path">
-                      <NuxtLink :whilePress="{ y: 4 }"
-                        class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
-                        :to="item.path">
-                        <span class="flex items-center gap-3">
-                          <Icon :name="item.icon" size="1.2rem"
-                            class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
-                          {{ item.title }}
-                        </span>
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </motion.div>
-          </AnimatePresence>
+          <div class="nav-drawer" :class="{ 'nav-drawer--open': navOpen }">
+            <ul @click="navOpen = false" class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
+              <li v-for="(group, index) in navGroups" :key="index">
+                <ul>
+                  <li v-for="item in group.items" :key="item.path">
+                    <NuxtLink
+                      class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
+                      :to="item.path">
+                      <span class="flex items-center gap-3">
+                        <Icon :name="item.icon" size="1.2rem"
+                          class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
+                        {{ item.title }}
+                      </span>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
             <ul @click="navOpen = false" class="border-l border-neutral-200 mt-0 space-y-10">
-              <li v-for="(group, index) in navGroups">
+              <li v-for="(group, index) in navGroups" :key="index">
                 <ul>
                   <li v-for="item in group.items" :key="item.path">
                     <NuxtLink @click="blurAndRemoveFocus"
@@ -153,5 +146,9 @@ header {
   padding: 2px 3px 2px 3px;
   margin: -2px -3px -2px -3px;
   background-color: var(--color-blue-100);
+}
+
+.menu-toggle:active {
+  transform: scale(1.1);
 }
 </style>

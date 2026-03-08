@@ -1,4 +1,4 @@
-<script setup lang="tsx">
+<script setup lang="ts">
 const title = "Josh Briley | Design Systems Engineer & Frontend Consultant"
 const description = "Fixed-scope consulting for design system audits, component library builds, and handoff workflow improvements. Clear deliverables, clear pricing."
 
@@ -63,9 +63,7 @@ const combinedPosts = [
       <Services />
       <section aria-labelledby="recent">
         <h2 class="text-2xl mb-4" id="recent">Recent work and writing</h2>
-        <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
-          <CardListItem :data="combinedPosts" />
-        </ul>
+        <CardList :list="combinedPosts" label="Recent work and writing" />
       </section>
       <Callout>
         <h2 id="get-started">Want to work together?</h2>

@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 useSeoMeta({
   title: 'Testimonials',
   ogTitle: 'Testimonials',
@@ -137,7 +136,6 @@ const testimonials = [
     image: '/images/ephraim-mower.jpeg',
     testimonial: '<p>Josh was a pleasure to work with. Not only does he have a grasp on UI and UX concerns and best practices, he is very pragmatic and takes the time to really understand what a business offers and how to best represent that digitally. In addition, his skill with the technology stack was great and he was always pushing to learn more.</p>'
   },
-
 ]
 </script>
 
@@ -153,12 +151,8 @@ const testimonials = [
     </section>
     <section aria-label="Testimonials" class="md:columns-2 lg:columns-3 gap-8 space-y-12">
       <ul v-for="(item, index) in testimonials" :key="index">
-        <motion.li
-          :initial="{ y: 20, opacity: 0.25 }"
-          :whileInView="{ y: 0, opacity: 1 }"
-          :transition="{ duration: 0.5 }"
-           class="flex gap-4 group hover:bg-blue-50 relative -m-2 p-2 rounded-lg transition-colors duration-150 ease-in-out">
-          <img :src="item.image" :alt="item.name" class="w-16 h-16 rounded-full shrink-0" />
+        <li class="flex gap-4 group hover:bg-blue-50 relative -m-2 p-2 rounded-lg transition-colors duration-150 ease-in-out">
+          <img :src="item.image" :alt="item.name" class="w-16 h-16 rounded-full shrink-0" width="64" height="64" loading="lazy" />
           <div>
             <h2>{{ item.name }}</h2>
             <div>
@@ -171,16 +165,12 @@ const testimonials = [
             <div class="sr-only">View {{ item.name }}'s LinkedIn Profile</div>
             <Icon name="ph:arrow-square-out-fill" size="1em" class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-150 ease-in-out text-blue-600" />
           </a>
-        </motion.li>
+        </li>
         <div class="pl-8">
           <div class="border-l-4 border-neutral-100 pl-4 mt-6 relative">
-            <motion.div
-            :initial="{ y: 40, opacity: 0.25 }"
-            :whileInView="{ y: 0, opacity: 1 }"
-            :transition="{ duration: 1.5 }"
-            >
+            <div>
               <Icon name="ph:quotes-fill" size="10em" class="text-neutral-100 absolute -top-12 right-0" />
-            </motion.div>
+            </div>
             <div class="prose relative" v-html="item.testimonial"></div>
           </div>
         </div>

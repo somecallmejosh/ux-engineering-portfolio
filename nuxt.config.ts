@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/icon',
     '@nuxt/image',
-    'motion-v/nuxt',
     '@vueuse/nuxt',
     '@nuxt/scripts',
     '@nuxt/fonts',
@@ -90,7 +89,7 @@ export default defineNuxtConfig({
     trailingSlash: true
   },
   linkChecker: {
-    excludeLinks: [/^#/],
+    excludeLinks: ['^#'],
   },
   vite: {
     plugins: [tailwindcss()],

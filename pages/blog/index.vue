@@ -11,18 +11,6 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp'
 })
 
-const allBlogCategories = await queryCollection('blog')
-  .all()
-  .then((posts) => {
-    return posts.reduce((acc, post) => {
-      post.tags.forEach((tag) => {
-        if (!acc.includes(tag)) {
-          acc.push(tag)
-        }
-      })
-      return acc
-    }, [])
-  })
 </script>
 
 <template>

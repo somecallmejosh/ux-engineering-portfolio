@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 const title = "Contact Josh Briley | Design systems consulting"
 const description = "Get in touch to discuss a design system audit, component library build, or design-to-code workflow. I respond within one business day."
 useSeoMeta({
@@ -8,7 +7,6 @@ useSeoMeta({
   description,
   ogDescription: description,
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp'
-
 })
 
 const formData = ref({
@@ -74,9 +72,7 @@ const onSubmit = async (event) => {
   validateMessage();
 
   if (!nameValid.value || !emailValid.value || !messageValid.value) {
-    // next tick
     await nextTick();
-    // scroll to the top of the form
     const invalidField = document.querySelector('.invalid');
     invalidField?.focus()
     return;
@@ -91,7 +87,7 @@ const onSubmit = async (event) => {
     const response = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(postData), // Use the encode function
+      body: encode(postData),
     });
 
     if (response.ok) {
@@ -135,9 +131,8 @@ const onSubmit = async (event) => {
                   type="text"
                   class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   :class="{ 'border-red-600 invalid': nameValid == false }">
-                <motion.small :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 4, opacity: 1 }"
-                  :transition="{ duration: 0.5 }" role="alert" id="name-invalid" class="block text-red-600"
-                  v-if="nameValid == false">Enter your name</motion.small>
+                <small role="alert" id="name-invalid" class="animate-entry block text-red-600"
+                  v-if="nameValid == false">Enter your name</small>
               </div>
             </div>
             <div class="grid lg:grid-cols-2 gap-6">
@@ -148,10 +143,8 @@ const onSubmit = async (event) => {
                     type="email"
                     class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     :class="{ 'border-red-600 invalid': emailValid == false }">
-                  <motion.small :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 4, opacity: 1 }" role="alert"
-                    :transition="{ duration: 0.5 }" id="email-invalid" class="block text-red-600"
-                    v-if="emailValid == false">Enter a valid email
-                    address.</motion.small>
+                  <small role="alert" id="email-invalid" class="animate-entry block text-red-600"
+                    v-if="emailValid == false">Enter a valid email address.</small>
                 </div>
               </div>
               <div class="space-y-1">
@@ -178,22 +171,19 @@ const onSubmit = async (event) => {
                   name="message"
                   class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   :class="{ 'border-red-600 invalid': messageValid == false }"></textarea>
-                <motion.small :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
-                  :transition="{ duration: 0.5 }" role="alert" id="message-invalid" class="block text-red-600"
-                  v-if="messageValid == false">Enter a brief message.</motion.small>
+                <small role="alert" id="message-invalid" class="animate-entry block text-red-600"
+                  v-if="messageValid == false">Enter a brief message.</small>
               </div>
             </div>
             <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
               <div><small>* indicates a required field</small></div>
-              <motion.button :whilePress="{ y: 2 }" type="submit"
-                class="inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 justify-center">
-                Send Message</motion.button>
+              <button type="submit"
+                class="submit-btn inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 justify-center">
+                Send Message</button>
             </div>
           </form>
 
-          <motion.div :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
-            :transition="{ duration: 0.5 }" v-if="formSubmitted" class="prose bg-neutral-50 p-6 rounded-lg"
-            role="alert">
+          <div class="animate-entry prose bg-neutral-50 p-6 rounded-lg" v-if="formSubmitted" role="alert">
             <h2>Message received</h2>
             <p>Thanks for reaching out. If you need to reach me urgently, you can email me at <a
                 href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or call <a
@@ -201,14 +191,12 @@ const onSubmit = async (event) => {
             <p>Otherwise, feel free to poke around my <NuxtLink to="/blog/">blog</NuxtLink> or have a look at some of my
               <NuxtLink to="/projects/">recent projects</NuxtLink>
             </p>
-          </motion.div>
-          <motion.div :initial="{ y: 10, opacity: 0.25 }" :whileInView="{ y: 0, opacity: 1 }"
-            :transition="{ duration: 0.5 }" role="alert" v-if="formSubmitError"
-            class="prose p-6 rounded-lg border border-red-100 bg-red-50/30">
+          </div>
+          <div class="animate-entry prose p-6 rounded-lg border border-red-100 bg-red-50/30" v-if="formSubmitError" role="alert">
             <h2>Something went wrong</h2>
             <p>Your message couldn't be submitted. If this is urgent, email me at <a
                 href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or try the form again later.</p>
-          </motion.div>
+          </div>
 
           <callout>
             <div class="prose">
@@ -270,5 +258,9 @@ label {
 
 button {
   cursor: pointer;
+}
+
+.submit-btn:active {
+  transform: translateY(2px);
 }
 </style>
