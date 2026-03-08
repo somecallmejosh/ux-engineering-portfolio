@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { motion, AnimatePresence } from 'motion-v'
 const props = defineProps({
   links: {
     type: Object,
@@ -58,9 +57,8 @@ onBeforeUnmount(() => {
           class="transition-transform duration-200 ease-in-out" />
       </span>
     </button>
-    <AnimatePresence>
-      <motion.div v-if="menuOpen" ref="tocMenuRef" :exit="{ opacity: 0, height: 0 }" :initial="{ opacity: 0, height: 0 }"
-        :animate="{ opacity: 1, height: 'auto' }" id="toc-menu" class="max-h-96 overflow-y-auto relative">
+    <div class="toc-drawer" :class="{ 'toc-drawer--open': menuOpen }">
+      <div ref="tocMenuRef" id="toc-menu" class="max-h-96 overflow-y-auto relative">
         <ul class="not-prose relative z-0 pb-4 text-sm" @click="menuOpen = false">
           <li v-for="item in links" :key="item.id">
             <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">
@@ -84,8 +82,8 @@ onBeforeUnmount(() => {
             </ul>
           </li>
         </ul>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   </section>
 </template>
 <style scoped>
@@ -99,6 +97,22 @@ onBeforeUnmount(() => {
   pointer-events: none;
   z-index: 100;
   background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.toc-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.2s ease, opacity 0.2s ease;
+}
+
+.toc-drawer--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.toc-drawer > div {
+  overflow: hidden;
 }
 
 ul {

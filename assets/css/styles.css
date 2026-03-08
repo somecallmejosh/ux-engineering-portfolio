@@ -159,3 +159,39 @@ button {
     outline-offset: 2px;
   }
 }
+
+
+/* =============================================
+   Entry animation for conditionally-rendered elements
+   ============================================= */
+
+.animate-entry {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@starting-style {
+  .animate-entry {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* =============================================
+   Mobile nav drawer (CSS grid-row height transition)
+   ============================================= */
+
+.nav-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-drawer--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.nav-drawer > ul {
+  overflow: hidden;
+}

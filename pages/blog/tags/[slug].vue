@@ -1,5 +1,4 @@
 <script setup>
-import { humanize } from '~/utilities/humanize'
 const route = useRoute()
 const slug = route.params.slug
 const allPosts = (await queryCollection('blog')

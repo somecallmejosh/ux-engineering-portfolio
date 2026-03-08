@@ -1,5 +1,4 @@
 <script setup>
-import { motion } from 'motion-v'
 const route = useRoute()
 const slug = route.params.slug
 const { data: post } = await useAsyncData(`projects-${slug}`, () => {
@@ -14,101 +13,6 @@ useSeoMeta({
   ogImage: post.value?.image,
 })
 
-const skillIcons = [
-  {
-    name: 'skill-icons:html',
-  },
-  {
-    name: 'skill-icons:css',
-  },
-  {
-    name: 'skill-icons:sass',
-  },
-  {
-    name: 'skill-icons:styledcomponents'
-  },
-  {
-    name: 'skill-icons:tailwindcss-light',
-  },
-  {
-    name: 'skill-icons:typescript',
-  },
-  {
-    name: 'skill-icons:javascript-light',
-  },
-  {
-    name: 'skill-icons:javascript',
-  },
-  {
-    name: 'skill-icons:alpinejs-light',
-  },
-  {
-    name: 'skill-icons:htmx-light',
-  },
-  {
-    name: 'skill-icons:jquery',
-  },
-  {
-    name: 'skill-icons:vuejs-light',
-  },
-  {
-    name: 'skill-icons:nuxtjs-light',
-  },
-  {
-    name: 'skill-icons:pinia-light',
-  },
-  {
-    name: 'skill-icons:illustrator-light',
-  },
-
-  {
-    name: 'skill-icons:github-light',
-  },
-  {
-    name: 'skill-icons:react-light',
-  },
-  {
-    name: 'skill-icons:nextjs-light',
-  },
-  {
-    name: 'skill-icons:d3-light',
-  },
-  {
-    name: 'skill-icons:vite-light',
-  },
-  {
-    name: 'skill-icons:vitest-light',
-  },
-  {
-    name: 'skill-icons:cypress-light',
-  },
-  {
-    name: 'skill-icons:ruby',
-  },
-  {
-    name: 'skill-icons:rails',
-  },
-
-  {
-    name: 'skill-icons:figma-light',
-  },
-  {
-    name: 'skill-icons:illustrator',
-  },
-
-  {
-    name: 'skill-icons:github-light',
-  },
-  {
-    name: 'skill-icons:aws-light'
-  },
-  {
-    name: 'skill-icons:heroku',
-  },
-  {
-    name: 'skill-icons:netlify-light',
-  },
-]
 </script>
 
 <template>
@@ -132,9 +36,8 @@ const skillIcons = [
             <CardHeader>{{ post.businessName }}</CardHeader>
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
           </div>
-          <motion.div layoutScroll :style="{ overflow: 'scroll' }">
-            <motion.div :initial="{ opacity: 0, y: 200 }" :whileInView="{ opacity: 1, y: 0 }"
-              :transition="{ duration: 0.3 }">
+          <div style="overflow: scroll">
+            <div>
               <div
                 class="relative mx-auto border-neutral-200 dark:border-neutral-200 bg-neutral-200 border-[14px] rounded-[2.5rem] h-[682px]  w-full">
                 <div
@@ -154,8 +57,8 @@ const skillIcons = [
                     :src="post.businessUrl" frameborder="0"></iframe>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           <div class="flex items-center gap-2 mt-6">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
             <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer"

@@ -25,7 +25,7 @@ useSeoMeta({
         <AnimateImage :src="post.image" :alt="post.meta.image_alt" :scaleY="0.75" />
       </figure>
       <article>
-        <CategoryLinks tag="blog" :collection="post.tags" title="Tags" />
+        <TagLinks tag="blog" :collection="post.tags" title="Tags" />
         <TableOfContents :links="post.body.toc.links" />
         <ContentRenderer :value="post" />
       </article>
