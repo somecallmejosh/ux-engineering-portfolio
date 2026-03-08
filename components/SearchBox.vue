@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useDebounceFn, onClickOutside } from '@vueuse/core'
 import { useSearch } from '@/composables/useSearch'
-import {humanize} from '@/utilities/humanize'
 const q = ref('')
 const results = ref<any[]>([])
 const { loading, search } = useSearch()

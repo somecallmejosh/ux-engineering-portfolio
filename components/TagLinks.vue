@@ -1,46 +1,24 @@
-<script setup>
-const props = defineProps({
-  tags: {
-    type: Array,
-    required: true,
-  },
-})
-const formatTag = (tag) => {
-  return tag.replace('-light', '').replace('js', 'JS')
-  .replace('css', 'CSS')
-  .replace('alpine', 'Alpine ')
-  .replace('aws', 'AWS')
-  .replace('github', 'GitHub')
-  .replace('html', 'HTML')
-  .replace('htmx', 'HTMX')
-  .replace('javascript', 'JavaScript')
-  .replace('jquery', 'jQuery')
-  .replace('less', 'LESS')
-  .replace('markdown', 'Markdown')
-  .replace('materialui', 'Material UI')
-  .replace('next', 'Next ')
-  .replace('npm', 'NPM')
-  .replace('nuxt', 'Nuxt ')
-  .replace('svg', 'SVG')
-  .replace('typescript', 'TypeScript')
-  .replace('rails', 'Ruby on Rails')
-  .replace('styledcomponents', 'Styled Components')
-  .replace('tailwind', 'Tailwind ')
-  .replace('vue', 'Vue ')
-  .replace('vscode', 'VS Code ')
-  .replace('xd', 'Adobe XD')
-}
+<script setup lang="ts">
+const props = defineProps<{
+  title: string
+  tag: string
+  collection: string[]
+}>()
+
+const sorted = [...props.collection].sort((a, b) => a.localeCompare(b))
 </script>
+
 <template>
-  <ul class="flex gap-3 not-prose flex-wrap justify-between">
-    <li class="flex size-[2em]" v-for="(tag, index) in tags" :key="index">
-      <Tooltip :id="tag" :text="formatTag(tag)">
-        <Icon
-          :name="`skill-icons:${tag}`"
-          size="2em"
-          class="grayscale hover:grayscale-0 transition-all duration-150 shrink-0"
-        />
-      </Tooltip>
-    </li>
-  </ul>
+  <nav :aria-label="title" class="py-2 mb-1 flex gap-4 not-prose flex-wrap">
+    <h2 v-if="title" class="shrink-0 flex items-center gap-2 text-body text-sm">
+      <Icon name="ph:tag" size="1rem" /><strong>Tags:</strong>
+    </h2>
+    <ul class="flex gap-2">
+      <li v-for="(link, index) in sorted" :key="index">
+        <NuxtLink :to="`/${tag}/tags/${link}/`"
+          class="text-xs bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-medium rounded-md px-1.5 py-1 text-center">
+          {{ humanize(link) }}</NuxtLink>
+      </li>
+    </ul>
+  </nav>
 </template>
