@@ -12,7 +12,7 @@ image_alt: "Developer who's excited he found an accessibility audit cheatsheet."
 Cheatsheets
 ::
 
-You don't need to hire someone to know whether your interface has accessibility problems. A significant number of issues are findable with free tools, a keyboard, and about an hour of focused attention.
+You don't need to hire someone to know whether your interface has accessibility problems. You can find a significant number of issues with free tools, a keyboard, and about an hour of focused attention.
 
 This guide walks you through six areas of an accessibility audit. Each section explains what you're looking for, how to test it, and what a problem looks like when you find one. Start at the top and work through it in order, or jump to the section most relevant to what you're building.
 
@@ -22,17 +22,17 @@ The standard this guide references is Web Content Accessibility Guidelines (WCAG
 
 These terms appear throughout the guide. If you're already familiar with them, skip ahead.
 
-**WCAG** — Web Content Accessibility Guidelines. The internationally recognized standard for accessible web content, published by the World Wide Web Consortium (W3C).
+**WCAG**: Web Content Accessibility Guidelines. The internationally recognized standard for accessible web content, published by the World Wide Web Consortium (W3C).
 
-**ARIA** — Accessible Rich Internet Applications. A set of HTML attributes that communicate the role, state, and properties of interface elements to assistive technologies.
+**ARIA**: Accessible Rich Internet Applications. A set of HTML attributes that communicate the role, state, and properties of interface elements to assistive technologies.
 
-**Screen reader** — Software that reads page content aloud and allows navigation without a mouse. Common screen readers include NVDA, JAWS, and VoiceOver.
+**Screen reader**: software that reads page content aloud and allows navigation without a mouse. Common screen readers include NVDA, JAWS, and VoiceOver.
 
-**Focus** — The state indicating which element on the page is currently active and ready to receive keyboard input.
+**Focus**: the state indicating which element on the page is currently active and ready to receive keyboard input.
 
-**Focus indicator** — The visible outline or highlight that shows which element has focus.
+**Focus indicator**: the visible outline or highlight that shows which element has focus.
 
-**Design token** — A named value (color, spacing, font size) used consistently across a design system.
+**Design token**: a named value (color, spacing, font size) used consistently across a design system.
 
 ## 1. Automated tooling: start here
 
@@ -40,9 +40,9 @@ Before any manual testing, run an automated scan. Automated tools catch a reliab
 
 ### Recommended tools
 
-- **[axe DevTools](https://www.deque.com/axe/devtools/)** (browser extension, free tier available) — the most widely used accessibility testing extension. Integrates directly with browser developer tools.
-- **[WAVE](https://wave.webaim.org/)** (browser extension, free) — surfaces errors visually on the page, useful for getting a quick overview.
-- **[Lighthouse](https://developer.chrome.com/docs/lighthouse/)** (built into Chrome DevTools, free) — includes an accessibility audit as part of its broader performance report.
+- **[axe DevTools](https://www.deque.com/axe/devtools/)**: the most widely used accessibility testing extension (browser extension, free tier available). Integrates directly with browser developer tools.
+- **[WAVE](https://wave.webaim.org/)**: surfaces errors visually on the page, useful for a quick overview (browser extension, free).
+- **[Lighthouse](https://developer.chrome.com/docs/lighthouse/)**: includes an accessibility audit as part of its broader performance report (built into Chrome DevTools, free).
 
 ### How to run a scan
 
@@ -65,9 +65,9 @@ Keyboard accessibility affects users who can't use a mouse, including people wit
 
 ### What you're testing
 
-Every interactive element on the page — links, buttons, form inputs, modals, dropdowns, tabs, and custom components — must be operable with a keyboard alone.
+Every interactive element on the page (links, buttons, form inputs, modals, dropdowns, tabs, and custom components) must be operable with a keyboard alone.
 
-### How to test
+### How to test keyboard navigation
 
 1. Put your mouse aside completely.
 2. Press `Tab` to move forward through interactive elements.
@@ -78,24 +78,24 @@ Every interactive element on the page — links, buttons, form inputs, modals, d
 
 ### What to look for
 
-- **Missing focus** — you press `Tab` and nothing visibly changes. An element is receiving focus but the indicator is hidden.
-- **Illogical tab order** — focus jumps unpredictably around the page rather than following a logical reading order.
-- **Keyboard traps** — focus enters a component and can't escape without using a mouse.
-- **Inaccessible custom components** — a custom dropdown or date picker that works with a mouse but doesn't respond to keyboard input.
-- **Skipped elements** — interactive elements that never receive focus at all.
+- **Missing focus**: you press `Tab` and nothing visibly changes. An element is receiving focus but the indicator is hidden.
+- **Illogical tab order**: focus jumps unpredictably around the page rather than following a logical reading order.
+- **Keyboard traps**: focus enters a component and can't escape without using a mouse.
+- **Inaccessible custom components**: a custom dropdown or date picker that works with a mouse but doesn't respond to keyboard input.
+- **Skipped elements**: interactive elements that never receive focus at all.
 
-### What good looks like
+### Signs of good keyboard navigation
 
 Every interactive element receives focus in a logical order. Each element is clearly highlighted when focused. All interactions that work with a mouse work with a keyboard.
 
 ## 3. Focus management: where keyboard testing gets detailed
 
-Focus management goes beyond basic keyboard navigation. It covers what happens to focus when the interface changes dynamically — when a modal opens, a panel expands, or a route changes in a single-page application.
+Focus management goes beyond basic keyboard navigation. It covers what happens to focus when the interface changes dynamically: when a modal opens, a panel expands, or a route changes in a single-page application.
 
 ### Common focus management failures
 
 **Modals and dialogs**
-When a modal opens, focus should move into it automatically — typically to the first focusable element or to the dialog heading. When the modal closes, focus should return to the element that triggered it. If neither of these things happens, keyboard users lose their place in the page.
+When a modal opens, focus should move into it automatically, typically to the first focusable element or to the dialog heading. When the modal closes, focus should return to the element that triggered it. If neither of these things happens, keyboard users lose their place in the page.
 
 **Infinite scroll and dynamic content**
 When new content loads into the page, keyboard users may have no way to reach it if focus stays at the top of the existing content.
@@ -106,11 +106,11 @@ When a user navigates to a new route, focus often stays wherever it was on the p
 ### How to test focus management
 
 1. Open a modal using only the keyboard. Confirm focus moves into the modal automatically.
-2. Press `Tab` through all elements inside the modal. Confirm focus doesn't leave the modal (this is called a focus trap and is required behavior for modals).
+2. Press `Tab` through all elements inside the modal. Confirm focus doesn't leave the modal. This is called a focus trap, and it's required behavior for modals.
 3. Close the modal with `Escape`. Confirm focus returns to the trigger element.
 4. In a single-page application, navigate between routes and check where focus lands after each transition.
 
-### What good looks like
+### Signs of good focus management
 
 Focus moves intentionally when the interface changes. Users always know where they are. Modals trap focus while open and release it correctly when closed.
 
@@ -124,7 +124,7 @@ Color contrast measures the difference in perceived brightness between foregroun
 - Large text (18pt or larger, or 14pt bold or larger): minimum contrast ratio of 3:1
 - UI components and graphical elements (icons, chart lines, input borders): minimum contrast ratio of 3:1
 
-### How to test
+### How to test color contrast
 
 **Option 1 — Browser extension**
 The axe DevTools or WAVE extensions flag contrast failures automatically as part of their scan. This is the fastest approach.
@@ -170,7 +170,7 @@ Run your page through WAVE and check whether these landmarks are present and cor
 
 ### Images
 
-Every informative image needs an `alt` attribute that conveys the same information the image does. Decorative images — images that add no meaningful content — should have an empty `alt` attribute (`alt=""`) so screen readers skip them.
+Every informative image needs an `alt` attribute that conveys the same information the image does. Decorative images (images that add no meaningful content) should have an empty `alt` attribute (`alt=""`) so screen readers skip them.
 
 **What to check:**
 
@@ -208,9 +208,9 @@ Screen reader testing gives you the most complete picture of the experience for 
 
 You don't need to test every combination. Start with one.
 
-- **macOS and iOS** — VoiceOver is built in. Press `Cmd+F5` to enable it on Mac.
-- **Windows** — [NVDA](https://www.nvaccess.org/download/) is free and widely used. [JAWS](https://www.freedomscientific.com/products/software/jaws/) is the most common in enterprise environments but requires a license.
-- **Android** — TalkBack is built into Android devices.
+- **macOS and iOS**: VoiceOver is built in. Press `Cmd+F5` to enable it on Mac.
+- **Windows**: [NVDA](https://www.nvaccess.org/download/) is free and widely used. [JAWS](https://www.freedomscientific.com/products/software/jaws/) is the most common in enterprise environments but requires a license.
+- **Android**: TalkBack is built into Android devices.
 
 ### Basic VoiceOver navigation (macOS)
 
@@ -238,7 +238,7 @@ You don't need to test every combination. Start with one.
 ### A practical test flow
 
 1. Navigate through the page using only the keyboard and screen reader.
-2. Complete a core user task — submit a form, open and close a modal, select from a dropdown.
+2. Complete a core user task: submit a form, open and close a modal, or select from a dropdown.
 3. Note anything that isn't announced correctly, announces too much, or announces nothing at all.
 
 ## Putting the findings together
@@ -266,9 +266,9 @@ After working through all six areas, you'll have a list of issues organized by c
 
 ## Further reading
 
-- [WCAG 2.1 guidelines](https://www.w3.org/TR/WCAG21/) — the full specification
-- [WebAIM's WCAG 2 checklist](https://webaim.org/standards/wcag/checklist) — a plain-language interpretation
-- [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) — patterns and examples for common components
-- [Deque University](https://dequeuniversity.com/) — free reference library for accessibility rules and techniques
+- [WCAG 2.1 guidelines](https://www.w3.org/TR/WCAG21/): the full specification
+- [WebAIM's WCAG 2 checklist](https://webaim.org/standards/wcag/checklist): a plain-language interpretation
+- [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/): patterns and examples for common components
+- [Deque University](https://dequeuniversity.com/): free reference library for accessibility rules and techniques
 
-If you work through this checklist and want a second set of eyes on the findings, or if the scope of issues turns out to be larger than expected, the [design system audit service](/services/) covers all six areas in depth and delivers a prioritized remediation roadmap within five business days.
+If you work through this checklist and want an independent review of the findings, or if the scope of issues turns out to be larger than expected, the [design system audit service](/services/) covers all six areas in depth and delivers a prioritized remediation roadmap within five business days.

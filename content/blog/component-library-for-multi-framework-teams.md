@@ -12,13 +12,13 @@ image_alt: 'Team discussing component library strategies.'
 Component libraries: a practical guide
 ::
 
-Most component library guidance assumes a single framework. Build React components, or Vue components, or Angular components — pick one and go deep.
+Most component library guidance assumes a single framework. Build React components, or Vue components, or Angular components. Pick one and go deep.
 
 Some teams don't have that option. Large organizations frequently run multiple products built in different frameworks, acquired codebases that can't be migrated, or platform requirements that mandate specific technology choices. If your team needs one component library to work across React, Vue, and Angular, you're solving a genuinely harder problem.
 
 This article covers the three main approaches, their tradeoffs, and what each one requires in practice.
 
-## Why this is hard
+## Why multi-framework libraries are hard to build
 
 Framework-specific components are tightly coupled to their framework's rendering model, reactivity system, and templating syntax. A React component is a JavaScript function that returns JSX and depends on React's virtual DOM. A Vue component is a single-file component with Vue-specific template directives and reactivity. An Angular component is a class decorated with Angular-specific metadata.
 
@@ -28,15 +28,15 @@ The challenge is building UI components once and having them work correctly in a
 
 ## Approach 1: Web components
 
-Web components are a set of browser-native APIs that allow you to create custom HTML elements. They work in any framework because they work in the browser itself — not in React, Vue, or Angular specifically.
+Web components are a set of browser-native APIs that allow you to create custom HTML elements. They work in any framework because they work in the browser itself, not in React, Vue, or Angular specifically.
 
-### How they work
+### How web components work
 
 A web component is defined using three browser APIs:
 
-- **Custom Elements** — lets you define new HTML tags with custom behavior
-- **Shadow DOM** — encapsulates a component's internal HTML and CSS, preventing style leakage in either direction
-- **HTML Templates** — provides a mechanism for declaring reusable HTML fragments
+- **Custom Elements**: lets you define new HTML tags with custom behavior
+- **Shadow DOM**: encapsulates a component's internal HTML and CSS, preventing style leakage in either direction
+- **HTML Templates**: provides a mechanism for declaring reusable HTML fragments
 
 ```javascript
 class PrimaryButton extends HTMLElement {
@@ -52,9 +52,9 @@ class PrimaryButton extends HTMLElement {
 customElements.define('primary-button', PrimaryButton)
 ```
 
-Once defined, `<primary-button label="Save">` works in any HTML context — including inside React, Vue, and Angular components.
+Once defined, `<primary-button label="Save">` works in any HTML context, including inside React, Vue, and Angular components.
 
-### Framework integration
+### Framework integration challenges
 
 React, Vue, and Angular all support rendering custom elements. Framework-specific wrappers improve the experience:
 
@@ -74,7 +74,7 @@ Tools like [Stencil](https://stenciljs.com/) and [Lit](https://lit.dev/) make bu
 ### Where web components struggle
 
 - Shadow DOM encapsulation can make global style overrides difficult. Theming requires CSS custom properties that pierce the shadow boundary, which requires deliberate API design.
-- Server-side rendering support is improving but not yet as mature as framework-specific SSR.
+- Server-side rendering (SSR) support is improving but not yet as mature as framework-specific SSR.
 - Framework-specific patterns like React's `ref`, Vue's `v-model`, and Angular's two-way binding require additional work to support correctly.
 - Developer tooling and debugging tools are less mature than framework-specific equivalents.
 
@@ -86,9 +86,9 @@ Web components are the right choice when framework-agnostic portability is the p
 
 A headless component library separates behavior and accessibility from visual presentation. Instead of one cross-framework component, you maintain one source of behavior logic plus separate framework-specific implementations that consume it.
 
-### How it works
+### How headless components work
 
-The headless layer defines what a component does: the keyboard interactions a dropdown supports, the ARIA attributes a modal requires, the state machine a tabs component follows. This logic is expressed as framework-agnostic JavaScript or as separate adapters for each framework.
+The headless layer defines what a component does: the keyboard interactions a dropdown supports, the Accessible Rich Internet Applications (ARIA) attributes a modal requires, the state machine a tabs component follows. This logic is expressed as framework-agnostic JavaScript or as separate adapters for each framework.
 
 [Radix UI](https://www.radix-ui.com/) is a well-known example for React. [Headless UI](https://headlessui.com/) provides implementations for both React and Vue. [Kobalte](https://kobalte.dev/) covers SolidJS. There is no single headless library that covers React, Vue, and Angular with equal depth.
 
@@ -128,14 +128,14 @@ export function createDisclosure(initialOpen = false): DisclosureState {
 
 Each framework adapter wraps this in its native reactivity model: `useState` and `useCallback` in React, `ref` and methods in Vue's composition API, and a service or signal in Angular.
 
-### What this approach does well
+### What headless components do well
 
 - Each framework gets an implementation that feels native to it
 - Behavior and accessibility logic is maintained once
 - Visual design is decoupled from both behavior and framework
 - Teams can adopt the library incrementally, one framework at a time
 
-### Where it struggles
+### Where headless components struggle
 
 - Three separate implementations multiply the maintenance surface
 - Behavioral consistency requires disciplined testing across all three implementations
@@ -149,7 +149,7 @@ This approach suits teams with dedicated design system engineers who can maintai
 
 The third approach accepts that framework-specific components are the right solution for each team and focuses instead on what can be shared: the design tokens, the CSS, and the documentation.
 
-### How it works
+### How token-driven architecture works
 
 Rather than sharing component implementations, you share everything that doesn't depend on a framework:
 
@@ -159,7 +159,7 @@ Rather than sharing component implementations, you share everything that doesn't
 - Accessibility guidelines and behavioral specifications
 - Storybook documentation that references each framework's implementation
 
-Each framework team builds its own components but builds them against the shared token system and to the shared behavioral specification. A React button and a Vue button look identical and behave identically because they reference the same tokens and follow the same specification — not because they share code.
+Each framework team builds its own components but builds them against the shared token system and to the shared behavioral specification. A React button and a Vue button look identical and behave identically because they reference the same tokens and follow the same specification, not because they share code.
 
 ```css
 /* Shared token output — consumed by all frameworks */
@@ -194,16 +194,16 @@ function Button({ label, variant = 'primary', onClick }) {
 
 Both components reference the same CSS custom properties. Updating a token updates both implementations automatically.
 
-### What this approach does well
+### What token-driven architecture does well
 
 - Significantly lower implementation complexity than the other approaches
 - Each framework team works with tools and patterns they already know
 - Token and CSS updates propagate to all frameworks automatically
 - Works well in organizations where framework teams operate independently
 
-### Where it struggles
+### Where token-driven architecture struggles
 
-- Behavioral consistency is maintained through process and documentation, not through shared code — which means it requires discipline to enforce
+- Behavioral consistency is maintained through process and documentation, not through shared code, which means it requires discipline to enforce
 - Divergence between framework implementations is possible and will happen without regular audits
 - There's no single source of truth for component behavior, only for visual values
 
@@ -225,7 +225,7 @@ No approach is universally correct. The right choice depends on how much consist
 | SSR support                    | Improving                       | Good                                    | Good                                    |
 | Best for                       | Strict portability requirements | Large teams with dedicated DS engineers | Federated teams with framework autonomy |
 
-Most organizations land somewhere between these options. A common pattern is to use web components or headless implementations for the most complex, interactive components — modals, dropdowns, date pickers — and a token-driven approach for simpler components where behavioral variation is less risky.
+Most organizations land somewhere between these options. A common pattern is to use web components or headless implementations for the most complex, interactive components (modals, dropdowns, date pickers) and a token-driven approach for simpler components where behavioral variation is less risky.
 
 ## What every multi-framework library needs regardless of approach
 
@@ -233,8 +233,8 @@ Whichever approach you choose, these requirements apply across all three:
 
 **A single token source of truth.** Tokens should be defined once and transformed into whatever format each framework needs. Style Dictionary or a similar transformation tool handles this.
 
-**Cross-framework behavioral specifications.** Document what each component does — keyboard interactions, ARIA attributes, state transitions — in a way that's independent of implementation. This gives each framework team a clear target to build toward.
+**Cross-framework behavioral specifications.** Document what each component does (keyboard interactions, ARIA attributes, state transitions) in a way that's independent of implementation. This gives each framework team a clear target to build toward.
 
-**Cross-framework testing.** Behavioral consistency needs to be verified, not assumed. Automated tests that run against each framework implementation catch divergence before it reaches users.
+**Cross-framework testing.** Verify behavioral consistency; don't assume it. Automated tests that run against each framework implementation catch divergence before it reaches users.
 
-**A shared documentation site.** Each framework's implementation should be documented in the same place, with examples in each framework's syntax. Teams shouldn't have to look in multiple locations to understand how a component works.
+**A shared documentation site.** Document each framework's implementation in the same place, with examples in each framework's syntax. Teams shouldn't have to look in multiple locations to understand how a component works.

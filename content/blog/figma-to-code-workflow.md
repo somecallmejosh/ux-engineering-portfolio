@@ -12,7 +12,7 @@ Most teams using Figma have the same experience. Designs look right in the file.
 
 The frustrating part is that the gap rarely comes from lack of effort or skill. It comes from a structural mismatch between how designers work in Figma and how developers work in code. That mismatch produces predictable problems, and most of them are fixable.
 
-This article explains where Figma-to-code handoff typically breaks down, and what designers and developers can do — together and independently — to make the workflow more reliable.
+This article explains where Figma-to-code handoff typically breaks down, and what designers and developers can do, together and independently, to make the workflow more reliable.
 
 ## Why handoff breaks down
 
@@ -26,13 +26,13 @@ When designers build designs by copy-pasting frames, detaching components, or dr
 
 ### Tokens aren't connected to code
 
-Design tokens are the named values that define a visual system: the specific color for a primary button, the spacing between a label and its input, the border radius on a card. In Figma, these can be defined as variables or styles. In code, they can be defined as CSS custom properties, Sass variables, or JavaScript constants.
+Design tokens are the named values that define a visual system: the specific color for a primary button, the spacing between a label and its input, the border radius on a card. In Figma, you can define them as variables or styles. In code, you can define them as CSS custom properties, Sass variables, or JavaScript constants.
 
 When tokens in Figma don't match tokens in code, a color that looks correct in the design file renders slightly differently in the browser. A spacing value that feels right visually is implemented as a hard-coded pixel value that doesn't scale. Over time, these small divergences accumulate into a system that's hard to maintain.
 
 ### Specs are incomplete or ambiguous
 
-Figma shows what something looks like at rest. It doesn't automatically communicate what happens on hover, on focus, on error, when content is longer than expected, or when the interface is viewed at a different screen size. Developers who don't know what a component should do in these states make their own decisions, and those decisions vary.
+Figma shows what something looks like at rest. It doesn't automatically communicate what happens on hover, on focus, on error, when content is longer than expected, or when users view the interface at a different screen size. Developers who don't know what a component should do in these states make their own decisions, and those decisions vary.
 
 ### Feedback loops are slow
 
@@ -48,7 +48,7 @@ If a component doesn't exist in Figma yet, create it before using it. The extra 
 
 ### Define and use variables for tokens
 
-Figma Variables allow you to define named values for colors, spacing, typography, and other design properties. When you apply a color using a variable called `color/brand/primary` rather than a raw hex value, developers can see the token name in Figma's inspect panel and match it directly to its equivalent in code.
+Figma Variables allow you to define named values for colors, spacing, typography, and other design properties. When you apply a color using a variable called `color/brand/primary` rather than a raw hex value, developers can see the token name in Figma's Inspect panel and match it directly to its equivalent in code.
 
 Set up your variables to mirror the token naming conventions your development team uses. If the codebase uses `--color-brand-primary` as a CSS custom property, your Figma variable should use the same name or a clearly mapped equivalent.
 
@@ -72,15 +72,15 @@ Use Figma's annotation tools or a plugin like [Redline](https://www.figma.com/co
 
 ### Use Figma's inspect panel as a starting point, not a final answer
 
-The inspect panel in Figma surfaces CSS values, spacing measurements, and color values for any selected element. It's a useful starting point, but it reflects the design file's current state, not necessarily the correct implementation.
+The Inspect panel in Figma surfaces CSS values, spacing measurements, and color values for any selected element. It's a useful starting point, but it reflects the design file's current state, not necessarily the correct implementation.
 
-Cross-reference what you see in the inspect panel against the component in your codebase. If the design uses a token name, find that token in the codebase and use it. If the design shows a raw value, check whether a corresponding token exists before hard-coding the value.
+Cross-reference what you see in the Inspect panel against the component in your codebase. If the design uses a token name, find that token in the codebase and use it. If the design shows a raw value, check whether a corresponding token exists before hard-coding the value.
 
 ### Set up Figma Code Connect
 
-[Figma Code Connect](https://www.figma.com/code-connect/) links Figma components directly to their code equivalents. When a developer inspects a component in Figma, Code Connect surfaces the actual code snippet from the codebase — the real component with its real props — rather than a generated approximation.
+[Figma Code Connect](https://www.figma.com/code-connect/) links Figma components directly to their code equivalents. When a developer inspects a component in Figma, Code Connect surfaces the actual code snippet from the codebase (the real component with its real props) rather than a generated approximation.
 
-Setting up Code Connect requires some initial configuration, but it removes one of the most common sources of handoff friction: developers generating implementation code from Figma's auto-generated output rather than using the component that already exists.
+Setting up Code Connect requires some initial configuration, but it removes one of the most common sources of handoff friction: developers relying on auto-generated code snippets instead of the components that already exist in the codebase.
 
 ### Flag ambiguity before building, not after
 
@@ -98,13 +98,13 @@ Once tokens are shared, a designer can hand off a design that references `spacin
 
 ### Review designs together before development starts
 
-A short design review at the start of a sprint, before any code is written, surfaces ambiguities while they're still cheap to resolve. Designers walk through the design, developers ask questions about states and edge cases, and the team agrees on implementation details.
+A short design review at the start of a sprint, before development starts, surfaces ambiguities while they're still cheap to resolve. Designers walk through the design, developers ask questions about states and edge cases, and the team agrees on implementation details.
 
-This doesn't need to be a formal process. Fifteen minutes at the start of a sprint with the right people in the room prevents hours of back-and-forth during and after implementation.
+This doesn't need to be a formal process. Fifteen minutes at the start of a sprint with the right people present prevents hours of back-and-forth during and after implementation.
 
 ### Create a living handoff guide
 
-Document the conventions your team has agreed on: how components are named in Figma and in code, which tokens exist and what they represent, how states are communicated in the design file, and how implementation questions should be raised.
+Document the conventions your team has agreed on: how components are named in Figma and in code, which tokens exist and what they represent, how states are communicated in the design file, and how to raise implementation questions.
 
 A shared document that both designers and developers maintain and update is more useful than a style guide that no one keeps current. It doesn't have to be comprehensive on day one. It grows as the team encounters and resolves ambiguities.
 

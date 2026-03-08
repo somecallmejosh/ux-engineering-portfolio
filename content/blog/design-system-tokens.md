@@ -12,17 +12,17 @@ image_alt: 'A developer working on a design system.'
 Component libraries: a practical guide
 ::
 
-Design tokens are one of those concepts that sound more complicated than they are. Once you understand what they do and why they exist, they become one of the most practical tools in a design system.
+Design tokens sound more complicated than they are. Once you understand what they do and why they exist, they become one of the most practical tools in a design system.
 
-This article covers everything: what tokens are, the different types, how to name and structure them well, how they move from design tools to code, and the common mistakes that make them harder to use than they should be.
+This guide covers what tokens are, the different types, how to name and structure them, how they move from design tools to code, and the mistakes that make them harder to use than they need to be.
 
 ## What a design token is
 
-A design token is a named value that stores a visual decision. Instead of using a raw value like `#0057B8` or `16px` directly in a design or codebase, you give that value a name — `color.brand.primary` or `spacing.4` — and reference the name everywhere it applies.
+A design token is a named value that stores a visual decision. Instead of using a raw value like `#0057B8` or `16px` directly in a design or codebase, you give that value a name (`color.brand.primary` or `spacing.4`) and reference the name everywhere it applies.
 
 The name is the token. The value is what the token resolves to.
 
-This distinction matters because the name carries intent. `#0057B8` is a hex code. `color.brand.primary` is a decision: this is the primary brand color. When you need to update that color, you change the token's value in one place and the change propagates everywhere the token is used — across Figma components, CSS stylesheets, JavaScript constants, and any other platform the token has been published to.
+This distinction matters because the name carries intent. `#0057B8` is a hex code. `color.brand.primary` is a decision: this is the primary brand color. When you need to update that color, you change the token's value in one place and the change propagates everywhere the token is used: across Figma components, CSS stylesheets, JavaScript constants, and any other platform the token has been published to.
 
 Without tokens, the same value gets repeated dozens or hundreds of times across a codebase. Updating it means finding every instance and changing it manually, and missing one creates inconsistency.
 
@@ -44,7 +44,7 @@ Tokens can represent any visual property that benefits from being named and cent
 
 **Z-index** — layering values for stacking contexts.
 
-Not every system needs tokens for all of these categories. Start with color, spacing, and typography, which are the most universally useful, and expand as the system matures.
+You don't need tokens for all of these categories. Start with color, spacing, and typography, then expand as your system matures.
 
 ## The three tiers of tokens
 
@@ -92,11 +92,11 @@ button.border.radius: {radius.md}
 button.padding.x: {spacing.4}
 ```
 
-Component tokens aren't always necessary. Smaller systems can reference semantic tokens directly in components without the additional layer. Larger systems with more complex theming requirements benefit from the separation, because it allows component behavior to be changed without touching the global or semantic tiers.
+Component tokens aren't always necessary. Smaller systems can reference semantic tokens directly in components without the additional layer. In larger systems with more complex theming requirements, the separation lets you change component behavior without touching the global or semantic tiers.
 
 ## How to name tokens well
 
-Token naming is where most systems go wrong. Names that seem clear when you create them become confusing as the system grows, especially when values change or new team members join.
+Token naming is where most systems go wrong. Names that seem clear when you create them become confusing as the system grows, especially when values change or new people join the team.
 
 ### Use a consistent naming structure
 
@@ -130,7 +130,7 @@ The same principle applies to spacing. `spacing.small` is vague. `spacing.4` com
 
 ### Be consistent with separators
 
-Pick one separator convention and use it everywhere. Common choices are dot notation (`color.brand.primary`), kebab-case (`color-brand-primary`), or camelCase (`colorBrandPrimary`). Different platforms may require different formats, which is why transformation tools exist — but the source of truth should use one consistent format.
+Pick one separator convention and use it everywhere. Common choices are dot notation (`color.brand.primary`), kebab-case (`color-brand-primary`), or camelCase (`colorBrandPrimary`). Different platforms may require different formats, which is why transformation tools exist. Your source of truth should use one consistent format.
 
 ## How tokens move from design to code
 
@@ -140,7 +140,7 @@ A token defined in Figma needs to reach the codebase in a usable format. Several
 
 Figma Variables are the native way to define tokens inside Figma. You can create variable collections for color, spacing, typography, and other properties, organize them into groups that reflect your tier structure, and reference them across components.
 
-Variables defined in Figma are visible in the inspect panel when a developer selects a component, which gives developers token names alongside the raw values. When Figma Code Connect is configured, it can surface the actual code snippet that uses the token.
+Variables defined in Figma are visible in the inspect panel when you select a component, giving you token names alongside the raw values. When Figma Code Connect is configured, it surfaces the actual code snippet that uses the token.
 
 ### Token transformation with Style Dictionary
 
@@ -161,7 +161,7 @@ A single token definition:
 }
 ```
 
-Can be transformed into:
+Style Dictionary transforms it into:
 
 ```css
 /* CSS custom properties */
@@ -219,15 +219,15 @@ This same pattern supports high-contrast modes, brand white-labeling, and any ot
 
 ### Using raw values in components
 
-Bypassing tokens and using raw values directly in components is the most common mistake. It creates a codebase where visual decisions are scattered and impossible to update consistently. If tokens exist, use them — even when reaching for the token feels slower than typing a hex code.
+Bypassing tokens and using raw values directly in components is the most common mistake. It creates a codebase where visual decisions are scattered and impossible to update consistently. If tokens exist, use them, even when reaching for the token feels slower than typing a hex code.
 
 ### Skipping the semantic tier
 
-A system with global tokens but no semantic tier forces every consumer of the token system to understand the full palette and make their own interpretation of which value to use. `color.blue.500` tells a developer nothing about when to use it. `color.brand.primary` tells them exactly.
+A token system with global tokens but no semantic tier forces every consumer to understand the full palette and decide which value to use. `color.blue.500` tells you nothing about when to use it. `color.brand.primary` tells you exactly.
 
 ### Naming for current appearance
 
-Token names that describe appearance break when the design changes. A button currently styled with `color.blue.500` might use a name like `button.background.blue`. When the button becomes green, the name is wrong and either needs to be changed everywhere it's referenced or left as a misleading name. Name for intent from the start.
+Token names that describe appearance break when the design changes. A button currently styled with `color.blue.500` might use a name like `button.background.blue`. When the button becomes green, the name is wrong: you either have to update it everywhere it's referenced or live with a misleading name. Name for intent from the start.
 
 ### Inconsistent token application
 
@@ -253,8 +253,8 @@ The three-tier model is a useful framework, not a mandatory architecture. A smal
 
 **Tokens Studio** — A Figma plugin for managing design tokens inside the design tool.
 
-**Figma Variables** — A native Figma feature for defining named values that can be referenced across components and design files.
+**Figma Variables** — A native Figma feature for defining named values that you can reference across components and design files.
 
-**CSS custom properties** — Variables defined in CSS using the `--property-name: value` syntax, referenced with `var(--property-name)`.
+**CSS custom properties** — Variables you define in CSS with the `--property-name: value` syntax and reference with `var(--property-name)`.
 
 **Theming** — The practice of defining multiple sets of token values that produce different visual appearances from the same component structure.

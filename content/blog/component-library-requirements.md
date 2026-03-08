@@ -18,7 +18,7 @@ This article covers what every component library needs regardless of stack, then
 
 ## What every component library needs
 
-Before getting into rendering-model specifics, some things are universal. A component library without these isn't a library — it's a collection of files.
+Before getting into rendering-model specifics, some things are universal. A component library without these isn't a library; it's a collection of files.
 
 ### Consistent design tokens
 
@@ -38,13 +38,13 @@ Components, tokens, and files should follow a naming convention that's consisten
 
 ### Version control
 
-Changes to components affect every consumer of the library. Version control — whether through a package version, a changelog, or a clearly communicated release process — lets consuming teams understand what changed and why.
+Changes to components affect every consumer of the library. Version control (whether through a package version, a changelog, or a clearly communicated release process) lets consuming teams understand what changed and why.
 
 ## Server-rendered monoliths: Rails, Django, Laravel
 
 In a server-rendered monolith, HTML is generated on the server and sent to the browser. JavaScript is an enhancement, not the foundation. This changes what a component library needs to be.
 
-### What components look like
+### What server-rendered components look like
 
 In Rails, components are typically implemented as ViewComponents, partials, or helpers. In Django, they're template tags or template fragments. In Laravel, they're Blade components. The pattern varies by framework, but the concept is consistent: a component is a reusable piece of server-rendered HTML with a defined interface.
 
@@ -70,25 +70,25 @@ end
 
 ### Bare essentials for server-rendered libraries
 
-**CSS architecture** — Without a JavaScript component model, CSS carries the full weight of visual consistency. A well-structured CSS architecture using design tokens and a clear naming convention (BEM, utility classes, or a combination) is the foundation of the library.
+**CSS architecture:** Without a JavaScript component model, CSS carries the full weight of visual consistency. A well-structured CSS architecture using design tokens and a clear naming convention (BEM, utility classes, or a combination) is the foundation of the library.
 
-**Progressive enhancement** — JavaScript interactions should be layered on top of HTML that works without them. A dropdown that's accessible with only HTML and CSS first, then enhanced with JavaScript for smoother behavior, is more resilient than one that requires JavaScript to function at all.
+**Progressive enhancement:** JavaScript interactions should be layered on top of HTML that works without them. A dropdown that's accessible with only HTML and CSS first, then enhanced with JavaScript for smoother behavior, is more resilient than one that requires JavaScript to function at all.
 
-**Stimulus or Alpine.js for interactivity** — Rails applications commonly use [Stimulus](https://stimulus.hotwire.dev/) or [Alpine.js](https://alpinejs.dev/) for lightweight JavaScript behavior. If your library includes interactive components like modals or tabs, these tools let you add behavior without introducing a full JavaScript framework.
+**Stimulus or Alpine.js for interactivity:** Rails applications commonly use [Stimulus](https://stimulus.hotwire.dev/) or [Alpine.js](https://alpinejs.dev/) for lightweight JavaScript behavior. If your library includes interactive components like modals or tabs, these tools let you add behavior without introducing a full JavaScript framework.
 
-**Hotwire/Turbo awareness** (Rails-specific) — If your Rails application uses Turbo for navigation, components need to work correctly with Turbo Drive and Turbo Frames. This affects how JavaScript is initialized and torn down when content updates.
+**Hotwire/Turbo awareness** (Rails-specific): If your Rails application uses Turbo for navigation, components need to work correctly with Turbo Drive and Turbo Frames. This affects how JavaScript is initialized and torn down when content updates.
 
-**Server-side rendering of states** — Hover and focus states are handled by CSS. Active, disabled, error, and loading states are typically rendered server-side as conditional HTML. The library needs to define and document all states so they're implemented consistently across the application.
+**Server-side rendering of states:** Hover and focus states are handled by CSS. Active, disabled, error, and loading states are typically rendered server-side as conditional HTML. The library needs to define and document all states so they're implemented consistently across the application.
 
 ### What you can skip
 
-A server-rendered library doesn't need a JavaScript component model, a virtual DOM, or a state management system. It doesn't need to handle client-side routing. Keeping the library close to the platform — HTML, CSS, and minimal JavaScript — keeps it maintainable and fast.
+A server-rendered library doesn't need a JavaScript component model, a virtual DOM, or a state management system. It doesn't need to handle client-side routing. Keeping the library close to the platform (HTML, CSS, and minimal JavaScript) keeps it maintainable and fast.
 
 ## Client-rendered frameworks: React, Vue, Angular
 
 In a client-rendered single-page application (SPA), JavaScript runs in the browser and manages the entire interface. The component model is central to how the application works, which changes what the library needs to provide.
 
-### What components look like
+### What client-rendered components look like
 
 Components in React are functions or classes that return JSX. In Vue, they're single-file components (`.vue` files) that combine template, script, and styles. In Angular, they're classes decorated with `@Component`.
 
@@ -96,9 +96,9 @@ Each framework has its own conventions, but the component concept is consistent:
 
 ### Bare essentials for client-rendered libraries
 
-**A consistent component API design** — Decide early how components accept inputs (props), communicate outputs (events or callbacks), and expose internal behavior (slots or render props). Consistency across the library reduces the cognitive overhead of working with it.
+**A consistent component API design:** Decide early how components accept inputs (props), communicate outputs (events or callbacks), and expose internal behavior (slots or render props). Consistency across the library reduces the cognitive overhead of working with it.
 
-**Prop validation and TypeScript types** — Client-rendered frameworks benefit significantly from typed component interfaces. TypeScript catches prop misuse at development time, makes components self-documenting, and enables editor tooling like autocomplete and inline documentation.
+**Prop validation and TypeScript types:** Client-rendered frameworks benefit significantly from typed component interfaces. TypeScript catches prop misuse at development time, makes components self-documenting, and enables editor tooling like autocomplete and inline documentation.
 
 ```typescript
 // React example with TypeScript
@@ -110,13 +110,13 @@ interface ButtonProps {
 }
 ```
 
-**State handling conventions** — Decide which state belongs inside components and which belongs outside. Components in a library should generally be as stateless as possible, accepting data through props and communicating changes through events. This makes them more reusable and easier to test.
+**State handling conventions:** Decide which state belongs inside components and which belongs outside. Components in a library should generally be as stateless as possible, accepting data through props and communicating changes through events. This makes them more reusable and easier to test.
 
-**Slots and composition patterns** — Components that accept children or named slots are more flexible than components that only accept primitive props. A card component that accepts a header slot, a body slot, and a footer slot is more useful than one with separate `headerText`, `bodyText`, and `footerText` props.
+**Slots and composition patterns:** Components that accept children or named slots are more flexible than components that only accept primitive props. A card component that accepts a header slot, a body slot, and a footer slot is more useful than one with separate `headerText`, `bodyText`, and `footerText` props.
 
-**Storybook** — [Storybook](https://storybook.js.org/) is the standard tool for developing, documenting, and testing components in isolation for client-rendered frameworks. It provides a development environment, a documentation hub, and an integration point for visual regression testing and accessibility checks.
+**Storybook:** [Storybook](https://storybook.js.org/) is the standard tool for developing, documenting, and testing components in isolation. It provides a development environment, a documentation hub, and an integration point for visual regression testing and accessibility checks.
 
-**Testing** — Component tests should verify behavior rather than implementation details. Test that a button fires its click handler when activated, not that it has a specific CSS class. [Testing Library](https://testing-library.com/) is the standard approach for React and Vue. Angular uses its own testing utilities with Jasmine or Jest.
+**Testing:** Component tests should verify behavior rather than implementation details. Test that a button fires its click handler when activated, not that it has a specific CSS class. [Testing Library](https://testing-library.com/) is the standard approach for React and Vue. Angular uses its own testing utilities with Jasmine or Jest.
 
 ## Hybrid frameworks: Next.js, Nuxt, SvelteKit, Remix
 
@@ -144,15 +144,15 @@ A component library for Next.js or Nuxt needs to be explicit about which compone
 
 ### Bare essentials for hybrid framework libraries
 
-**Clear server/client labeling** — Document which components are server components and which are client components. Importing a client component into a server context causes an error. Teams shouldn't have to discover this at runtime.
+**Clear server/client labeling:** Document which components are server components and which are client components. Importing a client component into a server context causes an error. Teams shouldn't have to discover this at runtime.
 
-**Minimal client boundaries** — The performance benefits of server rendering are maximized when client components are as small and focused as possible. Library components that mix server and client concerns force consumers to render more on the client than necessary. Push interactivity to the leaves of the component tree.
+**Minimal client boundaries:** The performance benefits of server rendering are maximized when client components are as small and focused as possible. Library components that mix server and client concerns force consumers to render more on the client than necessary. Push interactivity to the leaves of the component tree.
 
-**Hydration awareness** — Components that render differently on the server and client cause hydration mismatches, which produce console errors and can break interactivity. Library components should render identically on server and client, or explicitly handle the difference.
+**Hydration awareness:** Components that render differently on the server and client cause hydration mismatches, which produce console errors and can break interactivity. Library components should render identically on server and client, or explicitly handle the difference.
 
-**CSS strategy that works with server rendering** — Some CSS-in-JS libraries that work well in client-only React have limitations with server rendering. CSS Modules, Tailwind CSS, and plain CSS custom properties all work correctly in hybrid contexts without additional configuration.
+**CSS strategy that works with server rendering:** Some CSS-in-JS libraries that work well in client-only React have limitations with server rendering. CSS Modules, Tailwind CSS, and plain CSS custom properties all work correctly in hybrid contexts without additional configuration.
 
-**Streaming and Suspense compatibility** (Next.js/React) — Components that work correctly inside React Suspense boundaries give consumers more flexibility. Components that perform synchronous blocking work limit streaming options.
+**Streaming and Suspense compatibility** (Next.js/React): Components that work correctly inside React Suspense boundaries give consumers more flexibility. Components that perform synchronous blocking work limit streaming options.
 
 ### What Nuxt-specific libraries need
 

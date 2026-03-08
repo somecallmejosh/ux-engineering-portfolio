@@ -13,11 +13,11 @@ image_alt: 'A developer working on a design system.'
 Component libraries: a practical guide
 ::
 
-At some point, every product team faces the same question. The interface is growing, inconsistencies are multiplying, and someone raises the idea of a component library. Then comes the follow-up: do we build our own, or use something that already exists?
+At some point, most product teams face the same question. The interface is growing, inconsistencies are multiplying, and someone raises the idea of a component library. Then comes the follow-up: do you build your own, or use something that already exists?
 
-Both paths are legitimate. Both have real costs. The right answer depends on factors specific to your product, your team, and your timeline — not on which option sounds more impressive.
+Both paths are legitimate. Both have real costs. The right answer depends on factors specific to your product, your team, and your timeline, not on which option sounds more impressive.
 
-This article lays out the honest tradeoffs so you can make an informed decision.
+What follows are the honest trade-offs so you can make an informed decision.
 
 ## What existing solutions offer
 
@@ -27,7 +27,7 @@ The ecosystem of pre-built component libraries has matured significantly. The op
 
 [shadcn/ui](https://ui.shadcn.com/) takes a different approach from most libraries. Rather than installing components as a package dependency, you copy the component source code directly into your project. The components are built on Radix UI primitives (which handle accessibility and behavior) and styled with Tailwind CSS.
 
-This means you own the code. You can modify components freely without forking a package, and your bundle only includes what you actually use. The tradeoff is that updates from upstream require manual comparison and merging rather than a package version bump.
+This means you own the code. You can modify components freely without forking a package, and your bundle only includes what you actually use. The trade-off is that updates from upstream require manual comparison and merging rather than a package version bump.
 
 shadcn/ui is currently one of the most popular choices for React and Next.js projects.
 
@@ -55,7 +55,7 @@ Like Ant Design, its design language is opinionated. The library is customizable
 
 ### Speed to production
 
-A pre-built library gives you accessible, tested components on day one. A button with correct focus behavior, a modal with proper focus trapping, a dropdown with keyboard navigation — these take meaningful time to build correctly from scratch. An existing library handles them immediately.
+A pre-built library gives you accessible, tested components immediately. A button with correct focus behavior, a modal with proper focus trapping, a dropdown with keyboard navigation — these take meaningful time to build correctly from scratch. An existing library handles all of that for you.
 
 For teams with a short runway, a tight deadline, or limited frontend capacity, this is a compelling argument.
 
@@ -99,7 +99,7 @@ Teams that build their own library develop deep expertise in component architect
 
 The build-vs-buy framing is useful for making a decision, but most teams don't land at either extreme.
 
-Many teams use a headless library like Radix UI for behavioral primitives — keyboard navigation, focus management, ARIA attributes — while building their own visual layer on top. This approach gets you the accessibility and behavior work for free while preserving full visual control. shadcn/ui is essentially this pattern made accessible to teams that don't want to wire it up themselves.
+Many teams use a headless library like Radix UI for behavioral primitives (keyboard navigation, focus management, ARIA attributes) while building their own visual layer on top. This approach gets you the accessibility and behavior work for free while preserving full visual control. shadcn/ui is essentially this pattern made accessible to teams that don't want to wire it up themselves.
 
 Others start with an existing library to ship quickly, then gradually replace components with custom implementations as the product matures and brand requirements become clearer.
 
@@ -117,11 +117,11 @@ Work through these before committing to either path.
 
 **How long will this product run?** A short-lived marketing campaign has different maintenance considerations from a product that will be in production for five years.
 
-**Do you support multiple frameworks?** If your team builds for React, Vue, and Angular simultaneously, neither a custom library nor most pre-built libraries solve the multi-framework problem cleanly. See [part three of this series](/blog/component-library-for-multi-framework-teams/) for how teams address that.
+**Do you support multiple frameworks?** If your team builds for React, Vue, and Angular simultaneously, neither a custom library nor most pre-built libraries solve the multi-framework problem cleanly. [Component libraries for multi-framework teams](/blog/component-library-for-multi-framework-teams/) covers how teams address this.
 
 ## A note on "free"
 
-Pre-built libraries are free to use but not free to adopt. They carry integration cost, learning cost, customization cost, and long-term coupling cost. None of these is a reason to avoid them — they're often worth it — but factoring them in gives you a more accurate picture of the real investment.
+Pre-built libraries are free to use but not free to adopt. They carry integration cost, learning cost, customization cost, and long-term coupling cost. None of these is a reason to avoid them (they're often worth it), but factoring them in gives you a more accurate picture of the real investment.
 
 The same is true in reverse. A custom library is "free" of licensing fees but carries significant build and maintenance cost that compounds as the system grows.
 
