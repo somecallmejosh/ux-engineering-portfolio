@@ -66,7 +66,7 @@ const mapIcons = {
         </li>
       </ul>
       <a :href="featureData.spec.links[0].link" aria-label="Baseline Check on web-platform-dx.github.io"
-        target="_blank">
+        target="_blank" rel="noopener noreferrer">
         <svg class="w-24" viewBox="0 0 617 135" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M159.487 21.1831L148.095 32.8303L182.271 67.7718L148.095 102.713L125.311 79.419L113.919 91.0662L148.095 126.008L205.055 67.7718L159.487 21.1831Z"

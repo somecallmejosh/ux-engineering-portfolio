@@ -1,8 +1,20 @@
-<script setup>
+<script setup lang="ts">
 import { motion } from 'motion-v'
+import type { PropType } from 'vue'
+
+interface CardItem {
+  title: string
+  description: string
+  slug: string
+  image?: string
+  meta?: { image_alt: string }
+  headline?: string
+  to?: string
+}
+
 const props = defineProps({
   data: {
-    type: Array,
+    type: Array as PropType<CardItem[]>,
     required: true
   }
 })
@@ -27,7 +39,7 @@ const props = defineProps({
         <CardHeader class="mb-2.5">
           {{ item.title }}
         </CardHeader>
-        <p v-html="item.description"></p>
+        <p>{{ item.description }}</p>
       </div>
       <NuxtLink :to="item.to || `/projects/${item.slug}/`"
       class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out">

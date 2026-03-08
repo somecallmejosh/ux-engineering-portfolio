@@ -1,4 +1,16 @@
-<script setup>
+<script setup lang="ts">
+import type { PropType } from 'vue'
+
+interface CardItem {
+  id: string
+  title: string
+  description: string
+  slug: string
+  image?: string
+  meta?: { image_alt: string }
+  headline?: string
+}
+
 const { fullPath } = useRoute();
 const props = defineProps({
   label: {
@@ -6,7 +18,7 @@ const props = defineProps({
     default: 'Reading List'
   },
   list: {
-    type: Array,
+    type: Array as PropType<CardItem[]>,
     required: true
   }
 });
@@ -36,7 +48,7 @@ const path = fullPath.split('/').slice(0, 2).join('/');
               {{ item.headline }}
               {{ item.title }}
             </CardHeader>
-            <p class="text-pretty" v-html="item.description"></p>
+            <p class="text-pretty">{{ item.description }}</p>
           </div>
           <NuxtLink :to="`${path}/${item.slug}/`" class="absolute not-prose inset-0 rounded-lg">
           <span class="sr-only">{{

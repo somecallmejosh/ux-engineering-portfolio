@@ -72,8 +72,8 @@ export function useSearch() {
       const all = await fetchAllDocs()
       docs.value = all
       indexCache = all
-    } catch (e: any) {
-      error.value = e?.message || 'Failed to build search index'
+    } catch (e: unknown) {
+      error.value = e instanceof Error ? e.message : 'Failed to build search index'
     } finally {
       loading.value = false
     }
