@@ -11,6 +11,11 @@ useSeoMeta({
 })
 
 
+const paidServices = await queryCollection('services')
+  .where('isFree', '<>', true)
+  .where('isComingSoon', '<>', true)
+  .all()
+
 const mostRecentBlog = await queryCollection('blog')
   .order('publishedAt', 'DESC')
   .first()
@@ -60,7 +65,7 @@ const combinedPosts = [
           </ButtonLink>
         </div>
       </section>
-      <Services />
+      <Services :services="paidServices" />
       <section aria-labelledby="recent">
         <h2 class="text-2xl mb-4" id="recent">Recent work and writing</h2>
         <CardList :list="combinedPosts" label="Recent work and writing" />
