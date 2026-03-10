@@ -20,13 +20,14 @@ useSeoMeta({
     <section class="prose">
       <PageHeader>{{ checklist.title }}</PageHeader>
     </section>
-    <div class="prose max-w-none">
+    <div class="prose max-w-none prose-ul:list-none prose-ul:pl-0">
       <ContentRenderer :value="checklist" />
     </div>
     <Callout>
       <h2>Want a deeper analysis?</h2>
       <p>
-        The paid <NuxtLink to="/services/audit/">Design System Audit</NuxtLink> covers the same five dimensions with expert analysis, a written report, and a prioritized remediation roadmap delivered in 5 business days.
+        The paid <NuxtLink to="/services/audit/">Design System Audit</NuxtLink> covers the same five dimensions with
+        expert analysis, a written report, and a prioritized remediation roadmap delivered in five business days.
       </p>
       <ButtonLink to="/contact/">Get in touch</ButtonLink>
     </Callout>

@@ -33,7 +33,7 @@ Rate each criterion using this scale, then total your score per section.
 
 - [ ] Every interactive component (buttons, links, form controls) is fully operable with a keyboard alone.
 - [ ] All form inputs have visible, programmatically associated labels.
-- [ ] Focusable elements have a clearly visible focus indicator that meets WCAG 2.1 AA contrast requirements.
+- [ ] Focusable elements have a clearly visible focus indicator that meets Web Content Accessibility Guidelines (WCAG) 2.1 AA contrast requirements.
 - [ ] Color is never used as the only means of conveying information (errors, statuses, required fields).
 - [ ] Components that control visibility (modals, drawers, tooltips) trap focus correctly and return focus on close.
 - [ ] Images, icons, and decorative elements have appropriate alt text or are hidden from assistive technology.
@@ -48,7 +48,7 @@ Rate each criterion using this scale, then total your score per section.
 
 - [ ] Tokens are defined in a single source of truth (design tool, JSON file, or equivalent) and synced to code.
 - [ ] Token names follow a consistent, predictable pattern (for example: `category/property/variant`) with no abbreviations or ambiguity.
-- [ ] Semantic tokens (for example: `color.text.primary`) reference primitive tokens (for example: `color.gray.900`) — not raw values.
+- [ ] Semantic tokens (for example: `color.text.primary`) reference primitive tokens (for example: `color.gray.900`), not raw values.
 - [ ] Token names describe intent, not value — `color.brand-primary` rather than `color.blue`.
 - [ ] Tokens cover every design decision that varies across themes, modes, or brands.
 - [ ] There is no place in the codebase where a token value is redefined inside a component rather than referenced.
@@ -100,6 +100,6 @@ Rate each criterion using this scale, then total your score per section.
 
 ## What to do with your results
 
-Look at your lowest-scoring section first — that is your biggest gap and the highest-leverage place to start. If two sections are close, prioritize accessibility: it carries legal risk and affects real users today.
+Look at your lowest-scoring section first. That's your biggest gap and the highest-leverage place to start. If two sections are close, prioritize accessibility: it carries legal risk and affects real users today.
 
 If your total score is below 32, or if accessibility is your weakest dimension, a [Design System Audit](/services/audit/) will give you a specific, prioritized remediation roadmap rather than a general direction.

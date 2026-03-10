@@ -24,11 +24,11 @@ useSeoMeta({
     <template v-if="service.isComingSoon">
 
       <section class="space-y-6">
-        <span
-          class="text-xs inline-flex font-semibold tracking-widest uppercase text-neutral-400 border border-neutral-200 rounded-full px-3 py-1">Coming
-          soon</span>
-        <PageHeader>{{ service.label }}</PageHeader>
-        <p class="text-xl text-neutral-600 leading-relaxed max-w-2xl">{{ service.tagline }}</p>
+        <Pill pill="Coming Soon"></Pill>
+        <div class="prose">
+          <PageHeader>{{ service.label }}</PageHeader>
+          <p>{{ service.description }}</p>
+        </div>
         <div class="not-prose">
           <ButtonLink to="/contact/">Join the waitlist</ButtonLink>
         </div>
@@ -74,11 +74,12 @@ useSeoMeta({
     <template v-else-if="service.isFree">
 
       <section class="space-y-6">
-        <span
-          class="text-xs inline-block font-semibold tracking-widest uppercase text-blue-600 border border-blue-200 rounded-full px-3 py-1">Free
-          resource</span>
-        <PageHeader>{{ service.label }}</PageHeader>
-        <p class="text-xl text-neutral-600 leading-relaxed max-w-2xl">{{ service.tagline }}</p>
+        <Pill pill="Free resource">Free
+          resource</Pill>
+        <div class="prose">
+          <PageHeader>{{ service.label }}</PageHeader>
+          <p>{{ service.tagline }}</p>
+        </div>
         <ChecklistSignup />
       </section>
 
@@ -143,8 +144,10 @@ useSeoMeta({
 
       <!-- Hero -->
       <section class="space-y-6">
-        <PageHeader>{{ service.label }}</PageHeader>
-        <p class="text-xl text-neutral-600 leading-relaxed max-w-2xl">{{ service.tagline }}</p>
+        <div class="prose">
+          <PageHeader>{{ service.label }}</PageHeader>
+          <p>{{ service.tagline }}</p>
+        </div>
         <dl class="flex flex-wrap gap-2 items-center not-prose">
           <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
             <dt class="sr-only">Price</dt>

@@ -65,9 +65,11 @@ const faqs = [
         </p>
         <p>{{ freeService.description }}</p>
       </div>
-      <ButtonLink :to="`/services/${freeService.slug}/`">
-        Get the free checklist
-      </ButtonLink>
+      <div class="pt-4">
+        <ButtonLink :to="`/services/${freeService.slug}/`">
+          Get the free checklist
+        </ButtonLink>
+      </div>
     </Callout>
 
     <!-- Coming soon -->
@@ -76,11 +78,7 @@ const faqs = [
       <ul class="grid md:grid-cols-2 gap-4 list-none p-0 m-0">
         <li v-for="service in comingSoonServices" :key="service.slug"
           class="rounded-lg border border-neutral-200 bg-white p-6 space-y-2">
-          <div class="flex items-center gap-2">
-            <span
-              class="text-xs font-semibold tracking-wider uppercase text-neutral-400 border border-neutral-200 rounded px-2 py-0.5">Coming
-              soon</span>
-          </div>
+          <Pill pill="Coming Soon"></Pill>
           <h3 class="text-lg font-semibold">{{ service.label }}</h3>
           <p class="text-neutral-600 text-sm leading-relaxed">{{ service.description }}</p>
           <NuxtLink :to="`/services/${service.slug}/`"

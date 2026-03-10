@@ -105,7 +105,7 @@ const blurAndRemoveFocus = () => {
         </nav>
       </header>
       <div class="flex-grow lg:overflow-y-scroll">
-        <div class="hidden lg:flex lg:justify-between lg:mb-12 p-6 lg:px-10 lg:pt-10 lg:pb-16 lg:gap-6">
+        <div class="hidden lg:flex lg:justify-between p-6 lg:px-10 lg:pt-10 lg:pb-16 lg:gap-6">
           <div class="flex-1">
             <Logo />
           </div>
