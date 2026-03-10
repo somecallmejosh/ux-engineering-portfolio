@@ -23,12 +23,15 @@ export default defineNuxtConfig({
     routeRules: {
       '/blog/categories/**': { redirect: { to: '/blog/tags/**/', statusCode: 301 } },
       '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**/', statusCode: 301 } },
+      '/checklist/': { sitemap: false },
     }
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['@/assets/css/styles.css'],
   runtimeConfig: {
+    resendKey: process.env.RESEND_KEY,
+    resendFrom: process.env.RESEND_FROM,
     public: {
       sqlPath: process.env.SQL_ALLOW_PATH,
       siteUrl: process.env.NUXT_SITE_URL ?? 'http://localhost:3000',

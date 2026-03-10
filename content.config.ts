@@ -72,6 +72,13 @@ export default defineContentConfig({
         }).optional(),
       }),
     }),
+    checklist: defineCollection({
+      source: 'checklist/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+      }),
+    }),
     dev_notes: defineCollection({
       source: 'dev-notes/*.md',
       type: 'page',

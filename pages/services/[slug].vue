@@ -79,11 +79,7 @@ useSeoMeta({
           resource</span>
         <PageHeader>{{ service.label }}</PageHeader>
         <p class="text-xl text-neutral-600 leading-relaxed max-w-2xl">{{ service.tagline }}</p>
-        <div class="not-prose">
-          <ButtonLink to="/contact/">
-            <Icon name="ph:file-pdf" size="1rem" aria-hidden="true" /> Get the free checklist
-          </ButtonLink>
-        </div>
+        <ChecklistSignup />
       </section>
 
       <Callout>
