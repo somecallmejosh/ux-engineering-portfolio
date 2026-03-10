@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const checklist = await queryCollection('checklist').path('/checklist/index').first()
+const checklist = await queryCollection('checklist').path('/checklist').first()
 
 if (!checklist) {
   throw createError({ statusCode: 404, statusMessage: 'Not found' })

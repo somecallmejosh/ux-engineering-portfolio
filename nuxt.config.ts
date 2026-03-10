@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    prerender: {
+      routes: ['/checklist/'],
+    },
     routeRules: {
       '/blog/categories/**': { redirect: { to: '/blog/tags/**/', statusCode: 301 } },
       '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**/', statusCode: 301 } },
