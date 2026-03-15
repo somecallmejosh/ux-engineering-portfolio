@@ -172,7 +172,7 @@ const testimonials = [
         what I care about most: collaboration, accessibility, and work that holds up over time.
       </p>
     </section>
-    <section aria-label="Testimonials" class="gap-8 space-y-12 grid grid-cols-3">
+    <section aria-label="Testimonials" class="gap-8 space-y-12 xl:columns-2">
       <ul v-for="(item, index) in testimonials" :key="index" class="">
         <li
           class="flex gap-4 group hover:bg-blue-50 relative -m-2 p-2 rounded-lg transition-colors duration-150 ease-in-out">

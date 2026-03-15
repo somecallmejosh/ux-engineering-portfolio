@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
       aria-controls="toc-menu" :aria-expanded="menuOpen">
       <h2 id="toc-header" class="flex items-center gap-2 text-body text-sm flex-1 group-hover:underline">
         <Icon name="ph:book-open-text" size="1.3em" />
-        <strong>Table of Contents</strong>
+        <strong>Outline</strong>
       </h2>
       <span>
         {{ menuOpen ? 'Hide' : 'Show' }}
@@ -111,7 +111,7 @@ onBeforeUnmount(() => {
   opacity: 1;
 }
 
-.toc-drawer > div {
+.toc-drawer>div {
   overflow: hidden;
 }
 

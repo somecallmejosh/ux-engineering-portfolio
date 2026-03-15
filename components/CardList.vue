@@ -7,7 +7,7 @@ interface CardItem {
   image?: string
   meta?: { image_alt: string }
   headline?: string
-  to?: string
+  to?: string,
 }
 
 const { fullPath } = useRoute()
@@ -25,12 +25,7 @@ function itemUrl(item: CardItem): string {
 <template>
   <section :aria-label="label ?? 'Reading List'">
     <ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-16 lg:gap-12">
-      <CardListItem
-        v-for="item in list"
-        :key="item.id"
-        :item="item"
-        :to="itemUrl(item)"
-      />
+      <CardListItem v-for="item in list" :key="item.id" :item="item" :to="itemUrl(item)" />
     </ul>
   </section>
 </template>

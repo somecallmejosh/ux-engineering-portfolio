@@ -10,7 +10,7 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs baseUrl="blog" slug="tags" label="Blog" title="Tags" />
+    <Breadcrumbs :items="[{ label: 'Blog', to: '/blog/' }, { label: 'Tags' }]" />
     <section aria-labelledby="page-header" class="prose">
       <PageHeader pill="Blog Tags" pillIcon="ph:article-ny-times">Blog Tags</PageHeader>
     </section>

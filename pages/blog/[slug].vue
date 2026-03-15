@@ -24,7 +24,7 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs baseUrl="blog" :slug="`${slug}`" label="Blog" :title="post.title" />
+    <Breadcrumbs :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" />
     <div v-if="post" class="prose">
       <PageHeader pill="Blog Article" pillIcon="ph:article-ny-times" :publishedAt="post.publishedAt">{{ post.title }}
       </PageHeader>

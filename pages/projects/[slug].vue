@@ -24,7 +24,7 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs baseUrl="projects" :slug="`${slug}`" label="Projects" :title="post.title" />
+    <Breadcrumbs :items="[{ label: 'Projects', to: '/projects/' }, { label: post.title }]" />
 
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
       <div v-if="post" class="prose">
