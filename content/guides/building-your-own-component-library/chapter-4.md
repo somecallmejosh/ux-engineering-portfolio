@@ -197,6 +197,9 @@ This is useful for card-like layouts where you want some content at the top and 
 </Stack>
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-stack--default" title="Stacks in Storybook"}
+::
+
 The `splitAfter` prop tells the Stack component which child to apply `margin-block-end: auto` to via `Children.toArray` and `cloneElement`. The Stack needs a defined height (or `min-height`) for the split to produce a visible gap. Without a height constraint, the flexbox column collapses to its content height and the auto margin has no space to distribute.
 
 ## The barrel export

@@ -110,6 +110,9 @@ Dialog uses `forwardRef` so consumers can hold a ref to the dialog element, whic
 
 The dialog is controlled-only (`isOpen` and `onClose` are required props). This is a deliberate choice. Uncontrolled dialogs (that manage their own open state) prevent the consumer from coordinating dialog visibility with the rest of their application state.
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/components-dialog--default" title="Dialog in Storybook"}
+::
+
 ## Tooltip
 
 `mergeProps` from `react-aria` merges multiple props objects, combining event handlers by chaining them rather than overwriting — so if both objects have an `onClick`, both fire. It's used here to attach the trigger props to the trigger element without discarding any existing handlers.
@@ -185,6 +188,9 @@ export const Tooltip = forwardRef<
 
 The tooltip appears on hover (after the configured delay) and on focus. It hides on pointer leave, blur, Escape, or scroll. React Aria manages the timing and the `aria-describedby` relationship between the trigger and the tooltip content. Both `TooltipTrigger` and `Tooltip` use `forwardRef`: `TooltipTrigger` exposes the outer wrapper span (useful for positioning logic), and `Tooltip` exposes the tooltip element itself.
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/components-tooltip--multiple-tooltips" title="Tooltip in Storybook"}
+::
+
 ## Alert
 
 Alert is the simplest component in the library. It's semantic HTML with styling:
@@ -221,6 +227,9 @@ export function Alert({
 ```
 
 `role="alert"` triggers an assertive announcement in screen readers: the alert content is read immediately, interrupting whatever the screen reader was doing. `role="status"` (via `isPolite`) triggers a polite announcement: the content is read at the next natural pause. Use `role="alert"` for errors that need immediate attention. Use `role="status"` for success messages and informational updates.
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/components-alert--all-variants" title="Alerts in Storybook"}
+::
 
 ## Badge, Card, and Tabs
 

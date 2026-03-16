@@ -84,6 +84,9 @@ export const Box = forwardRef<HTMLElement, BoxProps>(function Box(
 })
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-box--bordered" title="Box in Storybook"}
+::
+
 Every primitive in this chapter follows the same `forwardRef` pattern. The ref is typed as `HTMLElement` in all cases for the same reason discussed in Chapter 4: the `as` prop accepts any element type, so a more specific ref type (for example, `HTMLDivElement`) would be incorrect when the consumer passes `as="section"`. `HTMLElement` is the accurate common base. If your project needs the fully typed polymorphic ref, the pattern is documented in the [companion repository]([companion-repo-url]).
 
 ## Center
@@ -158,6 +161,9 @@ export const Center = forwardRef<HTMLElement, CenterProps>(function Center(
 })
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-center--default" title="Centered in Storybook"}
+::
+
 ## Cluster
 
 The Cluster arranges inline-like children (tags, buttons, badges, navigation links) in a horizontal row with consistent spacing. When the children don't fit in one row, they wrap to the next line. The `gap` property handles both horizontal and vertical spacing between wrapped rows.
@@ -224,6 +230,9 @@ export const Cluster = forwardRef<HTMLElement, ClusterProps>(function Cluster(
 })
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-cluster--default" title="Cluster in Storybook"}
+::
+
 A common use case is a header with a logo on the left and navigation links on the right.
 
 ```tsx
@@ -279,6 +288,9 @@ The technique uses flexbox with asymmetric `flex-grow` values:
   align-items: flex-start;
 }
 ```
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-sidebar--default" title="Sidebar in Storybook"}
+::
 
 The key insight is `flex-grow: 999` on the content panel. Because this value is so much larger than the sidebar's `flex-grow: 1`, the content panel consumes all available space beyond the sidebar's `flex-basis`. The `min-inline-size: 50%` on the content panel forces wrapping: when the content would be narrower than 50% of the container, it wraps below the sidebar and both panels take full width.
 
@@ -407,6 +419,9 @@ export const Switcher = forwardRef<HTMLElement, SwitcherProps>(
 )
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-switcher--default" title="Switcher in Storybook"}
+::
+
 The `limit` prop is an enhancement for cases where you want at most N children per row. It applies `flex-basis: 100%` to children beyond the limit via a CSS rule like `.rudiment-switcher > :nth-child(n+4)`. You can handle this with an inline `<style>` tag scoped to the component instance. The core switching behavior works without it.
 
 ## Grid
@@ -468,6 +483,9 @@ export const Grid = forwardRef<HTMLElement, GridProps>(function Grid(
   )
 })
 ```
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-grid--default" title="Grid in Storybook"}
+::
 
 ## Cover
 
@@ -541,6 +559,9 @@ export const Cover = forwardRef<HTMLElement, CoverProps>(function Cover(
   )
 })
 ```
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-cover--default" title="Cover in Storybook"}
+::
 
 The consumer marks the centered child with the `rudiment-cover__centered` class:
 
@@ -618,6 +639,8 @@ These primitives become most useful when nested. A complete page layout requires
 ```
 
 This layout handles narrow viewports automatically. The Sidebar stacks when the content panel would be too narrow. The Switcher collapses the metric cards to a single column. The Grid drops columns as space decreases. No breakpoints, no media queries, no viewport-specific code.
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/docs/examples-settings-page--docs" title="Layout composition in Storybook"}
 
 ## Attribution
 

@@ -127,6 +127,9 @@ The CSS applies typography tokens per heading size:
 /* ...and so on for levels 3-6 */
 ```
 
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/typography-heading--all-levels" title="Heading Levels" height="450px"}
+::
+
 ## Text
 
 The Text component covers non-heading text: body paragraphs, small text, captions, overlines, and inline code. The `variant` prop selects the typographic style, and the `as` prop controls the rendered element.
@@ -197,6 +200,9 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
   border-radius: var(--radius-sm);
 }
 ```
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/typography-text--all-variants" title="Text Levels" height="450px"}
+::
 
 ## Prose
 
@@ -284,6 +290,9 @@ export const Prose = forwardRef<HTMLElement, ProseProps>(function Prose(
 ```
 
 The spacing values use `em`, not `rem`. This is the key detail. An `em` value scales with the element's own font size. When you render `<Prose size="sm">` inside a sidebar, the spacing contracts proportionally with the smaller text. When you render `<Prose size="lg">` for a blog post, the spacing expands. The rhythm stays correct regardless of size.
+
+::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/typography-prose--all-sizes" title="Prose Levels" height="600px"}
+::
 
 ## Usage
 
