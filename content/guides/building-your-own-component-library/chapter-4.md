@@ -220,7 +220,9 @@ export type { StackProps } from './layouts/Stack'
 
 Create `src/layouts/Stack/Stack.stories.tsx`:
 
-> **Note:** The story file below imports from `@storybook/react`, which is not installed until Chapter 9. The code is included here so you understand the full component API, but it won't run until after you complete the Storybook setup in Chapter 9.
+::Callout
+`@storybook/react-vite` is not installed until Chapter 10. This story file is included here so you can see the full component API, but it won't run until you complete the Storybook setup in that chapter.
+::
 
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react'
@@ -315,7 +317,9 @@ Each story demonstrates a specific feature. `Default` shows the token-driven spa
 
 Create `src/layouts/Stack/Stack.test.tsx`:
 
-> **Note:** The test file below imports from `@testing-library/react` and `vitest`, which are not installed until Chapter 10. The tests are included here alongside the component so you can see what behavior is being verified, but they won't run until after the install step in Chapter 10.
+::Callout
+`@testing-library/react` is not installed until Chapter 11. (`vitest` is installed earlier, as part of the Storybook setup in Chapter 10.) These tests are included here alongside the component so you can see what behavior is being verified, but they won't run until you complete the testing setup in Chapter 11.
+::
 
 ```tsx
 import { render, screen } from '@testing-library/react'

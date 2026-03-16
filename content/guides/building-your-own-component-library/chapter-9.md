@@ -18,10 +18,12 @@ import {
   useModalOverlay,
   OverlayContainer,
   usePreventScroll,
+  FocusScope,
 } from 'react-aria'
 import { useObjectRef } from '@react-aria/utils'
 import type { OverlayTriggerState } from 'react-stately'
 import { cn } from '@/utils/cn'
+import './dialog.css'
 
 export interface DialogProps {
   isOpen: boolean
@@ -45,7 +47,7 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
   }: DialogProps,
   ref,
 ) {
-  const overlayRef = useRef<HTMLDivElement>(null)
+  const underlayRef = useRef<HTMLDivElement>(null)
   const dialogRef = useObjectRef(ref)
 
   usePreventScroll({ isDisabled: !isOpen })
@@ -59,10 +61,12 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     setOpen: () => {},
   }
 
+  // dialogRef must point to the modal element (not the underlay) so that
+  // useModalOverlay can correctly detect clicks outside the dialog panel.
   const { modalProps, underlayProps } = useModalOverlay(
     { isDismissable },
     state,
-    overlayRef,
+    dialogRef,
   )
 
   const { dialogProps, titleProps } = useDialog({}, dialogRef)
@@ -73,24 +77,27 @@ export const Dialog = forwardRef<HTMLDivElement, DialogProps>(function Dialog(
     <OverlayContainer>
       <div
         {...underlayProps}
+        ref={underlayRef}
         className="rudiment-dialog__overlay"
-        ref={overlayRef}
       >
-        <div
-          {...modalProps}
-          {...dialogProps}
-          ref={dialogRef}
-          className={cn(
-            'rudiment-dialog',
-            `rudiment-dialog--${size}`,
-            className,
-          )}
-        >
-          <h2 {...titleProps} className="rudiment-dialog__title">
-            {title}
-          </h2>
-          <div className="rudiment-dialog__body">{children}</div>
-        </div>
+        {/* FocusScope provides tab trapping and restores focus on close */}
+        <FocusScope contain restoreFocus autoFocus>
+          <div
+            {...modalProps}
+            {...dialogProps}
+            ref={dialogRef}
+            className={cn(
+              'rudiment-dialog',
+              `rudiment-dialog--${size}`,
+              className,
+            )}
+          >
+            <h2 {...titleProps} className="rudiment-dialog__title">
+              {title}
+            </h2>
+            <div className="rudiment-dialog__body">{children}</div>
+          </div>
+        </FocusScope>
       </div>
     </OverlayContainer>
   )
@@ -112,13 +119,10 @@ The dialog is controlled-only (`isOpen` and `onClose` are required props). This 
 ```tsx
 // src/components/Tooltip/Tooltip.tsx
 import React, { forwardRef, useRef } from 'react'
-import {
-  useTooltipTrigger,
-  useTooltip as useTooltipAria,
-  mergeProps,
-} from 'react-aria'
+import { useTooltipTrigger, useTooltip as useTooltipAria } from 'react-aria'
 import { useTooltipTriggerState } from 'react-stately'
 import { cn } from '@/utils/cn'
+import './tooltip.css'
 
 export interface TooltipTriggerProps {
   delay?: number
@@ -134,12 +138,20 @@ export const TooltipTrigger = forwardRef<HTMLSpanElement, TooltipTriggerProps>(
       useTooltipTrigger({ delay, closeDelay }, state, triggerRef)
 
     const [trigger, tooltip] = children
+    const {
+      'aria-describedby': ariaDescribedBy,
+      tabIndex: _tabIndex,
+      ...eventProps
+    } = triggerProps
 
     return (
-      <span ref={ref} className="rudiment-tooltip-trigger">
+      <span ref={ref} className="rudiment-tooltip-trigger" {...eventProps}>
         {React.cloneElement(
-          trigger,
-          mergeProps(triggerProps, { ref: triggerRef }),
+          trigger as React.ReactElement<Record<string, unknown>>,
+          {
+            ref: triggerRef,
+            'aria-describedby': ariaDescribedBy,
+          },
         )}
         {state.isOpen && React.cloneElement(tooltip, triggerTooltipProps)}
       </span>

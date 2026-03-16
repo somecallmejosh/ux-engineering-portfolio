@@ -14,13 +14,15 @@ npm create storybook@latest
 
 This guide uses Storybook 10. `@latest` installs whatever version is current at the time you follow the guide — if the current version is not Storybook 10, the configuration format may differ from the examples below.
 
-The Storybook CLI detects your Vite + React setup and installs the appropriate packages. It creates a `.storybook/` directory with `main.ts` and `preview.ts`. Accept the defaults, then modify both files.
+The CLI detects your Vite + React setup and asks a few questions. When prompted for configuration, choose **Recommended** — this installs the a11y, docs, and Vitest addons along with their dependencies, including Playwright. When the CLI asks whether to install Playwright with Chromium, choose **Yes**.
 
-Install the accessibility addon:
+The recommended configuration installs these devDependencies:
 
-```bash
-npm install -D @storybook/addon-a11y
-```
+- `storybook`, `@storybook/react-vite`
+- `@chromatic-com/storybook`, `@storybook/addon-vitest`, `@storybook/addon-a11y`, `@storybook/addon-docs`
+- `vitest`, `playwright`, `@vitest/browser-playwright`, `@vitest/coverage-v8`
+
+It generates `.storybook/main.ts`, `.storybook/preview.ts`, and `.storybook/vitest.setup.ts`, and updates `vite.config.ts`. Use the generated files as a starting point, then modify `main.ts` and `preview.ts` as shown below.
 
 ## Configuration
 
@@ -31,9 +33,10 @@ import type { StorybookConfig } from '@storybook/react-vite'
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
   addons: [
+    '@chromatic-com/storybook',
+    '@storybook/addon-vitest',
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
-    '@storybook/addon-viewport',
   ],
   framework: '@storybook/react-vite',
 }
@@ -42,9 +45,9 @@ export default config
 ```
 
 ```typescript
-// .storybook/preview.ts
-import type { Preview } from '@storybook/react';
-import '../src/app.css';
+// .storybook/preview.tsx
+import type { Preview } from '@storybook/react'
+import '../src/app.css'
 
 const preview: Preview = {
   parameters: {
@@ -58,14 +61,14 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const theme = context.globals.theme || 'light';
+      const theme = context.globals.theme || 'light'
       return (
         <div className={theme === 'dark' ? 'dark' : ''}>
           <div className="bg-surface text-text-default p-8 min-h-screen">
             <Story />
           </div>
         </div>
-      );
+      )
     },
   ],
   globalTypes: {
@@ -82,9 +85,10 @@ const preview: Preview = {
       },
     },
   },
-};
+}
 
-export default preview;
+export default preview
+
 ```
 
 The `preview.ts` configuration does three things.

@@ -10,8 +10,10 @@ Tests give you confidence to change things. In a component library, that confide
 
 This installs the packages required for the test files introduced in Chapter 4. The Stack tests created there can now be run.
 
+`vitest` was already installed in Chapter 10 as part of the Storybook setup. Install only the remaining dependencies:
+
 ```bash
-npm install -D vitest @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom vitest-axe
+npm install -D @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom vitest-axe
 ```
 
 Create `vitest.config.ts`:

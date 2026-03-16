@@ -53,42 +53,46 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <div class="grid grid-cols-3">
-      <div v-if="chapterData" class="prose col-span-2">
-        <Breadcrumbs :items="[
-          { label: 'Guides', to: '/guides/' },
-          { label: guideData?.title ?? humanize(guide), to: `/guides/${guide}/` },
-          { label: chapterData.title },
-        ]" />
-        <PageHeader pill="Guide" pillIcon="ph:book-open" class="mb-6">
-          {{ chapterData.title }}
-        </PageHeader>
-        <TableOfContents :links="chapterData.body.toc.links" />
-        <ContentRenderer :value="chapterData" />
-        <nav aria-label="Chapter navigation"
-          class="not-prose flex justify-between gap-4 mt-12 pt-8 border-t border-neutral-200">
-          <NuxtLink v-if="prevChapter" :to="`/guides/${guide}/${prevChapter.slug}/`"
-            class="flex items-center gap-2 text-sm hover:underline">
-            <Icon name="ph:arrow-left" class="size-4 shrink-0" />
-            <span>{{ prevChapter.title }}</span>
-          </NuxtLink>
-          <span v-else />
-          <NuxtLink v-if="nextChapter" :to="`/guides/${guide}/${nextChapter.slug}/`"
-            class="flex items-center gap-2 text-sm hover:underline text-right ml-auto">
-            <span>{{ nextChapter.title }}</span>
-            <Icon name="ph:arrow-right" class="size-4 shrink-0" />
-          </NuxtLink>
-        </nav>
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
+      <div class="lg:col-span-2">
+        <div v-if="chapterData" class="prose">
+          <Breadcrumbs :items="[
+            { label: 'Guides', to: '/guides/' },
+            { label: guideData?.title ?? humanize(guide), to: `/guides/${guide}/` },
+            { label: chapterData.title },
+          ]" />
+          <PageHeader pill="Guide" pillIcon="ph:book-open" class="mb-6">
+            {{ chapterData.title }}
+          </PageHeader>
+          <TableOfContents :links="chapterData.body.toc.links" />
+          <ContentRenderer :value="chapterData" />
+          <nav aria-label="Chapter navigation"
+            class="not-prose flex justify-between gap-4 mt-12 pt-8 border-t border-neutral-200">
+            <NuxtLink v-if="prevChapter" :to="`/guides/${guide}/${prevChapter.slug}/`"
+              class="flex items-center gap-2 text-sm hover:underline">
+              <Icon name="ph:arrow-left" class="size-4 shrink-0" />
+              <span>{{ prevChapter.title }}</span>
+            </NuxtLink>
+            <span v-else />
+            <NuxtLink v-if="nextChapter" :to="`/guides/${guide}/${nextChapter.slug}/`"
+              class="flex items-center gap-2 text-sm hover:underline text-right ml-auto">
+              <span>{{ nextChapter.title }}</span>
+              <Icon name="ph:arrow-right" class="size-4 shrink-0" />
+            </NuxtLink>
+          </nav>
+        </div>
       </div>
       <div>
-        <CardHeader class="mb-4">Chapters</CardHeader>
-        <ol class="list-decimal space-y-2">
-          <li v-for="c in chapters" :key="c.id">
-            <NuxtLink :to="`/guides/${guide}/${c.path.split('/').at(-1)}/`" class="hover:underline">
-              {{ c.title }}
-            </NuxtLink>
-          </li>
-        </ol>
+        <div class="prose">
+          <CardHeader class="mb-4">Chapters</CardHeader>
+          <ol class="list-decimal space-y-2">
+            <li v-for="c in chapters" :key="c.id">
+              <NuxtLink :to="`/guides/${guide}/${c.path.split('/').at(-1)}/`">
+                {{ c.title }}
+              </NuxtLink>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </PageWrapper>

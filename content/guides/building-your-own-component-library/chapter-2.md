@@ -86,6 +86,10 @@ mkdir -p .storybook
 mkdir docs
 ```
 
+::Callout
+The `.storybook` directory holds configuration for Storybook, which you install and set up in Chapter 10. Vitest is installed as part of the Storybook setup in Chapter 10; Testing Library is installed in Chapter 11. Both are included in the structure now so you don't need to reorganize later — chapters throughout the guide add story and test files alongside each component, with notes explaining they won't run until those chapters are complete.
+::
+
 Create the main CSS entry point at `src/app.css`:
 
 ```css
