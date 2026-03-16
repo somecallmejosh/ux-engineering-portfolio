@@ -255,7 +255,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
             :style="{ width: `${Math.round((answeredCount / TOTAL_ITEMS) * 100)}%` }" />
         </div>
         <button type="button" :disabled="answeredCount === 0" aria-label="Reset all ratings" @click="resetAll"
-          class=" text-neutral-700 hover:text-neutral-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer text-base">
+          class=" text-neutral-700 hover:text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer text-base">
           Reset
         </button>
       </div>
@@ -268,7 +268,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
         <!-- Section header -->
         <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-100">
           <div class="flex items-center gap-3">
-            <span class=" font-medium text-neutral-400 font-mono tabular-nums" aria-hidden="true">
+            <span class=" font-medium text-neutral-700 font-mono tabular-nums" aria-hidden="true">
               {{ String(si + 1).padStart(2, '0') }}
             </span>
             <h2 :id="`title-${section.id}`" class="text-base font-medium text-neutral-900">
@@ -306,7 +306,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
                 class="relative flex flex-1 items-center gap-1.5 pl-2 pr-3 py-1.5  font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
                 :class="ratings[item.id] === opt.value
                   ? RATING_BTN_ACTIVE[opt.value]
-                  : 'bg-white text-neutral-400 hover:bg-neutral-50 hover:'">
+                  : 'bg-white text-neutral-700 hover:bg-neutral-50 hover:'">
                 <Icon :name="opt.icon" size="1rem" aria-hidden="true" :class="ratings[item.id] === opt.value
                   ? RATING_BTN_ICON_ACTIVE[opt.value]
                   : 'text-neutral-300'" />
@@ -373,7 +373,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
             :class="STATUS_BADGE[sectionStatus(section)!]">
             {{ STATUS_LABEL[sectionStatus(section)!] }}
           </span>
-          <span v-else class=" text-neutral-400 text-right tabular-nums whitespace-nowrap">
+          <span v-else class=" text-neutral-700 text-right tabular-nums whitespace-nowrap">
             {{section.items.filter(i => ratings[i.id] !== null).length}}/{{ section.items.length }} <span
               class="sr-only">answered</span>
           </span>

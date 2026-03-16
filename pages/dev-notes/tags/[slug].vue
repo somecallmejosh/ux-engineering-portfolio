@@ -30,7 +30,7 @@ const articleLabel = postCount > 1 ? 'Dev Notes' : 'Dev Note'
 <template>
   <PageWrapper>
     <template v-if="allPosts">
-      <Breadcrumbs baseUrl="dev-notes" :slug="`${slug}`" :category="true" label="Dev Notes" :title="slug" />
+      <Breadcrumbs :items="[{ label: 'Dev Notes', to: '/dev-notes/' }, { label: 'Tags', to: '/dev-notes/tags/' }, { label: humanize(slug) }]" />
       <section aria-labelledby="page-header" class="prose">
         <PageHeader pill="Dev Notes Tags" pillIcon="ph:notepad">{{ postCount }} {{ humanize(slug) }} {{ articleLabel }}</PageHeader>
       </section>

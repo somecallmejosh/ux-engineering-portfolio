@@ -33,12 +33,10 @@ onBeforeUnmount(() => {
 
 <template>
   <!-- The nav element has .overflow-wrapper for the pseudo-elements -->
-  <div ref="overflowWrapper" class="overflow-wrapper relative w-full max-w-full" :class="{ before: showBefore, after: showAfter }">
+  <div ref="overflowWrapper" class="overflow-wrapper relative w-full max-w-full not-prose"
+    :class="{ before: showBefore, after: showAfter }">
     <div class="w-full max-w-full overflow-visible">
-      <div
-        ref="overflowContainer"
-        class="overflow-container max-w-full overflow-auto py-4"
-      >
+      <div ref="overflowContainer" class="overflow-container max-w-full overflow-auto py-4">
         <slot />
       </div>
     </div>

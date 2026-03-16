@@ -92,5 +92,26 @@ export default defineContentConfig({
         tags: z.array(z.string()).optional(),
       }),
     }),
+    guides: defineCollection({
+      source: 'guides/*.md',
+      type: 'page',
+      schema: z.object({
+        slug: z.string(),
+        title: z.string(),
+        description: z.string(),
+        publishedAt: z.date(),
+        tags: z.array(z.string()).optional(),
+        image: z.string().optional(),
+      }),
+    }),
+    guide_chapters: defineCollection({
+      source: 'guides/*/*.md',
+      type: 'page',
+      schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        order: z.number(),
+      }),
+    }),
   },
 })

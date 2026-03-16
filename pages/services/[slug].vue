@@ -18,7 +18,7 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs baseUrl="services" :slug="slug" label="Services" :title="service.label" />
+    <Breadcrumbs :items="[{ label: 'Services', to: '/services/' }, { label: service.label }]" />
 
     <!-- Coming soon layout -->
     <template v-if="service.isComingSoon">

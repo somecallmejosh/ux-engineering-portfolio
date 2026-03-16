@@ -30,6 +30,7 @@ const navGroups = [
   {
     groupTitle: 'Writing',
     items: [
+      { title: 'Guides', path: ROUTES.guides, icon: 'ph:map-trifold' },
       { title: 'Blog', path: ROUTES.blog, icon: 'ph:article-ny-times' },
       { title: 'Dev Notes', path: ROUTES.devNotes, icon: 'ph:notepad' },
     ]

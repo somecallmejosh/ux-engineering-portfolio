@@ -8,4 +8,5 @@ export const ROUTES = {
   blog: '/blog/',
   devNotes: '/dev-notes/',
   experiments: '/experiments/',
+  guides: '/guides/',
 } as const
