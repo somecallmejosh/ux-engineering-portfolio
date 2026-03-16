@@ -1,5 +1,5 @@
 ---
-title: 'Introduction: Build your own component library '
+title: 'Introduction: Build your own component library'
 description: A step-by-step guide to building an accessible, token-driven React component library from an empty directory to a deployed Storybook.
 order: 0
 ---
@@ -36,7 +36,7 @@ You don't need prior experience with Tailwind CSS, Storybook, design tokens, or 
 
 **Expect things to break.** Build tools and package ecosystems change. If something doesn't work, check the version numbers first, then search for the error message. Each chapter specifies the versions it was written against.
 
-**Use the companion repository as a reference.** A complete implementation of the library built in this guide is available at [[COMING SOON]]. If you get stuck or want to compare your output against a known-good state, the companion repository is the reference. It mirrors the final state of the guide exactly.
+**Use the companion repository as a reference.** A complete implementation of the library built in this guide is available at [GitHub](https://github.com/Rudiment-UI/rudiment-ui). If you get stuck or want to compare your output against a known-good state, the companion repository is the reference. It mirrors the final state of the guide exactly.
 
 ## Series overview
 

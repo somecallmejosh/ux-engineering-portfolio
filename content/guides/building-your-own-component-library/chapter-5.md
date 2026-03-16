@@ -7,7 +7,7 @@ order: 5
 
 You have the pattern down from the Stack chapter: a React component that renders a semantic element with a CSS class and optional inline custom property overrides. The CSS does the layout work, tokens provide the defaults, and props allow per-instance control. This chapter applies that same pattern seven more times.
 
-Each section covers the primitive's CSS, TypeScript interface, and a brief explanation of the layout technique. Stories and tests follow the same conventions established for Stack. The full story and test files are in the [companion repository]([companion-repo-url]). This chapter focuses on the CSS techniques that make each primitive work.
+Each section covers the primitive's CSS, TypeScript interface, and a brief explanation of the layout technique. Stories and tests follow the same conventions established for Stack. The full story and test files are in the [companion repository](https://github.com/Rudiment-UI/rudiment-ui). This chapter focuses on the CSS techniques that make each primitive work.
 
 ## Box
 
@@ -87,7 +87,7 @@ export const Box = forwardRef<HTMLElement, BoxProps>(function Box(
 ::Storybook{url="https://rudiment-ui.netlify.app/?path=/story/layouts-box--bordered" title="Box in Storybook"}
 ::
 
-Every primitive in this chapter follows the same `forwardRef` pattern. The ref is typed as `HTMLElement` in all cases for the same reason discussed in Chapter 4: the `as` prop accepts any element type, so a more specific ref type (for example, `HTMLDivElement`) would be incorrect when the consumer passes `as="section"`. `HTMLElement` is the accurate common base. If your project needs the fully typed polymorphic ref, the pattern is documented in the [companion repository]([companion-repo-url]).
+Every primitive in this chapter follows the same `forwardRef` pattern. The ref is typed as `HTMLElement` in all cases for the same reason discussed in Chapter 4: the `as` prop accepts any element type, so a more specific ref type (for example, `HTMLDivElement`) would be incorrect when the consumer passes `as="section"`. `HTMLElement` is the accurate common base. If your project needs the fully typed polymorphic ref, the pattern is documented in the [companion repository](https://github.com/Rudiment-UI/rudiment-ui).
 
 ## Center
 
@@ -349,7 +349,7 @@ export const Sidebar = forwardRef<HTMLElement, SidebarProps>(function Sidebar(
 })
 ```
 
-The Sidebar expects exactly two children. The first child is the sidebar panel (when `side="left"`), and the second is the content panel. When `side="right"`, the roles reverse. The component doesn't enforce this at runtime, but the [companion repository's]([companion-repo-url]) documentation and stories clarify the expectation.
+The Sidebar expects exactly two children. The first child is the sidebar panel (when `side="left"`), and the second is the content panel. When `side="right"`, the roles reverse. The component doesn't enforce this at runtime, but the [companion repository's](https://github.com/Rudiment-UI/rudiment-ui) documentation and stories clarify the expectation.
 
 ## Switcher
 

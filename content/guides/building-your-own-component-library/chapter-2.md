@@ -21,7 +21,7 @@ npm install -D @tailwindcss/vite@^4.2.1 tailwindcss@^4.2.1
 ```
 
 ::Callout
-As of this writing `@tailwindcss/vite@4.2.1` doesn't support `Vite 8` yet (only ^5.2.0 || ^6 || ^7). So make sure to install `Vite 7.3.1` to avoid compatibility issues. If you try to use Vite 8, you'll get an error about the plugin not being compatible.
+As of this writing `@tailwindcss/vite@4.2.1` doesn't support `Vite 8` yet (only ^5.2.0 || ^6 || ^7). Install `Vite 7.3.1` to avoid compatibility issues. If you try to use Vite 8, you'll get an error about the plugin not being compatible.
 ::
 
 ## Configure TypeScript

@@ -82,7 +82,7 @@ Configure `package.json` for ESM consumption:
 
 The `exports` field defines the public API. Consumers import components from the main entry (`import { Button } from 'rudiment-ui'`) and styles from the CSS entry (`import 'rudiment-ui/styles'`). The `sideEffects` field tells bundlers not to tree-shake the CSS import.
 
-The `build:storybook` script here is the named form of the `npm run build:storybook` command introduced in Chapter 9. Using the same script name in both places keeps the commands consistent across the project.
+The `build:storybook` script here is the named form of the `npm run build:storybook` command introduced in Chapter 10. Using the same script name in both places keeps the commands consistent across the project.
 
 ## Build and verify
 
@@ -100,7 +100,7 @@ This prints the names of every exported component and utility.
 
 ## Publish your library
 
-If you're distributing the library as a template repository — source code that the consumer clones, owns, and modifies — you're not publishing to npm. The consumer works with the source directly. The Vite build configuration is there for when they want to package their customized library for internal distribution within their own organization.
+If you're distributing the library as a template repository (source code that the consumer clones, owns, and modifies), you're not publishing to npm. The consumer works with the source directly. The Vite build configuration is there for when they want to package their customized library for internal distribution within their own organization.
 
 If you're publishing to npm for external consumers who install the library as a dependency, the process is:
 
@@ -125,4 +125,4 @@ Write a `CHANGELOG.md` that describes each release in human-readable terms. Cons
 
 ## What you have now
 
-A publishable library package with ESM output, TypeScript declarations, a configured `package.json` exports map, and a versioned release workflow. The library is ready to be distributed as a template repository or published to npm. Chapter 12 covers the final layer: dark mode token overrides, expanding the component set, and aligning the token system with Figma.
+A publishable library package with ESM output, TypeScript declarations, a configured `package.json` exports map, and a versioned release workflow. The library is ready to be distributed as a template repository or published to npm. Chapter 13 covers the final layer: dark mode token overrides, expanding the component set, and aligning the token system with Figma.

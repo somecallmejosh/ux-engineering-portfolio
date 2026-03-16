@@ -31,7 +31,7 @@ Design-code drift is one of the most common friction points in design system ado
 
 Figma Variables (introduced in 2023 and expanded since) map directly to your token architecture. Create Figma variable collections that mirror your token tiers: a "Global" collection with color palette values, a "Semantic" collection with alias variables, and optionally a "Component" collection with per-component overrides. Name the variables the same way you name the tokens.
 
-Tokens Studio for Figma (formerly Figma Tokens) is a free third-party Figma plugin — install it from the Figma Community at figma.com/community. Once installed, it can read your `tokens.json` file directly and sync token values into Figma, eliminating manual duplication. The sync can run in both directions: design-to-code or code-to-design. Code should be the source of truth. With that setup, code-to-design sync keeps Figma aligned without manual updates.
+Tokens Studio for Figma (formerly Figma Tokens) is a free third-party Figma plugin. Install it from the Figma Community at figma.com/community. Once installed, it can read your `tokens.json` file directly and sync token values into Figma, eliminating manual duplication. The sync can run in both directions: design-to-code or code-to-design. Code should be the source of truth. With that setup, code-to-design sync keeps Figma aligned without manual updates.
 
 Figma Code Connect (if you adopt it) maps Figma component properties to code props, so developers see the actual import statement and prop values when they inspect a component in Figma. This reduces friction for teams with both designers and developers.
 

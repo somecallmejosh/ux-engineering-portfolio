@@ -222,7 +222,7 @@ The `outputReferences: true` option preserves the alias relationships in the CSS
 
 This matters for debugging. When you inspect an element in browser dev tools, you can trace the value back through its aliases to understand why it resolves to a specific color.
 
-Add a build script to `package.json`, and ensure `type: "module"` is set at the root level to enable ES module syntax in the config file:
+Add a build script to `package.json`, and verify that `type: "module"` is set at the root level to enable ES module syntax in the config file:
 
 ```json
 {

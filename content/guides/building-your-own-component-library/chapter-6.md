@@ -1,6 +1,6 @@
 ---
 title: 'Typography: Heading, Text, and Prose'
-description: This chapter adds three components that enforce typographic consistency through the same token system that drives the rest of the library..
+description: This chapter adds three components that enforce typographic consistency through the same token system that drives the rest of the library.
 order: 6
 ---
 
