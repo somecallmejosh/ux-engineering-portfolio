@@ -93,10 +93,7 @@ const combinedPosts = [
           </div>
         </div>
         <div class="lg:flex gap-6">
-          <img
-            src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,f_auto,g_face,q_auto,w_300,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
-            alt="Josh Briley, UX Engineer" width="300" height="300" loading="eager" fetchpriority="high"
-            class="size-20 xl:size-28 rounded-full shrink-0" />
+          <NuxtImg src="/images/josh-biz-cazsh.webp" alt="Joshua Briley, UX Engineer" height="300" width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
           <div class="prose">
             <h2>Who am I?</h2>
             <p>I'm a design systems engineer with 20 years of experience helping teams build consistent, accessible
@@ -108,8 +105,6 @@ const combinedPosts = [
             </p>
           </div>
         </div>
-
-
       </div>
     </div>
     <Services :services="paidServices" />
