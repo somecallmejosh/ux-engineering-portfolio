@@ -67,41 +67,21 @@ const blurAndRemoveFocus = () => {
         </div>
         <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <div class="nav-drawer" :class="{ 'nav-drawer--open': navOpen }">
-            <ul @click="navOpen = false" class="border-l border-neutral-200 mb-2 mt-4 space-y-4">
-              <li v-for="(group, index) in navGroups" :key="index">
-                <ul>
-                  <li v-for="item in group.items" :key="item.path">
-                    <NuxtLink
-                      class="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
-                      :to="item.path">
-                      <span class="flex items-center gap-3">
-                        <Icon :name="item.icon" size="1.2rem"
-                          class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
-                        {{ item.title }}
-                      </span>
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <NavMenu
+              :groups="navGroups"
+              listClass="border-l border-neutral-200 mb-2 mt-4 space-y-4"
+              linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
+              iconSize="1.2rem"
+              @nav-click="navOpen = false"
+            />
           </div>
           <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
-            <ul @click="navOpen = false" class="border-l border-neutral-200 mt-0 space-y-10">
-              <li v-for="(group, index) in navGroups" :key="index">
-                <ul>
-                  <li v-for="item in group.items" :key="item.path">
-                    <NuxtLink @click="blurAndRemoveFocus"
-                      class="flex items-center gap-3 group transition-colors duration-150 font-medium" :to="item.path">
-                      <span class="flex items-center gap-3">
-                        <Icon :name="item.icon" size="1.25rem"
-                          class="opacity-70 group-hover:opacity-100 transition-opacity duration-150" />
-                        {{ item.title }}
-                      </span>
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <NavMenu
+              :groups="navGroups"
+              listClass="border-l border-neutral-200 mt-0 space-y-10"
+              linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium"
+              @link-click="blurAndRemoveFocus"
+            />
           </div>
         </nav>
       </header>

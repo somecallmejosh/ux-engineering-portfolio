@@ -61,18 +61,18 @@ onBeforeUnmount(() => {
       <div ref="tocMenuRef" id="toc-menu" class="max-h-96 overflow-y-auto relative">
         <ul class="not-prose relative z-0 pb-4 text-sm" @click="menuOpen = false">
           <li v-for="item in links" :key="item.id">
-            <a :href="`#${item.id}`" class="text-blue-500 hover:text-blue-700">
+            <a :href="`#${item.id}`" >
               <Icon class="h-6 w-6 flex items-center justify-center border rounded-lg" :name="`codex:h${item.depth}`" />
               {{ item.text }}
             </a>
             <ul v-if="item.children">
               <li v-for="child in item.children" :key="child.id">
-                <a :href="`#${child.id}`" class="text-blue-500 hover:text-blue-700">
+                <a :href="`#${child.id}`" >
                   <Icon :name="`codex:h${child.depth}`" /> {{ child.text }}
                 </a>
                 <ul v-if="child.children">
                   <li v-for="subChild in child.children" :key="subChild.id">
-                    <a :href="`#${subChild.id}`" class="text-blue-500 hover:text-blue-700">
+                    <a :href="`#${subChild.id}`" >
                       <Icon :name="`codex:h${subChild.depth}`" /> {{ subChild.text }}
                     </a>
                     <component :is="TableOfContents" :links="[subChild]" />

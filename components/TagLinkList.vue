@@ -1,3 +1,12 @@
+<!--
+  TagLinkList — Fetches all unique tags from a content collection and renders them as links.
+
+  Props:
+    title      (string, optional) — Optional heading displayed above the tag list.
+    collection (string, required) — Content collection name (e.g. 'blog', 'dev_notes').
+
+  Note: distinct from TagLinks.vue, which receives tags as a prop rather than fetching them.
+-->
 <script setup lang="ts">
 const props = defineProps<{
   title?: string

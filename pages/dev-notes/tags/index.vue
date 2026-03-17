@@ -1,22 +1,21 @@
 <script setup>
 useSeoMeta({
-  title: `Blog Categories`,
-  ogTitle: `Blog Categories`,
-  description: 'Welcome to my blog, where I explore how thoughtful UX Engineering can help businesses grow and deliver better digital products. I focus on real-world challenges, like maintaining design systems, streamlining workflows, and building accessible interfaces, and show how bridging design and development leads to happier teams and satisfied users. Each post offers insights into practical methods that boost both the user experience and the bottom line.',
-  ogDescription: 'Welcome to my blog, where I explore how thoughtful UX Engineering can help businesses grow and deliver better digital products. I focus on real-world challenges, like maintaining design systems, streamlining workflows, and building accessible interfaces, and show how bridging design and development leads to happier teams and satisfied users. Each post offers insights into practical methods that boost both the user experience and the bottom line.',
-  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp'
+  title: 'Dev Notes Tags',
+  ogTitle: 'Dev Notes Tags',
+  description: 'A running log of real-world solutions, cheat sheets, and things I didn\'t want to figure out twice. Browse by tag to find what you need.',
+  ogDescription: 'A running log of real-world solutions, cheat sheets, and things I didn\'t want to figure out twice. Browse by tag to find what you need.',
+  ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'
 })
 </script>
 
 <template>
-  <PageWrapper>
-    <Breadcrumbs :items="[{ label: 'Dev Notes', to: '/dev-notes/' }, { label: 'Categories' }]" />
-    <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Dev Notes Tags" pillIcon="ph:notepad">Dev Notes Tags</PageHeader>
-    </section>
-    <TagLinkList
-      title="Dev Notes Links"
-      collection="blog"
-    />
-  </PageWrapper>
+  <TagIndexPage
+    breadcrumbLabel="Dev Notes"
+    breadcrumbTo="/dev-notes/"
+    pill="Dev Notes Tags"
+    pillIcon="ph:notepad"
+    pageTitle="Dev Notes Tags"
+    tagListTitle="Dev Notes Links"
+    collection="dev_notes"
+  />
 </template>

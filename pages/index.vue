@@ -10,6 +10,17 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976906/josh-portfolio/assets_task_01jr6hvshff2gtyry2qwb7tqp9_img_0.webp'
 })
 
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: 'https://res.cloudinary.com/dwjulenau/image/upload/c_crop,f_auto,g_face,q_auto,w_300,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png',
+      fetchpriority: 'high',
+    }
+  ]
+})
+
 
 const paidServices = await queryCollection('services')
   .where('isFree', '<>', true)
@@ -83,8 +94,8 @@ const combinedPosts = [
         </div>
         <div class="lg:flex gap-6">
           <img
-            src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
-            alt="Josh Briley, UX Engineer" width="800" height="800" loading="eager"
+            src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,f_auto,g_face,q_auto,w_300,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
+            alt="Josh Briley, UX Engineer" width="300" height="300" loading="eager" fetchpriority="high"
             class="size-20 xl:size-28 rounded-full shrink-0" />
           <div class="prose">
             <h2>Who am I?</h2>
@@ -107,7 +118,7 @@ const combinedPosts = [
       <div class="grid xl:grid-cols-2 gap-6">
         <div class="prose">
           <blockquote class="flex gap-6">
-            <NuxtImg src="/images/drew-dipasquale.jpeg" alt="Drew Dipasquale" width="800" height="800" loading="eager"
+            <NuxtImg src="/images/drew-dipasquale.jpeg" alt="Drew Dipasquale" width="128" height="128" loading="lazy"
               class="w-16 h-16 rounded-full object-cover object-top" />
             <div>
               <p>Josh is a brilliant ideation partner bringing things out of others and working towards a great
@@ -119,7 +130,7 @@ const combinedPosts = [
         </div>
         <div class="prose">
           <blockquote class="flex gap-6">
-            <NuxtImg src="/images/welling-lagrone.jpeg" alt="Welling Lagrone" width="800" height="800" loading="eager"
+            <NuxtImg src="/images/welling-lagrone.jpeg" alt="Welling Lagrone" width="128" height="128" loading="lazy"
               class="w-16 h-16 rounded-full object-cover object-top" />
             <div>
               <p>Josh is a strong partner willing to work across functions to design and implement the best user

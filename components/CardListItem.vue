@@ -1,3 +1,10 @@
+<!--
+  CardListItem — Card component for listing content items.
+
+  Props:
+    item (CardItem, required) — The content item data (title, description, slug, image, meta, headline).
+    to   (string,   required) — Route the card links to.
+-->
 <script setup lang="ts">
 interface CardItem {
   title: string
@@ -31,7 +38,7 @@ defineProps<{
       </div>
       <NuxtLink
         :to="to"
-        class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-100 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out"
+        class="absolute hover:border-0 focus:outline-0 not-prose border-0 inset-0 group-hover:border-0 group-hover:outline-4 group-hover:outline-offset-6 group-hover:outline-blue-100 focus:ring-4 focus:ring-blue-400 focus:ring-offset-6 rounded-lg transition-all duration-150 ease-in-out"
       >
         <span class="sr-only">{{ item.title }}</span>
       </NuxtLink>

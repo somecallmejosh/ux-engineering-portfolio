@@ -1,6 +1,22 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --radius-base: var(--radius-lg);
+  --spacing-section: calc(var(--spacing) * 12);
+
+  --color-brand-primary: var(--color-blue-700);
+  --color-brand-primary-bg: var(--color-blue-50);
+  --color-brand-primary-hover: var(--color-blue-900);
+  --color-brand-focus: var(--color-blue-400);
+  --color-surface: #ffffff;
+  --color-surface-subtle: var(--color-neutral-50);
+  --color-border: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-300);
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-700);
+}
+
 html {
   interpolate-size: allow-keywords;
   font-family: 'Quicksand', sans-serif;

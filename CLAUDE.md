@@ -69,7 +69,6 @@ Each page sets its own metadata via `useSeoMeta()` using front-matter fields.
 
 ### Composables & Utilities
 
-- `composables/useSearch.ts` — client-side search across all 4 collections with scoring (title 3×, description/tags 2×, slug 1×); results cached after first load
 - `utilities/formatDate.ts` — locale-aware date formatting
 - `utilities/humanize.ts` — converts kebab/snake_case to Title Case
 

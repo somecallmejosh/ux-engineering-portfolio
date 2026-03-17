@@ -38,7 +38,7 @@ const onSubmit = async () => {
           <input id="checklist-email" v-model="email" type="email" name="email" placeholder="you@company.com"
             autocomplete="email" :aria-invalid="emailValid === false || undefined"
             aria-describedby="checklist-email-error"
-            class="w-full px-4 py-[11px] border border-neutral-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+            class="w-full px-4 py-2.5 border border-neutral-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
             :class="{ 'border-red-600': emailValid === false }" @blur="validateEmail" />
           <small v-if="emailValid === false" id="checklist-email-error" role="alert" class="block text-red-600">Enter a
             valid

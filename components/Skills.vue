@@ -1,3 +1,9 @@
+<!--
+  Skills — Displays a grid of technology skill icons with accessible labels.
+
+  No props. Renders all entries from utils/skillIcons.ts.
+  Each icon has aria-hidden="true" and a visually hidden label via sr-only.
+-->
 <script setup lang="ts">
 const skillIcons = SKILL_ICONS
 </script>
@@ -9,7 +15,9 @@ const skillIcons = SKILL_ICONS
         <Icon
           :name="item.name"
           size="1.25em"
+          aria-hidden="true"
         />
+        <span class="sr-only">{{ item.label }}</span>
       </li>
     </ul>
   </fieldset>

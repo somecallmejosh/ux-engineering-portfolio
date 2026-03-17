@@ -1,7 +1,5 @@
 <script setup>
-const allPosts = await queryCollection('projects')
-  .order('publishedAt', 'DESC')
-  .all()
+const allPosts = await queryCollection('projects').order('publishedAt', 'DESC').all()
 
 useSeoMeta({
   title: 'Recent Projects',
@@ -13,14 +11,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <PageWrapper>
-    <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Projects" pillIcon="ph:projector-screen-chart">Recent Projects
-      </PageHeader>
-      <p>
-        Component libraries, design systems, and accessible web applications built for real teams with real constraints.
-      </p>
-    </section>
-    <CardList v-if="allPosts" :list="allPosts" />
-  </PageWrapper>
+  <CollectionIndexPage
+    :items="allPosts"
+    pageTitle="Recent Projects"
+    pageDescription="Component libraries, design systems, and accessible web applications built for real teams with real constraints."
+    pill="Projects"
+    pillIcon="ph:projector-screen-chart"
+  />
 </template>

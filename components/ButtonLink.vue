@@ -1,3 +1,11 @@
+<!--
+  ButtonLink — Styled NuxtLink rendered as a pill-shaped button.
+
+  Props:
+    to      (string, required)             — Route to navigate to.
+    variant ('base' | 'inverse', optional) — Visual style. Defaults to 'base' (dark fill).
+                                             'inverse' renders an outlined style.
+-->
 <script setup lang="ts">
 const props = defineProps<{
   to: string
