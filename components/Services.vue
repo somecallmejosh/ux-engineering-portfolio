@@ -13,8 +13,8 @@ defineProps<{ services: Service[] }>()
 <template>
   <section class="space-y-8">
     <div class="prose">
-      <h2>Fixed scope. Fixed price. No surprises.</h2>
-      <p>Three focused engagements. You know exactly what you're getting and what it costs before we start.</p>
+      <h2>Three focused ways to fix your UI system</h2>
+      <p>Fixed scope. Fixed price. No surprises.</p>
     </div>
 
     <ul class="not-prose grid md:grid-cols-3 gap-6 list-none p-0 m-0">
@@ -23,11 +23,11 @@ defineProps<{ services: Service[] }>()
         <div class="space-y-3">
           <p class="service-label text-xs font-semibold tracking-widest uppercase text-neutral-500">{{ service.label }}
           </p>
-          <p class="service-tagline text-xl leading-snug font-semibold">{{ service.tagline }}</p>
+          <p v-if="service.tagline" class="service-tagline text-xl leading-snug font-semibold">{{ service.tagline }}</p>
         </div>
 
         <div class="flex items-baseline gap-3">
-          <span class="price text-3xl">{{ service.price }}</span>
+          <span v-if="service.price" class="price text-3xl">{{ service.price }}</span>
           <span v-if="service.timeline" class="text-sm text-neutral-500">· {{ service.timeline }}</span>
         </div>
 

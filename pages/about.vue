@@ -62,7 +62,7 @@ const resumeItems = [
     title: 'Owner, Web Designer and Front End Developer',
     company: 'Para-Diddle Design, LLC',
     date: '2005 - 2009',
-    description: "Ran my own design and development company. Responsible for the work, the clients, the vision, and the books. It gave me a real appreciation for all the moving parts of a business.",
+    description: "Ran my own design and development company. Responsible for the work, the clients, the vision, and the finances. It gave me a real appreciation for all the moving parts of a business.",
   },
 ];
 </script>
@@ -73,19 +73,15 @@ const resumeItems = [
     <section class="prose">
       <img
         src="https://res.cloudinary.com/dwjulenau/image/upload/c_crop,dpr_auto,e_camera,f_auto,fl_progressive,g_face,q_auto,w_800,z_1.7/v1758508471/josh-portfolio/josh-biz-cazsh.png"
-        alt="Josh Briley, UX Engineer"
-        width="800"
-        height="800"
-        loading="eager"
+        alt="Josh Briley, UX Engineer" width="800" height="800" loading="eager"
         class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
       <PageHeader>
         About me
       </PageHeader>
       <p>
-        I work with product teams on design system audits, component library builds, and design-to-code workflow
-        optimization. Fixed scope, fixed price. I've spent 20 years building the component libraries and design systems
-        that product teams depend on. Now I help
-        other teams do the same. <strong>I'm currently available for consulting engagements.</strong>
+        I help teams fix design systems that are inconsistent, hard to maintain, or slowing development down. I do this
+        through focused engagements: audits, component libraries, and workflow improvements, each designed to solve a
+        specific problem quickly.
       </p>
     </section>
     <section aria-labelledby="bio" class="prose max-w-full lg:mb-24">
@@ -111,23 +107,21 @@ const resumeItems = [
         </template>
         <template #secondary>
           <h2>What I do best</h2>
-          <p>
-            I help teams build front ends that feel solid, accessible, and easy to maintain. In practice, that usually
-            means:
-          </p>
+          <p>I help teams build front ends that are:</p>
+
           <ul>
-            <li><strong>Design systems and component libraries</strong> — architected to scale, documented so your whole
-              team can use them
-              confidently</li>
-            <li><strong>Accessibility compliance</strong> — WCAG 2.1 AA built in from the start, not bolted on at the
-              end
-            </li>
-            <li><strong>Design-to-code workflows</strong> — reducing the handoff friction that costs hours every sprint
-            </li>
+            <li>Consistent</li>
+            <li>Accessible</li>
+            <li>Easy to maintain</li>
           </ul>
-          <p>
-            Good communication beats good guesswork every time. I keep designers and developers on the same page.
-          </p>
+
+          <p>In practice, that means:</p>
+
+          <ul>
+            <li>Design systems and component libraries your team actually uses</li>
+            <li>Accessibility built in from the start</li>
+            <li>Design-to-code workflows that reduce friction every sprint</li>
+          </ul>
         </template>
       </split-content>
     </section>
@@ -187,10 +181,9 @@ const resumeItems = [
 
 
     <Callout>
-      <h2>Let's work together</h2>
+      <h2>If your UI is slowing your team down, let's fix it.</h2>
       <p>
-        Interested in consulting? I offer fixed-scope engagements for design system audits, component library builds,
-        and workflow optimization.
+        I offer fixed-scope engagements for audits, component libraries, and workflow improvements.
       </p>
       <ButtonLink to="/services/">
         View services & pricing
