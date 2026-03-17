@@ -71,7 +71,7 @@ const resumeItems = [
   <PageWrapper>
 
     <section class="prose">
-      <NuxtImg src="/images/josh-biz-cazsh.webp" alt="Joshua Briley, UX Engineer" height="300" width="300" class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
+      <NuxtImg src="/images/josh-biz-cazsh.jpg" alt="Joshua Briley, UX Engineer" height="300" width="300" class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
       <PageHeader>
         About me
       </PageHeader>
