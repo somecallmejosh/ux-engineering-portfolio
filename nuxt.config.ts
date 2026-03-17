@@ -16,6 +16,8 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
         { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+        { rel: 'preconnect', href: 'https://res.cloudinary.com' },
+        { rel: 'dns-prefetch', href: 'https://res.cloudinary.com' },
       ],
     },
   },
@@ -28,6 +30,9 @@ export default defineNuxtConfig({
       '/blog/categories/**': { redirect: { to: '/blog/tags/**/', statusCode: 301 } },
       '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**/', statusCode: 301 } },
       '/checklist/': { sitemap: false },
+      '/design/': { sitemap: false, robots: false },
+      '/_fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+      '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
     }
   },
   compatibilityDate: '2024-11-01',
@@ -109,11 +114,13 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
     build: {
       sourcemap: false,
-      cssCodeSplit: false,
+      cssCodeSplit: true,
       rollupOptions: {
         output: {
           manualChunks: {
             'vendor-vue': ['vue', 'vue-router'],
+            'vendor-head': ['@unhead/vue'],
+            'vendor-icons': ['@iconify/vue'],
           }
         }
       }

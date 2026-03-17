@@ -1,3 +1,13 @@
+<!--
+  TagLinks — Renders a nav of tag links for a given collection of tag strings.
+
+  Props:
+    title      (string,   required) — Accessible nav label and visible heading.
+    tag        (string,   required) — URL segment used to build tag routes (e.g. 'blog').
+    collection (string[], required) — Array of raw tag strings to render as links.
+
+  Note: distinct from TagLinkList.vue, which fetches its own tags from a content collection.
+-->
 <script setup lang="ts">
 const props = defineProps<{
   title: string

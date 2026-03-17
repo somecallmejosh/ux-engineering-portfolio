@@ -16,7 +16,7 @@ defineProps<{
       </h1>
       <p v-if="publishedAt" class="flex items-center gap-1 text-balance not-prose leading-tight">
         <span class="hidden lg:inline-flex lg:shrink-0">
-          <Icon name="ph:calendar-dots" size="1.2em" />
+          <Icon name="ph:calendar-dots" size="1.2em" aria-hidden="true" />
         </span>
         Published by Josh Briley on {{ formatDate(publishedAt) }}
       </p>

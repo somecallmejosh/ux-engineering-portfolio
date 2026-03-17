@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# josh-dev-blog
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio and blog site for Josh Briley — UX Software Engineer.
 
-## Setup
+Built with Nuxt 3, Tailwind CSS 4, and Nuxt Content v3. Content is authored in Markdown; the site is statically generated and SEO-focused.
 
-Make sure to install dependencies:
+## Tech stack
 
-```bash
-# npm
-npm install
+- **Nuxt 3** — framework
+- **Tailwind CSS 4** — styling (via `@tailwindcss/vite`)
+- **Nuxt Content v3** — Markdown content collections
+- **@nuxtjs/seo** — meta tags, sitemap, robots.txt, schema.org
+- **motion-v** — animations
+- **Iconify** — icons (`ph:` Phosphor, `skill-icons:`)
 
-# pnpm
-pnpm install
+## Environment variables
 
-# yarn
-yarn install
-
-# bun
-bun install
+```
+NUXT_SITE_URL=http://localhost:3000
+NUXT_SITE_NAME=Josh Briley | UX Software Engineer
+SQL_ALLOW_PATH=<path to sqlite-wasm node_modules>
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Commands
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm install       # Install dependencies
+npm run dev       # Start dev server at localhost:3000
+npm run build     # Build for production
+npm run generate  # Static site generation
+npm run preview   # Preview production build
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

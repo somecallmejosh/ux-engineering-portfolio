@@ -1,3 +1,15 @@
+<!--
+  Tooltip — Accessible tooltip component.
+
+  Props:
+    text (string, required) — The tooltip content shown on hover/focus.
+    id   (string, required) — Unique identifier; used to link aria-describedby.
+
+  Usage:
+    <Tooltip id="html-icon" text="HTML">
+      <Icon name="skill-icons:html" size="1.25em" aria-hidden="true" />
+    </Tooltip>
+-->
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
 
@@ -14,15 +26,21 @@ const visibilityToggle = () => {
 onClickOutside(target, () => { toolTipVisible.value = false })
 </script>
 <template>
-  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" @click="visibilityToggle" class="tooltip group">
-    <span :aria-label="text">
+  <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" class="tooltip group">
+    <button
+      type="button"
+      :aria-describedby="`tooltip-${id}`"
+      @click="visibilityToggle"
+      @focus="toolTipVisible = true"
+      @blur="toolTipVisible = false"
+      class="cursor-pointer"
+    >
       <slot></slot>
-    </span>
+    </button>
     <div
-      aria-hidden="true"
       :id="`tooltip-${id}`"
       role="tooltip"
-      class="tooltip-text bg-black/80 text-xs capitalize text-nowrap p-1 rounded-sm"
+      class="tooltip-text text-white bg-black/80 text-xs capitalize text-nowrap p-1 rounded-sm"
       :class="{ 'is-visible': toolTipVisible }"
     >
       {{ text }}
@@ -33,10 +51,8 @@ onClickOutside(target, () => { toolTipVisible.value = false })
 .tooltip {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 .tooltip-text {
-  color: #fff;
   text-align: center;
   position: absolute;
   z-index: 1;

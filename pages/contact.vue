@@ -124,29 +124,28 @@ const onSubmit = async (event) => {
           <form v-show="!formSubmitted" name="contact" method="POST" novalidate data-netlify="true"
             netlify-honeypot="bot-field" @submit.prevent="onSubmit" class="space-y-4 p-6 bg-neutral-50 rounded-lg">
             <input type="hidden" name="form-name" value="contact" />
-            <div class="space-y-1">
-              <label class="text-sm" for="name">Name *</label>
-              <div>
-                <input aria-describedby="name-invalid" :aria-invalid="nameValid === false || undefined" @blur="validateName" v-model="formData.name" name="name"
-                  type="text"
-                  class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  :class="{ 'border-red-600 invalid': nameValid == false }">
-                <small role="alert" id="name-invalid" class="animate-entry block text-red-600"
-                  v-if="nameValid == false">Enter your name</small>
-              </div>
-            </div>
+            <FormField
+              v-model="formData.name"
+              inputId="name"
+              name="name"
+              label="Name"
+              :isValid="nameValid"
+              errorMessage="Enter your name"
+              required
+              @blur="validateName"
+            />
             <div class="grid lg:grid-cols-2 gap-6">
-              <div class="space-y-1">
-                <label class="text-sm" for="email">Email *</label>
-                <div>
-                  <input aria-describedby="email-invalid" :aria-invalid="emailValid === false || undefined" @blur="validateEmail" v-model="formData.email" name="email"
-                    type="email"
-                    class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    :class="{ 'border-red-600 invalid': emailValid == false }">
-                  <small role="alert" id="email-invalid" class="animate-entry block text-red-600"
-                    v-if="emailValid == false">Enter a valid email address.</small>
-                </div>
-              </div>
+              <FormField
+                v-model="formData.email"
+                inputId="email"
+                name="email"
+                label="Email"
+                type="email"
+                :isValid="emailValid"
+                errorMessage="Enter a valid email address."
+                required
+                @blur="validateEmail"
+              />
               <div class="space-y-1">
                 <label class="text-sm" for="phone">Phone</label>
                 <input v-model="formData.phone" name="phone" type="text"
@@ -164,17 +163,17 @@ const onSubmit = async (event) => {
                 <option value="other">Something else</option>
               </select>
             </div>
-            <div class="space-y-1">
-              <label class="text-sm" for="message">Message *</label>
-              <div>
-                <textarea aria-describedby="message-invalid" :aria-invalid="messageValid === false || undefined" @blur="validateMessage" v-model="formData.message"
-                  name="message"
-                  class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  :class="{ 'border-red-600 invalid': messageValid == false }"></textarea>
-                <small role="alert" id="message-invalid" class="animate-entry block text-red-600"
-                  v-if="messageValid == false">Enter a brief message.</small>
-              </div>
-            </div>
+            <FormField
+              v-model="formData.message"
+              inputId="message"
+              name="message"
+              label="Message"
+              type="textarea"
+              :isValid="messageValid"
+              errorMessage="Enter a brief message."
+              required
+              @blur="validateMessage"
+            />
             <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
               <div><small>* indicates a required field</small></div>
               <button type="submit"

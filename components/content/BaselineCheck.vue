@@ -34,8 +34,10 @@ const mapIcons = {
 
 </script>
 <template>
-  <div v-if="pending">Loading mountains...</div>
-  <div v-else-if="error">Error: {{ error.message }}</div>
+  <div v-if="pending" role="status" aria-live="polite" aria-busy="true">
+    Loading browser support data…
+  </div>
+  <div v-else-if="error" role="alert">Error: {{ error.message }}</div>
   <div v-else class="bg-white border border-neutral-200 p-4 rounded-lg">
     <h2 class="mt-0 pt-0">
       {{ featureData.name }} Support
