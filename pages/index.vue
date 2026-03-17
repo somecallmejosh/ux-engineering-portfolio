@@ -75,9 +75,6 @@ const combinedPosts = [
             Book an intro call
           </ButtonLink>
         </div>
-
-
-
       </section>
       <div class="grid xl:grid-cols-2 gap-12">
         <div>
@@ -93,7 +90,7 @@ const combinedPosts = [
           </div>
         </div>
         <div class="lg:flex gap-6">
-          <NuxtImg src="/images/josh-biz-cazsh.webp" alt="Joshua Briley, UX Engineer" height="300" width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
+          <NuxtImg src="/images/josh-biz-cazsh.webp" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300" width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
           <div class="prose">
             <h2>Who am I?</h2>
             <p>I'm a design systems engineer with 20 years of experience helping teams build consistent, accessible
