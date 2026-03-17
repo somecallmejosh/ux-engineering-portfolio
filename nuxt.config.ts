@@ -58,6 +58,14 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/content',
   ],
+  fonts: {
+    families: [
+      { name: 'Quicksand', preload: true, display: 'swap' },
+      { name: 'DM Serif Text', preload: true, display: 'swap' },
+      { name: 'IBM Plex Mono', display: 'swap' },
+      { name: 'Style Script', display: 'optional' },
+    ],
+  },
   icon: {
     serverBundle: {
       collections: ['ph', 'skill-icons']
