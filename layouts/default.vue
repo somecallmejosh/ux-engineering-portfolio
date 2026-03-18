@@ -32,7 +32,7 @@ const navGroups = [
     items: [
       { title: 'Guides', path: ROUTES.guides, icon: 'ph:map-trifold' },
       { title: 'Blog', path: ROUTES.blog, icon: 'ph:article-ny-times' },
-      { title: 'Dev Notes', path: ROUTES.devNotes, icon: 'ph:notepad' },
+      { title: 'FAQs', path: ROUTES.faqs, icon: 'ph:question' },
     ]
   },
 ]
@@ -67,21 +67,14 @@ const blurAndRemoveFocus = () => {
         </div>
         <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <div class="nav-drawer" :class="{ 'nav-drawer--open': navOpen }">
-            <NavMenu
-              :groups="navGroups"
-              listClass="border-l border-neutral-200 mb-2 mt-4 space-y-4"
+            <NavMenu :groups="navGroups" listClass="border-l border-neutral-200 mb-2 mt-4 space-y-4"
               linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
-              iconSize="1.2rem"
-              @nav-click="navOpen = false"
-            />
+              iconSize="1.2rem" @nav-click="navOpen = false" />
           </div>
           <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">
-            <NavMenu
-              :groups="navGroups"
-              listClass="border-l border-neutral-200 mt-0 space-y-10"
+            <NavMenu :groups="navGroups" listClass="border-l border-neutral-200 mt-0 space-y-10"
               linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium"
-              @link-click="blurAndRemoveFocus"
-            />
+              @link-click="blurAndRemoveFocus" />
           </div>
         </nav>
       </header>

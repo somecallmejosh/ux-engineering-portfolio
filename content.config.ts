@@ -52,6 +52,8 @@ export default defineContentConfig({
         deliveredAs: z.string().optional(),
         isFree: z.boolean().optional(),
         isComingSoon: z.boolean().optional(),
+        isAnchor: z.boolean().optional(),
+        order: z.number().optional(),
         description: z.string(),
         audience: z.string().optional(),
         audienceDetail: z.string().optional(),
