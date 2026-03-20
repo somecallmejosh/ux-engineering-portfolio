@@ -3,9 +3,9 @@ const { post } = await useContentDetail('dev_notes')
 </script>
 
 <template>
-  <PageWrapper>
+  <PageWrapper v-if="post">
     <Breadcrumbs :items="[{ label: 'Dev Notes', to: '/dev-notes/' }, { label: post.title }]" />
-    <div v-if="post" class="prose">
+    <div class="prose">
       <PageHeader pill="Dev Note" pillIcon="ph:notepad" :publishedAt="post.publishedAt">{{ post.title }}</PageHeader>
       <figure>
         <AnimateImage :src="post.image" :alt="post.meta.image_alt" :scaleY="0.75" />
@@ -17,7 +17,8 @@ const { post } = await useContentDetail('dev_notes')
       </article>
       <aside class="space-y-6 lg:space-y-12">
         <TagLinkList title="Dev Notes Tags" collection="dev_notes" />
-        <CallOut class="mb-6"><strong>Dev Notes Disclaimer</strong>: Each article in the <em>Dev Notes</em> section of my
+        <CallOut class="mb-6"><strong>Dev Notes Disclaimer</strong>: Each article in the <em>Dev Notes</em> section of
+          my
           website may or may not be unfinished work. I don't always have time to write a full post. If you see something
           that looks like a half-baked idea, it probably is! As with anything you find on the internet, be sure to
           review and understand the script or code before running it, especially if you plan to modify it. Always back

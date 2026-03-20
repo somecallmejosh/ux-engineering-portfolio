@@ -189,7 +189,7 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
   font-weight: var(--token-typography-overline-weight);
   line-height: var(--token-typography-overline-lineHeight);
   letter-spacing: var(--token-typography-overline-tracking);
-  text-transform: uppercase;
+  text-transform:;
 }
 
 .rudiment-text--code {

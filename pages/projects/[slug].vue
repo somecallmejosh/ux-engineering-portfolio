@@ -3,11 +3,10 @@ const { post } = await useContentDetail('projects')
 </script>
 
 <template>
-  <PageWrapper>
+  <PageWrapper v-if="post">
     <Breadcrumbs :items="[{ label: 'Projects', to: '/projects/' }, { label: post.title }]" />
-
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
-      <div v-if="post" class="prose">
+      <div class="prose">
         <PageHeader class="" pill="Project" pillIcon="ph:projector-screen-chart">{{ post.title }}</PageHeader>
         <AnimateImage :src="post.image" :alt="post.meta.image_alt" :scaleY="0.75" />
 
@@ -49,7 +48,7 @@ const { post } = await useContentDetail('projects')
           <div class="flex items-center gap-2 mt-6">
             <span aria-hidden="true" class="bg-neutral-200 h-px block flex-1"></span>
             <a :href="post.businessUrl" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-1 text-sm font-medium hover:underline block shrink-0">
+              class="inline-flex items-center justify-center gap-1  font-medium hover:underline block shrink-0">
               <span>Visit {{ post.businessName }}</span>
               <Icon name="ph:arrow-square-out" class="size-4" />
             </a>

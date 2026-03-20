@@ -3,9 +3,9 @@ const { post } = await useContentDetail('blog')
 </script>
 
 <template>
-  <PageWrapper>
-    <Breadcrumbs :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" />
-    <div v-if="post" class="prose">
+  <PageWrapper v-if="post">
+    <!-- <Breadcrumbs :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" /> -->
+    <div class="prose">
       <PageHeader pill="Blog Article" pillIcon="ph:article-ny-times" :publishedAt="post.publishedAt">{{ post.title }}
       </PageHeader>
       <figure>

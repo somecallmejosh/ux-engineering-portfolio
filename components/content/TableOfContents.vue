@@ -45,9 +45,9 @@ onBeforeUnmount(() => {
   <section v-if="links && links.length"
     class="overflow-hidden sticky top-20 lg:top-0 p-4 bg-white border border-neutral-200 rounded-lg z-50 toc"
     aria-labelledby="toc-header" :class="menuOpen && 'open'">
-    <button class="text-sm flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu"
+    <button class=" flex items-center gap-1 w-full not-prose cursor-pointer group" @click="toggleMenu"
       aria-controls="toc-menu" :aria-expanded="menuOpen">
-      <h2 id="toc-header" class="flex items-center gap-2 text-body text-sm flex-1 group-hover:underline">
+      <h2 id="toc-header" class="flex items-center gap-2 text-body  flex-1 group-hover:underline">
         <Icon name="ph:book-open-text" size="1.3em" />
         <strong>Outline</strong>
       </h2>
@@ -59,20 +59,20 @@ onBeforeUnmount(() => {
     </button>
     <div class="toc-drawer" :class="{ 'toc-drawer--open': menuOpen }">
       <div ref="tocMenuRef" id="toc-menu" class="max-h-96 overflow-y-auto relative">
-        <ul class="not-prose relative z-0 pb-4 text-sm" @click="menuOpen = false">
+        <ul class="not-prose relative z-0 pb-4 " @click="menuOpen = false">
           <li v-for="item in links" :key="item.id">
-            <a :href="`#${item.id}`" >
+            <a :href="`#${item.id}`">
               <Icon class="h-6 w-6 flex items-center justify-center border rounded-lg" :name="`codex:h${item.depth}`" />
               {{ item.text }}
             </a>
             <ul v-if="item.children">
               <li v-for="child in item.children" :key="child.id">
-                <a :href="`#${child.id}`" >
+                <a :href="`#${child.id}`">
                   <Icon :name="`codex:h${child.depth}`" /> {{ child.text }}
                 </a>
                 <ul v-if="child.children">
                   <li v-for="subChild in child.children" :key="subChild.id">
-                    <a :href="`#${subChild.id}`" >
+                    <a :href="`#${subChild.id}`">
                       <Icon :name="`codex:h${subChild.depth}`" /> {{ subChild.text }}
                     </a>
                     <component :is="TableOfContents" :links="[subChild]" />

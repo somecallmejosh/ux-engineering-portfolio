@@ -43,16 +43,17 @@ useSeoMeta({
       <ol class="not-prose space-y-4">
         <li v-for="chapter in chapterCards" :key="chapter.id" class="chapter-card relative group">
           <div
-            class="flex items-center gap-5 p-5 border border-neutral-200 rounded-lg group-hover:outline-4 group-hover:outline-offset-2 group-hover:outline-blue-100 transition-all duration-150 ease-in-out">
-            <span aria-hidden="true" class="shrink-0 font-serif text-5xl leading-none text-neutral-500 w-10 text-right">
-              {{ chapter.order === 0 ? 'i' : chapter.order }}
-            </span>
-            <div class="flex-1 min-w-0">
-              <CardHeader class="mb-1">{{ chapter.title }}</CardHeader>
-              <p class="m-0 text-neutral-600 text-pretty text-base">{{ chapter.description }}</p>
+            class="flex items-center gap-4 p-5 border border-neutral-200 rounded-lg group-hover:outline-4 group-hover:outline-offset-2 group-hover:outline-blue-100 transition-all duration-150 ease-in-out">
+            <div class="flex-1 min-w-0 lg:space-y-2">
+
+              <h2 class="text-pretty">{{ chapter.title }}</h2>
+              <p class="text-pretty hidden lg:block">{{ chapter.description }}</p>
+            </div>
+            <div>
+              <Pill :pill="chapter.order === 0 ? 'Introduction' : `Chapter ${chapter.order}`" />
             </div>
             <Icon name="ph:caret-right" size="1.25em" aria-hidden="true"
-              class="shrink-0 text-neutral-400 group-hover:text-blue-500 transition-colors duration-150 ease-in-out" />
+              class="shrink-0  group-hover:text-blue-500 transition-colors duration-150 ease-in-out" />
           </div>
           <NuxtLink :to="chapter.to"
             class="absolute inset-0 rounded-lg not-prose border-0 focus:outline-0 focus:ring-4 focus:ring-blue-100 focus:ring-offset-2">

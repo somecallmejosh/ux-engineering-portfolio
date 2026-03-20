@@ -62,13 +62,13 @@ const mapIcons = {
               <Icon v-if="key.includes('_')" size=".65em" name="material-symbols:mobile-3" class="text-gray-400" />
             </div>
           </div>
-          <div class="flex justify-center text-xs mt-1">
+          <div class="flex justify-center  mt-1">
             <Pill :pill="value.version" />
           </div>
         </li>
       </ul>
-      <a :href="featureData.spec.links[0].link" aria-label="Baseline Check on web-platform-dx.github.io"
-        target="_blank" rel="noopener noreferrer">
+      <a :href="featureData.spec.links[0].link" aria-label="Baseline Check on web-platform-dx.github.io" target="_blank"
+        rel="noopener noreferrer">
         <svg class="w-24" viewBox="0 0 617 135" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M159.487 21.1831L148.095 32.8303L182.271 67.7718L148.095 102.713L125.311 79.419L113.919 91.0662L148.095 126.008L205.055 67.7718L159.487 21.1831Z"

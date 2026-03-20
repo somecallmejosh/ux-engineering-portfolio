@@ -46,7 +46,7 @@ const onSubmit = async () => {
         </div>
         <div>
           <button type="submit" :disabled="loading"
-            class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 text-white font-semibold rounded-lg hover:bg-neutral-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+            class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-neutral-900 text-neutral-50  rounded-lg hover:bg-neutral-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
             <Icon v-if="loading" name="ph:spinner" class="animate-spin" size="1rem" aria-hidden="true" />
             <Icon v-else name="ph:file-pdf" size="1rem" aria-hidden="true" />
             {{ loading ? 'Sending…' : 'Get the free checklist' }}

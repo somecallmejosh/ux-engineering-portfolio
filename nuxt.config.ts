@@ -27,13 +27,21 @@ export default defineNuxtConfig({
       routes: ['/checklist/'],
     },
     routeRules: {
-      '/blog/categories/**': { redirect: { to: '/blog/tags/**/', statusCode: 301 } },
-      '/dev-notes/categories/**': { redirect: { to: '/dev-notes/tags/**/', statusCode: 301 } },
+      '/blog/categories/**': {
+        redirect: { to: '/blog/tags/**/', statusCode: 301 },
+      },
+      '/dev-notes/categories/**': {
+        redirect: { to: '/dev-notes/tags/**/', statusCode: 301 },
+      },
       '/checklist/': { sitemap: false },
       '/design/': { sitemap: false, robots: false },
-      '/_fonts/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
-      '/_nuxt/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
-    }
+      '/_fonts/**': {
+        headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+      },
+      '/_nuxt/**': {
+        headers: { 'cache-control': 'public, max-age=31536000, immutable' },
+      },
+    },
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
@@ -68,17 +76,17 @@ export default defineNuxtConfig({
   },
   icon: {
     serverBundle: {
-      collections: ['ph', 'skill-icons']
-    }
+      collections: ['ph', 'skill-icons'],
+    },
   },
   content: {
     build: {
       markdown: {
         toc: {
           depth: 4,
-        }
-      }
-    }
+        },
+      },
+    },
   },
   robots: {
     // Keep non-SEO bots blocked, but ensure a valid group exists
@@ -87,7 +95,7 @@ export default defineNuxtConfig({
       {
         userAgent: '*',
         allow: '/',
-      }
+      },
     ],
     sitemap: `${process.env.NUXT_SITE_URL}/sitemap.xml`,
   },
@@ -99,21 +107,21 @@ export default defineNuxtConfig({
       sameAs: [
         'https://www.linkedin.com/in/somecallmejosh/',
         'https://x.com/joshuabriley',
-        'https://github.com/somecallmejosh'
-      ]
-    })
+        'https://github.com/somecallmejosh',
+      ],
+    }),
   },
   scripts: {
     registry: {
       googleAnalytics: {
-        id: 'G-2Z540WCTFV'
-      }
-    }
+        id: 'G-2Z540WCTFV',
+      },
+    },
   },
   site: {
     url: process.env.NUXT_SITE_URL,
     name: process.env.NUXT_SITE_NAME,
-    trailingSlash: true
+    trailingSlash: true,
   },
   linkChecker: {
     excludeLinks: ['^#'],
@@ -129,14 +137,16 @@ export default defineNuxtConfig({
             'vendor-vue': ['vue', 'vue-router'],
             'vendor-head': ['@unhead/vue'],
             'vendor-icons': ['@iconify/vue'],
-          }
-        }
-      }
+          },
+        },
+      },
     },
     server: {
       // https://stackoverflow.com/questions/74902697/error-the-request-url-is-outside-of-vite-serving-allow-list-after-git-init
       fs: {
-        allow: [process.cwd()],
+        allow: [process.cwd(), process.env.SQL_ALLOW_PATH].filter(
+          Boolean,
+        ) as string[],
       },
     },
   },

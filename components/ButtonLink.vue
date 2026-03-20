@@ -19,9 +19,9 @@ const className: Record<string, string> = {
 </script>
 <template>
   <NuxtLink :to="props.to"
-    class="inline-flex no-underline border items-center gap-1.5 font-medium rounded-full px-4 py-2 justify-center"
+    class="inline-flex no-underline border items-center gap-1.5 font-medium rounded-full pr-4 pl-5 py-2 justify-center hover:gap-2"
     :class="className[props.variant ?? 'base']">
     <slot />
-    <Icon name="ph:arrow-right" size="0.9rem" />
+    <Icon name="ph:caret-right-bold" size="0.9rem" />
   </NuxtLink>
 </template>

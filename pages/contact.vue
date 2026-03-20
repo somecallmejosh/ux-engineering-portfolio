@@ -124,36 +124,19 @@ const onSubmit = async (event) => {
           <form v-show="!formSubmitted" name="contact" method="POST" novalidate data-netlify="true"
             netlify-honeypot="bot-field" @submit.prevent="onSubmit" class="space-y-4 p-6 bg-neutral-50 rounded-lg">
             <input type="hidden" name="form-name" value="contact" />
-            <FormField
-              v-model="formData.name"
-              inputId="name"
-              name="name"
-              label="Name"
-              :isValid="nameValid"
-              errorMessage="Enter your name"
-              required
-              @blur="validateName"
-            />
+            <FormField v-model="formData.name" inputId="name" name="name" label="Name" :isValid="nameValid"
+              errorMessage="Enter your name" required @blur="validateName" />
             <div class="grid lg:grid-cols-2 gap-6">
-              <FormField
-                v-model="formData.email"
-                inputId="email"
-                name="email"
-                label="Email"
-                type="email"
-                :isValid="emailValid"
-                errorMessage="Enter a valid email address."
-                required
-                @blur="validateEmail"
-              />
+              <FormField v-model="formData.email" inputId="email" name="email" label="Email" type="email"
+                :isValid="emailValid" errorMessage="Enter a valid email address." required @blur="validateEmail" />
               <div class="space-y-1">
-                <label class="text-sm" for="phone">Phone</label>
+                <label class="" for="phone">Phone</label>
                 <input v-model="formData.phone" name="phone" type="text"
                   class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
               </div>
             </div>
             <div class="space-y-1">
-              <label class="text-sm" for="service">I'm interested in</label>
+              <label class="" for="service">I'm interested in</label>
               <select v-model="formData.service" name="service"
                 class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <option value="" disabled>Select a service</option>
@@ -163,17 +146,8 @@ const onSubmit = async (event) => {
                 <option value="other">Something else</option>
               </select>
             </div>
-            <FormField
-              v-model="formData.message"
-              inputId="message"
-              name="message"
-              label="Message"
-              type="textarea"
-              :isValid="messageValid"
-              errorMessage="Enter a brief message."
-              required
-              @blur="validateMessage"
-            />
+            <FormField v-model="formData.message" inputId="message" name="message" label="Message" type="textarea"
+              :isValid="messageValid" errorMessage="Enter a brief message." required @blur="validateMessage" />
             <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
               <div><small>* indicates a required field</small></div>
               <button type="submit"
@@ -191,7 +165,8 @@ const onSubmit = async (event) => {
               <NuxtLink to="/projects/">recent projects</NuxtLink>
             </p>
           </div>
-          <div class="animate-entry prose p-6 rounded-lg border border-red-100 bg-red-50/30" v-if="formSubmitError" role="alert">
+          <div class="animate-entry prose p-6 rounded-lg border border-red-100 bg-red-50/30" v-if="formSubmitError"
+            role="alert">
             <h2>Something went wrong</h2>
             <p>Your message couldn't be submitted. If this is urgent, email me at <a
                 href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or try the form again later.</p>
@@ -206,7 +181,8 @@ const onSubmit = async (event) => {
                 <div class="no-shrink translate-y-1">
                   <Icon name="logos:linkedin-icon" size="1em" />
                 </div>
-                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank"
+                  rel="noopener noreferrer">
                   <span class="sr-only">LinkedIn.com/</span>
                   joshuabriley
                 </a>

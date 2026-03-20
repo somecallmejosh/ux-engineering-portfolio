@@ -27,22 +27,13 @@ onClickOutside(target, () => { toolTipVisible.value = false })
 </script>
 <template>
   <div ref="target" @mouseenter="toolTipVisible = true" @mouseleave="toolTipVisible = false" class="tooltip group">
-    <button
-      type="button"
-      :aria-describedby="`tooltip-${id}`"
-      @click="visibilityToggle"
-      @focus="toolTipVisible = true"
-      @blur="toolTipVisible = false"
-      class="cursor-pointer"
-    >
+    <button type="button" :aria-describedby="`tooltip-${id}`" @click="visibilityToggle" @focus="toolTipVisible = true"
+      @blur="toolTipVisible = false" class="cursor-pointer">
       <slot></slot>
     </button>
-    <div
-      :id="`tooltip-${id}`"
-      role="tooltip"
-      class="tooltip-text text-white bg-black/80 text-xs capitalize text-nowrap p-1 rounded-sm"
-      :class="{ 'is-visible': toolTipVisible }"
-    >
+    <div :id="`tooltip-${id}`" role="tooltip"
+      class="tooltip-text text-neutral-50 bg-black/80  capitalize text-nowrap p-1 rounded-sm"
+      :class="{ 'is-visible': toolTipVisible }">
       {{ text }}
     </div>
   </div>
@@ -52,6 +43,7 @@ onClickOutside(target, () => { toolTipVisible.value = false })
   position: relative;
   display: inline-block;
 }
+
 .tooltip-text {
   text-align: center;
   position: absolute;
@@ -63,6 +55,7 @@ onClickOutside(target, () => { toolTipVisible.value = false })
   transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
 }
+
 .tooltip-text.is-visible {
   opacity: 1;
   transform: translateX(-50%) scaleY(1) translateY(0);

@@ -69,13 +69,13 @@ useSeoMeta({
           <nav aria-label="Chapter navigation"
             class="not-prose flex justify-between gap-4 mt-12 pt-8 border-t border-neutral-200">
             <NuxtLink v-if="prevChapter" :to="`/guides/${guide}/${prevChapter.slug}/`"
-              class="flex items-center gap-2 text-sm hover:underline">
+              class="flex items-center gap-2  hover:underline">
               <Icon name="ph:arrow-left" class="size-4 shrink-0" />
               <span>{{ prevChapter.title }}</span>
             </NuxtLink>
             <span v-else />
             <NuxtLink v-if="nextChapter" :to="`/guides/${guide}/${nextChapter.slug}/`"
-              class="flex items-center gap-2 text-sm hover:underline text-right ml-auto">
+              class="flex items-center gap-2  hover:underline text-right ml-auto">
               <span>{{ nextChapter.title }}</span>
               <Icon name="ph:arrow-right" class="size-4 shrink-0" />
             </NuxtLink>

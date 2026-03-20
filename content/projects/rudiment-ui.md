@@ -1,7 +1,7 @@
 ---
 slug: rudiment-ui
 businessName: 'Rudiment UI'
-businessUrl: 'https://github.com/Rudiment-UI/rudiment-ui'
+businessUrl: 'https://rudiment-ui.netlify.app/'
 publishedAt: 2026-03-16
 title: 'Rudiment UI: building a component library from scratch'
 description: 'An open-source React component library and companion guide covering architectural decisions, a three-tier token system, intrinsic layout primitives, accessible components with React Aria, Storybook documentation, testing, and npm distribution.'

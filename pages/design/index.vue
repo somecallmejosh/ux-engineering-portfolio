@@ -32,14 +32,14 @@ const mockBreadcrumbs = [
       <PageHeader pill="Internal" pill-icon="ph:paint-brush">
         Component gallery
       </PageHeader>
-      <p class="prose text-neutral-600 mt-4">
+      <p class="prose  mt-4">
         Internal reference page. Not indexed. Shows every component in its known states.
       </p>
     </section>
 
     <!-- ButtonLink -->
     <section aria-labelledby="section-buttonlink" class="space-y-4">
-      <h2 id="section-buttonlink" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">ButtonLink</h2>
+      <h2 id="section-buttonlink" class="font-mono    ">ButtonLink</h2>
       <div class="flex flex-wrap gap-4 items-center">
         <ButtonLink to="/blog/">Base variant</ButtonLink>
         <ButtonLink to="/blog/" variant="inverse">Inverse variant</ButtonLink>
@@ -48,7 +48,7 @@ const mockBreadcrumbs = [
 
     <!-- Pill -->
     <section aria-labelledby="section-pill" class="space-y-4">
-      <h2 id="section-pill" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">Pill</h2>
+      <h2 id="section-pill" class="font-mono    ">Pill</h2>
       <div class="flex flex-wrap gap-3 items-center">
         <Pill pill="Label only" />
         <Pill pill="Blog" pill-icon="ph:article-ny-times" />
@@ -60,26 +60,26 @@ const mockBreadcrumbs = [
 
     <!-- Breadcrumbs -->
     <section aria-labelledby="section-breadcrumbs" class="space-y-4">
-      <h2 id="section-breadcrumbs" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">Breadcrumbs</h2>
+      <h2 id="section-breadcrumbs" class="font-mono    ">Breadcrumbs</h2>
       <Breadcrumbs :items="mockBreadcrumbs" />
     </section>
 
     <!-- PageHeader -->
     <section aria-labelledby="section-pageheader" class="space-y-6">
-      <h2 id="section-pageheader" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">PageHeader</h2>
+      <h2 id="section-pageheader" class="font-mono    ">PageHeader</h2>
       <div class="space-y-8 border border-neutral-100 rounded-lg p-6">
         <div>
-          <p class="text-xs text-neutral-400 mb-3">Plain</p>
+          <p class="  mb-3">Plain</p>
           <PageHeader>Page title with no pill</PageHeader>
         </div>
         <hr class="border-neutral-100" />
         <div>
-          <p class="text-xs text-neutral-400 mb-3">With pill + icon</p>
+          <p class="  mb-3">With pill + icon</p>
           <PageHeader pill="Blog" pill-icon="ph:article-ny-times">Page title with a pill badge</PageHeader>
         </div>
         <hr class="border-neutral-100" />
         <div>
-          <p class="text-xs text-neutral-400 mb-3">With published date</p>
+          <p class="  mb-3">With published date</p>
           <PageHeader published-at="2026-01-15T00:00:00.000Z">Page title with a published date</PageHeader>
         </div>
       </div>
@@ -87,7 +87,7 @@ const mockBreadcrumbs = [
 
     <!-- Callout -->
     <section aria-labelledby="section-callout" class="space-y-4">
-      <h2 id="section-callout" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">Callout</h2>
+      <h2 id="section-callout" class="font-mono    ">Callout</h2>
       <Callout>
         <h3>Callout heading</h3>
         <p>Use this for prominent in-page CTAs or highlighted announcements. Slot accepts any prose content.</p>
@@ -97,8 +97,8 @@ const mockBreadcrumbs = [
 
     <!-- Tooltip -->
     <section aria-labelledby="section-tooltip" class="space-y-4">
-      <h2 id="section-tooltip" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">Tooltip</h2>
-      <p class="text-sm text-neutral-500">Hover or focus the icon buttons below. Tooltip appears above the trigger.</p>
+      <h2 id="section-tooltip" class="font-mono    ">Tooltip</h2>
+      <p>Hover or focus the icon buttons below. Tooltip appears above the trigger.</p>
       <div class="flex gap-6 items-center">
         <Tooltip id="design-tip-1" text="Figma">
           <Icon name="skill-icons:figma-light" size="2em" aria-hidden="true" />
@@ -114,13 +114,13 @@ const mockBreadcrumbs = [
 
     <!-- Skills -->
     <section aria-labelledby="section-skills" class="space-y-4">
-      <h2 id="section-skills" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">Skills</h2>
+      <h2 id="section-skills" class="font-mono    ">Skills</h2>
       <Skills />
     </section>
 
     <!-- CardListItem -->
     <section aria-labelledby="section-card" class="space-y-4">
-      <h2 id="section-card" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">CardListItem</h2>
+      <h2 id="section-card" class="font-mono    ">CardListItem</h2>
       <ul class="grid md:grid-cols-2 gap-12">
         <CardListItem :item="mockCard" to="/blog/" />
         <CardListItem :item="mockCardWithHeadline" to="/blog/" />
@@ -129,7 +129,7 @@ const mockBreadcrumbs = [
 
     <!-- TagLinks -->
     <section aria-labelledby="section-taglinks" class="space-y-4">
-      <h2 id="section-taglinks" class="font-mono text-sm text-neutral-500 uppercase tracking-widest">TagLinks</h2>
+      <h2 id="section-taglinks" class="font-mono    ">TagLinks</h2>
       <TagLinks title="Tags" tag="blog" :collection="mockTags" />
     </section>
 
