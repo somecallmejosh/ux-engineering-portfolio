@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-sm">Storybook Example:</p>
+    <p class="">Storybook Example:</p>
     <iframe width="100%" :height="props.height ? props.height : undefined" :src="`${url}&nav=0&toolbar=0`"
       :title="title" :class="iframeClass"></iframe>
   </div>

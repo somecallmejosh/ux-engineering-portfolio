@@ -33,7 +33,7 @@ const list = await queryCollection(props.collection)
     <ul role="list" class="flex flex-wrap gap-2 not-prose">
       <li v-for="(category) in list" :key="category">
         <NuxtLink prefetch-on="interaction" :to="`/${collectionPath(collection)}/tags/${category}/`"
-          class="text-sm bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 font-semibold rounded-md px-1.5 py-1 text-center">
+          class=" bg-blue-50 text-blue-950 hover:bg-blue-100 hover:text-blue-900 rounded-md px-1.5 py-1 text-center">
           {{ humanize(category) }}</NuxtLink>
       </li>
     </ul>

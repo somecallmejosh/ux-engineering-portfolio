@@ -25,9 +25,9 @@ useSeoMeta({
 
       <section class="space-y-6">
         <Pill pill="Coming Soon" />
-        <div>
+        <div class="prose">
           <PageHeader>{{ service.label }}</PageHeader>
-          <p class="text-xl leading-relaxed text-neutral-700 mt-4 max-w-2xl">{{ service.description }}</p>
+          <p>{{ service.description }}</p>
         </div>
         <div class="not-prose">
           <ButtonLink to="/contact/">Join the waitlist</ButtonLink>
@@ -35,9 +35,9 @@ useSeoMeta({
       </section>
 
       <Callout>
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">Who it's for</p>
-        <p class="text-lg font-medium text-neutral-900 leading-relaxed mb-2">{{ service.audience }}</p>
-        <p class="text-neutral-600 leading-relaxed">{{ service.audienceDetail }}</p>
+        <h2>Who it's for</h2>
+        <p>{{ service.audience }}</p>
+        <p>{{ service.audienceDetail }}</p>
       </Callout>
 
       <section class="space-y-6">
@@ -48,23 +48,28 @@ useSeoMeta({
         <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 list-none p-0 not-prose">
           <li v-for="item in service.includesFull" :key="item"
             class="flex gap-3 items-start rounded-lg border border-neutral-200 bg-white p-4">
-            <Icon name="ph:check-circle" class="shrink-0 text-green-500 translate-y-0.5" size="1.25rem"
+            <Icon name="ph:check-circle" class="shrink-0 text-blue-400 translate-y-0.5" size="1.25rem"
               aria-hidden="true" />
-            <span class="leading-relaxed">{{ item }}</span>
+            <span class="">{{ item }}</span>
           </li>
         </ul>
       </section>
 
-      <section v-if="service.insight" class="border-l-4 border-neutral-900 pl-8 space-y-3">
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400">Why this matters</p>
-        <p class="text-lg leading-relaxed text-neutral-800">{{ service.insight }}</p>
-      </section>
-
-      <Callout>
-        <h2>Interested when it launches?</h2>
-        <p>Get in touch mentioning "{{ service.label }}" and I'll reach out when it's available.</p>
-        <ButtonLink to="/contact/">Join the waitlist</ButtonLink>
-      </Callout>
+      <SplitContent>
+        <template #primary>
+          <section v-if="service.insight" class="prose">
+            <h2>Why this matters</h2>
+            <p class="text-lg  ">{{ service.insight }}</p>
+          </section>
+        </template>
+        <template #secondary>
+          <Callout>
+            <h2>Interested when it launches?</h2>
+            <p>Get in touch mentioning "{{ service.label }}" and I'll reach out when it's available.</p>
+            <ButtonLink to="/contact/">Join the waitlist</ButtonLink>
+          </Callout>
+        </template>
+      </SplitContent>
 
     </template>
 
@@ -73,17 +78,17 @@ useSeoMeta({
 
       <section class="space-y-6">
         <Pill pill="Free resource" />
-        <div>
+        <div class="prose">
           <PageHeader>{{ service.label }}</PageHeader>
-          <p class="text-xl leading-relaxed text-neutral-700 mt-4 max-w-2xl">{{ service.tagline }}</p>
+          <p>{{ service.tagline }}</p>
         </div>
         <ChecklistSignup />
       </section>
 
       <Callout>
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">Who it's for</p>
-        <p class="text-lg font-medium text-neutral-900 leading-relaxed mb-2">{{ service.audience }}</p>
-        <p class="text-neutral-600 leading-relaxed">{{ service.audienceDetail }}</p>
+        <h2>Who it's for</h2>
+        <p>{{ service.audience }}</p>
+        <p>{{ service.audienceDetail }}</p>
       </Callout>
 
       <section class="space-y-6">
@@ -94,9 +99,9 @@ useSeoMeta({
         <ul class="grid sm:grid-cols-2 gap-3 list-none p-0 not-prose">
           <li v-for="item in service.includesFull" :key="item"
             class="flex gap-3 items-start rounded-lg border border-neutral-200 bg-white p-4">
-            <Icon name="ph:check-circle" class="shrink-0 text-green-500 translate-y-0.5" size="1.25rem"
+            <Icon name="ph:check-circle" class="shrink-0 text-blue-400 translate-y-0.5" size="1.25rem"
               aria-hidden="true" />
-            <span class="text-sm leading-relaxed">{{ item }}</span>
+            <span>{{ item }}</span>
           </li>
         </ul>
       </section>
@@ -111,30 +116,35 @@ useSeoMeta({
               aria-hidden="true">
               {{ String(i + 1).padStart(2, '0') }}
             </span>
-            <div class="pt-1">
-              <p class="font-semibold text-neutral-900 mb-1">{{ step.title }}</p>
-              <p class="text-neutral-600 leading-relaxed">{{ step.description }}</p>
+            <div class="prose">
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
             </div>
           </li>
         </ol>
       </section>
 
-      <section v-if="service.insight" class="border-l-4 border-neutral-900 pl-8 space-y-3">
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400">What this unlocks</p>
-        <p class="text-lg leading-relaxed text-neutral-800">{{ service.insight }}</p>
-      </section>
-
-      <Callout>
-        <h2>Ready to go deeper?</h2>
-        <p>
-          If the checklist surfaces gaps you're not sure how to prioritize, the paid
-          <NuxtLink to="/services/audit/">Design System Audit</NuxtLink> covers the same criteria with expert
-          analysis, a written report, and a remediation roadmap.
-        </p>
-        <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
-          Book an intro call
-        </ButtonLink>
-      </Callout>
+      <SplitContent>
+        <template #primary>
+          <section v-if="service.insight" class="prose">
+            <h2>What this unlocks</h2>
+            <p>{{ service.insight }}</p>
+          </section>
+        </template>
+        <template #secondary>
+          <Callout>
+            <h2>Ready to go deeper?</h2>
+            <p>
+              If the checklist surfaces gaps you're not sure how to prioritize, the paid
+              <NuxtLink to="/services/audit/">Design System Audit</NuxtLink> covers the same criteria with expert
+              analysis, a written report, and a remediation roadmap.
+            </p>
+            <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
+              Book an intro call
+            </ButtonLink>
+          </Callout>
+        </template>
+      </SplitContent>
 
     </template>
 
@@ -143,26 +153,26 @@ useSeoMeta({
 
       <!-- Hero -->
       <section class="space-y-6">
-        <div>
+        <div class="prose">
           <PageHeader>{{ service.label }}</PageHeader>
-          <p class="text-xl leading-relaxed text-neutral-700 mt-4 max-w-2xl">{{ service.tagline }}</p>
+          <p>{{ service.tagline }}</p>
         </div>
         <div class="not-prose space-y-3">
           <dl class="flex flex-wrap gap-2 items-center">
             <div v-if="service.price"
               class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
               <dt class="sr-only">Price</dt>
-              <dd class="price font-semibold text-lg leading-none">{{ service.price }}</dd>
+              <dd class="price  text-lg leading-none">{{ service.price }}</dd>
             </div>
             <div v-if="service.timeline"
-              class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5 text-neutral-600">
+              class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5 ">
               <Icon name="ph:clock" size="1rem" aria-hidden="true" />
               <dt class="sr-only">Timeline</dt>
               <dd>{{ service.timeline }}</dd>
             </div>
           </dl>
-          <p v-if="service.deliveredAs" class="text-sm text-neutral-600 flex items-start gap-1.5">
-            <Icon name="ph:file-text" size="1rem" aria-hidden="true" class="shrink-0 text-neutral-400 mt-0.5" />
+          <p v-if="service.deliveredAs" class="  flex items-start gap-1.5">
+            <Icon name="ph:file-text" size="1rem" aria-hidden="true" class="shrink-0  mt-0.5" />
             {{ service.deliveredAs }}
           </p>
         </div>
@@ -178,9 +188,9 @@ useSeoMeta({
 
       <!-- Who it's for -->
       <Callout>
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-3">Who it's for</p>
-        <p class="text-lg font-medium text-neutral-900 leading-relaxed mb-2">{{ service.audience }}</p>
-        <p class="text-neutral-600 leading-relaxed">{{ service.audienceDetail }}</p>
+        <h2 class="mt-0">Who it's for</h2>
+        <p>{{ service.audience }}</p>
+        <p>{{ service.audienceDetail }}</p>
       </Callout>
 
       <!-- What's included -->
@@ -192,9 +202,9 @@ useSeoMeta({
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 list-none p-0 not-prose">
           <li v-for="item in service.includesFull" :key="item"
             class="flex gap-3 items-start rounded-lg border border-neutral-200 bg-white p-4">
-            <Icon name="ph:check-circle" class="shrink-0 text-green-500 translate-y-0.5" size="1.25rem"
+            <Icon name="ph:check-circle" class="shrink-0 text-blue-400 translate-y-0.5" size="1.25rem"
               aria-hidden="true" />
-            <span class="leading-relaxed">{{ item }}</span>
+            <span class="">{{ item }}</span>
           </li>
         </ul>
       </section>
@@ -210,34 +220,39 @@ useSeoMeta({
               aria-hidden="true">
               {{ String(i + 1).padStart(2, '0') }}
             </span>
-            <div class="pt-1">
-              <p class="font-semibold text-neutral-900 mb-1">{{ step.title }}</p>
-              <p class="text-neutral-600 leading-relaxed">{{ step.description }}</p>
+            <div class="prose">
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
             </div>
           </li>
         </ol>
       </section>
 
-      <!-- Why this matters -->
-      <section v-if="service.insight" class="border-l-4 border-neutral-900 pl-8 space-y-3">
-        <p class="text-xs font-semibold tracking-widest uppercase text-neutral-400">Why teams pay for this</p>
-        <p class="text-lg leading-relaxed text-neutral-800">{{ service.insight }}</p>
-      </section>
-
-      <!-- Testimonial -->
-      <section v-if="service.testimonial" aria-labelledby="testimonial-label">
-        <div class="prose">
-          <p id="testimonial-label">What clients
-            say</p>
-          <blockquote class="space-y-4">
-            <p>{{ service.testimonial.quote }}</p>
-            <cite>
-              {{ service.testimonial.author }},
-              <span class="block">{{ service.testimonial.role }}</span>
-            </cite>
-          </blockquote>
-        </div>
-      </section>
+      <SplitContent>
+        <template #primary>
+          <!-- Why this matters -->
+          <section v-if="service.insight" class="prose">
+            <h2>Why teams pay for this</h2>
+            <p>{{ service.insight }}</p>
+          </section>
+        </template>
+        <template #secondary>
+          <!-- Testimonial -->
+          <section v-if="service.testimonial" aria-labelledby="testimonial-label">
+            <div class="prose">
+              <h2>What clients
+                say</h2>
+              <blockquote class="space-y-4">
+                <p>{{ service.testimonial.quote }}</p>
+                <cite>
+                  {{ service.testimonial.author }},
+                  <span class="block">{{ service.testimonial.role }}</span>
+                </cite>
+              </blockquote>
+            </div>
+          </section>
+        </template>
+      </SplitContent>
 
       <!-- Final CTA -->
       <Callout>

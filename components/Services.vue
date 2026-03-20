@@ -29,20 +29,19 @@ const phases = [
         :class="index === 0 ? 'border-blue-200 bg-blue-50/50' : 'border-neutral-200 bg-white'">
 
         <div class="space-y-0.5">
-          <p v-if="index === 0" class="text-xs font-semibold tracking-widest uppercase text-blue-700">
-            Where every engagement begins
-          </p>
-          <p class="text-xs font-semibold tracking-widest uppercase"
-            :class="index === 0 ? 'text-blue-800' : 'text-neutral-700'">
+          <h3 class="text-lg" :class="index === 0 ? 'text-blue-800' : ''">
             {{ phases[index]?.label }}<br />{{ phases[index]?.summary }}
-          </p>
+          </h3>
         </div>
 
         <div class="space-y-3">
-          <p class="service-label text-xs font-semibold tracking-widest uppercase text-neutral-700">{{ service.label }}
-          </p>
-          <p v-if="service.tagline" class="service-tagline text-xl leading-snug font-semibold">{{ service.tagline }}</p>
-          <p v-if="index === 0" class="text-sm text-neutral-700 leading-relaxed">
+          <h4 class="service-label">{{ service.label }}
+            <span v-if="index === 0" class=" block text-blue-700">
+              Where every engagement begins
+            </span>
+          </h4>
+          <p v-if="service.tagline" class="service-tagline">{{ service.tagline }}</p>
+          <p v-if="index === 0">
             Before building anything new, you need to understand what's actually broken. In five business days, you get
             a clear, prioritized plan to fix your system.
           </p>
@@ -50,7 +49,7 @@ const phases = [
 
         <div class="flex items-baseline gap-3">
           <span v-if="service.price" class="price text-3xl">{{ service.price }}</span>
-          <span v-if="service.timeline" class="text-sm text-neutral-700">· {{ service.timeline }}</span>
+          <span v-if="service.timeline">· {{ service.timeline }}</span>
         </div>
 
         <div>

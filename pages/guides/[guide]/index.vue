@@ -53,7 +53,7 @@ useSeoMeta({
               <Pill :pill="chapter.order === 0 ? 'Introduction' : `Chapter ${chapter.order}`" />
             </div>
             <Icon name="ph:caret-right" size="1.25em" aria-hidden="true"
-              class="shrink-0 text-neutral-400 group-hover:text-blue-500 transition-colors duration-150 ease-in-out" />
+              class="shrink-0  group-hover:text-blue-500 transition-colors duration-150 ease-in-out" />
           </div>
           <NuxtLink :to="chapter.to"
             class="absolute inset-0 rounded-lg not-prose border-0 focus:outline-0 focus:ring-4 focus:ring-blue-100 focus:ring-offset-2">

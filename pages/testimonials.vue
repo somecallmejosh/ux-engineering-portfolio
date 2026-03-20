@@ -181,8 +181,8 @@ const testimonials = [
           <div>
             <h2>{{ item.name }}</h2>
             <div>
-              <small class="flex items-center gap-1 text-sm text-pretty font-semibold">{{ item.title }}</small>
-              <small class="block text-sm text-pretty">
+              <small class="flex items-center gap-1  text-pretty ">{{ item.title }}</small>
+              <small class="block  text-pretty">
                 <Icon name="skill-icons:linkedin" size="0.75em" class="grayscale opacity-50" /> {{ item.company }}
               </small>
             </div>

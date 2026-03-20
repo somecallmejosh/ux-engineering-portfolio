@@ -57,7 +57,7 @@ const blurAndRemoveFocus = () => {
           <Logo class="lg:hidden" />
           <div>
             <button @click="navToggle"
-              class="menu-toggle flex lg:hidden cursor-pointer items-center gap-1 text-xs uppercase font-medium"
+              class="menu-toggle flex lg:hidden cursor-pointer items-center gap-1   font-medium"
               aria-label="Toggle nav menu visibility">
               Menu
               <Icon v-if="!navOpen" name="ph:equals-bold" size="1.5em" />
@@ -68,7 +68,7 @@ const blurAndRemoveFocus = () => {
         <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <div class="nav-drawer" :class="{ 'nav-drawer--open': navOpen }">
             <NavMenu :groups="navGroups" listClass="border-l border-neutral-200 mb-2 mt-4 space-y-4"
-              linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium text-sm py-2"
+              linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium  py-2"
               iconSize="1.2rem" @nav-click="navOpen = false" />
           </div>
           <div class="hidden items-stretch lg:flex lg:flex-1 flex-col justify-between">

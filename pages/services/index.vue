@@ -98,26 +98,26 @@ const whoIWorkWith = [
       </div>
       <dl class="flex flex-wrap gap-2 items-center not-prose">
         <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
-          <Icon name="ph:clock" size="1rem" aria-hidden="true" class="text-neutral-500" />
+          <Icon name="ph:clock" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Audit timeline</dt>
-          <dd class="text-sm">Audit delivered in 5 days</dd>
+          <dd class="">Audit delivered in 5 days</dd>
         </div>
         <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
-          <Icon name="ph:currency-dollar" size="1rem" aria-hidden="true" class="text-neutral-500" />
+          <Icon name="ph:currency-dollar" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Starting price</dt>
-          <dd class="text-sm">Starting at $2,000</dd>
+          <dd class="">Starting at $2,000</dd>
         </div>
         <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
-          <Icon name="ph:globe" size="1rem" aria-hidden="true" class="text-neutral-500" />
+          <Icon name="ph:globe" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Remote status</dt>
-          <dd class="text-sm">Fully remote &amp; async-friendly</dd>
+          <dd class="">Fully remote &amp; async-friendly</dd>
         </div>
       </dl>
       <div class="not-prose space-y-3">
         <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
           Book an intro call
         </ButtonLink>
-        <p class="text-sm text-neutral-500">I take on a limited number of engagements at a time.</p>
+        <p>I take on a limited number of engagements at a time.</p>
       </div>
     </section>
 
@@ -134,16 +134,15 @@ const whoIWorkWith = [
           <div class="flex-none size-10 rounded-full bg-red-50 flex items-center justify-center" aria-hidden="true">
             <Icon :name="point.icon" size="1.25rem" class="text-red-500" />
           </div>
-          <div class="space-y-1.5 text-sm">
-            <p class="font-semibold">{{ point.title }}</p>
-            <p class="text-sm">{{ point.description }}</p>
+          <div class="space-y-1.5 ">
+            <p class="">{{ point.title }}</p>
+            <p class="">{{ point.description }}</p>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- Services -->
-    <Services :services="coreServices" />
+
 
     <!-- Typical engagement path -->
     <section aria-labelledby="engagement-path-heading" class="space-y-8">
@@ -155,26 +154,26 @@ const whoIWorkWith = [
         </p>
       </div>
 
-      <ol class="not-prose grid lg:grid-cols-3 gap-6 list-none p-0 m-0">
+      <ol class="not-prose grid lg:grid-cols-3 gap-6 list-none p-0 mb-4">
         <li v-for="(step, i) in engagementSteps" :key="i"
           class="rounded-lg border-2 border-neutral-200 bg-white p-6 flex flex-col gap-4">
           <div class="flex items-center gap-3">
-            <span
-              class="flex-none size-10 rounded-full bg-blue-100 text-blue-700 font-bold text-base flex items-center justify-center"
-              aria-hidden="true">{{ i + 1 }}</span>
-            <p class="text-xs font-semibold tracking-widest uppercase text-neutral-500 m-0">{{ step.phase }}</p>
+            <pill :pill="step.phase" />
           </div>
-          <div class="flex flex-col gap-2">
-            <p class="text-xl font-semibold m-0">{{ step.title }}</p>
-            <p class="text-neutral-600 text-sm leading-relaxed m-0">{{ step.description }}</p>
+          <div class="prose">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
           </div>
         </li>
       </ol>
 
-      <p class="not-prose text-center text-lg italic text-neutral-600 border-t border-neutral-200 pt-6">
-        The goal: a system your team actually uses.
+      <p class="">
+        <strong>The goal</strong>: a system your team actually uses.
       </p>
     </section>
+
+    <!-- Services -->
+    <Services :services="coreServices" />
 
     <!-- Philosophy -->
     <section aria-labelledby="philosophy-heading" class="space-y-8">
@@ -190,13 +189,13 @@ const whoIWorkWith = [
             <Icon :name="principle.icon" size="1.25rem" class="text-blue-700" />
           </div>
           <div class="space-y-1">
-            <p class="font-semibold text-sm m-0">{{ principle.title }}</p>
-            <p class="text-neutral-600 text-sm leading-relaxed m-0">{{ principle.description }}</p>
+            <p class="  m-0">{{ principle.title }}</p>
+            <p class="   m-0">{{ principle.description }}</p>
           </div>
         </li>
       </ul>
 
-      <p class="not-prose text-sm text-neutral-700">
+      <p class="prose">
         My approach is fully documented. You can see exactly how I think and build before we ever work together.
         <NuxtLink to="/guides/building-your-own-component-library/"
           class="font-medium underline underline-offset-2 hover:no-underline ml-1">
@@ -207,9 +206,8 @@ const whoIWorkWith = [
 
     <!-- Testimonial -->
     <section v-if="auditService?.testimonial" aria-labelledby="testimonial-heading">
-      <p id="testimonial-heading" class="text-xs font-semibold tracking-widest uppercase text-neutral-400">What clients
-        say</p>
       <div class="prose">
+        <h2>What clients say</h2>
         <blockquote>
           <p>{{ auditService.testimonial.quote }}</p>
           <cite>
@@ -220,58 +218,63 @@ const whoIWorkWith = [
       </div>
     </section>
 
-    <!-- Who I work with -->
-    <section aria-labelledby="who-heading"
-      class="not-prose rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8 space-y-6">
-      <div class="space-y-2">
-        <h2 id="who-heading" class="text-xl font-semibold">Who I work best with</h2>
-        <p class="text-neutral-700">I focus on teams that:</p>
-      </div>
-      <ul class="space-y-4 list-none p-0 m-0">
-        <li v-for="item in whoIWorkWith" :key="item" class="flex items-start gap-3">
-          <Icon name="ph:check-circle-fill" size="1.25rem" class="text-blue-600 flex-none mt-0.5" aria-hidden="true" />
-          <span class="text-neutral-700 leading-relaxed">{{ item }}</span>
-        </li>
-      </ul>
-      <p class="text-neutral-700">
-        If that's your team,
-        <NuxtLink to="/contact/" class="underline underline-offset-2 hover:no-underline font-medium">get in touch
-        </NuxtLink>.
-      </p>
-    </section>
 
-    <!-- Ongoing support -->
-    <section aria-labelledby="ongoing-support-heading"
-      class="not-prose flex gap-5 items-start rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8">
-      <div class="flex-none size-12 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
-        <Icon name="ph:clock-countdown" size="1.5rem" class="text-blue-700" />
-      </div>
-      <div class="space-y-2">
-        <div class="flex flex-wrap items-center gap-2">
-          <h2 id="ongoing-support-heading" class="text-lg font-semibold">Ongoing support</h2>
-          <span
-            class="text-xs font-semibold tracking-wider uppercase bg-neutral-100 text-neutral-600 px-2.5 py-0.5 rounded-full">Optional</span>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- Ongoing support -->
+      <section aria-labelledby="ongoing-support-heading"
+        class="not-prose flex gap-5 items-start rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8">
+        <div class="flex-none size-12 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
+          <Icon name="ph:clock-countdown" size="1.5rem" class="text-blue-700" />
         </div>
-        <p class="text-neutral-700 text-sm leading-relaxed">
-          After the initial engagement, I offer limited ongoing support to help your team extend the system, review new
-          components, and maintain accessibility and consistency.
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <h2 id="ongoing-support-heading" class="text-lg ">Ongoing support</h2>
+            <pill pill="Optional" />
+          </div>
+          <p>
+            After the initial engagement, I offer limited ongoing support to help your team extend the system, review
+            new
+            components, and maintain accessibility and consistency.
+          </p>
+          <p>
+            This is available as a small monthly retainer for teams that want continued guidance.
+          </p>
+        </div>
+      </section>
+
+      <!-- Who I work with -->
+      <section aria-labelledby="who-heading"
+        class="not-prose rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8 space-y-6">
+        <div class="space-y-2">
+          <h2 id="who-heading" class="text-xl ">Who I work best with</h2>
+          <p class="">I focus on teams that:</p>
+        </div>
+        <ul class="space-y-4 list-none p-0 m-0">
+          <li v-for="item in whoIWorkWith" :key="item" class="flex items-start gap-3">
+            <Icon name="ph:check-circle" size="1.25rem" class="text-blue-400 flex-none mt-0.5" aria-hidden="true" />
+            <span class="">{{ item }}</span>
+          </li>
+        </ul>
+        <p class="pt-6">
+          If that's your team,
+          <NuxtLink to="/contact/" class="underline underline-offset-2 hover:no-underline font-medium">get in touch
+          </NuxtLink>.
         </p>
-        <p class="text-neutral-700 text-sm leading-relaxed">
-          This is available as a small monthly retainer for teams that want continued guidance.
-        </p>
-      </div>
-    </section>
+      </section>
+
+    </div>
 
     <!-- Anchor + Free offerings -->
     <div class="grid grid-cols-2 gap-6">
       <Callout v-if="anchorService">
         <div class="prose">
-          <p class="text-sm font-semibold tracking-wider uppercase">Full engagement</p>
+          <pill pill="Full Engagement" />
           <h2 class="mt-1">{{ anchorService.label }}</h2>
           <p>{{ anchorService.description }}</p>
-          <p class="text-2xl font-semibold">{{ anchorService.price }}</p>
+          <h3>{{ anchorService.price }}</h3>
         </div>
-        <div>
+        <div class="pt-4">
           <ButtonLink :to="`/services/${anchorService.slug}/`">
             See what's included
           </ButtonLink>
@@ -279,7 +282,7 @@ const whoIWorkWith = [
       </Callout>
       <Callout v-if="freeService">
         <div class="prose">
-          <p class="text-sm font-semibold tracking-wider text-blue-700 uppercase">Free resource</p>
+          <p class="   text-blue-700 ">Free resource</p>
           <h2 id="free-heading" class="text-2xl mt-1">Not ready to commit?</h2>
           <p>
             Use the free <strong>{{ freeService.label }}</strong> to see where your design system stands before
@@ -297,15 +300,15 @@ const whoIWorkWith = [
 
     <!-- Coming soon -->
     <section v-if="comingSoonServices.length" aria-labelledby="coming-soon-heading" class="space-y-4">
-      <h2 id="coming-soon-heading" class="text-xl font-semibold">Coming soon</h2>
+      <h2 id="coming-soon-heading" class="text-xl ">Coming soon</h2>
       <ul class="grid md:grid-cols-2 gap-4 list-none p-0 m-0">
         <li v-for="service in comingSoonServices" :key="service.slug"
           class="rounded-lg border-2 border-neutral-200 bg-white p-6 space-y-2">
           <Pill pill="Coming Soon" />
-          <h3 class="text-lg font-semibold">{{ service.label }}</h3>
-          <p class="text-neutral-600 text-sm leading-relaxed">{{ service.description }}</p>
+          <h3 class="text-lg ">{{ service.label }}</h3>
+          <p class="  ">{{ service.description }}</p>
           <NuxtLink :to="`/services/${service.slug}/`"
-            class="text-sm font-medium underline underline-offset-2 hover:no-underline">
+            class=" font-medium underline underline-offset-2 hover:no-underline">
             View details and join the waitlist
           </NuxtLink>
         </li>

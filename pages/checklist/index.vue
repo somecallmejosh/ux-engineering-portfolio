@@ -249,13 +249,13 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
         </div>
       </div>
       <div class="flex items-center gap-3 sm:shrink-0">
-        <span class=" text-neutral-700 tabular-nums">{{ answeredCount }}/{{ TOTAL_ITEMS }}</span>
+        <span class="tabular-nums">{{ answeredCount }}/{{ TOTAL_ITEMS }}</span>
         <div class="w-24 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
           <div class="h-full bg-neutral-700 rounded-full transition-all duration-300"
             :style="{ width: `${Math.round((answeredCount / TOTAL_ITEMS) * 100)}%` }" />
         </div>
         <button type="button" :disabled="answeredCount === 0" aria-label="Reset all ratings" @click="resetAll"
-          class=" text-neutral-700 hover:text-neutral-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer text-base">
+          class="disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer">
           Reset
         </button>
       </div>
@@ -268,16 +268,16 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
         <!-- Section header -->
         <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-100">
           <div class="flex items-center gap-3">
-            <span class=" font-medium text-neutral-700 font-mono tabular-nums" aria-hidden="true">
+            <span class=" font-medium font-mono tabular-nums" aria-hidden="true">
               {{ String(si + 1).padStart(2, '0') }}
             </span>
-            <h2 :id="`title-${section.id}`" class="text-base font-medium text-neutral-900">
+            <h2 :id="`title-${section.id}`" class="text-base font-medium">
               {{ section.title }}
             </h2>
           </div>
           <div class="flex items-center gap-2 shrink-0">
-            <span class=" tabular-nums text-neutral-700" aria-hidden="true">
-              <span class="font-medium text-neutral-900">{{ sectionScore(section) }}</span>/{{ section.max }}
+            <span class=" tabular-nums" aria-hidden="true">
+              <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }}
             </span>
             <span class="sr-only">Score: {{ sectionScore(section) }} out of {{ section.max }}</span>
             <!-- aria-live container must always exist for announcements to fire -->
@@ -296,7 +296,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
         <ul role="list" class="divide-y divide-neutral-50">
           <li v-for="item in section.items" :key="item.id"
             class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4">
-            <p class="flex-1  text-neutral-700 leading-relaxed">{{ item.label }}</p>
+            <p class="flex-1 ">{{ item.label }}</p>
 
             <!-- Rating toggle -->
             <div role="group" :aria-label="`Rating for: ${item.label}`"
@@ -306,7 +306,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
                 class="relative flex flex-1 items-center gap-1.5 pl-2 pr-3 py-1.5  font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
                 :class="ratings[item.id] === opt.value
                   ? RATING_BTN_ACTIVE[opt.value]
-                  : 'bg-white text-neutral-700 hover:bg-neutral-50 hover:'">
+                  : 'bg-white hover:bg-neutral-50 hover:'">
                 <Icon :name="opt.icon" size="1rem" aria-hidden="true" :class="ratings[item.id] === opt.value
                   ? RATING_BTN_ICON_ACTIVE[opt.value]
                   : 'text-neutral-300'" />
@@ -332,12 +332,12 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
       :class="totalStatus ? TOTAL_STATUS_CARD[totalStatus] : 'border-neutral-200 bg-neutral-50'">
       <div class="flex items-start justify-between gap-4">
         <div>
-          <p class=" font-medium text-neutral-700 uppercase tracking-wide mb-1">Total score</p>
+          <p class=" font-medium   mb-1">Total score</p>
           <div class="flex items-baseline gap-2">
-            <span class="text-5xl text-neutral-900" style="font-family: 'DM Serif Text', serif" aria-hidden="true">
+            <span class="text-5xl " style="font-family: 'DM Serif Text', serif" aria-hidden="true">
               {{ totalScore }}
             </span>
-            <span class="text-lg text-neutral-400" aria-hidden="true">/{{ TOTAL_MAX }}</span>
+            <span class="text-lg " aria-hidden="true">/{{ TOTAL_MAX }}</span>
             <span class="sr-only">Total score: {{ totalScore }} out of {{ TOTAL_MAX }}</span>
           </div>
         </div>
@@ -365,15 +365,15 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
       <ul class="space-y-2" role="list">
         <li v-for="section in SECTIONS" :key="section.id" class="flex items-center gap-3 ">
           <span class="flex-1 truncate">{{ section.title }}</span>
-          <span class="tabular-nums text-neutral-700">
-            <span class="font-medium text-neutral-800">{{ sectionScore(section) }}</span>/{{ section.max }}
+          <span class="tabular-nums ">
+            <span class="font-medium ">{{ sectionScore(section) }}</span>/{{ section.max }}
           </span>
           <span v-if="sectionStatus(section)"
             class=" px-2 py-0.5 rounded-full border font-medium shrink-0 animate-entry"
             :class="STATUS_BADGE[sectionStatus(section)!]">
             {{ STATUS_LABEL[sectionStatus(section)!] }}
           </span>
-          <span v-else class=" text-neutral-700 text-right tabular-nums whitespace-nowrap">
+          <span v-else class=" text-right tabular-nums whitespace-nowrap">
             {{section.items.filter(i => ratings[i.id] !== null).length}}/{{ section.items.length }} <span
               class="sr-only">answered</span>
           </span>

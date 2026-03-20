@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+
 - `pages/design/index.vue` — internal component gallery; shows every component in all known states; excluded from sitemap and robots
 - Semantic design tokens via `@theme` block in `styles.css` (`--color-brand-*`, `--color-surface-*`, `--color-border-*`, `--color-text-*`, `--radius-base`, `--spacing-section`)
 - Accessible labels (`sr-only` spans) for all skill icons in `Skills.vue`
@@ -16,7 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - JSDoc comment blocks to eight key components
 
 ### Changed
-- `Tooltip.vue`: trigger rewritten from `<span>` to `<button>` with `aria-describedby`, focus/blur handlers, and keyboard support; removed `aria-hidden` from tooltip div; replaced hardcoded `#fff` with `text-white`
+
+- `Tooltip.vue`: trigger rewritten from `<span>` to `<button>` with `aria-describedby`, focus/blur handlers, and keyboard support; removed `aria-hidden` from tooltip div; replaced hardcoded `#fff` with `text-neutral-50`
 - `CardListItem.vue`: focus ring color changed from `ring-blue-100` (failing contrast) to `ring-blue-400`
 - `PageHeader.vue`: calendar icon marked `aria-hidden="true"`
 - `Breadcrumbs.vue`: separator icon marked `aria-hidden="true"`
@@ -31,6 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [1.0.0] — 2026-03-17
 
 ### Added
+
 - Initial site launch: portfolio, blog, dev notes, projects, and experiments sections
 - Nuxt Content v3 with Zod-validated content collections
 - Nuxt SEO integration (meta, sitemap, robots.txt, schema.org)

@@ -71,7 +71,8 @@ const resumeItems = [
   <PageWrapper>
 
     <section class="prose">
-      <NuxtImg src="/images/josh-biz-cazsh.jpg" alt="Joshua Briley, UX Engineer" height="300" width="300" class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
+      <NuxtImg src="/images/josh-biz-cazsh.jpg" alt="Joshua Briley, UX Engineer" height="300" width="300"
+        class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
       <PageHeader>
         About me
       </PageHeader>
@@ -126,14 +127,13 @@ const resumeItems = [
       <h2 id="experience" class="text-3xl">Experience</h2>
       <ul class="not-prose grid md:grid-cols-2 2xl:grid-cols-3 gap-x-12 gap-y-6">
         <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
-          <small
-            class="inline-block mb-4 text-xs px-1.5 bg-neutral-900 text-white font-semibold tracking-wide rounded-full">{{
-              item.date }}</small>
+          <small class="inline-block mb-4  px-1.5 bg-neutral-900 text-neutral-50   rounded-full">{{
+            item.date }}</small>
           <div class="prose">
             <CardHeader element="h3">
               {{ item.title }}
             </CardHeader>
-            <p class="mb-2 font-semibold">
+            <p class="mb-2 ">
               {{ item.company }}
             </p>
             <p>
