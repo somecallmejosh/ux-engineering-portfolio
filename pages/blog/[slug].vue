@@ -4,16 +4,31 @@ const { post } = await useContentDetail('blog')
 
 <template>
   <PageWrapper v-if="post">
-    <!-- <Breadcrumbs :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" /> -->
-    <div class="prose">
-      <PageHeader pill="Blog Article" pillIcon="ph:article-ny-times" :publishedAt="post.publishedAt">{{ post.title }}
-      </PageHeader>
-      <figure>
+    <Breadcrumbs class="mb-0" :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" />
+    <PageHeaderIntro class="mb-6" :content="{
+      pill: 'Blog Article',
+      pillIcon: 'ph:article-ny-times',
+      title: post.title,
+      description: post.description
+    }">
+      <div class="space-y-6">
         <AnimateImage :src="post.image" :alt="post.meta.image_alt" :scaleY="0.75" />
-      </figure>
-      <article>
+        <div class="not-prose space-y-3">
+          <dl class="flex flex-wrap gap-2 items-center">
+            <div v-if="post.publishedAt"
+              class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
+              <Icon name="ph:calendar-dots" size="1.2em" aria-hidden="true" />
+              Published on {{ formatDate(post.publishedAt) }}
+            </div>
+          </dl>
+        </div>
         <TagLinks tag="blog" :collection="post.tags" title="Tags" />
         <TableOfContents :links="post.body.toc.links" />
+      </div>
+    </PageHeaderIntro>
+
+    <div class="prose">
+      <article>
         <ContentRenderer :value="post" />
       </article>
       <aside class="space-y-6 lg:space-y-12">

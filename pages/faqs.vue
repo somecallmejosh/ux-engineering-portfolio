@@ -38,9 +38,12 @@ const faqs = [
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="FAQs" pillIcon="ph:question">
-        Frequently asked questions
-      </PageHeader>
+      <PageHeaderIntro :content="{
+        pill: 'FAQs',
+        pillIcon: 'ph:question',
+        title: 'Frequently asked questions',
+        description: 'These frequently asked questions come from clients and colleagues I\'ve worked with over the years.'
+      }" />
       <dl class="space-y-2">
         <template name="frequently-asked-question" v-for="(faq, index) in faqs" :key="index">
           <div class="bg-white border border-neutral-200 p-4 rounded-lg">

@@ -17,11 +17,12 @@ useSeoMeta({
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Contact Me" pillIcon="ph:address-book">
-        Let's talk
-      </PageHeader>
-      <p>Whether you're dealing with component library debt, an accessibility audit deadline, or a Figma-to-code handoff
-        that's slowing your team down, fill out the form and I'll get back to you within one business day.</p>
+      <PageHeaderIntro :content="{
+        pill: 'Contact Me',
+        pillIcon: 'ph:address-book',
+        title: 'Let\'s talk',
+        description: 'Whether you\'re dealing with component library debt, an accessibility audit deadline, or a Figma-to-code handoff that\'s slowing your team down, fill out the form and I\'ll get back to you within one business day.'
+      }" />
     </section>
     <split-content>
       <template #primary>

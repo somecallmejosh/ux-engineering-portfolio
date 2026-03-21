@@ -4,7 +4,7 @@ publishedAt: 2026-03-01
 title: 'What your component library actually needs'
 description: 'What a component library needs varies significantly depending on your rendering model. This guide covers the bare essentials for server-rendered monoliths, client-rendered frameworks, and hybrid frameworks.'
 tags: [accessibility, design-systems, best-practices, component-library-guide]
-image: "/images/blog/component-library-requirements.png"
+image: '/images/blog/component-library-requirements.png'
 image_alt: 'A designer and two developers working on a design system.'
 ---
 
@@ -166,12 +166,14 @@ Nuxt 3 uses Vue's composition API and auto-imports components from the `componen
 
 CSS strategy varies by rendering model and deserves explicit consideration.
 
-| Rendering model          | Recommended approach                                     |
+::OverflowX
+| Rendering model | Recommended approach |
 | ------------------------ | -------------------------------------------------------- |
-| Server-rendered monolith | Plain CSS with design tokens, BEM or utility classes     |
-| React SPA                | CSS Modules, Tailwind CSS, or styled-components          |
-| Vue SPA                  | Scoped styles in single-file components, or Tailwind CSS |
-| Next.js / Nuxt           | CSS Modules or Tailwind CSS (avoid runtime CSS-in-JS)    |
+| Server-rendered monolith | Plain CSS with design tokens, BEM or utility classes |
+| React SPA | CSS Modules, Tailwind CSS, or styled-components |
+| Vue SPA | Scoped styles in single-file components, or Tailwind CSS |
+| Next.js / Nuxt | CSS Modules or Tailwind CSS (avoid runtime CSS-in-JS) |
+::
 
 The common thread: design tokens should drive the values regardless of which CSS approach you choose. The mechanism for applying those values varies, but the source of truth should always be the token system.
 

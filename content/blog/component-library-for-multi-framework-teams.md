@@ -4,7 +4,7 @@ publishedAt: 2026-03-06
 title: 'Component libraries for teams that support multiple frameworks'
 description: 'Teams that build for React, Vue, and Angular face a real architecture challenge. This article covers the three main approaches: web components, headless patterns, and token-driven architecture.'
 tags: [design-systems, front-end-development, component-library-guide]
-image: "/images/blog/component-library-for-multi-framework-teams.png"
+image: '/images/blog/component-library-for-multi-framework-teams.png'
 image_alt: 'Team discussing component library strategies.'
 ---
 
@@ -215,15 +215,17 @@ This approach fits organizations where framework teams have significant autonomy
 
 No approach is universally correct. The right choice depends on how much consistency you need, how much maintenance you can sustain, and what your teams are equipped to build and own.
 
-| Factor                         | Web components                  | Headless + implementations              | Token-driven                            |
+::OverflowX
+| Factor | Web components | Headless + implementations | Token-driven |
 | ------------------------------ | ------------------------------- | --------------------------------------- | --------------------------------------- |
-| Implementation effort          | Medium                          | High                                    | Low                                     |
-| Maintenance surface            | Low                             | High                                    | Medium                                  |
-| Framework integration friction | Medium                          | Low                                     | None                                    |
-| Behavioral consistency         | Guaranteed                      | Guaranteed                              | Process-dependent                       |
-| Visual consistency             | Guaranteed                      | Guaranteed                              | Guaranteed                              |
-| SSR support                    | Improving                       | Good                                    | Good                                    |
-| Best for                       | Strict portability requirements | Large teams with dedicated DS engineers | Federated teams with framework autonomy |
+| Implementation effort | Medium | High | Low |
+| Maintenance surface | Low | High | Medium |
+| Framework integration friction | Medium | Low | None |
+| Behavioral consistency | Guaranteed | Guaranteed | Process-dependent |
+| Visual consistency | Guaranteed | Guaranteed | Guaranteed |
+| SSR support | Improving | Good | Good |
+| Best for | Strict portability requirements | Large teams with dedicated DS engineers | Federated teams with framework autonomy |
+::
 
 Most organizations land somewhere between these options. A common pattern is to use web components or headless implementations for the most complex, interactive components (modals, dropdowns, date pickers) and a token-driven approach for simpler components where behavioral variation is less risky.
 

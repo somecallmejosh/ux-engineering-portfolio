@@ -105,11 +105,13 @@ The a11y addon configuration runs axe-core on every story automatically. Each st
 
 Storybook's sidebar organizes stories into three sections:
 
-| Section    | Title prefix                                     | Contents                                     |
+::OverflowX
+| Section | Title prefix | Contents |
 | ---------- | ------------------------------------------------ | -------------------------------------------- |
-| Layouts    | `Layouts/Stack`, `Layouts/Sidebar`, etc.         | One entry per layout primitive               |
-| Components | `Components/Button`, `Components/Input`, etc.    | One entry per UI component                   |
-| Examples   | `Examples/Dashboard`, `Examples/LoginPage`, etc. | Composed pages demonstrating the full system |
+| Layouts | `Layouts/Stack`, `Layouts/Sidebar`, etc. | One entry per layout primitive |
+| Components | `Components/Button`, `Components/Input`, etc. | One entry per UI component |
+| Examples | `Examples/Dashboard`, `Examples/LoginPage`, etc. | Composed pages demonstrating the full system |
+::
 
 The `title` field in each story's meta object controls this organization. Storybook groups stories alphabetically within each section.
 

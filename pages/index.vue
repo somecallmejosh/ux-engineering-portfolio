@@ -21,9 +21,6 @@ useHead({
   ]
 })
 
-
-
-
 const allServices = await queryCollection('services').order('order', 'ASC').all()
 
 const coreServices = allServices.filter(s => !s.isFree && !s.isComingSoon && !s.isAnchor)
@@ -58,16 +55,18 @@ const combinedPosts = [
   }
 ].filter(Boolean)
 
+const header = {
+  title: "Fix inconsistent UI and replace it with a system your team can rely on",
+  description: "I help product teams turn hard-to-maintain web application interfaces into scalable component systems, with accessibility built in from the start.",
+}
+
 </script>
 
 <template>
   <div class="space-y-16">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <div class="prose">
-          <PageHeader>Clean up the messy UI and replace it with a system your team can rely on</PageHeader>
-          <p>I help product teams turn hard-to-maintain web application interfaces into scalable component
-            systems, with accessibility built in from the start.</p>
+        <PageHeaderIntro :content="header">
           <div class="flex flex-col sm:flex-row lg:items-center gap-2">
             <ButtonLink to="/services/">
               View services
@@ -77,7 +76,7 @@ const combinedPosts = [
               Book an intro call
             </ButtonLink>
           </div>
-        </div>
+        </PageHeaderIntro>
       </section>
     </div>
     <Services :services="coreServices" />

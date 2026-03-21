@@ -51,7 +51,7 @@ const blurAndRemoveFocus = () => {
       href="#main-content">Skip to main content</a>
     <div class="lg:flex min-h-dvh gap-12 relative z-10">
       <header ref="target"
-        class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
+        class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 px-6 pt-6 lg:p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'">
         <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
@@ -84,7 +84,7 @@ const blurAndRemoveFocus = () => {
             <Logo />
           </div>
         </div>
-        <main id="main-content" class="p-6 lg:px-10 lg:pt-0 pb-12 w-full max-w-6xl">
+        <main id="main-content" class="px-6 lg:px-10 lg:pt-0 pb-12 w-full max-w-6xl">
           <slot />
         </main>
         <footer class="p-6 lg:px-10 pb-10 text-sm text-neutral-600">

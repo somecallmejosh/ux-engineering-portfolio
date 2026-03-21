@@ -87,39 +87,40 @@ const whoIWorkWith = [
 <template>
   <PageWrapper>
 
-    <!-- Hero -->
-    <section aria-describedby="page-header" class="space-y-6">
-      <div class="prose">
-        <PageHeader>Design systems consulting</PageHeader>
-        <p>
-          Your design system should make shipping faster. Right now, it's probably making it slower, creating
-          rework, introducing accessibility risk, and adding friction between design and engineering. That's fixable.
-        </p>
-      </div>
-      <dl class="flex flex-wrap gap-2 items-center not-prose">
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
+    <PageHeaderIntro :content="{
+      title: 'Design systems consulting',
+      description: 'Your design system should make shipping faster. Right now, it\'s probably making it slower, creating rework, introducing accessibility risk, and adding friction between design and engineering. That\'s fixable.'
+    }">
+      <dl class="flex flex-wrap gap-2 items-center not-prose mb-6">
+        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
           <Icon name="ph:clock" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Audit timeline</dt>
-          <dd class="">Audit delivered in 5 days</dd>
+          <dd class="text-sm">Audit delivered in 5 days</dd>
         </div>
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
+        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
           <Icon name="ph:currency-dollar" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Starting price</dt>
-          <dd class="">Starting at $2,000</dd>
+          <dd class="text-sm">Starting at $2,000</dd>
         </div>
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
+        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
           <Icon name="ph:globe" size="1rem" aria-hidden="true" class="" />
           <dt class="sr-only">Remote status</dt>
-          <dd class="">Fully remote &amp; async-friendly</dd>
+          <dd class="text-sm">Fully remote &amp; async-friendly</dd>
         </div>
       </dl>
-      <div class="not-prose space-y-3">
-        <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
-          Book an intro call
-        </ButtonLink>
+
+      <div class="flex flex-col lg:flex-row gap-6 lg:items-center">
+        <div>
+          <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
+            Book an intro call
+          </ButtonLink>
+        </div>
         <p>I take on a limited number of engagements at a time.</p>
       </div>
-    </section>
+    </PageHeaderIntro>
+
+    <!-- Services -->
+    <Services :services="coreServices" />
 
     <!-- Pain points -->
     <section aria-labelledby="pain-heading" class="space-y-8">
@@ -172,8 +173,7 @@ const whoIWorkWith = [
       </p>
     </section>
 
-    <!-- Services -->
-    <Services :services="coreServices" />
+
 
     <!-- Philosophy -->
     <section aria-labelledby="philosophy-heading" class="space-y-8">

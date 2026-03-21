@@ -18,21 +18,19 @@ useSeoMeta({
 
 <template>
   <PageWrapper>
-    <Breadcrumbs :items="[{ label: 'Services', to: '/services/' }, { label: service.label }]" />
+    <Breadcrumbs class="mb-0" :items="[{ label: 'Services', to: '/services/' }, { label: service.label }]" />
 
     <!-- Coming soon layout -->
     <template v-if="service.isComingSoon">
 
-      <section class="space-y-6">
-        <Pill pill="Coming Soon" />
-        <div class="prose">
-          <PageHeader>{{ service.label }}</PageHeader>
-          <p>{{ service.description }}</p>
-        </div>
-        <div class="prose">
-          <FormRailsWishList />
-        </div>
-      </section>
+      <PageHeaderIntro :content="{
+        pill: 'Coming Soon',
+        pillIcon: 'ph:clock',
+        title: service.label,
+        description: service.description
+      }">
+        <FormRailsWishList />
+      </PageHeaderIntro>
 
       <Callout>
         <h2>Who it's for</h2>
@@ -76,15 +74,14 @@ useSeoMeta({
     <!-- Free offering layout -->
     <template v-else-if="service.isFree">
 
-      <section class="space-y-6">
-        <Pill pill="Free resource" />
-        <div class="prose">
-          <PageHeader>{{ service.label }}</PageHeader>
-          <p>{{ service.tagline }}</p>
-          <FormCheckList />
-        </div>
-
-      </section>
+      <PageHeaderIntro :content="{
+        pill: 'Free resource',
+        pillIcon: 'ph:gift',
+        title: service.label,
+        description: service.description
+      }">
+        <FormCheckList />
+      </PageHeaderIntro>
 
       <Callout>
         <h2>Who it's for</h2>
@@ -152,13 +149,11 @@ useSeoMeta({
     <!-- Paid service layout -->
     <template v-else>
 
-      <!-- Hero -->
-      <section class="space-y-6">
-        <div class="prose">
-          <PageHeader>{{ service.label }}</PageHeader>
-          <p>{{ service.tagline }}</p>
-        </div>
-        <div class="not-prose space-y-3">
+      <PageHeaderIntro :content="{
+        title: service.label,
+        description: service.tagline
+      }">
+        <div class="not-prose space-y-3 mb-6">
           <dl class="flex flex-wrap gap-2 items-center">
             <div v-if="service.price"
               class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5">
@@ -177,7 +172,7 @@ useSeoMeta({
             {{ service.deliveredAs }}
           </p>
         </div>
-        <div class="not-prose flex flex-wrap gap-3 items-center">
+        <div class="flex flex-wrap gap-3 items-center">
           <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
             Book an intro call
           </ButtonLink>
@@ -185,7 +180,7 @@ useSeoMeta({
             View all services
           </ButtonLink>
         </div>
-      </section>
+      </PageHeaderIntro>
 
       <!-- Who it's for -->
       <Callout>

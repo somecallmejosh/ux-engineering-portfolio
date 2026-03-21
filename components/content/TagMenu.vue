@@ -25,7 +25,7 @@ const collectionMap = {
 
 </script>
 <template>
-  <nav aria-labelledby="tag-menu-header" class="space-y-4 mt-6 bg-white border border-neutral-200 pt-5 px-4 rounded-lg">
+  <nav aria-labelledby="tag-menu-header" class="space-y-4 bg-white border border-neutral-200 pt-5 px-4 rounded-lg m-0">
     <div class="not-prose flex flex-col xl:flex-row xl:gap-2">
       <h2 id="tag-menu-header" class="flex-1 flex items-center gap-2  text-body">
         <Icon name="ph:folders" size="1.5em" />

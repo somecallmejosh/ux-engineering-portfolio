@@ -164,13 +164,12 @@ const testimonials = [
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeader pill="Testimonials" pillIcon="ph:chats">
-        What clients and colleagues say
-      </PageHeader>
-      <p>
-        These testimonials come from clients and colleagues I've had the pleasure of working with. Their words reflect
-        what I care about most: collaboration, accessibility, and work that holds up over time.
-      </p>
+      <PageHeaderIntro :content="{
+        pill: 'Testimonials',
+        pillIcon: 'ph:chats',
+        title: 'What clients and colleagues say',
+        description: 'These testimonials come from clients and colleagues I\'ve had the pleasure of working with. Their words reflect what I care about most: collaboration, accessibility, and work that holds up over time.'
+      }" />
     </section>
     <section aria-label="Testimonials" class="gap-8 space-y-12 xl:columns-2">
       <ul v-for="(item, index) in testimonials" :key="index" class="">

@@ -40,18 +40,20 @@ You don't need prior experience with Tailwind CSS, Storybook, design tokens, or 
 
 ## Series overview
 
-| Chapter | Title                                 | What you'll build                                          |
+::OverflowX
+| Chapter | Title | What you'll build |
 | ------- | ------------------------------------- | ---------------------------------------------------------- |
-| 1       | The architecture before the code      | Nothing (decisions only)                                   |
-| 2       | Project setup                         | Empty repo with Vite, React 19, TypeScript, Tailwind CSS 4 |
-| 3       | Design tokens from scratch            | Three-tier token system with Style Dictionary and @theme   |
-| 4       | Your first layout primitive: Stack    | Stack component with token-driven spacing                  |
-| 5       | The rest of the layout system         | Box, Center, Cluster, Sidebar, Switcher, Grid, Cover       |
-| 6       | Typography: Heading, Text, and Prose  | Three typography components with long-form content rhythm  |
-| 7       | Accessible components with React Aria | Button and Input with full keyboard and ARIA support       |
-| 8       | Form components                       | Select, Checkbox, RadioGroup, Switch                       |
-| 9       | Overlays and feedback                 | Dialog, Tooltip, Alert, Badge, Card, Tabs                  |
-| 10      | Storybook as your documentation layer | Configuration, story conventions, the kitchen sink page    |
-| 11      | Testing accessible components         | Vitest, Testing Library, axe-core patterns                 |
-| 12      | Packaging and distribution            | Vite library mode, npm publishing, versioning              |
-| 13      | What comes next                       | Theming, Figma alignment, scaling the system               |
+| 1 | The architecture before the code | Nothing (decisions only) |
+| 2 | Project setup | Empty repo with Vite, React 19, TypeScript, Tailwind CSS 4 |
+| 3 | Design tokens from scratch | Three-tier token system with Style Dictionary and @theme |
+| 4 | Your first layout primitive: Stack | Stack component with token-driven spacing |
+| 5 | The rest of the layout system | Box, Center, Cluster, Sidebar, Switcher, Grid, Cover |
+| 6 | Typography: Heading, Text, and Prose | Three typography components with long-form content rhythm |
+| 7 | Accessible components with React Aria | Button and Input with full keyboard and ARIA support |
+| 8 | Form components | Select, Checkbox, RadioGroup, Switch |
+| 9 | Overlays and feedback | Dialog, Tooltip, Alert, Badge, Card, Tabs |
+| 10 | Storybook as your documentation layer | Configuration, story conventions, the kitchen sink page |
+| 11 | Testing accessible components | Vitest, Testing Library, axe-core patterns |
+| 12 | Packaging and distribution | Vite library mode, npm publishing, versioning |
+| 13 | What comes next | Theming, Figma alignment, scaling the system |
+::

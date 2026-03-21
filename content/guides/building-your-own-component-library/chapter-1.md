@@ -54,6 +54,8 @@ The layout primitives are driven by the same token system as the UI components. 
 
 Before you proceed, here's what you're committing to:
 
+::OverflowX
+
 | Decision                 | Choice                                                                              | Why                                                                                                                                                                        |
 | ------------------------ | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Framework                | React 19 + TypeScript                                                               | Largest ecosystem; TypeScript makes component APIs self-documenting                                                                                                        |
@@ -64,5 +66,7 @@ Before you proceed, here's what you're committing to:
 | Testing                  | Vitest + Testing Library                                                            | Fast; behavior-focused; accessible query selectors                                                                                                                         |
 | Build tool               | Vite                                                                                | Fast dev server; clean library build output                                                                                                                                |
 | Layout approach          | Intrinsic primitives (Every Layout-inspired)                                        | Context-independent; no media queries; token-driven                                                                                                                        |
+
+::
 
 If any of these choices don't fit your situation, substitute freely. The architecture still holds. The specific tools are less important than the separation of concerns: tokens define values, components consume tokens, layout primitives handle spatial arrangement, and tests verify behavior.

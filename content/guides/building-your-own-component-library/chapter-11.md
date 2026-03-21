@@ -208,12 +208,14 @@ npm run test:coverage       # Generate a coverage report
 
 ## Coverage targets
 
-| Category          | Target                                                      |
+::OverflowX
+| Category | Target |
 | ----------------- | ----------------------------------------------------------- |
 | Layout primitives | 100% of props, class application, custom property injection |
-| UI components     | Every keyboard path, every ARIA attribute, every state      |
-| axe-core          | Every component passes with zero violations                 |
-| Visual regression | Deferred to a future release                                |
+| UI components | Every keyboard path, every ARIA attribute, every state |
+| axe-core | Every component passes with zero violations |
+| Visual regression | Deferred to a future release |
+::
 
 Full coverage of accessible behavior is more valuable than full line coverage. A test suite that verifies every keyboard path and ARIA attribute catches the regressions that matter most to component library consumers.
 

@@ -42,17 +42,18 @@ Each chapter specifies the package versions it was written against. Build tools 
 The most expensive mistakes in a component library are architectural. A bad token structure means renaming hundreds of references later. A wrong CSS strategy means rewriting every component's styles. An accessibility layer added retroactively always costs more than one built in from the start.
 
 The guide commits to a specific set of choices before a single component is written:
-
-| Decision                 | Choice                                |
+::OverflowX
+| Decision | Choice |
 | ------------------------ | ------------------------------------- |
-| Framework                | React 19 + TypeScript                 |
-| Accessibility primitives | React Aria                            |
-| Styling                  | Tailwind CSS 4                        |
-| Token format             | DTCG JSON + Style Dictionary v4       |
-| Documentation            | Storybook 10                          |
-| Testing                  | Vitest + Testing Library + vitest-axe |
-| Build tool               | Vite                                  |
-| Layout approach          | Intrinsic primitives                  |
+| Framework | React 19 + TypeScript |
+| Accessibility primitives | React Aria |
+| Styling | Tailwind CSS 4 |
+| Token format | DTCG JSON + Style Dictionary v4 |
+| Documentation | Storybook 10 |
+| Testing | Vitest + Testing Library + vitest-axe |
+| Build tool | Vite |
+| Layout approach | Intrinsic primitives |
+::
 
 The guide explains the reasoning behind each choice and notes reasonable alternatives. The point isn't that these are the only valid options. Making explicit decisions before writing code prevents the kind of drift that turns a component library into a patchwork system.
 

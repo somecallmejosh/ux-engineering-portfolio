@@ -73,14 +73,11 @@ const resumeItems = [
     <section class="prose">
       <NuxtImg src="/images/josh-biz-cazsh.jpg" alt="Joshua Briley, UX Engineer" height="300" width="300"
         class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
-      <PageHeader>
-        About me
-      </PageHeader>
-      <p>
-        I help teams fix design systems that are inconsistent, hard to maintain, or slowing development down. I do this
-        through focused engagements: audits, component libraries, and workflow improvements, each designed to solve a
-        specific problem quickly.
-      </p>
+
+      <PageHeaderIntro :content="{
+        title: 'About me',
+        description: 'I help teams fix design systems that are inconsistent, hard to maintain, or slowing development down. I do this through focused engagements: audits, component libraries, and workflow improvements, each designed to solve a specific problem quickly.'
+      }" />
     </section>
     <section aria-labelledby="bio" class="prose max-w-full lg:mb-24">
       <split-content>

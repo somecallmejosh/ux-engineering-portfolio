@@ -54,16 +54,20 @@ useSeoMeta({
 <template>
   <PageWrapper>
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-16">
-      <div class="lg:col-span-2">
-        <div v-if="chapterData" class="prose">
+      <div class="lg:col-span-2 prose">
+        <template v-if="chapterData">
           <Breadcrumbs :items="[
             { label: 'Guides', to: '/guides/' },
             { label: guideData?.title ?? humanize(guide), to: `/guides/${guide}/` },
             { label: chapterData.title },
           ]" />
-          <PageHeader pill="Guide" pillIcon="ph:book-open" class="mb-6">
-            {{ chapterData.title }}
-          </PageHeader>
+          <PageHeaderIntro class="mb-6" :content="{
+            pill: 'Guide Chapter',
+            pillIcon: 'ph:book-open',
+            title: chapterData.title,
+            description: chapterData.description
+          }" />
+
           <TableOfContents :links="chapterData.body.toc.links" />
           <ContentRenderer :value="chapterData" />
           <nav aria-label="Chapter navigation"
@@ -80,7 +84,7 @@ useSeoMeta({
               <Icon name="ph:arrow-right" class="size-4 shrink-0" />
             </NuxtLink>
           </nav>
-        </div>
+        </template>
       </div>
       <div>
         <div class="prose">
