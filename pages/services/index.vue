@@ -161,7 +161,7 @@ const whoIWorkWith = [
             <pill :pill="step.phase" />
           </div>
           <div class="prose">
-            <h3>{{ step.title }}</h3>
+            <h3 class="text-lg">{{ step.title }}</h3>
             <p>{{ step.description }}</p>
           </div>
         </li>
@@ -272,7 +272,7 @@ const whoIWorkWith = [
           <pill pill="Full Engagement" />
           <h2 class="mt-1">{{ anchorService.label }}</h2>
           <p>{{ anchorService.description }}</p>
-          <h3>{{ anchorService.price }}</h3>
+          <h3 class="text-lg">{{ anchorService.price }}</h3>
         </div>
         <div class="pt-4">
           <ButtonLink :to="`/services/${anchorService.slug}/`">
@@ -304,13 +304,13 @@ const whoIWorkWith = [
       <ul class="grid md:grid-cols-2 gap-4 list-none p-0 m-0">
         <li v-for="service in comingSoonServices" :key="service.slug"
           class="rounded-lg border-2 border-neutral-200 bg-white p-6 space-y-2">
-          <Pill pill="Coming Soon" />
-          <h3 class="text-lg ">{{ service.label }}</h3>
-          <p class="  ">{{ service.description }}</p>
-          <NuxtLink :to="`/services/${service.slug}/`"
-            class=" font-medium underline underline-offset-2 hover:no-underline">
-            View details and join the waitlist
-          </NuxtLink>
+          <div class="prose">
+            <h3 class="text-lg">{{ service.label }}</h3>
+            <p>{{ service.description }}</p>
+            <ButtonLink :href="`/services/${service.slug}/`">
+              View details and join the waitlist
+            </ButtonLink>
+          </div>
         </li>
       </ul>
     </section>

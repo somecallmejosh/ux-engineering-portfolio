@@ -87,6 +87,9 @@ const blurAndRemoveFocus = () => {
         <main id="main-content" class="p-6 lg:px-10 lg:pt-0 pb-12 w-full max-w-6xl">
           <slot />
         </main>
+        <footer class="p-6 lg:px-10 pb-10 text-sm text-neutral-600">
+          &copy; {{ new Date().getFullYear() }} Briley Creative &middot; Joshua Briley, DBA
+        </footer>
       </div>
     </div>
     <span aria-hidden="true" role="presentation"

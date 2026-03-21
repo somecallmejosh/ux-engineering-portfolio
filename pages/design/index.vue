@@ -89,7 +89,7 @@ const mockBreadcrumbs = [
     <section aria-labelledby="section-callout" class="space-y-4">
       <h2 id="section-callout" class="font-mono    ">Callout</h2>
       <Callout>
-        <h3>Callout heading</h3>
+        <h3 class="text-lg">Callout heading</h3>
         <p>Use this for prominent in-page CTAs or highlighted announcements. Slot accepts any prose content.</p>
         <ButtonLink to="/blog/">Follow the link</ButtonLink>
       </Callout>

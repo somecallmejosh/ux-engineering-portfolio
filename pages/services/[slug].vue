@@ -118,7 +118,7 @@ useSeoMeta({
               {{ String(i + 1).padStart(2, '0') }}
             </span>
             <div class="prose">
-              <h3>{{ step.title }}</h3>
+              <h3 class="text-lg">{{ step.title }}</h3>
               <p>{{ step.description }}</p>
             </div>
           </li>
@@ -222,7 +222,7 @@ useSeoMeta({
               {{ String(i + 1).padStart(2, '0') }}
             </span>
             <div class="prose">
-              <h3>{{ step.title }}</h3>
+              <h3 class="text-lg">{{ step.title }}</h3>
               <p>{{ step.description }}</p>
             </div>
           </li>
