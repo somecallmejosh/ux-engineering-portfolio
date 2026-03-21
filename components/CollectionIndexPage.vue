@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <PageWrapper>
-    <PageHeaderIntro :content="{
+    <PageHero :content="{
       pill,
       pillIcon,
       title: pageTitle,

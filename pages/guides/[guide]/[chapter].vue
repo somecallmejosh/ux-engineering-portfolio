@@ -61,7 +61,7 @@ useSeoMeta({
             { label: guideData?.title ?? humanize(guide), to: `/guides/${guide}/` },
             { label: chapterData.title },
           ]" />
-          <PageHeaderIntro class="mb-6" :content="{
+          <PageHero class="mb-6" :content="{
             pill: 'Guide Chapter',
             pillIcon: 'ph:book-open',
             title: chapterData.title,

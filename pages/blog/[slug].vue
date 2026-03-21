@@ -5,7 +5,7 @@ const { post } = await useContentDetail('blog')
 <template>
   <PageWrapper v-if="post">
     <Breadcrumbs class="mb-0" :items="[{ label: 'Blog', to: '/blog/' }, { label: post.title }]" />
-    <PageHeaderIntro class="mb-6" :content="{
+    <PageHero class="mb-6" :content="{
       pill: 'Blog Article',
       pillIcon: 'ph:article-ny-times',
       title: post.title,
@@ -25,7 +25,7 @@ const { post } = await useContentDetail('blog')
         <TagLinks tag="blog" :collection="post.tags" title="Tags" />
         <TableOfContents :links="post.body.toc.links" />
       </div>
-    </PageHeaderIntro>
+    </PageHero>
 
     <div class="prose">
       <article>

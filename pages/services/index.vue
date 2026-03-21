@@ -87,7 +87,7 @@ const whoIWorkWith = [
 <template>
   <PageWrapper>
 
-    <PageHeaderIntro :content="{
+    <PageHero :content="{
       title: 'Design systems consulting',
       description: 'Your design system should make shipping faster. Right now, it\'s probably making it slower, creating rework, introducing accessibility risk, and adding friction between design and engineering. That\'s fixable.'
     }">
@@ -117,7 +117,7 @@ const whoIWorkWith = [
         </div>
         <p>I take on a limited number of engagements at a time.</p>
       </div>
-    </PageHeaderIntro>
+    </PageHero>
 
     <!-- Services -->
     <Services :services="coreServices" />

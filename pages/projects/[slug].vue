@@ -6,7 +6,7 @@ const { post } = await useContentDetail('projects')
   <PageWrapper v-if="post">
     <Breadcrumbs class="mb-0" :items="[{ label: 'Projects', to: '/projects/' }, { label: post.title }]" />
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-24 lg:justify-between">
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Project',
         pillIcon: 'ph:projector-screen-chart',
         title: post.title,
@@ -17,7 +17,7 @@ const { post } = await useContentDetail('projects')
           <TableOfContents :links="post.body.toc.links" />
           <ContentRenderer :value="post" />
         </article>
-      </PageHeaderIntro>
+      </PageHero>
       <div class="prose">
         <aside v-if="post.businessUrl" class="lg:flex-1 shrink-0">
           <div class="lg:sticky lg:top-16">

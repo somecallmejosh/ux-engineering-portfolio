@@ -13,7 +13,7 @@ defineProps({
 <template>
   <PageWrapper>
     <Breadcrumbs class="mb-0" :items="[{ label: breadcrumbLabel, to: breadcrumbTo }, { label: 'Tags' }]" />
-    <PageHeaderIntro :content="{
+    <PageHero :content="{
       pill,
       pillIcon,
       title: pageTitle

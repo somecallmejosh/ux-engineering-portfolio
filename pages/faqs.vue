@@ -38,7 +38,7 @@ const faqs = [
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'FAQs',
         pillIcon: 'ph:question',
         title: 'Frequently asked questions',

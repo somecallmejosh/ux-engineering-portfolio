@@ -23,14 +23,14 @@ useSeoMeta({
     <!-- Coming soon layout -->
     <template v-if="service.isComingSoon">
 
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Coming Soon',
         pillIcon: 'ph:clock',
         title: service.label,
         description: service.description
       }">
         <FormRailsWishList />
-      </PageHeaderIntro>
+      </PageHero>
 
       <Callout>
         <h2>Who it's for</h2>
@@ -74,14 +74,14 @@ useSeoMeta({
     <!-- Free offering layout -->
     <template v-else-if="service.isFree">
 
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Free resource',
         pillIcon: 'ph:gift',
         title: service.label,
         description: service.description
       }">
         <FormScorecard />
-      </PageHeaderIntro>
+      </PageHero>
 
       <Callout>
         <h2>Who it's for</h2>
@@ -149,7 +149,7 @@ useSeoMeta({
     <!-- Paid service layout -->
     <template v-else>
 
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         title: service.label,
         description: service.tagline
       }">
@@ -180,7 +180,7 @@ useSeoMeta({
             View all services
           </ButtonLink>
         </div>
-      </PageHeaderIntro>
+      </PageHero>
 
       <!-- Who it's for -->
       <Callout>

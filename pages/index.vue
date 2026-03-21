@@ -66,7 +66,7 @@ const header = {
   <div class="space-y-16">
     <div class="space-y-16">
       <section aria-describedby="page-header" class="prose">
-        <PageHeaderIntro :content="header">
+        <PageHero :content="header">
           <div class="flex flex-col sm:flex-row lg:items-center gap-2">
             <ButtonLink to="/services/scorecard/">
               Score your design system
@@ -76,7 +76,7 @@ const header = {
               Book an intro call
             </ButtonLink>
           </div>
-        </PageHeaderIntro>
+        </PageHero>
       </section>
     </div>
     <Services :services="coreServices" />

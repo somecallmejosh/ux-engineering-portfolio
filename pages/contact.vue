@@ -17,7 +17,7 @@ useSeoMeta({
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Contact Me',
         pillIcon: 'ph:address-book',
         title: 'Let\'s talk',

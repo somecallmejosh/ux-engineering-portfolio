@@ -164,7 +164,7 @@ const testimonials = [
 <template>
   <PageWrapper>
     <section aria-labelledby="page-header" class="prose">
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Testimonials',
         pillIcon: 'ph:chats',
         title: 'What clients and colleagues say',

@@ -221,7 +221,7 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
 
 <template>
   <PageWrapper>
-    <PageHeaderIntro :content="{
+    <PageHero :content="{
       pill: 'Design System Health Check',
       pillIcon: 'ph:check-square-offset',
       title: 'Design System Health Check',

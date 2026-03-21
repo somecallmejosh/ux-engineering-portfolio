@@ -34,7 +34,7 @@ useSeoMeta({
   <PageWrapper>
     <div v-if="guideData" class="prose">
       <Breadcrumbs :items="[{ label: 'Guides', to: '/guides/' }, { label: guideData.title }]" />
-      <PageHeaderIntro :content="{
+      <PageHero :content="{
         pill: 'Guide',
         pillIcon: 'ph:map-trifold',
         publishedAt: guideData.publishedAt,
