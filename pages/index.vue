@@ -162,7 +162,7 @@ const combinedPosts = [
         <p>Use the free Design System Health Check to evaluate your system and identify your biggest gaps.
         </p>
         <div class="flex gap-2 items-center">
-          <ButtonLink to="/checklist">Get the checklist</ButtonLink>
+          <ButtonLink to="/services/checklist/">Get the free checklist</ButtonLink>
         </div>
       </Callout>
     </div>

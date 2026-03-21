@@ -292,7 +292,7 @@ const whoIWorkWith = [
         </div>
         <div class="pt-4">
           <ButtonLink :to="`/services/${freeService.slug}/`">
-            Get the free checklist
+            Get the free interactive checklist
           </ButtonLink>
         </div>
       </Callout>

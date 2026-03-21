@@ -1,4 +1,6 @@
 <script setup>
+const { public: { hubspotPortalId, hubspotFormGuid } } = useRuntimeConfig()
+
 const title = "Contact Josh Briley | Design systems consulting"
 const description = "Get in touch to discuss a design system audit, component library build, or design-to-code workflow. I respond within one business day."
 useSeoMeta({
@@ -9,103 +11,7 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1744905534/josh-portfolio/assets_task_01js27bk61fwg9hrm2mdc7j4ps_img_0.webp'
 })
 
-const formData = ref({
-  name: '',
-  email: '',
-  message: '',
-  phone: '',
-  service: '',
-})
 
-const nameValid = ref(true)
-const validateName = () => {
-  nameValid.value = formValidation().name()
-}
-
-const emailValid = ref(true)
-const validateEmail = () => {
-  emailValid.value = formValidation().email()
-}
-
-const messageValid = ref(true)
-const validateMessage = () => {
-  messageValid.value = formValidation().message()
-}
-
-const formValidation = () => ({
-  name: () => {
-    if (!formData.value.name.trim()) {
-      return false
-    }
-    return true
-  },
-  email: () => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!formData.value.email.trim() || !emailPattern.test(formData.value.email)) {
-      return false
-    }
-    return true
-  },
-
-  message: () => {
-    if (!formData.value.message.trim()) {
-      return false
-    }
-    return true
-  }
-})
-
-const formSubmitted = ref(false)
-const formSubmitError = ref(false)
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
-
-const onSubmit = async (event) => {
-  event.preventDefault();
-
-  validateName();
-  validateEmail();
-  validateMessage();
-
-  if (!nameValid.value || !emailValid.value || !messageValid.value) {
-    await nextTick();
-    const invalidField = document.querySelector('.invalid');
-    invalidField?.focus()
-    return;
-  }
-
-  const postData = {
-    'form-name': 'contact',
-    ...formData.value,
-  };
-
-  try {
-    const response = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(postData),
-    });
-
-    if (response.ok) {
-      formSubmitted.value = true;
-      formSubmitError.value = false;
-      formData.value = { name: '', email: '', message: '', phone: '' };
-      nameValid.value = true;
-      emailValid.value = true;
-      messageValid.value = true;
-    } else {
-      console.error('Form submission failed:', response);
-      formSubmitError.value = true;
-    }
-  } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
-    formSubmitError.value = true;
-  }
-};
 </script>
 
 <template>
@@ -121,57 +27,7 @@ const onSubmit = async (event) => {
       <template #primary>
         <section aria-labelledby="contact-form" class="space-y-4">
           <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance mt-0">Questions?</h2>
-          <form v-show="!formSubmitted" name="contact" method="POST" novalidate data-netlify="true"
-            netlify-honeypot="bot-field" @submit.prevent="onSubmit" class="space-y-4 p-6 bg-neutral-50 rounded-lg">
-            <input type="hidden" name="form-name" value="contact" />
-            <FormField v-model="formData.name" inputId="name" name="name" label="Name" :isValid="nameValid"
-              errorMessage="Enter your name" required @blur="validateName" />
-            <div class="grid lg:grid-cols-2 gap-6">
-              <FormField v-model="formData.email" inputId="email" name="email" label="Email" type="email"
-                :isValid="emailValid" errorMessage="Enter a valid email address." required @blur="validateEmail" />
-              <div class="space-y-1">
-                <label class="" for="phone">Phone</label>
-                <input v-model="formData.phone" name="phone" type="text"
-                  class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-              </div>
-            </div>
-            <div class="space-y-1">
-              <label class="" for="service">I'm interested in</label>
-              <select v-model="formData.service" name="service"
-                class="bg-white w-full pr-4 pl-2 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <option value="" disabled>Select a service</option>
-                <option value="Design System Audit">Design System Audit</option>
-                <option value="Component Library Starter">Component Library Starter</option>
-                <option value="Design-to-Code Workflow">Design-to-Code Workflow</option>
-                <option value="other">Something else</option>
-              </select>
-            </div>
-            <FormField v-model="formData.message" inputId="message" name="message" label="Message" type="textarea"
-              :isValid="messageValid" errorMessage="Enter a brief message." required @blur="validateMessage" />
-            <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
-              <div><small>* indicates a required field</small></div>
-              <button type="submit"
-                class="submit-btn inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 justify-center">
-                Send Message</button>
-            </div>
-          </form>
-
-          <div class="animate-entry prose bg-neutral-50 p-6 rounded-lg" v-if="formSubmitted" role="alert">
-            <h2>Message received</h2>
-            <p>Thanks for reaching out. If you need to reach me urgently, you can email me at <a
-                href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or call <a
-                href="tel:8602328250">860-232-8250</a>.</p>
-            <p>Otherwise, feel free to poke around my <NuxtLink to="/blog/">blog</NuxtLink> or have a look at some of my
-              <NuxtLink to="/projects/">recent projects</NuxtLink>
-            </p>
-          </div>
-          <div class="animate-entry prose p-6 rounded-lg border border-red-100 bg-red-50/30" v-if="formSubmitError"
-            role="alert">
-            <h2>Something went wrong</h2>
-            <p>Your message couldn't be submitted. If this is urgent, email me at <a
-                href="mailto:josh@thebrileys.com">josh@thebrileys.com</a> or try the form again later.</p>
-          </div>
-
+          <FormContact />
           <callout>
             <div class="prose">
               <h2 id="social-media" class="text-lg mb-2">Social Media</h2>

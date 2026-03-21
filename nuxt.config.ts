@@ -52,6 +52,11 @@ export default defineNuxtConfig({
     public: {
       sqlPath: process.env.SQL_ALLOW_PATH,
       siteUrl: process.env.NUXT_SITE_URL ?? 'http://localhost:3000',
+      hubspotPortalId: process.env.HUBSPOT_PORTAL_ID,
+      hubspotFormGuid: process.env.HUBSPOT_FORM_GUID,
+      hubspotRailsForm: process.env.HUBSPOT_RAILS_WAITLIST_FORM,
+      hubspotDesignHealthCheckForm:
+        process.env.HUBSPOT_DESIGN_HEALTH_CHECKLIST_FORM,
     },
   },
   image: {

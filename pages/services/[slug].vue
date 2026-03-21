@@ -29,8 +29,8 @@ useSeoMeta({
           <PageHeader>{{ service.label }}</PageHeader>
           <p>{{ service.description }}</p>
         </div>
-        <div class="not-prose">
-          <ButtonLink to="/contact/">Join the waitlist</ButtonLink>
+        <div class="prose">
+          <FormRailsWishList />
         </div>
       </section>
 
@@ -81,8 +81,9 @@ useSeoMeta({
         <div class="prose">
           <PageHeader>{{ service.label }}</PageHeader>
           <p>{{ service.tagline }}</p>
+          <FormCheckList />
         </div>
-        <ChecklistSignup />
+
       </section>
 
       <Callout>
