@@ -10,6 +10,8 @@ useSeoMeta({
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317106/josh-portfolio/assets_task_01jrgnzqzhe1w9d68qj5z60crx_img_0.webp'
 })
 
+import type { TestimonialCategory } from '~/composables/useTestimonials'
+
 const allServices = await queryCollection('services').order('order', 'ASC').all()
 
 const coreServices = allServices.filter(s => !s.isFree && !s.isComingSoon && !s.isAnchor)
@@ -17,6 +19,11 @@ const anchorService = allServices.find(s => s.isAnchor)
 const freeService = allServices.find(s => s.isFree)
 const comingSoonServices = allServices.filter(s => s.isComingSoon)
 const auditService = allServices.find(s => s.slug === 'audit')
+
+const { testimonials } = useTestimonials()
+const auditTestimonial = auditService?.testimonialCategory
+  ? testimonials.find(t => t.categories.includes(auditService.testimonialCategory as TestimonialCategory)) ?? null
+  : null
 
 const painPoints = [
   {
@@ -205,14 +212,14 @@ const whoIWorkWith = [
     </section>
 
     <!-- Testimonial -->
-    <section v-if="auditService?.testimonial" aria-labelledby="testimonial-heading">
+    <section v-if="auditTestimonial" aria-labelledby="testimonial-heading">
       <div class="prose">
         <h2>What clients say</h2>
         <blockquote>
-          <p>{{ auditService.testimonial.quote }}</p>
+          <p>{{ auditTestimonial.snippet }}</p>
           <cite>
-            {{ auditService.testimonial.author }},
-            <span class="block">{{ auditService.testimonial.role }}</span>
+            {{ auditTestimonial.name }},
+            <span class="block">{{ auditTestimonial.title }}, {{ auditTestimonial.company }}</span>
           </cite>
         </blockquote>
       </div>

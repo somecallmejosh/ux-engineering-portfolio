@@ -161,26 +161,8 @@ const header = {
             <NuxtLink to="/about/" class="underline hover:no-underline">
               Learn more about me
             </NuxtLink>
-            <blockquote class="flex gap-6">
-              <NuxtImg src="/images/drew-dipasquale.jpeg" alt="Drew Dipasquale" width="128" height="128" loading="lazy"
-                class="w-16 h-16 rounded-full object-cover object-top" />
-              <div>
-                <p>Josh is a brilliant ideation partner bringing things out of others and working towards a great
-                  solution
-                </p>
-                <cite>Drew DiPasquale, Principal Researcher, HubSpot</cite>
-              </div>
-            </blockquote>
-            <blockquote class="flex gap-6">
-              <NuxtImg src="/images/welling-lagrone.jpeg" alt="Welling Lagrone" width="128" height="128" loading="lazy"
-                class="w-16 h-16 rounded-full object-cover object-top" />
-              <div>
-                <p>Josh is a strong partner willing to work across functions to design and implement the best user
-                  experience.
-                </p>
-                <cite>Welling Lagrone, Vice Principal, Triverus Consulting</cite>
-              </div>
-            </blockquote>
+            <TestimonialList />
+
             <NuxtLink to="/testimonials" class="underline hover:no-underline">View all testimonials</NuxtLink>
           </div>
         </div>

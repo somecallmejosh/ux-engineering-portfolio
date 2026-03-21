@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const route = useRoute()
 const slug = route.params.slug as string
 
@@ -7,6 +8,7 @@ const service = await queryCollection('services').path(`/services/${slug}`).firs
 if (!service) {
   throw createError({ statusCode: 404, statusMessage: 'Service not found' })
 }
+
 
 useSeoMeta({
   title: `${service.label} | Josh Briley`,
@@ -233,19 +235,10 @@ useSeoMeta({
           </section>
         </template>
         <template #secondary>
-          <!-- Testimonial -->
-          <section v-if="service.testimonial" aria-labelledby="testimonial-label">
-            <div class="prose">
-              <h2>What clients
-                say</h2>
-              <blockquote>
-                <p>{{ service.testimonial.quote }}</p>
-                <cite>
-                  {{ service.testimonial.author }},
-                  <span class="block">{{ service.testimonial.role }}</span>
-                </cite>
-              </blockquote>
-            </div>
+          <!-- Testimonials -->
+          <section class="prose">
+            <h2>What clients say</h2>
+            <TestimonialList />
           </section>
         </template>
       </SplitContent>

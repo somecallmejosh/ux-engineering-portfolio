@@ -35,8 +35,5 @@ process:
   - title: 'Handoff'
     description: 'Delivered to your repo with a walkthrough call to orient your team and answer questions about extending the system.'
 insight: 'A well-architected component library compounds over time. Every new feature ships faster. Every new developer onboards faster. Inconsistency and accessibility debt compound too, just in the wrong direction. Starting with a solid foundation is significantly cheaper than rebuilding a broken one six months later.'
-testimonial:
-  quote: "He's still the gold standard to me for building UIs with a focus on all of the diverse users who will interact with it. He's the type of leader who multiplies everyone else's effectiveness."
-  author: 'Adam Czerepinsky'
-  role: 'Senior Software Engineer, Evidation Health'
+testimonialCategory: 'component-library'
 ---

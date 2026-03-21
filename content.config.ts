@@ -71,13 +71,7 @@ export default defineContentConfig({
             }),
           )
           .optional(),
-        testimonial: z
-          .object({
-            quote: z.string(),
-            author: z.string(),
-            role: z.string(),
-          })
-          .optional(),
+        testimonialCategory: z.string().optional(),
       }),
     }),
     scorecard: defineCollection({

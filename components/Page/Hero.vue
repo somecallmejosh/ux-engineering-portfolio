@@ -1,6 +1,4 @@
 <script setup>
-import { title } from 'process';
-
 const props = defineProps({
   content: {
     pill: { type: String, default: undefined },

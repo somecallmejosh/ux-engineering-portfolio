@@ -34,8 +34,5 @@ process:
   - title: 'Implementation session'
     description: 'A 60-minute call to walk your team through the new workflow while everything is fresh. Questions answered, adoption friction removed.'
 insight: "Handoff friction is one of the most expensive invisible costs in product development. It rarely shows up in a retrospective, but it shows up in every sprint: in duplicated components, mismatched specs, and conversations that shouldn't need to happen. Fixing the workflow once eliminates a recurring cost on your team's time."
-testimonial:
-  quote: 'Working with Josh was an absolute privilege and pleasure. His strategic approach and focus on upstream requirement definition made our projects smoother and more efficient. His ability to foresee challenges and simplify implementation was invaluable.'
-  author: 'Rebecca Cachia, PMP'
-  role: 'Web Product & Project Manager, Publicis Sapient'
+testimonialCategory: 'design-to-code'
 ---

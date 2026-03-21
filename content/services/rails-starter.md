@@ -5,7 +5,7 @@ label: Rails Component Library Starter
 tagline: The same accessible, documented component library foundation, built for Rails teams without adding React.
 isFree: false
 isComingSoon: true
-description: "A component library starter for Ruby on Rails teams using ViewComponent, Stimulus, and Tailwind CSS. 20 accessible, documented components. Coming soon."
+description: 'A component library starter for Ruby on Rails teams using ViewComponent, Stimulus, and Tailwind CSS. 20 accessible, documented components. Coming soon.'
 audience: 'Rails teams building product UIs who want accessible, well-documented components without adding a JavaScript framework.'
 audienceDetail: "If you're building with Rails and want accessible UI components without adding a JavaScript framework, this gives you a reliable, server-rendered alternative."
 outcomeFull: '20 core components built with ViewComponent, progressively enhanced with Stimulus, styled with Tailwind. Accessible by default, documented with Lookbook, and ready to extend.'
@@ -18,4 +18,5 @@ includesFull:
   - 'Keyboard navigation and ARIA attributes built in throughout'
   - 'One round of revisions included'
 insight: "Most component library tooling is built for JavaScript frameworks, and Rails teams are underserved. The Rails ecosystem has matured to the point where you don't need React to build accessible, maintainable UI components. ViewComponent, Stimulus, and Tailwind make up a proven stack, and well-executed examples are still rare."
+testimonialCategory: 'ui-engineering'
 ---
