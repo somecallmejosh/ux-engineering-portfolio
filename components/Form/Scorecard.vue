@@ -30,7 +30,7 @@ const onSubmit = async () => {
     formData.value = { firstName: '', lastName: '', email: '' }
     emailValid.value = true
 
-    await navigateTo('/checklist/')
+    await navigateTo('/scorecard/')
   } catch (error) {
     console.error('Form submission failed:', error)
     formSubmitError.value = true
@@ -41,7 +41,7 @@ const onSubmit = async () => {
 <template>
   <div>
     <form v-show="!formSubmitted" novalidate @submit.prevent="onSubmit" class="space-y-4 p-6 bg-neutral-50 rounded-lg">
-      <h2 class="mt-0">Get the free interactive checklist</h2>
+      <h2 class="mt-0">Get the free interactive scorecard</h2>
       <div class="grid lg:grid-cols-2 gap-6">
         <FormField v-model="formData.firstName" inputId="firstName" name="firstName" label="First name"
           @blur="() => { }" />
@@ -53,7 +53,7 @@ const onSubmit = async () => {
       <div class="flex flex-col lg:flex-row gap-2 lg:justify-between lg:items-center">
         <button type="submit"
           class="submit-btn inline-flex items-center gap-1.5 bg-neutral-900 text-neutral-50 font-medium rounded-full px-4 py-2 hover:bg-neutral-700 justify-center">
-          Get the checklist</button>
+          Get the scorecard</button>
       </div>
 
     </form>

@@ -1,7 +1,7 @@
 ---
-slug: checklist
+slug: scorecard
 order: 10
-label: Design System Health Check
+label: Design System Scorecard
 tagline: Know where your design system stands in under 30 minutes, for free.
 deliveredAs: 'PDF checklist'
 isFree: true

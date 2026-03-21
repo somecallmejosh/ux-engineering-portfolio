@@ -80,7 +80,7 @@ useSeoMeta({
         title: service.label,
         description: service.description
       }">
-        <FormCheckList />
+        <FormScorecard />
       </PageHeaderIntro>
 
       <Callout>
@@ -238,7 +238,7 @@ useSeoMeta({
             <div class="prose">
               <h2>What clients
                 say</h2>
-              <blockquote class="space-y-4">
+              <blockquote>
                 <p>{{ service.testimonial.quote }}</p>
                 <cite>
                   {{ service.testimonial.author }},

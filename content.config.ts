@@ -63,19 +63,25 @@ export default defineContentConfig({
         includesFull: z.array(z.string()).optional(),
         tagline: z.string().optional(),
         insight: z.string().optional(),
-        process: z.array(z.object({
-          title: z.string(),
-          description: z.string(),
-        })).optional(),
-        testimonial: z.object({
-          quote: z.string(),
-          author: z.string(),
-          role: z.string(),
-        }).optional(),
+        process: z
+          .array(
+            z.object({
+              title: z.string(),
+              description: z.string(),
+            }),
+          )
+          .optional(),
+        testimonial: z
+          .object({
+            quote: z.string(),
+            author: z.string(),
+            role: z.string(),
+          })
+          .optional(),
       }),
     }),
-    checklist: defineCollection({
-      source: 'checklist/*.md',
+    scorecard: defineCollection({
+      source: 'scorecard/*.md',
       type: 'page',
       schema: z.object({
         title: z.string(),

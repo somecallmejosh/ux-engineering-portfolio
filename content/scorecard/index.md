@@ -1,16 +1,16 @@
 ---
-title: Design System Health Check
+title: Design System Scorecard
 ---
 
-## How to use this checklist
+## How to use this scorecard
 
 Rate each criterion using this scale, then total your score per section.
 
-| Rating | Points |
-|---|---|
-| Working well | 2 |
-| Partially in place | 1 |
-| Not addressed | 0 |
+| Rating             | Points |
+| ------------------ | ------ |
+| Working well       | 2      |
+| Partially in place | 1      |
+| Not addressed      | 0      |
 
 **Section score guide:** 10–12 = Strong · 6–9 = Needs attention · 0–5 = Critical gap
 
@@ -20,7 +20,7 @@ Rate each criterion using this scale, then total your score per section.
 
 - [ ] Similar UI patterns (buttons, inputs, modals) are built as shared components, not duplicated across the codebase.
 - [ ] Component APIs (props, slots, events) follow a consistent naming convention across the library.
-- [ ] Visual decisions (spacing, color, border radius) reference tokens — not hardcoded values inside components.
+- [ ] Visual decisions (spacing, color, border radius) reference tokens, not hardcoded values inside components.
 - [ ] Components render consistently across the browsers and viewports your product supports.
 - [ ] There are no one-off components that solve the same problem differently from an existing one.
 - [ ] Deprecated components have a documented migration path and are not mixed with current components in production.
@@ -49,7 +49,7 @@ Rate each criterion using this scale, then total your score per section.
 - [ ] Tokens are defined in a single source of truth (design tool, JSON file, or equivalent) and synced to code.
 - [ ] Token names follow a consistent, predictable pattern (for example: `category/property/variant`) with no abbreviations or ambiguity.
 - [ ] Semantic tokens (for example: `color.text.primary`) reference primitive tokens (for example: `color.gray.900`), not raw values.
-- [ ] Token names describe intent, not value — `color.brand-primary` rather than `color.blue`.
+- [ ] Token names describe intent, not value: `color.brand-primary` rather than `color.blue`.
 - [ ] Tokens cover every design decision that varies across themes, modes, or brands.
 - [ ] There is no place in the codebase where a token value is redefined inside a component rather than referenced.
 
@@ -62,7 +62,7 @@ Rate each criterion using this scale, then total your score per section.
 - [ ] Every component has a working example showing its most common use case.
 - [ ] Props, slots, and events are documented with types and plain-language descriptions.
 - [ ] Do/don't guidance exists for components that are commonly misused or have non-obvious behavior.
-- [ ] Documentation is updated as part of the development workflow — not added retroactively after the fact.
+- [ ] Documentation is updated as part of the development workflow, not added retroactively.
 - [ ] A getting-started guide lets a new developer install and use the library without asking anyone for help.
 - [ ] Keyboard interactions, ARIA attributes, and screen reader behavior are documented per component.
 
@@ -72,7 +72,7 @@ Rate each criterion using this scale, then total your score per section.
 
 ## Section 5: Handoff process
 
-- [ ] Design files use components from the shared library — not custom one-offs that don't exist in code.
+- [ ] Design files use components from the shared library, not custom one-offs that don't exist in code.
 - [ ] Designers and developers use the same token names to describe design decisions.
 - [ ] There is a documented process for how new components move from design to code.
 - [ ] Developers do not regularly rebuild components that already exist in the library.
@@ -85,14 +85,14 @@ Rate each criterion using this scale, then total your score per section.
 
 ## Total score
 
-| Section | Score | Out of |
-|---|---|---|
-| 1. Component consistency | | 12 |
-| 2. Accessibility | | 16 |
-| 3. Token architecture | | 12 |
-| 4. Documentation | | 12 |
-| 5. Handoff process | | 12 |
-| **Total** | | **64** |
+| Section                  | Score | Out of |
+| ------------------------ | ----- | ------ |
+| 1. Component consistency |       | 12     |
+| 2. Accessibility         |       | 16     |
+| 3. Token architecture    |       | 12     |
+| 4. Documentation         |       | 12     |
+| 5. Handoff process       |       | 12     |
+| **Total**                |       | **64** |
 
 **Score guide:** 52–64 = Healthy · 32–51 = Functional but inconsistent · 0–31 = Significant investment needed
 

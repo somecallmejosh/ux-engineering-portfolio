@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'netlify',
     prerender: {
-      routes: ['/checklist/'],
+      routes: ['/scorecard/'],
     },
     routeRules: {
       '/blog/categories/**': {
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       '/dev-notes/categories/**': {
         redirect: { to: '/dev-notes/tags/**/', statusCode: 301 },
       },
-      '/checklist/': { sitemap: false },
+      '/scorecard/': { sitemap: false },
       '/design/': { sitemap: false, robots: false },
       '/_fonts/**': {
         headers: { 'cache-control': 'public, max-age=31536000, immutable' },

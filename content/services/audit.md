@@ -34,7 +34,7 @@ process:
     description: 'You receive a PDF report with every finding ranked by severity and a specific, actionable remediation recommendation for each.'
   - title: 'Debrief'
     description: 'A 60-minute call to walk through the findings together. You leave with a clear picture of what to fix first and why.'
-insight: 'Accessibility violations carry real legal risk. Web Content Accessibility Guidelines (WCAG) compliance is mandated in many jurisdictions and actively litigated. Inconsistent component libraries slow every sprint and create rework that never shows up in a retrospective. The audit pays for itself if it prevents one accessibility incident or one week of duplicated effort.'
+insight: "Most accessibility violations in a web product aren't random. They come from the same small set of structural problems in the component library underneath it: a button that was never built for keyboard navigation, a color token that hardcodes a value instead of referencing a semantic decision, a modal that opens focus into dead space. When those components get reused across a product, so do the violations. That's what this audit is designed to find. Not just a list of WCAG failures, but the component-level and system-level decisions that generate them at scale."
 testimonial:
   quote: 'Josh is an outstanding front-end engineer with incredible focus and discipline when it comes to developing effective, functional, and accessible front ends. He is a strong partner willing to work across functions to design and implement the best user experience.'
   author: 'Welling LaGrone'

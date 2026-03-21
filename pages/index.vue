@@ -56,8 +56,8 @@ const combinedPosts = [
 ].filter(Boolean)
 
 const header = {
-  title: "Fix inconsistent UI and replace it with a system your team can rely on",
-  description: "I help product teams turn hard-to-maintain web application interfaces into scalable component systems, with accessibility built in from the start.",
+  title: "Fix inconsistent UI and replace it with a system your team can rely on.",
+  description: "I help product teams turn hard-to-maintain interfaces into scalable component systems, with accessibility built in from the start. Most engagements start with a free scorecard.",
 }
 
 </script>
@@ -68,8 +68,8 @@ const header = {
       <section aria-describedby="page-header" class="prose">
         <PageHeaderIntro :content="header">
           <div class="flex flex-col sm:flex-row lg:items-center gap-2">
-            <ButtonLink to="/services/">
-              View services
+            <ButtonLink to="/services/scorecard/">
+              Score your design system
             </ButtonLink>
             <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow"
               variant="inverse">
@@ -80,10 +80,37 @@ const header = {
       </section>
     </div>
     <Services :services="coreServices" />
-    <div class="grid xl:grid-cols-2 gap-12">
-      <div>
+    <SplitContent class="lg:items-center">
+      <template #primary>
         <div class="prose">
-          <h2>If your team is dealing with:</h2>
+          <h2>Not sure where your design system stands?</h2>
+          <p>
+            The <strong>free Design System Scorecard</strong> is a 32-point interactive assessment covering the five
+            dimensions of a
+            healthy
+            design system: component consistency, accessibility, token architecture, documentation, and handoff process.
+            <strong>Answer each question and get a real-time score</strong> that shows you exactly where your system is
+            healthy and where
+            it's
+            creating risk.
+          </p>
+          <p>
+            Most paid engagements start here.
+          </p>
+          <ButtonLink to="/services/scorecard/">
+            Score your design system
+          </ButtonLink>
+        </div>
+      </template>
+      <template #secondary>
+        <NuxtImg src="/images/active-scorecard.png" alt="Preview of the design system scorecard" width="576"
+          height="552" class="rounded-lg object-cover object-top" />
+      </template>
+    </SplitContent>
+    <SplitContent>
+      <template #primary>
+        <div class="prose">
+          <h2>Signs your design system isn't working:</h2>
           <ul>
             <li>UI that looks different across products or teams</li>
             <li>Components that are duplicated or hard to reuse</li>
@@ -91,79 +118,100 @@ const header = {
             <li>A design system that exists but no one really follows</li>
           </ul>
           <p class="text-pretty">You don't need more components. You need a system that actually works.</p>
-        </div>
-      </div>
-      <div class="lg:flex gap-6">
-        <NuxtImg src="/images/josh-biz-cazsh.jpg" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300"
-          width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
-        <div class="prose">
-          <h2>Who am I?</h2>
-          <p>I'm a design systems engineer with 20 years of experience helping teams build consistent, accessible
-            interfaces, and keep them that way as their products grow.</p>
+
+          <h3 class="text-lg">Accessibility problems start in your component library.</h3>
           <p>
-            I've built component libraries and design systems for insurance platforms, media brands, and professional
-            sports
-            organizations.
+            When a button component is built without keyboard support, that violation exists everywhere the button is
+            used. When color contrast is hardcoded instead of managed through tokens, every team pulling from your
+            library
+            inherits the same failure. When there's no documented handoff process, developers rebuild components that
+            already exist, each time introducing new risk.
           </p>
-          <NuxtLink to="/about/" class="underline hover:no-underline">
-            Learn more about me
-          </NuxtLink>
+
+          <p>
+            This is how accessibility debt scales. Not one bug at a time, but one component at a time, replicated across
+            your entire product. The legal exposure is real: over 4,000 Americans with Disabilities Act (ADA) website
+            lawsuits were filed in 2024, and more than two-thirds targeted companies with less than $25 million in
+            annual revenue. But a lawsuit is a symptom. The underlying cause is a component system that was never
+            structured to enforce consistency or compliance in the first place.
+          </p>
+
+          <p>
+            An audit finds the structural problems so your team fixes the cause, not just the symptoms.
+          </p>
+
+          <ButtonLink to="/services/audit/">
+            See what the audit covers
+          </ButtonLink>
         </div>
-      </div>
-    </div>
-    <!-- Testimonials -->
-    <div class="space-y-6">
-      <div class="grid xl:grid-cols-2 gap-6">
-        <div class="prose">
-          <blockquote class="flex gap-6">
-            <NuxtImg src="/images/drew-dipasquale.jpeg" alt="Drew Dipasquale" width="128" height="128" loading="lazy"
-              class="w-16 h-16 rounded-full object-cover object-top" />
-            <div>
-              <p>Josh is a brilliant ideation partner bringing things out of others and working towards a great
-                solution
-              </p>
-              <cite>Drew DiPasquale, Principal Researcher, HubSpot</cite>
-            </div>
-          </blockquote>
+      </template>
+      <template #secondary>
+        <div class="gap-6">
+          <NuxtImg src="/images/josh-biz-cazsh.jpg" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300"
+            width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
+          <div class="prose">
+            <h2>Who am I?</h2>
+            <p>I'm a design systems engineer with 20 years of experience helping teams build consistent, accessible
+              interfaces, and keep them that way as their products grow.</p>
+            <p>
+              I've built component libraries and design systems for insurance platforms, media brands, and professional
+              sports
+              organizations.
+            </p>
+            <NuxtLink to="/about/" class="underline hover:no-underline">
+              Learn more about me
+            </NuxtLink>
+            <blockquote class="flex gap-6">
+              <NuxtImg src="/images/drew-dipasquale.jpeg" alt="Drew Dipasquale" width="128" height="128" loading="lazy"
+                class="w-16 h-16 rounded-full object-cover object-top" />
+              <div>
+                <p>Josh is a brilliant ideation partner bringing things out of others and working towards a great
+                  solution
+                </p>
+                <cite>Drew DiPasquale, Principal Researcher, HubSpot</cite>
+              </div>
+            </blockquote>
+            <blockquote class="flex gap-6">
+              <NuxtImg src="/images/welling-lagrone.jpeg" alt="Welling Lagrone" width="128" height="128" loading="lazy"
+                class="w-16 h-16 rounded-full object-cover object-top" />
+              <div>
+                <p>Josh is a strong partner willing to work across functions to design and implement the best user
+                  experience.
+                </p>
+                <cite>Welling Lagrone, Vice Principal, Triverus Consulting</cite>
+              </div>
+            </blockquote>
+            <NuxtLink to="/testimonials" class="underline hover:no-underline">View all testimonials</NuxtLink>
+          </div>
         </div>
-        <div class="prose">
-          <blockquote class="flex gap-6">
-            <NuxtImg src="/images/welling-lagrone.jpeg" alt="Welling Lagrone" width="128" height="128" loading="lazy"
-              class="w-16 h-16 rounded-full object-cover object-top" />
-            <div>
-              <p>Josh is a strong partner willing to work across functions to design and implement the best user
-                experience.
-              </p>
-              <cite>Welling Lagrone, Vice Principal, Triverus Consulting</cite>
-            </div>
-          </blockquote>
-        </div>
-      </div>
-      <NuxtLink to="/testimonials" class="underline hover:no-underline">View all testimonials</NuxtLink>
-    </div>
+      </template>
+    </SplitContent>
+
+
+
     <div class="grid lg:grid-cols-3 gap-6">
       <Callout>
         <h2>How I build component systems</h2>
         <p>I've documented my approach to building scalable, accessible component libraries from scratch to production.
         </p>
         <div class="flex gap-2 items-center">
-          <ButtonLink to="/guides/building-your-own-component-library/">Read the guide</ButtonLink>
+          <ButtonLink variant="inverse" to="/guides/building-your-own-component-library/">Read the guide</ButtonLink>
         </div>
       </Callout>
       <Callout>
         <h2 id="get-started">If your UI is slowing your team down, let's fix it.</h2>
-        <p>Book a 30-minute intro call. No pressure. You'll leave with a clear understanding of what's not working—and
+        <p>Book a 30-minute intro call. No pressure. You'll leave with a clear understanding of what's not working, and
           what to do next.</p>
-        <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
+        <ButtonLink variant="inverse" to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow">
           Book an intro call
         </ButtonLink>
       </Callout>
       <Callout>
-        <h2>Not ready to commit? Start here.</h2>
-        <p>Use the free Design System Health Check to evaluate your system and identify your biggest gaps.
+        <h2>Assess your design system for free</h2>
+        <p>Use the free Design System Scorecard to evaluate your system and identify your biggest gaps.
         </p>
         <div class="flex gap-2 items-center">
-          <ButtonLink to="/services/checklist/">Get the free checklist</ButtonLink>
+          <ButtonLink variant="inverse" to="/services/scorecard/">Score your design system</ButtonLink>
         </div>
       </Callout>
     </div>

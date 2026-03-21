@@ -43,25 +43,25 @@ content/services/
 ```yaml
 slug: audit
 label: Design System Audit
-price: "$1,500"
-timeline: "5 business days"
-deliveredAs: "PDF report and 60-minute debrief call."
+price: '$1,500'
+timeline: '5 business days'
+deliveredAs: 'PDF report and 60-minute debrief call.'
 isFree: false
 isComingSoon: false
-description: "SEO meta description for this service page"
-audience: "..."
-audienceDetail: "..."
-outcome: "..."           # short (used on teaser card)
-outcomeFull: "..."       # long (used on detail page)
-includes:                # short list (teaser card)
-  - "..."
-includesFull:            # long list (detail page)
-  - "..."
-insight: "..."           # "Why teams pay for this"
+description: 'SEO meta description for this service page'
+audience: '...'
+audienceDetail: '...'
+outcome: '...' # short (used on teaser card)
+outcomeFull: '...' # long (used on detail page)
+includes: # short list (teaser card)
+  - '...'
+includesFull: # long list (detail page)
+  - '...'
+insight: '...' # "Why teams pay for this"
 testimonial:
-  quote: "..."
-  author: "..."
-  role: "..."
+  quote: '...'
+  author: '...'
+  role: '...'
 ```
 
 Free/coming-soon variants omit price and include `isFree: true` or `isComingSoon: true`.
@@ -70,10 +70,10 @@ Free/coming-soon variants omit price and include `isFree: true` or `isComingSoon
 
 ## Routing changes
 
-| Before | After |
-|--------|-------|
-| `pages/services.vue` | `pages/services/index.vue` |
-| _(none)_ | `pages/services/[slug].vue` |
+| Before               | After                       |
+| -------------------- | --------------------------- |
+| `pages/services.vue` | `pages/services/index.vue`  |
+| _(none)_             | `pages/services/[slug].vue` |
 
 ---
 
@@ -92,12 +92,12 @@ Free/coming-soon variants omit price and include `isFree: true` or `isComingSoon
 
 ## Component changes
 
-| Component | Change |
-|-----------|--------|
-| `components/Services.vue` | Strip `full` variant; teaser-only; card links to `/services/[slug]/` |
-| `composables/useServices.ts` | **Retire** — data moves to Markdown front-matter |
-| _(new)_ | Checklist section component on index page |
-| _(new)_ | Rails stub card |
+| Component                    | Change                                                               |
+| ---------------------------- | -------------------------------------------------------------------- |
+| `components/Services.vue`    | Strip `full` variant; teaser-only; card links to `/services/[slug]/` |
+| `composables/useServices.ts` | **Retire** — data moves to Markdown front-matter                     |
+| _(new)_                      | Checklist section component on index page                            |
+| _(new)_                      | Rails stub card                                                      |
 
 ---
 
@@ -108,7 +108,7 @@ Free/coming-soon variants omit price and include `isFree: true` or `isComingSoon
 3. [x] Rename `pages/services.vue` → `pages/services/index.vue`, update layout to match new index structure
 4. [x] Create `pages/services/[slug].vue` detail page
 5. [x] Update `components/Services.vue` — teaser-only, add links
-6. [x] Checklist section on index (links to `/services/checklist/`)
+6. [x] Design System Scorecard section on index (links to `/services/scorecard/`)
 7. [x] Rails stub card on index (links to `/services/rails-starter/`)
 8. [x] Retire `composables/useServices.ts`
 9. [ ] Verify all routes, SEO meta, and breadcrumbs
