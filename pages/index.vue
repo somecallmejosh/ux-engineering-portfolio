@@ -56,8 +56,8 @@ const combinedPosts = [
 ].filter(Boolean)
 
 const header = {
-  title: "Fix inconsistent UI and replace it with a system your team can rely on.",
-  description: "I help product teams turn hard-to-maintain interfaces into scalable component systems, with accessibility built in from the start. Most engagements start with a free scorecard.",
+  title: "I fix inconsistent UI systems so teams can ship faster and with fewer mistakes.",
+  description: "If your design system feels inconsistent, components don’t match designs, and accessibility keeps getting pushed aside, I fix that.",
 }
 
 </script>
@@ -110,7 +110,7 @@ const header = {
     <SplitContent>
       <template #primary>
         <div class="prose">
-          <h2>Signs your design system isn't working:</h2>
+          <h2>If this sounds familiar, your system isn't working:</h2>
           <ul>
             <li>UI that looks different across products or teams</li>
             <li>Components that are duplicated or hard to reuse</li>
@@ -119,7 +119,7 @@ const header = {
           </ul>
           <p class="text-pretty">You don't need more components. You need a system that actually works.</p>
 
-          <h3 class="text-lg">Accessibility problems start in your component library.</h3>
+          <h3 class="text-lg">Accessibility issues don't start in QA. They start in your components.</h3>
           <p>
             When a button component is built without keyboard support, that violation exists everywhere the button is
             used. When color contrast is hardcoded instead of managed through tokens, every team pulling from your
@@ -146,25 +146,17 @@ const header = {
         </div>
       </template>
       <template #secondary>
-        <div class="gap-6">
-          <NuxtImg src="/images/josh-biz-cazsh.jpg" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300"
-            width="300" class="size-20 xl:size-28 rounded-full shrink-0" />
-          <div class="prose">
-            <h2>Who am I?</h2>
-            <p>I'm a design systems engineer with 20 years of experience helping teams build consistent, accessible
-              interfaces, and keep them that way as their products grow.</p>
-            <p>
-              I've built component libraries and design systems for insurance platforms, media brands, and professional
-              sports
-              organizations.
-            </p>
-            <NuxtLink to="/about/" class="underline hover:no-underline">
-              Learn more about me
-            </NuxtLink>
-            <TestimonialList />
-
-            <NuxtLink to="/testimonials" class="underline hover:no-underline">View all testimonials</NuxtLink>
+        <div class="space-y-6">
+          <div class="gap-6 flex">
+            <NuxtImg src="/images/josh-biz-cazsh.jpg" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300"
+              width="300" class="size-20 rounded-full shrink-0 -translate-y-4" />
+            <div class="prose">
+              <h2>20 years of experience across insurance, media, and professional sports.</h2>
+              <p>I design and build UI systems that stay consistent, accessible, and usable as products grow.</p>
+            </div>
           </div>
+          <TestimonialList />
+          <NuxtLink to="/testimonials" class="underline hover:no-underline">View all testimonials</NuxtLink>
         </div>
       </template>
     </SplitContent>

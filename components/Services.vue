@@ -19,9 +19,7 @@ const phases = [
 <template>
   <section class="space-y-8">
     <div class="prose">
-      <h2>A phased path to a better design system</h2>
-      <p>Most teams start with an audit, then move into a component library or workflow improvements based on what we
-        find.</p>
+      <h2>Most design systems don't fail from lack of effort. They fail from lack of structure.</h2>
     </div>
 
     <ul class="not-prose grid md:grid-cols-3 gap-6 list-none p-0 m-0">

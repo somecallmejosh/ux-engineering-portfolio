@@ -2,7 +2,7 @@
 slug: audit
 order: 1
 label: Design System Audit
-tagline: Before building anything new, understand what's broken.
+tagline: "Before you build anything new, you need to understand what's actually broken."
 price: '$2,000'
 timeline: 'Delivered in 5 business days'
 deliveredAs: 'PDF report and 60-minute debrief call.'
