@@ -10,18 +10,16 @@ interface Service {
 defineProps<{ services: Service[] }>()
 
 const phases = [
-  { label: 'Phase 1 — Audit', summary: 'Find the problems.' },
-  { label: 'Phase 2 — Build', summary: 'Fix the foundation.' },
-  { label: 'Phase 3 — Align', summary: 'Fix how the team works.' },
+  {
+    label: 'Audit', summary: 'Find what\'s actually broken.'
+  },
+  { label: 'Build', summary: 'Fix the foundation.' },
+  { label: 'Align', summary: 'Fix how the team works.' },
 ]
 </script>
 
 <template>
   <section class="space-y-8">
-    <div class="prose">
-      <h2>Most design systems don't fail from lack of effort. They fail from lack of structure.</h2>
-    </div>
-
     <ul class="not-prose grid md:grid-cols-3 gap-6 list-none p-0 m-0">
       <li v-for="(service, index) in services" :key="service.slug" class="service-card rounded-lg border-2 p-6"
         :class="index === 0 ? 'border-blue-200 bg-blue-50/50' : 'border-neutral-200 bg-white'">
@@ -39,15 +37,6 @@ const phases = [
             </span>
           </h4>
           <p v-if="service.tagline" class="service-tagline">{{ service.tagline }}</p>
-          <p v-if="index === 0">
-            Before building anything new, you need to understand what's actually broken. In five business days, you get
-            a clear, prioritized plan to fix your system.
-          </p>
-        </div>
-
-        <div class="flex items-baseline gap-3">
-          <span v-if="service.price" class="price text-3xl">{{ service.price }}</span>
-          <span v-if="service.timeline">· {{ service.timeline }}</span>
         </div>
 
         <div>

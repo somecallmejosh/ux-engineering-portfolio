@@ -142,6 +142,7 @@ const resumeItems = [
     </section>
 
 
+    <TestimonialList class="grid lg:grid-cols-2 gap-6" />
 
     <section aria-labelledby="mission" class="prose max-w-full lg:mb-24">
       <split-content>
@@ -174,14 +175,7 @@ const resumeItems = [
     </section>
 
 
-    <Callout>
-      <h2>If your UI is slowing your team down, let's fix it.</h2>
-      <p>
-        I offer fixed-scope engagements for audits, component libraries, and workflow improvements.
-      </p>
-      <ButtonLink to="/services/">
-        View services & pricing
-      </ButtonLink>
-    </Callout>
+
+    <CtaCallAndScoreboard />
   </PageWrapper>
 </template>

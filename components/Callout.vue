@@ -6,7 +6,7 @@
 -->
 <template>
   <div class="bg-blue-50/50 px-4 py-6 lg:px-6 rounded-lg border-l-4 border-blue-300/50 prose">
-    <div class="prose prose-headings: prose-p: prose-p:">
+    <div class="prose">
       <slot />
     </div>
   </div>

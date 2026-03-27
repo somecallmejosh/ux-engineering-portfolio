@@ -12,32 +12,16 @@ useSeoMeta({
 
 import type { TestimonialCategory } from '~/composables/useTestimonials'
 
-const allServices = await queryCollection('services').order('order', 'ASC').all()
-
-const coreServices = allServices.filter(s => !s.isFree && !s.isComingSoon && !s.isAnchor)
-const anchorService = allServices.find(s => s.isAnchor)
-const freeService = allServices.find(s => s.isFree)
-const comingSoonServices = allServices.filter(s => s.isComingSoon)
-const auditService = allServices.find(s => s.slug === 'audit')
-
-const { testimonials } = useTestimonials()
-const auditTestimonial = auditService?.testimonialCategory
-  ? testimonials.find(t => t.categories.includes(auditService.testimonialCategory as TestimonialCategory)) ?? null
-  : null
-
 const painPoints = [
   {
-    icon: 'ph:arrows-counter-clockwise',
     title: 'Designers and engineers solve the same problems every sprint.',
     description: 'No shared source of truth means every new feature restarts from scratch.',
   },
   {
-    icon: 'ph:warning-circle',
     title: 'Accessibility issues accumulate until they become a legal liability.',
-    description: 'WCAG compliance is mandated in many jurisdictions and actively litigated.',
+    description: 'Web Content Accessibility Guidelines (WCAG) compliance is mandated in many jurisdictions and actively litigated.',
   },
   {
-    icon: 'ph:git-branch',
     title: 'The system exists, but nobody uses it consistently.',
     description: 'When documentation doesn\'t match reality, components get forked instead of extended.',
   },
@@ -47,48 +31,26 @@ const engagementSteps = [
   {
     phase: 'Phase 1',
     title: 'Audit',
-    description: 'Find the problems. Understand what\'s inconsistent, where accessibility risk lives, and what\'s slowing the team down.',
+    link: '/services/audit/',
+    cta: 'How the audit can help',
+    description: 'Before you build anything new, you need to understand what\'s actually broken.',
   },
   {
     phase: 'Phase 2',
     title: 'Build',
-    description: 'Fix the foundation. A component library built to your tokens, accessible out of the box, documented and ready to extend.',
+    link: '/services/starter/',
+    cta: 'How the starter kit can help',
+    description: 'Stabilize and scale your UI system with a foundation built to last, not patched to survive.',
   },
   {
     phase: 'Phase 3',
     title: 'Align',
-    description: 'Fix how the team works. A clear, repeatable handoff process that removes the friction between design and engineering.',
+    link: '/services/workflow/',
+    cta: 'How the workflow can help',
+    description: 'Reduce handoff friction and rework. Fix the process once so your team stops losing time to it every sprint.',
   },
 ]
 
-const principles = [
-  {
-    icon: 'ph:funnel-simple',
-    title: 'Simplicity beats flexibility.',
-    description: 'Flexible systems sound good, but they create inconsistency fast.',
-  },
-  {
-    icon: 'ph:lock-simple',
-    title: 'Constraints create consistency.',
-    description: 'If everything is allowed, nothing is consistent.',
-  },
-  {
-    icon: 'ph:wheelchair',
-    title: 'Accessibility must be built in, not layered on.',
-    description: 'If it\'s optional, it won\'t happen.',
-  },
-  {
-    icon: 'ph:users-three',
-    title: 'A system isn\'t real until it\'s used.',
-    description: 'Documentation and Storybook don\'t matter if developers avoid them.',
-  },
-]
-
-const whoIWorkWith = [
-  'Have an existing product that is actively being shipped',
-  'Feel the pain of UI inconsistency, slow development, or repeated accessibility rework',
-  'Want a system that works, not just a library that exists',
-]
 </script>
 
 <template>
@@ -96,25 +58,8 @@ const whoIWorkWith = [
 
     <PageHero :content="{
       title: 'Design systems consulting',
-      description: 'Your design system should make shipping faster. Right now, it\'s probably making it slower, creating rework, introducing accessibility risk, and adding friction between design and engineering. That\'s fixable.'
+      description: 'Your design system should make shipping faster. Right now, it\'s probably making it slower, creating rework, creating accessibility risk, and adding friction between design and engineering. That\'s fixable.'
     }">
-      <dl class="flex flex-wrap gap-2 items-center not-prose mb-6">
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
-          <Icon name="ph:clock" size="1rem" aria-hidden="true" class="" />
-          <dt class="sr-only">Audit timeline</dt>
-          <dd class="text-sm">Audit delivered in 5 days</dd>
-        </div>
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
-          <Icon name="ph:currency-dollar" size="1rem" aria-hidden="true" class="" />
-          <dt class="sr-only">Starting price</dt>
-          <dd class="text-sm">Starting at $2,000</dd>
-        </div>
-        <div class="flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-2 py-1">
-          <Icon name="ph:globe" size="1rem" aria-hidden="true" class="" />
-          <dt class="sr-only">Remote status</dt>
-          <dd class="text-sm">Fully remote &amp; async-friendly</dd>
-        </div>
-      </dl>
 
       <div class="flex flex-col lg:flex-row gap-6 lg:items-center">
         <div>
@@ -126,36 +71,25 @@ const whoIWorkWith = [
       </div>
     </PageHero>
 
-    <!-- Services -->
-    <Services :services="coreServices" />
-
     <!-- Pain points -->
-    <section aria-labelledby="pain-heading" class="space-y-8">
+    <section class="space-y-8">
       <div class="prose">
-        <h2 id="pain-heading">Signs your design system needs attention</h2>
+        <h2>Signs your design system needs attention</h2>
         <p>These aren't edge cases. They're the norm for teams that have been shipping features without a stable system
           underneath.</p>
       </div>
-      <ul class="not-prose grid sm:grid-cols-3 gap-4 list-none p-0 m-0">
-        <li v-for="point in painPoints" :key="point.title"
-          class="rounded-lg border-2 border-neutral-200 bg-white p-5 flex gap-4 items-start">
-          <div class="flex-none size-10 rounded-full bg-red-50 flex items-center justify-center" aria-hidden="true">
-            <Icon :name="point.icon" size="1.25rem" class="text-red-500" />
-          </div>
-          <div class="space-y-1.5 ">
-            <p class="">{{ point.title }}</p>
-            <p class="">{{ point.description }}</p>
-          </div>
+      <ul class="not-prose grid lg:grid-cols-3 gap-6 list-none p-0 m-0 lg:divide-x lg:divide-neutral-200">
+        <li v-for="point in painPoints" :key="point.title" class="bg-white flex flex-col gap-4 lg:pr-4 space-y-2">
+          <p class="font-semibold">{{ point.title }}</p>
+          <p class="text-sm">{{ point.description }}</p>
         </li>
       </ul>
     </section>
 
-
-
     <!-- Typical engagement path -->
-    <section aria-labelledby="engagement-path-heading" class="space-y-8">
+    <section class="space-y-8">
       <div class="prose">
-        <h2 id="engagement-path-heading">A typical engagement</h2>
+        <h2>A typical engagement</h2>
         <p>
           The audit identifies gaps and prioritizes fixes. From there, we either build a component library foundation,
           improve the design-to-code workflow, or both, depending on what the audit surfaces.
@@ -170,168 +104,20 @@ const whoIWorkWith = [
           </div>
           <div class="prose">
             <h3 class="text-lg">{{ step.title }}</h3>
-            <p>{{ step.description }}</p>
+            <p class="mb-4">{{ step.description }}</p>
+            <ButtonLink :to="step.link">
+              {{ step.cta }}
+            </ButtonLink>
+
           </div>
         </li>
       </ol>
 
-      <p class="">
-        <strong>The goal</strong>: a system your team actually uses.
-      </p>
-    </section>
-
-
-
-    <!-- Philosophy -->
-    <section aria-labelledby="philosophy-heading" class="space-y-8">
-      <div class="prose">
-        <h2 id="philosophy-heading">How I think about design systems</h2>
-        <p>Most design systems are over-engineered and underused. Here's my approach to every engagement:</p>
-      </div>
-
-      <ul class="not-prose grid sm:grid-cols-2 gap-4 list-none mb-4">
-        <li v-for="principle in principles" :key="principle.title"
-          class="rounded-lg border-2 border-neutral-200 bg-white p-5 flex gap-4 items-start">
-          <div class="flex-none size-10 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
-            <Icon :name="principle.icon" size="1.25rem" class="text-blue-700" />
-          </div>
-          <div class="space-y-1">
-            <p class="  m-0">{{ principle.title }}</p>
-            <p class="   m-0">{{ principle.description }}</p>
-          </div>
-        </li>
-      </ul>
-
-      <p class="prose">
-        My approach is fully documented. You can see exactly how I think and build before we ever work together.
-        <NuxtLink to="/guides/building-your-own-component-library/"
-          class="font-medium underline underline-offset-2 hover:no-underline ml-1">
-          Read the component library guide
-        </NuxtLink>
-      </p>
-    </section>
-
-    <!-- Testimonial -->
-    <section v-if="auditTestimonial" aria-labelledby="testimonial-heading">
-      <div class="prose">
-        <h2>What clients say</h2>
-        <blockquote>
-          <p>{{ auditTestimonial.snippet }}</p>
-          <cite>
-            {{ auditTestimonial.name }},
-            <span class="block">{{ auditTestimonial.title }}, {{ auditTestimonial.company }}</span>
-          </cite>
-        </blockquote>
-      </div>
-    </section>
-
-
-
-    <div class="grid lg:grid-cols-2 gap-6">
-      <!-- Ongoing support -->
-      <section aria-labelledby="ongoing-support-heading"
-        class="not-prose flex gap-5 items-start rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8">
-        <div class="flex-none size-12 rounded-full bg-blue-50 flex items-center justify-center" aria-hidden="true">
-          <Icon name="ph:clock-countdown" size="1.5rem" class="text-blue-700" />
-        </div>
-        <div class="space-y-2">
-          <div class="flex flex-wrap items-center gap-2">
-            <h2 id="ongoing-support-heading" class="text-lg ">Ongoing support</h2>
-            <pill pill="Optional" />
-          </div>
-          <p>
-            After the initial engagement, I offer limited ongoing support to help your team extend the system, review
-            new
-            components, and maintain accessibility and consistency.
-          </p>
-          <p>
-            This is available as a small monthly retainer for teams that want continued guidance.
-          </p>
-        </div>
-      </section>
-
-      <!-- Who I work with -->
-      <section aria-labelledby="who-heading"
-        class="not-prose rounded-lg border-2 border-neutral-200 bg-white p-6 lg:p-8 space-y-6">
-        <div class="space-y-2">
-          <h2 id="who-heading" class="text-xl ">Who I work best with</h2>
-          <p class="">I focus on teams that:</p>
-        </div>
-        <ul class="space-y-4 list-none p-0 m-0">
-          <li v-for="item in whoIWorkWith" :key="item" class="flex items-start gap-3">
-            <Icon name="ph:check-circle" size="1.25rem" class="text-blue-400 flex-none mt-0.5" aria-hidden="true" />
-            <span class="">{{ item }}</span>
-          </li>
-        </ul>
-        <p class="pt-6">
-          If that's your team,
-          <NuxtLink to="/contact/" class="underline underline-offset-2 hover:no-underline font-medium">get in touch
-          </NuxtLink>.
-        </p>
-      </section>
-
-    </div>
-
-    <!-- Anchor + Free offerings -->
-    <div class="grid grid-cols-2 gap-6">
-      <Callout v-if="anchorService">
-        <div class="prose">
-          <pill pill="Full Engagement" />
-          <h2 class="mt-1">{{ anchorService.label }}</h2>
-          <p>{{ anchorService.description }}</p>
-          <h3 class="text-lg">{{ anchorService.price }}</h3>
-        </div>
-        <div class="pt-4">
-          <ButtonLink :to="`/services/${anchorService.slug}/`">
-            See what's included
-          </ButtonLink>
-        </div>
-      </Callout>
-      <Callout v-if="freeService">
-        <div class="prose">
-          <p class="   text-blue-700 ">Free resource</p>
-          <h2 id="free-heading" class="text-2xl mt-1">Not ready to commit?</h2>
-          <p>
-            Use the free <strong>{{ freeService.label }}</strong> to see where your design system stands before
-            investing in a paid engagement. It covers the same five dimensions as the paid audit. You score your own
-            system and walk away with a clear picture of your biggest gaps.
-          </p>
-        </div>
-        <div class="pt-4">
-          <ButtonLink :to="`/services/${freeService.slug}/`">
-            Get the free interactive checklist
-          </ButtonLink>
-        </div>
-      </Callout>
-    </div>
-
-    <!-- Coming soon -->
-    <section v-if="comingSoonServices.length" aria-labelledby="coming-soon-heading" class="space-y-4">
-      <h2 id="coming-soon-heading" class="text-xl ">Coming soon</h2>
-      <ul class="grid md:grid-cols-2 gap-4 list-none p-0 m-0">
-        <li v-for="service in comingSoonServices" :key="service.slug"
-          class="rounded-lg border-2 border-neutral-200 bg-white p-6 space-y-2">
-          <div class="prose">
-            <h3 class="text-lg">{{ service.label }}</h3>
-            <p>{{ service.description }}</p>
-            <ButtonLink :href="`/services/${service.slug}/`">
-              View details and join the waitlist
-            </ButtonLink>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <Callout>
-      <h2>Not sure which engagement is right for you?</h2>
       <p>
-        That's what the intro call is for. It's 30 minutes, no obligation, and you'll leave with a clear picture of
-        what would actually help your team.
+        <strong>The goal</strong> is a system your team actually uses.
       </p>
-      <ButtonLink to="/contact/">
-        Send a message
-      </ButtonLink>
-    </Callout>
-
+    </section>
+    <TestimonialList class="grid gap-6 lg:grid-cols-2" />
+    <CtaScorecard />
   </PageWrapper>
 </template>

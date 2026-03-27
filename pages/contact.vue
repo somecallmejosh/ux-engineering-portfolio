@@ -22,39 +22,22 @@ useSeoMeta({
         pillIcon: 'ph:address-book',
         title: 'Let\'s talk',
         description: 'Whether you\'re dealing with component library debt, an accessibility audit deadline, or a Figma-to-code handoff that\'s slowing your team down, fill out the form and I\'ll get back to you within one business day.'
-      }" />
+      }">
+        <div class="prose">
+          <h2>Currently accepting new consulting engagements</h2>
+          <p>I take on a limited number of consulting engagements at a time to ensure each client receives my full
+            attention.
+          </p>
+        </div>
+      </PageHero>
     </section>
+
     <split-content>
       <template #primary>
         <section aria-labelledby="contact-form" class="space-y-4">
-          <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance mt-0">Questions?</h2>
+          <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance mt-0">Contact me with your questions
+            or project details</h2>
           <FormContact />
-          <callout>
-            <div class="prose">
-              <h2 id="social-media" class="text-lg mb-2">Social Media</h2>
-            </div>
-            <ul class="not-prose flex gap-6 items-center justify-between flex-grow">
-              <li class="flex items-center gap-1">
-                <div class="no-shrink translate-y-1">
-                  <Icon name="logos:linkedin-icon" size="1em" />
-                </div>
-                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank"
-                  rel="noopener noreferrer">
-                  <span class="sr-only">LinkedIn.com/</span>
-                  joshuabriley
-                </a>
-              </li>
-              <li class="flex items-center gap-1">
-                <div class="no-shrink translate-y-1">
-                  <Icon name="logos:x" size="1em" />
-                </div>
-                <a href="https://x.com/joshuabriley" class="hover:underline" target="_blank" rel="noopener noreferrer">
-                  <span class="sr-only">x.com/</span>
-                  joshuabriley
-                </a>
-              </li>
-            </ul>
-          </callout>
         </section>
       </template>
       <template #secondary>
@@ -66,20 +49,10 @@ useSeoMeta({
           <li>If there's a fit, I'll send a simple proposal.</li>
         </ul>
 
-        <blockquote class="border-l-4 border-neutral-200 pl-6 prose">
-          <p class="italic">Josh is an outstanding front-end engineer with incredible focus and discipline when it comes
-            to developing effective, functional and accessible front ends. He is a strong partner willing to work across
-            functions to design and implement the best user experience as well as provide the mentorship and leadership
-            to help his more junior experienced colleagues grow and learn. </p>
-          <cite>Welling Lagrone, Vice President, Triverus Consulting</cite>
-        </blockquote>
-
-        <div>
-          <h2>Current availability</h2>
-          <p>Currently accepting new consulting engagements.</p>
-        </div>
+        <TestimonialList />
       </template>
     </split-content>
+
   </PageWrapper>
 </template>
 <style scoped>
