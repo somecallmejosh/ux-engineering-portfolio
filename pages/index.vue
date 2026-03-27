@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = "Josh Briley | Design Systems Engineer & Frontend Consultant"
-const description = "Fixed-scope consulting for design system audits, component library builds, and handoff workflow improvements. Clear deliverables, clear pricing."
+const description = "Most teams don't have a tooling problem. They have a structure problem."
 
 useSeoMeta({
   title,
@@ -21,9 +21,6 @@ useHead({
   ]
 })
 
-const allServices = await queryCollection('services').order('order', 'ASC').all()
-
-const coreServices = allServices.filter(s => !s.isFree && !s.isComingSoon && !s.isAnchor)
 
 const mostRecentBlog = await queryCollection('blog')
   .order('publishedAt', 'DESC')
@@ -57,7 +54,7 @@ const combinedPosts = [
 
 const header = {
   title: "I fix inconsistent UI systems so teams can ship faster and with fewer mistakes.",
-  description: "If your components don't match designs, your system feels inconsistent, and accessibility keeps getting pushed aside, you're not alone. Most teams don't have a tooling problem. They have a structure problem.",
+  description: "Most teams don't have a tooling problem. They have a structure problem.",
 }
 
 
@@ -68,7 +65,7 @@ const header = {
     <section aria-describedby="page-header" class="prose">
       <PageHero :content="header">
         <div class="flex flex-col sm:flex-row lg:items-center gap-2">
-          <ButtonLink to="/services/scorecard/">
+          <ButtonLink to="/scorecard/">
             Score your design system
           </ButtonLink>
           <ButtonLink to="https://calendly.com/josh-thebrileys/30min/" target="_blank" rel="nofollow" variant="inverse">
@@ -88,27 +85,16 @@ const header = {
             <li>Designers and developers are out of sync</li>
             <li>The same UI issues come up every sprint</li>
           </ul>
-          <p class="text-pretty"><strong class="block">You don't need more components.</strong> You need a system that
-            actually works.
-          </p>
+          <p>The <NuxtLink to="/scorecard">scorecard</NuxtLink> pinpoints which ones.</p>
         </div>
       </template>
       <template #secondary>
         <div class="prose">
           <h2>Most teams try to fix a broken system by adding more.</h2>
 
-          <p>More components. More documentation. More rules. That usually makes things worse. Because the real problem
-            isn't what's missing. It's how everything is structured. Without a clear system:</p>
-
-          <ul>
-            <li>decisions get remade</li>
-            <li>components drift</li>
-            <li>accessibility breaks down</li>
-            <li>teams slow down</li>
-          </ul>
-
-          <p class="text-pretty"><strong class="block">The result isn't just inconsistency.</strong> It's wasted time,
-            rework, and growing risk.</p>
+          <p>More components. More documentation. More rules. That usually makes things worse. The real problem isn't
+            what's missing. It's how everything fits together. Without a clear structure, decisions get remade,
+            components drift, and teams slow down.</p>
         </div>
       </template>
     </SplitContent>
@@ -118,27 +104,41 @@ const header = {
       </template>
       <template #secondary>
         <div class="space-y-6">
+          <Pill pill="Start here" pill-icon="ph:compass" />
           <div class="prose">
             <h2>Already know where things are breaking down?</h2>
-            <p>Here's how to address it:</p>
           </div>
-          <ul class="list-none p-0 m-0 space-y-6">
-            <li>
+          <ul class="not-prose space-y-2 divide-y divide-neutral-200">
+            <li class="pb-2">
               <div class="prose lg:flex gap-2 items-baseline">
-                <h3 class="mb-0">System feels inconsistent?</h3>
-                <p>Design System Audit.</p>
+                <p class="font-semibold mb-0">System feels inconsistent?</p>
+                <span class="hidden lg:inline-flex">
+                  <Icon name="ph:arrow-right" size="0.9rem" />
+                </span>
+                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/audit/">Design System Audit.
+                </NuxtLink>
               </div>
             </li>
-            <li>
+            <li class="pb-2">
               <div class="prose lg:flex gap-2 items-baseline">
-                <h3 class="mb-0">Foundation is weak or patchy?</h3>
-                <p>Component Library Starter.</p>
+                <p class="font-semibold mb-0">Foundation is weak or patchy?</p>
+                <span class="hidden lg:inline-flex">
+                  <Icon name="ph:arrow-right" size="0.9rem" />
+                </span>
+                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/component-library-starter/">
+                  Component
+                  Library Starter.</NuxtLink>
               </div>
             </li>
-            <li>
+            <li class="pb-2">
               <div class="prose lg:flex gap-2 items-baseline">
-                <h3 class="mb-0">Design and dev are out of sync?</h3>
-                <p>Design-to-Code Workflow.</p>
+                <p class="font-semibold mb-0">Design and dev are out of sync?</p>
+                <span class="hidden lg:inline-flex">
+                  <Icon name="ph:arrow-right" size="0.9rem" />
+                </span>
+                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/design-to-code-workflow/">
+                  Design-to-Code
+                  Workflow.</NuxtLink>
               </div>
             </li>
           </ul>
@@ -148,24 +148,23 @@ const header = {
 
     <div class="space-y-6">
       <div class="prose">
-        <h2>Most problems fall into three areas:</h2>
+        <h2>How I Help</h2>
       </div>
-      <Services :services="coreServices" />
-      <p>
-        <strong>You don't need to guess which one.</strong>
-        We figure that out together.
-      </p>
+      <EngagementSteps />
+      <div class="prose">
+        <NuxtLink to="/services/" class="hover:no-underline">
+          View all services
+        </NuxtLink>
+      </div>
     </div>
 
 
-    <SplitContent class="divide-x divide-neutral-200">
+    <SplitContent class="lg:divide-x lg:divide-neutral-200">
       <template #primary>
         <div class="prose lg:pr-4">
           <h2>Accessibility issues don't start in QA.</h2>
-          <p><strong>They start in your components.</strong> When accessibility isn't built into your system, every
-            team inherits the same problems.</p>
-          <p>This is how accessibility debt grows: not one bug at a time, but one component at a time. <strong>Fix the
-              system, and you fix the source.</strong></p>
+          <p><strong>They start in your components.</strong> Accessibility debt doesn't grow one bug at a time. It
+            grows one component at a time. <strong>Fix the system, and you fix the source.</strong></p>
           <div>
             <ButtonLink to="/services/audit/" variant="inverse">
               See what the audit covers
@@ -174,18 +173,17 @@ const header = {
         </div>
       </template>
       <template #secondary>
-        <div class="gap-6 flex">
-          <div class="prose">
+        <div class="lg:gap-6 flex flex-col lg:flex-row">
+          <div class="prose order-1 lg:order-0">
             <h2>About Joshua Briley</h2>
-            <p>I design and build UI systems that stay consistent, accessible, and usable as
-              products grow. I bring 20 years of experience helping teams across insurance, media, and professional
-              sports build systems that actually work in practice, not just in documentation.</p>
+            <p>I design and build UI systems that stay consistent, accessible, and usable as products grow. 20 years of
+              experience across insurance, media, and professional sports.</p>
             <NuxtLink to="/about/">
               My background and experience
             </NuxtLink>
           </div>
           <NuxtImg src="/images/josh-biz-cazsh.jpg" fit="cover" preload alt="Joshua Briley, UX Engineer" height="300"
-            width="300" class="size-28 rounded-full shrink-0 -translate-y-4" />
+            width="300" class="size-18 lg:size-28 rounded-full shrink-0 lg:-translate-y-4 order-0 lg:order-1" />
         </div>
       </template>
     </SplitContent>

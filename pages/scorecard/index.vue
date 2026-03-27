@@ -4,7 +4,7 @@ useHead({
 })
 
 useSeoMeta({
-  title: 'Design System Health Check | Josh Briley',
+  title: 'Design System Scorecard | Josh Briley',
   description: 'A self-assessment checklist covering the five dimensions of a healthy design system: component consistency, accessibility, token architecture, documentation, and handoff process.',
 })
 
@@ -168,6 +168,77 @@ const totalStatus = computed((): TotalStatus | null => {
   return 'investment'
 })
 
+const weakestSection = computed(() => {
+  return SECTIONS.reduce((weakest, section) => {
+    const ratio = sectionScore(section) / section.max
+    const weakestRatio = sectionScore(weakest) / weakest.max
+    return ratio < weakestRatio ? section : weakest
+  })
+})
+
+const criticalSections = computed(() =>
+  SECTIONS.filter(s => sectionStatus(s) === 'critical')
+)
+
+type RecommendationType = 'audit' | 'workflow' | 'healthy'
+
+const recommendationType = computed((): RecommendationType | null => {
+  if (!totalStatus.value) return null
+  // A critical gap in any section always warrants an audit, regardless of total score
+  if (criticalSections.value.length > 0) return 'audit'
+  if (totalStatus.value === 'healthy') return 'healthy'
+  if (totalStatus.value === 'investment') return 'audit'
+  return weakestSection.value.id === 's5' ? 'workflow' : 'audit'
+})
+
+interface ServiceRecommendation {
+  type: 'audit' | 'workflow'
+  label: string
+  tagline: string
+  why: string
+  price: string
+  link: string
+}
+
+type RecommendationPayload = ServiceRecommendation | { type: 'healthy' } | null
+
+const recommendation = computed((): RecommendationPayload => {
+  if (!recommendationType.value) return null
+  if (recommendationType.value === 'healthy') return { type: 'healthy' }
+
+  if (recommendationType.value === 'audit') {
+    let why: string
+    if (totalStatus.value === 'investment') {
+      why = 'With critical gaps across multiple dimensions, the Audit gives you a prioritized roadmap before you invest in rebuilding.'
+    } else if (totalStatus.value === 'healthy' && criticalSections.value.length > 0) {
+      const names = criticalSections.value.map(s => s.title).join(' and ')
+      why = `Your overall score is strong, but ${names} ${criticalSections.value.length === 1 ? 'has' : 'have'} a critical gap that needs expert analysis before it compounds into a larger problem.`
+    } else if (criticalSections.value.length > 0) {
+      const names = criticalSections.value.map(s => s.title).join(' and ')
+      why = `${names} ${criticalSections.value.length === 1 ? 'has' : 'have'} a critical gap — that needs expert analysis before you invest in fixing anything else.`
+    } else {
+      why = "Your handoff process is solid — the structural gaps in your system need expert analysis before you invest in fixing them."
+    }
+    return {
+      type: 'audit',
+      label: 'Design System Audit',
+      tagline: "Before you build anything new, you need to understand what's actually broken.",
+      why,
+      price: '$2,000',
+      link: '/services/audit/',
+    }
+  }
+
+  return {
+    type: 'workflow',
+    label: 'Design-to-Code Workflow',
+    tagline: 'Reduce handoff friction and rework. Fix the process once so your team stops losing time to it every sprint.',
+    why: "Your system architecture looks solid — your handoff process is where time is being lost every sprint.",
+    price: '$2,500',
+    link: '/services/workflow/',
+  }
+})
+
 // ─── Class maps (no dynamic string concatenation — required for Tailwind 4) ──
 
 const RATING_BTN_ACTIVE: Record<number, string> = {
@@ -217,183 +288,274 @@ const TOTAL_STATUS_BAR: Record<string, string> = {
   'functional': 'bg-amber-400',
   'investment': 'bg-red-400',
 }
+
+// ─── URL param / sharing ──────────────────────────────────────────────────────
+
+const route = useRoute()
+const requestUrl = useRequestURL()
+const VALID_PARAM_RE = new RegExp(`^[012]{${TOTAL_ITEMS}}$`)
+
+const rawParam = computed(() => {
+  const q = route.query.r
+  return typeof q === 'string' ? q : undefined
+})
+
+const isValidParam = computed(() => rawParam.value !== undefined && VALID_PARAM_RE.test(rawParam.value))
+const isInvalidParam = computed(() => rawParam.value !== undefined && !isValidParam.value)
+const isSharedView = computed(() => isValidParam.value)
+
+watch(rawParam, (param) => {
+  if (param && VALID_PARAM_RE.test(param)) {
+    let i = 0
+    for (const section of SECTIONS) {
+      for (const item of section.items) {
+        ratings[item.id] = parseInt(param[i++]) as Rating
+      }
+    }
+  }
+}, { immediate: true })
+
+const shareUrl = computed(() => {
+  if (!allAnswered.value) return ''
+  const encoded = SECTIONS.flatMap(s => s.items.map(item => String(ratings[item.id] ?? 0))).join('')
+  return `${requestUrl.origin}/scorecard/?r=${encoded}`
+})
+
+const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({ source: shareUrl })
+
+const chartSections = computed(() =>
+  SECTIONS.map(s => ({ title: s.title, score: sectionScore(s), max: s.max }))
+)
 </script>
 
 <template>
   <PageWrapper>
     <PageHero :content="{
-      pill: 'Design System Health Check',
-      pillIcon: 'ph:check-square-offset',
-      title: 'Design System Health Check',
+      pill: 'Tools',
+      pillIcon: 'ph:presentation-chart',
+      title: 'Design System Scorecard',
       description: 'An interactive self-assessment checklist covering the five dimensions of a healthy design system: component consistency, accessibility, token architecture, documentation, and handoff process.'
     }" />
 
-    <div class="space-y-6">
-      <!-- Rating legend + progress -->
-      <div
+    <!-- Invalid param state -->
+    <div v-if="isInvalidParam" class="flex flex-col items-center gap-4 py-16 text-center">
+      <Icon name="ph:link-break" size="2rem" class="text-neutral-400" aria-hidden="true" />
+      <div>
+        <p class="font-medium">This scorecard link is invalid or incomplete.</p>
+        <p class="text-neutral-500 mt-1">The link may have been truncated or modified.</p>
+      </div>
+      <NuxtLink to="/scorecard/"
+        class="not-prose no-underline border font-medium rounded-full px-5 py-1.5 border-neutral-900 hover:bg-neutral-100 transition-colors">
+        Start a fresh assessment
+      </NuxtLink>
+    </div>
+
+    <!-- Normal + shared view -->
+    <div v-else class="space-y-6">
+      <!-- Shared view banner -->
+      <div v-if="isSharedView"
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+        <div class="flex items-center gap-2">
+          <Icon name="ph:share-network" size="1rem" class="text-neutral-500" aria-hidden="true" />
+          <p class="text-sm text-neutral-600">Shared scorecard result</p>
+        </div>
+        <NuxtLink to="/scorecard/"
+          class="not-prose no-underline text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors shrink-0">
+          Take the assessment yourself →
+        </NuxtLink>
+      </div>
+
+      <!-- Rating legend + progress (interactive only) -->
+      <div v-if="!isSharedView"
         class="flex flex-col sm:flex-row sm:items-center gap-4 p-4 rounded-xl bg-neutral-50 border border-neutral-200">
-        <div class="flex flex-wrap gap-3  flex-1">
+        <div class="flex flex-wrap gap-3 flex-1">
           <div class="flex items-center gap-1.5">
             <Icon name="ph:x-circle" size="1.1rem" class="text-red-400" aria-hidden="true" />
-            <span>None — not addressed</span>
+            <span><strong>None:</strong> not addressed</span>
           </div>
           <div class="flex items-center gap-1.5">
             <Icon name="ph:minus-circle" size="1.1rem" class="text-amber-400" aria-hidden="true" />
-            <span>Partial — partially in place</span>
+            <span><strong>Partial:</strong> partially in place</span>
           </div>
           <div class="flex items-center gap-1.5">
             <Icon name="ph:check-circle" size="1.1rem" class="text-emerald-500" aria-hidden="true" />
-            <span>Done — working well</span>
+            <span><strong>Done:</strong> working well</span>
           </div>
         </div>
-        <div class="flex items-center gap-3 sm:shrink-0">
+        <div class="flex items-center gap-3 shrink-0 justify-between">
           <span class="tabular-nums">{{ answeredCount }}/{{ TOTAL_ITEMS }}</span>
-          <div class="w-24 h-1.5 bg-neutral-200 rounded-full overflow-hidden">
+          <div class="w-24 h-1.5 bg-neutral-200 rounded-full overflow-hidden flex-1">
             <div class="h-full bg-neutral-700 rounded-full transition-all duration-300"
               :style="{ width: `${Math.round((answeredCount / TOTAL_ITEMS) * 100)}%` }" />
           </div>
           <button type="button" :disabled="answeredCount === 0" aria-label="Reset all ratings" @click="resetAll"
-            class="disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer">
+            class="cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed not-prose no-underline border font-medium rounded-full px-4 py-0.5 justify-center hover:gap-2 disabled:hover:gap-1 border-neutral-900 hover:bg-neutral-100 focus:ring-blue-400 flex items-center gap-1 transition-all">
+            <Icon name="ph:arrow-counter-clockwise" size="1rem" />
             Reset
           </button>
         </div>
       </div>
-      <!-- Section cards -->
-      <div class="space-y-4">
-        <section v-for="(section, si) in SECTIONS" :key="section.id" :aria-labelledby="`title-${section.id}`"
-          class="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
-          <!-- Section header -->
-          <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-100">
-            <div class="flex items-center gap-3">
-              <span class=" font-medium font-mono tabular-nums" aria-hidden="true">
-                {{ String(si + 1).padStart(2, '0') }}
-              </span>
-              <h2 :id="`title-${section.id}`" class="text-base font-medium">
-                {{ section.title }}
-              </h2>
-            </div>
-            <div class="flex items-center gap-2 shrink-0">
-              <span class=" tabular-nums" aria-hidden="true">
-                <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }}
-              </span>
-              <span class="sr-only">Score: {{ sectionScore(section) }} out of {{ section.max }}</span>
+
+      <!-- Two-column layout -->
+      <div :class="isSharedView
+        ? 'md:grid md:grid-cols-[1fr_400px] md:items-start md:gap-6'
+        : '2xl:grid 2xl:grid-cols-[1fr_400px] 2xl:items-start 2xl:gap-6'">
+
+        <!-- Left: section cards (interactive) OR radar chart (shared) -->
+        <div>
+          <!-- Section cards -->
+          <div v-if="!isSharedView" class="space-y-4">
+            <section v-for="(section, si) in SECTIONS" :key="section.id" :aria-labelledby="`title-${section.id}`"
+              class="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
+              <!-- Section header -->
+              <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-100">
+                <div class="flex items-center gap-3">
+                  <span class=" font-medium font-mono tabular-nums" aria-hidden="true">
+                    {{ String(si + 1).padStart(2, '0') }}
+                  </span>
+                  <h2 :id="`title-${section.id}`" class="text-base font-medium">
+                    {{ section.title }}
+                  </h2>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <span class=" tabular-nums" aria-hidden="true">
+                    <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }}
+                  </span>
+                  <span class="sr-only">Score: {{ sectionScore(section) }} out of {{ section.max }}</span>
+                  <!-- aria-live container must always exist for announcements to fire -->
+                  <div aria-live="polite" aria-atomic="true">
+                    <Transition name="badge">
+                      <span v-if="sectionStatus(section)"
+                        class=" px-2 py-0.5 rounded-full border font-medium animate-entry"
+                        :class="STATUS_BADGE[sectionStatus(section)!]">
+                        {{ STATUS_LABEL[sectionStatus(section)!] }}
+                      </span>
+                    </Transition>
+                  </div>
+                </div>
+              </div>
+              <!-- Items -->
+              <ul role="list" class="divide-y divide-neutral-50">
+                <li v-for="item in section.items" :key="item.id"
+                  class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4">
+                  <p class="flex-1 ">{{ item.label }}</p>
+                  <!-- Rating toggle -->
+                  <div role="group" :aria-label="`Rating for: ${item.label}`"
+                    class="flex shrink-0 rounded-lg border border-neutral-200">
+                    <button v-for="opt in RATING_OPTIONS" :key="opt.value" type="button"
+                      :aria-pressed="ratings[item.id] === opt.value" :title="opt.title"
+                      @click="setRating(item.id, opt.value)"
+                      class="relative flex flex-1 items-center gap-1.5 pl-2 pr-3 py-1.5  font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
+                      :class="ratings[item.id] === opt.value
+                        ? RATING_BTN_ACTIVE[opt.value]
+                        : 'bg-white hover:bg-neutral-50 hover:'">
+                      <Icon :name="opt.icon" size="1rem" aria-hidden="true" :class="ratings[item.id] === opt.value
+                        ? RATING_BTN_ICON_ACTIVE[opt.value]
+                        : 'text-neutral-300'" />
+                      <span>{{ opt.label }}</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <!-- Section score bar -->
+              <div class="px-5 py-3 bg-neutral-50 border-t border-neutral-100">
+                <div class="h-1 bg-neutral-200 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full transition-all duration-500"
+                    :class="STATUS_BAR[sectionStatus(section)!] ?? 'bg-neutral-400'"
+                    :style="{ width: `${sectionPercent(section)}%` }" />
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Radar chart (shared view) -->
+          <div v-else class="bg-white border border-neutral-200 rounded-2xl p-6">
+            <ScorecardRadarChart :sections="chartSections" :status="totalStatus" />
+          </div>
+        </div>
+
+        <!-- Score card -->
+        <div :class="isSharedView
+          ? 'mt-4 md:mt-0 space-y-4'
+          : 'mt-4 2xl:mt-0 2xl:sticky 2xl:top-6 space-y-4'">
+          <div class="rounded-2xl border-2 p-6 space-y-5 transition-colors duration-500"
+            :class="totalStatus ? TOTAL_STATUS_CARD[totalStatus] : 'border-neutral-200 bg-neutral-50'">
+            <div>
+              <p class="font-medium mb-1">Total score</p>
+              <div class="flex items-baseline gap-2">
+                <span class="text-5xl" style="font-family: 'DM Serif Text', serif" aria-hidden="true">
+                  {{ totalScore }}
+                </span>
+                <span class="text-lg" aria-hidden="true">/{{ TOTAL_MAX }}</span>
+                <span class="sr-only">Total score: {{ totalScore }} out of {{ TOTAL_MAX }}</span>
+              </div>
               <!-- aria-live container must always exist for announcements to fire -->
-              <div aria-live="polite" aria-atomic="true">
+              <div aria-live="polite" aria-atomic="true" class="mt-2 min-h-[2rem]">
                 <Transition name="badge">
-                  <span v-if="sectionStatus(section)" class=" px-2 py-0.5 rounded-full border font-medium animate-entry"
-                    :class="STATUS_BADGE[sectionStatus(section)!]">
-                    {{ STATUS_LABEL[sectionStatus(section)!] }}
+                  <span v-if="totalStatus"
+                    class="inline-block px-3 py-1 rounded-full border font-medium text-sm animate-entry bg-white"
+                    :class="STATUS_BADGE[totalStatus]">
+                    {{ TOTAL_STATUS_LABEL[totalStatus] }}
                   </span>
                 </Transition>
               </div>
             </div>
-          </div>
-          <!-- Items -->
-          <ul role="list" class="divide-y divide-neutral-50">
-            <li v-for="item in section.items" :key="item.id"
-              class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 px-5 py-4">
-              <p class="flex-1 ">{{ item.label }}</p>
-              <!-- Rating toggle -->
-              <div role="group" :aria-label="`Rating for: ${item.label}`"
-                class="flex shrink-0 rounded-lg border border-neutral-200">
-                <button v-for="opt in RATING_OPTIONS" :key="opt.value" type="button"
-                  :aria-pressed="ratings[item.id] === opt.value" :title="opt.title"
-                  @click="setRating(item.id, opt.value)"
-                  class="relative flex flex-1 items-center gap-1.5 pl-2 pr-3 py-1.5  font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
-                  :class="ratings[item.id] === opt.value
-                    ? RATING_BTN_ACTIVE[opt.value]
-                    : 'bg-white hover:bg-neutral-50 hover:'">
-                  <Icon :name="opt.icon" size="1rem" aria-hidden="true" :class="ratings[item.id] === opt.value
-                    ? RATING_BTN_ICON_ACTIVE[opt.value]
-                    : 'text-neutral-300'" />
-                  <span>{{ opt.label }}</span>
-                </button>
+            <!-- Total progress bar -->
+            <div>
+              <div class="h-2 bg-neutral-200 rounded-full overflow-hidden">
+                <div class="h-full rounded-full transition-all duration-500"
+                  :class="totalStatus ? TOTAL_STATUS_BAR[totalStatus] : 'bg-neutral-400'"
+                  :style="{ width: `${totalPercent}%` }" />
               </div>
-            </li>
-          </ul>
-          <!-- Section score bar -->
-          <div class="px-5 py-3 bg-neutral-50 border-t border-neutral-100">
-            <div class="h-1 bg-neutral-200 rounded-full overflow-hidden">
-              <div class="h-full rounded-full transition-all duration-500"
-                :class="STATUS_BAR[sectionStatus(section)!] ?? 'bg-neutral-400'"
-                :style="{ width: `${sectionPercent(section)}%` }" />
+            </div>
+            <!-- Per-section breakdown -->
+            <ul class="space-y-2 divide-y divide-neutral-200" role="list">
+              <li v-for="section in SECTIONS" :key="section.id" class="flex flex-col gap-1 pb-1">
+                <span class="text-sm font-medium leading-snug">{{ section.title }}</span>
+                <div class="flex items-center gap-2">
+                  <span class="tabular-nums text-sm ">
+                    <span class="sr-only">Score: </span><span class="font-medium text-neutral-800">{{
+                      sectionScore(section) }}</span>/{{ section.max }} pts
+                  </span>
+                  <span v-if="sectionStatus(section)"
+                    class="px-2 py-0.5 rounded-full border text-xs font-medium shrink-0 animate-entry ml-auto"
+                    :class="STATUS_BADGE[sectionStatus(section)!]">
+                    {{ STATUS_LABEL[sectionStatus(section)!] }}
+                  </span>
+                  <span v-else class="text-xs tabular-nums whitespace-nowrap">
+                    {{section.items.filter(i => ratings[i.id] !== null).length}}/{{ section.items.length }} answered
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <!-- Guidance once complete -->
+            <!-- aria-live container must always exist for announcements to fire -->
+            <div aria-live="polite" aria-atomic="true">
+              <Transition name="badge">
+                <p v-if="allAnswered && !isSharedView" class="animate-entry border-t border-neutral-200/60 pt-4">
+                  <strong>Look at your lowest-scoring section first</strong>. That's your highest-leverage place to
+                  start.
+                  If accessibility is a weak point, prioritize it: it carries legal risk and affects real users today.
+                </p>
+              </Transition>
+            </div>
+            <!-- Share results (interactive only, once all answered) -->
+            <div aria-live="polite" aria-atomic="true">
+              <Transition name="badge">
+                <button v-if="allAnswered && !isSharedView" type="button"
+                  class="flex items-center gap-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors cursor-pointer border-t border-neutral-200/60 pt-4 w-full"
+                  @click="copyShareUrl()">
+                  <Icon :name="shareUrlCopied ? 'ph:check' : 'ph:link'" size="1rem" aria-hidden="true" />
+                  <span>{{ shareUrlCopied ? 'Link copied!' : 'Share your results' }}</span>
+                </button>
+              </Transition>
             </div>
           </div>
-        </section>
-      </div>
-      <!-- Total score card -->
-      <div class="rounded-2xl border-2 p-6 space-y-5 transition-colors duration-500"
-        :class="totalStatus ? TOTAL_STATUS_CARD[totalStatus] : 'border-neutral-200 bg-neutral-50'">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <p class=" font-medium   mb-1">Total score</p>
-            <div class="flex items-baseline gap-2">
-              <span class="text-5xl " style="font-family: 'DM Serif Text', serif" aria-hidden="true">
-                {{ totalScore }}
-              </span>
-              <span class="text-lg " aria-hidden="true">/{{ TOTAL_MAX }}</span>
-              <span class="sr-only">Total score: {{ totalScore }} out of {{ TOTAL_MAX }}</span>
-            </div>
-          </div>
-          <!-- aria-live container must always exist for announcements to fire -->
-          <div aria-live="polite" aria-atomic="true">
-            <Transition name="badge">
-              <span v-if="totalStatus"
-                class=" px-3 py-1 rounded-full border font-medium text-base animate-entry bg-white"
-                :class="STATUS_BADGE[totalStatus]">
-                {{ TOTAL_STATUS_LABEL[totalStatus] }}
-              </span>
-            </Transition>
-          </div>
-        </div>
-        <!-- Total progress bar -->
-        <div>
-          <div class="h-2 bg-neutral-200 rounded-full overflow-hidden">
-            <div class="h-full rounded-full transition-all duration-500"
-              :class="totalStatus ? TOTAL_STATUS_BAR[totalStatus] : 'bg-neutral-400'"
-              :style="{ width: `${totalPercent}%` }" />
-          </div>
-        </div>
-        <!-- Per-section breakdown -->
-        <ul class="space-y-2" role="list">
-          <li v-for="section in SECTIONS" :key="section.id" class="flex items-center gap-3 ">
-            <span class="flex-1 truncate">{{ section.title }}</span>
-            <span class="tabular-nums ">
-              <span class="font-medium ">{{ sectionScore(section) }}</span>/{{ section.max }}
-            </span>
-            <span v-if="sectionStatus(section)"
-              class=" px-2 py-0.5 rounded-full border font-medium shrink-0 animate-entry"
-              :class="STATUS_BADGE[sectionStatus(section)!]">
-              {{ STATUS_LABEL[sectionStatus(section)!] }}
-            </span>
-            <span v-else class=" text-right tabular-nums whitespace-nowrap">
-              {{section.items.filter(i => ratings[i.id] !== null).length}}/{{ section.items.length }} <span
-                class="sr-only">answered</span>
-            </span>
-          </li>
-        </ul>
-        <!-- Guidance once complete -->
-        <!-- aria-live container must always exist for announcements to fire -->
-        <div aria-live="polite" aria-atomic="true">
-          <Transition name="badge">
-            <p v-if="allAnswered" class="  animate-entry border-t border-neutral-200/60 pt-4">
-              Look at your lowest-scoring section first — that's your highest-leverage place to start.
-              If accessibility is a weak point, prioritize it: it carries legal risk and affects real users today.
-            </p>
-          </Transition>
+          <!-- Recommendation CTA -->
+          <CtaScorecardRecommendation :all-answered="allAnswered" :recommendation="recommendation" :share-url="shareUrl" />
         </div>
       </div>
     </div>
-
-    <!-- CTA -->
-    <Callout>
-      <h2>Want a deeper analysis?</h2>
-      <p>
-        The paid <NuxtLink to="/services/audit/">Design System Audit</NuxtLink> covers the same five dimensions with
-        expert analysis, a written report, and a prioritized remediation roadmap delivered in five business days.
-      </p>
-      <ButtonLink to="/contact/">Get in touch</ButtonLink>
-    </Callout>
 
   </PageWrapper>
 </template>

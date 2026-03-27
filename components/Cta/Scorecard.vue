@@ -1,12 +1,13 @@
 <template>
   <Callout>
-    <h2>Not sure where to start? Start here.</h2>
-    <p>Most teams know something isn't off—but not exactly what. Use the <strong>free Design System
-        Scorecard</strong> to get
-      a
-      clear picture of where your system stands.</p>
-    <ButtonLink to="/services/scorecard/" variant="inverse">
-      Score your design system
-    </ButtonLink>
+    <h2>Find out exactly what's broken.</h2>
+    <p>The <strong>free Design System Scorecard</strong> gives you a clear picture of where your system is working and
+      where it's
+      creating risk.</p>
+    <div class="flex flex-col lg:block">
+      <ButtonLink to="/scorecard/" variant="inverse">
+        Score your <span class="hidden md:inline">design</span> system
+      </ButtonLink>
+    </div>
   </Callout>
 </template>

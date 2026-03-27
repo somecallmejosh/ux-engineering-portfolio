@@ -51,7 +51,7 @@ const blurAndRemoveFocus = () => {
       href="#main-content">Skip to main content</a>
     <div class="lg:flex min-h-dvh gap-12 relative z-10">
       <header ref="target"
-        class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 px-6 pt-6 lg:p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
+        class="lg:basis-72 shrink-0 bg-white lg:bg-neutral-50 p-6 lg:p-10 lg:space-y-6 lg:h-dvh lg:flex lg:flex-col sticky top-0 z-50"
         :class="navOpen && 'shadow-lg lg:shadow-0'">
         <div class="flex items-center justify-between">
           <Logo class="lg:hidden" />
@@ -65,7 +65,7 @@ const blurAndRemoveFocus = () => {
             </button>
           </div>
         </div>
-        <nav aria-label="Main Navigation" :class="{ 'lg:flex lg:flex-col lg:flex-1': !navOpen }">
+        <nav aria-label="Main Navigation" :class="{ 'hidden lg:flex lg:flex-col lg:flex-1': !navOpen }">
           <div class="nav-drawer" :class="{ 'nav-drawer--open': navOpen }">
             <NavMenu :groups="navGroups" listClass="border-l border-neutral-200 mb-2 mt-4 space-y-4"
               linkClass="flex items-center gap-3 group transition-colors duration-150 font-medium  py-2"
@@ -78,7 +78,7 @@ const blurAndRemoveFocus = () => {
           </div>
         </nav>
       </header>
-      <div class="flex-grow lg:overflow-y-scroll">
+      <div class="flex-grow">
         <div class="hidden lg:flex lg:justify-between p-6 lg:px-10 lg:pt-10 lg:pb-16 lg:gap-6">
           <div class="flex-1">
             <Logo />

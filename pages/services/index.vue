@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const title = "Design systems consulting services | Josh Briley"
 const description = "Fixed-scope consulting for design system audits, component library builds, and design-to-code workflow optimization. Clear deliverables, clear pricing, defined from the start."
+const allServices = await queryCollection('services').order('order', 'ASC').all()
+
+const coreServices = allServices.filter(s => !s.isFree && !s.isComingSoon && !s.isAnchor)
 
 useSeoMeta({
   title,
@@ -9,8 +12,6 @@ useSeoMeta({
   ogDescription: description,
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317106/josh-portfolio/assets_task_01jrgnzqzhe1w9d68qj5z60crx_img_0.webp'
 })
-
-import type { TestimonialCategory } from '~/composables/useTestimonials'
 
 const painPoints = [
   {
@@ -27,36 +28,14 @@ const painPoints = [
   },
 ]
 
-const engagementSteps = [
-  {
-    phase: 'Phase 1',
-    title: 'Audit',
-    link: '/services/audit/',
-    cta: 'How the audit can help',
-    description: 'Before you build anything new, you need to understand what\'s actually broken.',
-  },
-  {
-    phase: 'Phase 2',
-    title: 'Build',
-    link: '/services/starter/',
-    cta: 'How the starter kit can help',
-    description: 'Stabilize and scale your UI system with a foundation built to last, not patched to survive.',
-  },
-  {
-    phase: 'Phase 3',
-    title: 'Align',
-    link: '/services/workflow/',
-    cta: 'How the workflow can help',
-    description: 'Reduce handoff friction and rework. Fix the process once so your team stops losing time to it every sprint.',
-  },
-]
-
 </script>
 
 <template>
   <PageWrapper>
 
     <PageHero :content="{
+      pill: 'Services',
+      pillIcon: 'ph:handshake',
       title: 'Design systems consulting',
       description: 'Your design system should make shipping faster. Right now, it\'s probably making it slower, creating rework, creating accessibility risk, and adding friction between design and engineering. That\'s fixable.'
     }">
@@ -96,22 +75,7 @@ const engagementSteps = [
         </p>
       </div>
 
-      <ol class="not-prose grid lg:grid-cols-3 gap-6 list-none p-0 mb-4">
-        <li v-for="(step, i) in engagementSteps" :key="i"
-          class="rounded-lg border-2 border-neutral-200 bg-white p-6 flex flex-col gap-4">
-          <div class="flex items-center gap-3">
-            <pill :pill="step.phase" />
-          </div>
-          <div class="prose">
-            <h3 class="text-lg">{{ step.title }}</h3>
-            <p class="mb-4">{{ step.description }}</p>
-            <ButtonLink :to="step.link">
-              {{ step.cta }}
-            </ButtonLink>
-
-          </div>
-        </li>
-      </ol>
+      <Services :services="coreServices" />
 
       <p>
         <strong>The goal</strong> is a system your team actually uses.
