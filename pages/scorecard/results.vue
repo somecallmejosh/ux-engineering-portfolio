@@ -14,6 +14,7 @@ import {
   emptyRatings,
   useScorecard,
   type Rating,
+  type ScorecardMeta,
 } from '~/composables/useScorecard'
 
 useHead({
@@ -70,6 +71,21 @@ const {
   chartSections,
 } = useScorecard(ratings)
 
+// ─── Scorecard metadata for form submission ───────────────────────────────────
+
+const scorecardMeta = computed((): ScorecardMeta => ({
+  design_system_recommendation:
+    recommendation.value && recommendation.value.type !== 'healthy'
+      ? recommendation.value.label
+      : recommendation.value?.type === 'healthy' ? 'Healthy — no service recommended' : '',
+  design_system_label: totalStatus.value ? TOTAL_STATUS_LABEL[totalStatus.value] : '',
+  design_system_score_total: totalScore.value,
+  design_system_lowest_section: weakestSection.value.title,
+  design_system_per_section_scores: SECTIONS.map(
+    (s) => `${s.title}: ${sectionScore(s)}/${s.max}`
+  ).join('; '),
+}))
+
 // ─── Share / retake ───────────────────────────────────────────────────────────
 
 const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
@@ -92,7 +108,7 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
       <div class="bg-white border border-neutral-200 rounded-2xl p-6">
         <ScorecardRadarChart :sections="chartSections" :status="totalStatus" />
         <!-- Recommendation -->
-        <CtaScorecardRecommendation :recommendation="recommendation" />
+        <CtaScorecardRecommendation :recommendation="recommendation" :scorecard-meta="scorecardMeta" />
       </div>
 
       <!-- Right: Score card + recommendation -->
@@ -131,7 +147,7 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
               <div class="flex items-center gap-2">
                 <span class="tabular-nums text-sm">
                   <span class="sr-only">Score: </span>
-                  <span class="font-medium text-neutral-800">{{ sectionScore(section) }}</span>/{{ section.max }} pts
+                  <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }} pts
                 </span>
                 <span v-if="sectionStatus(section)"
                   class="px-2 py-0.5 rounded-full border text-xs font-medium shrink-0 ml-auto"
@@ -155,7 +171,7 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
             That's where you'll see the fastest improvement.
           </p>
           <p v-else-if="totalStatus === 'healthy'" class="border-t border-neutral-200/60 pt-4 text-sm">
-            <strong>Excellent work.</strong> Your design system is firing on all cylinders. Keep it up.
+            <strong>Excellent work.</strong> Your design system is performing well across every dimension. Keep it up.
           </p>
 
           <!-- Share + retake actions -->

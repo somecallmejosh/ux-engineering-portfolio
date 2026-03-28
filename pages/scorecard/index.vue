@@ -170,7 +170,7 @@ function cancelInterstitial() {
                   <button v-for="opt in RATING_OPTIONS" :key="opt.value" type="button"
                     :aria-pressed="ratings[item.id] === opt.value" :title="opt.title"
                     @click="setRating(item.id, opt.value)"
-                    class="relative flex flex-1 items-center gap-1 lg:gap-1.5 lg:pl-2 lg:pr-3 py-1.5 text-sm lg:text-base font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
+                    class="relative flex flex-1 items-center gap-0.5 pr-2 pl-1 lg:gap-1.5 lg:pl-2 lg:pr-3 py-1.5 text-sm lg:text-base font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
                     :class="ratings[item.id] === opt.value
                       ? RATING_BTN_ACTIVE[opt.value]
                       : 'bg-white hover:bg-neutral-50 hover:'">
@@ -251,7 +251,7 @@ function cancelInterstitial() {
             <div aria-live="polite" aria-atomic="true">
               <Transition name="badge">
                 <div v-if="allAnswered" class="animate-entry border-t border-neutral-200/60 pt-4 space-y-4">
-                  <div v-if="totalStatus !== 'healthy'">
+                  <div v-if="totalStatus !== 'healthy'" class="space-y-4">
                     <p>
                       <strong>Start here.</strong> Your lowest-scoring area is your highest-leverage fix.
                       In your case, that's <strong>{{ weakestSection.title }}</strong>.
@@ -262,12 +262,11 @@ function cancelInterstitial() {
                       class="cursor-pointer not-prose no-underline border font-medium rounded-full px-5 py-1.5 border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-700 transition-colors flex items-center gap-1.5 w-full justify-center"
                       @click.prevent="openInterstitial">
                       See your recommendations
-                      <Icon name="ph:arrow-right" size="1rem" aria-hidden="true" />
                     </ButtonLink>
                   </div>
                   <div v-else class="space-y-4">
                     <p>
-                      <strong>Excellent work.</strong> Your design system is firing on all cylinders. Keep it up.
+                      <strong>Excellent work.</strong> Your design system is performing well across every dimension. Keep it up.
                     </p>
                     <div class="not-prose">
                       <ButtonLink variant="inverse" @click.prevent="resetAll" to="" replace class="cursor-pointer">
@@ -276,7 +275,6 @@ function cancelInterstitial() {
                       </ButtonLink>
                     </div>
                   </div>
-
                 </div>
               </Transition>
             </div>
