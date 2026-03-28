@@ -14,11 +14,6 @@ const validateEmail = () => {
 const formSubmitted = ref(false)
 const formSubmitError = ref(false)
 
-const getHutk = () => {
-  const match = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]*)/)
-  return match ? match[1] : undefined
-}
-
 const onSubmit = async () => {
   validateEmail()
 
@@ -31,7 +26,7 @@ const onSubmit = async () => {
   try {
     await $fetch('/api/waitlist', {
       method: 'POST',
-      body: { ...formData.value, ...props.scorecardMeta, design_system_request_url: window.location.href, hutk: getHutk() },
+      body: { ...formData.value, ...props.scorecardMeta, design_system_request_url: window.location.href },
     })
 
     formSubmitted.value = true

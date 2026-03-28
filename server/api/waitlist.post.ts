@@ -9,7 +9,6 @@ export default defineEventHandler(async (event) => {
     design_system_lowest_section,
     design_system_per_section_scores,
     design_system_request_url,
-    hutk,
   } = await readBody<{
     firstName: string
     lastName: string
@@ -20,7 +19,6 @@ export default defineEventHandler(async (event) => {
     design_system_lowest_section?: string
     design_system_per_section_scores?: string
     design_system_request_url?: string
-    hutk?: string
   }>(event)
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -74,16 +72,17 @@ export default defineEventHandler(async (event) => {
           ipAddress,
           pageUri: getHeader(event, 'referer') ?? '',
           pageName: 'Rails Rudiment waitlist',
-          ...(hutk ? { hutk } : {}),
         },
       }),
     },
   )
 
   if (!response.ok) {
+    const body = await response.json().catch(() => null)
     throw createError({
       statusCode: 502,
       statusMessage: 'Form submission failed.',
+      data: body,
     })
   }
 
