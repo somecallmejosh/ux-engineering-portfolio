@@ -11,7 +11,7 @@ const engagementSteps: Step[] = [
     phase: 'Phase 1',
     title: 'Audit',
     link: '/services/audit/',
-    cta: 'How the audit can help',
+    cta: 'How audits help',
     description:
       "Before you build anything new, you need to understand what's actually broken.",
   },
@@ -19,7 +19,7 @@ const engagementSteps: Step[] = [
     phase: 'Phase 2',
     title: 'Build',
     link: '/services/starter/',
-    cta: 'How the starter kit can help',
+    cta: 'How the build helps',
     description:
       'Stabilize and scale your UI system with a foundation built to last, not patched to survive.',
   },
@@ -27,7 +27,7 @@ const engagementSteps: Step[] = [
     phase: 'Phase 3',
     title: 'Align',
     link: '/services/workflow/',
-    cta: 'How the workflow can help',
+    cta: 'How alignment helps',
     description:
       'Reduce handoff friction and rework. Fix the process once so your team stops losing time to it every sprint.',
   },
