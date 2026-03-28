@@ -1,3 +1,5 @@
+import { $fetch } from 'ofetch'
+
 export default defineEventHandler(async (event) => {
   const {
     firstName,
@@ -36,53 +38,51 @@ export default defineEventHandler(async (event) => {
     ? forwarded.split(',')[0].trim()
     : getRequestIP(event)
 
-  const response = await fetch(
-    `https://api.hsforms.com/submissions/v3/integration/submit/${hubspotPortalId}/${hubspotDesignHealthCheckForm}`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        fields: [
-          { name: 'firstname', value: firstName ?? '' },
-          { name: 'lastname', value: lastName ?? '' },
-          { name: 'email', value: email },
-          {
-            name: 'design_system_recommendation',
-            value: design_system_recommendation ?? '',
+  try {
+    await $fetch(
+      `https://api.hsforms.com/submissions/v3/integration/submit/${hubspotPortalId}/${hubspotDesignHealthCheckForm}`,
+      {
+        method: 'POST',
+        body: {
+          fields: [
+            { name: 'firstname', value: firstName ?? '' },
+            { name: 'lastname', value: lastName ?? '' },
+            { name: 'email', value: email },
+            {
+              name: 'design_system_recommendation',
+              value: design_system_recommendation ?? '',
+            },
+            { name: 'design_system_label', value: design_system_label ?? '' },
+            {
+              name: 'design_system_score_total',
+              value: String(design_system_score_total ?? ''),
+            },
+            {
+              name: 'design_system_lowest_section',
+              value: design_system_lowest_section ?? '',
+            },
+            {
+              name: 'design_system_per_section_scores',
+              value: design_system_per_section_scores ?? '',
+            },
+            {
+              name: 'design_system_request_url',
+              value: design_system_request_url ?? '',
+            },
+          ],
+          context: {
+            ipAddress,
+            pageUri: getHeader(event, 'referer') ?? '',
+            pageName: 'Scorecard Results',
           },
-          { name: 'design_system_label', value: design_system_label ?? '' },
-          {
-            name: 'design_system_score_total',
-            value: String(design_system_score_total ?? ''),
-          },
-          {
-            name: 'design_system_lowest_section',
-            value: design_system_lowest_section ?? '',
-          },
-          {
-            name: 'design_system_per_section_scores',
-            value: design_system_per_section_scores ?? '',
-          },
-          {
-            name: 'design_system_request_url',
-            value: design_system_request_url ?? '',
-          },
-        ],
-        context: {
-          ipAddress,
-          pageUri: getHeader(event, 'referer') ?? '',
-          pageName: 'Rails Rudiment waitlist',
         },
-      }),
-    },
-  )
-
-  if (!response.ok) {
-    const body = await response.json().catch(() => null)
+      },
+    )
+  } catch (error: any) {
     throw createError({
       statusCode: 502,
       statusMessage: 'Form submission failed.',
-      data: body,
+      data: error?.data ?? null,
     })
   }
 
