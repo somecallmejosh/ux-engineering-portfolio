@@ -51,7 +51,7 @@ const painPoints = [
     </PageHero>
 
     <!-- Pain points -->
-    <section class="space-y-8">
+    <section class="space-y-8 border-y py-12 border-neutral-200">
       <div class="prose">
         <h2>Signs your design system needs attention</h2>
         <p>These aren't edge cases. They're the norm for teams that have been shipping features without a stable system

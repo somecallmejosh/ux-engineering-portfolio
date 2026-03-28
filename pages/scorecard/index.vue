@@ -445,7 +445,7 @@ const chartSections = computed(() =>
                     <button v-for="opt in RATING_OPTIONS" :key="opt.value" type="button"
                       :aria-pressed="ratings[item.id] === opt.value" :title="opt.title"
                       @click="setRating(item.id, opt.value)"
-                      class="relative flex flex-1 items-center gap-1.5 pl-2 pr-3 py-1.5  font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
+                      class="relative flex flex-1 items-center gap-1 lg:gap-1.5 lg:pl-2 lg:pr-3 py-1.5 text-sm lg:text-base font-medium border-r last:border-r-0 border-neutral-200 transition-colors duration-150 cursor-pointer first:rounded-l-[7px] last:rounded-r-[7px] focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-blue-400 focus-visible:outline-offset-1 justify-center"
                       :class="ratings[item.id] === opt.value
                         ? RATING_BTN_ACTIVE[opt.value]
                         : 'bg-white hover:bg-neutral-50 hover:'">
@@ -552,7 +552,8 @@ const chartSections = computed(() =>
             </div>
           </div>
           <!-- Recommendation CTA -->
-          <CtaScorecardRecommendation :all-answered="allAnswered" :recommendation="recommendation" :share-url="shareUrl" />
+          <CtaScorecardRecommendation :all-answered="allAnswered" :recommendation="recommendation"
+            :share-url="shareUrl" />
         </div>
       </div>
     </div>

@@ -108,47 +108,14 @@ const header = {
           <div class="prose">
             <h2>Already know where things are breaking down?</h2>
           </div>
-          <ul class="not-prose space-y-2 divide-y divide-neutral-200">
-            <li class="pb-2">
-              <div class="prose lg:flex gap-2 items-baseline">
-                <p class="font-semibold mb-0">System feels inconsistent?</p>
-                <span class="hidden lg:inline-flex">
-                  <Icon name="ph:arrow-right" size="0.9rem" />
-                </span>
-                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/audit/">Design System Audit.
-                </NuxtLink>
-              </div>
-            </li>
-            <li class="pb-2">
-              <div class="prose lg:flex gap-2 items-baseline">
-                <p class="font-semibold mb-0">Foundation is weak or patchy?</p>
-                <span class="hidden lg:inline-flex">
-                  <Icon name="ph:arrow-right" size="0.9rem" />
-                </span>
-                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/component-library-starter/">
-                  Component
-                  Library Starter.</NuxtLink>
-              </div>
-            </li>
-            <li class="pb-2">
-              <div class="prose lg:flex gap-2 items-baseline">
-                <p class="font-semibold mb-0">Design and dev are out of sync?</p>
-                <span class="hidden lg:inline-flex">
-                  <Icon name="ph:arrow-right" size="0.9rem" />
-                </span>
-                <NuxtLink class="underline hover:no-underline lg:ml-auto" to="/services/design-to-code-workflow/">
-                  Design-to-Code
-                  Workflow.</NuxtLink>
-              </div>
-            </li>
-          </ul>
+          <WhereThisFits />
         </div>
       </template>
     </SplitContent>
 
     <div class="space-y-6">
       <div class="prose">
-        <h2>How I Help</h2>
+        <h2>How I help</h2>
       </div>
       <EngagementSteps />
       <div class="prose">
@@ -176,8 +143,7 @@ const header = {
         <div class="lg:gap-6 flex flex-col lg:flex-row">
           <div class="prose order-1 lg:order-0">
             <h2>About Joshua Briley</h2>
-            <p>I design and build UI systems that stay consistent, accessible, and usable as products grow. 20 years of
-              experience across insurance, media, and professional sports.</p>
+            <p>I design and build UI systems that stay consistent, accessible, and usable as products grow. I've spent 20 years working across insurance, media, and professional sports.</p>
             <NuxtLink to="/about/">
               My background and experience
             </NuxtLink>
