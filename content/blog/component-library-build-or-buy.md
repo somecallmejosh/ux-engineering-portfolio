@@ -55,9 +55,9 @@ Like Ant Design, its design language is opinionated. The library is customizable
 
 ### Speed to production
 
-A pre-built library gives you accessible, tested components immediately. A button with correct focus behavior, a modal with proper focus trapping, a dropdown with keyboard navigation — these take meaningful time to build correctly from scratch. An existing library handles all of that for you.
+A pre-built library gives you accessible, tested components immediately. A button with correct focus behavior, a modal with proper focus trapping — these take meaningful time to build correctly from scratch. An existing library handles all of that for you.
 
-For teams with a short runway, a tight deadline, or limited frontend capacity, this is a compelling argument.
+For teams with a tight deadline or limited frontend capacity, this is a compelling argument.
 
 ### Accessibility out of the box
 
@@ -81,11 +81,11 @@ A custom library starts from your design tokens and your visual language. There'
 
 ### Full control over the component API
 
-When you build a component, you design its interface: what props it accepts, how it behaves, what it exposes. Pre-built libraries make API decisions that may not align with how your team wants to work. Working around an API you don't control can produce awkward code and unexpected friction.
+When you build a component, you design its interface: what props it accepts and what it exposes. Pre-built libraries make API decisions that may not align with how your team wants to work. Working around an API you don't control can produce awkward code and unexpected friction.
 
 ### No dependency risk
 
-A component library you depend on can be deprecated, abandoned, or have its licensing changed. A library you own carries none of that risk. This matters more for long-lived products than for projects with shorter timescales.
+A component library you depend on can be abandoned or have its licensing changed. A library you own carries none of that risk. This matters more for long-lived products than for projects with shorter timescales.
 
 ### Performance control
 
@@ -93,13 +93,13 @@ Pre-built libraries bundle more than you typically use. Tree-shaking reduces thi
 
 ### Learning and ownership
 
-Teams that build their own library develop deep expertise in component architecture, accessibility patterns, and design systems. That knowledge compounds over time and makes the team more capable across every future project.
+Teams that build their own library develop deep expertise in component architecture and accessibility. That knowledge compounds over time and makes the team more capable across every future project.
 
 ## The honest middle ground
 
 The build-vs-buy framing is useful for making a decision, but most teams don't land at either extreme.
 
-Many teams use a headless library like Radix UI for behavioral primitives (keyboard navigation, focus management, ARIA attributes) while building their own visual layer on top. This approach gets you the accessibility and behavior work for free while preserving full visual control. shadcn/ui is essentially this pattern made accessible to teams that don't want to wire it up themselves.
+Many teams use a headless library like Radix UI for behavioral primitives (keyboard navigation, ARIA attributes) while building their own visual layer on top. This approach gets you the accessibility and behavior work for free while preserving full visual control. shadcn/ui is essentially this pattern made accessible to teams that don't want to wire it up themselves.
 
 Others start with an existing library to ship quickly, then gradually replace components with custom implementations as the product matures and brand requirements become clearer.
 

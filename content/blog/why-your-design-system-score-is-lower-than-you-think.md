@@ -2,7 +2,7 @@
 slug: why-your-design-system-score-is-lower-than-you-think
 publishedAt: 2026-03-30
 title: 'Why your design system score is lower than you think'
-description: "Most teams with a design system believe they're in reasonable shape. They have a component library. They have a Storybook. They have a Figma file that's mostly up to date."
+description: 'Exploring the common gaps between perceived and actual design system health, and why teams often overestimate their progress.'
 tags: [accessibility, design-systems, best-practices, design-system-guide]
 image: '/images/design-system-confusion.webp'
 image_alt: 'A frustrated developer working on a design system.'
@@ -12,7 +12,7 @@ image_alt: 'A frustrated developer working on a design system.'
 Component libraries: a practical guide
 ::
 
-Most teams with a design system believe they're in reasonable shape. They have a component library. They have a Storybook. They have a Figma file that's mostly up to date. Designers and engineers reference it, at least some of the time. The system exists, and that feels like progress. For a while, it was.
+Most teams with a design system believe they're in reasonable shape. They have a component library, a Storybook, and a Figma file that's mostly up to date. Designers and engineers reference it, at least some of the time. The system exists, and that feels like progress. For a while, it was.
 
 The problem is that "the system exists" and "the system is healthy" are very different conditions, and the gap between them tends to be larger than anyone realizes until something forces a close look.
 
@@ -42,9 +42,9 @@ The component consistency score reflects how the system actually functions, not 
 
 Accessibility is the dimension where the optimism gap is largest, and where the consequences of overestimating are most serious.
 
-Many teams believe they're in reasonable accessibility shape because they ran an automated scan and addressed the flagged violations. Automated tools are useful, but they catch somewhere between 30 and 40 percent of real accessibility problems. The rest (focus management in overlay components, keyboard operability in interactive patterns, screen reader announcements for dynamic content updates) require manual testing and, more importantly, architectural decisions that make accessible behavior the default.
+Many teams believe they're in reasonable accessibility shape because they ran an automated scan and addressed the flagged violations. Automated tools are useful, but they catch somewhere between 30 and 40 percent of real accessibility problems. The rest (focus management in overlay components, keyboard operability in interactive patterns) require manual testing and, more importantly, architectural decisions that make accessible behavior the default.
 
-Teams that score themselves highly on accessibility are often scoring their most recent audit results, not the current state of their system. Accessibility drift is constant. A focus style gets overridden to match a mock. A keyboard interaction changes to "feel better" on a touchscreen. A modal's close behavior gets modified and escape key handling breaks. None of these changes are caught by the next automated scan.
+Teams that score themselves highly on accessibility are often scoring their most recent audit results, not the current state of their system. Accessibility drift is constant. A focus style gets overridden to match a mock. A modal's close behavior gets modified and escape key handling breaks. None of these changes are caught by the next automated scan.
 
 The more useful question isn't whether your components passed their last accessibility review. It's whether your component library is architecturally structured to make accessible output the path of least resistance — so that a developer consuming the library gets correct keyboard behavior, focus management, and contrast without having to think about it. Most systems aren't built that way, and teams don't realize it because the failure mode is gradual rather than sudden.
 
@@ -58,7 +58,7 @@ Teams that skipped the semantic layer have named values instead of a token syste
 
 The other common gap is coverage. A token system that covers color but not spacing, or color and spacing but not typography, leaves large portions of the visual system outside the architecture. Those portions continue to be defined by hardcoded values, and they drift accordingly.
 
-Teams score this dimension by asking "do we have tokens?" The answer is usually yes. The more revealing questions are whether the semantic layer exists, whether coverage is comprehensive, and whether components actually reference tokens rather than defining their own values.
+Teams score this dimension by asking "do we have tokens?" The answer is usually yes. The more revealing question is whether components actually reference semantic tokens, and whether the system covers enough of the visual language to make that worthwhile.
 
 ## Documentation: is it current, or is it archaeology?
 
@@ -76,18 +76,18 @@ The getting-started experience is another place where teams routinely overestima
 
 The handoff dimension is where design system investment most often fails to reach its intended users.
 
-Teams score this highly because designers and developers both have access to Figma, both know the component library exists, and both nominally participate in the same handoff process. The gap shows up in the specifics.
+Teams score this highly because designers and developers share the same tools and nominally follow the same handoff process. The gap shows up in the specifics.
 
 Do designers use Figma components from the shared library, or do they design with custom elements that don't exist in code? If the designs reference a component that developers then have to interpret or approximate rather than implement directly, the handoff process isn't functioning as a bridge between design and engineering. It's creating translation work that consumes time and introduces inconsistency.
 
 Do designers and developers use the same token names? If a designer specifies "primary blue" and the corresponding token in code is `color.brand.interactive`, that mismatch produces friction on every handoff. Small naming gaps don't stay small when they're embedded in a workflow that runs hundreds of times.
 
-Is there a clear owner for the design system? This question reveals more than almost any other. When nobody has explicit responsibility for the system's health, decisions get made locally, maintenance happens reactively, and the system drifts in the direction of whoever last touched it. Many teams have a system that "everyone owns," which in practice means nobody does.
+Is there a clear owner for the design system? This question reveals more than almost any other. When nobody has explicit responsibility for the system's health, decisions get made locally and maintenance happens reactively. Many teams have a system that "everyone owns," which in practice means nobody does.
 
 ## What a lower score actually means
 
 If your honest assessment of these five dimensions produces lower scores than you expected, that's not a failure. It's the beginning of a useful conversation.
 
-The gap between where you are and where you need to be is not infinite, and it doesn't require rebuilding the system from scratch. Most systems need targeted structural improvements in two or three dimensions, not a full overhaul. Knowing which dimensions and which specific gaps makes the remediation tractable. Continuing to operate with an inflated sense of system health means the debt compounds silently until something forces a reckoning: usually an accessibility audit with regulatory implications, a redesign that exposes how deeply inconsistency has spread, or an engineering leadership change that asks for justification of existing investment.
+The gap between where you are and where you need to be is not infinite, and it doesn't require rebuilding the system from scratch. Most systems need targeted structural improvements in two or three dimensions, not a full overhaul. Knowing which dimensions and which specific gaps makes the remediation tractable. Continuing to operate with an inflated sense of system health means the debt compounds silently until something forces a reckoning: usually an accessibility audit with regulatory implications, or a redesign that exposes how deeply inconsistency has spread.
 
 The [Design System Scorecard](https://joshuabriley.com/scorecard/) is a structured way to move from intuition to a documented baseline. It covers all five dimensions across 32 questions and takes about 10 minutes. The score you get won't match what you expected going in. That's the point.

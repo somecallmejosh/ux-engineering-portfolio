@@ -14,7 +14,7 @@ Component libraries: a practical guide
 
 Most component library guidance assumes a single framework. Build React components, or Vue components, or Angular components. Pick one and go deep.
 
-Some teams don't have that option. Large organizations frequently run multiple products built in different frameworks, acquired codebases that can't be migrated, or platform requirements that mandate specific technology choices. If your team needs one component library to work across React, Vue, and Angular, you're solving a genuinely harder problem.
+Some teams don't have that option. Large organizations frequently run multiple products built in different frameworks or have acquired codebases that can't be migrated. If your team needs one component library to work across React, Vue, and Angular, you're solving a genuinely harder problem.
 
 This article covers the three main approaches, their tradeoffs, and what each one requires in practice.
 
@@ -80,7 +80,7 @@ Tools like [Stencil](https://stenciljs.com/) and [Lit](https://lit.dev/) make bu
 
 ### When to choose web components
 
-Web components are the right choice when framework-agnostic portability is the primary requirement, when the components are relatively self-contained, and when the teams consuming the library span multiple technology stacks without a common framework layer.
+Web components are the right choice when framework-agnostic portability is the primary requirement and the components are relatively self-contained.
 
 ## Approach 2: Headless components with framework-specific implementations
 
@@ -88,7 +88,7 @@ A headless component library separates behavior and accessibility from visual pr
 
 ### How headless components work
 
-The headless layer defines what a component does: the keyboard interactions a dropdown supports, the Accessible Rich Internet Applications (ARIA) attributes a modal requires, the state machine a tabs component follows. This logic is expressed as framework-agnostic JavaScript or as separate adapters for each framework.
+The headless layer defines what a component does: the keyboard interactions a dropdown supports, the Accessible Rich Internet Applications (ARIA) attributes a modal requires. This logic is expressed as framework-agnostic JavaScript or as separate adapters for each framework.
 
 [Radix UI](https://www.radix-ui.com/) is a well-known example for React. [Headless UI](https://headlessui.com/) provides implementations for both React and Vue. [Kobalte](https://kobalte.dev/) covers SolidJS. There is no single headless library that covers React, Vue, and Angular with equal depth.
 
@@ -213,7 +213,7 @@ This approach fits organizations where framework teams have significant autonomy
 
 ## Choosing between the three approaches
 
-No approach is universally correct. The right choice depends on how much consistency you need, how much maintenance you can sustain, and what your teams are equipped to build and own.
+No approach is universally correct. The right choice depends on how much consistency you need and how much maintenance you can sustain.
 
 ::OverflowX
 | Factor | Web components | Headless + implementations | Token-driven |
@@ -227,7 +227,7 @@ No approach is universally correct. The right choice depends on how much consist
 | Best for | Strict portability requirements | Large teams with dedicated DS engineers | Federated teams with framework autonomy |
 ::
 
-Most organizations land somewhere between these options. A common pattern is to use web components or headless implementations for the most complex, interactive components (modals, dropdowns, date pickers) and a token-driven approach for simpler components where behavioral variation is less risky.
+Most organizations land somewhere between these options. A common pattern is to use web components or headless implementations for the most complex, interactive components (modals, date pickers) and a token-driven approach for simpler components where behavioral variation is less risky.
 
 ## What every multi-framework library needs regardless of approach
 
@@ -235,7 +235,7 @@ Whichever approach you choose, these requirements apply across all three:
 
 **A single token source of truth.** Tokens should be defined once and transformed into whatever format each framework needs. Style Dictionary or a similar transformation tool handles this.
 
-**Cross-framework behavioral specifications.** Document what each component does (keyboard interactions, ARIA attributes, state transitions) in a way that's independent of implementation. This gives each framework team a clear target to build toward.
+**Cross-framework behavioral specifications.** Document what each component does (keyboard interactions, ARIA attributes) in a way that's independent of implementation. This gives each framework team a clear target to build toward.
 
 **Cross-framework testing.** Verify behavioral consistency; don't assume it. Automated tests that run against each framework implementation catch divergence before it reaches users.
 
