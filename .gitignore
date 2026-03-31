@@ -25,3 +25,6 @@ logs
 .netlify
 planning/
 content/contract-templates
+
+# HubSpot config file
+hubspot.config.yml

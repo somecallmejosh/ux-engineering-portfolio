@@ -23,7 +23,7 @@ useHead({
 
 useSeoMeta({
   title: 'Your Scorecard Results | Josh Briley',
-  description: 'Your personalised design system scorecard results, with a recommendation based on your scores.',
+  description: 'Your personalized design system scorecard results, with a recommendation based on your scores.',
 })
 
 // ─── Hydrate ratings from URL param ──────────────────────────────────────────
@@ -100,12 +100,12 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
       pill: 'Tools',
       pillIcon: 'ph:presentation-chart',
       title: 'Design System Scorecard',
-      description: 'Your personalised results based on the five dimensions of a healthy design system.'
+      description: 'Your personalized results based on the five dimensions of a healthy design system.'
     }" />
 
     <div class="md:grid md:grid-cols-[1fr_400px] md:items-start md:gap-6">
       <!-- Left: Radar chart -->
-      <div class="bg-white border border-neutral-200 rounded-2xl p-6">
+      <div class="bg-white border border-neutral-200 rounded-2xl p-2 lg:p-6">
         <ScorecardRadarChart :sections="chartSections" :status="totalStatus" />
         <!-- Recommendation -->
         <CtaScorecardRecommendation :recommendation="recommendation" :scorecard-meta="scorecardMeta" />
@@ -166,7 +166,7 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
 
           <!-- Start here guidance -->
           <p v-if="totalStatus && totalStatus !== 'healthy'" class="border-t border-neutral-200/60 pt-4 text-sm">
-            <strong>Start here.</strong> Your lowest-scoring area is your highest-leverage fix.
+            <strong>Start here.</strong> Your lowest-scoring area is your highest-impact fix.
             In your case, that's <strong>{{ weakestSection.title }}</strong>.
             That's where you'll see the fastest improvement.
           </p>
@@ -178,11 +178,11 @@ const { copy: copyShareUrl, copied: shareUrlCopied } = useClipboard({
           <div class="flex flex-col gap-3 border-t border-neutral-200/60 pt-4">
             <ButtonLink to="#" type="button" @click.prevent="copyShareUrl()">
               <Icon :name="shareUrlCopied ? 'ph:check' : 'ph:link'" size="1rem" aria-hidden="true" />
-              <span>{{ shareUrlCopied ? 'Link copied!' : 'Share these results' }}</span>
+              <span>{{ shareUrlCopied ? 'Link copied' : 'Share these results' }}</span>
             </ButtonLink>
             <ButtonLink variant="inverse" to="/scorecard/" replace>
               <Icon name="ph:arrow-counter-clockwise" size="1rem" aria-hidden="true" />
-              <span>Retake the assessment</span>
+              <span>Retake</span>
             </ButtonLink>
           </div>
         </div>

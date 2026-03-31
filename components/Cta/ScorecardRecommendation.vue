@@ -39,7 +39,7 @@ const CARD_STYLE: Record<string, string> = {
               </p>
               <!-- Consequence bullets (workflow only) -->
               <template v-if="recommendation.type === 'workflow'">
-                <h4>These patterns lead to:</h4>
+                <h4>These patterns lead to</h4>
                 <ul class="not-prose grid grid-cols-3 gap-2 text-sm">
                   <li class="bg-white rounded-lg p-4">Rework on every sprint</li>
                   <li class="bg-white rounded-lg p-4">UI inconsistency that slips through review</li>

@@ -19,11 +19,11 @@ const STATUS_COLORS: Record<string, string> = {
 }
 
 // Wider than tall to give horizontal labels room without shrinking the chart
-const W = 420
-const H = 280
+const W = 460
+const H = 340
 const CX = W / 2
 const CY = H / 2
-const R = 88
+const R = 130
 const LABEL_R = R + 26
 const GRID = [0.25, 0.5, 0.75, 1]
 
@@ -71,56 +71,22 @@ function dominantBaseline(i: number): string {
 </script>
 
 <template>
-  <svg :viewBox="viewBox" class="w-full" aria-hidden="true">
+  <svg :viewBox="viewBox" class="w-full h-auto" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
     <!-- Grid pentagons -->
-    <polygon
-      v-for="level in GRID"
-      :key="level"
-      :points="gridPoints(level)"
-      fill="none"
-      stroke="#e5e7eb"
-      stroke-width="1"
-    />
+    <polygon v-for="level in GRID" :key="level" :points="gridPoints(level)" fill="none" stroke="#e5e7eb"
+      stroke-width="1" />
     <!-- Axes -->
-    <line
-      v-for="(_, i) in sections"
-      :key="i"
-      :x1="CX"
-      :y1="CY"
-      :x2="pt(R, i).x"
-      :y2="pt(R, i).y"
-      stroke="#e5e7eb"
-      stroke-width="1"
-    />
+    <line v-for="(_, i) in sections" :key="i" :x1="CX" :y1="CY" :x2="pt(R, i).x" :y2="pt(R, i).y" stroke="#e5e7eb"
+      stroke-width="1" />
     <!-- Data polygon -->
-    <polygon
-      :points="dataPolygon"
-      :fill="strokeColor"
-      fill-opacity="0.12"
-      :stroke="strokeColor"
-      stroke-width="2"
-      stroke-linejoin="round"
-    />
+    <polygon :points="dataPolygon" :fill="strokeColor" fill-opacity="0.12" :stroke="strokeColor" stroke-width="2"
+      stroke-linejoin="round" />
     <!-- Data points -->
-    <circle
-      v-for="(p, i) in dataPoints"
-      :key="i"
-      :cx="p.x"
-      :cy="p.y"
-      r="4"
-      :fill="strokeColor"
-    />
+    <circle v-for="(p, i) in dataPoints" :key="i" :cx="p.x" :cy="p.y" r="4" :fill="strokeColor" />
     <!-- Labels -->
-    <text
-      v-for="(section, i) in sections"
-      :key="i"
-      :x="pt(LABEL_R, i).x"
-      :y="pt(LABEL_R, i).y"
-      :text-anchor="textAnchor(i)"
-      :dominant-baseline="dominantBaseline(i)"
-      fill="#6b7280"
-      style="font-size: 11px; font-weight: 500; font-family: inherit"
-    >
+    <text v-for="(section, i) in sections" :key="i" :x="pt(LABEL_R, i).x" :y="pt(LABEL_R, i).y"
+      :text-anchor="textAnchor(i)" :dominant-baseline="dominantBaseline(i)" fill="#6b7280"
+      style="font-size: 14px; font-weight: 600; font-family: inherit">
       {{ SHORT_LABELS[section.title] ?? section.title }}
     </text>
   </svg>

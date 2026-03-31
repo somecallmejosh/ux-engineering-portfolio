@@ -10,10 +10,10 @@ const emit = defineEmits<{
 // ─── Staggered text sequence ──────────────────────────────────────────────────
 
 const steps = [
-  'Scoring 5 dimensions...',
-  'Identifying your weakest area...',
-  'Building your recommendation...',
-  'Redirecting to your results...',
+  'Scoring five dimensions',
+  'Identifying your weakest area',
+  'Building your recommendation',
+  'Redirecting to your results',
 ]
 
 const visibleCount = ref(1)

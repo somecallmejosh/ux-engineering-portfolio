@@ -67,7 +67,7 @@ const onSubmit = async () => {
     <div class="animate-entry prose bg-neutral-50 p-6 rounded-lg" v-if="formSubmitted" role="alert">
       <h3>You made it, and I'm grateful.</h3>
       <p>That was a lot of questions, and you stuck with it. Thank you for taking the time, and for trusting me with
-        your information. I'll be in touch soon with something worth your while.</p>
+        your information. I'll be in touch soon with something worth reading.</p>
     </div>
     <div class="animate-entry prose p-6 rounded-lg border border-red-100 bg-red-50/30" v-if="formSubmitError"
       role="alert">

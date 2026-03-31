@@ -18,14 +18,15 @@ import {
   useScorecard,
   type Rating,
 } from '~/composables/useScorecard'
-
-useHead({
-  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
-})
+const title = "Design System Scorecard | Josh Briley"
+const description = "An interactive self-assessment checklist covering the five dimensions of a healthy design system."
 
 useSeoMeta({
-  title: 'Design System Scorecard | Josh Briley',
-  description: 'A self-assessment checklist covering the five dimensions of a healthy design system: component consistency, accessibility, token architecture, documentation, and handoff process.',
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
+  ogImage: '/images/design-system-confusion.webp',
 })
 
 // ─── State ───────────────────────────────────────────────────────────────────
@@ -100,7 +101,7 @@ function cancelInterstitial() {
         <div class="flex flex-wrap gap-3 flex-1">
           <div class="flex items-center gap-1.5">
             <Icon name="ph:x-circle" size="1.1rem" class="text-red-400" aria-hidden="true" />
-            <span><strong>None:</strong> not addressed</span>
+            <span><strong>No:</strong> not addressed</span>
           </div>
           <div class="flex items-center gap-1.5">
             <Icon name="ph:minus-circle" size="1.1rem" class="text-amber-400" aria-hidden="true" />
@@ -108,7 +109,7 @@ function cancelInterstitial() {
           </div>
           <div class="flex items-center gap-1.5">
             <Icon name="ph:check-circle" size="1.1rem" class="text-emerald-500" aria-hidden="true" />
-            <span><strong>Done:</strong> working well</span>
+            <span><strong>Yes:</strong> working well</span>
           </div>
         </div>
         <div class="flex items-center gap-3 shrink-0 justify-between">
@@ -133,31 +134,34 @@ function cancelInterstitial() {
           <section v-for="(section, si) in SECTIONS" :key="section.id" :aria-labelledby="`title-${section.id}`"
             class="bg-white border border-neutral-200 rounded-2xl overflow-hidden">
             <!-- Section header -->
-            <div class="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-100">
-              <div class="flex items-center gap-3">
-                <span class="font-medium font-mono tabular-nums" aria-hidden="true">
-                  {{ String(si + 1).padStart(2, '0') }}
-                </span>
-                <h2 :id="`title-${section.id}`" class="text-base font-medium">
-                  {{ section.title }}
-                </h2>
-              </div>
-              <div class="flex items-center gap-2 shrink-0">
-                <span class="tabular-nums" aria-hidden="true">
-                  <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }}
-                </span>
-                <span class="sr-only">Score: {{ sectionScore(section) }} out of {{ section.max }}</span>
-                <!-- aria-live container must always exist for announcements to fire -->
-                <div aria-live="polite" aria-atomic="true">
-                  <Transition name="badge">
-                    <span v-if="sectionStatus(section)"
-                      class="px-2 py-0.5 rounded-full border font-medium animate-entry"
-                      :class="STATUS_BADGE[sectionStatus(section)!]">
-                      {{ STATUS_LABEL[sectionStatus(section)!] }}
-                    </span>
-                  </Transition>
+            <div class="lg:gap-4 px-4 lg:px-5 py-4 border-b border-neutral-100">
+              <div class="flex flex-col lg:flex-row lg:items-center gap-3 justify-between shrink-0">
+                <div class="flex gap-1 lg:flex-1">
+                  <span class="font-medium font-mono tabular-nums" aria-hidden="true">
+                    {{ String(si + 1).padStart(2, '0') }}
+                  </span>
+                  <h2 :id="`title-${section.id}`" class="text-base font-medium">
+                    {{ section.title }}
+                  </h2>
+                </div>
+                <div class="flex gap-2">
+                  <span class="tabular-nums" aria-hidden="true">
+                    <span class="font-medium">{{ sectionScore(section) }}</span>/{{ section.max }}
+                  </span>
+                  <span class="sr-only">Score: {{ sectionScore(section) }} out of {{ section.max }}</span>
+                  <!-- aria-live container must always exist for announcements to fire -->
+                  <div aria-live="polite" aria-atomic="true" class="ml-auto">
+                    <Transition name="badge">
+                      <span v-if="sectionStatus(section)"
+                        class="px-2 py-0.5 rounded-full border font-medium animate-entry text-sm"
+                        :class="STATUS_BADGE[sectionStatus(section)!]">
+                        {{ STATUS_LABEL[sectionStatus(section)!] }}
+                      </span>
+                    </Transition>
+                  </div>
                 </div>
               </div>
+
             </div>
             <!-- Items -->
             <ul role="list" class="divide-y divide-neutral-50">
@@ -253,7 +257,7 @@ function cancelInterstitial() {
                 <div v-if="allAnswered" class="animate-entry border-t border-neutral-200/60 pt-4 space-y-4">
                   <div v-if="totalStatus !== 'healthy'" class="space-y-4">
                     <p>
-                      <strong>Start here.</strong> Your lowest-scoring area is your highest-leverage fix.
+                      <strong>Start here.</strong> Your lowest-scoring area is your highest-impact fix.
                       In your case, that's <strong>{{ weakestSection.title }}</strong>.
                       That's where you'll see the fastest improvement.
                     </p>
@@ -261,12 +265,13 @@ function cancelInterstitial() {
                     <ButtonLink to="" type="button"
                       class="cursor-pointer not-prose no-underline border font-medium rounded-full px-5 py-1.5 border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-700 transition-colors flex items-center gap-1.5 w-full justify-center"
                       @click.prevent="openInterstitial">
-                      See your recommendations
+                      See recommendations
                     </ButtonLink>
                   </div>
                   <div v-else class="space-y-4">
                     <p>
-                      <strong>Excellent work.</strong> Your design system is performing well across every dimension. Keep it up.
+                      <strong>Excellent work.</strong> Your design system is performing well across every dimension.
+                      Keep it up.
                     </p>
                     <div class="not-prose">
                       <ButtonLink variant="inverse" @click.prevent="resetAll" to="" replace class="cursor-pointer">

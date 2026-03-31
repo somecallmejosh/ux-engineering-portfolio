@@ -82,7 +82,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 's1-5',
         label:
-          'No one-off components solve the same problem as an existing shared component in a different way.',
+          'One-off components that duplicate an existing shared component don\'t exist in the codebase.',
       },
       {
         id: 's1-6',
@@ -124,7 +124,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 's2-6',
         label:
-          'Images, icons, and decorative elements have appropriate alt text or are hidden from assistive technology.',
+          'Informative images and icons have descriptive alt text, and purely decorative elements are hidden from assistive technology.',
       },
       {
         id: 's2-7',
@@ -171,7 +171,7 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 's3-6',
         label:
-          'No component redefines a token value instead of referencing it.',
+          'Every component references tokens rather than redefining their values.',
       },
     ],
   },
@@ -235,12 +235,12 @@ export const SECTIONS: ChecklistSection[] = [
       {
         id: 's5-4',
         label:
-          'Developers do not regularly rebuild components that already exist in the library.',
+          'Developers don\'t rebuild components that already exist in the library.',
       },
       {
         id: 's5-5',
         label:
-          'There is a clear owner (team or individual) responsible for maintaining and evolving the design system.',
+          'A clear owner (team or individual) is responsible for maintaining and evolving the design system.',
       },
       {
         id: 's5-6',
@@ -264,7 +264,7 @@ export interface RatingOption {
 export const RATING_OPTIONS: RatingOption[] = [
   {
     value: 0,
-    label: 'None',
+    label: 'No',
     title: 'Not addressed (0 points)',
     icon: 'ph:x-circle',
   },
@@ -276,7 +276,7 @@ export const RATING_OPTIONS: RatingOption[] = [
   },
   {
     value: 2,
-    label: 'Done',
+    label: 'Yes',
     title: 'Working well (2 points)',
     icon: 'ph:check-circle',
   },
