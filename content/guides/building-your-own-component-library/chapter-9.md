@@ -237,7 +237,7 @@ Badge is a presentational `<span>` with variant styling and an optional `aria-la
 
 These components follow the patterns already established. Badge and Card are simpler versions of the components you've already built. Tabs is structurally similar to RadioGroup: a group component that manages state, with child components that participate in that state via React Aria context.
 
-The full implementations are in the [companion repository]([companion-repo-url]). The patterns don't vary from what you've seen in chapters 6 and 7.
+The full implementations are in the [companion repository](https://github.com/Rudiment-UI/rudiment-ui). The patterns don't vary from what you've seen in chapters 7 and 8.
 
 ## What you have now
 

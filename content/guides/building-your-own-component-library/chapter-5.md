@@ -641,6 +641,7 @@ These primitives become most useful when nested. A complete page layout requires
 This layout handles narrow viewports automatically. The Sidebar stacks when the content panel would be too narrow. The Switcher collapses the metric cards to a single column. The Grid drops columns as space decreases. No breakpoints, no media queries, no viewport-specific code.
 
 ::Storybook{url="https://rudiment-ui.netlify.app/?path=/docs/examples-settings-page--docs" title="Layout composition in Storybook"}
+::
 
 ## Attribution
 

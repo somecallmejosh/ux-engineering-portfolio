@@ -22,22 +22,28 @@ const { post } = await useContentDetail('blog')
             </div>
           </dl>
         </div>
-        <TagLinks tag="blog" :collection="post.tags" title="Tags" />
         <TableOfContents :links="post.body.toc.links" />
       </div>
     </PageHero>
 
     <div class="prose">
-      <article>
+      <article class="mb-16">
         <ContentRenderer :value="post" />
       </article>
-      <aside class="space-y-6 lg:space-y-12">
-        <TagLinkList title="Blog Tags" collection="blog" />
-        <CallOut class="mb-6">
-          <strong>Blog disclaimer:</strong> Each article on this blog is strictly my own opinion and
-          doesn't reflect the views of my employer or any other organization. <NuxtLink to="/contact/">Reach out
-          </NuxtLink> if you have questions or feedback.
-        </CallOut>
+      <aside class="space-y-6 lg:space-y-12 border-t border-neutral-200 pt-6 lg:pt-12">
+        <div>
+          <TagLinks tag="blog" :collection="post.tags" title="Article Tags" />
+        </div>
+        <div>
+          <TagLinkList title="All Tags" collection="blog" />
+        </div>
+        <div>
+          <CallOut class="mb-6">
+            <strong>Blog disclaimer:</strong> Each article on this blog is strictly my own opinion and
+            doesn't reflect the views of my employer or any other organization. <NuxtLink to="/contact/">Reach out
+            </NuxtLink> if you have questions or feedback.
+          </CallOut>
+        </div>
       </aside>
     </div>
   </PageWrapper>

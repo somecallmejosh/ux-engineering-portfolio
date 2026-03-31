@@ -6,11 +6,13 @@ title: Design System Scorecard
 
 Rate each criterion using this scale, then total your score per section.
 
-| Rating             | Points |
+::OverflowX
+| Rating | Points |
 | ------------------ | ------ |
-| Working well       | 2      |
-| Partially in place | 1      |
-| Not addressed      | 0      |
+| Working well | 2 |
+| Partially in place | 1 |
+| Not addressed | 0 |
+::
 
 **Section score guide:** 10–12 = Strong · 6–9 = Needs attention · 0–5 = Critical gap
 
@@ -85,14 +87,16 @@ Rate each criterion using this scale, then total your score per section.
 
 ## Total score
 
-| Section                  | Score | Out of |
+::OverflowX
+| Section | Score | Out of |
 | ------------------------ | ----- | ------ |
-| 1. Component consistency |       | 12     |
-| 2. Accessibility         |       | 16     |
-| 3. Token architecture    |       | 12     |
-| 4. Documentation         |       | 12     |
-| 5. Handoff process       |       | 12     |
-| **Total**                |       | **64** |
+| 1. Component consistency | | 12 |
+| 2. Accessibility | | 16 |
+| 3. Token architecture | | 12 |
+| 4. Documentation | | 12 |
+| 5. Handoff process | | 12 |
+| **Total** | | **64** |
+::
 
 **Score guide:** 52–64 = Healthy · 32–51 = Functional but inconsistent · 0–31 = Significant investment needed
 

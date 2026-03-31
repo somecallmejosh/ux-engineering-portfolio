@@ -1,7 +1,7 @@
 ---
 slug: what-is-a-ux-engineer
 publishedAt: 2024-12-18
-title: 'Somewhere between design and dev: Life as a UX Engineer'
+title: 'Somewhere between design and dev: life as a UX Engineer'
 description: 'A behind-the-scenes look at the UX Engineer role, where design, dev, and user needs meet.'
 tags: [front-end-development, user-experience, career]
 image: '/images/blog/what-is-a-ux-engineer.webp'

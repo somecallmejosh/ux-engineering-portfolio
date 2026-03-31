@@ -76,6 +76,7 @@ const onSubmit = async () => {
 <template>
 
   <div>
+    <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance mt-0">Tell me about your project</h2>
     <form v-show="!formSubmitted" name="contact" novalidate @submit.prevent="onSubmit"
       class="space-y-4 p-6 bg-neutral-50 rounded-lg">
       <div class="grid lg:grid-cols-2 gap-6">

@@ -8,10 +8,6 @@ image: '/images/blog/component-library-for-multi-framework-teams.png'
 image_alt: 'Team discussing component library strategies.'
 ---
 
-::TagMenu{tag="component-library-guide"}
-Component libraries: a practical guide
-::
-
 Most component library guidance assumes a single framework. Build React components, or Vue components, or Angular components. Pick one and go deep.
 
 Some teams don't have that option. Large organizations frequently run multiple products built in different frameworks or have acquired codebases that can't be migrated. If your team needs one component library to work across React, Vue, and Angular, you're solving a genuinely harder problem.
@@ -240,3 +236,7 @@ Whichever approach you choose, these requirements apply across all three:
 **Cross-framework testing.** Verify behavioral consistency; don't assume it. Automated tests that run against each framework implementation catch divergence before it reaches users.
 
 **A shared documentation site.** Document each framework's implementation in the same place, with examples in each framework's syntax. Teams shouldn't have to look in multiple locations to understand how a component works.
+
+::TagMenu{tag="component-library-guide"}
+Component libraries: a practical guide
+::

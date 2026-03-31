@@ -54,10 +54,8 @@ useSeoMeta({
       </p>
 
       <p>
-        I've worked in both kinds of systems. I've built both kinds of systems, in the early years. The experience of
-        inheriting a brittle foundation and spending months working around it rather than building on it is a
-        significant
-        part of why I work the way I do now.
+        I've worked in both kinds of systems. I've built both kinds of systems in the early years. Inheriting a brittle
+        foundation and spending months working around it rather than building on it shaped how I work now.
       </p>
 
       <p>
@@ -135,8 +133,7 @@ useSeoMeta({
       <p>
         If you're trying to get a clear picture of where your design system stands before deciding what to do next, the
         <NuxtLink to="/scorecard/">Design System Scorecard</NuxtLink> covers the five dimensions that determine library
-        health in about ten
-        minutes. If you're ready to talk about a specific engagement, the <NuxtLink to="/services/">services page
+        health and takes about ten minutes. If you're ready to talk about a specific engagement, the <NuxtLink to="/services/">services page
         </NuxtLink> describes the
         three ways I work with teams, and the <NuxtLink to="/contact/">contact page</NuxtLink> is the fastest way to
         start a conversation.

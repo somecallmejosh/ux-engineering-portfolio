@@ -373,7 +373,7 @@ export function RadioGroup(props: RadioGroupProps) {
 
 The individual `Radio` component uses `useRadio` and receives the group state via React context (set up internally by React Aria). The implementation follows the same hidden-input-plus-visual-indicator pattern as Checkbox.
 
-Both `CheckboxGroup` and `RadioGroup` include a `description` prop and spread `descriptionProps` onto a visible element, following the same pattern established in Chapter 6's Input. The description is hidden when an error is active, so screen readers don't announce both simultaneously.
+Both `CheckboxGroup` and `RadioGroup` include a `description` prop and spread `descriptionProps` onto a visible element, following the same pattern established in Chapter 7's Input. The description is hidden when an error is active, so screen readers don't announce both simultaneously.
 
 ## Switch
 

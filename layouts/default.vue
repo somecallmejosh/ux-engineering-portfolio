@@ -89,24 +89,25 @@ const blurAndRemoveFocus = () => {
         </main>
         <footer class="px-6 lg:px-10 lg:pt-0 w-full max-w-6xl">
           <div
-            class=" lg:flex lg:justify-between lg:items-center gap-6 border-t border-neutral-200 py-6 text-sm space-y-2 lg:space-y-0">
-            <p class="flex-1">&copy; {{ new Date().getFullYear() }} Briley Creative &middot; Joshua Briley, DBA</p>
+            class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 lg:gap-6 border-t border-neutral-200 py-6 text-sm">
+            <div class="flex-1 space-y-2">
+              <p>&copy;{{ new Date().getFullYear() }} Briley Creative &middot; Joshua Briley, DBA</p>
+              <p>Available for UX engineering work. <NuxtLink :to="ROUTES.contact" class="underline hover:no-underline">
+                  Get in touch</NuxtLink>.</p>
+            </div>
             <ul class="not-prose flex gap-6 items-center">
-              <li class="flex items-center gap-1">
-                <div class="no-shrink translate-y-[3px]">
-                  <Icon name="logos:linkedin-icon" size="1em" />
-                </div>
-                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex hover:underline" target="_blank"
-                  rel="noopener noreferrer">
+              <li>
+                <a href="https://www.linkedin.com/in/joshuabriley/" class="flex items-center gap-1.5 hover:underline"
+                  target="_blank" rel="noopener noreferrer">
+                  <Icon name="ph:linkedin-logo" size="1.1em" />
                   <span class="sr-only">LinkedIn.com/</span>
                   joshuabriley
                 </a>
               </li>
-              <li class="flex items-center gap-1">
-                <div class="no-shrink translate-y-0.5">
-                  <Icon name="logos:x" size=".em" />
-                </div>
-                <a href="https://x.com/joshuabriley" class="hover:underline" target="_blank" rel="noopener noreferrer">
+              <li>
+                <a href="https://x.com/joshuabriley" class="flex items-center gap-1.5 hover:underline" target="_blank"
+                  rel="noopener noreferrer">
+                  <Icon name="ph:x-logo" size="1.1em" />
                   <span class="sr-only">x.com/</span>
                   joshuabriley
                 </a>

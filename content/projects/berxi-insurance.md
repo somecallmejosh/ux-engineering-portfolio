@@ -39,7 +39,7 @@ The fix wasn't cosmetic. The fix was architectural.
 
 Before writing a single component, I needed to make a set of upfront decisions that would govern everything that followed: how tokens would be structured, which styling approach would give marketing the flexibility they needed without fragmenting the system, and how the component API would be designed so that accessible behavior was the default output.
 
-I chose Tailwind CSS and Vue.js for specific reasons. Tailwind's utility-first model gave the engineering team a design vocabulary that was both expressive and constrained. Developers could move quickly without making visual decisions that deviated from the token system. Vue's component model made it straightforward to separate the accessibility behavior and visual styling concerns cleanly, which mattered for a system that needed to scale across multiple surface areas.
+I chose Tailwind CSS and Vue.js for specific reasons. Tailwind's utility-first model gave the engineering team a design vocabulary that was both expressive and constrained. Developers could move quickly without making visual decisions that deviated from the token system. Vue's component model kept accessibility behavior and visual styling cleanly separated, which mattered for a system that needed to scale across multiple surface areas.
 
 These weren't the only valid choices. They were the right choices for this team, this product, and this set of constraints.
 

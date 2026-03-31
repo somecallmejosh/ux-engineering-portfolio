@@ -1,16 +1,12 @@
 ---
 slug: ron-swanson-ux-engineer
 publishedAt: 2025-04-12
-title: 'Ron Swanson: No-nonsense UX Engineering'
+title: 'Ron Swanson: no-nonsense UX Engineering'
 description: 'A tribute to simplicity, privacy, and the quietly effective UX engineer who believes less is more (and still hates meetings).'
 tags: [fictional-ux-engineers]
 image: '/images/blog/ron-swanson-ux-engineer.webp'
 image_alt: 'Ron Swanson sitting at a desk with a computer, looking serious about UX.'
 ---
-
-::TagMenu{tag="fictional-ux-engineers"}
-Famous Fictional UX Engineers Series
-::
 
 Ron Swanson never applied to be a UX engineer. He was probably just trying to build a static site about canoe restoration and accidentally impressed someone on the hiring panel with the purity of his HTML. Next thing you know, he's on a cross-functional product team.
 
@@ -63,3 +59,7 @@ And over time, your product gets better. Not because it's more advanced, but bec
 ## In the end
 
 Ron doesn't chase recognition. He's not looking to climb the career ladder. He just wants to build things that work, don't bother people, and never crash. And in a tech world that's constantly screaming for your attention, Ron's work feels like a quiet act of rebellion. Which, for him, is probably the point.
+
+::TagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::

@@ -1,16 +1,12 @@
 ---
 slug: ted-lasso-ux-engineer
 publishedAt: 2025-04-18
-title: 'Ted Lasso: Building interfaces with biscuits and belief'
+title: 'Ted Lasso: building interfaces with biscuits and belief'
 description: "What happens when optimism, empathy, and detail meet cross-functional teamwork. He's not the most technical, but maybe the most impactful."
 tags: [fictional-ux-engineers]
 image: '/images/blog/ted-lasso-ux-engineer.webp'
 image_alt: 'Ted Lasso motivating a team of UX engineers.'
 ---
-
-::TagMenu{tag="fictional-ux-engineers"}
-Famous Fictional UX Engineers Series
-::
 
 Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, _"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."_
 
@@ -55,3 +51,7 @@ Using an interface Ted built feels like getting a warm cup of tea handed to you 
 Ted wouldn't teach a masterclass. But working with him would change the way you work. You'd start thinking about tone. About kindness. About how the smallest moments in an app can leave the biggest impressions. You'd write commit messages with more heart. You'd test things more thoroughly, not out of fear, but because Ted reminded you that someone out there needs this to work just right.
 
 And you'd remember that building software is a people business.
+
+::TagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::

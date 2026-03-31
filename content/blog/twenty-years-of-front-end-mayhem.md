@@ -58,7 +58,7 @@ We left Dreamweaver behind and picked up editors like Sublime, Atom, and finally
 
 We built things with Sass and PostCSS, and used preprocessors like HAML or pug, or mustache. We created design systems and figured out how to keep our styles from imploding with methodologies like BEM and ITCSS.
 
-I dipped into the back end for a while. I mostly dabbled in PHP and Ruby based frameworks like Drupal, Wordpress for PHP, and Ruby on Rails for Ruby. I liked Rails. I still like Rails quite a bit. It was clean and friendly. But the front end kept evolving, and I kept getting pulled back in.
+I dipped into the back end for a while. I mostly dabbled in PHP and Ruby based frameworks like Drupal, WordPress for PHP, and Ruby on Rails for Ruby. I liked Rails. I still like Rails quite a bit. It was clean and friendly. But the front end kept evolving, and I kept getting pulled back in.
 
 ## The JavaScript era (and the 47,000 frameworks it brought with it)
 

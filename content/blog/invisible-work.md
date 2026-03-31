@@ -18,7 +18,7 @@ I remember working on a project where I caught a focus trap during accessibility
 
 On another project, I spent a few afternoons quietly updating our internal design system documentation. It wasn't glamorous. No flashy new components. No sweeping redesigns. Just small improvements: clearer descriptions, better examples, a few diagrams to show how components fit together. A few months later, a new engineer joined the team and was able to get productive in half the usual time. They didn't know why things felt easier. They just got to work. And that, too, felt like a win.
 
-## Maintenance Nobody Sees
+## Maintenance nobody sees
 
 Invisible work also shows up in all the maintenance nobody wants to talk about. It's when you quietly fix a confusing form label before it becomes a support ticket. It's when you catch a weird edge case during QA that would've frustrated users in production. It's when you take an extra hour to make sure keyboard navigation is smooth across every major workflow, even though no one asked you to. It's the kind of work that rarely gets a headline but saves future teams, maybe even future-you, hours of headaches later.
 

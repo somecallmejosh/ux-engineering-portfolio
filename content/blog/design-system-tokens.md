@@ -4,13 +4,9 @@ publishedAt: 2026-03-02
 title: 'Everything you need to know about design tokens'
 description: 'Design tokens are the foundation of any scalable design system. This guide explains what they are, how they work, how to name and structure them, and how to use them across Figma and code.'
 tags: [design-systems, component-libraries, best-practices, design-system-guide]
-image: "/images/blog/design-system-tokens.png"
+image: '/images/blog/design-system-tokens.png'
 image_alt: 'A developer working on a design system.'
 ---
-
-::TagMenu{tag="design-system-guide"}
-Component libraries: a practical guide
-::
 
 Design tokens sound more complicated than they are. Once you understand what they do and why they exist, they become one of the most practical tools in a design system.
 
@@ -258,3 +254,7 @@ The three-tier model is a useful framework, not a mandatory architecture. A smal
 **CSS custom properties** — Variables you define in CSS with the `--property-name: value` syntax and reference with `var(--property-name)`.
 
 **Theming** — The practice of defining multiple sets of token values that produce different visual appearances from the same component structure.
+
+::TagMenu{tag="design-system-guide"}
+Component libraries: a practical guide
+::

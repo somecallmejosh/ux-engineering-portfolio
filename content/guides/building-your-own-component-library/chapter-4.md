@@ -191,7 +191,7 @@ This is useful for card-like layouts where you want some content at the top and 
 
 ```tsx
 <Stack splitAfter={2} style={{ minHeight: '300px' }}>
-  <h3 class="text-lg">Card title</h3>
+  <h3 className="text-lg">Card title</h3>
   <p>Card description that might vary in length.</p>
   <Button>Action</Button> {/* Pushed to the bottom */}
 </Stack>

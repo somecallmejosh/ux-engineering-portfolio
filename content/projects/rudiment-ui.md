@@ -115,7 +115,7 @@ Documenting the reasoning alongside the implementation is what makes a library t
 
 ## How this applies to client work
 
-Rudiment UI is a personal project built to validate an approach, not a client deliverable. But the decisions it required — how to structure a token system that survives a rebrand, how to build accessibility into components so consuming code doesn't have to think about it, how to document behavior rather than just appearance — are the same decisions that determine whether a client's component library compounds value or generates ongoing maintenance overhead.
+Rudiment UI is a personal project built to validate an approach, not a client deliverable. But the decisions it required are the same ones that determine whether a client's component library compounds value or generates ongoing maintenance overhead: how to structure a token system that survives a rebrand, how to build accessibility into components so developers using them don't have to implement it themselves, and how to document behavior rather than just appearance.
 
 A component library built on an inconsistent foundation can look functional for a long time before the structural problems surface. The token architecture that skipped the semantic layer becomes expensive when a brand update requires finding every direct color reference. The accessibility gaps that were individual oversights become Web Content Accessibility Guidelines (WCAG) audit findings when the product grows large enough to attract scrutiny. The documentation that was accurate when written becomes a liability when components evolve faster than the documentation is updated.
 

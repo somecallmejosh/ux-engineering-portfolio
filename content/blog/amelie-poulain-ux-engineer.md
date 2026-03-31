@@ -1,16 +1,12 @@
 ---
 slug: amelie-poulain-ux-engineer
 publishedAt: 2025-04-19
-title: 'Amélie Poulain: Building for joy (and no one ever notices)'
+title: 'Amélie Poulain: building for joy (and no one ever notices)'
 description: 'What Amélie teaches us about UX: thoughtful details, quiet magic, and the joy of building small things that make a big difference.'
 tags: [fictional-ux-engineers]
 image: '/images/blog/amelie-poulain-ux-engineer.webp'
 image_alt: 'Amélie Poulain, the whimsical character from the movie Amélie, sitting at a café table with a thoughtful expression.'
 ---
-
-::TagMenu{tag="fictional-ux-engineers"}
-Famous Fictional UX Engineers Series
-::
 
 Amélie is one of my favorite movies. It's gentle, beautiful, strange in the best way, and packed with small, intentional moments that turn the mundane into something meaningful. That's also how I think about good UX work.
 
@@ -57,3 +53,7 @@ Amélie would remind us that UX isn't just about speed and efficiency. It's abou
 > What would make this moment just a little more delightful for someone I'll never meet?
 
 She'd help us pay attention to the things that go unnoticed. She'd slow us down in the best way. And in a team full of loud opinions and fast deadlines, she'd quietly keep building magic into the margins.
+
+::TagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::

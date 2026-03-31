@@ -8,10 +8,6 @@ image: '/images/design-system-confusion.webp'
 image_alt: 'A frustrated developer working on a design system.'
 ---
 
-::TagMenu{tag="design-system-guide"}
-Component libraries: a practical guide
-::
-
 Most teams with a design system believe they're in reasonable shape. They have a component library, a Storybook, and a Figma file that's mostly up to date. Designers and engineers reference it, at least some of the time. The system exists, and that feels like progress. For a while, it was.
 
 The problem is that "the system exists" and "the system is healthy" are very different conditions, and the gap between them tends to be larger than anyone realizes until something forces a close look.
@@ -91,3 +87,7 @@ If your honest assessment of these five dimensions produces lower scores than yo
 The gap between where you are and where you need to be is not infinite, and it doesn't require rebuilding the system from scratch. Most systems need targeted structural improvements in two or three dimensions, not a full overhaul. Knowing which dimensions and which specific gaps makes the remediation tractable. Continuing to operate with an inflated sense of system health means the debt compounds silently until something forces a reckoning: usually an accessibility audit with regulatory implications, or a redesign that exposes how deeply inconsistency has spread.
 
 The [Design System Scorecard](https://joshuabriley.com/scorecard/) is a structured way to move from intuition to a documented baseline. It covers all five dimensions across 32 questions and takes about 10 minutes. The score you get won't match what you expected going in. That's the point.
+
+::TagMenu{tag="design-system-guide"}
+Component libraries: a practical guide
+::

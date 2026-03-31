@@ -299,7 +299,7 @@ Update `src/app.css` to import the generated tokens and map them into Tailwind's
   --font-weight-bold: var(--token-font-weight-bold);
   --leading-tight: var(--token-font-line-height-tight);
   --leading-normal: var(--token-font-line-height-normal);
-  --: var(--token-font-line-height-relaxed);
+  --leading-relaxed: var(--token-font-line-height-relaxed);
 
   /* Radius */
   --radius-sm: var(--token-radius-sm);

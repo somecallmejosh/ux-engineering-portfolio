@@ -8,10 +8,6 @@ image: '/images/blog/design-systems-are-easy-until-you-ship-one.png'
 image_alt: 'A developer working on a design system.'
 ---
 
-::TagMenu{tag="design-system-guide"}
-Component libraries: a practical guide
-::
-
 Design systems look simple from a distance. A shared library. A consistent UI. Faster delivery. Fewer bugs. Fewer debates. It's a compelling story, and it's not wrong.
 
 But the story skips the part where the system meets reality. The first app integrates it. The first team hits an edge case. The first "small" change request shows up at the worst possible time. That's when most teams learn the uncomfortable truth: a design system is not a folder of components. It's a product that serves other products. And like any product, it needs ownership, support, and a plan.
@@ -65,3 +61,7 @@ That's the part I enjoy most about this space. Most design system pain points lo
 ## If you need a second set of eyes, I'm happy to help
 
 If you're dealing with this right now and you're not sure where to start, you don't need a full redesign to make progress. A good first step is usually a short assessment to identify what's actually causing the friction, then a small plan that targets adoption, stability, and trust. If you want a second set of eyes, I'm happy to compare notes and point you in a practical direction. You can reach me through the [contact page](/contact/) on my site, and I'll respond with either a few concrete suggestions or a recommendation for what to tackle first.
+
+::TagMenu{tag="design-system-guide"}
+Component libraries: a practical guide
+::

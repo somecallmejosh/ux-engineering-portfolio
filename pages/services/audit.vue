@@ -104,6 +104,51 @@ useSeoMeta({
       </template>
     </SplitContent>
 
+    <section class="space-y-4">
+      <div class="prose">
+        <h2>What the report looks like</h2>
+        <p class="text-pretty">These are example reports showing what you'd receive.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-3 not-prose">
+        <NuxtLink to="/example-docs/fieldstone/"
+          class="group flex flex-col gap-1 p-4 rounded-lg border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition-colors">
+          <div>
+            <span data-v-a0653b64=""
+              class="inline-flex items-center px-1 py-0.5 rounded-full text-xs font-semibold bg-green-50 text-green-700 border border-green-200 mb-2">Minimal
+              findings</span>
+          </div>
+          <span class="font-medium text-neutral-900 group-hover:underline">Fieldstone Analytics</span>
+          <span class="text-sm text-neutral-600">A mature system. Four low-stakes items.</span>
+        </NuxtLink>
+        <NuxtLink to="/example-docs/lumen-health/"
+          class="group flex flex-col gap-1 p-4 rounded-lg border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition-colors">
+          <div>
+            <span
+              class="inline-flex items-center px-1 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200 mb-2">Moderate
+              findings</span>
+          </div>
+
+          <span class="font-medium text-neutral-900 group-hover:underline">Lumen Health</span>
+          <span class="text-sm text-neutral-600">Solid foundation with meaningful gaps.</span>
+        </NuxtLink>
+        <NuxtLink to="/example-docs/harwin-financial/"
+          class="group flex flex-col gap-1 p-4 rounded-lg border border-neutral-200 bg-neutral-50 hover:bg-neutral-100 transition-colors">
+          <div>
+            <span data-v-a0653b64=""
+              class="inline-flex items-center px-1 py-0.5 rounded-full text-xs font-semibold bg-red-50 text-red-700 border border-red-200 mb-2">Severe
+              findings</span>
+          </div>
+          <span class="font-medium text-neutral-900 group-hover:underline">Harwin Financial</span>
+          <span class="text-sm text-neutral-600">Structural issues requiring prioritized remediation.</span>
+        </NuxtLink>
+      </div>
+      <div class="prose">
+        <p class="text-balance text-sm">All company names, product names, and repository paths are fictional. Any
+          resemblance to real businesses is coincidental and unintended.</p>
+      </div>
+    </section>
+
     <div class="grid xl:grid-cols-3 gap-6 not-prose py-12 border-y border-neutral-200">
       <h2 class="text-3xl text-balance">Accessibility issues start in your components, not in QA.</h2>
       <p class="text-pretty">A button without keyboard support. A color token that hardcodes a value. A modal that

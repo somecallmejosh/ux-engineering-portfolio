@@ -21,7 +21,7 @@ useSeoMeta({
         pill: 'Contact Me',
         pillIcon: 'ph:address-book',
         title: 'Let\'s talk',
-        description: 'Whether you\'re dealing with component library debt, an accessibility audit deadline, or a Figma-to-code handoff that\'s slowing your team down, fill out the form and I\'ll get back to you within one business day.'
+        description: 'Fill out the form if you need help with component library debt, an accessibility audit, or a Figma-to-code handoff. I\'ll get back to you within one business day.'
       }">
         <div class="prose">
           <h2>Currently accepting new consulting engagements</h2>
@@ -35,8 +35,6 @@ useSeoMeta({
     <split-content>
       <template #primary>
         <section aria-labelledby="contact-form" class="space-y-4">
-          <h2 id="contact-form" v-if="!formSubmitted" class="text-2xl text-balance mt-0">Contact me with your questions
-            or project details</h2>
           <FormContact />
         </section>
       </template>
@@ -44,8 +42,8 @@ useSeoMeta({
         <h2>What happens next</h2>
         <ul>
           <li>Send a message. It takes about two minutes.</li>
-          <li>I review and respond within one business day.</li>
-          <li>We have a 30-minute introductory call with no obligation.</li>
+          <li>I'll review and respond within one business day.</li>
+          <li>We'll have a free 30-minute call with no obligation.</li>
           <li>If there's a fit, I'll send a simple proposal.</li>
         </ul>
 

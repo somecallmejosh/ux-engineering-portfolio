@@ -15,10 +15,6 @@ image: '/images/blog/design-systems-for-the-rest-of-us.webp'
 image_alt: 'A whimsical illustration of a design system with playful components, colors, and patterns.'
 ---
 
-::TagMenu{tag="design-system-guide"}
-Component libraries: a practical guide
-::
-
 ::CallOut
 **Spoiler**: You don't need a Storybook to have a system.
 ::
@@ -112,3 +108,7 @@ Start small. Be consistent. Fix things that are confusing. Leave the rest alone.
 As for how you build your components? In practice, it doesn't matter that much. If you're all in on React, build your system in React. If you're working across multiple codebases using different front end libraries/frameworks, maybe native Web Components are a better fit. If you hate writing native Web Components by hand, Stencil or Lit can take the edge off. If you're in the Ruby on Rails world, definitely check out [ViewComponents](https://viewcomponent.org/) by the GitHub team. They're solid.
 
 The key is to be consistent, take your team's skill sets into account, and stick with an approach that makes sense for the way you work. Don't overthink it. Just pick a direction and stick with it.
+
+::TagMenu{tag="design-system-guide"}
+Component libraries: a practical guide
+::

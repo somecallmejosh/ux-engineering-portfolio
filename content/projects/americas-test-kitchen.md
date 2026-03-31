@@ -24,7 +24,7 @@ image: '/images/projects/americas-test-kitchen.webp'
 image_alt: "America's Test Kitchen."
 ---
 
-America's Test Kitchen operates across multiple editorial brands, each with its own visual identity, its own product team, and its own publishing cadence. The challenge isn't unique to ATK: when a single component library needs to serve multiple products that look different but share behavior, the architecture has to be built for that from the start. Libraries designed for one brand and retrofitted for others quickly accumulate the wrong kind of complexity.
+America's Test Kitchen (ATK) operates across multiple editorial brands, each with its own visual identity, its own product team, and its own publishing cadence. The challenge isn't unique to ATK: when a single component library needs to serve multiple products that look different but share behavior, the architecture has to be built for that from the start. Libraries designed for one brand and retrofitted for others quickly accumulate the wrong kind of complexity.
 
 At ATK, I built a shared component library in React and Next.js that could serve multiple brand surfaces without requiring separate implementations for each one.
 
@@ -48,7 +48,7 @@ Storybook served as both the development environment and the consumer documentat
 
 ## Accessibility across every surface
 
-A multi-brand component library has a compounding relationship with accessibility. A keyboard navigation gap in a shared component isn't one violation — it's the same violation across every product that consumes the library. This made the case for building accessibility into each component at the architectural level rather than addressing it per-brand or per-feature.
+A multi-brand component library has a compounding relationship with accessibility. A keyboard navigation gap in a shared component isn't one violation. It's the same violation across every product that consumes the library. This made the case for building accessibility into each component at the architectural level rather than addressing it per-brand or per-feature.
 
 Keyboard operability, ARIA implementation, focus management in overlay components, and contrast against the token system's color values were requirements for every component, not optional enhancements. A developer using the library to build a feature got accessible behavior without having to implement it. That's the structural benefit of treating accessibility as a component-level concern.
 

@@ -8,10 +8,6 @@ image: '/images/blog/forrest-gump-ux-engineer.webp'
 image_alt: 'Forrest Gump sitting on a park bench thinking about UX.'
 ---
 
-::TagMenu{tag="fictional-ux-engineers"}
-Famous Fictional UX Engineers Series
-::
-
 If Forrest Gump somehow stumbled his way into a UX Engineering role (say, he was out running and wandered into a product team stand-up), he'd probably fit right in.
 
 Not because he's a tech wizard. Not because he memorized WCAG or knows the difference between rem and em. But because Forrest is a masterclass in everything UX teams claim to value: empathy, patience, clarity, consistency, and zero ego.
@@ -65,3 +61,7 @@ And somewhere out there, a user would breeze through a flow that used to be frus
 Forrest doesn't chase success. He stumbles into it by being relentlessly kind, ridiculously focused, and unshakably loyal. He listens more than he talks. He doesn't panic under pressure. He just does the next right thing, every time.
 
 And if you ask me, that's exactly the kind of UX Engineer every team needs.
+
+::TagMenu{tag="fictional-ux-engineers"}
+Famous Fictional UX Engineers Series
+::

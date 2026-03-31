@@ -1,17 +1,13 @@
 ---
 slug: component-library-build-or-buy
 publishedAt: 2026-03-07
-title: 'Build or buy: Making the right choice for your design system'
+title: 'Build or buy: making the right choice for your design system'
 description: "Deciding whether to build a design system in-house or buy a commercial solution is a critical choice. Here's how to evaluate your options and make the best decision for your team."
 tags:
   [design-systems, component-libraries, best-practices, component-library-guide]
 image: '/images/blog/component-library-build-or-buy.png'
 image_alt: 'A developer working on a design system.'
 ---
-
-::TagMenu{tag="component-library-guide"}
-Component libraries: a practical guide
-::
 
 At some point, most product teams face the same question. The interface is growing, inconsistencies are multiplying, and someone raises the idea of a component library. Then comes the follow-up: do you build your own, or use something that already exists?
 
@@ -128,3 +124,7 @@ The same is true in reverse. A custom library is "free" of licensing fees but ca
 Neither option is cheaper by default. The cheaper option is the one that fits your situation.
 
 If you're weighing these options for a real product and want a clearer picture of what makes sense for your specific situation, the [component library starter service](/services/) is one way to get a well-architected foundation without the upfront investment of building everything from scratch.
+
+::TagMenu{tag="component-library-guide"}
+Component libraries: a practical guide
+::

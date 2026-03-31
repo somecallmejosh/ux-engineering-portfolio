@@ -33,7 +33,6 @@ export default defineNuxtConfig({
       '/dev-notes/categories/**': {
         redirect: { to: '/dev-notes/tags/**/', statusCode: 301 },
       },
-      '/scorecard/': { sitemap: false },
       '/design/': { sitemap: false, robots: false },
       '/_fonts/**': {
         headers: { 'cache-control': 'public, max-age=31536000, immutable' },

@@ -8,10 +8,6 @@ image: '/images/blog/component-library-requirements.png'
 image_alt: 'A designer and two developers working on a design system.'
 ---
 
-::TagMenu{tag="component-library-guide"}
-Component libraries: a practical guide
-::
-
 "Component library" means different things depending on what you're building with. The bare essentials for a Ruby on Rails application are meaningfully different from what a React single-page application needs, which is different again from what a Next.js or Nuxt project requires.
 
 This article covers what every component library needs regardless of stack, then breaks down the specific requirements and constraints for each rendering model.
@@ -191,3 +187,7 @@ Regardless of rendering model, a component library is ready to use when it has:
 - A process for communicating changes to consuming teams
 
 If the rendering model constraints in this article apply to your product and you're not sure where to start, the [component library starter service](/services/) builds a well-architected foundation tailored to your stack.
+
+::TagMenu{tag="component-library-guide"}
+Component libraries: a practical guide
+::

@@ -111,7 +111,7 @@ The CSS applies typography tokens per heading size:
 .rudiment-heading--1 {
   font-size: var(--token-typography-heading-1-size);
   font-weight: var(--token-typography-heading-1-weight);
-  line-height: var(--token-typography-heading-1-lineHeight);
+  line-height: var(--token-typography-heading-1-line-height);
   letter-spacing: var(--token-typography-heading-1-tracking);
   color: var(--color-text-default);
 }
@@ -119,7 +119,7 @@ The CSS applies typography tokens per heading size:
 .rudiment-heading--2 {
   font-size: var(--token-typography-heading-2-size);
   font-weight: var(--token-typography-heading-2-weight);
-  line-height: var(--token-typography-heading-2-lineHeight);
+  line-height: var(--token-typography-heading-2-line-height);
   letter-spacing: var(--token-typography-heading-2-tracking);
   color: var(--color-text-default);
 }
@@ -166,36 +166,36 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
 .rudiment-text--body {
   font-size: var(--token-typography-body-size);
   font-weight: var(--token-typography-body-weight);
-  line-height: var(--token-typography-body-lineHeight);
+  line-height: var(--token-typography-body-line-height);
   color: var(--color-text-default);
 }
 
 .rudiment-text--body-sm {
   font-size: var(--token-typography-body-sm-size);
   font-weight: var(--token-typography-body-sm-weight);
-  line-height: var(--token-typography-body-sm-lineHeight);
+  line-height: var(--token-typography-body-sm-line-height);
   color: var(--color-text-default);
 }
 
 .rudiment-text--caption {
   font-size: var(--token-typography-caption-size);
   font-weight: var(--token-typography-caption-weight);
-  line-height: var(--token-typography-caption-lineHeight);
+  line-height: var(--token-typography-caption-line-height);
   color: var(--color-text-subtle);
 }
 
 .rudiment-text--overline {
   font-size: var(--token-typography-overline-size);
   font-weight: var(--token-typography-overline-weight);
-  line-height: var(--token-typography-overline-lineHeight);
+  line-height: var(--token-typography-overline-line-height);
   letter-spacing: var(--token-typography-overline-tracking);
-  text-transform:;
+  text-transform: uppercase;
 }
 
 .rudiment-text--code {
-  font-family: var(--font-family-mono);
+  font-family: var(--font-mono);
   font-size: 0.875em;
-  background: var(--color-background-surface-raised);
+  background: var(--color-surface-raised);
   padding: 0.125em 0.25em;
   border-radius: var(--radius-sm);
 }
