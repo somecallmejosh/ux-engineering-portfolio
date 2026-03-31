@@ -1,11 +1,11 @@
 ---
 slug: a-shift-to-precision-work
 publishedAt: 2025-07-18
-title: "Precision Work and Learning to Slow Down"
-description: "Learning to slow down as a developer after years of being rewarded for speed. Reflections on pace, precision, and building systems that last."
+title: 'Precision work and learning to slow down'
+description: 'Learning to slow down as a developer after years of being rewarded for speed. Reflections on pace, precision, and building systems that last.'
 tags: [career]
-image: "/images/blog/a-shift-to-precision-work.webp"
-image_alt: "A tortoise and a hare racing towards the finish line."
+image: '/images/blog/a-shift-to-precision-work.webp'
+image_alt: 'A tortoise and a hare racing towards the finish line.'
 ---
 
 For most of my career, my value came from speed. I worked in environments where shipping fast was the norm. If a developer needed a component by the end of the week, you built it, tested it just enough, maybe left a TODO or two, and moved on. That was the job.
