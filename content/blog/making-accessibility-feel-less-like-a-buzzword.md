@@ -1,18 +1,18 @@
 ---
 slug: making-accessibility-feel-less-like-a-buzzword
 publishedAt: 2025-04-25
-title: "Making Accessibility Feel Less Like a Buzzword"
-description: "Accessibility clicked for me the moment I saw real users struggle with things I thought were good enough."
+title: 'Making accessibility feel less like a buzzword'
+description: 'Accessibility clicked for me the moment I saw real users struggle with things I thought were good enough.'
 tags: [user-experience, accessibility, front-end-development]
-image: "/images/blog/making-accessibility-feel-less-like-a-buzzword.webp"
-image_alt: "UX Engineer working on things that nobody sees."
+image: '/images/blog/making-accessibility-feel-less-like-a-buzzword.webp'
+image_alt: 'UX Engineer working on things that nobody sees.'
 ---
 
 When I first heard people talking about "accessibility," it felt a little abstract, like one of those corporate checklist items that nobody really understood but everyone agreed we should probably care about. I knew it was important. I wanted to do the right thing. But early on, it honestly felt like extra work that slowed everything down. It took watching real users interact with real products for accessibility to finally click for me.
 
 ## The wake-up call
 
-The first wake-up call happened during a simple user test. We had built a fairly straightforward form: name, email, a couple of custom dropdowns (because the default select elements didn't match the design). Everything *looked* great. Felt clean. Everyone congratulated themselves at the design review.
+The first wake-up call happened during a simple user test. We had built a fairly straightforward form: name, email, a couple of custom dropdowns (because the default select elements didn't match the design). Everything _looked_ great. Felt clean. Everyone congratulated themselves at the design review.
 
 Then someone couldn't complete the form using just a keyboard. People do that? Turns out, far more people navigate web pages with keyboards than we realized. The tab order was unpredictable because elements appeared in different orders at different breakpoints. Focus got trapped in odd places when the dropdowns opened. Some of them didn't open at all. Watching that made it impossible to think of accessibility as "extra work" ever again.
 

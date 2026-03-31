@@ -2,8 +2,8 @@
 slug: ivfcryo
 businessName: 'IVFCryo, LLC'
 publishedAt: 2025-11-03
-title: 'IVFCRYO: shipping application and accessibility-first development'
-description: 'Building a self-service shipping application for a fertility specimen logistics provider, with real-time environmental tracking, multi-carrier label printing, and accessibility integrated from the start.'
+title: 'IVFCRYO: what it looks like when accessibility is built in from the start'
+description: 'A self-service shipping application for a fertility specimen logistics provider, with real-time environmental tracking, multi-carrier label printing, and accessibility built in from the start.'
 tags:
   [
     aws-light,
@@ -16,54 +16,52 @@ tags:
     tailwindcss-light,
     d3-light,
   ]
-image: "/images/projects/ivfcryo.webp"
+image: '/images/projects/ivfcryo.webp'
 image_alt: 'IVFCRYO web application shipping process.'
 ---
 
-## Overview
+Most accessibility work happens after the fact. A product ships, an audit runs, violations are catalogued, and a remediation backlog gets created. The fixes address specific components, specific pages, specific user flows. But the structural conditions that produced the violations remain, which means the next feature ships with the same gaps.
 
-IVFCRYO provides cryogenic specimen logistics for the fertility industry. Their work involves coordinating the safe transport of biological specimens under strict environmental conditions, where errors in process or documentation carry serious consequences.
+The IVFCRYO project ran differently. I built accessibility into the design process from the start, with the user who needed it most as a direct collaborator throughout rather than an afterthought.
 
-When I started working with them, their shipping workflow was entirely manual. Staff processed each shipment through paperwork, handwritten labels, and phone-based coordination with shipping carriers. The process was time-consuming, error-prone, and offered clients no visibility into what was happening with their specimens during transit.
+## Project background
 
-The goal was to replace that manual workflow with a self-service web application: one clients could use independently, integrated directly with major shipping carriers, and surfacing real-time environmental data from hardware already deployed in shipments.
+IVFCRYO provides fertility specimen shipping and logistics services. The application I built for them replaced a manual, paper-based shipping process with a self-service web application that managed shipment requests, multi-carrier label generation, and real-time specimen tracking through integrated sensor data.
 
-## Replacing a manual workflow with a self-service application
+The user base included people navigating a high-stakes, emotionally sensitive process. Clarity, reliability, and ease of use weren't nice-to-haves. They were the product.
 
-### The problem
+## Designing with a blind user
 
-Each shipment required staff to manually complete paperwork, print labels for multiple carriers, and field status inquiries from clients by phone or email. Processing a single shipment took close to an hour. Across a day's worth of shipments, that overhead was substantial, and it introduced documentation errors with real downstream consequences.
+One of IVFCRYO's customers was legally blind and agreed to participate as a collaborator throughout the development process. This wasn't a one-time usability test at the end of a build. It was ongoing involvement at every stage: reviewing interface decisions, testing with a screen reader as components were built, and providing direct feedback on what worked and what didn't.
 
-### What I built
+The difference between involving a screen reader user at the end of a project and involving one throughout is significant. End-of-project involvement produces a list of fixes. Ongoing involvement produces different design decisions. Components that would have required remediation were never built incorrectly in the first place, because the feedback arrived before the implementation was complete.
 
-A web application that allowed clients to initiate and manage their own shipments without staff intervention. Clients could request a shipment in two steps, with built-in defaults that enforced documentation requirements and reduced the likelihood of input errors.
+Specific decisions that came directly from this collaboration:
 
-The application connected directly to major shipping carrier APIs, including FedEx, so clients could generate and print all required labels for multi-carrier shipments from one place. No manual label creation. No separate carrier portals.
+- Form inputs announced validation errors in real time rather than on submit, so users didn't have to re-navigate the form to understand what had failed.
+- Status updates for the shipment tracking flow were announced to the screen reader without requiring the user to find and read a visual indicator.
+- Navigation patterns were consistent enough to be learnable, rather than clever enough to be novel.
 
-### The result
+None of these are technically complex. They're decisions that require having the right feedback at the right time.
 
-Processing time per shipment dropped by nearly an hour. Documentation errors decreased because the application enforced required fields and applied sensible defaults. Staff time previously spent on shipment coordination shifted to higher-value work.
+## What accessibility-first architecture looks like in practice
 
-## Real-time environmental tracking via hardware integration
+Building accessibly from the start required specific structural decisions that would have been expensive to retrofit.
 
-IVFCRYO uses a hardware device called Sense that monitors environmental conditions inside specimen containers during transit. The data it captures (GPS location, internal temperature, external temperature, humidity, and atmospheric pressure) was previously only accessible after the fact.
+Every interactive component (form controls, status indicators, tracking updates) was built with keyboard operability and Accessible Rich Internet Applications (ARIA) implementation as first-class requirements. Components that controlled visibility handled focus management internally: focus moved to the correct element when something opened, and returned to the trigger when it closed.
 
-I integrated the Sense device API into the shipping application so that data was surfaced to clients in real time. During a shipment, clients could see exactly where their specimens were and confirm that environmental conditions remained within safe parameters throughout the journey.
+Dynamic content (shipment status changes, real-time sensor readings, error states) was structured so that updates were announced to assistive technology automatically, without requiring the user to poll for changes or navigate to a different part of the page.
 
-The application also sent automated notifications at key points in the shipment lifecycle. Clients who opted in received real-time text messages alongside in-app updates. Automated emails documented each chain-of-custody exchange, giving clients a detailed record of their shipment without requiring them to contact staff.
+Color was never used as the only means of conveying information. Error states, status indicators, and required field markers all communicated their meaning through text or icons in addition to color. This matters for users with color vision deficiencies as well as screen reader users.
 
-Clients in this space carry significant emotional and medical stakes. Direct, real-time visibility into specimen location and environmental conditions reduced dependence on staff for status updates and gave clients confidence in the process.
+## Why this approach scales
 
-## Building with a visually impaired user as a design partner
+The IVFCRYO project is a small application by enterprise standards. But the pattern it demonstrates scales directly: accessibility built into the component layer produces accessible output by default. Developers building features on top of accessible components don't have to think about ARIA attributes, keyboard behavior, or focus management. The components handle it.
 
-One of IVFCRYO's clients is legally blind and agreed to participate in the development process as an active design partner rather than a tester brought in at the end. He provided ongoing feedback throughout the build, from early wireframes through to final implementation.
+The alternative is treating accessibility as a per-feature concern. That approach produces inconsistency in proportion to the number of features, and remediation costs that compound with every new surface that inherits the same structural gaps.
 
-Working directly with a user who relied on a screen reader and keyboard navigation changed how I approached every design decision. Navigation structure, focus order, label clarity, error messaging, and interactive feedback all went through review with his direct input. Issues were caught and resolved during development rather than discovered in a post-launch audit.
+Accessible output at scale comes from accessible architecture, not from accessible intent.
 
-This is the most effective accessibility work I've done. Having a real user with a genuine stake in the outcome as a collaborator produces results that automated tooling and internal review alone cannot replicate. The application launched meeting Web Content Accessibility Guidelines (WCAG) 2.1 AA standards, with interaction patterns validated by someone who depended on them.
+---
 
-## What I took from this project
-
-The IVFCRYO project clarified something I'd believed but not fully tested: accessibility work is most effective when people with disabilities are part of the design process rather than subjects of a review at the end. The difference in outcome is significant, and the process is more straightforward than most teams assume.
-
-The project also reinforced that digitizing a manual process is only valuable if the replacement is genuinely easier to use than what it replaced. A shipping application that required training or staff assistance would have failed the brief, regardless of how technically sound the implementation was. The measure of success was whether clients could use it confidently on their own.
+If your component library relies on individual developers to make the right accessibility decisions, rather than making correct behavior the default, the [Design System Audit](/services/audit/) will tell you exactly where the structural gaps are and what fixing them requires.

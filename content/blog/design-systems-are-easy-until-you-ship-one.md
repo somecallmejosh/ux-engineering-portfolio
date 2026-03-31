@@ -1,10 +1,10 @@
 ---
 slug: design-systems-are-easy-until-you-ship-one
 publishedAt: 2026-03-04
-title: 'Design Systems Are Easy Until You Ship One'
+title: 'Design systems are easy until you ship one'
 description: "Design systems look simple from a distance. A shared library. A consistent UI. Faster delivery. Fewer bugs. Fewer debates. It's a compelling story, and it's not wrong."
 tags: [accessibility, design-systems, design-system-guide]
-image: "/images/blog/design-systems-are-easy-until-you-ship-one.png"
+image: '/images/blog/design-systems-are-easy-until-you-ship-one.png'
 image_alt: 'A developer working on a design system.'
 ---
 

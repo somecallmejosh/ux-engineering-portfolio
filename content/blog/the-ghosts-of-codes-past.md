@@ -1,11 +1,11 @@
 ---
 slug: the-ghosts-of-codes-past
 publishedAt: 2025-05-07
-title: "Learning to Live with the Ghosts in Your Codebase"
+title: 'Learning to live with the ghosts in your codebase'
 description: "A lighthearted look at legacy code, why we don't just <em>fix it</em>, and how to survive the haunted hallways of old decisions with a bit of grace."
 tags: [best-practices, front-end-development]
-image: "/images/blog/the-ghosts-of-codes-past.webp"
-image_alt: "Developer looking at a computer screen with a haunted expression, surrounded by ghostly code snippets."
+image: '/images/blog/the-ghosts-of-codes-past.webp'
+image_alt: 'Developer looking at a computer screen with a haunted expression, surrounded by ghostly code snippets.'
 ---
 
 When I first started writing code, I assumed there was some secret adult version of programming that happened behind closed doors, where variable names made sense, patterns were consistent, and nobody left cryptic TODO comments dated 2017. I've since learned: that place doesn't exist.
@@ -16,23 +16,23 @@ Every codebase has ghosts. And if you've ever opened a file and seen a key like 
 
 Legacy code isn't always bad code. Sometimes it's just older. It was written under constraints, pressure, or with information that no longer applies. Maybe the team didn't want to use reserved keywords like `class`, so `klass` was the workaround. Maybe it was a typo no one dared fix. Maybe someone was on a deadline and just needed it to work.
 
-Whatever the reason, these decisions fossilize. They become part of the landscape. And soon, you're writing new features using both `klass` and `class`, because changing one would mean changing *everything*.
+Whatever the reason, these decisions fossilize. They become part of the landscape. And soon, you're writing new features using both `klass` and `class`, because changing one would mean changing _everything_.
 
 ## Why we don't just fix it
 
 If you're thinking, "Well, why don't we just clean it all up?", continue reading.
 
-The fear of updating changes across an entire codebase is real. Even when you *want* to do the right thing, a dozen invisible barriers start stacking up like the world's most passive-aggressive game of Jenga:
+The fear of updating changes across an entire codebase is real. Even when you _want_ to do the right thing, a dozen invisible barriers start stacking up like the world's most passive-aggressive game of Jenga:
 
-* You foolishly believe that the tech debt you've been mentioning at standup for three months will be added to the next sprint. It won't.
-* The change would technically only take five minutes, followed by two hours of rewriting tests.
-* You *know* this will break something, probably something in the legacy parts of the app that no one's touched since the Obama administration.
-* That "small" Jira ticket you picked up now means QA has to run full regression testing across three workflows, one of which only works in IE11 for reasons no one remembers.
-* Oh, and there's a non-zero chance that the PM will ask you, "What changed again? I thought this was a quick fix?"
+- You foolishly believe that the tech debt you've been mentioning at standup for three months will be added to the next sprint. It won't.
+- The change would technically only take five minutes, followed by two hours of rewriting tests.
+- You _know_ this will break something, probably something in the legacy parts of the app that no one's touched since the Obama administration.
+- That "small" Jira ticket you picked up now means QA has to run full regression testing across three workflows, one of which only works in IE11 for reasons no one remembers.
+- Oh, and there's a non-zero chance that the PM will ask you, "What changed again? I thought this was a quick fix?"
 
-All of that, *all* of it, just to rename `klass` to `class`.
+All of that, _all_ of it, just to rename `klass` to `class`.
 
-So sometimes, yes, you leave the weird key alone. You put your mouse down. You sigh. And you whisper to yourself, *Not today, demon. Not today.*
+So sometimes, yes, you leave the weird key alone. You put your mouse down. You sigh. And you whisper to yourself, _Not today, demon. Not today._
 
 ## The front-end isn't immune
 
@@ -48,7 +48,7 @@ I've learned to approach old code the way a good archaeologist approaches a dig:
 
 ## Making peace with the ghosts
 
-Will we ever eliminate legacy quirks entirely? Probably not. But we *can* document them. We *can* refactor when we have the time and the test coverage. We *can* write clearer code today so that someone else doesn't inherit our worst habits tomorrow.
+Will we ever eliminate legacy quirks entirely? Probably not. But we _can_ document them. We _can_ refactor when we have the time and the test coverage. We _can_ write clearer code today so that someone else doesn't inherit our worst habits tomorrow.
 
 Because the truth is, someday your code, your beautiful, modern, perfectly linted code, will become legacy too. And when it does, you can only hope the next developer treats it with a little grace.
 

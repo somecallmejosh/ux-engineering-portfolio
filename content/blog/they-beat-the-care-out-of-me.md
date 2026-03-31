@@ -1,11 +1,11 @@
 ---
 slug: they-beat-the-care-out-of-me
 publishedAt: 2025-05-24
-title: "They Beat the Care Out of Me"
-description: "One of my old bosses had a phrase he used when a customer pushed too far. He'd lean back in his chair, crack his knuckles, and say, \"They beat the care out of me.\""
+title: 'They beat the care out of me'
+description: 'One of my old bosses had a phrase he used when a customer pushed too far. He''d lean back in his chair, crack his knuckles, and say, "They beat the care out of me."'
 tags: [career]
-image: "/images/blog/they-beat-the-care-out-of-me.webp"
-image_alt: "An illustration of a person in a boxing ring, symbolizing the challenges of a front-end developer."
+image: '/images/blog/they-beat-the-care-out-of-me.webp'
+image_alt: 'An illustration of a person in a boxing ring, symbolizing the challenges of a front-end developer.'
 ---
 
 One of my old bosses had a phrase he used when a customer pushed too far. He'd lean back in his chair, crack his knuckles, and say, "They beat the care out of me." Not loud. Not angry. Just flat. Like someone who had been in the ring too long and taken one hit too many.
@@ -13,11 +13,13 @@ One of my old bosses had a phrase he used when a customer pushed too far. He'd l
 Lately, I've been thinking about that phrase again. Not because I've lost my care, but because I can feel the gloves hitting more often.
 
 ## The first jab: a job with no name
+
 I work in front-end development. Or UI development. Or UX engineering. Or maybe I'm a design technologist. It depends on who is doing the hiring.
 
 Whatever the title, the job is simple. I build the part of the web people touch. The part that helps someone apply for a loan. Or schedule an appointment. Or find their kid's report card. The part that needs to load quickly, read clearly, and respond when someone taps, clicks, or swipes. But this work does not come at you gently.
 
 ## The one-two combo: tools and opinions
+
 New component libraries show up every week. Each one swears it has solved all the problems the last one introduced. Everyone has a favorite. Everyone is certain their way is the best way.
 
 Frameworks move fast. Too fast. Version 3 does not look like version 2. What worked last year now needs a plugin. Or a shim. Or a migration guide that ends with you starting from scratch.
@@ -27,6 +29,7 @@ People argue about everything. File structure. Naming conventions. How to write 
 And if you find a tutorial that actually makes sense, there is a good chance it ends with a checkout page. None of this is fatal. But it's exhausting. These are the jabs. Constant. Fast. Always in your face.
 
 ## The body shots: more than just the UI
+
 Just when you think you've learned enough to stay on your feet, the real fight starts. Now you're expected to know backend logic. Authentication flows. Database schema. ORM relationships. API design. Query performance. Caching. Rate limits.
 
 You need to think about Docker. You need to push to staging. You need to debug the build. You need to remember why the linter is failing. And you need to explain it to someone who has never opened the terminal.
@@ -42,6 +45,7 @@ Eventually, it lands. Sometimes it is a Slack message. Sometimes it is a code re
 > They beat the care out of me.
 
 ## What saved me
+
 I have been close. I have felt the fatigue. I have felt the distance forming between me and the work. But I have not lost the care. And if I'm honest, part of that is because I failed at trying to be someone I'm not.
 
 I've tried to be good at everything. I've tried to learn Postgres. I've tried to get comfortable with server infrastructure. I've tried to understand security architecture and access policies and shell scripting and DevOps pipelines. But I couldn't get there. Not because I wasn't smart enough. Because I wasn't interested enough.
@@ -52,7 +56,7 @@ I used to feel bad about that. But now I think it saved me. Because I stayed clo
 
 ## Listen for the bell
 
-There is no ref in this fight. No one calls time. You have to listen for your own bell. I know mine. I hear it when I stop asking "how I can help" and start asking "what do they want *now*".
+There is no ref in this fight. No one calls time. You have to listen for your own bell. I know mine. I hear it when I stop asking "how I can help" and start asking "what do they want _now_".
 
 That's when I know it's time to take a step back. Because I still care. And I want to keep it that way.
 

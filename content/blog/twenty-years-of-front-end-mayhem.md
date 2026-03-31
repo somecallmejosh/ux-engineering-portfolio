@@ -1,11 +1,11 @@
 ---
 slug: 'twenty-years-of-front-end-mayhem'
 publishedAt: 2025-04-01
-title: 'Twenty Years of Front-End Mayhem (and Why I Still Love It)'
-description: "Two decades of building the web, wrangling browsers, and keeping up with front-end trends. And somehow still loving it."
+title: 'Twenty years of front-end mayhem (and why I still love it)'
+description: 'Two decades of building the web, wrangling browsers, and keeping up with front-end trends. And somehow still loving it.'
 tags: [career, front-end-development]
-image: "/images/blog/twenty-years-of-front-end-mayhem.webp"
-image_alt: "Front end developer reminiscing about the evolution of web development."
+image: '/images/blog/twenty-years-of-front-end-mayhem.webp'
+image_alt: 'Front end developer reminiscing about the evolution of web development.'
 ---
 
 Sometimes I find myself tangled in some overengineered state management solution or wondering why I need three different tools just to style a button. In those moments, I stop and think about where it all began.
@@ -17,16 +17,19 @@ Later, I discovered MS Front Page and got my first taste of <em>customizing</em>
 Want a rounded corner? Slice it in Photoshop and jam the pieces into a table. Want layout control? Hope your image spacer trick doesn't break in Netscape. Responsive design? Semantic markup? Accessibility? Those were not words we used.
 
 ## The weird years: DHTML, JavaScript, and browser hackery
+
 We were inventing as we went. DHTML sounded cool but was mostly just JavaScript trying to make stuff move without setting the browser on fire. VBScript made a brief, confusing appearance. JavaScript itself was inconsistent and cranky. Every browser had its own interpretation of what `document.getElementById()` was supposed to do.
 
 And speaking of browsers, it was a warzone out there. IE6 vs. Netscape Navigator, later joined by Firefox, Safari, and eventually Chrome, each with its own rendering quirks. Let's not even talk about Opera, or worse, Opera mini. We were writing conditional comments in our headers to serve different CSS to different browsers, using CSS hacks galore, vendor prefixes, and praying to the Box Model gods. Cross-browser compatibility wasn't a goal. It was a miracle.
 
 ## Then jQuery saved us all
+
 When it came to making sites <em>interactive</em> I dabbled in MooTools & jQuery, but jQuery was the one that stuck. Suddenly, you could do real things with just a few lines of code. Hide stuff, animate things, send AJAX requests without refreshing the page. It was like discovering fire. We built carousels, modals, and dynamic interfaces that felt <em>almost modern</em>.
 
 At the same time, we started actually caring about how we built things. And that's where the real turning point happened: web standards.
 
 ## The rise of web standards
+
 Somewhere in that sea of `<div class="wrapper-inner-block clearfix">`, we started to realize that maybe we needed rules. Jeffrey Zeldman helped kick off the standards movement with Designing with Web Standards, waving the flag for sanity. And slowly but surely, browser vendors got on board.
 
 We got proper doctype declarations, a semi-consistent box model, and, most importantly, semantic HTML. No more wrapping everything in anonymous `<div>`s. We had structure: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`. These elements actually meant something.
@@ -58,6 +61,7 @@ We built things with Sass and PostCSS, and used preprocessors like HAML or pug, 
 I dipped into the back end for a while. I mostly dabbled in PHP and Ruby based frameworks like Drupal, Wordpress for PHP, and Ruby on Rails for Ruby. I liked Rails. I still like Rails quite a bit. It was clean and friendly. But the front end kept evolving, and I kept getting pulled back in.
 
 ## The JavaScript era (and the 47,000 frameworks it brought with it)
+
 The web turned into an app platform. Suddenly, everyone wanted SPAs (Single Page Apps). Ember and Backbone kicked things off, followed by Angular, React, Vue, and a whole ecosystem of component libraries and state management patterns that still make my brain itch.
 
 We chased performance with Grunt, then Gulp, then Webpack, then Vite (just to name a few) and spent hours fighting build configs that refused to work for reasons known only to the JavaScript gods.
@@ -73,6 +77,7 @@ Then came JAMstack, serverless, micro frontends, headless CMSs, HTMX/Hotwire, we
 At some point we decided that we had enough of the dynamic typing that is JavaScript and embraced TypeScript, and I'm still not sure if that was a good idea or not. But it's here to stay.
 
 ## And somehow, we're still here
+
 It's easy to look at the modern stack and feel overwhelmed. Everything changes. Constantly. You finally learn something, and then it's out of date. But when I zoom out, I can see the pattern: we've gone from chaos to coherence. From hacking things together to building real, accessible, performant experiences for real people.
 
 And a lot of that, maybe most of it, goes back to the push for web standards. That was the turning point. That's what made everything else possible.

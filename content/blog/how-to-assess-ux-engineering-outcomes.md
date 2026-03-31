@@ -1,10 +1,10 @@
 ---
 slug: how-to-assess-ux-engineering-outcomes
 publishedAt: 2025-01-19
-title: 'How I Learned to Measure UX (the Hard Way)'
-description: "A story about the real metrics that matter in UX, and why time on page means nothing if your users are confused."
+title: 'How I learned to measure UX (the hard ay)'
+description: 'A story about the real metrics that matter in UX, and why time on page means nothing if your users are confused.'
 tags: [user-experience]
-image: "/images/blog/how-to-assess-ux-engineering-outcomes.webp"
+image: '/images/blog/how-to-assess-ux-engineering-outcomes.webp'
 image_alt: 'Measuring Impact: How to Assess UX Engineering Outcomes'
 ---
 

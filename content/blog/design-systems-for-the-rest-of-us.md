@@ -1,7 +1,7 @@
 ---
 slug: design-systems-for-the-rest-of-us
 publishedAt: 2025-05-04
-title: 'Design Systems and Component Libraries for the Rest of Us'
+title: 'Design systems and component libraries for the rest of us'
 description: 'A lighthearted look at building design systems without the ceremony, complexity, or committee-induced paralysis.'
 tags:
   [
@@ -11,7 +11,7 @@ tags:
     accessibility,
     design-system-guide,
   ]
-image: "/images/blog/design-systems-for-the-rest-of-us.webp"
+image: '/images/blog/design-systems-for-the-rest-of-us.webp'
 image_alt: 'A whimsical illustration of a design system with playful components, colors, and patterns.'
 ---
 

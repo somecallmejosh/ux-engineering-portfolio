@@ -2,7 +2,7 @@
 slug: berxi-insurance
 businessName: 'Berxi.com'
 publishedAt: 2025-11-03
-title: 'Berxi.com: design system and component library build'
+title: 'Berxi.com: Building a design system for a growing platform'
 description: 'Building a custom design system for a growing insurance platform, from stakeholder alignment through component library, documentation, and cross-team adoption.'
 tags:
   [
@@ -19,62 +19,50 @@ tags:
     vitest-light,
     vuejs-light,
   ]
-image: "/images/projects/berxi-insurance.webp"
+image: '/images/projects/berxi-insurance.webp'
 image_alt: 'Berxi.com website showcasing a clean and modern design.'
 ---
 
-## Overview
+Berxi is a direct-to-consumer insurance platform built by Berkshire Hathaway Specialty Insurance. When I joined the team, the product was growing fast and the front end was growing inconsistently. Engineers were making design decisions independently across the codebase. Marketing needed campaign flexibility that the existing setup couldn't support. The engineering team was spending time on visual work that should have been settled at the system level.
 
-Berxi.com is a direct-to-consumer insurance platform built by Berkshire Hathaway Specialty Insurance. When I joined as the principal design engineer, the site had grown without a consistent UI foundation. Marketing campaigns clashed with existing styles, developers rebuilt similar components independently, and non-technical teams depended on engineering for routine content changes.
+My job was to build a design system that resolved those conditions, not by adding a layer of documentation on top of what existed, but by establishing a foundation that made consistent output the natural result of using it.
 
-My work centered on building a design system that gave every team (developers, marketing, content, and product) a shared, reliable foundation to build from.
+## The problem with the existing approach
 
-## Aligning stakeholders before writing code
+The site had been built component by component, with each piece solving its immediate problem without reference to a shared standard. Color values, spacing, and typography were defined locally. There was no token architecture. The same visual decisions were being made repeatedly, in slightly different ways, by different engineers on different timelines.
 
-Before any design or development work began, I spent several weeks in conversations with developers, user researchers, marketing, and product leadership. Each team had different priorities, and those priorities occasionally conflicted.
+This is a common pattern in products that grow faster than their front-end infrastructure. It's not the result of carelessness. It's what happens when there's no shared system to enforce consistency, and every developer's reasonable local decision accumulates into a product that feels slightly off in ways nobody can fully articulate.
 
-Developers wanted a lightweight, maintainable system with clear conventions. Marketing needed brand consistency across every surface. Product leadership wanted speed to market and measurable return on investment. Some stakeholders were concerned that restructuring core UI would introduce instability into an actively used platform.
+The fix wasn't cosmetic. The fix was architectural.
 
-Those conversations shaped the technical approach. Using Tailwind CSS and Vue.js, we could give developers the flexibility and speed they needed while maintaining enough structure to satisfy brand and consistency requirements. Getting alignment on the approach early meant that decisions made later in the project had broad support rather than encountering resistance after the fact.
+## Architectural decisions before code
 
-## Technology choices
+Before writing a single component, I needed to make a set of upfront decisions that would govern everything that followed: how tokens would be structured, which styling approach would give marketing the flexibility they needed without fragmenting the system, and how the component API would be designed so that accessible behavior was the default output.
 
-Tailwind CSS was the right choice for this project because its utility-first approach gives developers direct, predictable control over visual output. There's no abstraction layer to fight against, and the design language is expressive enough to handle Berxi's UI needs without customization becoming unmanageable.
+I chose Tailwind CSS and Vue.js for specific reasons. Tailwind's utility-first model gave the engineering team a design vocabulary that was both expressive and constrained. Developers could move quickly without making visual decisions that deviated from the token system. Vue's component model made it straightforward to separate the accessibility behavior and visual styling concerns cleanly, which mattered for a system that needed to scale across multiple surface areas.
 
-Vue.js complemented Tailwind well. Components were straightforward to build, easy to learn for developers new to the framework, and flexible enough to support Berxi's expanding feature set.
+These weren't the only valid choices. They were the right choices for this team, this product, and this set of constraints.
 
-The combination reduced onboarding time for new developers. A colleague who had never used Tailwind before was confidently adjusting layouts within an hour of getting started, without needing guidance. That kind of low friction matters when a team is shipping regularly and can't afford a slow ramp-up on tooling.
+## Token architecture as the foundation
 
-## Reducing cross-team friction
+I structured the token system in two tiers. Primitive tokens defined the raw palette: every color, spacing step, and type size available in the system. Semantic tokens assigned those values to roles: the color for interactive elements, the spacing between a label and its input, the type size for body copy.
 
-One of the recurring pain points before the design system was the disconnect between marketing campaigns and the frontend implementation. Marketing teams planned campaigns without referencing what the site could render, which led to last-minute style overrides, broken layouts, and urgent engineering requests.
+Components referenced semantic tokens, never primitives directly. That single structural decision meant that a brand color update, a spacing scale adjustment, or a typography change propagated correctly across every component without manual intervention. It also meant that new components built against the system were consistent with existing ones by default, because the decisions were centralized rather than distributed across individual implementations.
 
-To address this, I introduced biweekly sync sessions that brought designers, marketing, and backend engineers into the same conversation. Designers shared upcoming UI changes, marketing outlined planned campaigns, and backend engineers could flag performance or data concerns early.
+Token coverage extended beyond color to spacing, typography, border radius, and shadow. Partial token coverage (a common failure mode) leaves the uncovered dimensions to individual judgment, which is where visual drift accumulates.
 
-The visible outcome was fewer surprises at launch. The less visible but more important outcome was that teams started speaking a common language around the interface, reducing the back-and-forth that had previously slowed every release cycle.
+## Accessibility as a design constraint, not a compliance step
 
-## Giving non-engineering teams independence
+Accessibility requirements were built into each component from the start: keyboard navigation, Accessible Rich Internet Applications (ARIA) attributes, focus management in overlay components, color contrast against the token system's background values. These weren't added retroactively after the component was functional. They were part of the component's definition of done.
 
-A recurring theme in my conversations with marketing and content teams was how much time they spent waiting on engineering for routine changes. New landing page variants, content updates, and campaign-specific layouts all required developer involvement, even when the change was simple.
+The practical effect of this approach is that accessibility compliance becomes a property of the library rather than a per-feature responsibility. A developer consuming the button component gets correct keyboard behavior without implementing it. A developer consuming the modal gets correct focus trapping without thinking about it. The system does the work so the feature team doesn't have to.
 
-Part of the design system build was creating structured, flexible page templates and content patterns that non-technical team members could work with directly. The first time a marketing manager launched a new landing page variant independently, without filing an engineering ticket, it validated the approach. Engineering capacity that had been spent on routine publishing tasks was redirected to more complex product work.
+## What the system enabled
 
-## Analytics without performance overhead
+The design system gave the marketing team the ability to run campaigns and build landing page variations without engineering involvement for visual changes. The shared token architecture meant brand updates propagated automatically rather than requiring a manual search-and-replace across the codebase. New engineers could become productive with the component library quickly because the API was consistent and the documentation reflected how the components actually behaved.
 
-Understanding how users moved through the site was important for ongoing improvement, but adding tracking scripts carelessly would have slowed page load times. For an insurance platform where trust and speed directly affect conversion, that tradeoff wasn't acceptable.
+The clearest signal that a design system is working is that it stops generating the friction that prompted building it. Fewer ad hoc visual decisions. Fewer inconsistencies caught late in the review cycle. Less time spent by senior engineers answering questions that should be answered by the documentation.
 
-Working with the UX and marketing teams, I embedded lightweight analytics hooks directly into the component library. I tracked key interactions (form completion rates, time on page, navigation patterns) at the component level automatically, so teams didn't need to write custom tracking code for each new feature. This kept the implementation consistent and the site performant.
+---
 
-## Accessibility as a foundation
-
-Every component in the system was built against a defined set of accessibility requirements from the start. Color contrast ratios, keyboard navigation, focus management, and Accessible Rich Internet Applications (ARIA) labeling were documented alongside visual specifications, not added afterward.
-
-Working with QA and using Storybook for component documentation, each element had clear guidance on how to implement it accessibly. Developers knew what was expected before they started building.
-
-The practical results were measurable: fewer support tickets related to confusing layouts, and user feedback indicating the site was easier to navigate. For an insurance platform whose users include people managing stressful decisions about coverage and claims, a clear and accessible experience is not a nice-to-have.
-
-## What I took from this project
-
-The Berxi design system worked because it was treated as an organizational problem, not a technical one. The technology choices mattered, but the more consequential work happened in stakeholder conversations, cross-team alignment, and building tools that served people who weren't developers.
-
-A design system that developers love but that marketing, content, and product teams can't use is only doing part of its job. The goal at Berxi was a system that every team could rely on, and that's what we built.
+If your team is working around a component library that grew faster than the system beneath it, the [Component Library Starter](/services/starter/) delivers a production-ready foundation built to your tokens and your team's constraints, in two to three weeks.

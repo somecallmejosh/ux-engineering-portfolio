@@ -8,171 +8,148 @@ useSeoMeta({
   ogDescription: description,
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/ar_3:2,c_fill,dpr_auto,f_auto,fl_progressive,q_auto/v1744317106/josh-portfolio/assets_task_01jrgnzqzhe1w9d68qj5z60crx_img_0.webp'
 })
-
-const resumeItems = [
-  {
-    title: 'Software Engineer',
-    company: 'Travelers',
-    date: '2025 - Present',
-    description: "Building and maintaining an accessible component library that powers applications used across the US and UK. Focused on scalable, reusable UI components and documentation that helps designers and developers deliver consistent experiences at scale.",
-  },
-  {
-    title: 'Senior UI Developer',
-    company: 'Logatot, Inc.',
-    date: '2023 - 2024',
-    description: "Built the component library powering their core application using Ruby on Rails ViewComponents. Accessible, responsive, and consistent across devices.",
-  },
-  {
-    title: 'Senior Software Engineer',
-    company: "America's Test Kitchen",
-    date: '2022 - 2023',
-    description: "Built and documented UI components using React, Next.js, and Storybook, giving the team a toolkit that let them ship new features quickly and consistently across multiple products.",
-  },
-  {
-    title: 'Principal Design Engineer',
-    company: 'Berkshire Hathaway Specialty Insurance',
-    date: '2018 - 2022',
-    description: "Led the creation of a custom UI component library in Vue.js and Nuxt.js, setting the front-end development standard for the organization and significantly accelerating feature delivery.",
-  },
-  {
-    title: 'Lead UI Developer',
-    company: "America's Test Kitchen",
-    date: '2016 - 2018',
-    description: "Designed and built a utility styling system that reduced repetitive work and helped the team move faster without sacrificing consistency.",
-  },
-  {
-    title: 'UI Designer & Front End Developer',
-    company: 'Sports Technologies, Inc.',
-    date: '2013 - 2016',
-    description: "Led UI for Ruby on Rails and Angular applications used by the NFL, NASCAR, NHL, MLS, and PGA.",
-  },
-  {
-    title: 'Freelance UI Developer',
-    company: 'Self-Employed',
-    date: '2010 - Present',
-    description: "Ongoing consulting work across a range of clients and industries, focused on accessible, performant web application development.",
-  },
-  {
-    title: 'Web Designer & Front End Developer',
-    company: 'ImageWorks, LLC',
-    date: '2009 - 2013',
-    description: "Built web experiences across industries, including work for Aetna Insurance. An early foundation in user-centered design across diverse client needs.",
-  },
-  {
-    title: 'Owner, Web Designer and Front End Developer',
-    company: 'Para-Diddle Design, LLC',
-    date: '2005 - 2009',
-    description: "Ran my own design and development company. Responsible for the work, the clients, the vision, and the finances. It gave me a real appreciation for all the moving parts of a business.",
-  },
-];
 </script>
 
 <template>
   <PageWrapper>
-
     <section class="prose">
       <NuxtImg src="/images/josh-biz-cazsh.jpg" alt="Joshua Briley, UX Engineer" height="300" width="300"
         class="w-full h-auto lg:w-48 lg:h-48 rounded-2xl lg:rounded-full lg:mx-auto mb-6 lg:float-right lg:ml-12 lg:mb-0 object-cover object-top" />
 
       <PageHero :content="{
-        title: 'About me',
-        description: 'I help teams fix design systems that are inconsistent, hard to maintain, or slowing development down. I do this through focused engagements: audits, component libraries, and workflow improvements, each designed to solve a specific problem quickly.'
+        title: 'About Joshua Briley',
+        description: 'I\'ve been building user interfaces for 20 years. That\'s long enough to have strong opinions about what makes a component library actually work, what makes one fail quietly, and why the same problems keep appearing in design systems regardless of how much the tooling has changed.'
       }" />
-    </section>
-    <section aria-labelledby="bio" class="prose max-w-full lg:mb-24">
-      <split-content>
-        <template #primary>
-          <h2 id="bio">Bio</h2>
-          <p>
-            I'm a UI/UX engineer who loves the place where design meets code: where a well-built component library makes
-            a
-            whole team faster, and where accessibility is a foundation, not an afterthought.
-            For over twenty years I've been behind the buttons you tap, the forms you fill out, and the UI details that
-            make
-            a product feel considered rather than cobbled together. I've built design systems for insurance companies,
-            component libraries for media brands, and UI frameworks for professional sports organizations. The scale
-            changes. The craft doesn't.
-          </p>
-          <p>
-            I'm happiest when I'm deep in the details but still part of the bigger conversation about what we're making
-            and
-            why it matters.
-          </p>
+      <p>
+        I spent most of that time in the space where design and engineering meet, not fully in either camp, but
+        responsible to both. At Berkshire Hathaway Specialty Insurance, I built a component library using Vue.js and
+        Nuxt.js from the ground up, establishing front-end standards across an enterprise product. At America's Test
+        Kitchen, I built a shared component system in React and Next.js that served multiple editorial brands from a
+        single architectural foundation. At Travelers, I build and maintain an accessible component library that powers
+        applications used across the US and UK.
+      </p>
 
-        </template>
-        <template #secondary>
-          <h2>What I do best</h2>
-          <p>I help teams build front ends that are:</p>
+      <p>
+        The thread running through all of it is the same: how do you build a system that makes the right output the
+        natural result of using it, rather than the result of individual developers making the right decisions at the
+        right time?
+      </p>
 
-          <ul>
-            <li>Consistent</li>
-            <li>Accessible</li>
-            <li>Easy to maintain</li>
-          </ul>
+      <p>
+        That's the question design systems are supposed to answer. Most of them don't answer it completely, not because
+        the people building them aren't capable, but because the structural decisions that determine a library's
+        long-term
+        maintainability are easy to defer and expensive to reverse.
+      </p>
 
-          <p>In practice, that means:</p>
+      <h2>What 20 years actually teaches you</h2>
 
-          <ul>
-            <li>Design systems and component libraries your team actually uses</li>
-            <li>Accessibility built in from the start</li>
-            <li>Design-to-code workflows that reduce friction every sprint</li>
-          </ul>
-        </template>
-      </split-content>
-    </section>
-    <section aria-labelledby="experience" class="prose max-w-full">
-      <h2 id="experience" class="text-3xl">Experience</h2>
-      <ul class="not-prose grid md:grid-cols-2 2xl:grid-cols-3 gap-x-12 gap-y-6">
-        <li class="bg-neutral-50 p-4 -mx-4 rounded-lg" v-for="(item, index) in resumeItems" :key="index">
-          <small class="inline-block mb-4  px-1.5 bg-neutral-900 text-neutral-50   rounded-full">{{
-            item.date }}</small>
-          <div class="prose">
-            <CardHeader element="h3">
-              {{ item.title }}
-            </CardHeader>
-            <p class="mb-2 ">
-              {{ item.company }}
-            </p>
-            <p>
-              {{ item.description }}
-            </p>
-          </div>
-        </li>
-      </ul>
+      <p>Early in my career, I learned to build things. That part is foundational.</p>
+
+      <p>
+        What took longer to learn was how to see a system clearly: to distinguish between a library that works because
+        the people on the team know its quirks, and a library that works because it's structured to produce consistent
+        output regardless of who's using it. Those two things look similar from the outside until the team changes, the
+        product scales, or an accessibility audit arrives.
+      </p>
+
+      <p>
+        I've worked in both kinds of systems. I've built both kinds of systems, in the early years. The experience of
+        inheriting a brittle foundation and spending months working around it rather than building on it is a
+        significant
+        part of why I work the way I do now.
+      </p>
+
+      <p>
+        The other thing that accumulates over 20 years is pattern recognition. When a team tells me they keep having
+        the same handoff conversation every sprint, I know what to look for in the Figma file. When a design system
+        audit
+        finds accessibility violations scattered across an otherwise functional library, I know which architectural
+        conditions produce them. When a component library is being worked around rather than used, I can usually
+        identify
+        whether the problem is in the API design, the token architecture, the documentation, or the governance model,
+        before reading a line of code.
+      </p>
+
+      <p>
+        That pattern recognition is what a consultant brings that a new hire doesn't. Not just the ability to do the
+        work,
+        but the ability to identify quickly which work matters.
+      </p>
+
+      <h2>How I approach the work</h2>
+
+      <p>
+        I don't treat accessibility as a compliance requirement. I treat it as an architectural constraint, one that
+        shapes component API design, token structure, and documentation from the start rather than being addressed in
+        remediation after the fact. The distinction matters because accessibility built into the component layer is
+        structural and durable. Accessibility added as a retrofit is fragile and expensive.
+      </p>
+
+      <p>
+        I don't treat documentation as a deliverable that happens at the end of a project. A component that isn't
+        documented accurately isn't fully built. Documentation that describes the component as it was intended to work
+        rather than how it actually behaves is worse than no documentation, because it produces incorrect
+        implementations
+        with confidence.
+      </p>
+
+      <p>
+        I'm direct about what I find. If an audit surfaces problems that are more significant than expected, I say so
+        and
+        explain why. If a team is considering a rebuild when targeted remediation would accomplish the same thing, I'll
+        make that case. The goal is for you to have an accurate picture of your system and a clear path forward, not a
+        report that validates decisions already made.
+      </p>
+
+      <h2>Staying current as a professional discipline</h2>
+
+      <p>
+        The front-end landscape changes faster than any individual can fully track. Frameworks cycle. Build tools
+        evolve.
+        Specifications that were drafts when I first read them are now the baseline.
+      </p>
+
+      <p>
+        What I've found is that staying current requires treating it as a discipline rather than a side effect of doing
+        the work. I follow the specifications that matter (the WAI-ARIA authoring practices, the Design Tokens
+        Community
+        Group format, the CSS working group drafts) rather than just the frameworks that implement them. When you
+        understand the underlying standards, framework changes are context rather than disruption.
+      </p>
+
+      <p>
+        I also build things for myself. Rudiment UI, my open-source component library, exists partly as a reference
+        implementation and partly as a place to work through architectural decisions without the constraints of a client
+        engagement. Building something you intend to publish forces a different standard of care than building something
+        for internal use.
+      </p>
+
+      <h2>Working together</h2>
+
+      <p>
+        I take a limited number of consulting engagements at a time. That's not a scarcity tactic. It's the practical
+        limit of doing this work with the attention it requires.
+      </p>
+
+      <p>
+        If you're trying to get a clear picture of where your design system stands before deciding what to do next, the
+        <NuxtLink to="/scorecard/">Design System Scorecard</NuxtLink> covers the five dimensions that determine library
+        health in about ten
+        minutes. If you're ready to talk about a specific engagement, the <NuxtLink to="/services/">services page
+        </NuxtLink> describes the
+        three ways I work with teams, and the <NuxtLink to="/contact/">contact page</NuxtLink> is the fastest way to
+        start a conversation.
+      </p>
+
+      <p>
+        I respond to every message and I'm direct about whether I'm the right fit. If I'm not, I'll tell you that too.
+      </p>
     </section>
 
 
     <TestimonialList class="grid lg:grid-cols-2 gap-6" />
 
-    <section aria-labelledby="mission" class="prose max-w-full lg:mb-24">
-      <split-content>
-        <template #primary>
-          <h2 id="mission">What I value</h2>
-          <p>
-            I like working on teams that care about the people using the product and the ones building it. I believe in
-            writing code that future-me and my teammates will actually thank me for. Simple when possible. Clever when
-            necessary. Kind always.
-          </p>
-          <p>
-            When new ideas come along, I ask: will this make life better for the user? Easier for the team? Better for
-            my
-            craft? If yes, I'm in. If not, I'll probably tinker with it anyway, but only for "research."
-          </p>
-        </template>
-        <template #secondary>
-          <h2>Tools of the trade</h2>
-          <p>
-            I work across the modern front-end stack: React, Vue, and their ecosystems, plain CSS through to Sass and
-            Tailwind, and I've spent meaningful time with Ruby on Rails. I'm fluent in Storybook, Figma, and the
-            design-to-code tools that sit between them.
-          </p>
-          <p> Tools are just tools. What matters is how you use them: clear plan, solid foundation, tested thoroughly,
-            and
-            accessible to everyone. That's the part that lasts long after frameworks come and go.
-          </p>
-        </template>
-      </split-content>
-    </section>
 
 
 

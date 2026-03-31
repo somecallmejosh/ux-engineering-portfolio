@@ -1,11 +1,11 @@
 ---
 slug: front-end-carpentry
 publishedAt: 2025-03-02
-title: "Front-End Developers and Their Tools: It's the Craft, Not the Brand"
+title: "Front-end developers and their tools: It's the craft, not the brand"
 description: "Your framework is just a tool. What makes front-end developers effective is a strong grasp of HTML, CSS, and JavaScript, not which tool they've used most."
 tags: [front-end-development, best-practices]
-image: "/images/blog/front-end-carpentry.webp"
-image_alt: "A JavaScript developer and a carpenter sharing tools."
+image: '/images/blog/front-end-carpentry.webp'
+image_alt: 'A JavaScript developer and a carpenter sharing tools.'
 ---
 
 ## Why we obsess over tools and frameworks

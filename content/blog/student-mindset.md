@@ -1,10 +1,10 @@
 ---
 slug: student-mindset
 publishedAt: 2025-04-29
-title: "The Student Mindset: Pros, Cons, and Why I'm (Still) Glad I Have It"
+title: "The student mindset: Pros, cons, and why I'm (still) glad I have it"
 description: 'How a lifelong student mindset helped me grow in tech, and how it sometimes kept me from trusting what I already knew.'
 tags: [career]
-image: "/images/blog/student-mindset.webp"
+image: '/images/blog/student-mindset.webp'
 image_alt: 'A student playing drums.'
 ---
 

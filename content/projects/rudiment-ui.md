@@ -21,7 +21,7 @@ image: '/images/projects/rudiment.png'
 image_alt: 'Rudiment UI component library documentation.'
 ---
 
-## Overview
+## About Rudiment UI
 
 Building Your Own Component Library is a 13-chapter guide to building a React component library from scratch. It covers everything: architectural decisions, a three-tier token system, intrinsic layout primitives, accessible UI components, Storybook documentation, testing with axe-core, and publishing to npm.
 
@@ -93,7 +93,7 @@ Tests in a component library matter more than usual because a regression in one 
 
 **Layout primitive tests** verify that each component applies the correct CSS classes and custom properties. They check that props set inline styles, that omitted props defer to the CSS token fallback, and that the `as` prop changes the rendered element.
 
-**UI component tests** verify the accessibility contract: keyboard activation, disabled and error states, focus behavior, loading state ARIA attributes, and the absence of axe-core violations. Every assertion uses accessible queries (`getByRole`, `getByText`) or ARIA attributes. No test queries by CSS class name or internal DOM structure. Refactoring a component's markup doesn't break the tests as long as the behavior and accessibility contract are preserved.
+**UI component tests** verify the accessibility contract: keyboard activation, disabled and error states, focus behavior, loading state ARIA attributes, and the absence of axe-core violations. Every assertion uses accessible queries (`getByRole`, `getByText`) or ARIA attributes. Tests don't query by CSS class name or internal DOM structure. Refactoring a component's markup doesn't break the tests as long as the behavior and accessibility contract are preserved.
 
 Every component passes a `toHaveNoViolations()` check from vitest-axe. Full coverage of accessible behavior is more valuable than full line coverage.
 
@@ -105,10 +105,20 @@ Each entry includes the component's purpose, variant examples, and the accessibi
 
 ## Packaging for distribution
 
-The guide covers the full distribution cycle: configure Vite's library mode to produce a clean `dist/` output with separate entry points for the component library and the token files, define package exports, add a `prepublish` script that runs token generation before the component build, and publish with `npm publish`. The package is versioned using conventional commits.
+The guide covers the full distribution cycle: configuring Vite's library mode to produce a clean `dist/` output with separate entry points for the component library and the token files, defining package exports, adding a `prepublish` script that runs token generation before the component build, and publishing with `npm publish`. The package is versioned using conventional commits.
 
-## What I took from this project
+## Lessons from building Rudiment UI
 
 Building a component library is as much an exercise in sequencing decisions as it is in writing components. The token architecture shapes every component. The component architecture shapes the test patterns. The test patterns shape what documentation needs to explain.
 
 Documenting the reasoning alongside the implementation is what makes a library transferable. A repository without explanation gives you a working system. Explaining the trade-offs at each step gives you the judgment to extend it.
+
+## How this applies to client work
+
+Rudiment UI is a personal project built to validate an approach, not a client deliverable. But the decisions it required — how to structure a token system that survives a rebrand, how to build accessibility into components so consuming code doesn't have to think about it, how to document behavior rather than just appearance — are the same decisions that determine whether a client's component library compounds value or generates ongoing maintenance overhead.
+
+A component library built on an inconsistent foundation can look functional for a long time before the structural problems surface. The token architecture that skipped the semantic layer becomes expensive when a brand update requires finding every direct color reference. The accessibility gaps that were individual oversights become Web Content Accessibility Guidelines (WCAG) audit findings when the product grows large enough to attract scrutiny. The documentation that was accurate when written becomes a liability when components evolve faster than the documentation is updated.
+
+Rudiment UI is a working reference implementation of what a well-structured library looks like from the start. Each architectural decision has a documented reason, and every reason reflects a real constraint that component libraries encounter as they grow.
+
+If you're evaluating whether your current library has the structural foundation to support where your product is going, the [Design System Scorecard](/scorecard/) covers the five dimensions that determine library health in about ten minutes. If you already know you need a clean foundation and want one built to your tokens and your team's constraints, the [Component Library Starter](/services/starter/) delivers that in two to three weeks.

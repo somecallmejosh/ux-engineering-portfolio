@@ -1,11 +1,11 @@
 ---
 slug: component-library-build-or-buy
 publishedAt: 2026-03-07
-title: 'Build or Buy: Making the Right Choice for Your Design System'
+title: 'Build or buy: Making the right choice for your design system'
 description: "Deciding whether to build a design system in-house or buy a commercial solution is a critical choice. Here's how to evaluate your options and make the best decision for your team."
 tags:
   [design-systems, component-libraries, best-practices, component-library-guide]
-image: "/images/blog/component-library-build-or-buy.png"
+image: '/images/blog/component-library-build-or-buy.png'
 image_alt: 'A developer working on a design system.'
 ---
 

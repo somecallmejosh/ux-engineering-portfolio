@@ -1,10 +1,10 @@
 ---
 slug: the-luckiest-guy-in-tech
 publishedAt: 2025-05-02
-title: 'Why I Feel Like the Luckiest Guy in Tech'
+title: 'Why I feel like the luckiest guy in tech'
 description: "A reflection on failing at backend, thriving at UI/UX, and finally realizing that staying in my lane might've been the best thing I could've done."
 tags: [career]
-image: "/images/blog/the-luckiest-guy-in-tech.webp"
+image: '/images/blog/the-luckiest-guy-in-tech.webp'
 image_alt: 'Computer programmer sitting at a desk, looking content and satisfied with their work.'
 ---
 

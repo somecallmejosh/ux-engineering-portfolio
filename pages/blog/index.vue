@@ -4,8 +4,8 @@ const allPosts = await queryCollection('blog').order('publishedAt', 'DESC').all(
 useSeoMeta({
   title: 'Blog',
   ogTitle: 'Blog',
-  description: 'Writing about UX engineering: design systems, accessible interfaces, and what it looks like when design and development work together. Each post covers practical problems that real teams face, with honest takes on methods that improve both the product and the process.',
-  ogDescription: 'Writing about UX engineering: design systems, accessible interfaces, and what it looks like when design and development work together. Each post covers practical problems that real teams face, with honest takes on methods that improve both the product and the process.',
+  description: 'Writing about UX engineering: design systems, accessible interfaces, and where design and development meet. Each post covers practical problems real teams face, with direct takes on methods that improve both product and process.',
+  ogDescription: 'Writing about UX engineering: design systems, accessible interfaces, and where design and development meet. Each post covers practical problems real teams face, with direct takes on methods that improve both product and process.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743977450/josh-portfolio/assets_task_01jr6jay59e3jayf6xxbtsbgca_img_0.webp'
 })
 </script>
@@ -17,7 +17,7 @@ useSeoMeta({
     pageDescription="Practical takes, honest opinions, and the occasional fictional UX engineer."
     pill="Blog"
     pillIcon="ph:article-ny-times"
-    tagListTitle="Blog Tags"
+    tagListTitle="Blog tags"
     tagListCollection="blog"
   />
 </template>

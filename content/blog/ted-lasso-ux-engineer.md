@@ -1,17 +1,18 @@
 ---
 slug: ted-lasso-ux-engineer
 publishedAt: 2025-04-18
-title: "Ted Lasso: Building Interfaces with Biscuits and Belief"
+title: 'Ted Lasso: Building interfaces with biscuits and belief'
 description: "What happens when optimism, empathy, and detail meet cross-functional teamwork. He's not the most technical, but maybe the most impactful."
 tags: [fictional-ux-engineers]
-image: "/images/blog/ted-lasso-ux-engineer.webp"
-image_alt: "Ted Lasso motivating a team of UX engineers."
+image: '/images/blog/ted-lasso-ux-engineer.webp'
+image_alt: 'Ted Lasso motivating a team of UX engineers.'
 ---
+
 ::TagMenu{tag="fictional-ux-engineers"}
 Famous Fictional UX Engineers Series
 ::
 
-Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, *"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."*
+Ted Lasso doesn't have a background in design. He doesn't know a thing about JavaScript bundlers. And if you asked him to explain the difference between WCAG AA and AAA, he'd probably say, _"Well shoot, I reckon it's like wearing a belt and suspenders—just tryin' to keep everything in place."_
 
 But somehow, he ends up on a product team. As a UX engineer. He's great at it.
 
@@ -19,7 +20,7 @@ But somehow, he ends up on a product team. As a UX engineer. He's great at it.
 
 Ted doesn't obsess over tech choices. He doesn't argue about frameworks. He just wants to make sure people feel good when they use what you've built.
 
-He's the kind of guy who reads a bug report and says, *"Bless their heart, this must've been frustrating."* And then fixes it with a smile and a note in the commit message that says, "Hope this helps, partner."
+He's the kind of guy who reads a bug report and says, _"Bless their heart, this must've been frustrating."_ And then fixes it with a smile and a note in the commit message that says, "Hope this helps, partner."
 
 ## Kind error messages
 

@@ -1,12 +1,13 @@
 ---
 slug: cross-functional-team-collaboration
 publishedAt: 2025-02-02
-title: 'Why Cross-Functional Teams Build Better Things'
-description: "What happens when teams actually talk: a story of trust, shared wins, and a tiny UI detail that nearly derailed a launch."
+title: 'Why cross-functional teams build better things'
+description: 'What happens when teams actually talk: a story of trust, shared wins, and a tiny UI detail that nearly derailed a launch.'
 tags: [front-end-development, user-experience, design]
-image: "/images/blog/cross-functional-team-collaboration.webp"
-image_alt: "Cross-Functional team collaborating on ideas."
+image: '/images/blog/cross-functional-team-collaboration.webp'
+image_alt: 'Cross-Functional team collaborating on ideas.'
 ---
+
 There was a project that, on paper, should've gone sideways.
 
 Tight deadline. Vague requirements. Competing priorities. You know the type. The goal was to improve onboarding, and the team included designers, engineers, and product folks, each with strong opinions and just enough blind spots to make things interesting.
