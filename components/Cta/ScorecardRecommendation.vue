@@ -33,8 +33,8 @@ const CARD_STYLE: Record<string, string> = {
               </h2>
               <!-- Dynamic why copy -->
               <p>{{ (recommendation as ServiceRecommendation).why }}</p>
-              <p v-if="recommendation"><strong>Recommendation</strong>: <NuxtLink
-                  :to="(recommendation as ServiceRecommendation).link">{{ (recommendation as
+              <p v-if="recommendation">Recommendation: <NuxtLink :to="(recommendation as ServiceRecommendation).link"
+                  class="font-semibold">{{ (recommendation as
                     ServiceRecommendation).label }}</NuxtLink>
               </p>
               <!-- Consequence bullets (workflow only) -->
@@ -73,13 +73,13 @@ const CARD_STYLE: Record<string, string> = {
             <!-- Dual CTAs -->
             <div class="flex flex-col gap-3 xl:flex-row border-t border-blue-200/60 pt-5">
               <div>
-                <ButtonLink :to="CALENDLY_URL" target="_blank" rel="nofollow noopener noreferrer">
-                  Book a 30-minute call
+                <ButtonLink :to="(recommendation as ServiceRecommendation).link">
+                  {{ (recommendation as ServiceRecommendation).label }}
                 </ButtonLink>
               </div>
               <div>
-                <ButtonLink variant="inverse" :to="(recommendation as ServiceRecommendation).link">
-                  See the service details
+                <ButtonLink variant="inverse" :to="CALENDLY_URL" target="_blank" rel="nofollow noopener noreferrer">
+                  Book a 30-minute call
                 </ButtonLink>
               </div>
             </div>
@@ -103,7 +103,7 @@ const CARD_STYLE: Record<string, string> = {
               </p>
               <ButtonLink :to="(recommendation as ServiceRecommendation).secondaryRecommendation!.link"
                 variant="inverse">
-                Start with a Design System Audit
+                Design System Audit
               </ButtonLink>
             </div>
           </template>
