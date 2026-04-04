@@ -19,6 +19,7 @@ defineProps({
       description: pageDescription
     }" />
     <CardList v-if="items.length" :list="items" />
+    <slot />
     <TagLinkList v-if="tagListCollection" :title="tagListTitle" :collection="tagListCollection" />
   </PageWrapper>
 </template>

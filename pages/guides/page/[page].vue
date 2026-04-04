@@ -1,9 +1,10 @@
 <script setup>
-const { items, currentPage, totalPages, basePath } = await useCollectionPagination('guides', 1)
+const page = Number(useRoute().params.page)
+const { items, currentPage, totalPages, basePath } = await useCollectionPagination('guides', page)
 
 useSeoMeta({
-  title: 'Guides',
-  ogTitle: 'Guides',
+  title: `Guides - Page ${page}`,
+  ogTitle: `Guides - Page ${page}`,
   description: 'In-depth, multi-chapter guides on UX engineering, design systems, and front-end development.',
   ogDescription: 'In-depth, multi-chapter guides on UX engineering, design systems, and front-end development.',
 })

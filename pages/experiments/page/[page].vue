@@ -1,9 +1,10 @@
 <script setup>
-const { items, currentPage, totalPages, basePath } = await useCollectionPagination('experiments', 1)
+const page = Number(useRoute().params.page)
+const { items, currentPage, totalPages, basePath } = await useCollectionPagination('experiments', page)
 
 useSeoMeta({
-  title: 'Experiments',
-  ogTitle: 'Experiments',
+  title: `Experiments - Page ${page}`,
+  ogTitle: `Experiments - Page ${page}`,
   description: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogDescription: 'UX Engineering projects that showcase my skills in creating user-friendly, accessible, and scalable web applications.',
   ogImage: 'https://res.cloudinary.com/dwjulenau/image/upload/v1743976705/josh-portfolio/assets_task_01jr6hnahyf2bbdjwb1z36f03n_img_0.webp'

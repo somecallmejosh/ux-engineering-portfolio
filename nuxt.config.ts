@@ -33,6 +33,11 @@ export default defineNuxtConfig({
       '/dev-notes/categories/**': {
         redirect: { to: '/dev-notes/tags/**/', statusCode: 301 },
       },
+      '/blog/page/1/': { redirect: { to: '/blog/', statusCode: 301 } },
+      '/projects/page/1/': { redirect: { to: '/projects/', statusCode: 301 } },
+      '/dev-notes/page/1/': { redirect: { to: '/dev-notes/', statusCode: 301 } },
+      '/experiments/page/1/': { redirect: { to: '/experiments/', statusCode: 301 } },
+      '/guides/page/1/': { redirect: { to: '/guides/', statusCode: 301 } },
       '/design/': { sitemap: false, robots: false },
       '/_fonts/**': {
         headers: { 'cache-control': 'public, max-age=31536000, immutable' },

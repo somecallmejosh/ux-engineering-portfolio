@@ -3,6 +3,7 @@ export const COLLECTION_MAP: Record<string, string> = {
   projects: 'projects',
   dev_notes: 'dev-notes',
   experiments: 'experiments',
+  guides: 'guides',
 }
 
 export function collectionPath(name: string): string {
